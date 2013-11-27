@@ -1,0 +1,145 @@
+@font-face {
+	font-family: 'Raleway';
+	src: local('Raleway'), url(../assets/fonts/Raleway-Regular.ttf) format('truetype');
+}
+
+body {
+	margin:0;
+	background:#000;
+	font-family: Raleway;
+	font-size: 20px;
+	overflow:hidden;
+}
+body, canvas, div {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+
+	/* No support for these yet, use at own risk */
+	-o-user-select: none;
+	user-select: none; 
+}
+#container {
+	position: relative;
+	background: #000;
+	width:960px; height:600px;
+}
+#container > div{
+	position: absolute;
+	width:100%; height:100%;
+}
+
+/*** GAME ***/
+#game_container > canvas{
+	position: absolute;
+	width:100%; height:100%;
+}
+
+/*** UI ***/
+#ui_container > div{
+	position: absolute;
+}
+#tutorial_message {
+	bottom:0px;
+	width:100%;
+	overflow: hidden;
+	text-align: center;
+	padding-top:15px;
+	padding-bottom: 15px;
+	font-size: 20px;
+	background: rgba(0,0,0,0.5);
+	color:#fff;
+}
+#fps_counter {
+	background: rgba(0,0,0,0.5);
+	color:#fff;
+	padding:10px;
+	width:60px;
+	text-align: right;
+	height:20px;
+	top:0;
+	right:0;
+}
+#level_selector {
+	top:0;
+	left:0;	
+	background: rgba(0,0,0,0.5);
+	color:#fff;
+	padding:10px;
+	overflow: hidden;
+}
+
+#level_selector .button{
+	float:left;
+	cursor: pointer;
+	background: #000;
+	padding: 0 5px;
+	margin-right:5px;
+}
+
+
+/*** LOADING ***/
+#loading_screen {
+	background: url(../assets/images/splash.png);
+}
+#loading_info{
+	width: 400px;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    color: #fff;
+    font-size: 17px;
+}
+#loading_bar {
+	position: absolute;
+	bottom:80px;
+	left:280px;
+	width: 400px;
+	height:80px;
+	background: #000;
+	border-radius: 20px;
+	overflow: hidden;
+	border-bottom: 5px solid #222;
+}
+#loading_bar[loaded] {
+	cursor: pointer;
+}
+#loading_bar[loaded]:hover {
+	bottom:82px;
+}
+#loading_bar > div{
+	position: absolute;
+}
+#loading_bar_red {
+	border-radius: 20px;
+	background: #f40;
+	height:100%;
+	width:0%;
+	
+	-webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    -ms-transition: width 0.5s ease-in-out;
+    -o-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+
+}
+#loading_bar[loaded]:hover > #loading_bar_red {
+	background: #f52;
+	width:100%;
+}
+#loading_bar_text {
+	width:100%;
+	padding: 15px 0;
+	color: #fff;
+	text-align: center;
+	font-size: 40px;
+}
+
+
+/*** ENDING ***/
+#ending_screen {
+	background: #fff;
+	color: #000;
+	font-size:50px;
+	text-align:center;
+}
