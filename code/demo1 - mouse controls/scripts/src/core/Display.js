@@ -9,8 +9,7 @@
 		{id:"backgroundCam"},
 		{id:"shadowsCam"},
 		{id:"background"},
-		{id:"shadows",invisible:true},
-		{id:"props"}
+		{id:"shadows",invisible:true}
 	];
 
 	// Initialize

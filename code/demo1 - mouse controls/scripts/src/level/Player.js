@@ -123,7 +123,7 @@
 		///// DRAW LOOP /////
 		/////////////////////
 
-		var ctx = Display.context.props;
+		var ctx = Display.context.background;
 		var frameIndex = 0;
 		var faceDirection = 1;
 		var animState = "Idle";

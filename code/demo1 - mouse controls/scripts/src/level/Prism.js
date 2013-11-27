@@ -25,7 +25,7 @@
 		///// DRAW LOOP /////
 		/////////////////////
 
-		var ctx = Display.context.props;
+		var ctx = Display.context.background;
 		var sprite = Asset.sprite.MrPrism;
 		var spriteImage = sprite.image;
 		var spriteData = sprite.data;

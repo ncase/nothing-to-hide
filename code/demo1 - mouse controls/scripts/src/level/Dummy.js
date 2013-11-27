@@ -18,7 +18,7 @@
 		///// DRAW LOOP /////
 		/////////////////////
 
-		var ctx = Display.context.props;
+		var ctx = Display.context.background;
 		this.draw = function(){
 			ctx.fillStyle = "#fff";
 			ctx.fillRect(self.x-20, self.y-60, 40, 60);

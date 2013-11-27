@@ -30,13 +30,11 @@
 			var h = Math.max(Display.height,level.map.height) + 100;
 			Display.context.background.clearRect(-50,-50,w,h);
 			Display.context.backgroundCam.clearRect(-50,-50,w,h);
-			Display.context.props.clearRect(-50,-50,w,h);
 		
 			// Pixel-perfect camera centering
 			var cx = Math.round(Display.width/2-self.x);
 			var cy = Math.round(Display.height/2-self.y);
 			for(var id in Display.context){
-				if(id=="hud" || id=="cursor") continue; // HUD stays static
 				var ctx = Display.context[id];
 				ctx.save();
 				ctx.translate(cx,cy);
@@ -45,13 +43,13 @@
 			// Draw everything
 			level.map.draw();
 			level.shadows.draw();
-			level.suspicion.draw();
-			level.prisms.draw();
-			level.dummies.draw();
 
 			// Masking everything
 			_mask(Display.canvas.shadows, Display.context.background);
-			_mask(Display.canvas.shadows, Display.context.props);
+
+			// Draw rest of everything
+			level.prisms.draw();
+			level.dummies.draw();
 			level.player.draw();
 
 			// Cursor!...
@@ -59,7 +57,6 @@
 
 			// Restore Camera
 			for(var id in Display.context){
-				if(id=="hud" || id=="cursor") continue; // HUD stays static
 				Display.context[id].restore();
 			}
 

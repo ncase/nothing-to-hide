@@ -12,8 +12,7 @@
 
 	Cursor.draw = function(){
 
-		var ctx = Display.context.props;
-		//ctx.clearRect(0,0,Display.width,Display.height);
+		var ctx = Display.context.background;
 
 		// Mouse Position
 		var mx = Mouse.x + (Game.level.camera.x-Display.width/2);
