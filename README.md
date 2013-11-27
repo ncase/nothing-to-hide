@@ -1,4 +1,4 @@
-Nothing To Hide - Scrapyard
+Nothing To Hide: Insecurity in Security
 ===
 
 *Nothing To Hide* has nothing to hide.
