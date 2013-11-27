@@ -48,9 +48,9 @@
 			    var dy = my - self.y;
 			    var mag = Math.sqrt(dx*dx+dy*dy);
 			    var speed = MAX_SPEED;
-			    if(mag<5*MAX_SPEED){
+			    /*if(mag<5*MAX_SPEED){
 			    	speed *= 0.5;
-			    }
+			    }*/
 			    if(mag>MAX_SPEED){
 			    	isMoving = true;
 				    vx = (dx/mag) * speed;

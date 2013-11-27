@@ -106,7 +106,6 @@
 			if(level.config.level.art.hideCam) return;
 
 			// Draw camera, with CCTV Lines
-			return;
 			var ctx = Display.context.backgroundCam;
 			ctx.drawImage(camCache,0,0);
 			linesY += 1;

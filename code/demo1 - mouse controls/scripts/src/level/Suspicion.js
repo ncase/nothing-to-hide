@@ -110,19 +110,19 @@
 		///// DRAW LOOP /////
 		/////////////////////
 
-		var ctx = Display.context.hud;
-		ctx.fillStyle = "#f40";
+		/*var ctx = Display.context.hud;
+		ctx.fillStyle = "#f40";*/
 		var bar = 0;
 		var lastBar = 0;
 		this.draw = function(){
-			bar = bar*0.8 + hide*0.2;
+			/*bar = bar*0.8 + hide*0.2;
 			var currBar = Math.round(bar*23)/20;
 			if(lastBar!=currBar){
 				ctx.globalAlpha = currBar*0.7;
 				ctx.clearRect(0,0,Display.width,Display.height);
 				ctx.fillRect(0,0,Display.width,Display.height);
 			}
-			lastBar = currBar;
+			lastBar = currBar;*/
 		};
 
 		//////////////////////

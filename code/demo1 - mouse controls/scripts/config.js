@@ -12,6 +12,7 @@ Asset.init({
 		Poppy_Walk:'assets/sprites/Poppy_Walk',
 		MrPrism:'assets/sprites/MrPrism',
 
+		Cursor:'assets/sprites/Cursor',
 		PropagandaTest:'assets/sprites/PropagandaTest'
 
 	},

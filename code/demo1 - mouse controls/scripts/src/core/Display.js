@@ -10,7 +10,6 @@
 		{id:"shadowsCam"},
 		{id:"background"},
 		{id:"shadows",invisible:true},
-		{id:"hud"},
 		{id:"props"}
 	];
 

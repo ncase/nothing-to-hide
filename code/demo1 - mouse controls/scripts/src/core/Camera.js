@@ -36,7 +36,7 @@
 			var cx = Math.round(Display.width/2-self.x);
 			var cy = Math.round(Display.height/2-self.y);
 			for(var id in Display.context){
-				if(id=="hud") continue; // HUD stays static
+				if(id=="hud" || id=="cursor") continue; // HUD stays static
 				var ctx = Display.context[id];
 				ctx.save();
 				ctx.translate(cx,cy);
@@ -54,9 +54,12 @@
 			_mask(Display.canvas.shadows, Display.context.props);
 			level.player.draw();
 
+			// Cursor!...
+			Cursor.draw();
+
 			// Restore Camera
 			for(var id in Display.context){
-				if(id=="hud") continue; // HUD stays static
+				if(id=="hud" || id=="cursor") continue; // HUD stays static
 				Display.context[id].restore();
 			}
 
