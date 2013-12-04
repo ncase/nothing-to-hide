@@ -167,7 +167,7 @@
 					case Map.SPACE: ctx.fillStyle="#D7E7E6"; break;
 					case Map.CARPET: ctx.fillStyle="#8E291D"; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
-					case Map.GLASS: ctx.fillStyle="#24323D"; break;
+					case Map.GLASS: ctx.fillStyle="#363B43"; break;
 					case Map.METAL: ctx.fillStyle="#2D2D2D"; break;
 				}
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);

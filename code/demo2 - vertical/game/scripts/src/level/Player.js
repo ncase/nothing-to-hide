@@ -20,14 +20,21 @@
 			///////////////////////
 			// CLICK TO PUT DOWN
 
+			// Hovering...
+			var hovering = false;
+			var mx = Mouse.x + (level.camera.x-Display.width/2);
+	    	var my = Mouse.y + (level.camera.y-Display.height/2);
+	    	var dx = self.x - mx;
+			var dy = (self.y-50) - my;
+			if(dx*dx + dy*dy < 35*35){
+				hovering = true;
+				Cursor.hovering++;
+			}
+
 			// Adding/Removing a new light.
 			if(self.holdingPrism && !self.isMoving){
 				if(!lastMousePressed && Mouse.pressed){ // Click
-			    	var mx = Mouse.x + (level.camera.x-Display.width/2);
-			    	var my = Mouse.y + (level.camera.y-Display.height/2);
-			    	var dx = self.x - mx;
-					var dy = (self.y-50) - my;
-					if(dx*dx + dy*dy < 35*35){ // YOU are clicked
+			    	if(hovering){
 			    		level.prisms.dropPrism();
 			    		Mouse.pressed = false;
 			    		return;
@@ -127,7 +134,31 @@
 		var frameIndex = 0;
 		var faceDirection = 1;
 		var animState = "Idle";
+
+		var buttonSprite = new Sprite("Button");
+		buttonSprite.regX = -40;
+		buttonSprite.regY = -40;
+		buttonSprite.scaleX = buttonSprite.scaleY = 0;
+		var buttonRotation = 0;
+
 		this.draw = function(){
+
+			// CLICK ME
+			if(self.holdingPrism){
+				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 1*0.5;
+			}else{
+				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 0*0.5;
+			}
+
+			// Placeholder CLICK ME circle
+			if(buttonSprite.scaleX>0.03){
+				buttonSprite.scaleY = buttonSprite.scaleX;
+				buttonSprite.frameIndex = 1;
+				buttonSprite.rotation = 0;
+				buttonSprite.x = self.x;
+				buttonSprite.y = self.y-50;
+				buttonSprite.draw(ctx);
+			}
 
 		    // Which Spritesheet to use
 		    var sprite = Asset.sprite["Poppy_"+animState];
@@ -155,15 +186,11 @@
 			ctx.restore();
 
 			// Placeholder CLICK ME circle
-			if(self.holdingPrism){// && !self.isMoving){
-				ctx.save();
-		    	ctx.translate(self.x,self.y);
-		    	ctx.translate(0,-50);
-				ctx.fillStyle = "rgba(0,255,255,0.5)";
-				ctx.beginPath();
-				ctx.arc(0,0,35,0,Math.PI*2,true);
-				ctx.fill();
-				ctx.restore();
+			if(buttonSprite.scaleX>0.03){
+				buttonSprite.frameIndex = 0;
+				buttonSprite.rotation = buttonRotation;
+				buttonRotation += 0.02;
+				buttonSprite.draw(ctx);
 			}
 
 		};

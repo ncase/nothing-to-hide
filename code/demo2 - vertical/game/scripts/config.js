@@ -13,6 +13,7 @@ Asset.init({
 		MrPrism:'assets/sprites/MrPrism',
 
 		Cursor:'assets/sprites/Cursor',
+		Button:'assets/sprites/Button',
 		PropagandaTest:'assets/sprites/PropagandaTest'
 
 	},

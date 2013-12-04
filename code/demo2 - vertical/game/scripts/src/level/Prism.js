@@ -26,27 +26,53 @@
 		/////////////////////
 
 		var ctx = Display.context.background;
-		var sprite = Asset.sprite.MrPrism;
-		var spriteImage = sprite.image;
-		var spriteData = sprite.data;
+
+		var prismSprite = new Sprite("MrPrism");
+		prismSprite.scaleX = prismSprite.scaleY = 0.7;
+		prismSprite.regX = -50;
+		prismSprite.regY = -60;
+
+		var buttonSprite = new Sprite("Button");
+		buttonSprite.regX = -40;
+		buttonSprite.regY = -40;
+		buttonSprite.scaleX = buttonSprite.scaleY = 0;
+		var buttonRotation = 0;
+
 		this.draw = function(){
 
 			ctx.save();
 
-			// What frame?
-			var frameIndex = (self.active) ? 1 : 0;
+			// CLICK ME
+			if(self.nearPlayer){
+				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 1*0.5;
+			}else{
+				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 0*0.5;
+			}
 
-			// Draw frame
-			var frame = spriteData.frames[frameIndex].frame;
+			// Placeholder CLICK ME circle
+			if(buttonSprite.scaleX>0.03){
+				buttonSprite.frameIndex = 1;
+				buttonSprite.scaleY = buttonSprite.scaleX;
+				buttonSprite.x = self.x;
+				buttonSprite.y = self.y-5;
+				buttonSprite.rotation = 0;
+				buttonSprite.draw(ctx);
+			}
+
+			// What frame?
+			prismSprite.frameIndex = (self.active) ? 1 : 0;
+			prismSprite.x = self.x;
+			prismSprite.y = self.y;
+			prismSprite.draw(ctx);
+
+			// Translate, yo
 		    ctx.translate(self.x,self.y);
-		    ctx.scale(0.7,0.7);
-		    ctx.translate(-50,-60); // Offset
-		    var offset = spriteData.frames[frameIndex].spriteSourceSize;
-		    ctx.translate(offset.x,offset.y);
-		    ctx.drawImage(spriteImage,frame.x,frame.y,frame.w,frame.h,0,0,frame.w,frame.h);
+		    ctx.scale(prismSprite.scaleX,prismSprite.scaleY);
+		    ctx.translate(prismSprite.regX,prismSprite.regY);
 
 			// Draw eye pupils
 			if(self.active){
+
 				// Looking at player
 				var vectToPlayer = {
 					x: level.player.x-self.x,
@@ -64,18 +90,17 @@
 				ctx.arc(vectToPlayer.x,vectToPlayer.y,3,0,Math.PI*2,true);
 				ctx.fill();
 				ctx.restore();
+
 			}
+			ctx.restore();
 
 			// Placeholder CLICK ME circle
-			if(self.nearPlayer){
-				ctx.translate(50,50);
-				ctx.fillStyle = "rgba(0,255,255,0.5)";
-				ctx.beginPath();
-				ctx.arc(0,0,50,0,Math.PI*2,true);
-				ctx.fill();
+			if(buttonSprite.scaleX>0.03){
+				buttonSprite.frameIndex = 0;
+				buttonSprite.rotation = buttonRotation;
+				buttonRotation += 0.02;
+				buttonSprite.draw(ctx);
 			}
-
-			ctx.restore();
 
 
 		};

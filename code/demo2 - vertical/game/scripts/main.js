@@ -7,13 +7,19 @@
 	// Loading
 	var preloaderInterval = setInterval(function(){
 
+		var totalAssets = 0;
+		totalAssets += Object.keys(Asset.config.images).length;
+		totalAssets += Object.keys(Asset.config.levels).length;
+		totalAssets += Object.keys(Asset.config.sounds).length;
+		totalAssets += Object.keys(Asset.config.sprites).length;
+
 		var numLoaded = 0;
 		numLoaded += Object.keys(Asset.image).length;
 		numLoaded += Object.keys(Asset.level).length;
 		numLoaded += Object.keys(Asset.sound).length;
 		numLoaded += Object.keys(Asset.sprite).length;
 		
-		var bar = numLoaded/17; // Hard coded
+		var bar = numLoaded/totalAssets; // Hard coded
 		loading_bar_white.style.width = Math.round(bar*100)+"%";
 
 	},50);

@@ -10,6 +10,7 @@ body, canvas, div {
 }
 body{
     margin:0;
+    overflow: hidden;
     background:#000;
 }
 #wrapper {
@@ -63,7 +64,7 @@ window.onload = function(){
 	    	document.getElementById("wrapper").src = "game/game.html";
 	    	setTimeout(function(){
 	    		fadeIn();
-	    	},10);
+	    	},100);
 	    },500);
 	}
 

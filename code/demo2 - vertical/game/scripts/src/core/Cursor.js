@@ -8,7 +8,10 @@
 	Cursor.init = function(){
 		document.body.style.cursor = 'none';
 		Cursor.active = true;
+		cursorSprite = new Sprite("Cursor");
 	};
+
+	var cursorSprite;
 
 	Cursor.draw = function(){
 
@@ -18,17 +21,19 @@
 		var mx = Mouse.x + (Game.level.camera.x-Display.width/2);
 		var my = Mouse.y + (Game.level.camera.y-Display.height/2);
 
+		// Frame Index
+		cursorSprite.frameIndex = (Cursor.hovering>0) ? 2 : 0;
+		if(Mouse.pressed){
+			cursorSprite.frameIndex += 1;
+		}
+
 		// Draw the damn thing
-		var sprite = Asset.sprite.Cursor;
-		var spriteImage = sprite.image;
-		var spriteData = sprite.data;
-		var frame = spriteData.frames[0].frame;
-		ctx.save();
-		ctx.translate(mx,my);
-	    var offset = spriteData.frames[0].spriteSourceSize;
-	    ctx.translate(offset.x,offset.y);
-	    ctx.drawImage(spriteImage,frame.x,frame.y,frame.w,frame.h,0,0,frame.w,frame.h);
-		ctx.restore();
+		cursorSprite.x = mx;
+		cursorSprite.y = my;
+		cursorSprite.draw(ctx);
+
+		// Reset
+		Cursor.hovering = 0;
 
 	};
 

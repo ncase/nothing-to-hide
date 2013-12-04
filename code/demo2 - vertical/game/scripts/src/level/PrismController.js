@@ -18,15 +18,19 @@
 		var heldPrism = null;
 		this.update = function(){
 
+			// Hovering...
+			var mx = Mouse.x + (level.camera.x-Display.width/2);
+	    	var my = Mouse.y + (level.camera.y-Display.height/2);
+		    var clickedPrism = self.isNearPrism(mx,my,50*0.7);
+			if(clickedPrism && clickedPrism.nearPlayer){
+				Cursor.hovering++;
+			}
+
 			// Adding/Removing a new light.
 			var player = level.player;
 		    if(!lastMousePressed && Mouse.pressed){
 
 		    	// Did you click on a Prism
-		    	var mx = Mouse.x + (level.camera.x-Display.width/2);
-		    	var my = Mouse.y + (level.camera.y-Display.height/2);
-		    	var clickedPrism = self.isNearPrism(mx,my,50);
-
 		    	if(!isHoldingPrism && clickedPrism && clickedPrism.nearPlayer){
 		    		self.pickUpPrism(clickedPrism);
 				}
