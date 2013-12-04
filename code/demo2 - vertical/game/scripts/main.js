@@ -24,7 +24,7 @@
 		setInterval(function(){
 			clearInterval(preloaderInterval);
 			_startGame();
-		},500);
+		},600);
 	});
 
 	function _startGame(){

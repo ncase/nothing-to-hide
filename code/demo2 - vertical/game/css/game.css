@@ -83,7 +83,6 @@ body, canvas, div {
 
 /*** LOADING ***/
 #loading_screen {
-	position: relative;
 	width:100%; height:100%;
 }
 #loading_info{}
@@ -91,7 +90,7 @@ body, canvas, div {
 
 	position: absolute;
 	background: #000;
-	width:100%; height:10px;
+	width:100%; height:5px;
 
 	top:0; left:0; right:0; bottom:0;
 	margin:auto;
