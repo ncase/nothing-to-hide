@@ -13,7 +13,7 @@
 		numLoaded += Object.keys(Asset.sound).length;
 		numLoaded += Object.keys(Asset.sprite).length;
 		
-		var bar = numLoaded/16; // Hard coded
+		var bar = numLoaded/17; // Hard coded
 		loading_bar_white.style.width = Math.round(bar*100)+"%";
 
 	},50);
@@ -21,15 +21,21 @@
 	// Preloader and stuff
 	Asset.load().then(function(){
 		console.log("===== LOADED! =====");
-		setInterval(function(){
+		setTimeout(function(){
 			clearInterval(preloaderInterval);
 			_startGame();
 		},600);
 	});
 
 	function _startGame(){
-		loading.parentNode.removeChild(loading);
+		
 		Game.start();
+
+		loading.style.opacity = 0;
+		setTimeout(function(){
+			loading.parentNode.removeChild(loading);
+		},1000);
+
 	}
 
 })();
