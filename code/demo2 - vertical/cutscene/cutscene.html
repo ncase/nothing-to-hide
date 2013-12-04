@@ -1,0 +1,172 @@
+<style>
+body {
+	margin:0;
+	overflow: hidden;
+	background: #000;
+}
+#cutscene{
+	width:100%;
+	height:100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background: #fff;
+}
+#cutscene > div {
+	margin: 30px auto;
+	width:800px;
+}
+#cutscene > div > #header {
+	font-family: sans-serif;
+	font-size: 20px;
+	margin-bottom: 5px;
+	color: #bbb;
+	cursor: default;
+}
+#cutscene > div > #header > a{
+	color: #555;
+}
+/*#cutscene > div > #header > a{
+	color: #555;
+	cursor: pointer;
+}
+#cutscene > div > #header > a:hover{
+	color: #888;
+}*/
+#cutscene > hr{
+	border: 1px solid #ddd;
+	width:960px;
+	margin:0 auto;
+}
+.image_post img{
+	display: block;
+	width: 100%;
+	border: 1px solid #ddd;
+}
+.game_post img{
+	cursor: pointer;
+}
+.game_post img:hover {
+	-webkit-transform: scale(1.05,1.05);
+	-moz-transform: scale(1.05,1.05);
+	-ms-transform: scale(1.05,1.05);
+	-o-transform: scale(1.05,1.05);
+	transform: scale(1.05,1.05);
+}
+</style>
+
+<div id="cutscene"></div>
+
+<script src="js/soundjs-0.5.0.min.js"></script>
+<script src="js/Key.js"></script>
+<script>
+
+var cutscene = {
+	slides: [
+		{ poster:"rubyintherough", type:"image", src:"pics/hugtom0001.png" },
+		{ src:"pics/hugtom0002.png" },
+		{ src:"pics/hugtom0003.png" },
+		{ src:"pics/hugtom0004.png" },
+		{ src:"pics/hugtom0005.png" },
+		{ src:"pics/hugtom0006.png" },
+		{ src:"pics/hugtom0007.png" },
+		{ src:"pics/hugtom0008.png" },
+		{ type:"game", poster:"nothingtohide", src:"pics/GAME.png" }
+	],
+	sounds: [
+		
+		{ at:200, src:"step_1", options:{ pan:-0.9, volume:0.3*0.5 } },
+		{ at:410, src:"step_2", options:{ pan:-0.7, volume:0.6*0.5 } },
+		{ at:620, src:"step_1", options:{ pan:-0.5, volume:0.9*0.5 } },
+		{ at:830, src:"step_2", options:{ pan:-0.3, volume:1.0*0.5 } },
+
+		{ at:1870, src:"squee" },
+
+		{ at:2600, src:"step_1", options:{ pan:0.3, volume:1.0*0.5 } },
+		{ at:2810, src:"step_2", options:{ pan:0.7, volume:0.6*0.5 } },
+		{ at:3020, src:"step_1", options:{ pan:1.0, volume:0.3*0.5 } },
+		{ at:3230, src:"step_2", options:{ pan:1.0, volume:0.1*0.5 } },
+
+		{ at:3800, src:"scare" },
+
+	],
+	ambience: []
+};
+
+// Because.
+cutscene = JSON.parse(JSON.stringify(cutscene));
+
+// Create slides in advance
+var cutsceneDOM = document.getElementById("cutscene");
+var html = "";
+var lastSlide = {};
+for(var i=0;i<cutscene.slides.length;i++){
+
+	var slide = cutscene.slides[i];
+	slide.poster = slide.poster || lastSlide.poster;
+	slide.type = slide.type || lastSlide.type;
+	slide.src = slide.src || lastSlide.src;
+	
+	if(i>0) html += "<hr>";
+	switch(slide.type){
+		case "image":
+			html += "<div class='image_post'>"+
+						"<div id='header'><a>@"+slide.poster+"</a> posted 2 years ago</div>"+
+						"<img src='"+slide.src+"'/>"+
+					"</div>";
+			break;
+		case "game":
+			html += "<div class='image_post game_post' onclick='gotoGame()'>"+
+						"<div id='header'><a>@"+slide.poster+"</a> posted 2 years ago</div>"+
+						"<img src='"+slide.src+"'/>"+
+					"</div>";
+			break;
+	}
+
+	var lastSlide = slide;
+
+}
+html = "<div style='height:25px'></div>"+html+"<div style='height:25px'></div>";
+cutsceneDOM.innerHTML = html;
+
+// Load all sounds in advance
+var manifest = [
+	{id:"squee", src:"sounds/mp3/squee.mp3|sounds/ogg/squee.ogg"},
+	{id:"step_1", src:"sounds/mp3/step_1.mp3|sounds/ogg/step_1.ogg"},
+	{id:"step_2", src:"sounds/mp3/step_2.mp3|sounds/ogg/step_2.ogg"},
+	{id:"scare", src:"sounds/mp3/scare.mp3|sounds/ogg/scare.ogg"}
+];
+createjs.Sound.registerManifest(manifest);
+
+// Scroll sounds
+var lastScroll = 0;
+cutsceneDOM.onscroll = function(event){
+	
+	var scroll = event.target.scrollTop;
+
+	cutscene.sounds.map(function(sound){
+
+		var trigger = sound.at;
+		if(trigger>lastScroll && trigger<=scroll){
+			createjs.Sound.play(sound.src, sound.options||{});
+			sound.done = true;
+		}
+		
+	});
+
+	lastScroll = scroll;
+
+};
+
+// DEBUG
+setInterval(function(){
+	if(Key.space){
+		console.log(lastScroll);
+	}
+},100);
+
+///////
+function gotoGame(){
+	window.top.gotoGame();
+}
+
+</script>
