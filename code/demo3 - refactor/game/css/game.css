@@ -11,6 +11,7 @@ body {
 	overflow:hidden;
 
 	width:100%; height:100%;
+	cursor: none;
 
 }
 body, canvas, div {
@@ -30,8 +31,10 @@ body, canvas, div {
 	top:0; left:0; right:0; bottom:0;
 	margin:auto;*/
 
+	cursor: none;
+
 	position: absolute;
-	background: #BADA55;
+	background: #000;
 	width:100%; height:100%;
 
 }
@@ -46,7 +49,7 @@ body, canvas, div {
 	width:100%; height:100%;
 }
 
-/*** UI ***/
+/*** DEBUG ***/
 #ui_container > div{
 	position: absolute;
 }
@@ -71,23 +74,6 @@ body, canvas, div {
 	top:0;
 	right:0;
 }
-#level_selector {
-	top:0;
-	left:0;	
-	background: rgba(0,0,0,0.5);
-	color:#fff;
-	padding:10px;
-	overflow: hidden;
-}
-
-#level_selector .button{
-	float:left;
-	cursor: pointer;
-	background: #000;
-	padding: 0 5px;
-	margin-right:5px;
-}
-
 
 /*** LOADING ***/
 #loading_screen {
@@ -126,13 +112,4 @@ body, canvas, div {
     -o-transition: width 0.5s ease-in-out;
     transition: width 0.5s ease-in-out;
 
-}
-
-
-/*** ENDING ***/
-#ending_screen {
-	background: #fff;
-	color: #000;
-	font-size:50px;
-	text-align:center;
 }

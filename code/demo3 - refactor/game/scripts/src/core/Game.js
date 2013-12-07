@@ -81,11 +81,14 @@
 		if(!nextLevelName) return false;
 
 		// Go to next level
+		Game.gotoLevelById(nextLevelName);
+		return true;
+
+	};
+	Game.gotoLevelById = function(nextLevelName){
 		Game.clearLevel();
 		var levelConfig = Asset.level[nextLevelName];
 		Game.level = new Level(levelConfig);
-		return true;
-
 	};
 	Game.nextLevel = function(){
 		Game.levelIndex++;

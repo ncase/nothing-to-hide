@@ -6,7 +6,6 @@
 	
 	Cursor.active = false;
 	Cursor.init = function(){
-		document.body.style.cursor = 'none';
 		Cursor.active = true;
 		cursorSprite = new Sprite("Cursor");
 	};

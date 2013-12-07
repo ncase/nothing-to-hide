@@ -25,6 +25,10 @@
 		this.camCanvas.width = self.width;
 		this.camCanvas.height = self.height;
 		this.camContext = this.camCanvas.getContext('2d');
+		this.cctvCanvas = document.createElement("canvas");
+		this.cctvCanvas.width = self.width;
+		this.cctvCanvas.height = self.height;
+		this.cctvContext = this.cctvCanvas.getContext('2d');
 
 		// Collision Hittest
 		this.getTile = function(px,py){
@@ -111,7 +115,7 @@
 			if(level.config.level.art.hideCam) return;
 
 			// Draw camera, with CCTV Lines
-			var ctx = this.camContext;
+			var ctx = this.cctvContext;
 			ctx.drawImage(camCache,0,0);
 			linesY += 1;
 			if(linesY>7) linesY=0;

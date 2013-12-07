@@ -26,6 +26,10 @@
 
 		};
 		this.draw = function(){
+
+			// Centering the camera
+			self.cx = Math.round(Display.width/2-self.x);
+			self.cy = Math.round(Display.height/2-self.y);
 			
 			// Extra centering
 			Display.context.game.save();
@@ -48,11 +52,13 @@
 
 			// Mask the cams
 			_mask(level.shadows.camCanvas, level.map.camContext);
+			_mask(level.shadows.camCanvas, level.map.cctvContext);
 
-			// Draw BENEATH: Shadow Cams, then Cam CCTV thingy
+			// Draw BENEATH: Shadow Cams
 			var ctx = Display.context.game;
 			ctx.save();
 			ctx.globalCompositeOperation = "destination-over";
+			ctx.drawImage(level.map.cctvCanvas,0,0);
 			ctx.drawImage(level.map.camCanvas,0,0);
 			ctx.restore();
 
