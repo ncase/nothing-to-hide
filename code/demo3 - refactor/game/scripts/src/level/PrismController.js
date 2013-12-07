@@ -19,8 +19,8 @@
 		this.update = function(){
 
 			// Hovering...
-			var mx = Mouse.x + (level.camera.x-Display.width/2);
-	    	var my = Mouse.y + (level.camera.y-Display.height/2);
+			var mx = Mouse.x - level.camera.cx;
+	    	var my = Mouse.y - level.camera.cy;
 		    var clickedPrism = self.isNearPrism(mx,my,50*0.7);
 			if(clickedPrism && clickedPrism.nearPlayer){
 				Cursor.hovering++;

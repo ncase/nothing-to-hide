@@ -72,6 +72,8 @@
 		this.update = function(){
 
 			// Update everything
+			Cursor.update();
+			this.camera.update();
 			this.player.update();
 			this.prisms.update();
 			this.shadows.update();

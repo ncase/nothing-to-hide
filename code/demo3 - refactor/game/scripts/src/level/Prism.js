@@ -25,7 +25,7 @@
 		///// DRAW LOOP /////
 		/////////////////////
 
-		var ctx = Display.context.background;
+		var ctx = Display.context.game;
 
 		var prismSprite = new Sprite("MrPrism");
 		prismSprite.scaleX = prismSprite.scaleY = 0.7;

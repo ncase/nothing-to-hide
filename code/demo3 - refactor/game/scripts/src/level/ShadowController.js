@@ -8,6 +8,16 @@
 		this.level = level;
 		this.config = config;
 		this.shadows = config.shadows.slice(0);
+
+		// MY CANVASSES
+		this.shadowCanvas = document.createElement("canvas");
+		this.shadowCanvas.width = level.map.width;
+		this.shadowCanvas.height = level.map.height;
+		this.shadowContext = this.shadowCanvas.getContext('2d');
+		this.camCanvas = document.createElement("canvas");
+		this.camCanvas.width = level.map.width;
+		this.camCanvas.height = level.map.height;
+		this.camContext = this.camCanvas.getContext('2d');
 		
 		///////////////////////
 		///// UPDATE LOOP /////
@@ -27,7 +37,7 @@
 			py = Math.round(py);
 
 			// If you're out of screen, duh you're hiding.
-			if(px<0||py<0||px>Display.width||py>Display.height){
+			if(px<0||py<0||px>level.map.width||py>level.map.height){
 				return true;
 			}
 
@@ -51,24 +61,22 @@
 
 		var temp_shadowCanvas = document.createElement("canvas");
 		var temp_shadowContext = temp_shadowCanvas.getContext("2d");
-		temp_shadowCanvas.width = Display.width;
-		temp_shadowCanvas.height = Display.height;
+		temp_shadowCanvas.width = level.map.width;
+		temp_shadowCanvas.height = level.map.height;
 
 		this.dirtyCam = true;
-		this.dirtyMoveCam = true;
 		this.draw = function(){
 
 	    	// Draw Player Shadow
-			ctx = Display.context.shadows;
+			ctx = this.shadowContext;
 			ctx.clearRect(0,0, level.map.width, level.map.height);
 			var player = level.player;
 		    _drawShadow(ctx,player.x,player.y);
-		    _blur(ctx,Display.canvas.shadows,5);
 
 		    // Draw all shadows
 		    if(self.dirtyCam){
 
-		    	ctx = Display.context.shadowsCam;
+		    	ctx = this.camContext;
 		    	ctx.globalAlpha = 1.0;
 				ctx.globalCompositeOperation = "source-over";
 				ctx.fillRect(0,0, level.map.width, level.map.height);
@@ -92,34 +100,11 @@
 					prism.seesHuman = (humanoidsSeen>0);
 
 				}
-
-				// Fuzzy shadows
-				_blur(ctx,Display.canvas.shadowsCam,5);
 			
 			}
 
 		};
-		var _blur = function(ctx,canvas,blur){
 
-			return;
-
-			// Centering the cam
-			var x = (level.camera.x-Display.width/2);
-			var y = (level.camera.y-Display.height/2);
-
-			// Cache it
-			temp_shadowContext.clearRect(0,0, temp_shadowCanvas.width, temp_shadowCanvas.height);
-			temp_shadowContext.drawImage(canvas,0,0);
-
-			// Diagonal blur
-			ctx.globalAlpha = 0.3;
-			ctx.globalCompositeOperation = "source-over";
-			ctx.drawImage(temp_shadowCanvas,x+blur,y-blur);
-			ctx.drawImage(temp_shadowCanvas,x-blur,y-blur);
-			ctx.drawImage(temp_shadowCanvas,x+blur,y+blur);
-			ctx.drawImage(temp_shadowCanvas,x-blur,y+blur);
-
-		}
 		var _drawShadow = function(ctx,lightX,lightY){
 
 			var vector, vectorLength;

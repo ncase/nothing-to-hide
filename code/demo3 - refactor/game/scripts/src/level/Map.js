@@ -20,6 +20,12 @@
 		this.width = width*Map.TILE_SIZE;
 		this.height = height*Map.TILE_SIZE;
 
+		// MY CANVASSES
+		this.camCanvas = document.createElement("canvas");
+		this.camCanvas.width = self.width;
+		this.camCanvas.height = self.height;
+		this.camContext = this.camCanvas.getContext('2d');
+
 		// Collision Hittest
 		this.getTile = function(px,py){
 			var x = Math.floor(px/Map.TILE_SIZE);
@@ -61,12 +67,12 @@
 
 		// CCTV Lines
 		var cctvCache = document.createElement("canvas");
-		cctvCache.width = Display.width;
-		cctvCache.height = Display.height;
+		cctvCache.width = self.width;
+		cctvCache.height = self.height;
 		var ctx = cctvCache.getContext('2d');
 		ctx.fillStyle = "rgba(0,0,0,0.2)";
-		for(var y=0; y<Display.height; y+=7 ){
-			ctx.fillRect(0,y,Display.width,2);
+		for(var y=0; y<self.height; y+=7 ){
+			ctx.fillRect(0,y,self.width,2);
 		}
 
 		// Draw Loop
@@ -75,14 +81,14 @@
 		this.draw = function(){
 			
 			// Draw background
-			Display.context.background.drawImage(bgCache,0,0);
+			Display.context.game.drawImage(bgCache,0,0);
 
 			//////////////////////////
 
 			// HACK: Draw Propaganda
 
 			// Which Spritesheet to use
-			var ctx = Display.context.background;
+			/*var ctx = Display.context.game;
 		    var sprite = Asset.sprite.PropagandaTest;
 			var spriteImage = sprite.image;
 			var spriteData = sprite.data;
@@ -97,22 +103,19 @@
 		    ctx.drawImage(spriteImage,frame.x,frame.y,frame.w,frame.h,0,0,frame.w,frame.h);
 
 			// Restore again
-			ctx.restore();
+			ctx.restore();*/
 
 
 			////////////////////////
-
-
+			
 			if(level.config.level.art.hideCam) return;
 
 			// Draw camera, with CCTV Lines
-			var ctx = Display.context.backgroundCam;
+			var ctx = this.camContext;
 			ctx.drawImage(camCache,0,0);
 			linesY += 1;
 			if(linesY>7) linesY=0;
-			var x = level.camera.x - Display.width/2;
-			var y = level.camera.y - Display.height/2;
-			ctx.drawImage(cctvCache,x,y+linesY);
+			ctx.drawImage(cctvCache, 0, linesY, level.map.width, level.map.height-7);
 
 		};
 

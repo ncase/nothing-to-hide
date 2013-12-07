@@ -22,7 +22,7 @@
 
 	"doors": [
 		{
-			"shadow": {"ax":7,"bx":8,"ay":5,"by":5},
+			"shadow": {"ax":6.95,"bx":8.05,"ay":5,"by":5},
 			"activator": "door"
 		}
 	],

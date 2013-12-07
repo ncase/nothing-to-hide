@@ -11,54 +11,53 @@
 		this.y = this.gotoY = 0;
 
 		// Before & After Draw
-		this.draw = function(){
-
+		this.update = function(){
+			
 			// Camera Logic
 			_camLogic();
-
-			// If you move, camera's dirty
-			if( Math.abs(this.x-this.gotoX)>0.1 || Math.abs(this.y-this.gotoY)>0.1 ){
-				level.shadows.dirtyMoveCam = true;
-			}
 
 			// Swing to gotoSpot
 			this.x = this.x*0.8 + this.gotoX*0.2;
 			this.y = this.y*0.8 + this.gotoY*0.2;
 
-			// Clear Canvasses
-			var w = Math.max(Display.width,level.map.width) + 100;
-			var h = Math.max(Display.height,level.map.height) + 100;
-			Display.context.background.clearRect(-50,-50,w,h);
-			Display.context.backgroundCam.clearRect(-50,-50,w,h);
-		
-			// Pixel-perfect camera centering
-			var cx = Math.round(Display.width/2-self.x);
-			var cy = Math.round(Display.height/2-self.y);
-			for(var id in Display.context){
-				var ctx = Display.context[id];
-				ctx.save();
-				ctx.translate(cx,cy);
-			}
+			// Centering the camera
+			self.cx = Math.round(Display.width/2-self.x);
+			self.cy = Math.round(Display.height/2-self.y);
+
+		};
+		this.draw = function(){
+			
+			// Extra centering
+			Display.context.game.save();
+			Display.context.game.translate(self.cx,self.cy);
+
+			// Clear JUST THE GAME AREA
+			Display.context.game.clearRect(0,0,level.map.width,level.map.height);
 
 			// Draw everything
 			level.map.draw();
 			level.shadows.draw();
 
 			// Masking everything
-			_mask(Display.canvas.shadows, Display.context.background);
+			_mask(level.shadows.shadowCanvas, Display.context.game);
 
 			// Draw rest of everything
 			level.prisms.draw();
 			level.dummies.draw();
 			level.player.draw();
 
-			// Cursor!...
-			Cursor.draw();
+			// Mask the cams
+			_mask(level.shadows.camCanvas, level.map.camContext);
+
+			// Draw BENEATH: Shadow Cams, then Cam CCTV thingy
+			var ctx = Display.context.game;
+			ctx.save();
+			ctx.globalCompositeOperation = "destination-over";
+			ctx.drawImage(level.map.camCanvas,0,0);
+			ctx.restore();
 
 			// Restore Camera
-			for(var id in Display.context){
-				Display.context[id].restore();
-			}
+			Display.context.game.restore();
 
 		};
 
@@ -66,7 +65,7 @@
 		var _mask = function(mask,ctx){
 			ctx.save();
 			ctx.globalCompositeOperation = "destination-out";
-			ctx.drawImage(mask, self.x-Display.width/2, self.y-Display.height/2);
+			ctx.drawImage(mask,0,0);
 			ctx.restore();
 		};
 

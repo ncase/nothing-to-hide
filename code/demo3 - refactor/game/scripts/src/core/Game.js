@@ -15,16 +15,34 @@
 	var RAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
 	Game.start = function(){
 
+		var drawnSinceLastUpdate = false;
+
 		// Update loop
 		gameLoop = setInterval(function(){
 			if(Game.level) Game.level.update();
+			drawnSinceLastUpdate = false;
 		},1000/30);
 
 		// Draw Loop
 		function draw(){
-			if(Game.level){ Game.level.draw(); }else{ Display.clear(); }
+
+			if(!drawnSinceLastUpdate){
+				drawnSinceLastUpdate = true;
+				if(Game.level){
+					Game.level.draw();
+				}else{
+					Display.clear();
+				}
+				Debug.fps();
+			}
+
+			// Cursor, draw anyway!...
+			if(Game.level){
+				Cursor.draw();
+			}
+			
 			if(!gameKilled){ RAF(draw); }
-			Debug.fps();
+
 		}
 		draw();
 

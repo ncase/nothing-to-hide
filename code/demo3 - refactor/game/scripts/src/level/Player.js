@@ -22,8 +22,8 @@
 
 			// Hovering...
 			var hovering = false;
-			var mx = Mouse.x + (level.camera.x-Display.width/2);
-	    	var my = Mouse.y + (level.camera.y-Display.height/2);
+			var mx = Mouse.x - level.camera.cx;
+	    	var my = Mouse.y - level.camera.cy;
 	    	var dx = self.x - mx;
 			var dy = (self.y-50) - my;
 			if(dx*dx + dy*dy < 35*35){
@@ -49,8 +49,8 @@
 		    var vx = 0;
 		    var vy = 0;
 		    if(Mouse.pressed){
-		    	var mx = Mouse.x + (level.camera.x-Display.width/2);
-		    	var my = Mouse.y + (level.camera.y-Display.height/2);
+		    	var mx = Mouse.x - level.camera.cx;
+		    	var my = Mouse.y - level.camera.cy;
 			    var dx = mx - self.x;
 			    var dy = my - self.y;
 			    var mag = Math.sqrt(dx*dx+dy*dy);
@@ -130,7 +130,7 @@
 		///// DRAW LOOP /////
 		/////////////////////
 
-		var ctx = Display.context.background;
+		var ctx = Display.context.game;
 		var frameIndex = 0;
 		var faceDirection = 1;
 		var animState = "Idle";

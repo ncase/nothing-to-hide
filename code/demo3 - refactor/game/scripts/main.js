@@ -1,4 +1,4 @@
-(function(){
+window.addEventListener("load",function(){
 
 	var loading = document.getElementById("loading_screen");
 	var loading_bar = document.getElementById("loading_bar");
@@ -24,6 +24,12 @@
 
 	},50);
 
+	// Display
+	Display.init({
+		dom: document.getElementById("game_container"),
+		width:960, height:600
+	});
+
 	// Preloader and stuff
 	Asset.load().then(function(){
 		console.log("===== LOADED! =====");
@@ -44,4 +50,4 @@
 
 	}
 
-})();
+},false);

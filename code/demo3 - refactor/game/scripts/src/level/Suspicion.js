@@ -87,19 +87,17 @@
 			// If it's hitting a wall, yeah it's hidden
 			if(level.map.hitTest(x,y)) return true;
 
-			// Center & Pixel-Perfect
-			var px = x - (level.camera.x-Display.width/2);
-			var py = y - (level.camera.y-Display.height/2);
-			px = Math.round(px);
-			py = Math.round(py);
+			// Pixel-Perfect
+			var px = Math.round(x);
+			var py = Math.round(y);
 
 			// If you're out of screen, duh you're hiding.
-			if(px<0||py<0||px>Display.width||py>Display.height){
+			if(px<0||py<0||px>level.map.width||py>level.map.height){
 				return true;
 			}
 
 			// Are you on a transparent part of the shadow canvas?
-			var imageData = Display.context.shadowsCam.getImageData(px,py,1,1);
+			var imageData = level.shadows.camContext.getImageData(px,py,1,1);
 			var alpha = imageData.data[3];
 			var isHiding = (alpha>200);
 			return isHiding;

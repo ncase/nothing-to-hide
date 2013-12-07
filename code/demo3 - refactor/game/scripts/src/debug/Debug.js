@@ -12,7 +12,7 @@
 
 	// For recording the FPS rate
 	var fps = 0, now, lastUpdate = (new Date)*1 - 1;
-	var fpsFilter = 30; // The higher this value, the less the FPS will be affected by quick changes
+	var fpsFilter = 10; // The higher this value, the less the FPS will be affected by quick changes
 	var fpsOut = document.getElementById('fps_counter');
 	setInterval(function(){
 		fpsOut.innerHTML = fps.toFixed(1) + "fps";

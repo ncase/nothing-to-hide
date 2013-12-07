@@ -12,14 +12,20 @@
 	};
 
 	var cursorSprite;
+	var lastPos = {x:0,y:0};
+
+	Cursor.update = function(){
+		// Reset - number of clickable things you're hovering.
+		Cursor.hovering = 0;
+	}
 
 	Cursor.draw = function(){
 
-		var ctx = Display.context.background;
+		var ctx = Display.context.ui;
 
 		// Mouse Position
-		var mx = Mouse.x + (Game.level.camera.x-Display.width/2);
-		var my = Mouse.y + (Game.level.camera.y-Display.height/2);
+		var mx = Mouse.x;
+		var my = Mouse.y;
 
 		// Frame Index
 		cursorSprite.frameIndex = (Cursor.hovering>0) ? 2 : 0;
@@ -27,13 +33,15 @@
 			cursorSprite.frameIndex += 1;
 		}
 
+		// Wipe last thing
+		ctx.clearRect(lastPos.x-10,lastPos.y-10,50,50);
+		lastPos.x = mx;
+		lastPos.y = my;
+
 		// Draw the damn thing
 		cursorSprite.x = mx;
 		cursorSprite.y = my;
 		cursorSprite.draw(ctx);
-
-		// Reset
-		Cursor.hovering = 0;
 
 	};
 

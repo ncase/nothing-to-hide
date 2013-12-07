@@ -1,8 +1,3 @@
-Display.init({
-	dom: document.getElementById("game_container"),
-	width:960, height:600
-});
-
 Asset.init({
 	images:{},
 	sprites:{
