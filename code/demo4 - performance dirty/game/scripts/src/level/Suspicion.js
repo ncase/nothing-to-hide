@@ -65,8 +65,6 @@
 
 				// The more you're moving the less grace you get.
 				grace-=1;
-				if(Key.shift) grace-=2;
-				//if(Key.left||Key.right||Key.down||Key.up) grace-=1;
 
 				// End level if you're out of grace
 				if(grace<=0){

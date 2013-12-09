@@ -12,12 +12,15 @@
 		///// UPDATE LOOP /////
 		///////////////////////
 
+		self.nearPlayer = false;
 		this.update = function(){
 			
 			// Are you near?
-			var dx = self.x - level.player.x;
-			var dy = self.y - level.player.y;
-			self.nearPlayer = ( (dx*dx + dy*dy < 50*50) && !level.player.holdingPrism );
+			if(!level.config.level.art.ignoreCameras){
+				var dx = self.x - level.player.x;
+				var dy = self.y - level.player.y;
+				self.nearPlayer = ( (dx*dx + dy*dy < 50*50) && !level.player.holdingPrism );
+			}
 
 		};
 

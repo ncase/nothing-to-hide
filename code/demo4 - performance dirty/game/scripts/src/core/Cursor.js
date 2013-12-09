@@ -33,7 +33,7 @@
 		}
 
 		// Wipe last thing
-		ctx.clearRect(lastPos.x-10,lastPos.y-10,50,50);
+		ctx.clearRect(lastPos.x-10,lastPos.y-10,70,70);
 		lastPos.x = mx;
 		lastPos.y = my;
 

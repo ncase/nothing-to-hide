@@ -19,11 +19,13 @@
 		this.update = function(){
 
 			// Hovering...
-			var mx = Mouse.x - level.camera.cx;
-	    	var my = Mouse.y - level.camera.cy;
-		    var clickedPrism = self.isNearPrism(mx,my,50*0.7);
-			if(clickedPrism && clickedPrism.nearPlayer){
-				Cursor.hovering++;
+			if(!level.config.level.art.ignoreCameras){
+				var mx = Mouse.x - level.camera.cx;
+		    	var my = Mouse.y - level.camera.cy;
+			    var clickedPrism = self.isNearPrism(mx,my,50*0.7);
+				if(clickedPrism && clickedPrism.nearPlayer){
+					Cursor.hovering++;
+				}
 			}
 
 			// Adding/Removing a new light.

@@ -20,7 +20,7 @@
 
 			// Adding/Removing a new dummy.
 			var player = level.player;
-		    if(!lastSpace && Key.space){
+		    if(!lastSpace){// && Key.space){
 
 		    	// Are you near a dummy?
 		    	var nearDummy = self.isNearDummy(player.x,player.y,50);
@@ -52,7 +52,7 @@
 		    	}
 
 		    }
-		    lastSpace = Key.space;
+		    //lastSpace = Key.space;
 
 		};
 

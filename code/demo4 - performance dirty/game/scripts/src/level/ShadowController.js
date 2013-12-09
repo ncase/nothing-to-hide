@@ -66,6 +66,9 @@
 			var player = level.player;
 		    _drawShadow(ctx,player.x,player.y);
 
+		    // IGNORE CAMERAS
+		    if(level.config.level.art.ignoreCameras) return;
+
 		    // Draw all Camera Sight shadows
 	    	ctx = self.camContext;
 	    	ctx.globalAlpha = 1.0;
@@ -100,7 +103,7 @@
 			var shadows = self.shadows;
 
 			// Draw Shadow
-		    for(var i=0;i<shadows.length;i++){
+			for(var i=0;i<shadows.length;i++){
 				var shadow = shadows[i];
 
 				// Begin drawing shadow
