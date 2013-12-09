@@ -165,7 +165,7 @@
 			for(var x=0;x<tiles[y].length;x++){
 				switch(tiles[y][x]){
 					case Map.SPACE: ctx.fillStyle="#555"; break;
-					case Map.CARPET: ctx.fillStyle="#555"; break;
+					case Map.CARPET: ctx.fillStyle="#444"; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
 					case Map.GLASS: ctx.fillStyle="#888"; break;
 					case Map.METAL: ctx.fillStyle="#333"; break;

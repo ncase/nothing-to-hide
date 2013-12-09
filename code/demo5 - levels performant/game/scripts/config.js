@@ -40,8 +40,7 @@ Asset.init({
 		tut_blackout: 'levels/tut_blackout',
 		puzzle_huge: 'levels/puzzle_huge',
 
-		door: 'levels/door',
-		basic: 'levels/basic'
+		door: 'levels/door'
 
 	}
 });
@@ -50,6 +49,6 @@ Game.init({
 	levels:[
 		'intro',
 		'tut_look_1', 'tut_pickup', 'puzzle_bridge', 'tut_blackout', 'puzzle_huge',
-		'door','basic'
+		'door'
 	]
 });
