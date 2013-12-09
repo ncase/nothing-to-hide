@@ -75,9 +75,6 @@
     		heldPrism = nearPrism;
     		createjs.Sound.play( nearPrism.active ? "sfx_prism_pickup" : "sfx_prism_pickup_soft", null,0,0,false,0.4);
 
-    		// Dirty
-    		level.shadows.dirtyCam = true;
-
 		};
 
 		this.dropPrism = function(){
@@ -100,9 +97,6 @@
     		// Sound
     		var isMetal = (level.map.getTile(player.x,player.y)==Map.METAL);
     		createjs.Sound.play( isMetal ? "sfx_prism_putdown" : "sfx_prism_putdown_soft", null,0,0,false,0.4);
-
-    		// Dirty
-    		level.shadows.dirtyCam = true;
 
 		};
 

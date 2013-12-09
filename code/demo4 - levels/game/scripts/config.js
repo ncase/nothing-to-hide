@@ -32,13 +32,12 @@ Asset.init({
 	},
 	levels:{
 		//moving: 'levels/moving'
+		intro: 'levels/intro',
 		door: 'levels/door',
 		basic: 'levels/basic'
 	},
 });
 
 Game.init({
-	levels:[
-		'basic','door'
-	]
+	levels:['intro','basic']
 });

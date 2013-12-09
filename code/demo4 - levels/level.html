@@ -22,11 +22,12 @@ body{
 }
 
 #level_select_list {
-	padding-left:20px;
+	padding-left:30px;
 }
 #level_select_list > li{
 	color: #000;
 	cursor: pointer;
+	margin-bottom:5px;
 }
 #level_select_list > li:hover{
 	color: #999;
@@ -44,22 +45,68 @@ body{
 
 <script>
 var levels = [
+
+	// Intro //
 	{
-		label:"Basic Mechanics",
-		id:"basic"
+		label:"Intro - running away",
+		id:"intro"
+	},
+
+	// iEyes //
+	{
+		label:"iEyes - always be in sight",
+		id:"door"
 	},
 	{
-		label:"Doors",
-		id:"door"
-	}/*,
-	{
-		label:"Conveyors",
+		label:"iEyes - picking them up",
 		id:"door"
 	},
 	{
-		label:"Dummies",
+		label:"iEyes - what eyes can see",
 		id:"door"
-	}*/
+	},
+	{
+		label:"iEyes - what eyes can see 2",
+		id:"door"
+	},
+	{
+		label:"iEyes - a big puzzle",
+		id:"door"
+	},
+
+	// Doors & Conveyors //
+	{
+		label:"Doors - simple mechanism",
+		id:"door"
+	},
+	{
+		label:"Doors - some puzzle",
+		id:"door"
+	},
+	{
+		label:"Conveyors - simple mechanism",
+		id:"door"
+	},
+	{
+		label:"Conveyors - some puzzle",
+		id:"door"
+	},
+	{
+		label:"Doors & Conveyors - big puzzle",
+		id:"door"
+	},
+
+	// Dummy Ending //
+	{
+		label:"Dummy - T.O.M.",
+		id:"door"
+	},
+	{
+		label:"Outro - It's A Secret To Everyone",
+		id:"door"
+	},
+
+
 ];
 
 var list = document.getElementById("level_select_list");

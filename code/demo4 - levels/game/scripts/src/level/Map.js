@@ -84,8 +84,14 @@
 		var frameIndex = 0;
 		this.draw = function(){
 			
+			// Positions
+			var w = Math.min(bgCache.width,Display.width);
+			var h = Math.min(bgCache.height,Display.height);
+			var x = (w==Display.width) ? -level.camera.cx : 0;
+			var y = (h==Display.height) ? -level.camera.cy : 0;
+
 			// Draw background
-			Display.context.game.drawImage(bgCache,0,0);
+			Display.context.game.drawImage( bgCache, x,y,w,h, x,y,w,h );
 
 			//////////////////////////
 
@@ -120,10 +126,10 @@
 
 			// Draw CCTV Lines
 			var ctx = this.cctvContext;
-			ctx.clearRect(0,0,self.width,self.height);
+			ctx.clearRect(0,0,self.cctvCanvas.width,self.cctvCanvas.height);
 			linesY += 1;
 			if(linesY>=10) linesY=0;
-			ctx.drawImage(cctvCache, 0, linesY, level.map.width, level.map.height);
+			ctx.drawImage(cctvCache, 0, linesY);
 
 		};
 

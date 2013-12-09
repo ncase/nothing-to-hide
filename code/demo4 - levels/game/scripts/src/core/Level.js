@@ -29,6 +29,7 @@
 		}
 
 		// Dummies to scale of Tile Size
+		lvl.dummies = lvl.dummies || [];
 		for(var i=0;i<lvl.dummies.length;i++){
 			var dummy = lvl.dummies[i];
 			dummy.x = (dummy.x+0.5)*Map.TILE_SIZE;
@@ -59,9 +60,9 @@
 
 		this.shadows = new ShadowController(this,{ shadows:lvl.shadows });
 		this.prisms = new PrismController(this,{ prisms:lvl.prisms });
-		this.conveyors = new ConveyorController(this,{ conveyors:lvl.conveyors });
-		this.doors = new DoorController(this,{ doors:lvl.doors });
-		this.dummies = new DummyController(this,{ dummies:lvl.dummies });
+		this.conveyors = new ConveyorController(this,{ conveyors:lvl.conveyors || [] });
+		this.doors = new DoorController(this,{ doors:lvl.doors || [] });
+		this.dummies = new DummyController(this,{ dummies:lvl.dummies || [] });
 
 		//////////////////////
 		///// GAME LOGIC /////
