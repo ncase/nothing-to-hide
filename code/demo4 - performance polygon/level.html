@@ -1,0 +1,125 @@
+<style>
+body, canvas, div {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+
+	/* No support for these yet, use at own risk */
+	-o-user-select: none;
+	user-select: none; 
+}
+body{
+    margin:0;
+    overflow: hidden;
+    background:#fff;
+}
+#wrapper {
+    border: none;
+    width:75%;
+    height:100%;
+    position: absolute;
+    right:0;
+}
+
+#level_select_list {
+	padding-left:30px;
+}
+#level_select_list > li{
+	color: #000;
+	cursor: pointer;
+	margin-bottom:5px;
+}
+#level_select_list > li:hover{
+	color: #999;
+}
+
+</style>
+
+<iframe id="wrapper" src="game/game.html"></iframe>
+<div id="level_select">
+	<div style="padding:20px; font-size:16px; font-family: sans-serif">
+		<span style="font-size:25px">Level Select:</span>
+		<ol id="level_select_list"></ol>
+	</div>
+</div>
+
+<script>
+var levels = [
+
+	// Intro //
+	{
+		label:"Intro - running away",
+		id:"intro"
+	},
+
+	// iEyes //
+	{
+		label:"iEyes - always be in sight",
+		id:"door"
+	},
+	{
+		label:"iEyes - picking them up",
+		id:"door"
+	},
+	{
+		label:"iEyes - what eyes can see",
+		id:"door"
+	},
+	{
+		label:"iEyes - what eyes can see 2",
+		id:"door"
+	},
+	{
+		label:"iEyes - a big puzzle",
+		id:"door"
+	},
+
+	// Doors & Conveyors //
+	{
+		label:"Doors - simple mechanism",
+		id:"door"
+	},
+	{
+		label:"Doors - some puzzle",
+		id:"door"
+	},
+	{
+		label:"Conveyors - simple mechanism",
+		id:"door"
+	},
+	{
+		label:"Conveyors - some puzzle",
+		id:"door"
+	},
+	{
+		label:"Doors & Conveyors - big puzzle",
+		id:"door"
+	},
+
+	// Dummy Ending //
+	{
+		label:"Dummy - T.O.M.",
+		id:"door"
+	},
+	{
+		label:"Outro - It's A Secret To Everyone",
+		id:"door"
+	},
+
+
+];
+
+var list = document.getElementById("level_select_list");
+var html = "";
+for(var i=0;i<levels.length;i++){
+	var level = levels[i];
+	html += "<li onclick='gotoLevel(\""+level.id+"\")'>"+level.label+"</li>";
+}
+list.innerHTML = html;
+
+var frame = document.getElementById("wrapper");
+function gotoLevel(id){
+	frame.contentWindow.Game.gotoLevelById(id);
+}
+
+</script>
