@@ -108,7 +108,7 @@
 
 		// Mask helper
 		var _mask = function(mask,ctx){
-			
+
 			// Positions
 			var x = (level.map.width>=Display.width) ? -self.cx : 0;
 			var y = (level.map.height>=Display.height) ? -self.cy : 0;
