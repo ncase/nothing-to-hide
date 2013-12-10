@@ -20,6 +20,13 @@
 		this.width = width*Map.TILE_SIZE;
 		this.height = height*Map.TILE_SIZE;
 
+		// MY CANVASSES
+		
+		this.camCanvas = document.createElement("canvas");
+		this.camCanvas.width = Math.min(self.width, Display.width);
+		this.camCanvas.height = Math.min(self.height, Display.height);
+		this.camContext = this.camCanvas.getContext('2d');
+
 		// Collision Hittest
 		this.getTile = function(px,py){
 			var x = Math.floor(px/Map.TILE_SIZE);
@@ -67,10 +74,26 @@
 		this.draw = function(){
 			
 			// Positions
-			var w = Math.min(bgCache.width,Display.width);
-			var h = Math.min(bgCache.height,Display.height);
+			var w = Math.min(self.width,Display.width);
+			var h = Math.min(self.height,Display.height);
 			var x = (w==Display.width) ? -level.camera.cx : 0;
 			var y = (h==Display.height) ? -level.camera.cy : 0;
+
+			// To prevent out of bounds
+			if(x<0){
+				w += x;
+				x = 0;
+			}
+			if(x+w>bgCache.width){
+				w = bgCache.width-x-1;
+			}
+			if(y<0){
+				h += y;
+				y = 0;
+			}
+			if(y+h>bgCache.height){
+				h = bgCache.height-y-1;
+			}
 
 			// Draw background
 			Display.context.game.drawImage( bgCache, x,y,w,h, x,y,w,h );
