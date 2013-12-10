@@ -135,6 +135,19 @@
 		var faceDirection = 1;
 		var animState = "Idle";
 
+		var playerSprites = {
+			Idle: new Sprite("Poppy_Idle"),
+			Walk: new Sprite("Poppy_Walk")
+		};
+		playerSprites.Idle.scaleX = 0.9;
+		playerSprites.Idle.scaleY = 0.9;
+		playerSprites.Idle.regX = -25;
+		playerSprites.Idle.regY = -150;
+		playerSprites.Walk.scaleX = 0.9;
+		playerSprites.Walk.scaleY = 0.9;
+		playerSprites.Walk.regX = -25;
+		playerSprites.Walk.regY = -150;
+
 		var buttonSprite = new Sprite("Button");
 		buttonSprite.regX = -40;
 		buttonSprite.regY = -40;
@@ -161,29 +174,14 @@
 			}
 
 		    // Which Spritesheet to use
-		    var sprite = Asset.sprite["Poppy_"+animState];
-			var spriteImage = sprite.image;
-			var spriteData = sprite.data;
+		    var sprite = playerSprites[animState];
 
-			// Draw frame
-			var fI = Math.floor(frameIndex);
-			var frame = spriteData.frames[fI].frame;
-			ctx.save();
-		    ctx.translate(self.x,self.y);
-		    ctx.scale(0.9,0.9);
-
-		    // Player facing
-		    ctx.scale(faceDirection,1); 
-
-		    // The footing offset
-		    ctx.translate(-25,-150);
-
-		    var offset = spriteData.frames[fI].spriteSourceSize;
-		    ctx.translate(offset.x,offset.y);
-		    ctx.drawImage(spriteImage,frame.x,frame.y,frame.w,frame.h,0,0,frame.w,frame.h);
-
-			// Restore again
-			ctx.restore();
+		    // Draw It!
+			sprite.frameIndex = Math.floor(frameIndex);
+			sprite.x = self.x;
+			sprite.y = self.y;
+		    sprite.scaleX = faceDirection*0.9;
+		    sprite.draw(ctx);
 
 			// Placeholder CLICK ME circle
 			if(buttonSprite.scaleX>0.03){

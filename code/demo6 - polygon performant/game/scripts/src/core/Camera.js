@@ -53,26 +53,6 @@
 			_mask(level.shadows.shadowCanvas, ctx);
 
 			// Draw CCTV over
-			/*if(!level.config.level.art.hideCam){
-				Display.context.tmp.clearRect(0,0,Display.width,Display.height);
-
-				cctvY += 1;
-				if(cctvY>=10) cctvY=0;
-
-				var w = Math.min(level.map.width,Display.width);
-				var h = Math.min(level.map.height,Display.height);
-				var x = (w==Display.width) ? -level.camera.cx : 0;
-				var y = (h==Display.height) ? -level.camera.cy : 0;
-
-				Display.context.tmp.translate(0,cctvY);
-				Display.context.tmp.fillStyle = cctvPattern;
-				Display.context.tmp.fillRect(x,y,w,h);
-				Display.context.tmp.translate(0,-cctvY);
-				
-				_mask(level.shadows.camCanvas, Display.context.tmp);
-				ctx.drawImage( Display.canvas.tmp,0,0 );
-
-			}*/
 			if(!level.config.level.art.ignoreCameras){
 
 				cctvY += 1;

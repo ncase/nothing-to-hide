@@ -27,6 +27,7 @@
 	],
 
 	"art": {
+		"ignoreCameras": true,
 		"background": false,
 		"cam": false,
 		"lights": [

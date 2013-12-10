@@ -126,8 +126,6 @@
 
 	// PLACEHOLDER BACKGROUNDS
 	var _makePlaceholderCCTV = function(self,ctx,tiles,config){
-		
-		// Placeholder map
 		for(var y=0;y<tiles.length;y++){
 			for(var x=0;x<tiles[y].length;x++){
 				switch(tiles[y][x]){
@@ -140,11 +138,9 @@
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
 			}
 		}
-
 	};
+
 	var _makePlaceholderBG = function(self,ctx,tiles,config){
-		
-		// Placeholder map
 		for(var y=0;y<tiles.length;y++){
 			for(var x=0;x<tiles[y].length;x++){
 				switch(tiles[y][x]){
@@ -157,45 +153,6 @@
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
 			}
 		}
-
-		return;
-
-		// Drawing wonking boxes on a canvas
-		var temp_shadowCanvas = document.createElement("canvas");
-		var temp_shadowContext = temp_shadowCanvas.getContext("2d");
-		temp_shadowCanvas.width = self.width;
-		temp_shadowCanvas.height = self.height;
-		var _drawWonkyRect = function(ctx,fillStyle,ax,ay,bx,by){
-			ctx.fillStyle = fillStyle;
-			ctx.beginPath();
-			ctx.moveTo(ax+Math.random()*10-5,ay+Math.random()*10-5);
-			ctx.lineTo(bx+Math.random()*10-5,ay+Math.random()*10-5);
-			ctx.lineTo(bx+Math.random()*10-5,by+Math.random()*10-5);
-			ctx.lineTo(ax+Math.random()*10-5,by+Math.random()*10-5);
-			ctx.fill();
-		};
-		var _addBox = function(ax,ay,bx,by){
-			var ctx = temp_shadowContext;
-			ax-=10; ay-=10; bx+=10; by+=10;
-			_drawWonkyRect(ctx,"#000",ax,ay,bx,by);
-			ax-=10; ay-=10; bx+=10; by+=10;
-			_drawWonkyRect(ctx,"rgba(0,0,0,0.25)",ax,ay,bx,by);
-			ax-=10; ay-=10; bx+=10; by+=10;
-			_drawWonkyRect(ctx,"rgba(0,0,0,0.25)",ax,ay,bx,by);
-			ax-=10; ay-=10; bx+=10; by+=10;
-			_drawWonkyRect(ctx,"rgba(0,0,0,0.25)",ax,ay,bx,by);
-		};
-
-		// Draw lights
-		for(var i=0;i<config.art.lights.length;i++){
-			var light = config.art.lights[i];
-			_addBox(light.ax*Map.TILE_SIZE, light.ay*Map.TILE_SIZE, light.bx*Map.TILE_SIZE, light.by*Map.TILE_SIZE);
-		}
-		
-		// Masking
-		ctx.globalCompositeOperation = "destination-in";
-		ctx.drawImage(temp_shadowCanvas,0,0);
-
 	};
 
 	exports.Map = Map;
