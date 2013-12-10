@@ -20,16 +20,6 @@
 		this.width = width*Map.TILE_SIZE;
 		this.height = height*Map.TILE_SIZE;
 
-		// MY CANVASSES
-		this.camCanvas = document.createElement("canvas");
-		this.camCanvas.width = self.width;
-		this.camCanvas.height = self.height;
-		this.camContext = this.camCanvas.getContext('2d');
-		this.cctvCanvas = document.createElement("canvas");
-		this.cctvCanvas.width = self.width;
-		this.cctvCanvas.height = self.height;
-		this.cctvContext = this.cctvCanvas.getContext('2d');
-
 		// Collision Hittest
 		this.getTile = function(px,py){
 			var x = Math.floor(px/Map.TILE_SIZE);
@@ -51,11 +41,15 @@
 		var bgCache = document.createElement("canvas");
 		bgCache.width = self.width;
 		bgCache.height = self.height;
+		var bgContext = bgCache.getContext('2d');
+
 		var camCache = document.createElement("canvas");
 		camCache.width = self.width;
 		camCache.height = self.height;
-		var bgContext = bgCache.getContext('2d');
 		var camContext = camCache.getContext('2d');
+
+		self.bgCache = bgCache;
+		self.camCache = camCache;
 
 		// Drawing placeholders
 		if(this.cam){
@@ -69,20 +63,7 @@
 			_makePlaceholderBG(self,bgContext,tiles,config);
 		}
 
-		// CCTV Lines
-		var cctvCache = document.createElement("canvas");
-		cctvCache.width = self.width;
-		cctvCache.height = self.height;
-		var ctx = cctvCache.getContext('2d');
-		ctx.fillStyle = "rgba(0,0,0,0.25)";
-		for(var y=0; y<self.height; y+=10 ){
-			ctx.fillRect(0,y,self.width,2);
-		}
-		self.cctvCache = cctvCache;
-
 		// Draw Loop
-		var linesY = 0;
-		var frameIndex = 0;
 		this.draw = function(){
 			
 			// Positions
@@ -93,20 +74,6 @@
 
 			// Draw background
 			Display.context.game.drawImage( bgCache, x,y,w,h, x,y,w,h );
-
-			// Hide Camera?			
-			if(level.config.level.art.hideCam) return;
-
-			// Draw camera
-			var ctx = this.camContext;
-			ctx.drawImage(camCache,0,0);
-
-			// Draw CCTV Lines
-			/*var ctx = this.cctvContext;
-			ctx.clearRect(0,0,self.cctvCanvas.width,self.cctvCanvas.height);
-			linesY += 1;
-			if(linesY>=10) linesY=0;
-			ctx.drawImage(cctvCache, 0, linesY);*/
 
 		};
 

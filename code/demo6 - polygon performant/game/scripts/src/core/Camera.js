@@ -28,6 +28,7 @@
 
 		var cctvTexture = Asset.image.cctv;
 		var cctvPattern = Display.context.game.createPattern(cctvTexture, 'repeat');
+		var cctvY = 0;
 
 		this.draw = function(){
 
@@ -38,7 +39,6 @@
 			self.cy = Math.round(Display.height/2-self.y);
 		
 			// Extra centering
-			ctx.save();
 			ctx.translate(self.cx,self.cy);
 
 			// Clear JUST THE GAME AREA, with padding.
@@ -56,12 +56,31 @@
 			//_mask(level.shadows.camCanvas, level.map.cctvContext);
 
 			// Draw CCTV over
-			/*
-        	cctv.rect(0, 0, canvas.width, canvas.height);
-        	cctv.fillStyle = pattern;
-        	context.fill();
-			ctx.drawImage(level.map.cctvCanvas,0,0);
-			*/
+			if(!level.config.level.art.ignoreCameras){
+				
+				cctvY += 1;
+				if(cctvY>=10) cctvY=0;
+
+				var prisms = level.prisms.prisms;
+				for(var j=0;j<prisms.length;j++){
+					var prism = prisms[j];
+					if(!prism.active) continue;
+
+					// Draw CCTV
+					var poly = prism.sightPolygon;
+					ctx.fillStyle = cctvPattern;
+					ctx.beginPath();
+					ctx.moveTo(poly[0][0], poly[0][1]);
+					for (var i = 1; i < poly.length; ++i) {
+						ctx.lineTo(poly[i][0], poly[i][1]);
+					}
+
+					ctx.translate(0,cctvY);
+					ctx.fill();
+					ctx.translate(0,-cctvY);
+
+				}
+			}
 
 			// Draw rest of everything
 			level.prisms.draw();
@@ -69,13 +88,24 @@
 			level.player.draw();
 
 			// Draw BENEATH: Shadow Cams
-			/*ctx.save();
-			ctx.globalCompositeOperation = "destination-over";
-			ctx.drawImage(level.map.camCanvas,0,0);
-			ctx.restore();*/
+			if(!level.config.level.art.hideCam){
+				
+				var camCache = level.map.camCache;
+				var w = Math.min(camCache.width,Display.width);
+				var h = Math.min(camCache.height,Display.height);
+				var x = (w==Display.width) ? -level.camera.cx : 0;
+				var y = (h==Display.height) ? -level.camera.cy : 0;
+
+				Display.context.tmp.drawImage(camCache,0,0);
+				_mask(level.shadows.camCanvas, Display.context.tmp);
+
+				ctx.globalCompositeOperation = "destination-over";
+				ctx.drawImage( Display.canvas.tmp,0,0 );
+				ctx.globalCompositeOperation = "source-over";
+			}
 
 			// Restore Camera
-			ctx.restore();
+			ctx.translate(-self.cx,-self.cy);
 
 		};
 

@@ -19,8 +19,9 @@
 		Display.dom.style.height = Display.height+"px";
 
 		// Canvasses
-		_addCanvas("game");
-		_addCanvas("ui");
+		Display.dom.appendChild(_addCanvas("game"));
+		Display.dom.appendChild(_addCanvas("ui"));
+		_addCanvas("tmp");
 
 	};
 
@@ -32,10 +33,10 @@
 		canvas.width = Display.width;
 		canvas.height = Display.height;
 
-		Display.dom.appendChild(canvas);
-
 		Display.canvas[layerID] = canvas;
 		Display.context[layerID] = canvas.getContext('2d');
+
+		return canvas;
 
 	};
 
