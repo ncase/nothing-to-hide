@@ -17,9 +17,19 @@
 	    Mouse.pressed = false;
 	};
 	var onMouseMove = function(event){
-		var container = document.getElementById("container");
+		
+		Mouse.realX = event.clientX;
+		Mouse.realY = event.clientY;
+
+		var container = document.querySelector("canvas#game");
+		if(!container){
+			Mouse.x = Mouse.realX;
+			Mouse.y = Mouse.realY;
+			return;
+		}
 		Mouse.x = event.clientX - container.offsetLeft;
 		Mouse.y = event.clientY - container.offsetTop;
+
 	};
 	window.onmousedown = onMouseDown;
 	window.onmouseup = onMouseUp;

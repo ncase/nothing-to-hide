@@ -26,8 +26,7 @@ window.addEventListener("load",function(){
 
 	// Display
 	Display.init({
-		dom: document.getElementById("game_container"),
-		width:960, height:600
+		dom: document.getElementById("game_container")
 	});
 
 	// Preloader and stuff

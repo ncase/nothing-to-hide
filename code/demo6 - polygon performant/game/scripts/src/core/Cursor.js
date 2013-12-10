@@ -18,13 +18,16 @@
 		Cursor.hovering = 0;
 	}
 
+	Cursor.hovering = 0;
 	Cursor.draw = function(){
+
+		if(!Cursor.active) return;
 
 		var ctx = Display.context.ui;
 
 		// Mouse Position
-		var mx = Mouse.x;
-		var my = Mouse.y;
+		var mx = Mouse.realX;
+		var my = Mouse.realY;
 
 		// Frame Index
 		cursorSprite.frameIndex = (Cursor.hovering>0) ? 2 : 0;

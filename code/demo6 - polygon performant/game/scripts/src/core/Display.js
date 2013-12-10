@@ -13,10 +13,8 @@
 		Display.context = {};
 
 		// Set Canvas Dimensions
-		Display.width = Display.dom.clientWidth;
-		Display.height = Display.dom.clientHeight;
-		Display.dom.style.width = Display.width+"px";
-		Display.dom.style.height = Display.height+"px";
+		Display.width = window.innerWidth;
+		Display.height = window.innerHeight;
 
 		// Canvasses
 		Display.dom.appendChild(_addCanvas("game"));
@@ -26,21 +24,28 @@
 	};
 
 	// Resize
-	Display.resize = function(event){
+	Display.resize = function(width,height){
 
 		// Set Canvas Dimensions
-		Display.width = event.target.innerWidth;
-		Display.height = event.target.innerHeight;
-		Display.dom.style.width = Display.width+"px";
-		Display.dom.style.height = Display.height+"px";
+		Display.width = width;
+		Display.height = height;
 
 		for(var id in Display.canvas){
-			Display.canvas[id].width = Display.width;
-			Display.canvas[id].height = Display.height;
+			if(id=="game"){
+				Display.canvas[id].width = Display.width;
+				Display.canvas[id].height = Display.height;
+			}else{
+				Display.canvas[id].width = window.innerWidth;
+				Display.canvas[id].height = window.innerHeight;
+			}
 		}
 
 	};
-	window.onresize = Display.resize;
+	window.onresize = function(event){
+		var w = Math.min(Game.level.map.width, window.innerWidth);
+		var h = Math.min(Game.level.map.height, window.innerHeight);
+		Display.resize(w,h);
+	};
 
 	// Add canvas
 	var _addCanvas = function(layerID){

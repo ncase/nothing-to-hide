@@ -37,9 +37,7 @@
 			}
 
 			// Cursor, draw anyway!...
-			if(Game.level){
-				Cursor.draw();
-			}
+			Cursor.draw();
 			
 			if(!gameKilled){ RAF(draw); }
 
@@ -87,9 +85,21 @@
 	};
 	Game.gotoLevelById = function(nextLevelName){
 		
-		// Go to level
+		// Find level
 		Game.clearLevel();
 		var levelConfig = Asset.level[nextLevelName];
+
+		// Dimensions
+		var lvlWidth = (levelConfig.map[0].length) * Map.TILE_SIZE;
+		var lvlHeight = (levelConfig.map.length) * Map.TILE_SIZE;
+		debugger;
+
+		// Resize NOW
+		var w = Math.min(lvlWidth, window.innerWidth);
+		var h = Math.min(lvlHeight, window.innerHeight);
+		Display.resize(w,h);
+
+		// Go to level
 		Game.level = new Level(levelConfig);
 
 		// Index
