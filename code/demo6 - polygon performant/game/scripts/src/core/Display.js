@@ -25,6 +25,23 @@
 
 	};
 
+	// Resize
+	Display.resize = function(event){
+
+		// Set Canvas Dimensions
+		Display.width = event.target.innerWidth;
+		Display.height = event.target.innerHeight;
+		Display.dom.style.width = Display.width+"px";
+		Display.dom.style.height = Display.height+"px";
+
+		for(var id in Display.canvas){
+			Display.canvas[id].width = Display.width;
+			Display.canvas[id].height = Display.height;
+		}
+
+	};
+	window.onresize = Display.resize;
+
 	// Add canvas
 	var _addCanvas = function(layerID){
 
