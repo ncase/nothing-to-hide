@@ -29,12 +29,12 @@
 
 	"conveyors": [
 		{
-			"belt": {"ax":1.2,"bx":13.8,"ay":1,"by":2},
+			"belt": {"ax":1,"bx":14,"ay":1,"by":2},
 			"direction": {"x":-3,"y":0},
 			"activator": "conveyor"
 		},
 		{
-			"belt": {"ax":1.2,"bx":13.8,"ay":2,"by":3},
+			"belt": {"ax":1,"bx":14,"ay":2,"by":3},
 			"direction": {"x":3,"y":0},
 			"activator": ""
 		}
