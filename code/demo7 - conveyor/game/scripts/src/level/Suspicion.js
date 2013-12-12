@@ -67,14 +67,14 @@
 				grace-=1;
 
 				// End level if you're out of grace
-				if(grace<=0){
-					createjs.Sound.play("sfx_shotdown",null,0,0,0,0.5,0);
-					setTimeout(Game.clearLevel,0);
-					setTimeout(Game.resetLevel,1500);
-				}
+				//if(grace<=0){
+				createjs.Sound.play("sfx_shotdown",null,0,0,0,0.5,0);
+				setTimeout(Game.clearLevel,0);
+				setTimeout(Game.resetLevel,1500);
+				//}
 
 			}else{
-				grace = 10;
+				grace = 1;
 			}
 
 

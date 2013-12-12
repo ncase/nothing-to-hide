@@ -26,8 +26,8 @@
 		var ctx = Display.context.ui;
 
 		// Mouse Position
-		var mx = Mouse.realX;
-		var my = Mouse.realY;
+		var mx = Mouse.realX || 0;
+		var my = Mouse.realY || 0;
 
 		// Frame Index
 		cursorSprite.frameIndex = (Cursor.hovering>0) ? 2 : 0;

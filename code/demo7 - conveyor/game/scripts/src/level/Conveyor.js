@@ -39,7 +39,9 @@
 				for(var i=0;i<props.length;i++){
 					var prop = props[i];
 
-					if(self.belt.ax+5<prop.x && self.belt.bx-5>prop.x && self.belt.ay+5<prop.y && self.belt.by-5>prop.y){
+					// With a 5px padding so things don't go over the edge
+					//if(self.belt.ax+5<prop.x && self.belt.bx-5>prop.x && self.belt.ay+5<prop.y && self.belt.by-5>prop.y){
+					if(self.belt.ax<prop.x && self.belt.bx>prop.x && self.belt.ay<prop.y && self.belt.by>prop.y){
 						prop.x += self.direction.x;
 						prop.y += self.direction.y;
 					}
