@@ -41,7 +41,7 @@
 		for(var i=0;i<lvl.blocks.length;i++){
 			var block = lvl.blocks[i];
 			block.x = (block.x+0.5)*Map.TILE_SIZE;
-			block.y = (block.y)*Map.TILE_SIZE; // Actually there, not half-way
+			block.y = (block.y+1.0)*Map.TILE_SIZE; // Actually there, not half-way
 		}
 
 		/////////////////////////////

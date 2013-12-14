@@ -23,7 +23,7 @@
 	"conveyors": [
 		{
 			"belt": {"ax":2,"bx":9,"ay":7,"by":8},
-			"direction": {"x":-1,"y":0},
+			"direction": {"x":-0.7,"y":0},
 			"activator": ""
 		}
 	],

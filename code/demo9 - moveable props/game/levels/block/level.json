@@ -1,29 +1,43 @@
 {
-	"player":{ "x":1, "y":2 },
-	"goal":{"ax":10,"bx":11,"ay":2,"by":3},
+	"player":{ "x":1, "y":1 },
+	"goal":{"ax":6,"bx":7,"ay":9.5,"by":11},
 
 	"shadows": [
-		{"ax":2,"bx":2,"ay":5,"by":6},
-		{"ax":2,"bx":5,"ay":5,"by":5},
-		{"ax":6,"bx":10,"ay":5,"by":5},
-
-		{"ax":10,"bx":10,"ay":3,"by":10},
-		{"ax":10,"bx":11,"ay":3,"by":3}
+		{"ax":2,"bx":2,"ay":0,"by":3},
+		{"ax":6,"bx":6,"ay":10,"by":11}
 	],
 
 	"prisms": [
-		{ "x":1,"y":5 },
-		{ "x":1,"y":7 }
+		{ "x":1,"y":9 },
+		{ "x":6,"y":5 }
 	],
 
 	"dummies": [],
-
 	"doors": [],
+
+	"blocks": [
+		{"x":5,"y":9,"shadows":true}
+	],
 
 	"conveyors": [
 		{
-			"belt": {"ax":2,"bx":9,"ay":7,"by":8},
-			"direction": {"x":-1,"y":0},
+			"belt": {"ax":2,"bx":5,"ay":7,"by":8},
+			"direction": {"x":1.5,"y":0},
+			"activator": ""
+		},
+		{
+			"belt": {"ax":5,"bx":6,"ay":7,"by":9},
+			"direction": {"x":0,"y":1.5},
+			"activator": ""
+		},
+		{
+			"belt": {"ax":3,"bx":6,"ay":9,"by":10},
+			"direction": {"x":-1.5,"y":0},
+			"activator": ""
+		},
+		{
+			"belt": {"ax":2,"bx":3,"ay":8,"by":10},
+			"direction": {"x":0,"y":-1.5},
 			"activator": ""
 		}
 	],
@@ -32,7 +46,7 @@
 		{
 			"type": "fixed",
 			"zone": {"ax":0,"bx":15,"ay":0,"by":9},
-			"data": {"x":5.5,"y":4.5}
+			"data": {"x":4,"y":5.5}
 		}
 	],
 
