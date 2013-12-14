@@ -50,7 +50,7 @@
 				}else{
 					gotoTimer = 1;
 				}
-				door.timer = door.timer*0.5 + gotoTimer*0.5;
+				door.timer = door.timer*0.8 + gotoTimer*0.2;
 
 				// Shadow reflects this
 				dx = door.initial.bx - door.initial.ax;
