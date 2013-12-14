@@ -1,0 +1,43 @@
+{"frames": [
+
+{
+	"filename": "Cursor0000",
+	"frame": {"x":0,"y":0,"w":50,"h":50},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":51,"h":50},
+	"sourceSize": {"w":51,"h":50}
+}
+,{
+	"filename": "Cursor0001",
+	"frame": {"x":50,"y":0,"w":51,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":50},
+	"sourceSize": {"w":51,"h":50}
+}
+,{
+	"filename": "Cursor0002",
+	"frame": {"x":0,"y":50,"w":50,"h":50},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":51,"h":50},
+	"sourceSize": {"w":51,"h":50}
+}
+,{
+	"filename": "Cursor0003",
+	"frame": {"x":50,"y":50,"w":51,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":50},
+	"sourceSize": {"w":51,"h":50}
+}],
+"meta": {
+	"app": "Adobe Flash CS6",
+	"version": "12.0.0.481",
+	"image": "Cursor.png",
+	"format": "RGBA8888",
+	"size": {"w":128,"h":128},
+	"scale": "1"
+}
+}
