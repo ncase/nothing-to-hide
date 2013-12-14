@@ -12,10 +12,26 @@
 
 	var cursorSprite;
 	var lastPos = {x:0,y:0};
+	var stillness = 0;
 
 	Cursor.update = function(){
+		
 		// Reset - number of clickable things you're hovering.
 		Cursor.hovering = 0;
+
+		// Mouse Velocity
+		var mx = Mouse.realX || 0;
+		var my = Mouse.realY || 0;
+		var dx = lastPos.x-mx;
+		var dy = lastPos.y-my;
+		// Less than 5px movement
+		if(dx*dx+dy*dy<25){
+			if(stillness>0) stillness--;
+		}else{
+			stillness = 10; // Must be still for 1/3 a second
+		}
+		Cursor.still = (stillness==0);
+
 	}
 
 	Cursor.hovering = 0;

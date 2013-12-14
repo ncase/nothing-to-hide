@@ -28,7 +28,7 @@
 
 			// Adding/Removing a new light.
 			var player = level.player;
-		    if(!lastMousePressed && Mouse.pressed){
+		    if(!lastMousePressed && Mouse.pressed && Cursor.still){
 
 		    	// Did you click on a Prism
 		    	if(!isHoldingPrism && clickedPrism && clickedPrism.nearPlayer){
@@ -37,7 +37,6 @@
 
 		    }
 		    lastMousePressed = Mouse.pressed;
-
 
 		    // Update all
 			for(var i=0;i<self.prisms.length;i++){

@@ -52,7 +52,7 @@ Asset.init({
 Game.init({
 	levels:[
 		//'door',
-		'conveyor'//,'conveyor_2',
+		'conveyor_2'//,'conveyor_2',
 		/*'intro',
 		'tut_look_1', 'tut_pickup', 'puzzle_bridge', 'tut_blackout', 'puzzle_huge',
 		'door'*/

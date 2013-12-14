@@ -33,7 +33,7 @@
 
 			// Adding/Removing a new light.
 			if(self.holdingPrism && !self.isMoving){
-				if(!lastMousePressed && Mouse.pressed){ // Click
+				if(!lastMousePressed && Mouse.pressed && Cursor.still){ // Click
 			    	if(hovering){
 			    		level.prisms.dropPrism();
 			    		Mouse.pressed = false;
