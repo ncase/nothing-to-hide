@@ -79,6 +79,7 @@
 				var y = (h==Display.height) ? -level.camera.cy : 0;
 
 				Display.context.tmp.drawImage(camCache,0,0);
+				//Display.context.tmp.translate(-x,-y);
 
 				// Draw CCTV over
 				_drawCCTV(Display.context.tmp);
@@ -89,6 +90,7 @@
 					prop.drawCCTV(Display.context.tmp);
 				}
 
+				//Display.context.tmp.translate(x,y);
 				_mask(level.shadows.camCanvas, Display.context.tmp);
 
 				ctx.globalCompositeOperation = "destination-over";
@@ -102,9 +104,11 @@
 			var x = (w==Display.width) ? -level.camera.cx : 0;
 			var y = (h==Display.height) ? -level.camera.cy : 0;
 			Display.context.tmp.clearRect(x,y,w,h);
+			Display.context.tmp.translate(-x,-y);
 			level.player.drawCCTV(Display.context.tmp);
+			Display.context.tmp.translate(x,y);
 			ctx.globalCompositeOperation = "destination-over";
-			ctx.drawImage(Display.canvas.tmp,0,0);
+			ctx.drawImage(Display.canvas.tmp,x,y);
 			ctx.globalCompositeOperation = "source-over";
 
 

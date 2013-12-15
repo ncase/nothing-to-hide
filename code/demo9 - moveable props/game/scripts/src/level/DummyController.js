@@ -13,13 +13,13 @@
 		///// UPDATE LOOP /////
 		///////////////////////
 
-		var isHoldingDummy = false;
-		var lastSpace = false;
-		var heldDummy = null;
+		//var isHoldingDummy = false;
+		//var lastSpace = false;
+		//var heldDummy = null;
 		this.update = function(){
 
 			// Adding/Removing a new dummy.
-			var player = level.player;
+			/*var player = level.player;
 		    if(!lastSpace){// && Key.space){
 
 		    	// Are you near a dummy?
@@ -51,7 +51,7 @@
 		    		isHoldingDummy = false;
 		    	}
 
-		    }
+		    }*/
 		    //lastSpace = Key.space;
 
 		};

@@ -8,21 +8,15 @@
 		this.level = level;
 		this.config = config;
 
-		///////////////////////
 		///// UPDATE LOOP /////
-		///////////////////////
-
 		this.update = function(){};
 
-		/////////////////////
 		///// DRAW LOOP /////
-		/////////////////////
-
-		var ctx = Display.context.game;
-		this.draw = function(){
+		this.draw = function(ctx){
 			ctx.fillStyle = "#fff";
 			ctx.fillRect(self.x-20, self.y-60, 40, 60);
 		};
+		this.drawCCTV = this.draw;
 
 	};
 

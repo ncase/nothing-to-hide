@@ -19,15 +19,24 @@ body{
     height:100%;
     position: absolute;
     right:0;
+
+    width: -webkit-calc(100% - 300px);
+    width: -moz-calc(100% - 300px);
+    width: -ms-calc(100% - 300px);
+    width: -o-calc(100% - 300px);
+    width: calc(100% - 300px);
+
 }
 
 #level_select{
 	background: #fff;
-	width:400px;
+	width:300px;
 	height:100%;
 	position: absolute;
 	top:0;
-	left:-390px;
+
+	/*left:-390px;*/
+	left:0
 
 	-webkit-transition: left 0.5s ease-in-out;
     -moz-transition: left 0.5s ease-in-out;
@@ -39,6 +48,7 @@ body{
 	left:0px;
 }
 #level_select_list {
+	font-size: 14px;
 	padding-left:30px;
 }
 #level_select_list > li{
@@ -91,15 +101,7 @@ var levels = [
 		id:"puzzle_huge"
 	},
 
-	// Doors & Conveyors //
-	{
-		label:"Doors - simple mechanism",
-		id:"door"
-	},
-	{
-		label:"Doors - some puzzle",
-		id:"door"
-	},
+	// Conveyors //
 	{
 		label:"Conveyors - simple mechanism",
 		id:"conveyor"
@@ -109,20 +111,31 @@ var levels = [
 		id:"conveyor_2"
 	},
 	{
-		label:"Doors & Conveyors - big puzzle",
-		id:"door"
+		label:"Conveyors - with moveable block",
+		id:"block"
+	},
+	{
+		label:"Conveyors - with trigger",
+		id:"intro"
+	},
+	{
+		label:"Conveyors - with trigger 2",
+		id:"intro"
+	},
+	{
+		label:"Conveyors - with trigger 3",
+		id:"intro"
 	},
 
 	// Dummy Ending //
 	{
 		label:"Dummy - T.O.M.",
-		id:"door"
+		id:"intro"
 	},
 	{
 		label:"Outro - It's A Secret To Everyone",
-		id:"door"
-	},
-
+		id:"intro"
+	}
 
 ];
 
