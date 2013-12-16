@@ -20,9 +20,18 @@
 	"doors": [],
 
 	"blocks": [
-		{"x":1,"y":5,"shadows":true},
-		{"x":5,"y":5,"shadows":true},
-		{"x":3,"y":7,"shadows":true}
+		
+		{"x":3,"y":5,"shadows":false},
+		{"x":4,"y":5,"shadows":false},
+		
+		{"x":5,"y":6,"shadows":false},
+
+		{"x":2,"y":7,"shadows":false},
+		{"x":3,"y":7,"shadows":false},
+		{"x":4,"y":7,"shadows":false},
+
+		{"x":1,"y":6,"shadows":false}
+
 	],
 
 	"conveyors": [
