@@ -46,15 +46,17 @@ Asset.init({
 		conveyor_2: 'levels/conveyor_2',
 		block: 'levels/block',
 		power: 'levels/power',
+		power_puzzle: 'levels/power_puzzle',
 
-		meet_dandy: 'levels/meet_dandy'
+		meet_dandy: 'levels/meet_dandy',
+		outro: 'levels/outro'
 
 	}
 });
 
 Game.init({
 	levels:[
-		'power',
+		'power_puzzle',
 		//'block','intro'
 		/*'intro',
 		'tut_look_1', 'tut_pickup', 'puzzle_bridge', 'tut_blackout', 'puzzle_huge',
