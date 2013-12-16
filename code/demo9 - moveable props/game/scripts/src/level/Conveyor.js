@@ -39,12 +39,23 @@
 				for(var i=0;i<props.length;i++){
 					var prop = props[i];
 
-					// With a 5px padding so things don't go over the edge
-					//if(self.belt.ax+5<prop.x && self.belt.bx-5>prop.x && self.belt.ay+5<prop.y && self.belt.by-5>prop.y){
-					if(    _isOnBelt(prop.x+5,prop.y)
-						|| _isOnBelt(prop.x+5,prop.y-10)
-						|| _isOnBelt(prop.x-5,prop.y)
-						|| _isOnBelt(prop.x-5,prop.y-10)
+					// Get the prop's bounding box.
+					var bounds = prop.bounds;
+
+					// If none, use the default bounds
+					if(!bounds){
+						bounds = {
+							left: -5,
+							right: 5,
+							top: -10,
+							bottom: 0
+						};
+					}
+					
+					if(    _isOnBelt(prop.x+bounds.right, prop.y+bounds.bottom)
+						|| _isOnBelt(prop.x+bounds.right, prop.y+bounds.top)
+						|| _isOnBelt(prop.x+bounds.left,  prop.y+bounds.bottom)
+						|| _isOnBelt(prop.x+bounds.left,  prop.y+bounds.top)
 					){
 						prop.x += self.direction.x;
 						prop.y += self.direction.y;

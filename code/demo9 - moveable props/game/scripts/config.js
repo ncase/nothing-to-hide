@@ -42,10 +42,10 @@ Asset.init({
 		tut_blackout: 'levels/tut_blackout',
 		puzzle_huge: 'levels/puzzle_huge',
 
-		/*door: 'levels/door',*/
 		conveyor: 'levels/conveyor',
 		conveyor_2: 'levels/conveyor_2',
 		block: 'levels/block',
+		power: 'levels/power',
 
 		meet_dandy: 'levels/meet_dandy'
 
@@ -54,7 +54,7 @@ Asset.init({
 
 Game.init({
 	levels:[
-		'meet_dandy',
+		'power',
 		//'block','intro'
 		/*'intro',
 		'tut_look_1', 'tut_pickup', 'puzzle_bridge', 'tut_blackout', 'puzzle_huge',

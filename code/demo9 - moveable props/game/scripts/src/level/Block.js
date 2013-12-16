@@ -8,6 +8,14 @@
 		this.level = level;
 		this.config = config;
 
+		// Bounds
+		self.bounds = {
+			left: -25,
+			right: 25,
+			top: -50,
+			bottom: 0
+		};
+
 		// Position
 		self.x = config.x;
 		self.y = config.y;
