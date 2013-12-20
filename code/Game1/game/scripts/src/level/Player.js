@@ -26,7 +26,7 @@
 	    	var my = Mouse.y - level.camera.cy;
 	    	var dx = self.x - mx;
 			var dy = (self.y-50) - my;
-			if(dx*dx + dy*dy < 35*35){
+			if(dx*dx + dy*dy < 25*25){
 				hovering = true;
 				Cursor.hovering++;
 			}
@@ -37,6 +37,7 @@
 			    	if(hovering){
 			    		level.prisms.dropPrism();
 			    		Mouse.pressed = false;
+			    		Cursor.clicked = true;
 			    		return;
 					}
 			    }
@@ -48,21 +49,22 @@
 		    var isMoving = false;
 		    var vx = 0;
 		    var vy = 0;
-		    if(Mouse.pressed){
-		    	var mx = Mouse.x - level.camera.cx;
-		    	var my = Mouse.y - level.camera.cy;
+		    var gotoSpot = false;
+	    	var mx = Mouse.x - level.camera.cx;
+	    	var my = Mouse.y - level.camera.cy;
+		    if(Mouse.pressed && !Cursor.clicked){
 			    var dx = mx - self.x;
 			    var dy = my - self.y;
 			    var mag = Math.sqrt(dx*dx+dy*dy);
-			    var speed = MAX_SPEED;
-			    /*if(mag<5*MAX_SPEED){
-			    	speed *= 0.5;
-			    }*/
-			    if(mag>MAX_SPEED){
+			    
+			    if(mag>MAX_SPEED*2){
 			    	isMoving = true;
-				    vx = (dx/mag) * speed;
-				    vy = (dy/mag) * speed;
+				    vx = (dx/mag) * MAX_SPEED;
+				    vy = (dy/mag) * MAX_SPEED;
+				}else{
+					gotoSpot = true;
 				}
+
 			}
 		    self.vx = vx*0.5 + self.vx*0.5;
 		    self.vy = vy*0.5 + self.vy*0.5;
@@ -73,8 +75,14 @@
 		    if(Math.abs(this.vy)<0.01) this.vy=0;
 
 		    // Move
-		    this.x += this.vx;
-		    this.y += this.vy;
+		    var moveX = self.vx;
+		    var moveY = self.vy;
+		    if(gotoSpot){
+		    	moveX += mx*0.2 - self.x*0.2;
+		    	moveY += my*0.2 - self.y*0.2;
+		    }
+		    self.x += moveX;
+		    self.y += moveY;
 
 		    // Crappy Collision
 		    var endLoop = MAX_SPEED*5;
@@ -91,16 +99,18 @@
 
 
 			// Facing which way?
-		    if(self.vx<-0.1) faceDirection = -1;
-		    if(self.vx>0.1) faceDirection = 1;
+		    if(moveX<-0.5) faceDirection = -1;
+		    if(moveX>0.5) faceDirection = 1;
+
+		    var moveSpeed = Math.sqrt(moveX*moveX+moveY*moveY);
 
 			// Frame Logic: VERY CUSTOMIZED FOR THE BAG SWINGING
-		    if(isMoving){
+		    if(Mouse.pressed){
 		    	if(animState!="Walk"){
 		    		frameIndex=0;
 		    		animState = "Walk";
 		    	}
-		    	frameIndex += 3;
+		    	frameIndex += 3 * (moveSpeed/MAX_SPEED);
 		    	if(frameIndex>=28) frameIndex=0;
 		    }else{
 		    	if(animState!="Idle"){
@@ -115,15 +125,17 @@
 			if(animState=="Walk"){
 				var cx = level.camera.x;
 				var pan = (self.x-cx)/(Display.width/2);
-				if(frameIndex==3){
+				if(lastFrameIndex<2 && frameIndex>=2){
 					createjs.Sound.play("sfx_footstep_1", null,0,0,false,0.5,pan);
 				}
-				if(frameIndex==18){
+				if(lastFrameIndex<17 && frameIndex>=17){
 					createjs.Sound.play("sfx_footstep_2", null,0,0,false,0.2,pan);
 				}
 			}
+			lastFrameIndex = frameIndex;
 
 		};
+		var lastFrameIndex = 0;
 		var lastMousePressed = false;
 
 
@@ -179,7 +191,7 @@
 
 			// CLICK ME
 			if(self.holdingPrism){
-				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 1*0.5;
+				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 0.75*0.5;
 			}else{
 				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 0*0.5;
 			}

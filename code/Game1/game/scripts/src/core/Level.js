@@ -84,8 +84,8 @@
 			// Update everything
 			Cursor.update();
 			this.camera.update();
-			this.player.update();
 			this.prisms.update();
+			this.player.update();
 			this.shadows.update();
 			this.conveyors.update();
 			this.doors.update();

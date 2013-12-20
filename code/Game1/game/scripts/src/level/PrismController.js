@@ -21,7 +21,7 @@
 			// Hovering...
 			var mx = Mouse.x - level.camera.cx;
 	    	var my = Mouse.y - level.camera.cy;
-		    var clickedPrism = self.isNearPrism(mx,my+25,40);
+		    var clickedPrism = self.isNearPrism(mx,my+25,25);
 			if(clickedPrism && clickedPrism.nearPlayer){
 				Cursor.hovering++;
 			}
@@ -33,6 +33,8 @@
 		    	// Did you click on a Prism
 		    	if(!isHoldingPrism && clickedPrism && clickedPrism.nearPlayer){
 		    		self.pickUpPrism(clickedPrism);
+		    		Cursor.clicked = true;
+		    		Mouse.pressed = false;
 				}
 
 		    }

@@ -46,7 +46,7 @@
 
 			// CLICK ME
 			if(self.nearPlayer){
-				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 1*0.5;
+				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 0.75*0.5;
 			}else{
 				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 0*0.5;
 			}

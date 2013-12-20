@@ -32,6 +32,11 @@
 		}
 		Cursor.still = (stillness==0);
 
+		// Cursor clicked
+		if(!Mouse.pressed){
+			Cursor.clicked = false;
+		}
+
 	}
 
 	Cursor.hovering = 0;
