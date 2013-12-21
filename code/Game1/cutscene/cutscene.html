@@ -1,186 +1,141 @@
-<style>
-body {
-	margin:0;
-	overflow: hidden;
-	background: #000;
-}
-#cutscene{
-	width:100%;
-	height:100%;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	background: #fff;
-	position: absolute;
-}
-#cutscene > div {
-	margin: 30px auto;
-	width:800px;
-}
-#cutscene > div > #header {
-	font-family: sans-serif;
-	font-size: 20px;
-	margin-bottom: 5px;
-	color: #bbb;
-	cursor: default;
-}
-#cutscene > div > #header > a{
-	color: #555;
-}
-/*#cutscene > div > #header > a{
-	color: #555;
-	cursor: pointer;
-}
-#cutscene > div > #header > a:hover{
-	color: #888;
-}*/
-#cutscene > hr{
-	border: 1px solid #ddd;
-	width:960px;
-	margin:0 auto;
-}
-.image_post img{
-	display: block;
-	width: 100%;
-	border: 1px solid #ddd;
-}
-.game_post img{
-	cursor: pointer;
+<link href='css/cutscene.css' rel='stylesheet' type='text/css'>
 
-	-webkit-transition: -webkit-transform 0.1s ease-in-out;
-    -moz-transition: -moz-transform 0.1s ease-in-out;
-    -ms-transition: -ms-transform 0.1s ease-in-out;
-    -o-transition: -o-transform 0.1s ease-in-out;
-    transition: transform 0.1s ease-in-out;
+<div id="header">
+	<div id="header_content"></div>
+</div>
 
-}
-.game_post img:hover {
-	-webkit-transform: scale(1.05,1.05);
-	-moz-transform: scale(1.05,1.05);
-	-ms-transform: scale(1.05,1.05);
-	-o-transform: scale(1.05,1.05);
-	transform: scale(1.05,1.05);
-}
-</style>
+<div id="timeline"></div>
 
-<div id="cutscene"></div>
+<div id="footer">
+	<div id="footer_icon"></div>
+	<div id="footer_copy">Copyright &copy; 2020 PanoptiCorp.</div>
+</div>
 
-<script src="js/soundjs-0.5.0.min.js"></script>
-<script src="js/Key.js"></script>
 <script>
+
+///////
+var alreadyExited = false;
+window.gotoGame = function(){
+	if(alreadyExited) return;
+	alreadyExited = true;
+	window.top.gotoGame();
+}
 
 window.onload = function(){
 
-	var cutscene = {
-		slides: [
-			{ poster:"rubyintherough", type:"image", src:"pics/hugtom0001.png" },
-			{ src:"pics/hugtom0002.png" },
-			{ src:"pics/hugtom0003.png" },
-			{ src:"pics/hugtom0004.png" },
-			{ src:"pics/hugtom0005.png" },
-			{ src:"pics/hugtom0006.png" },
-			{ src:"pics/hugtom0007.png" },
-			{ src:"pics/hugtom0008.png" },
-			{ type:"game", poster:"nothingtohide", src:"pics/GAME.png" }
-		],
-		sounds: [
-			
-			{ at:200, src:"step_1", options:{ pan:-0.9, volume:0.3*0.5 } },
-			{ at:410, src:"step_2", options:{ pan:-0.7, volume:0.6*0.5 } },
-			{ at:620, src:"step_1", options:{ pan:-0.5, volume:0.9*0.5 } },
-			{ at:830, src:"step_2", options:{ pan:-0.3, volume:1.0*0.5 } },
+	function generatePost(img){
+		return {
 
-			{ at:1870, src:"squee" },
+			type: "parallax_post",
 
-			{ at:2600, src:"step_1", options:{ pan:0.3, volume:1.0*0.5 } },
-			{ at:2810, src:"step_2", options:{ pan:0.7, volume:0.6*0.5 } },
-			{ at:3020, src:"step_1", options:{ pan:1.0, volume:0.3*0.5 } },
-			{ at:3230, src:"step_2", options:{ pan:1.0, volume:0.1*0.5 } },
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
 
-			{ at:3800, src:"scare" },
-
-		],
-		ambience: []
-	};
-
-	// Because.
-	cutscene = JSON.parse(JSON.stringify(cutscene));
-
-	// Create slides in advance
-	var cutsceneDOM = document.getElementById("cutscene");
-	var html = "";
-	var lastSlide = {};
-	for(var i=0;i<cutscene.slides.length;i++){
-
-		var slide = cutscene.slides[i];
-		slide.poster = slide.poster || lastSlide.poster;
-		slide.type = slide.type || lastSlide.type;
-		slide.src = slide.src || lastSlide.src;
-		
-		if(i>0) html += "<hr>";
-		switch(slide.type){
-			case "image":
-				html += "<div class='image_post'>"+
-							"<div id='header'><a>@"+slide.poster+"</a> posted 2 years ago</div>"+
-							"<img src='"+slide.src+"'/>"+
-						"</div>";
-				break;
-			case "game":
-				html += "<div class='image_post game_post' onclick='gotoGame()'>"+
-							"<div id='header'><a>@"+slide.poster+"</a> posted 2 years ago</div>"+
-							"<img src='"+slide.src+"'/>"+
-						"</div>";
-				break;
-		}
-
-		var lastSlide = slide;
-
-	}
-	html = "<div style='height:25px'></div>"+html+"<div style='height:25px'></div>";
-	cutsceneDOM.innerHTML = html;
-
-	// Load all sounds in advance
-	var manifest = [
-		{id:"squee", src:"sounds/mp3/squee.mp3|sounds/ogg/squee.ogg"},
-		{id:"step_1", src:"sounds/mp3/step_1.mp3|sounds/ogg/step_1.ogg"},
-		{id:"step_2", src:"sounds/mp3/step_2.mp3|sounds/ogg/step_2.ogg"},
-		{id:"scare", src:"sounds/mp3/scare.mp3|sounds/ogg/scare.ogg"}
-	];
-	createjs.Sound.registerManifest(manifest);
-
-	// Scroll sounds
-	var lastScroll = 0;
-	cutsceneDOM.onscroll = function(event){
-		
-		var scroll = event.target.scrollTop;
-
-		cutscene.sounds.map(function(sound){
-
-			var trigger = sound.at;
-			if(trigger>lastScroll && trigger<=scroll){
-				createjs.Sound.play(sound.src, sound.options||{});
-				sound.done = true;
+			data: {
+				height: 400,
+				layers:[
+					{img:"pics/"+img+".png", depth:0.2, offset:0}
+				]
 			}
-			
-		});
 
-		lastScroll = scroll;
+		};
+	}
+
+	var posts = [
+		generatePost("hugtom0001"),
+		generatePost("hugtom0002"),
+		generatePost("hugtom0003"),
+		generatePost("hugtom0004"),
+		generatePost("hugtom0005"),
+		generatePost("hugtom0006"),
+		generatePost("hugtom0007"),
+		generatePost("hugtom0008"),
+		generatePost("hugtom0009")
+	];
+
+	///////////
+
+	var timeline = document.getElementById("timeline");
+	var addPost = function(post){
+		var dom = document.createElement("div");
+		dom.setAttribute("class",post.type);
+
+		// HACK
+		dom.onclick = gotoGame;
+
+		// Start
+		var html = ''+
+			'<div id="poster">'+
+			'	<div id="poster_icon" style="background:url('+post.icon+')"></div>'+
+			'	<div id="poster_info">'+
+			'		<span id="poster_info_name">'+post.user+'</span><br>'+
+			'		<span id="poster_info_date">posted '+post.date+'</span>'+
+			'	</div>'+
+			'</div>'+
+			'<div id="layers" style="height:'+post.data.height+'px">';
+
+		// Layers
+		for(var i=0;i<post.data.layers.length;i++){
+			var layer = post.data.layers[i];
+			html += '	<div style="background-image:url('+layer.img+')" depth="'+layer.depth+'" offset="'+layer.offset+'"></div>';
+		}
+
+		// End
+		html += ''+
+			'</div>';
+
+		// Add to DOM
+		dom.innerHTML = html;
+		timeline.appendChild(dom);
+
+	}
+
+	posts.map(addPost);
+
+	///////////
+
+
+	var parallaxes = document.querySelectorAll(".parallax_post #layers");
+	function onScroll(event){
+			
+		for(var i=0;i<parallaxes.length;i++){
+			
+			var parallax = parallaxes[i];
+			var scroll = (parallax.offsetTop - window.scrollY) - 150;
+			// So it's at its original position, by default, 150px from the top.
+			var layers = parallax.children;
+
+			for(var j=0;j<layers.length;j++){
+				var layer = layers[j];
+				var depth = parseFloat(layer.getAttribute("depth"));
+				var offset = parseFloat(layer.getAttribute("offset"));
+				layer.style.backgroundPositionY = -(scroll-offset)*depth;
+			}
+
+		}
 
 	};
 
-	// DEBUG
-	setInterval(function(){
-		if(Key.space){
-			console.log(lastScroll);
-		}
-	},100);
+	var RAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
+	var drawnSinceLastUpdate = false;
 
-	///////
-	var alreadyExited = false;
-	window.gotoGame = function(){
-		if(alreadyExited) return;
-		alreadyExited = true;
-		window.top.gotoGame();
+	// Draw Loop
+	function draw(){
+		if(!drawnSinceLastUpdate){
+			drawnSinceLastUpdate = true;
+			onScroll();
+		}
+		RAF(draw);
 	}
+	draw();
+
+	window.onscroll = function(){
+		drawnSinceLastUpdate = false;
+	};
+
 
 };
+
+
 </script>

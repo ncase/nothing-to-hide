@@ -55,8 +55,14 @@
 		camCache.height = self.height;
 		var camContext = camCache.getContext('2d');
 
+		var lineCache = document.createElement("canvas");
+		lineCache.width = self.width;
+		lineCache.height = self.height;
+		var lineContext = lineCache.getContext('2d');		
+
 		self.bgCache = bgCache;
 		self.camCache = camCache;
+		self.lineCache = lineCache;
 
 		// Drawing placeholders
 		if(this.cam){
@@ -69,6 +75,7 @@
 		}else{
 			_makePlaceholderBG(self,bgContext,tiles,config);
 		}
+		_makePlaceholderLine(self,lineContext,tiles,config);
 
 		// Draw Loop
 		this.draw = function(){
@@ -153,6 +160,37 @@
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
 			}
 		}
+	};
+
+	var _makePlaceholderLine = function(self,ctx,tiles,config){
+
+		// Outline
+		for(var y=0;y<tiles.length;y++){
+			for(var x=0;x<tiles[y].length;x++){
+				var tile = tiles[y][x];
+				if(tile==Map.WALL || tile==Map.GLASS){
+					ctx.fillStyle="#fff";
+					ctx.fillRect(
+						x*Map.TILE_SIZE-1,
+						y*Map.TILE_SIZE-1,
+						Map.TILE_SIZE+2,
+						Map.TILE_SIZE+2
+					);
+				}
+			}
+		}
+
+		// Fill
+		for(var y=0;y<tiles.length;y++){
+			for(var x=0;x<tiles[y].length;x++){
+				var tile = tiles[y][x];
+				if(tile==Map.WALL || tile==Map.GLASS){
+					ctx.fillStyle="#000";
+					ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
+				}
+			}
+		}
+
 	};
 
 	exports.Map = Map;

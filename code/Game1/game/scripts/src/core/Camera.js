@@ -98,13 +98,14 @@
 				ctx.globalCompositeOperation = "source-over";
 			}
 
-			// Draw BENEATH EVERYTHING
+			// Draw BENEATH EVERYTHING: Player & Line Map
 			var w = Math.min(level.map.width,Display.width);
 			var h = Math.min(level.map.height,Display.height);
 			var x = (w==Display.width) ? -level.camera.cx : 0;
 			var y = (h==Display.height) ? -level.camera.cy : 0;
 			Display.context.tmp.clearRect(x,y,w,h);
 			Display.context.tmp.translate(-x,-y);
+			Display.context.tmp.drawImage(level.map.lineCache,0,0);
 			level.player.drawCCTV(Display.context.tmp);
 			Display.context.tmp.translate(x,y);
 			ctx.globalCompositeOperation = "destination-over";
