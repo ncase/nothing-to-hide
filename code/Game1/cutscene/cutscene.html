@@ -23,8 +23,11 @@ window.gotoGame = function(){
 
 window.onload = function(){
 
-	function generatePost(img){
-		return {
+	var posts = [
+
+		////// ESTABLISHING SHOT ///////
+
+		{
 
 			type: "parallax_post",
 
@@ -33,25 +36,203 @@ window.onload = function(){
 			date: "4 years ago",
 
 			data: {
-				height: 400,
+				height: 450,
 				layers:[
-					{img:"pics/"+img+".png", depth:0.2, offset:0}
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/establishing_fg.png", depth:0.1, offset:50}
 				]
 			}
 
-		};
-	}
+		},
+		{
 
-	var posts = [
-		generatePost("hugtom0001"),
-		generatePost("hugtom0002"),
-		generatePost("hugtom0003"),
-		generatePost("hugtom0004"),
-		generatePost("hugtom0005"),
-		generatePost("hugtom0006"),
-		generatePost("hugtom0007"),
-		generatePost("hugtom0008"),
-		generatePost("hugtom0009")
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 350,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/establishing_fg_2.png", depth:0.1, offset:50}
+				]
+			}
+
+		},
+		{
+
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 250,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/establishing_fg_3.png", depth:0.1, offset:50}
+				]
+			}
+
+		},
+
+
+		///// CLOSE DOOR /////
+
+		{
+
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 450,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/door_close_1.png", depth:0.1, offset:50}
+				]
+			}
+
+		},
+		{
+
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 450,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/door_close_2.png", depth:0.1, offset:75}
+				]
+			}
+
+		},
+		{
+
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 450,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/door_close_3.png", depth:0.1, offset:100}
+				]
+			}
+
+		},
+		{
+
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 450,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/door_close_4.png", depth:0.1, offset:100}
+				]
+			}
+
+		},
+
+
+		//////// ESCAPE //////////
+
+
+		{
+
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 250,
+				layers:[{img:"pics/escape_1.png", depth:1, offset:150}]
+			}
+
+		},
+		{
+
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 250,
+				layers:[{img:"pics/escape_2.png", depth:1, offset:150}]
+			}
+
+		},
+		{
+
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 250,
+				layers:[{img:"pics/escape_3.png", depth:1, offset:150}]
+			}
+
+		},
+		{
+
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 250,
+				layers:[{img:"pics/escape_4.png", depth:1, offset:150}]
+			}
+
+		},
+		{
+
+			type: "parallax_post",
+
+			user: "Poppy Gardner",
+			icon: "icons/poppy.png",
+			date: "4 years ago",
+
+			data: {
+				height: 250,
+				layers:[{img:"pics/escape_5.png", depth:1, offset:150}]
+			}
+
+		},
+
 	];
 
 	///////////
@@ -110,7 +291,7 @@ window.onload = function(){
 				var layer = layers[j];
 				var depth = parseFloat(layer.getAttribute("depth"));
 				var offset = parseFloat(layer.getAttribute("offset"));
-				layer.style.backgroundPositionY = -(scroll-offset)*depth;
+				layer.style.backgroundPositionY = -scroll*depth - offset;
 			}
 
 		}
