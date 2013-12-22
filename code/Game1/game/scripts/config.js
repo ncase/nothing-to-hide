@@ -2,7 +2,8 @@ Asset.init({
 	images:{
 		cctv:'assets/textures/cctv.png',
 		conveyor:'assets/textures/conveyor.png',
-		conveyor_blue:'assets/textures/conveyor_blue.png'
+		conveyor_blue:'assets/textures/conveyor_blue.png',
+		lietest:'assets/propaganda/test.png'
 	},
 	sprites:{
 		
@@ -12,8 +13,7 @@ Asset.init({
 		Shimmer:'assets/sprites/Shimmer',
 
 		Cursor:'assets/sprites/Cursor',
-		Button:'assets/sprites/Button',
-		PropagandaTest:'assets/sprites/PropagandaTest'
+		Button:'assets/sprites/Button'
 
 	},
 	sounds:{

@@ -11,6 +11,7 @@
 		// Graphics
 		this.background = config.background;
 		this.cam = config.cam;
+		this.propaganda = config.propaganda || [];
 
 		// Dimensions
 		var tiles = config.map;
@@ -78,7 +79,7 @@
 		_makePlaceholderLine(self,lineContext,tiles,config);
 
 		// Draw Loop
-		this.draw = function(){
+		this.draw = function(ctx){
 			
 			// Positions
 			var w = Math.min(self.width,Display.width);
@@ -103,7 +104,22 @@
 			}
 
 			// Draw background
-			Display.context.game.drawImage( bgCache, x,y,w,h, x,y,w,h );
+			ctx.drawImage( bgCache, x,y,w,h, x,y,w,h );
+
+			// Draw Propaganda
+			for(var i=0;i<self.propaganda.length;i++){
+
+				var lie = self.propaganda[i];
+				switch(lie.type){
+					case "image":
+						var lieImage = Asset.image[lie.img]; // ????
+						ctx.drawImage(lieImage, lie.x*Map.TILE_SIZE, lie.y*Map.TILE_SIZE);
+						break;
+				}
+
+			}
+
+			// ??? Draw wall's lines...?
 
 		};
 

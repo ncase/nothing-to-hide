@@ -45,9 +45,9 @@
 			ctx.clearRect(-50,-50,level.map.width+100,level.map.height+100);
 
 			// Draw background
-			level.map.draw();
-			level.conveyors.draw();
-			level.shadows.draw();
+			level.map.draw(ctx);
+			level.conveyors.draw(ctx);
+			level.shadows.draw(ctx);
 
 			// CCTV
 			cctvY += 1;

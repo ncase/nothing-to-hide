@@ -52,7 +52,8 @@
 			map: map,
 			art: lvl.art,
 			background: art.background,
-			cam: art.cam
+			cam: art.cam,
+			propaganda: lvl.propaganda
 		});
 
 		this.player = new Player(this,{
