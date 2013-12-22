@@ -89,3 +89,6 @@ body {
 	padding-top: 0;
 	font-size:25px;
 }
+.conversation_post #convo span{
+	color: #aaa;
+}

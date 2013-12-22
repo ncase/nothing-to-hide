@@ -79,9 +79,9 @@ window.onload = function(){
 		}),
 		_generatePost("conversation",poster.gardner,{
 			message: "The first unsecret ballot election is coming up. "+
-					"It's a very important part of Daddy's career, "+
+					"It's very important part to Daddy's career, "+
 					"so I need you to post more happy pictures of yourself to The Wall. "+
-					"At least fifty per day, okay?"
+					"At least 400 per day, okay?"
 		}),
 		_generatePost("conversation",poster.gardner,{
 			message: "Please, Poppy? I don't want the voters to think I'm a bad parent."
@@ -99,7 +99,7 @@ window.onload = function(){
 			]
 		}),
 		_generatePost("conversation",poster.gardner,{
-			message: "Well, goodnight!"
+			message: "Well, goodnight! <span>#FatherDaughterMoment</span>"
 		}),
 		_generatePost("parallax",poster.poppy,{
 			height: 450,
@@ -135,7 +135,7 @@ window.onload = function(){
 			message: "Dad will be better off without me."
 		}),
 		_generatePost("conversation",poster.poppy,{
-			message: "I don't deserve all the love and security he's given me."
+			message: "I don't deserve all the loving security he's given me."
 		}),
 		_generatePost("conversation",poster.poppy,{
 			message: "Goodbye, dad. I'm so sorry."
