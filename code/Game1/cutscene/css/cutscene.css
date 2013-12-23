@@ -113,10 +113,10 @@ body {
 	background-image: url(../img/cctv.png);
 }
 .video_post #video_button {
-	background-image: url(../img/play.png);
-	width:100px; height:100px;
-	left:350px; top:150px;
+	background-image: url(../img/play_small.png);
+	width:150px; height:150px;
+	left:325px; top:125px;
 }
 .video_post:hover #video_button {
-	background-position: -100px;
+	background-position: -150px;
 }
