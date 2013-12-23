@@ -69,21 +69,21 @@
 			return(self.belt.ax<=x && self.belt.bx>=x && self.belt.ay<=y && self.belt.by>=y);
 		}
 
-		var patternTexture = (self.activator=="") ? Asset.image.conveyor : Asset.image.conveyor_blue;
-		var pattern = Display.context.tmp.createPattern(patternTexture, 'repeat');
+		var pattern = Display.context.tmp.createPattern(Asset.image.conveyor, 'repeat');
+		var pattern_blue = Display.context.tmp.createPattern(Asset.image.conveyor_blue, 'repeat');
+		var pattern_cctv = Display.context.tmp.createPattern(Asset.image.conveyor_cctv, 'repeat');
 
 		var directionAngle = Math.atan2(self.direction.y,self.direction.x);
 		var directionMag = Math.sqrt(self.direction.x*self.direction.x + self.direction.y*self.direction.y);
 		var distance = 0;
-		this.draw = function(){
+		this.draw = function(ctx,isCCTV){
 
 			if(self.active){
 				distance += directionMag;
 				if(distance>50) distance-=50;
 			}
 
-			var ctx = Display.context.game;
-			ctx.fillStyle = pattern;
+			ctx.fillStyle = isCCTV ? pattern_cctv : ((self.activator=="") ? pattern : pattern_blue);
 			ctx.beginPath();
 			ctx.rect(self.belt.ax, self.belt.ay, self.belt.bx-self.belt.ax, self.belt.by-self.belt.ay);
 			
@@ -93,6 +93,10 @@
 			ctx.fill();
 			ctx.restore();
 
+		};
+
+		this.drawCCTV = function(ctx){
+			self.draw(ctx,true);
 		};
 
 	};

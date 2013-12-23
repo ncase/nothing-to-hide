@@ -22,9 +22,14 @@
 			}
 		};
 
-		this.draw = function(){
+		this.draw = function(ctx){
 			for(var i=0;i<self.conveyors.length;i++){
-				self.conveyors[i].draw();
+				self.conveyors[i].draw(ctx);
+	    	}
+		};
+		this.drawCCTV = function(ctx){
+			for(var i=0;i<self.conveyors.length;i++){
+				self.conveyors[i].drawCCTV(ctx);
 	    	}
 		};
 

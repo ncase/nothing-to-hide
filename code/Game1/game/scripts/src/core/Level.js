@@ -53,7 +53,8 @@
 			art: lvl.art,
 			background: art.background,
 			cam: art.cam,
-			propaganda: lvl.propaganda
+			propaganda: lvl.propaganda,
+			goal: lvl.goal
 		});
 
 		this.player = new Player(this,{

@@ -11,6 +11,7 @@
 		// Graphics
 		this.background = config.background;
 		this.cam = config.cam;
+		this.goal = config.goal;
 		this.propaganda = config.propaganda || [];
 
 		// Dimensions
@@ -38,7 +39,7 @@
 		};
 		this.hitTest = function(px,py){
 			var tile = this.getTile(px,py);
-			return(tile==Map.WALL || tile==Map.GLASS);
+			return(tile==Map.WALL || tile==Map.SCREEN || tile==Map.SCREEN_LINE || tile==Map.PROP);
 		}
 
 		///////////////////
@@ -119,9 +120,26 @@
 
 			}
 
-			// ??? Draw wall's lines...?
+			// Draw screen lines.
+			ctx.fillStyle=textures.screenline;
+			for(var i=0;i<screenlines.length;i++){
+				var screenline = screenlines[i];
+				var x = screenline.x;
+				var y = screenline.y;
+				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
+			}
 
 		};
+
+		// Get Screen Lines, once.
+		var screenlines = [];
+		for(var y=0;y<tiles.length;y++){
+			for(var x=0;x<tiles[y].length;x++){
+				if(tiles[y][x]==Map.SCREEN_LINE){
+					screenlines.push({ x:x, y:y });
+				}
+			}
+		}
 
 
 		///////////////////
@@ -136,56 +154,95 @@
 			return camCache.toDataURL();
 		};
 
+		// TEXTURES
+		textures = {};
+		var _createTextureFromImage = function(imageName){
+			var patternTexture = Asset.image[imageName];
+			var pattern = Display.context.tmp.createPattern(patternTexture, 'repeat');
+			textures[imageName] = pattern;
+			return pattern;
+		}
+		_createTextureFromImage("carpet");
+		_createTextureFromImage("carpet_cctv");
+		_createTextureFromImage("screenline");
+
 	};
+	var textures;
 
 	// CONSTANTS
 	Map.WALL = "#";
-	Map.GLASS = "=";
+	Map.SCREEN = "=";
+	Map.SCREEN_LINE = "+";
 	Map.SPACE = " ";
 	Map.METAL = "M";
+	Map.PROP = "@";
 	Map.CARPET = ".";
 	Map.TILE_SIZE = 50;
 
 
 	// PLACEHOLDER BACKGROUNDS
-	var _makePlaceholderCCTV = function(self,ctx,tiles,config){
-		for(var y=0;y<tiles.length;y++){
-			for(var x=0;x<tiles[y].length;x++){
-				switch(tiles[y][x]){
-					case Map.SPACE: ctx.fillStyle="#555"; break;
-					case Map.CARPET: ctx.fillStyle="#444"; break;
-					case Map.WALL: ctx.fillStyle="#000"; break;
-					case Map.GLASS: ctx.fillStyle="#888"; break;
-					case Map.METAL: ctx.fillStyle="#333"; break;
-				}
-				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
-			}
-		}
-	};
-
 	var _makePlaceholderBG = function(self,ctx,tiles,config){
 		for(var y=0;y<tiles.length;y++){
 			for(var x=0;x<tiles[y].length;x++){
 				switch(tiles[y][x]){
+					
 					case Map.SPACE: ctx.fillStyle="#D7E7E6"; break;
-					case Map.CARPET: ctx.fillStyle="#8E291D"; break;
+					case Map.CARPET: ctx.fillStyle=textures.carpet; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
-					case Map.GLASS: ctx.fillStyle="#363B43"; break;
-					case Map.METAL: ctx.fillStyle="#2D2D2D"; break;
+					case Map.SCREEN: ctx.fillStyle="#363B43"; break;
+					case Map.SCREEN_LINE: ctx.fillStyle="#363B43"; break;
+					case Map.PROP: ctx.fillStyle="#7F6A5F"; break;
+					
+					// Placeholder
+					case Map.METAL: ctx.fillStyle="#9900FF"; break;
+
 				}
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
 			}
 		}
 	};
+	
+	var _makePlaceholderCCTV = function(self,ctx,tiles,config){
+		for(var y=0;y<tiles.length;y++){
+			for(var x=0;x<tiles[y].length;x++){
+				switch(tiles[y][x]){
+
+					case Map.SPACE: ctx.fillStyle="#555"; break;
+					case Map.CARPET: ctx.fillStyle=textures.carpet_cctv; break;
+					case Map.WALL: ctx.fillStyle="#000"; break;
+					case Map.SCREEN: ctx.fillStyle="#222"; break;
+					case Map.SCREEN_LINE: ctx.fillStyle="#222"; break;
+					case Map.PROP: ctx.fillStyle="#666666"; break;
+
+					// Placeholder
+					case Map.METAL: ctx.fillStyle="#9900FF"; break;
+
+				}
+				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
+			}
+		}
+
+		// DRAW GOAL
+		var gx = (self.goal.ax + self.goal.bx)/2 - 0.5;
+		var gy = (self.goal.ay + self.goal.by)/2 - 0.5;
+		ctx.drawImage(Asset.image.exit, gx*Map.TILE_SIZE, gy*Map.TILE_SIZE);
+
+	};
 
 	var _makePlaceholderLine = function(self,ctx,tiles,config){
+
+		// The border of game
+		ctx.fillStyle="#fff";
+		ctx.fillRect(0,0,self.width,1);
+		ctx.fillRect(0,0,1,self.height);
+		ctx.fillRect(0,self.height-1,self.width,1);
+		ctx.fillRect(self.width-1,0,1,self.height);
 
 		// Outline
 		for(var y=0;y<tiles.length;y++){
 			for(var x=0;x<tiles[y].length;x++){
 				var tile = tiles[y][x];
-				if(tile==Map.WALL || tile==Map.GLASS){
-					ctx.fillStyle="#fff";
+				if(tile==Map.WALL || tile==Map.SCREEN || tile==Map.SCREEN_LINE){
 					ctx.fillRect(
 						x*Map.TILE_SIZE-1,
 						y*Map.TILE_SIZE-1,
@@ -200,12 +257,17 @@
 		for(var y=0;y<tiles.length;y++){
 			for(var x=0;x<tiles[y].length;x++){
 				var tile = tiles[y][x];
-				if(tile==Map.WALL || tile==Map.GLASS){
+				if(tile==Map.WALL || tile==Map.SCREEN || tile==Map.SCREEN_LINE){
 					ctx.fillStyle="#000";
 					ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
 				}
 			}
 		}
+
+		// DRAW GOAL
+		var gx = (self.goal.ax + self.goal.bx)/2 - 0.5;
+		var gy = (self.goal.ay + self.goal.by)/2 - 0.5;
+		ctx.drawImage(Asset.image.exit, gx*Map.TILE_SIZE, gy*Map.TILE_SIZE);
 
 	};
 

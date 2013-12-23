@@ -84,6 +84,9 @@
 				// Draw CCTV over
 				_drawCCTV(Display.context.tmp);
 
+				// Draw conveyors
+				level.conveyors.drawCCTV(Display.context.tmp);
+
 				// Draw shadow props
 				for(var i=0;i<props.length;i++){
 					var prop = props[i];
