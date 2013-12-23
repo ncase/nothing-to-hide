@@ -78,7 +78,7 @@
 		var distance = 0;
 		this.draw = function(ctx,isCCTV){
 
-			if(self.active){
+			if(self.active && !isCCTV){
 				distance += directionMag;
 				if(distance>50) distance-=50;
 			}

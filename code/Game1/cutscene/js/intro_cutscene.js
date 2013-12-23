@@ -79,7 +79,7 @@ window.onload = function(){
 		}),
 		_generatePost("conversation",poster.gardner,{
 			message: "The first unsecret ballot election is coming up. "+
-					"It's very important part to Daddy's career, "+
+					"It's very important to Daddy's career, "+
 					"so I need you to post more happy pictures of yourself to The Wall. "+
 					"At least 400 per day, okay?"
 		}),

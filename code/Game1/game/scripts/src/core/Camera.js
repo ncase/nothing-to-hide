@@ -51,7 +51,7 @@
 
 			// CCTV
 			cctvY += 1;
-			if(cctvY>=10) cctvY=0;
+			if(cctvY>=15) cctvY=0;
 
 			// Draw CCTV over
 			_drawCCTV(ctx);
@@ -81,11 +81,11 @@
 				Display.context.tmp.drawImage(camCache,0,0);
 				//Display.context.tmp.translate(-x,-y);
 
-				// Draw CCTV over
-				_drawCCTV(Display.context.tmp);
-
 				// Draw conveyors
 				level.conveyors.drawCCTV(Display.context.tmp);
+
+				// Draw CCTV over
+				_drawCCTV(Display.context.tmp);
 
 				// Draw shadow props
 				for(var i=0;i<props.length;i++){
