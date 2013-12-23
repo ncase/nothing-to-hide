@@ -166,9 +166,8 @@ window.onload = function(){
 		}),
 
 		//////// PLAY GAME /////////
-		_generatePost("parallax",poster.game,{
-			height: 400,
-			layers:[{img:"pics/nope.png", depth:1, offset:150}]
+		_generatePost("video",poster.game,{
+			bg: "pics/game.png"
 		})
 
 	];
@@ -182,43 +181,45 @@ window.onload = function(){
 
 		var html;
 
+		// Post header
+		html = ''+
+			'<div id="poster">'+
+			'	<div id="poster_icon" style="background:url('+post.icon+')"></div>'+
+			'	<div id="poster_info">'+
+			'		<span id="poster_info_name">'+post.user+'</span><br>'+
+			'		<span id="poster_info_date">posted '+post.date+'</span>'+
+			'	</div>'+
+			'</div>';
+
 		// Parallax Post
 		if(post.type==="parallax_post"){
-
-			// Start
-			html = ''+
-				'<div id="poster">'+
-				'	<div id="poster_icon" style="background:url('+post.icon+')"></div>'+
-				'	<div id="poster_info">'+
-				'		<span id="poster_info_name">'+post.user+'</span><br>'+
-				'		<span id="poster_info_date">posted '+post.date+'</span>'+
-				'	</div>'+
-				'</div>'+
-				'<div id="layers" style="height:'+post.data.height+'px">';
-
-			// Layers
+			html += '<div id="layers" style="height:'+post.data.height+'px">';
 			for(var i=0;i<post.data.layers.length;i++){
 				var layer = post.data.layers[i];
-				html += '	<div style="background-image:url('+layer.img+')" depth="'+layer.depth+'" offset="'+layer.offset+'"></div>';
+				html += '<div style="background-image:url('+layer.img+')" depth="'+layer.depth+'" offset="'+layer.offset+'"></div>';
 			}
-
-			// End
-			html += ''+
-				'</div>';
-
+			html += '</div>';
 		}
 
 		// Conversation post
 		if(post.type==="conversation_post"){
-			html = ''+
-				'<div id="poster">'+
-				'	<div id="poster_icon" style="background:url('+post.icon+')"></div>'+
-				'	<div id="poster_info">'+
-				'		<span id="poster_info_name">'+post.user+'</span><br>'+
-				'		<span id="poster_info_date">posted '+post.date+'</span>'+
-				'	</div>'+
-				'</div>';
 			html += '<div id="convo">'+post.data.message+'</div>';
+		}
+
+		// Video post
+		if(post.type==="video_post"){
+			html += ''+
+				'<div id="video">'+
+					'<div id="video_bg" style="background-image:url('+post.data.bg+')"></div>'+
+					'<div id="video_cctv"></div>'+
+					'<div id="video_ribbon"></div>'+
+					'<div id="video_button"></div>'+
+					'<div id="video_play"></div>'+
+				'</div>';
+
+			// HACK!
+			dom.onclick = gotoGame;
+
 		}
 
 		// Add to DOM
@@ -261,12 +262,23 @@ window.onload = function(){
 	var drawnSinceLastUpdate = false;
 
 	// Draw Loop
+	var cctv = document.getElementById("video_cctv");
+	cctvY = 0;
 	function draw(){
+		
 		if(!drawnSinceLastUpdate){
 			drawnSinceLastUpdate = true;
 			onScroll();
 		}
+
+		// CCTV
+		cctvY += 1;
+		if(cctvY>=15) cctvY=0;
+		cctv.style.backgroundPositionY = cctvY;
+
+		// RAF
 		RAF(draw);
+
 	}
 	draw();
 
