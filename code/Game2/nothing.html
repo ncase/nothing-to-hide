@@ -1,0 +1,74 @@
+<style>
+body, canvas, div {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+
+	/* No support for these yet, use at own risk */
+	-o-user-select: none;
+	user-select: none; 
+}
+body{
+    margin:0;
+    overflow: hidden;
+    background:#000;
+}
+#wrapper {
+    border: none;
+    width:100%;
+    height:100%;
+    position: absolute;
+}
+#fade {
+
+	position: absolute;
+	width:100%; height: 100%;
+	background: #000;
+
+	-webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+
+}
+</style>
+
+<iframe id="wrapper" src="cutscene/cutscene.html"></iframe>
+<div id="fade"></div>
+
+<script>
+window.onload = function(){
+
+	var fade = document.getElementById("fade");
+
+	// Fade In
+	function fadeIn(){
+		fade.style.opacity = 0;
+		setTimeout(function(){
+			fade.style.display = "none";
+		},500);
+	}
+
+	// Fade Out
+	function fadeOut(){
+		fade.style.display = "block";
+		setTimeout(function(){
+			fade.style.opacity = 1;
+		},1);
+	}
+
+	window.gotoGame = function(){
+		fadeOut();
+		setTimeout(function(){
+	    	document.getElementById("wrapper").src = "level.html";
+	    	setTimeout(function(){
+	    		fadeIn();
+	    	},50);
+	    },550);
+	}
+
+	fadeIn();
+
+};
+</script>
