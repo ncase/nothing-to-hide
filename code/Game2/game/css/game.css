@@ -1,12 +1,8 @@
-@font-face {
-	font-family: 'Raleway';
-	src: local('Raleway'), url(../assets/fonts/Raleway-Regular.ttf) format('truetype');
-}
-
 body {
 	margin:0;
 	background:#000;
-	font-family: Raleway;
+
+	font-family: sans-serif;
 	font-size: 20px;
 	overflow:hidden;
 

@@ -12,6 +12,7 @@ body{
     margin:0;
     overflow: hidden;
     background:#000;
+    font-family: sans-serif;
 }
 #wrapper {
     border: none;
@@ -35,7 +36,7 @@ body{
 	position: absolute;
 	top:0;
 
-	left:-290px;
+	left:-270px;
 	/*left:0*/
 
 	-webkit-transition: left 0.5s ease-in-out;
@@ -64,9 +65,12 @@ body{
 
 <iframe id="wrapper" src="game/game.html"></iframe>
 <div id="level_select">
-	<div style="padding:20px; font-size:16px; font-family: sans-serif">
+	<div style="padding:20px; font-size:16px; width:250px;">
 		<span style="font-size:25px">Level Select:</span>
 		<ol id="level_select_list"></ol>
+	</div>
+	<div style="position:absolute; right:0; top:10px; width:20px;">
+		L E V E L &nbsp;&nbsp; S E L E C T
 	</div>
 </div>
 

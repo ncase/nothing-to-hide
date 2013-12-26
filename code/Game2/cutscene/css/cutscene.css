@@ -71,7 +71,7 @@ body {
 	font-size:14px; color:#aaa
 }
 
-.parallax_post #layers {
+#layers {
 	width:100%;
 	border-top:1px solid #ddd;
 	border-bottom:1px solid #ddd;
@@ -79,7 +79,7 @@ body {
 	position: relative;
 	overflow: hidden;
 }
-.parallax_post #layers > div{
+#layers > div{
 	position: absolute;
 	top:0;
 	width:100%;height:100%;
@@ -95,18 +95,11 @@ body {
 }
 .video_post #video {
 	width:100%; height:400px;
-	position: relative;
+	position: absolute;
 	cursor: pointer;
 }
 .video_post #video > div{
 	position: absolute;
-}
-.video_post #video_bg {
-	width:100%; height:100%;
-	background-attachment: fixed;
-	background-color: #000;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
 }
 .video_post #video_cctv {
 	width:100%; height:100%;

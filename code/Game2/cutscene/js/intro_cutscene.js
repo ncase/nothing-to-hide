@@ -208,13 +208,19 @@ window.onload = function(){
 
 		// Video post
 		if(post.type==="video_post"){
+			
+			// PARALLAX
 			html += ''+
-				'<div id="video">'+
-					'<div id="video_bg" style="background-image:url('+post.data.bg+')"></div>'+
-					'<div id="video_cctv"></div>'+
-					'<div id="video_ribbon"></div>'+
-					'<div id="video_button"></div>'+
-					'<div id="video_play"></div>'+
+				'<div id="layers" style="height:400px">'+
+					'<div style="background-image:url('+post.data.bg+')" depth="0.7" offset="0"></div>'+
+
+					'<div id="video" depth="1" offset="0">'+
+						'<div id="video_cctv"></div>'+
+						'<div id="video_ribbon"></div>'+
+						'<div id="video_button"></div>'+
+						'<div id="video_play"></div>'+
+					'</div>'+
+
 				'</div>';
 
 			// HACK!
@@ -233,7 +239,7 @@ window.onload = function(){
 	///////////
 
 
-	var parallaxes = document.querySelectorAll(".parallax_post #layers");
+	var parallaxes = document.querySelectorAll("#layers");
 	function onScroll(event){
 			
 		for(var i=0;i<parallaxes.length;i++){

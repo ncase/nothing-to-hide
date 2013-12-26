@@ -45,7 +45,7 @@
 		draw();
 
 		// BG Music
-		createjs.Sound.play("music_bg",null,0,0,true,0.5,0);
+		createjs.Sound.play("music_bg",null,0,0,true,0.4,0);
 
 		// First level
 		Game.gotoLevel(0);

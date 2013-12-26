@@ -42,7 +42,7 @@ Asset.init({
 		sfx_metal_footstep_1:{src:'assets/sounds/mp3/metal_step_1.mp3|assets/sounds/ogg/metal_step_1.ogg'},
 		sfx_metal_footstep_2:{src:'assets/sounds/mp3/metal_step_2.mp3|assets/sounds/ogg/metal_step_2.ogg'},
 
-		//music_bg: {src:'assets/music/mp3/the_national_anthem.mp3'}
+		music_bg: {src:'assets/music/mp3/a_healthy_dystopia.mp3'}
 
 	},
 	levels:{

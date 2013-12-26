@@ -40,12 +40,7 @@
 	],
 
 	"propaganda": [
-		{
-			"type": "image",
-			"img": "lietest",
-			"x": 7,
-			"y": 2
-		}
+		
 	],
 
 	"art": {
