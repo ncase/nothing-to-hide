@@ -24,6 +24,10 @@
 			self.cx = Math.round(Display.width/2-self.x);
 			self.cy = Math.round(Display.height/2-self.y);
 
+			// CCTV
+			cctvY += 1;
+			if(cctvY>=15) cctvY=0;
+
 		};
 
 		var cctvTexture = Asset.image.cctv;
@@ -33,106 +37,150 @@
 		this.draw = function(){
 
 			var ctx = Display.context.game;
+			var ctxTemp = Display.context.tmp;
+
+			// Clear cam
+			ctx.clearRect(0,0,Display.width,Display.height);
 
 			// Centering the camera
 			self.cx = Math.round(Display.width/2-self.x);
 			self.cy = Math.round(Display.height/2-self.y);
-		
-			// Extra centering
-			ctx.translate(self.cx,self.cy);
 
-			// Clear JUST THE GAME AREA, with padding.
-			ctx.clearRect(-50,-50,level.map.width+100,level.map.height+100);
-
-			// Draw background
-			level.map.draw(ctx);
-			level.conveyors.draw(ctx);
-			level.shadows.draw(ctx);
-
-			// CCTV
-			cctvY += 1;
-			if(cctvY>=15) cctvY=0;
-
-			// Draw CCTV over
-			_drawCCTV(ctx);
-
-			// Draw props
+			// Sort props
 			var props = [level.player].concat(level.prisms.prisms).concat(level.dummies.dummies).concat(level.blocks.blocks);
 			props = props.sort(function(a,b){
 				return(a.y-b.y);
 			});
-			for(var i=0;i<props.length;i++){
-				var prop = props[i];
-				prop.draw(ctx);
-			}
 
-			// Masking everything
-			_mask(level.shadows.shadowCanvas, ctx);
+			// TEMP LAYER - TRANSLATE
+			ctxTemp.translate(self.cx,self.cy);
 
-			// Draw BENEATH: Shadow Cams
+			//////////////////////
+			// DRAW LINES LAYER //
+			//////////////////////
+
+			// Clear
+			ctxTemp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
+
+			// Lines
+			//if(!level.config.level.art.hideCam){
+				ctxTemp.drawImage(level.map.lineCache,0,0);
+			//}
+
+			// Player below all shadows
+			level.player.drawCCTV(ctxTemp);
+
+			// Draw to main
+			ctx.drawImage(Display.canvas.tmp,0,0);
+
+			/////////////////////
+			// DRAW CCTV LAYER //
+			/////////////////////
+
 			if(!level.config.level.art.hideCam){
 				
-				var camCache = level.map.camCache;
-				var w = Math.min(camCache.width,Display.width);
-				var h = Math.min(camCache.height,Display.height);
-				var x = (w==Display.width) ? -level.camera.cx : 0;
-				var y = (h==Display.height) ? -level.camera.cy : 0;
+				// Clear				
+				ctxTemp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
 
-				Display.context.tmp.drawImage(camCache,0,0);
-				//Display.context.tmp.translate(-x,-y);
+				// Background elements
+				level.map.drawCCTV(ctxTemp);
+				level.conveyors.drawCCTV(ctxTemp);
+				_drawCCTV(ctxTemp);
 
-				// Draw conveyors
-				level.conveyors.drawCCTV(Display.context.tmp);
-
-				// Draw CCTV over
-				_drawCCTV(Display.context.tmp);
-
-				// Draw shadow props
+				// Draw props
 				for(var i=0;i<props.length;i++){
 					var prop = props[i];
-					prop.drawCCTV(Display.context.tmp);
+					prop.drawCCTV(ctxTemp);
 				}
 
-				//Display.context.tmp.translate(x,y);
-				_mask(level.shadows.camCanvas, Display.context.tmp);
-
-				ctx.globalCompositeOperation = "destination-over";
+				// Mask with prism eyes
+				_mask2(ctxTemp);
+				
+				// Draw to main
 				ctx.drawImage(Display.canvas.tmp,0,0);
-				ctx.globalCompositeOperation = "source-over";
+
 			}
 
-			// Draw BENEATH EVERYTHING: Player & Line Map
-			var w = Math.min(level.map.width,Display.width);
-			var h = Math.min(level.map.height,Display.height);
-			var x = (w==Display.width) ? -level.camera.cx : 0;
-			var y = (h==Display.height) ? -level.camera.cy : 0;
-			Display.context.tmp.clearRect(x,y,w,h);
-			Display.context.tmp.translate(-x,-y);
-			Display.context.tmp.drawImage(level.map.lineCache,0,0);
-			level.player.drawCCTV(Display.context.tmp);
-			Display.context.tmp.translate(x,y);
-			ctx.globalCompositeOperation = "destination-over";
-			ctx.drawImage(Display.canvas.tmp,x,y);
-			ctx.globalCompositeOperation = "source-over";
+			/////////////////////
+			// DRAW MAIN LAYER //
+			/////////////////////
 
+			// Clear
+			ctxTemp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
 
-			// Restore Camera
-			ctx.translate(-self.cx,-self.cy);
+			// Background elements
+			level.map.draw(ctxTemp);
+			level.conveyors.draw(ctxTemp);
+			_drawCCTV(ctxTemp);
+
+			// Draw props
+			for(var i=0;i<props.length;i++){
+				var prop = props[i];
+				prop.draw(ctxTemp);
+			}
+
+			// Mask with polygon
+			_mask(level.player.sightPolygon,ctxTemp);
+
+			// Draw to main
+			ctx.drawImage(Display.canvas.tmp,0,0);
+
+			// TEMP LAYER - TRANSLATE 2
+			ctxTemp.translate(-self.cx,-self.cy);
 
 		};
 
 		// Mask helper
-		var _mask = function(mask,ctx){
+		var _mask = function(poly,ctx){
 
-			// Positions
-			var x = (level.map.width>=Display.width) ? -self.cx : 0;
-			var y = (level.map.height>=Display.height) ? -self.cy : 0;
+			// Create mask polygon path
+			ctx.beginPath();
+			ctx.moveTo(poly[0][0], poly[0][1]);
+			ctx.fillStyle = "#000";
+			for (var i = 1; i < poly.length; ++i) {
+				ctx.lineTo(poly[i][0], poly[i][1]);
+			}
 
-			// Draw Mask
-			ctx.save();
+			// Fill in mask
 			ctx.globalCompositeOperation = "destination-in";
-			ctx.drawImage(mask,x,y);
-			ctx.restore();
+			ctx.fill();
+			ctx.globalCompositeOperation = "source-over";
+
+		};
+
+		// Mask helper 2
+		var _mask2 = function(ctx){
+
+			// Temp & translate
+			var temp = Display.context.tmp2;
+			temp.translate(self.cx,self.cy);
+			temp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
+
+			// Draw all prism sights.
+			// TODO: Cache 'em?
+			var prisms = level.prisms.prisms;
+			for(var i=0;i<prisms.length;i++){
+				var prism = prisms[i];
+				if(!prism.active) continue;
+				var poly = prism.sightPolygon;
+					
+				temp.beginPath();
+				temp.moveTo(poly[0][0], poly[0][1]);
+				for (var j=1; j<poly.length; ++j) {
+					temp.lineTo(poly[j][0], poly[j][1]);
+				}
+				temp.closePath();
+				temp.fill();
+
+			}
+
+			// Undo translate
+			temp.translate(-self.cx,-self.cy);
+
+			// Mask it all
+			ctx.globalCompositeOperation = "destination-in";
+			ctx.drawImage(Display.canvas.tmp2, -self.cx, -self.cy);
+			ctx.globalCompositeOperation = "source-over";
 
 		};
 

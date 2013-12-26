@@ -93,6 +93,7 @@
 			this.doors.update();
 			this.dummies.update();
 			this.blocks.update();
+			this.suspicion.update();
 
 			// Are you in the goal?
 			var x = this.player.x/Map.TILE_SIZE;
@@ -107,13 +108,15 @@
 		// Draw Loop: Camera draws everything
 		this.draw = function(){
 			this.camera.draw();
-			this.suspicion.update(); // Because shadow's draw is logic.
 		};
 
 		// Kill
 		this.kill = function(){
 			self.suspicion.kill();
 		};
+
+		// UPDATE NOW
+		this.update();
 
 	};
 	exports.Level = Level;

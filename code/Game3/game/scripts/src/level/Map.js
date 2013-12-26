@@ -1,6 +1,19 @@
 (function(exports){
 	
 	var Map = function(level,config){
+
+		// TEXTURES
+		textures = {};
+		var _createTextureFromImage = function(imageName){
+			var patternTexture = Asset.image[imageName];
+			var pattern = Display.context.tmp.createPattern(patternTexture, 'repeat');
+			textures[imageName] = pattern;
+			return pattern;
+		}
+		_createTextureFromImage("carpet");
+		_createTextureFromImage("carpet_cctv");
+		_createTextureFromImage("screenline");
+		///////
 	
 		var self = this;
 
@@ -83,7 +96,7 @@
 		this.draw = function(ctx){
 			
 			// Positions
-			var w = Math.min(self.width,Display.width);
+			/*var w = Math.min(self.width,Display.width);
 			var h = Math.min(self.height,Display.height);
 			var x = (w==Display.width) ? -level.camera.cx : 0;
 			var y = (h==Display.height) ? -level.camera.cy : 0;
@@ -102,10 +115,11 @@
 			}
 			if(y+h>bgCache.height){
 				h = bgCache.height-y-1;
-			}
+			}*/
 
 			// Draw background
-			ctx.drawImage( bgCache, x,y,w,h, x,y,w,h );
+			//ctx.drawImage( bgCache, x,y,w,h, x,y,w,h );
+			ctx.drawImage(bgCache,0,0);
 
 			// Draw Propaganda
 			for(var i=0;i<self.propaganda.length;i++){
@@ -131,6 +145,10 @@
 
 		};
 
+		this.drawCCTV = function(ctx){
+			ctx.drawImage(camCache,0,0);
+		}
+
 		// Get Screen Lines, once.
 		var screenlines = [];
 		for(var y=0;y<tiles.length;y++){
@@ -153,18 +171,6 @@
 		this._getCCTVImage = function(){
 			return camCache.toDataURL();
 		};
-
-		// TEXTURES
-		textures = {};
-		var _createTextureFromImage = function(imageName){
-			var patternTexture = Asset.image[imageName];
-			var pattern = Display.context.tmp.createPattern(patternTexture, 'repeat');
-			textures[imageName] = pattern;
-			return pattern;
-		}
-		_createTextureFromImage("carpet");
-		_createTextureFromImage("carpet_cctv");
-		_createTextureFromImage("screenline");
 
 	};
 	var textures;

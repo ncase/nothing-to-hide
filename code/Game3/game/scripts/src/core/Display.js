@@ -20,6 +20,7 @@
 		Display.dom.appendChild(_addCanvas("game"));
 		Display.dom.appendChild(_addCanvas("ui"));
 		_addCanvas("tmp");
+		_addCanvas("tmp2");
 
 	};
 
@@ -31,12 +32,12 @@
 		Display.height = height;
 
 		for(var id in Display.canvas){
-			if(id=="game"){
-				Display.canvas[id].width = Display.width;
-				Display.canvas[id].height = Display.height;
-			}else{
+			if(id=="ui"){
 				Display.canvas[id].width = window.innerWidth;
 				Display.canvas[id].height = window.innerHeight;
+			}else{
+				Display.canvas[id].width = Display.width;
+				Display.canvas[id].height = Display.height;
 			}
 		}
 
