@@ -63,9 +63,7 @@
 			ctxTemp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
 
 			// Lines
-			//if(!level.config.level.art.hideCam){
-				ctxTemp.drawImage(level.map.lineCache,0,0);
-			//}
+			ctxTemp.drawImage(level.map.lineCache,0,0);
 
 			// Player below all shadows
 			level.player.drawCCTV(ctxTemp);
