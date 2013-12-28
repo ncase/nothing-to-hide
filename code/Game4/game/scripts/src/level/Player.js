@@ -33,7 +33,7 @@
 
 			// Adding/Removing a new light.
 			if(self.holdingPrism && !self.isMoving){
-				if(!lastMousePressed && Mouse.pressed){// && Cursor.still){ // Click
+				if(!lastMousePressed && Mouse.pressed){
 			    	if(hovering){
 			    		level.prisms.dropPrism();
 			    		Mouse.pressed = false;
@@ -44,6 +44,15 @@
 			}
 			lastMousePressed = Mouse.pressed;
 
+			// Adding/Removing a new light.
+			if(self.holdingPrism && Key.justPressed.space){
+	    		level.prisms.dropPrism();
+	    		Key.justPressed.space = false;
+			}
+
+			// Movement keys pressed
+			var keyMovement = (Key.left||Key.right||Key.up||Key.down||Key.shift);
+
 		    // Velocity via click
 		    var MAX_SPEED = 10;
 		    var isMoving = false;
@@ -52,6 +61,7 @@
 		    var gotoSpot = false;
 	    	var mx = Mouse.x - level.camera.cx;
 	    	var my = Mouse.y - level.camera.cy;
+
 		    if(Mouse.pressed && !Cursor.clicked){
 			    var dx = mx - self.x;
 			    var dy = my - self.y;
@@ -66,6 +76,29 @@
 				}
 
 			}
+
+			if(keyMovement){
+				
+				var dx = 0;
+				if(Key.left) dx -= MAX_SPEED;
+				if(Key.right) dx += MAX_SPEED;
+
+			    var dy = 0;
+			    if(Key.up) dy -= MAX_SPEED;
+				if(Key.down) dy += MAX_SPEED;
+
+			    var mag = Math.sqrt(dx*dx+dy*dy);
+			    if(mag!=0){
+				    var speed = Key.shift ? MAX_SPEED*0.33 : MAX_SPEED;
+				    //if(mag>MAX_SPEED){
+				    	isMoving = true;
+					    vx = (dx/mag) * speed;
+					    vy = (dy/mag) * speed;
+					//}
+				}
+
+			}
+
 		    self.vx = vx*0.5 + self.vx*0.5;
 		    self.vy = vy*0.5 + self.vy*0.5;
 		    self.isMoving = isMoving;
@@ -105,7 +138,7 @@
 		    var moveSpeed = Math.sqrt(moveX*moveX+moveY*moveY);
 
 			// Frame Logic: VERY CUSTOMIZED FOR THE BAG SWINGING
-		    if(Mouse.pressed){
+		    if(Mouse.pressed || keyMovement){
 		    	if(animState!="Walk"){
 		    		frameIndex=0;
 		    		animState = "Walk";

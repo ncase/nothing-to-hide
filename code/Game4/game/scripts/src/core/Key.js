@@ -2,6 +2,8 @@
 
 	// Singleton
 	var Key = {};
+	Key.justPressed = {};
+	Key.lastPressed = {};
 	exports.Key = Key;
 
 	// Keycodes to words mapping
@@ -10,9 +12,16 @@
 		65:"left", 87:"up", 68:"right", 83:"down",
 		16:"shift", 32:"space"
 	};
-	for(var keyCode in KEY_CODES){
-		Key[keyCode]=false;
-	}
+
+	// Key update - which keys were JUST pressed...
+	var names = ["left","right","down","up","shift","space"];
+	Key.update = function(){
+		for(var i=0;i<names.length;i++){
+			var name = names[i];
+			Key.justPressed[name] = !Key.lastPressed[name] && Key[name];
+			Key.lastPressed[name] = Key[name];
+		}
+	};
 
 	// Event Handling
 	window.onkeydown = function(event){

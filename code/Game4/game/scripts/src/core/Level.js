@@ -83,8 +83,11 @@
 		var goal = lvl.goal;
 		this.update = function(){
 
-			// Update everything
+			// UI everything
 			Cursor.update();
+			Key.update();
+
+			// Update everything
 			this.camera.update();
 			this.prisms.update();
 			this.player.update();
