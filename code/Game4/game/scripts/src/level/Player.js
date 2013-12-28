@@ -15,7 +15,13 @@
 		///// UPDATE LOOP /////
 		///////////////////////
 
+		var sneakMode = false;
 		this.update = function(){
+
+			// Sneak Mode
+			if(Key.justPressed.shift){
+				sneakMode = !sneakMode;
+			}
 
 			///////////////////////
 			// CLICK TO PUT DOWN
@@ -51,7 +57,7 @@
 			}
 
 			// Movement keys pressed
-			var keyMovement = (Key.left||Key.right||Key.up||Key.down||Key.shift);
+			var keyMovement = (Key.left||Key.right||Key.up||Key.down||sneakMode);
 
 		    // Velocity via click
 		    var MAX_SPEED = 10;
@@ -89,7 +95,7 @@
 
 			    var mag = Math.sqrt(dx*dx+dy*dy);
 			    if(mag!=0){
-				    var speed = Key.shift ? MAX_SPEED*0.33 : MAX_SPEED;
+				    var speed = sneakMode ? MAX_SPEED*0.25 : MAX_SPEED;
 				    //if(mag>MAX_SPEED){
 				    	isMoving = true;
 					    vx = (dx/mag) * speed;
