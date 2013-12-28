@@ -3,7 +3,7 @@ var alreadyExited = false;
 window.gotoGame = function(){
 	if(alreadyExited) return;
 	alreadyExited = true;
-	window.top.gotoGame();
+	window.top.gotoPage("level");
 }
 
 window.onload = function(){
