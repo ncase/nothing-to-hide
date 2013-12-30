@@ -25,6 +25,7 @@
 
 	// Event Handling
 	window.onkeydown = function(event){
+		if(!window.DEBUG_USE_KEYBOARD) return;
 	    Key[KEY_CODES[event.keyCode]]=true;
 	    event.stopPropagation();
 	    event.preventDefault();

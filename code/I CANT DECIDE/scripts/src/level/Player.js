@@ -19,9 +19,10 @@
 		this.update = function(){
 
 			// Sneak Mode
-			if(Key.justPressed.shift){
-				sneakMode = !sneakMode;
-			}
+			//if(Key.justPressed.shift){
+				//sneakMode = !sneakMode;
+			//}
+			sneakMode = Key.shift;
 
 			///////////////////////
 			// CLICK TO PUT DOWN
@@ -95,7 +96,7 @@
 
 			    var mag = Math.sqrt(dx*dx+dy*dy);
 			    if(mag!=0){
-				    var speed = sneakMode ? MAX_SPEED*0.25 : MAX_SPEED;
+				    var speed = sneakMode ? MAX_SPEED*0.25 : MAX_SPEED*0.75;
 				    //if(mag>MAX_SPEED){
 				    	isMoving = true;
 					    vx = (dx/mag) * speed;

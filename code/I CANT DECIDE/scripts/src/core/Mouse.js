@@ -10,6 +10,7 @@
 
 	// Event Handling
 	var onMouseDown = function(event){
+		if(!window.DEBUG_USE_MOUSE) return;
 	    Mouse.pressed = true;
 	    onMouseMove(event);
 	};
