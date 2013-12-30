@@ -11,18 +11,11 @@ window.onload = function(){
 	var poster = {
 		poppy: {
 			user: "Poppy Gardner",
-			icon: "icons/poppy.png",
-			date: "4 years ago"
+			icon: "icons/poppy.png"
 		},
-		gardner: {
-			user: "John Gardner",
-			icon: "icons/gardner.png",
-			date: "4 years ago"
-		},
-		game: {
-			user: "Nothing To Hide",
-			icon: "icons/game.png",
-			date: "just now"
+		nobody: {
+			user: "Nobody",
+			icon: "icons/nobody.png"
 		}
 	};
 
@@ -36,139 +29,152 @@ window.onload = function(){
 		}
 	};
 
+	var _generateConvoPost = function(poster,date,message){
+		return {
+			type: "conversation_post",
+			user: poster.user,
+			icon: poster.icon,
+			date: date,
+			data: { message: message }
+		}
+	};
+
+	var _generateMainPost = function(image,date){
+		return {
+			type: "parallax_post",
+			user: poster.poppy.user,
+			icon: poster.poppy.icon,
+			date: date,
+			data: {
+				height: 350,
+				layers:[
+					{img:"pics2/main_bg.png", depth:0.5, offset:50},
+					{img:"pics2/"+image+".png", depth:0.1, offset:-20}
+				]
+			}
+		}
+	};
+
 	var posts = [
 
-		////// ESTABLISHING SHOT ///////
+		////// SLAP AWAKE ///////
 
-		_generatePost("parallax",poster.poppy,{
+		_generateMainPost("slap_1","4 minutes ago"),
+		_generateConvoPost(
+			poster.poppy, "4 minutes ago",
+			"please don't be dead oh god oh god oh god oh god oh god"
+		),
+		_generateConvoPost(
+			poster.poppy, "4 minutes ago",
+			"Okay. Okay okay. Idea."
+		),
+		_generateConvoPost(
+			poster.poppy, "4 minutes ago",
+			"Sometimes Daddy wakes me up like this. Maybe this will work..."
+		),
+		
+		_generateMainPost("slap_2","4 minutes ago"),
+		_generateConvoPost(
+			poster.poppy, "4 minutes ago",
+			"<span>#FamilyTime</span>"
+		),
+		_generateMainPost("slap_3","4 minutes ago"),
+
+		_generateConvoPost(
+			poster.nobody, "3 minutes ago",
+			"Ow! You..."
+		),
+		_generateConvoPost(
+			poster.poppy, "3 minutes ago",
+			"i'm sorry"
+		),
+		_generateConvoPost(
+			poster.nobody, "3 minutes ago",
+			"...saved my life! Please don't apologize!"
+		),
+		_generateConvoPost(
+			poster.poppy, "3 minutes ago",
+			"i'm sorry for being sorry"
+		),
+
+		_generateMainPost("slap_4","3 minutes ago"),
+
+		_generateConvoPost(
+			poster.nobody, "3 minutes ago",
+			"Wait, what's..."
+		),
+
+		_generatePost("parallax",{
+				user: "Nothing To Hide",
+				icon: "icons/game.png",
+				date: "3 minutes ago"
+			},
+			{
 			height: 450,
-			layers:[
-				{img:"pics/background_back.png", depth:0.8, offset:0},
-				{img:"pics/background_front.png", depth:0.6, offset:0},
-				{img:"pics/establishing_fg.png", depth:0.1, offset:50}
-			]
-		}),
-		_generatePost("parallax",poster.poppy,{
-			height: 350,
-			layers:[
-				{img:"pics/background_back.png", depth:0.8, offset:0},
-				{img:"pics/background_front.png", depth:0.6, offset:0},
-				{img:"pics/establishing_fg_2.png", depth:0.1, offset:50}
-			]
-		}),
-		_generatePost("parallax",poster.poppy,{
-			height: 250,
-			layers:[
-				{img:"pics/background_back.png", depth:0.8, offset:0},
-				{img:"pics/background_front.png", depth:0.6, offset:0},
-				{img:"pics/establishing_fg_3.png", depth:0.1, offset:50}
+			layers: [
+				{img:"pics2/meta_8.png", depth:0.60, offset:20},
+				{img:"pics2/meta_7.png", depth:0.59, offset:20},
+				{img:"pics2/meta_6.png", depth:0.58, offset:20},
+				{img:"pics2/meta_5.png", depth:0.57, offset:20},
+				{img:"pics2/meta_4.png", depth:0.55, offset:20},
+				{img:"pics2/meta_3.png", depth:0.50, offset:20},
+				{img:"pics2/meta_2.png", depth:0.40, offset:20},
+				{img:"pics2/meta_1.png", depth:0.20, offset:20}
 			]
 		}),
 
+		_generateConvoPost(
+			poster.nobody, "3 minutes ago",
+			'"Poppy Gardner posted 1 minute ago. Sometimes Daddy wakes me up like this. Maybe this will..."'
+		),
+		_generateConvoPost(
+			poster.nobody, "3 minutes ago",
+			'Oh. Oh my god. The Minister does that to his own... damn.'
+		),
 
-		//////// MR GARDNER TO POPPY //////////
+		_generateMainPost("phone_1","2 minutes ago"),
 
-		_generatePost("conversation",poster.gardner,{
-			message: "Poppy?"
-		}),
-		_generatePost("conversation",poster.gardner,{
-			message: "Hey sweetie. Please don't be sad."
-		}),
-		_generatePost("conversation",poster.gardner,{
-			message: "It's really hurting my popularity ranking."
-		}),
-		_generatePost("conversation",poster.gardner,{
-			message: "The first unsecret ballot election is coming up. "+
-					"It's very important to Daddy's career, "+
-					"so I need you to post more happy pictures of yourself to The Wall. "+
-					"At least 400 per day, okay?"
-		}),
-		_generatePost("conversation",poster.gardner,{
-			message: "Please, Poppy? I don't want the voters to think I'm a bad parent."
-		}),
+		_generateMainPost("phone_1_extra","2 minutes ago"),
 
+		_generateConvoPost(
+			poster.nobody, "2 minutes ago",
+			"Welllll if it makes you feel better, your dad's psychologically and physically abusive to the rest of the nation, too."
+		),
 
-		///// CLOSE DOOR /////
+		_generateConvoPost(
+			poster.nobody, "2 minutes ago",
+			"We're all scared about saying the wrong thing, <i>thinking</i> the wrong thing. The Minister forces us to be our own watchmen. Sometimes literally, when you've got to move those iEyes."
+		),
 
-		_generatePost("parallax",poster.poppy,{
-			height: 450,
-			layers:[
-				{img:"pics/background_back.png", depth:0.8, offset:0},
-				{img:"pics/background_front.png", depth:0.6, offset:0},
-				{img:"pics/door_close_1.png", depth:0.1, offset:50}
-			]
-		}),
-		_generatePost("conversation",poster.gardner,{
-			message: "Well, goodnight! <span>#FatherDaughterMoment</span>"
-		}),
-		_generatePost("parallax",poster.poppy,{
-			height: 450,
-			layers:[
-				{img:"pics/background_back.png", depth:0.8, offset:0},
-				{img:"pics/background_front.png", depth:0.6, offset:0},
-				{img:"pics/door_close_2.png", depth:0.1, offset:75}
-			]
-		}),
-		_generatePost("parallax",poster.poppy,{
-			height: 450,
-			layers:[
-				{img:"pics/background_back.png", depth:0.8, offset:0},
-				{img:"pics/background_front.png", depth:0.6, offset:0},
-				{img:"pics/door_close_3.png", depth:0.1, offset:100}
-			]
-		}),
-		_generatePost("parallax",poster.poppy,{
-			height: 450,
-			layers:[
-				{img:"pics/background_back.png", depth:0.8, offset:0},
-				{img:"pics/background_front.png", depth:0.6, offset:0},
-				{img:"pics/door_close_4.png", depth:0.1, offset:100}
-			]
-		}),
+		_generateConvoPost(
+			poster.nobody, "2 minutes ago",
+			"I can help you escape him."
+		),
 
-		//////// INTERNAL MONOLOGUE //////////
+		_generateMainPost("phone_2","1 minute ago"),
 
-		_generatePost("conversation",poster.poppy,{
-			message: "... I have to leave."
-		}),
-		_generatePost("conversation",poster.poppy,{
-			message: "Dad will be better off without me."
-		}),
-		_generatePost("conversation",poster.poppy,{
-			message: "I don't deserve all the loving security he's given me."
-		}),
-		_generatePost("conversation",poster.poppy,{
-			message: "Goodbye, dad. I'm so sorry."
-		}),
+		_generateConvoPost(
+			poster.nobody, "1 minute ago",
+			"In fact, I got an app for that!"
+		),
 
+		_generateMainPost("phone_3","1 minute ago"),
 
-		//////// ESCAPE //////////
+		_generateConvoPost(
+			poster.nobody, "58 seconds ago",
+			"Made this exploit myself. Just tap the screen, and you'll be erased from The Wall. You'll be a Nobody."
+		),
+		_generateConvoPost(
+			poster.nobody, "42 seconds ago",
+			"Stop acting for the camera. Start being yourself."
+		),
 
-		_generatePost("parallax",poster.poppy,{
-			height: 250,
-			layers:[{img:"pics/escape_1.png", depth:1, offset:150}]
-		}),
-		_generatePost("parallax",poster.poppy,{
-			height: 250,
-			layers:[{img:"pics/escape_2.png", depth:1, offset:150}]
-		}),
-		_generatePost("parallax",poster.poppy,{
-			height: 250,
-			layers:[{img:"pics/escape_3.png", depth:1, offset:150}]
-		}),
-		_generatePost("parallax",poster.poppy,{
-			height: 250,
-			layers:[{img:"pics/escape_4.png", depth:1, offset:150}]
-		}),
-		_generatePost("parallax",poster.poppy,{
-			height: 250,
-			layers:[{img:"pics/escape_5.png", depth:1, offset:150}]
-		}),
-
-		//////// PLAY GAME /////////
-		_generatePost("video",poster.game,{
-			bg: "pics/game.png"
-		})
+		_generateMainPost("phone_4","25 seconds ago"),
+		_generateMainPost("phone_5","19 seconds ago"),
+		_generateMainPost("phone_6","13 seconds ago"),
+		_generateMainPost("phone_7","8 seconds ago"),
+		_generateMainPost("phone_8","3 seconds ago"),
+		_generateMainPost("phone_9","just now")
 
 	];
 
@@ -267,9 +273,12 @@ window.onload = function(){
 	var RAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
 	var drawnSinceLastUpdate = false;
 
+	// TODO: WHAT HAPPENS IF THE ZOOM IF KER_FUCKED.....
+
 	// Draw Loop
-	var cctv = document.getElementById("video_cctv");
-	cctvY = 0;
+	/*var cctv = document.getElementById("video_cctv");
+	cctvY = 0;*/
+	var footer = document.getElementById("footer");
 	function draw(){
 		
 		if(!drawnSinceLastUpdate){
@@ -278,9 +287,16 @@ window.onload = function(){
 		}
 
 		// CCTV
-		cctvY += 1;
+		/*cctvY += 1;
 		if(cctvY>=15) cctvY=0;
-		cctv.style.backgroundPositionY = cctvY;
+		cctv.style.backgroundPositionY = cctvY;*/
+
+		// END
+		if(footer.offsetTop - window.scrollY < 600 ){
+			document.body.style.background = "#000";
+			document.body.innerHTML = "";
+			return;
+		}
 
 		// RAF
 		RAF(draw);

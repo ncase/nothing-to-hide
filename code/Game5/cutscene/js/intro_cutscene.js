@@ -99,7 +99,7 @@ window.onload = function(){
 			]
 		}),
 		_generatePost("conversation",poster.gardner,{
-			message: "Well, goodnight! <span>#FatherDaughterMoment</span>"
+			message: "Well, goodnight! <span>#FamilyTime</span>"
 		}),
 		_generatePost("parallax",poster.poppy,{
 			height: 450,
