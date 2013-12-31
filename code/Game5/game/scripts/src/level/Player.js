@@ -161,6 +161,14 @@
 		    	if(frameIndex>=120) frameIndex=0;
 		    }
 
+		    // Anim Suffix
+		    var heldPrism = level.prisms.getHeldPrism()
+		    if(heldPrism){
+		    	animSuffix = (heldPrism.id) ? "_Eye_2" : "_Eye";
+		    }else{
+		    	animSuffix = "";
+		    }
+
 			// Footstep Sounds!
 			if(animState=="Walk"){
 				var cx = level.camera.x;
@@ -207,19 +215,23 @@
 		var frameIndex = 0;
 		var faceDirection = 1;
 		var animState = "Idle";
+		var animSuffix = "";
 
 		var playerSprites = {
 			Idle: new Sprite("Poppy_Idle"),
-			Walk: new Sprite("Poppy_Walk")
+			Idle_Eye: new Sprite("Poppy_Idle_With_Eye"),
+			Idle_Eye_2: new Sprite("Poppy_Idle_With_Eye_2"),
+			
+			Walk: new Sprite("Poppy_Walk"),
+			Walk_Eye: new Sprite("Poppy_Walk_With_Eye"),
+			Walk_Eye_2: new Sprite("Poppy_Walk_With_Eye_2")
 		};
-		playerSprites.Idle.scaleX = 0.9;
-		playerSprites.Idle.scaleY = 0.9;
-		playerSprites.Idle.regX = -25;
-		playerSprites.Idle.regY = -150;
-		playerSprites.Walk.scaleX = 0.9;
-		playerSprites.Walk.scaleY = 0.9;
-		playerSprites.Walk.regX = -25;
-		playerSprites.Walk.regY = -150;
+		for(var id in playerSprites){
+			var sprite = playerSprites[id];
+			sprite.scaleX = sprite.scaleY = 0.9;
+			sprite.regX = -25;
+			sprite.regY = -150;
+		}
 
 		var buttonSprite = new Sprite("Button");
 		buttonSprite.regX = -40;
@@ -247,7 +259,7 @@
 			}
 
 		    // Which Spritesheet to use
-		    var sprite = playerSprites[animState];
+		    var sprite = playerSprites[animState+animSuffix];
 
 		    // Draw It!
 			sprite.frameIndex = Math.floor(frameIndex);
@@ -279,7 +291,7 @@
 			}
 
 			// Which Spritesheet to use
-		    var sprite = playerSprites[animState];
+		    var sprite = playerSprites[animState+animSuffix];
 
 		    // Draw It!
 			sprite.frameIndex = Math.floor(frameIndex);

@@ -107,6 +107,7 @@
 			}
     		
     		// Logic
+    		heldPrism = null;
     		isHoldingPrism = false;
     		level.player.holdingPrism = false;
 
@@ -133,6 +134,10 @@
 			prism.active = (level.map.getTile(x,y)!=Map.CARPET); // You're NOT on carpet.
 			self.prisms.push(prism);
 			return prism;
+		};
+
+		this.getHeldPrism = function(){
+			return heldPrism;
 		};
 
 		//////////
