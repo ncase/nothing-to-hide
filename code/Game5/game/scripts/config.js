@@ -19,7 +19,13 @@ Asset.init({
 	sprites:{
 		
 		Poppy_Idle:'assets/sprites/Poppy_Idle',
+		Poppy_Idle_With_Eye:'assets/sprites/Poppy_Idle_With_Eye',
+		Poppy_Idle_With_Eye_2:'assets/sprites/Poppy_Idle_With_Eye_2',
+		
 		Poppy_Walk:'assets/sprites/Poppy_Walk',
+		Poppy_Walk_With_Eye:'assets/sprites/Poppy_Walk_With_Eye',
+		Poppy_Walk_With_Eye_2:'assets/sprites/Poppy_Walk_With_Eye_2',
+
 		MrPrism:'assets/sprites/MrPrism',
 		Shimmer:'assets/sprites/Shimmer',
 
