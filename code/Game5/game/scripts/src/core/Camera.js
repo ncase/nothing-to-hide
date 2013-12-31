@@ -59,17 +59,13 @@
 			// DRAW LINES LAYER //
 			//////////////////////
 
-			// Clear
-			ctxTemp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
+			// Because it's the first layer,
+			// I can optimize by drawing direct to the main context.
+			ctx.translate(self.cx,self.cy);
+			ctx.drawImage(level.map.lineCache,0,0);
+			level.player.drawCCTV(ctx);
+			ctx.translate(-self.cx,-self.cy);
 
-			// Lines
-			ctxTemp.drawImage(level.map.lineCache,0,0);
-
-			// Player below all shadows
-			level.player.drawCCTV(ctxTemp);
-
-			// Draw to main
-			ctx.drawImage(Display.canvas.tmp,0,0);
 
 			/////////////////////
 			// DRAW CCTV LAYER //

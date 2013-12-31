@@ -101,7 +101,7 @@ window.onload = function(){
 
 		_generateConvoPost(
 			poster.nobody, "3 minutes ago",
-			"Wait, what's..."
+			"Wait, on The Wall, is that...?"
 		),
 
 		_generatePost("parallax",{
