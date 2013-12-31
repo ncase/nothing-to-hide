@@ -39,24 +39,14 @@
 				for(var i=0;i<props.length;i++){
 					var prop = props[i];
 
-					// Get the prop's bounding box.
-					var bounds = prop.bounds;
-
-					// If none, use the default bounds
-					if(!bounds){
-						bounds = {
-							left: -5,
-							right: 5,
-							top: -10,
-							bottom: 0
-						};
+					// If it's no longer on this belt, it's a free for all, now.
+					if(prop.currentBelt==self && !_isOnBelt(prop)){
+						prop.currentBelt = null;
 					}
-					
-					if(    _isOnBelt(prop.x+bounds.right, prop.y+bounds.bottom)
-						|| _isOnBelt(prop.x+bounds.right, prop.y+bounds.top)
-						|| _isOnBelt(prop.x+bounds.left,  prop.y+bounds.bottom)
-						|| _isOnBelt(prop.x+bounds.left,  prop.y+bounds.top)
-					){
+
+					// Is not on any other belt than this
+					if((prop.currentBelt==self || prop.currentBelt==null) && _isOnBelt(prop)){
+						prop.currentBelt = self;
 						prop.x += self.direction.x;
 						prop.y += self.direction.y;
 					}
@@ -65,7 +55,29 @@
 
 		};
 
-		var _isOnBelt = function(x,y){
+		var _isOnBelt = function(prop){
+
+			// Get the prop's bounding box.
+			var bounds = prop.bounds;
+
+			// If none, use the default bounds
+			if(!bounds){
+				bounds = {
+					left: -5,
+					right: 5,
+					top: -10,
+					bottom: 0
+				};
+			}
+
+			return (_isOnBelt2(prop.x+bounds.right, prop.y+bounds.bottom)
+					|| _isOnBelt2(prop.x+bounds.right, prop.y+bounds.top)
+					|| _isOnBelt2(prop.x+bounds.left,  prop.y+bounds.bottom)
+					|| _isOnBelt2(prop.x+bounds.left,  prop.y+bounds.top));
+
+		};
+
+		var _isOnBelt2 = function(x,y){
 			return(self.belt.ax<=x && self.belt.bx>=x && self.belt.ay<=y && self.belt.by>=y);
 		}
 

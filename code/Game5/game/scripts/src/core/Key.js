@@ -24,15 +24,19 @@
 	};
 
 	// Event Handling
-	window.onkeydown = function(event){
+	function _onKeyDown(event){
 	    Key[KEY_CODES[event.keyCode]]=true;
 	    event.stopPropagation();
 	    event.preventDefault();
-	};
-	window.onkeyup = function(event){
+	}
+	function _onKeyUp(event){
 	    Key[KEY_CODES[event.keyCode]]=false;
 	    event.stopPropagation();
 	    event.preventDefault();
-	};
+	}
+	window.top.addEventListener("keydown",_onKeyDown,false);
+	window.top.addEventListener("keyup",_onKeyUp,false);
+	window.addEventListener("keydown",_onKeyDown,false);
+	window.addEventListener("keyup",_onKeyUp,false);
 
 })(window);

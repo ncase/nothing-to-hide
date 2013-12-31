@@ -10,10 +10,10 @@
 
 		// Bounds
 		self.bounds = {
-			left: -25,
-			right: 25,
-			top: -50,
-			bottom: 0
+			left: -24,
+			right: 24,
+			top: -49,
+			bottom: -1
 		};
 
 		// Position
