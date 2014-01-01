@@ -18,7 +18,7 @@
 
 		// Canvasses
 		Display.dom.appendChild(_addCanvas("game"));
-		Display.dom.appendChild(_addCanvas("ui"));
+		//Display.dom.appendChild(_addCanvas("ui"));
 		_addCanvas("tmp");
 		_addCanvas("tmp2");
 

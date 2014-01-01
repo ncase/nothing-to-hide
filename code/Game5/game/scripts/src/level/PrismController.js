@@ -18,42 +18,46 @@
 		var heldPrism = null;
 		this.update = function(){
 
-			// Hovering...
-			var mx = Mouse.x - level.camera.cx;
-	    	var my = Mouse.y - level.camera.cy;
-		    var clickedPrism = self.isNearPrism(mx,my+25,25);
-			if(clickedPrism && clickedPrism.nearPlayer){
-				Cursor.hovering++;
+			if(!level.config.level.art.ignoreCameras){
+
+				// Hovering...
+				var mx = Mouse.x - level.camera.cx;
+		    	var my = Mouse.y - level.camera.cy;
+			    var clickedPrism = self.isNearPrism(mx,my+25,25);
+				if(clickedPrism && clickedPrism.nearPlayer){
+					Cursor.hovering++;
+				}
+
+				// Adding/Removing a new light.
+				var player = level.player;
+			    if(!lastMousePressed && Mouse.pressed){// && Cursor.still){
+
+			    	// Did you click on a Prism
+			    	if(!isHoldingPrism && clickedPrism && clickedPrism.nearPlayer){
+			    		self.pickUpPrism(clickedPrism);
+			    		Cursor.clicked = true;
+			    		Mouse.pressed = false;
+					}
+
+			    }
+			    lastMousePressed = Mouse.pressed;
+
+			    // Adding/Removing a new light.
+				var player = level.player;
+			    if(Key.justPressed.space){
+
+			    	// All prisms near player
+			    	var nearPrism = self.isNearPrism(player.x,player.y+25,50);
+
+			    	// Did you click on a Prism
+			    	if(!isHoldingPrism && nearPrism){
+			    		self.pickUpPrism(nearPrism);
+			    		Key.justPressed.space = false;
+					}
+
+			    }
+
 			}
-
-			// Adding/Removing a new light.
-			var player = level.player;
-		    if(!lastMousePressed && Mouse.pressed){// && Cursor.still){
-
-		    	// Did you click on a Prism
-		    	if(!isHoldingPrism && clickedPrism && clickedPrism.nearPlayer){
-		    		self.pickUpPrism(clickedPrism);
-		    		Cursor.clicked = true;
-		    		Mouse.pressed = false;
-				}
-
-		    }
-		    lastMousePressed = Mouse.pressed;
-
-		    // Adding/Removing a new light.
-			var player = level.player;
-		    if(Key.justPressed.space){
-
-		    	// All prisms near player
-		    	var nearPrism = self.isNearPrism(player.x,player.y+25,50);
-
-		    	// Did you click on a Prism
-		    	if(!isHoldingPrism && nearPrism){
-		    		self.pickUpPrism(nearPrism);
-		    		Key.justPressed.space = false;
-				}
-
-		    }
 
 		    // Update all
 			for(var i=0;i<self.prisms.length;i++){

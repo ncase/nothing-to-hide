@@ -113,4 +113,46 @@
 		Game.gotoLevel(Game.levelIndex);
 	};
 
+	// DO A COOL SCENE TRANSITION
+	Game.screenswipe = function(){
+		
+		// Copy Canvas
+		var screenswipe = document.getElementById("screenswipe");
+		screenswipe.width = Display.canvas.game.width;
+		screenswipe.height = Display.canvas.game.height;
+		var ctx = screenswipe.getContext("2d");
+		ctx.drawImage(Display.canvas.game,0,0);
+
+		// Place them in position
+		var game = document.getElementById("game_container");
+		var swipe = document.getElementById("swipe_container");
+		swipe.style.top = "0%";
+		swipe.style.left = "0%";
+		game.style.top = "0%";
+		game.style.left = "100%";
+
+		// Then, swipe - ghetto
+		var _createSwipe = function(pos,time){
+			var s = -pos;
+			var g = 100-pos;
+			setTimeout(function(){
+				swipe.style.left = s+"%";
+				game.style.left = g+"%";
+			},time);
+		};
+		_createSwipe(2,50);
+		_createSwipe(5,100);
+		_createSwipe(10,150);
+		_createSwipe(20,200);
+		_createSwipe(40,250);
+		_createSwipe(70,300);
+		_createSwipe(105,350);
+		_createSwipe(110,400);
+		_createSwipe(105,450);
+		_createSwipe(102,500);
+		_createSwipe(101,550);
+		_createSwipe(100,600);
+
+	}	
+
 })(window);

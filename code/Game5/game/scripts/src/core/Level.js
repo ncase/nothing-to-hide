@@ -102,6 +102,7 @@
 			var x = this.player.x/Map.TILE_SIZE;
 			var y = this.player.y/Map.TILE_SIZE;
 			if(x>=goal.ax && x<=goal.bx && y>=goal.ay && y<=goal.by){
+				Game.screenswipe();
 				Game.clearLevel();
 				Game.nextLevel();
 			}

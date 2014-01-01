@@ -7,7 +7,7 @@ body {
 	overflow:hidden;
 
 	width:100%; height:100%;
-	cursor: none;
+	/*cursor: none;*/
 
 }
 body, canvas, div {
@@ -27,7 +27,7 @@ body, canvas, div {
 	top:0; left:0; right:0; bottom:0;
 	margin:auto;*/
 
-	cursor: none;
+	/*cursor: none;*/
 
 	position: absolute;
 	background: #000;
@@ -40,7 +40,7 @@ body, canvas, div {
 }
 
 /*** GAME ***/
-#game_container > canvas{
+#container > div > canvas{
 	
 	position: absolute;
 	display: block;
