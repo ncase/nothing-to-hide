@@ -73,63 +73,50 @@
 		var lineCache = document.createElement("canvas");
 		lineCache.width = self.width;
 		lineCache.height = self.height;
-		var lineContext = lineCache.getContext('2d');		
+		var lineContext = lineCache.getContext('2d');
+
+		var liesCache = document.createElement("canvas");
+		liesCache.width = self.width;
+		liesCache.height = self.height;
+		var liesContext = liesCache.getContext('2d');
 
 		self.bgCache = bgCache;
 		self.camCache = camCache;
 		self.lineCache = lineCache;
+		self.liesCache = liesCache;
 
 		// Drawing placeholders
-		if(this.cam){
-			camContext.drawImage(this.cam,0,0);
-		}else{
-			_makePlaceholderCCTV(self,camContext,tiles,config);
-		}
-		if(this.background){
-			bgContext.drawImage(this.background,0,0);
-		}else{
-			_makePlaceholderBG(self,bgContext,tiles,config);
-		}
+		_makePlaceholderCCTV(self,camContext,tiles,config);
+		_makePlaceholderBG(self,bgContext,tiles,config);
 		_makePlaceholderLine(self,lineContext,tiles,config);
+		_makePropaganda(self,liesContext,tiles,config);
 
 		// Draw Loop
 		this.draw = function(ctx){
 			
-			// Positions
-			/*var w = Math.min(self.width,Display.width);
-			var h = Math.min(self.height,Display.height);
-			var x = (w==Display.width) ? -level.camera.cx : 0;
-			var y = (h==Display.height) ? -level.camera.cy : 0;
-
-			// To prevent out of bounds
-			if(x<0){
-				w += x;
-				x = 0;
-			}
-			if(x+w>bgCache.width){
-				w = bgCache.width-x-1;
-			}
-			if(y<0){
-				h += y;
-				y = 0;
-			}
-			if(y+h>bgCache.height){
-				h = bgCache.height-y-1;
-			}*/
-
 			// Draw background
-			//ctx.drawImage( bgCache, x,y,w,h, x,y,w,h );
 			ctx.drawImage(bgCache,0,0);
 
-			// Draw Propaganda
-			for(var i=0;i<self.propaganda.length;i++){
+			// Draw Propaganda Images & Blackouts
+			for(var i=0;i<blackouts.length;i++){
+				var bo = blackouts[i];
 
-				var lie = self.propaganda[i];
-				switch(lie.type){
-					case "image":
-						var lieImage = Asset.image[lie.img]; // ????
-						ctx.drawImage(lieImage, lie.x*Map.TILE_SIZE, lie.y*Map.TILE_SIZE);
-						break;
+				// Change visibility if seen in middle.
+				var gotoVisibility = _blackoutIsSeen(bo,level.player.sightPolygon) ? 1 : 0;
+				bo.visibility = bo.visibility*0.8 + gotoVisibility*0.2;
+				var v = Math.round(bo.visibility*100)/100;
+
+				// Dark part
+				ctx.fillStyle = "rgba(0,0,0,0.5)";
+				ctx.fillRect(bo.x,bo.y,bo.width,(1-v)*bo.height);
+
+				// Image there
+				if(v>0){
+					ctx.drawImage(
+						liesCache,
+						bo.x, bo.y, bo.width, Math.round(v*bo.height), // source
+						bo.x, bo.y+(1-v)*bo.height, bo.width, Math.round(v*bo.height) // destination
+					);
 				}
 
 			}
@@ -140,7 +127,7 @@
 				var screenline = screenlines[i];
 				var x = screenline.x;
 				var y = screenline.y;
-				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
+				ctx.fillRect(x*Map.TILE_SIZE+1,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
 			}
 
 		};
@@ -149,7 +136,85 @@
 			ctx.drawImage(camCache,0,0);
 		}
 
-		// Get Screen Lines, once.
+		// Propaganda Blackouts
+		var blackouts = [];
+		function _blackoutIsSeen(bo,poly){
+			/*if(VisibilityPolygon.inPolygon([bo.x,bo.y],poly)) return true;
+			if(VisibilityPolygon.inPolygon([bo.x+bo.width,bo.y],poly)) return true;
+			if(VisibilityPolygon.inPolygon([bo.x,bo.y+bo.height],poly)) return true;
+			if(VisibilityPolygon.inPolygon([bo.x+bo.width,bo.y+bo.height],poly)) return true;*/
+			if(VisibilityPolygon.inPolygon([bo.x+bo.width/2,bo.y+bo.height/2],poly)) return true;
+			return false;
+		}
+		function _isInBlackout(x,y){
+			for(var i=0;i<blackouts.length;i++){
+				var blackout = blackouts[i];
+				if(x>=blackout.x && x<blackout.x+blackout.width
+					&& y>=blackout.y && y<blackout.y+blackout.height){
+					return true;
+				}
+			}
+			return false;
+		}
+		function _findBlackout(startX,startY){
+
+			var x,y,tile;
+
+			// Get right-most side of screen
+			var width = 0;
+			x = startX;
+			y = startY;
+			tile = tiles[y][x];
+			while(tile==Map.SCREEN){
+				x++;
+				width++;
+				tile = tiles[y][x];
+			}
+			if(tile==Map.SCREEN_LINE){ // if it was a line, not a wall, add another.
+				width++;
+			}
+
+			// Get bottom-most side of screen
+			var height = 0;
+			x = startX;
+			y = startY;
+			tile = tiles[y][x];
+			while(tile==Map.SCREEN || tile==Map.SCREEN_LINE){
+				y++;
+				height++;
+				tile = tiles[y][x];
+			}
+
+			// Return the beast
+			return {
+				x: startX,
+				y: startY,
+				width: width,
+				height: height,
+				visibility: 1
+			};
+
+		}
+		// 1. Iterate from left-to-right, top-to-bottom
+		// 2. If it's a screen/screenline AND not already in a blackout, find its rectangle & remember it.
+		// 3. Repeat until hit bottom-right
+		for(var y=0;y<tiles.length;y++){
+			for(var x=0;x<tiles[y].length;x++){
+				var tile = tiles[y][x];
+				if((tile==Map.SCREEN || tile==Map.SCREEN_LINE) && !_isInBlackout(x,y)){
+					blackouts.push(_findBlackout(x,y));
+				}
+			}
+		}
+		for(var i=0;i<blackouts.length;i++){
+			var blackout = blackouts[i];
+			blackout.x *= Map.TILE_SIZE;
+			blackout.y *= Map.TILE_SIZE;
+			blackout.width *= Map.TILE_SIZE;
+			blackout.height *= Map.TILE_SIZE; 
+		}
+
+		// Screen Lines.
 		var screenlines = [];
 		for(var y=0;y<tiles.length;y++){
 			for(var x=0;x<tiles[y].length;x++){
@@ -275,6 +340,18 @@
 		var gy = (self.goal.ay + self.goal.by)/2 - 0.5;
 		ctx.drawImage(Asset.image.exit, gx*Map.TILE_SIZE, gy*Map.TILE_SIZE);
 
+	};
+
+	var _makePropaganda = function(self,ctx,tiles,config){
+		for(var i=0;i<self.propaganda.length;i++){
+			var lie = self.propaganda[i];
+			switch(lie.type){
+				case "image":
+					var lieImage = Asset.image[lie.img]; // ????
+					ctx.drawImage(lieImage, lie.x*Map.TILE_SIZE, lie.y*Map.TILE_SIZE);
+					break;
+			}
+		}
 	};
 
 	exports.Map = Map;

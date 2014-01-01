@@ -63,7 +63,9 @@
 		}
 	],
 
-	"propaganda": [],
+	"propaganda": [
+		{"type":"image", "img":"lietest", "x":6, "y":4}
+	],
 
 	"art": {
 		"hideCam": true,
