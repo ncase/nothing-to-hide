@@ -1,0 +1,37 @@
+{
+	"player":{ "x":14, "y":2 },
+	"goal":{"ax":14,"bx":15,"ay":4,"by":5},
+
+	"shadows": [
+
+		{"ax":11,"bx":15,"ay":3,"by":3},
+		{"ax":3,"bx":12,"ay":7,"by":7},
+		{"ax":3,"bx":3,"ay":7,"by":9},
+
+		{"ax":12,"bx":12,"ay":3,"by":9},
+		{"ax":14,"bx":15,"ay":5,"by":5}
+
+	],
+
+	"prisms": [
+		{"x":0,"y":2},
+		{"x":10,"y":6}
+	],
+
+	"camera": [
+		{
+			"type": "fixed",
+			"zone": {"ax":0,"bx":15,"ay":0,"by":10},
+			"data": {"x":7.5,"y":5}
+		}
+	],
+
+	"art": {
+		"background": false,
+		"cam": false,
+		"lights": [
+			{"ax":0,"bx":14,"ay":0,"by":10}
+		]
+	}
+
+}
