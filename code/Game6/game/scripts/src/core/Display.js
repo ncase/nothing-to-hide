@@ -43,11 +43,12 @@
 
 	};
 	window.onresize = function(event){
+		if(!Game.level) return;
 		var w = Math.min(Game.level.map.width, window.innerWidth);
 		var h = Math.min(Game.level.map.height, window.innerHeight);
 		Display.resize(w,h);
 	};
-
+	
 	// Add canvas
 	var _addCanvas = function(layerID){
 

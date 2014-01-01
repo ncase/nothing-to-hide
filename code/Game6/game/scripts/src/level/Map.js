@@ -98,24 +98,29 @@
 			ctx.drawImage(bgCache,0,0);
 
 			// Draw Propaganda Images & Blackouts
+			var bump = 0;
 			for(var i=0;i<blackouts.length;i++){
 				var bo = blackouts[i];
 
 				// Change visibility if seen in middle.
-				var gotoVisibility = _blackoutIsSeen(bo,level.player.sightPolygon) ? 1 : 0;
-				bo.visibility = bo.visibility*0.8 + gotoVisibility*0.2;
-				var v = Math.round(bo.visibility*100)/100;
-
-				// Dark part
-				ctx.fillStyle = "rgba(0,0,0,0.5)";
-				ctx.fillRect(bo.x,bo.y,bo.width,(1-v)*bo.height);
+				var gotoPosition = _blackoutIsSeen(bo,level.player.sightPolygon) ? 1 : 0;
+				bo.vel += (gotoPosition-bo.pos)*0.2;
+				bo.vel *= 0.7;
+				bo.pos += bo.vel;
 
 				// Image there
-				if(v>0){
+				var t = bo.pos;
+				if(t>0 && t<=1 && Math.floor(t*bo.height)>0){
 					ctx.drawImage(
 						liesCache,
-						bo.x, bo.y, bo.width, Math.round(v*bo.height), // source
-						bo.x, bo.y+(1-v)*bo.height, bo.width, Math.round(v*bo.height) // destination
+						bo.x, bo.y, bo.width, t*bo.height, // source
+						bo.x, bo.y+(1-t)*bo.height, bo.width, t*bo.height // destination
+					);
+				}else if(t>1 && Math.floor((2-t)*bo.height)>0){
+					ctx.drawImage(
+						liesCache,
+						bo.x, bo.y+(t-1)*bo.height, bo.width, (2-t)*bo.height, // source
+						bo.x, bo.y, bo.width, (2-t)*bo.height // destination
 					);
 				}
 
@@ -191,7 +196,8 @@
 				y: startY,
 				width: width,
 				height: height,
-				visibility: 1
+				pos: 1,
+				vel: 0,
 			};
 
 		}
@@ -260,8 +266,8 @@
 					case Map.SPACE: ctx.fillStyle="#D7E7E6"; break;
 					case Map.CARPET: ctx.fillStyle=textures.carpet; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
-					case Map.SCREEN: ctx.fillStyle="#363B43"; break;
-					case Map.SCREEN_LINE: ctx.fillStyle="#363B43"; break;
+					case Map.SCREEN: ctx.fillStyle="#202328"; break;
+					case Map.SCREEN_LINE: ctx.fillStyle="#202328"; break;
 					case Map.PROP: ctx.fillStyle="#7F6A5F"; break;
 					
 					// Placeholder
@@ -343,6 +349,12 @@
 	};
 
 	var _makePropaganda = function(self,ctx,tiles,config){
+
+		// Default background
+		ctx.fillStyle = "#363B43";
+		ctx.fillRect(0,0,self.width,self.height);
+
+		// All art
 		for(var i=0;i<self.propaganda.length;i++){
 			var lie = self.propaganda[i];
 			switch(lie.type){
@@ -352,6 +364,7 @@
 					break;
 			}
 		}
+
 	};
 
 	exports.Map = Map;
