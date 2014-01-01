@@ -30,6 +30,7 @@
 				drawnSinceLastUpdate = true;
 				if(Game.level){
 					Game.level.draw();
+					if(swiping) _doTheSwipe();
 				}else{
 					Display.clear();
 				}
@@ -114,6 +115,29 @@
 	};
 
 	// DO A COOL SCENE TRANSITION
+	var pos = 0;
+	var vel = 0;
+	var tick = 0;
+	var swiping = false;
+	var game = document.getElementById("game_container");
+	var swipe = document.getElementById("swipe_container");
+	var _doTheSwipe = function(){
+			
+		vel += (100-pos)*0.3;
+		vel *= 0.5;
+		pos += vel;
+
+		if(tick++>60){
+			swiping = false;
+			pos = 100;
+		}
+
+		var s = -pos;
+		var g = 100-pos;
+		swipe.style.left = s+"%";
+		game.style.left = g+"%";
+
+	};
 	Game.screenswipe = function(){
 		
 		// Copy Canvas
@@ -124,34 +148,16 @@
 		ctx.drawImage(Display.canvas.game,0,0);
 
 		// Place them in position
-		var game = document.getElementById("game_container");
-		var swipe = document.getElementById("swipe_container");
 		swipe.style.top = "0%";
 		swipe.style.left = "0%";
 		game.style.top = "0%";
 		game.style.left = "100%";
 
-		// Then, swipe - ghetto
-		var _createSwipe = function(pos,time){
-			var s = -pos;
-			var g = 100-pos;
-			setTimeout(function(){
-				swipe.style.left = s+"%";
-				game.style.left = g+"%";
-			},time);
-		};
-		_createSwipe(2,50);
-		_createSwipe(5,100);
-		_createSwipe(10,150);
-		_createSwipe(20,200);
-		_createSwipe(40,250);
-		_createSwipe(70,300);
-		_createSwipe(105,350);
-		_createSwipe(110,400);
-		_createSwipe(105,450);
-		_createSwipe(102,500);
-		_createSwipe(101,550);
-		_createSwipe(100,600);
+		// Then, swipe.
+		pos = 0;
+		vel = 0;
+		tick = 0;
+		swiping = true;
 
 	}	
 

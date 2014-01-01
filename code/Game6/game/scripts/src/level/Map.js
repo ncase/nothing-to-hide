@@ -128,12 +128,14 @@
 
 			// Draw screen lines.
 			ctx.fillStyle=textures.screenline;
+			ctx.translate(1,0);
 			for(var i=0;i<screenlines.length;i++){
 				var screenline = screenlines[i];
 				var x = screenline.x;
 				var y = screenline.y;
-				ctx.fillRect(x*Map.TILE_SIZE+1,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
+				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
 			}
+			ctx.translate(-1,0);
 
 		};
 
