@@ -289,8 +289,8 @@
 					case Map.SPACE: ctx.fillStyle="#555"; break;
 					case Map.CARPET: ctx.fillStyle=textures.carpet_cctv; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
-					case Map.SCREEN: ctx.fillStyle="#222"; break;
-					case Map.SCREEN_LINE: ctx.fillStyle="#222"; break;
+					case Map.SCREEN: ctx.fillStyle="#000"; break;
+					case Map.SCREEN_LINE: ctx.fillStyle="#000"; break;
 					case Map.PROP: ctx.fillStyle="#666666"; break;
 
 					// Placeholder

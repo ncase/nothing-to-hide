@@ -105,7 +105,22 @@
 			// Background elements
 			level.map.draw(ctxTemp);
 			level.conveyors.draw(ctxTemp);
-			_drawCCTV(ctxTemp);
+
+			// Don't draw CCTV on walls
+			var temp = Display.context.tmp2;
+			temp.translate(self.cx,self.cy);
+			temp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
+			_drawCCTV(temp);
+			for(var y=0;y<level.map.tiles.length;y++){
+				for(var x=0;x<level.map.tiles[y].length;x++){
+					var tile = level.map.tiles[y][x];
+					if(tile==Map.SCREEN||tile==Map.SCREEN_LINE||tile==Map.WALL){
+						temp.clearRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
+					}
+				}
+			}
+			temp.translate(-self.cx,-self.cy);
+			ctxTemp.drawImage(Display.canvas.tmp2, -self.cx, -self.cy);
 
 			// Draw props
 			for(var i=0;i<props.length;i++){
@@ -149,6 +164,7 @@
 			var temp = Display.context.tmp2;
 			temp.translate(self.cx,self.cy);
 			temp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
+			temp.fillStyle = "#000";
 
 			// Draw all prism sights.
 			// TODO: Cache 'em?

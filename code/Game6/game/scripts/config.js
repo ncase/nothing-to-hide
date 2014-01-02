@@ -13,7 +13,11 @@ Asset.init({
 		screenline:'assets/textures/screenline.png',
 		exit:'assets/textures/exit.png',
 
-		lietest:'assets/propaganda/test.png'
+		// PROPAGANDA or TUTORIAL
+
+		propaganda_tut_walk:'assets/propaganda/tut_walk.png',
+		propaganda_tut_slow:'assets/propaganda/tut_slow.png',
+		propaganda_smile:'assets/propaganda/smile.png',
 
 	},
 	sprites:{
@@ -55,7 +59,7 @@ Asset.init({
 		
 		intro: 'levels/intro',
 
-		tut_look_1: 'levels/tut_look_1',
+		//tut_look_1: 'levels/tut_look_1',
 		tut_pickup: 'levels/tut_pickup',
 		puzzle_bridge: 'levels/puzzle_bridge',
 		tut_blackout: 'levels/tut_blackout',
@@ -76,7 +80,7 @@ Asset.init({
 Game.init({
 	levels:[
 		'intro',
-		'tut_look_1', 'tut_pickup', 'puzzle_bridge', 'tut_blackout', 'puzzle_huge',
+		'tut_pickup', 'puzzle_bridge', 'tut_blackout', 'puzzle_huge',
 		'conveyor','conveyor_2','block','power','power_puzzle',
 		'meet_dandy','outro'
 	]

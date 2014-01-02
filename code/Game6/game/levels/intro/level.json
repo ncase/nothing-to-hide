@@ -1,80 +1,68 @@
 {
-	"player":{ "x":0, "y":10 },
-	"goal":{"ax":48,"bx":49,"ay":9,"by":12},
+	"player":{ "x":1.8, "y":5.7 },
+	"goal":{"ax":51,"bx":52,"ay":2,"by":4},
 
 	"shadows": [
+		
+		{"ax":12,"bx":12,"ay":0,"by":9},
+		{"ax":28,"bx":28,"ay":0,"by":9},
+		{"ax":32,"bx":32,"ay":0,"by":9},
+		{"ax":32,"bx":32,"ay":9,"by":10},
 
-		{"ax":15,"bx":15,"ay":0,"by":9},
+		{"ax":0,"bx":8,"ay":7,"by":7},
+		{"ax":8,"bx":8,"ay":7,"by":11},
 
-		{"ax":0,"bx":26,"ay":11,"by":11},
-		{"ax":26,"bx":26,"ay":6,"by":11},
-		{"ax":26,"bx":37,"ay":6,"by":6},
-		{"ax":37,"bx":37,"ay":6,"by":8},
-		{"ax":40,"bx":40,"ay":6,"by":8},
-		{"ax":40,"bx":43,"ay":6,"by":6},
-
-		{"ax":43,"bx":43,"ay":0,"by":10},
-
-		{"ax":43,"bx":43,"ay":11,"by":13},
-		{"ax":43,"bx":50,"ay":11,"by":11},
-
-		{"ax":18,"bx":19,"ay":5,"by":5},
-		{"ax":18,"bx":18,"ay":5,"by":7},
-		{"ax":19,"bx":19,"ay":5,"by":7},
-
-		{"ax":22,"bx":23,"ay":5,"by":5},
-		{"ax":22,"bx":22,"ay":5,"by":7},
-		{"ax":23,"bx":23,"ay":5,"by":7},
-
-		{"ax":18,"bx":19,"ay":8,"by":8},
-		{"ax":18,"bx":18,"ay":8,"by":10},
-		{"ax":19,"bx":19,"ay":8,"by":10},
-
-		{"ax":22,"bx":23,"ay":8,"by":8},
-		{"ax":22,"bx":22,"ay":8,"by":10},
-		{"ax":23,"bx":23,"ay":8,"by":10}
+		{"ax":40,"bx":52,"ay":4,"by":4},
+		{"ax":40,"bx":40,"ay":4,"by":11},
+		
+		{"ax":32,"bx":37,"ay":9,"by":9},
+		{"ax":37,"bx":37,"ay":9,"by":10},
+		{"ax":39,"bx":39,"ay":9,"by":10},
+		{"ax":39,"bx":40,"ay":9,"by":9}
 
 	],
 
 	"prisms": [
-		{"x":15,"y":4},
-		{"x":20,"y":7},
-		{"x":25,"y":10},
+		{"x":0.5,"y":5.5},
+		{"x":11.5,"y":9.3},
+		{"x":31,"y":8},
 
-		{"x":42,"y":4.5},
-		{"x":34,"y":10}
+		{"x":39,"y":9.8},
+		{"x":43,"y":3}
 	],
 
 	"camera": [
 		{
 			"type": "fixed",
-			"zone": {"ax":0,"bx":8,"ay":0,"by":13},
-			"data": {"x":8,"y":6.5}
+			"zone": {"ax":0,"bx":10,"ay":0,"by":11},
+			"data": {"x":10,"y":5.5}
 		},
 		{
 			"type": "rails",
-			"zone": {"ax":8,"bx":34,"ay":0,"by":13},
-			"data": {"ax":8,"bx":34,"ay":6.5,"by":6.5}
+			"zone": {"ax":10,"bx":28,"ay":0,"by":11},
+			"data": {"ax":10,"bx":28,"ay":5.5,"by":5.5}
 		},
 		{
 			"type": "fixed",
-			"zone": {"ax":34,"bx":50,"ay":0,"by":13},
-			"data": {"x":42,"y":6.5}
+			"zone": {"ax":28,"bx":41,"ay":0,"by":11},
+			"data": {"x":36,"y":5.5}
+		},
+		{
+			"type": "rails",
+			"zone": {"ax":41,"bx":52,"ay":0,"by":11},
+			"data": {"ax":41,"bx":52,"ay":5.5,"by":5.5}
 		}
 	],
 
 	"propaganda": [
-		{"type":"image", "img":"lietest", "x":6, "y":4}
+		{"type":"image", "img":"propaganda_tut_walk", "x":0, "y":0},
+		{"type":"image", "img":"propaganda_smile", "x":12, "y":2},
+		{"type":"image", "img":"propaganda_tut_slow", "x":28, "y":0}
 	],
 
 	"art": {
 		"hideCam": true,
-		"ignoreCameras": true,
-		"background": false,
-		"cam": false,
-		"lights": [
-			{"ax":0,"ay":0,"bx":40,"by":12}
-		]
+		"ignoreCameras": true
 	}
 
 }
