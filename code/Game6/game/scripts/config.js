@@ -59,12 +59,12 @@ Asset.init({
 		
 		intro: 'levels/intro',
 		pickup: 'levels/pickup',
-		/*big_puzzle: 'levels/big_puzzle',
+		big_puzzle: 'levels/big_puzzle',
 
 		conveyor: 'levels/conveyor',
 		conveyor_2: 'levels/conveyor_2',
 
-		power: 'levels/power',
+		/*power: 'levels/power',
 		power_puzzle: 'levels/power_puzzle',
 		power_dead: 'levels/power_dead',
 
@@ -90,6 +90,7 @@ Asset.init({
 
 Game.init({
 	levels:[
+		'big_puzzle',
 		'pickup',
 		'intro'
 	]
