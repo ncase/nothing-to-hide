@@ -96,7 +96,7 @@
 				_mask2(ctxTemp);
 
 				// HACK: ALPHA
-				if(level.config.id=="intro") ctxTemp.globalAlpha = 1; //HACK_for_intro_alpha;
+				if(level.config.id=="intro") ctxTemp.globalAlpha = 1;
 				
 				// Draw to main
 				ctx.drawImage(Display.canvas.tmp,0,0);
@@ -105,7 +105,7 @@
 
 			if(level.config.id=="intro"){
 				var HACK_goto_alpha = (level.player.x>28*Map.TILE_SIZE) ? 1 : 0;
-				HACK_for_intro_alpha = HACK_for_intro_alpha*0.9 + HACK_goto_alpha*0.1;
+				HACK_for_intro_alpha = HACK_for_intro_alpha*0.8 + HACK_goto_alpha*0.2;
 			}
 
 			/////////////////////
@@ -135,7 +135,7 @@
 			}
 			temp.translate(-self.cx,-self.cy);
 			ctxTemp.drawImage(Display.canvas.tmp2, -self.cx, -self.cy);
-			if(level.config.id=="intro") temp.globalAlpha=1;
+			if(level.config.id=="intro") temp.globalAlpha = 1;
 
 			// Draw props
 			for(var i=0;i<props.length;i++){
