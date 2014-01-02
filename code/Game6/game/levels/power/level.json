@@ -1,86 +1,84 @@
 {
-	"player":{ "x":0, "y":9 },
-	"goal":{"ax":31,"bx":32,"ay":2,"by":5},
+	"player":{ "x":9, "y":20 },
+	"goal":{"ax":8,"bx":11,"ay":0,"by":1},
 
 	"shadows": [
 
-		{"ax":9,"bx":9,"ay":3,"by":9},
-		{"ax":11,"bx":11,"ay":0,"by":6},
+		{"ax":1,"bx":1,"ay":0,"by":21},
+		{"ax":18,"bx":18,"ay":0,"by":21},
 
-		{"ax":12,"bx":21,"ay":3,"by":3},
-		{"ax":12,"bx":12,"ay":3,"by":6},
-		{"ax":16,"bx":16,"ay":3,"by":9},
-		{"ax":17,"bx":17,"ay":3,"by":9},
-		{"ax":21,"bx":21,"ay":3,"by":6},
+		{"ax":8,"bx":8,"ay":0,"by":7},
+		{"ax":11,"bx":11,"ay":0,"by":7},
 
-		{"ax":22,"bx":22,"ay":5,"by":10},
-		{"ax":24,"bx":24,"ay":3,"by":5}
+		{"ax":4,"bx":4,"ay":8,"by":15},
+		{"ax":4,"bx":15,"ay":8,"by":8},
+		{"ax":15,"bx":15,"ay":8,"by":15},
+
+		{"ax":1,"bx":9,"ay":16,"by":16},
+		{"ax":9,"bx":9,"ay":16,"by":21},
+		{"ax":10,"bx":10,"ay":16,"by":21},
+		{"ax":10,"bx":18,"ay":16,"by":16}
 
 	],
 
 	"prisms": [
-		{ "x":11, "y":9 },
-		{ "x":21, "y":2, "id":"power" }
+		{ "x":9, "y":15 },
+		{ "x":16, "y":7 },
+		{ "x":2, "y":7, "id":"power" }
 	],
 
 	"dummies": [],
 	"doors": [],
 
 	"blocks": [
-		{"x":10,"y":6,"shadows":false},
-		{"x":11,"y":6,"shadows":false},
-		{"x":12,"y":6,"shadows":false},
-		{"x":9,"y":7,"shadows":false},
-		{"x":13,"y":7,"shadows":false}
+		{"x":15,"y":11},
+		{"x":16,"y":11},
+		{"x":17,"y":11},
+
+		{"x":8,"y":5},
+		{"x":9,"y":5},
+		{"x":10,"y":5},
+		{"x":8,"y":4},
+		{"x":10,"y":4},
+		{"x":8,"y":3},
+		{"x":10,"y":3}
+
 	],
 
 	"conveyors": [
-		{
-			"belt": {"ax":9,"bx":13,"ay":6,"by":7},
-			"direction": {"x":2,"y":0},
-			"activator": "power"
-		},
-		{
-			"belt": {"ax":13,"bx":14,"ay":6,"by":8},
-			"direction": {"x":0,"y":2},
-			"activator": "power"
-		},
-		{
-			"belt": {"ax":10,"bx":14,"ay":8,"by":9},
-			"direction": {"x":-2,"y":0},
-			"activator": "power"
-		},
-		{
-			"belt": {"ax":9,"bx":10,"ay":7,"by":9},
-			"direction": {"x":0,"y":-2},
-			"activator": "power"
-		}
+		{ "belt": {"ax":15,"bx":17,"ay":10,"by":11}, "direction": {"x":2,"y":0}, "activator": "power" },
+		{ "belt": {"ax":17,"bx":18,"ay":10,"by":12}, "direction": {"x":0,"y":2}, "activator": "power" },
+		{ "belt": {"ax":16,"bx":18,"ay":12,"by":13}, "direction": {"x":-2,"y":0}, "activator": "power" },
+		{ "belt": {"ax":15,"bx":16,"ay":11,"by":13}, "direction": {"x":0,"y":-2}, "activator": "power" },
+
+		{ "belt": {"ax":9,"bx":11,"ay":3,"by":4}, "direction": {"x":-2,"y":0}, "activator": "power" },
+		{ "belt": {"ax":8,"bx":9,"ay":3,"by":5}, "direction": {"x":0,"y":2}, "activator": "power" },
+		{ "belt": {"ax":8,"bx":10,"ay":5,"by":6}, "direction": {"x":2,"y":0}, "activator": "power" },
+		{ "belt": {"ax":10,"bx":11,"ay":4,"by":6}, "direction": {"x":0,"y":-2}, "activator": "power" }
 	],
 
 	"camera": [
 		{
 			"type": "rails",
-			"zone": {"ax":0,"bx":9,"ay":0,"by":10},
-			"data": {"ax":0,"bx":9,"ay":5,"by":5}
+			"zone": {"ax":0,"bx":19,"ay":16,"by":21},
+			"data": {"ax":9.5,"bx":9.5,"ay":0,"by":21}
 		},
 		{
 			"type": "fixed",
-			"zone": {"ax":9,"bx":24,"ay":0,"by":10},
-			"data": {"x":16.5,"y":5}
+			"zone": {"ax":0,"bx":19,"ay":9,"by":16},
+			"data": {"x":9.5,"y":11}
 		},
 		{
-			"type": "rails",
-			"zone": {"ax":24,"bx":32,"ay":0,"by":10},
-			"data": {"ax":24,"bx":32,"ay":5,"by":5}
+			"type": "fixed",
+			"zone": {"ax":0,"bx":19,"ay":0,"by":9},
+			"data": {"x":9.5,"y":5}
 		}
 	],
 
 	"art": {
 		"background": false,
 		"cam": false,
-		"lights": [
-			{"ax":0,"ay":0,"bx":15,"by":10}
-		]
+		"lights":[]
 	}
 
 }
