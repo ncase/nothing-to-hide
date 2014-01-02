@@ -34,6 +34,7 @@
 		var cctvPattern = Display.context.tmp.createPattern(cctvTexture, 'repeat');
 		Display.context.tmp.fillStyle = cctvPattern;
 
+		var HACK_for_intro_alpha = 0;
 		this.draw = function(){
 
 			var ctx = Display.context.game;
@@ -71,8 +72,12 @@
 			// DRAW CCTV LAYER //
 			/////////////////////
 
-			if(!level.config.level.art.hideCam){
+			// HACK: HARDCODE FOR FIRST LEVEL
+			if(level.config.id!="intro" || HACK_for_intro_alpha>0.01){
 				
+				// HACK: ALPHA
+				if(level.config.id=="intro") ctxTemp.globalAlpha = HACK_for_intro_alpha;
+
 				// Clear				
 				ctxTemp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
 
@@ -89,10 +94,18 @@
 
 				// Mask with prism eyes
 				_mask2(ctxTemp);
+
+				// HACK: ALPHA
+				if(level.config.id=="intro") ctxTemp.globalAlpha = 1; //HACK_for_intro_alpha;
 				
 				// Draw to main
 				ctx.drawImage(Display.canvas.tmp,0,0);
 
+			}
+
+			if(level.config.id=="intro"){
+				var HACK_goto_alpha = (level.player.x>28*Map.TILE_SIZE) ? 1 : 0;
+				HACK_for_intro_alpha = HACK_for_intro_alpha*0.9 + HACK_goto_alpha*0.1;
 			}
 
 			/////////////////////
@@ -108,6 +121,7 @@
 
 			// Don't draw CCTV on walls
 			var temp = Display.context.tmp2;
+			if(level.config.id=="intro") temp.globalAlpha = HACK_for_intro_alpha;
 			temp.translate(self.cx,self.cy);
 			temp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
 			_drawCCTV(temp);
@@ -121,6 +135,7 @@
 			}
 			temp.translate(-self.cx,-self.cy);
 			ctxTemp.drawImage(Display.canvas.tmp2, -self.cx, -self.cy);
+			if(level.config.id=="intro") temp.globalAlpha=1;
 
 			// Draw props
 			for(var i=0;i<props.length;i++){
@@ -196,9 +211,9 @@
 
 		var cctvY = 0;
 		var _drawCCTV = function(ctx){
-			// Draw CCTV over
-			if(!level.config.level.art.ignoreCameras){
+			if(level.config.id!="intro" || HACK_for_intro_alpha>0.01){
 
+				// Draw CCTV over
 				var prisms = level.prisms.prisms;
 				for(var j=0;j<prisms.length;j++){
 					var prism = prisms[j];
@@ -218,6 +233,7 @@
 					ctx.translate(0,-cctvY);
 
 				}
+
 			}
 		};
 

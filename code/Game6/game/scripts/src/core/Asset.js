@@ -129,6 +129,7 @@
 					if(artPromises<=0){
 						console.log("Loaded level "+id);
 						Asset.level[id] = config;
+						config.id = id;
 						finalDeferred.resolve(config);
 					}
 				};

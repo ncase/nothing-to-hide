@@ -51,7 +51,6 @@
 	],
 
 	"art": {
-		"hideCam": false,
 		"background": false,
 		"cam": false,
 		"lights": [

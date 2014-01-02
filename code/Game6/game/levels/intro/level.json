@@ -61,8 +61,7 @@
 	],
 
 	"art": {
-		"hideCam": true,
-		"ignoreCameras": true
+		"ignoreCameras": false
 	}
 
 }

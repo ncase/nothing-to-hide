@@ -82,9 +82,6 @@
 
 		var _isInShadows = function(x,y){
 
-			// IGNORE CAMERAS
-		    if(level.config.level.art.ignoreCameras) return false;
-
 			// Are you in ANY of the sight polygons
 			var prisms = level.prisms.prisms;
 			for(var i=0;i<prisms.length;i++){

@@ -18,9 +18,6 @@
 			var player = level.player;
 		    player.sightPolygon = _createPoly(player.x,player.y);
 
-		    // IGNORE CAMERAS
-		    if(level.config.level.art.ignoreCameras) return;
-
 		    // All Camera Sight shadows
 			var prisms = level.prisms.prisms;
 			for(var i=0;i<prisms.length;i++){
