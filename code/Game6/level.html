@@ -76,75 +76,20 @@ body{
 </div>
 
 <script>
+
 var levels = [
-
-	// Intro //
-	{
-		label:"Intro - running away",
-		id:"intro"
-	},
-
-	// iEyes //
-	{
-		label:"iEyes - always be in sight",
-		id:'tut_look_1',
-	},
-	{
-		label:"iEyes - picking them up",
-		id:"tut_pickup"
-	},
-	{
-		label:"iEyes - what eyes can see // carpet?",
-		id:"puzzle_bridge"
-	},
-	{
-		label:"iEyes - what eyes can see 2",
-		id:"tut_blackout"
-	},
-	{
-		label:"iEyes - a big puzzle",
-		id:"puzzle_huge"
-	},
-
-	// Conveyors //
-	{
-		label:"Conveyors - simple mechanism",
-		id:"conveyor"
-	},
-	{
-		label:"Conveyors - some puzzle",
-		id:"conveyor_2"
-	},
-	{
-		label:"Conveyors - with shadow block",
-		id:"block"
-	},
-	{
-		label:"Conveyors - Powered by PRISM",
-		id:"power"
-	},
-	{
-		label:"Conveyors - Powered by PRISM 2",
-		id:"power_puzzle"
-	},
-
-	// Dummy Ending //
-	{
-		label:"Save Dandy",
-		id:"meet_dandy"
-	}/*,
-	{
-		label:"Welcome to the Revolution, kid.",
-		id:"outro"
-	}*/
-
+	'intro','pickup','big_puzzle',
+	'conveyor','conveyor_2',
+	'power','power_puzzle','nobody_needs_you'
 ];
+
+///
 
 var list = document.getElementById("level_select_list");
 var html = "";
 for(var i=0;i<levels.length;i++){
 	var level = levels[i];
-	html += "<li onclick='gotoLevel(\""+level.id+"\")'>"+level.label+"</li>";
+	html += "<li onclick='gotoLevel(\""+level+"\")'>"+level+"</li>";
 }
 list.innerHTML = html;
 

@@ -63,38 +63,21 @@ Asset.init({
 
 		conveyor: 'levels/conveyor',
 		conveyor_2: 'levels/conveyor_2',
+		// change direction. or block?
 
 		power: 'levels/power',
-
-		/*power: 'levels/power',
+		// intermission - tiny puzzle.
 		power_puzzle: 'levels/power_puzzle',
-		power_dead: 'levels/power_dead',
-
-		meet_dandy: 'levels/meet_dandy',*/
-
-		//tut_look_1: 'levels/tut_look_1',
-		/*tut_pickup: 'levels/tut_pickup',
-		puzzle_bridge: 'levels/puzzle_bridge',
-		tut_blackout: 'levels/tut_blackout',
-		puzzle_huge: 'levels/puzzle_huge',
-
-		conveyor: 'levels/conveyor',
-		conveyor_2: 'levels/conveyor_2',
-		block: 'levels/block',
-		power: 'levels/power',
-		power_puzzle: 'levels/power_puzzle',
-
-		meet_dandy: 'levels/meet_dandy',
-		outro: 'levels/outro'*/
+		// intermission - dead person, with possibility for power
+		nobody_needs_you: 'levels/nobody_needs_you'
 
 	}
 });
 
 Game.init({
 	levels:[
-		'power',
-		'intro',
-		'pickup',
-		'big_puzzle'
+		'intro','pickup','big_puzzle',
+		'conveyor','conveyor_2',
+		'power','power_puzzle','nobody_needs_you'
 	]
 });
