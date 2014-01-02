@@ -58,9 +58,20 @@ Asset.init({
 	levels:{
 		
 		intro: 'levels/intro',
+		pickup: 'levels/pickup',
+		/*big_puzzle: 'levels/big_puzzle',
+
+		conveyor: 'levels/conveyor',
+		conveyor_2: 'levels/conveyor_2',
+
+		power: 'levels/power',
+		power_puzzle: 'levels/power_puzzle',
+		power_dead: 'levels/power_dead',
+
+		meet_dandy: 'levels/meet_dandy',*/
 
 		//tut_look_1: 'levels/tut_look_1',
-		tut_pickup: 'levels/tut_pickup',
+		/*tut_pickup: 'levels/tut_pickup',
 		puzzle_bridge: 'levels/puzzle_bridge',
 		tut_blackout: 'levels/tut_blackout',
 		puzzle_huge: 'levels/puzzle_huge',
@@ -72,16 +83,14 @@ Asset.init({
 		power_puzzle: 'levels/power_puzzle',
 
 		meet_dandy: 'levels/meet_dandy',
-		outro: 'levels/outro'
+		outro: 'levels/outro'*/
 
 	}
 });
 
 Game.init({
 	levels:[
-		'intro',
-		'tut_pickup', 'puzzle_bridge', 'tut_blackout', 'puzzle_huge',
-		'conveyor','conveyor_2','block','power','power_puzzle',
-		'meet_dandy','outro'
+		'pickup',
+		'intro'
 	]
 });
