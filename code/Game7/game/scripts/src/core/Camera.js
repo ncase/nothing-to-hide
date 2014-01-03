@@ -137,6 +137,12 @@
 			ctxTemp.drawImage(Display.canvas.tmp2, -self.cx, -self.cy);
 			if(level.config.id=="intro") temp.globalAlpha = 1;
 
+			// HACK: Suspicion - draw over all.
+			if(level.suspicion.isHiding){
+				ctxTemp.fillStyle = "rgba(255,0,0,0.5)";
+				ctxTemp.fillRect(-self.cx,-self.cy,Display.width,Display.height);
+			}
+
 			// Draw props
 			for(var i=0;i<props.length;i++){
 				var prop = props[i];

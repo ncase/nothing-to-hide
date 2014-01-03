@@ -18,6 +18,7 @@
 
 		var hide = 0;
 		var grace = 0;
+		self.isHiding = false;
 		this.update = function(){
 
 			// Are all your four points hiding?
@@ -45,6 +46,7 @@
 
 			// Amount of your hiding
 			hide = hidingSpots/9;
+			self.isHiding = (hide>0);
 
 			// Alarm sound
 			if(alarmActive && hide==0){
