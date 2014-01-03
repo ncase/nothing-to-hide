@@ -1,0 +1,46 @@
+{
+	"player":{ "x":1, "y":3 },
+	"goal":{"ax":10,"bx":11,"ay":3,"by":4},
+
+	"shadows": [
+		{"ax":2,"bx":2,"ay":6,"by":7},
+		{"ax":2,"bx":5,"ay":6,"by":6},
+		{"ax":6,"bx":11,"ay":6,"by":6}
+	],
+
+	"prisms": [
+		{ "x":1,"y":6 },
+		{ "x":1,"y":7 }
+	],
+
+	"dummies": [],
+
+	"doors": [],
+
+	"conveyors": [
+		{
+			"belt": {"ax":2,"bx":9,"ay":8,"by":9},
+			"direction": {"x":-0.7,"y":0},
+			"activator": ""
+		}
+	],
+
+	"camera": [
+		{
+			"type": "fixed",
+			"zone": {"ax":0,"bx":11,"ay":0,"by":10},
+			"data": {"x":5.5,"y":5}
+		}
+	],
+
+	"propaganda": [
+		{"type":"image", "img":"propaganda_tut_slidewalk", "x":0, "y":0}
+	],
+
+	"art": {
+		"background": false,
+		"cam": false,
+		"lights": []
+	}
+
+}

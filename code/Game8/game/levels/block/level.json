@@ -1,0 +1,61 @@
+{
+	"player":{ "x":1, "y":0 },
+	"goal":{"ax":1,"bx":2,"ay":11.5,"by":12},
+
+	"shadows": [
+		{"ax":2,"bx":2,"ay":0,"by":3},
+		{"ax":2,"bx":2,"ay":10,"by":13}
+	],
+
+	"prisms": [
+		{ "x":1,"y":9 },
+		{ "x":6,"y":5 }
+	],
+
+	"dummies": [],
+	"doors": [],
+
+	"blocks": [
+		{"x":2,"y":8,"shadows":true}
+	],
+
+	"conveyors": [
+		{
+			"belt": {"ax":2,"bx":5,"ay":7,"by":8},
+			"direction": {"x":1,"y":0},
+			"activator": ""
+		},
+		{
+			"belt": {"ax":5,"bx":6,"ay":7,"by":8},
+			"direction": {"x":0,"y":1},
+			"activator": ""
+		},
+		{
+			"belt": {"ax":3,"bx":6,"ay":8,"by":9},
+			"direction": {"x":-1,"y":0},
+			"activator": ""
+		},
+		{
+			"belt": {"ax":2,"bx":3,"ay":8,"by":9},
+			"direction": {"x":0,"y":-1},
+			"activator": ""
+		}
+	],
+
+	"camera": [
+		{
+			"type": "fixed",
+			"zone": {"ax":0,"bx":15,"ay":0,"by":9},
+			"data": {"x":4,"y":6}
+		}
+	],
+
+	"art": {
+		"background": false,
+		"cam": false,
+		"lights": [
+			{"ax":0,"ay":0,"bx":15,"by":10}
+		]
+	}
+
+}

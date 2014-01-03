@@ -55,7 +55,7 @@
 				alarmActive = false;
 			}
 			if(!alarmActive && hide>0){
-				alarm = createjs.Sound.play("sfx_alarm",null,0,0,-1,0.5,0);
+				alarm = createjs.Sound.play("sfx_alarm",null,0,0,-1,1,0);
 				alarmActive = true;
 			}
 			if(alarmActive){
@@ -69,7 +69,7 @@
 				grace-=1;
 
 				// End level if you're out of grace
-				createjs.Sound.play("sfx_shotdown",null,0,0,0,0.5,0);
+				createjs.Sound.play("sfx_shotdown",null,0,0,0,1,0);
 				setTimeout(Game.clearLevel,0);
 
 				// Reset with level's savestate
