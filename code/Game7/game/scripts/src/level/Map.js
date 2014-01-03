@@ -273,7 +273,8 @@
 					case Map.PROP: ctx.fillStyle="#7F6A5F"; break;
 					
 					// Placeholder
-					case Map.METAL: ctx.fillStyle="#9900FF"; break;
+					//case Map.METAL: ctx.fillStyle="#9900FF"; break;
+					case Map.METAL: ctx.fillStyle="#D7E7E6"; break;
 
 				}
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
@@ -294,7 +295,8 @@
 					case Map.PROP: ctx.fillStyle="#666666"; break;
 
 					// Placeholder
-					case Map.METAL: ctx.fillStyle="#9900FF"; break;
+					//case Map.METAL: ctx.fillStyle="#9900FF"; break;
+					case Map.METAL: ctx.fillStyle="#D7E7E6"; break;
 
 				}
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);

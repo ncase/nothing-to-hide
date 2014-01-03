@@ -54,6 +54,10 @@
 		}
 	],
 
+	"checkpoints": [
+		{"ax":32,"bx":35,"ay":10,"by":11}
+	],
+
 	"propaganda": [
 		{"type":"image", "img":"propaganda_tut_walk", "x":0, "y":0},
 		{"type":"image", "img":"propaganda_smile", "x":12, "y":2},
