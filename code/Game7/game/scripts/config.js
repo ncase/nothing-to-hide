@@ -17,6 +17,11 @@ Asset.init({
 
 		propaganda_tut_walk:'assets/propaganda/tut_walk.png',
 		propaganda_tut_slow:'assets/propaganda/tut_slow.png',
+		propaganda_tut_pickup:'assets/propaganda/tut_pickup.png',
+		propaganda_tut_carpet:'assets/propaganda/tut_carpet.png',
+		propaganda_tut_reminder:'assets/propaganda/tut_reminder.png',
+		propaganda_tut_power:'assets/propaganda/tut_power.png',
+		propaganda_tut_slidewalk:'assets/propaganda/tut_slidewalk.png',
 		propaganda_smile:'assets/propaganda/smile.png',
 
 	},
@@ -78,6 +83,6 @@ Game.init({
 	levels:[
 		'intro','pickup','big_puzzle',
 		'conveyor','conveyor_2',
-		'power','power_puzzle','nobody_needs_you'
+		'power','power_puzzle'//,'nobody_needs_you'
 	]
 });

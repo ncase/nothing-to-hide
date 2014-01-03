@@ -21,23 +21,23 @@ body{
     position: absolute;
     right:0;
 
-    /*width: -webkit-calc(100% - 300px);
-    width: -moz-calc(100% - 300px);
-    width: -ms-calc(100% - 300px);
-    width: -o-calc(100% - 300px);
-    width: calc(100% - 300px);*/
+    width: -webkit-calc(100% - 200px);
+    width: -moz-calc(100% - 200px);
+    width: -ms-calc(100% - 200px);
+    width: -o-calc(100% - 200px);
+    width: calc(100% - 200px);
 
 }
 
 #level_select{
 	background: #fff;
-	width:300px;
+	width:200px;
 	height:100%;
 	position: absolute;
 	top:0;
 
-	left:-270px;*/
-	/*left:0*/
+	/*left:-270px;*/
+	left:0;
 
 	-webkit-transition: left 0.5s ease-in-out;
     -moz-transition: left 0.5s ease-in-out;
@@ -70,9 +70,9 @@ body{
 		<ol id="level_select_list"></ol>
 		<button onclick="quit()">Quit to Main Menu</button>
 	</div>
-	<div style="position:absolute; right:0; top:10px; width:20px;">
+	<!--div style="position:absolute; right:0; top:10px; width:20px;">
 		L E V E L &nbsp;&nbsp; S E L E C T &nbsp;&nbsp; > > > > >
-	</div>
+	</div-->
 </div>
 
 <script>
@@ -80,7 +80,7 @@ body{
 var levels = [
 	'intro','pickup','big_puzzle',
 	'conveyor','conveyor_2',
-	'power','power_puzzle','nobody_needs_you'
+	'power','power_puzzle'//,'nobody_needs_you'
 ];
 
 ///

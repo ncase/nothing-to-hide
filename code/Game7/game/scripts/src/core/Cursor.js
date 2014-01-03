@@ -44,7 +44,7 @@
 
 		if(!Cursor.active) return;
 
-		return;
+		//return;
 		var ctx = Display.context.ui;
 
 		// Mouse Position

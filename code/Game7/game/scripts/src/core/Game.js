@@ -77,7 +77,11 @@
 		// Get next level config
 		Game.levelIndex = index;
 		var nextLevelName = Game.config.levels[Game.levelIndex];
-		if(!nextLevelName) return false;
+		if(!nextLevelName){
+			//return false;
+			alert("Hurray! That's it for now. Please leave me some critique, and thanks for playing my Feedback Friday demo. Happy (two days after the) New Year!");
+			return false;
+		}
 
 		// Go to next level
 		Game.gotoLevelById(nextLevelName);

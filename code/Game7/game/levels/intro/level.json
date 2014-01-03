@@ -57,7 +57,8 @@
 	"propaganda": [
 		{"type":"image", "img":"propaganda_tut_walk", "x":0, "y":0},
 		{"type":"image", "img":"propaganda_smile", "x":12, "y":2},
-		{"type":"image", "img":"propaganda_tut_slow", "x":28, "y":0}
+		{"type":"image", "img":"propaganda_tut_slow", "x":28, "y":0},
+		{"type":"image", "img":"propaganda_tut_reminder", "x":32, "y":9}
 	],
 
 	"art": {

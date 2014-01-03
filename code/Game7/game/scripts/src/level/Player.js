@@ -76,8 +76,8 @@
 			    
 			    if(mag>MAX_SPEED*2){
 			    	isMoving = true;
-				    vx = (dx/mag) * MAX_SPEED;
-				    vy = (dy/mag) * MAX_SPEED;
+				    vx = (dx/mag) * MAX_SPEED*0.75;
+				    vy = (dy/mag) * MAX_SPEED*0.75;
 				}else{
 					gotoSpot = true;
 				}

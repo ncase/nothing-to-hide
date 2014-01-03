@@ -20,14 +20,7 @@ body, canvas, div {
 	user-select: none; 
 }
 #container {
-	/*position: absolute;
-	background: #000;
-	width:960px; height:600px;
-
-	top:0; left:0; right:0; bottom:0;
-	margin:auto;*/
-
-	/*cursor: none;*/
+	cursor: none;
 
 	position: absolute;
 	background: #000;

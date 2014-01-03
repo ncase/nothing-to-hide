@@ -198,7 +198,7 @@
 				y: startY,
 				width: width,
 				height: height,
-				pos: 1,
+				pos: 0,
 				vel: 0,
 			};
 
