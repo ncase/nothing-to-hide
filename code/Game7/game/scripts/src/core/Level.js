@@ -1,6 +1,6 @@
 (function(exports){
 
-	var Level = function(config){
+	var Level = function(config,saveState){
 
 		var self = this;
 		var lvl = JSON.parse(JSON.stringify(config.level)); // Prevent affecting main data
@@ -57,10 +57,19 @@
 			goal: lvl.goal
 		});
 
-		this.player = new Player(this,{
-			x: (lvl.player.x+0.5)*Map.TILE_SIZE,
-			y: (lvl.player.y+0.5)*Map.TILE_SIZE
-		});
+		// Savestate?...
+
+		if(saveState){
+			this.player = new Player(this,{
+				x: saveState.player.x,
+				y: saveState.player.y,
+			});
+		}else{
+			this.player = new Player(this,{
+				x: (lvl.player.x+0.5)*Map.TILE_SIZE,
+				y: (lvl.player.y+0.5)*Map.TILE_SIZE
+			});
+		}
 
 		this.suspicion = new Suspicion(this);
 
@@ -79,8 +88,12 @@
 		///// GAME LOGIC /////
 		//////////////////////
 
+		// Checkpoints
+		self.saveState = saveState;
+		self.checkpoints = lvl.checkpoints || [];
+
 		// Game Loop
-		var goal = lvl.goal;
+		self.goal = lvl.goal;
 		this.update = function(){
 
 			// UI everything
@@ -98,16 +111,56 @@
 			this.blocks.update();
 			this.suspicion.update();
 
+			// Are you in a checkpoint
+			for(var i=0;i<self.checkpoints.length;i++){
+				var cp = self.checkpoints[i];
+				if(!cp.saved && _isInArea(cp)){
+					cp.saved = true;
+
+					// Create save state
+					self.saveState = _createSaveState();
+
+				}
+			}
+
 			// Are you in the goal?
-			var x = this.player.x/Map.TILE_SIZE;
-			var y = this.player.y/Map.TILE_SIZE;
-			if(x>=goal.ax && x<=goal.bx && y>=goal.ay && y<=goal.by){
+			if(_isInArea(self.goal)){
 				Game.screenswipe();
 				Game.clearLevel();
 				Game.nextLevel();
 			}
 
 		};
+		function _isInArea(area,x,y){
+			x = self.player.x/Map.TILE_SIZE;
+			y = self.player.y/Map.TILE_SIZE;
+			return (x>=area.ax && x<=area.bx && y>=area.ay && y<=area.by);
+		}
+		function _createSaveState(){
+			var state = {};
+
+			// Player
+			state.player = {
+				x: self.player.x,
+				y: self.player.y
+			};
+
+			// iEyes
+			var prisms = [];
+			for(var i=0;i<self.prisms.prisms.length;i++){
+				var p = self.prisms.prisms[i];
+				prisms.push({
+					x: p.x,
+					y: p.y
+				});
+			}
+			state.prisms = prisms;
+
+			// Todo: Blocks
+
+			return state;
+
+		}
 
 		// Draw Loop: Camera draws everything
 		this.draw = function(){

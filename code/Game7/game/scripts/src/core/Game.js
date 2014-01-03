@@ -88,6 +88,7 @@
 		return true;
 
 	};
+	var HACK_saveState = null;
 	Game.gotoLevelById = function(nextLevelName){
 		
 		// Find level
@@ -104,17 +105,20 @@
 		Display.resize(w,h);
 
 		// Go to level
-		Game.level = new Level(levelConfig);
+		Game.level = new Level(levelConfig,HACK_saveState);
+		HACK_saveState = null;
 
 		// Index
 		Game.levelIndex = Game.config.levels.indexOf(nextLevelName);
 
 	};
 	Game.nextLevel = function(){
+		HACK_saveState = null;
 		Game.levelIndex++;
 		Game.gotoLevel(Game.levelIndex);
 	};
-	Game.resetLevel = function(){
+	Game.resetLevel = function(saveState){
+		HACK_saveState = saveState;
 		Game.gotoLevel(Game.levelIndex);
 	};
 
