@@ -22,10 +22,15 @@
 		}
 
 		// Prisms to scale of Tile Size
-		for(var i=0;i<lvl.prisms.length;i++){
-			var prism = lvl.prisms[i];
-			prism.x = (prism.x+0.5)*Map.TILE_SIZE;
-			prism.y = (prism.y+0.75)*Map.TILE_SIZE; // A little downwards
+		// Savestate?...
+		if(saveState){
+			lvl.prisms = saveState.prisms;
+		}else{
+			for(var i=0;i<lvl.prisms.length;i++){
+				var prism = lvl.prisms[i];
+				prism.x = (prism.x+0.5)*Map.TILE_SIZE;
+				prism.y = (prism.y+0.75)*Map.TILE_SIZE; // A little downwards
+			}
 		}
 
 		// Dummies to scale of Tile Size
@@ -58,7 +63,6 @@
 		});
 
 		// Savestate?...
-
 		if(saveState){
 			this.player = new Player(this,{
 				x: saveState.player.x,
@@ -146,15 +150,23 @@
 			};
 
 			// iEyes
-			var prisms = [];
+			state.prisms = [];
 			for(var i=0;i<self.prisms.prisms.length;i++){
 				var p = self.prisms.prisms[i];
-				prisms.push({
+				state.prisms.push({
 					x: p.x,
 					y: p.y
 				});
 			}
-			state.prisms = prisms;
+
+			// If you're holding any, yeah, drop it.
+			var heldPrism = self.prisms.getHeldPrism();
+			if(heldPrism){
+				state.prisms.push({
+					x: self.player.x,
+					y: self.player.y
+				});
+			}
 
 			// Todo: Blocks
 

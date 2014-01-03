@@ -67,6 +67,10 @@
 		}
 	],
 
+	"checkpoints": [
+		{"ax":0,"bx":1,"ay":16,"by":17}
+	],
+
 	"propaganda": [
 		{"type":"image", "img":"propaganda_tut_pickup", "x":0, "y":0},
 		{"type":"image", "img":"propaganda_tut_carpet", "x":0, "y":6}
