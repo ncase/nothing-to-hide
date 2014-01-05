@@ -64,7 +64,7 @@
 			"queue": [
 				{"wait":800},
 				{
-					"message": "I have to go away.",
+					"message": "I should go far away.",
 					"duration": 2000
 				},
 				{
