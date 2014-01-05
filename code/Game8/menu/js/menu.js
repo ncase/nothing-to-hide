@@ -1,3 +1,7 @@
+function startGame(){
+	window.top.gotoPage("cutscene/cutscene");
+}
+
 var Menu = {};
 
 var RAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
