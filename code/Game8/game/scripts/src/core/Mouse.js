@@ -16,12 +16,13 @@
 	var onMouseUp = function(event){
 	    Mouse.pressed = false;
 	};
+	var container;
 	var onMouseMove = function(event){
 		
 		Mouse.realX = event.clientX;
 		Mouse.realY = event.clientY;
 
-		var container = document.querySelector("canvas#game");
+		container = container || document.querySelector("canvas#game");
 		if(!container){
 			Mouse.x = Mouse.realX;
 			Mouse.y = Mouse.realY;

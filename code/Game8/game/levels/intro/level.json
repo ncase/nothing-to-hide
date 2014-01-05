@@ -1,5 +1,5 @@
 {
-	"player":{ "x":1.8, "y":5.7 },
+	"player":{ "x":2.2, "y":5.7 },
 	"goal":{"ax":51,"bx":52,"ay":2,"by":4},
 
 	"shadows": [
@@ -57,6 +57,30 @@
 
 	"checkpoints": [
 		{"ax":32,"bx":35,"ay":10,"by":11}
+	],
+
+	"dialogues": [
+		{
+			"queue": [
+				{"wait":800},
+				{
+					"message": "I have to go away.",
+					"duration": 2000
+				},
+				{
+					"message": "Nobody needs me. :(",
+					"duration": 2000
+				}
+			],
+			"area": {"ax":0,"bx":4,"ay":5,"by":7}
+		},
+		{
+			"queue": [{
+				"message": "What... happened here?...",
+				"duration": 2000
+			}],
+			"area": {"ax":37,"bx":39,"ay":10,"by":11}
+		}
 	],
 
 	"propaganda": [

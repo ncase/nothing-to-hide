@@ -95,12 +95,14 @@
 		// Checkpoints
 		self.saveState = saveState;
 		self.checkpoints = lvl.checkpoints || [];
+		self.dialogues = lvl.dialogues || [];
 
 		// Game Loop
 		self.goal = lvl.goal;
 		this.update = function(){
 
 			// UI everything
+			Dialogue.update();
 			Cursor.update();
 			Key.update();
 
@@ -124,6 +126,15 @@
 					// Create save state
 					self.saveState = _createSaveState();
 
+				}
+			}
+
+			// Are you in a Dialogue spot?
+			for(var i=0;i<self.dialogues.length;i++){
+				var dialogue = self.dialogues[i];
+				if(!dialogue.said && _isInArea(dialogue.area)){
+					dialogue.said = true;
+					Dialogue.queue(dialogue.queue);
 				}
 			}
 

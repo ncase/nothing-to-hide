@@ -146,10 +146,14 @@
 		// Propaganda Blackouts
 		var blackouts = [];
 		function _blackoutIsSeen(bo,poly){
-			/*if(VisibilityPolygon.inPolygon([bo.x,bo.y],poly)) return true;
-			if(VisibilityPolygon.inPolygon([bo.x+bo.width,bo.y],poly)) return true;
-			if(VisibilityPolygon.inPolygon([bo.x,bo.y+bo.height],poly)) return true;
-			if(VisibilityPolygon.inPolygon([bo.x+bo.width,bo.y+bo.height],poly)) return true;*/
+			
+			if(level.config.id=="intro" && !level.HACK_now_you_can_see){
+				setTimeout(function(){
+					level.HACK_now_you_can_see = true;
+				},5500);
+				return;
+			}
+
 			if(VisibilityPolygon.inPolygon([bo.x+bo.width/2,bo.y+bo.height/2],poly)) return true;
 			return false;
 		}
