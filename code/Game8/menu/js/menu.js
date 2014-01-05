@@ -59,7 +59,7 @@ var context = {
 	tmp: canvas.tmp.getContext("2d")
 };
 var WIDTH = 1000;
-var HEIGHT = 500;
+var HEIGHT = 550;
 canvas.menu.width = canvas.tmp.width = WIDTH;
 canvas.menu.height = canvas.tmp.height = HEIGHT;
 

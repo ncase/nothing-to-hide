@@ -27,8 +27,8 @@
 			Mouse.y = Mouse.realY;
 			return;
 		}
-		Mouse.x = event.clientX - container.offsetLeft;
-		Mouse.y = event.clientY - container.offsetTop;
+		Mouse.x = event.clientX - container.offsetLeft - container.parentNode.offsetLeft;
+		Mouse.y = event.clientY - container.offsetTop - container.parentNode.offsetTop;
 
 		// BOUNDS
 		if(Mouse.x<0) Mouse.x=0;

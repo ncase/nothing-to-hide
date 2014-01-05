@@ -11,7 +11,6 @@
 			return pattern;
 		}
 		_createTextureFromImage("carpet");
-		_createTextureFromImage("carpet_cctv");
 		_createTextureFromImage("screenline");
 		///////
 	
