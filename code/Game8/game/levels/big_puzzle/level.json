@@ -65,6 +65,35 @@
 		}
 	],
 
+	"checkpoints": [
+		{"ax":12,"bx":17,"ay":10,"by":14}
+	],
+
+	"dialogues": [
+		{
+			"area": {"ax":1,"bx":6,"ay":7,"by":9},
+			"queue": [
+				{
+					"message": "This is the longest I've been alone. Ten whole minutes!",
+					"duration": 4000
+				},
+				{
+					"message": "Alone with my thoughts. My own... personal thoughts.",
+					"duration": 4000
+				}
+			]
+		},
+		{
+			"area": {"ax":12,"bx":17,"ay":20,"by":21},
+			"queue": [
+				{
+					"message": "I'm scared. Who will help discipline me if I have illegal thoughts?",
+					"duration": 5000
+				}
+			]
+		}
+	],
+
 	"art": {
 		"background": false,
 		"cam": false,

@@ -15,6 +15,8 @@
 		var startTime = 0;
 		for(var i=0;i<cues.length;i++){
 			var cue = cues[i];
+
+			Dialogue.dom.style.display = "block";
 			
 			(function(cue){
 				
@@ -28,7 +30,6 @@
 						Dialogue.text.innerHTML = cue.message;
 						Dialogue.box.setAttribute("minimized","false");
 					},startTime);
-					console.log("say "+cue.message+" in "+startTime);
 
 					// Transition & Message
 					startTime += 100 + cue.duration;
@@ -37,7 +38,6 @@
 					setTimeout(function(){
 						Dialogue.box.setAttribute("minimized","true");
 					},startTime);
-					console.log("close message in "+startTime);
 
 					// End transition & padding
 					startTime += 200;
@@ -48,25 +48,25 @@
 
 		}
 
+		setTimeout(function(){
+			Dialogue.dom.style.display = "none";
+		},startTime);
+
 	};
 
 	// Update:
 	var container;
 	Dialogue.update = function(){
 		if(!Game.level) return;
-
-		// Follow player EXACTLY.
-
-		container = container || document.querySelector("canvas#game");
-		if(!container) return;
-		var dx = container.offsetLeft + Game.level.camera.cx + Game.level.player.x;
-		var dy = container.offsetTop + Game.level.camera.cy + Game.level.player.y - 150;
-		Dialogue.dom.style.left = dx+"px";
-		Dialogue.dom.style.top = dy+"px";
-
-		// Check if in area. If so, mark as visited, and run its queue
-
-
+		if(Dialogue.dom.style.display=="block"){
+			container = container || document.querySelector("canvas#game");
+			if(!container) return;
+			var dx = container.offsetLeft + Game.level.camera.cx + Game.level.player.x;
+			var dy = container.offsetTop + Game.level.camera.cy + Game.level.player.y - 150;
+			if(dy<150) dy=150+(dy-150)*0.2;
+			Dialogue.dom.style.left = dx+"px";
+			Dialogue.dom.style.top = dy+"px";
+		}
 	};
 
 })(window);

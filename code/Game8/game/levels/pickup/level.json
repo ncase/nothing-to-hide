@@ -25,8 +25,8 @@
 		{"ax":10,"bx":10,"ay":20,"by":21},
 
 		{"ax":0,"bx":9,"ay":25,"by":25},
-		{"ax":9,"bx":9,"ay":25,"by":29},
-		{"ax":10,"bx":10,"ay":25,"by":29},
+		{"ax":9,"bx":9,"ay":25,"by":37},
+		{"ax":10,"bx":10,"ay":25,"by":37},
 		{"ax":10,"bx":13,"ay":25,"by":25}
 
 	],
@@ -53,7 +53,7 @@
 		{
 			"type": "fixed",
 			"zone": {"ax":0,"bx":13,"ay":17,"by":25},
-			"data": {"x":6.5,"y":20}
+			"data": {"x":6.5,"y":19}
 		},
 		{
 			"type": "rails",
@@ -69,6 +69,30 @@
 
 	"checkpoints": [
 		{"ax":0,"bx":1,"ay":16,"by":17}
+	],
+
+	"dialogues": [
+		{
+			"area": {"ax":7,"bx":14,"ay":17,"by":19},
+			"queue": [
+				{
+					"message": "Oh… there's Daddy's campaign post. Look at my smile.",
+					"duration": 4000
+				},
+				{
+					"message": ":)",
+					"duration": 2000
+				},
+				{
+					"message": "He disciplined me when it didn't look genuine enough.",
+					"duration": 4000
+				},
+				{
+					"message": ":)",
+					"duration": 2000
+				}
+			]
+		}
 	],
 
 	"propaganda": [

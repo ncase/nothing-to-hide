@@ -87,6 +87,11 @@
 
 		var _isInShadows = function(x,y){
 
+			// Is this in a wall?
+			if(level.map.hitTest(x,y)){
+				return true;
+			}
+
 			// Are you in ANY of the sight polygons
 			var prisms = level.prisms.prisms;
 			for(var i=0;i<prisms.length;i++){
