@@ -1,50 +1,57 @@
 {
-	"player":{ "x":0, "y":2 },
-	"goal":{"ax":20,"bx":21,"ay":8,"by":9},
+	"player":{ "x":0, "y":3 },
+	"goal":{"ax":23,"bx":24,"ay":0,"by":1},
 
 	"shadows": [
 		
-		{"ax":6,"bx":6,"ay":0,"by":5},
-		{"ax":6,"bx":6,"ay":6,"by":9},
-		
-		{"ax":14,"bx":14,"ay":0,"by":5},
-		{"ax":14,"bx":14,"ay":6,"by":9},
+		{"ax":0,"bx":7,"ay":4,"by":4},
+		{"ax":7,"bx":7,"ay":4,"by":10},
 
-		{"ax":17,"bx":17,"ay":0,"by":8}
+		{"ax":12,"bx":12,"ay":0,"by":6},
+		{"ax":12,"bx":12,"ay":7,"by":10},
+		
+		{"ax":20,"bx":20,"ay":0,"by":6},
+		{"ax":20,"bx":20,"ay":7,"by":10},
+		{"ax":21,"bx":21,"ay":0,"by":6},
+		{"ax":21,"bx":21,"ay":7,"by":10},
+		{"ax":20,"bx":21,"ay":7,"by":7},
+
+		{"ax":22,"bx":22,"ay":0,"by":9},
+		{"ax":23,"bx":23,"ay":0,"by":9}
 
 	],
 
 	"prisms": [
-		{ "x":5,"y":2 },
-		{ "x":5,"y":8 }
+		{ "x":5,"y":3 },
+		{ "x":6,"y":3 }
 	],
 
 	"dummies": [],
 
 	"blocks": [
-		{"x":1,"y":5,"shadows":false}
+		{"x":9,"y":8}
 	],
 
 	"doors": [],
 
 	"conveyors": [
 		{
-			"belt": {"ax":1,"bx":5,"ay":3,"by":4},
+			"belt": {"ax":7,"bx":11,"ay":4,"by":5},
 			"direction": {"x":1,"y":0},
 			"activator": ""
 		},
 		{
-			"belt": {"ax":5,"bx":6,"ay":3,"by":7},
+			"belt": {"ax":11,"bx":12,"ay":4,"by":8},
 			"direction": {"x":0,"y":1},
 			"activator": ""
 		},
 		{
-			"belt": {"ax":2,"bx":6,"ay":7,"by":8},
+			"belt": {"ax":8,"bx":12,"ay":8,"by":9},
 			"direction": {"x":-1,"y":0},
 			"activator": ""
 		},
 		{
-			"belt": {"ax":1,"bx":2,"ay":4,"by":8},
+			"belt": {"ax":7,"bx":8,"ay":5,"by":9},
 			"direction": {"x":0,"y":-1},
 			"activator": ""
 		}
@@ -52,9 +59,51 @@
 
 	"camera": [
 		{
+			"type": "rails",
+			"zone": {"ax":0,"bx":5,"ay":0,"by":10},
+			"data": {"ax":0,"bx":7,"ay":5,"by":5}
+		},
+		{
 			"type": "fixed",
-			"zone": {"ax":0,"bx":25,"ay":0,"by":9},
-			"data": {"x":10.5,"y":4.5}
+			"zone": {"ax":5,"bx":24,"ay":0,"by":10},
+			"data": {"x":14.5,"y":5}
+		}
+	],
+
+	"checkpoints": [
+		{"ax":21,"bx":24,"ay":9,"by":10}
+	],
+
+	"dialogues": [
+		{
+			"area": {"ax":3,"bx":5,"ay":3,"by":4},
+			"queue": [
+				{
+					"message": "Now that Daddy's not here to control my thoughts... I'm thinking...",
+					"duration": 4000
+				},
+				{
+					"message": "He... took away my <i>personal</i> life! For his <i>personal</i> gain!",
+					"duration": 5000
+				}
+			]
+		},
+		{
+			"area": {"ax":21,"bx":24,"ay":9,"by":10},
+			"queue": [
+				{
+					"message": "Daddy doesn't care about me! He's a... a...",
+					"duration": 4000
+				},
+				{
+					"message": "<b style='font-size:40px'>meanie</b>",
+					"duration": 2000
+				},
+				{
+					"message": "There! I thought it! I thought it, <i>in my head!</i>",
+					"duration": 4000
+				}
+			]
 		}
 	],
 
