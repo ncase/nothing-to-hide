@@ -40,6 +40,8 @@
 		buttonSprite.scaleX = buttonSprite.scaleY = 0;
 		var buttonRotation = 0;
 
+		var EYE_WIDTH = 8;
+		var EYE_HEIGHT = 5;
 		this.draw = function(ctx){
 
 			// CLICK ME
@@ -84,14 +86,25 @@
 			// Draw eye pupils
 			if(self.active){
 
-				// Looking at player
+				// Target - HACK!!!
+				var target;
+				if(level.dummies.dummies.length>0){
+					target = level.dummies.dummies[0];
+				}else{
+					target = {
+						x: level.player.x,
+						y: level.player.y - 65
+					};
+				}
+
+				// Looking at target
 				var vectToPlayer = {
-					x: level.player.x-self.x,
-					y: (level.player.y-65)-self.y
+					x: target.x-self.x,
+					y: target.y-self.y
 				}
 				var mag = Math.sqrt(vectToPlayer.x*vectToPlayer.x + vectToPlayer.y*vectToPlayer.y);
-				vectToPlayer.x *= 8/mag;
-				vectToPlayer.y *= 5/mag;
+				vectToPlayer.x *= EYE_WIDTH/mag;
+				vectToPlayer.y *= EYE_HEIGHT/mag;
 
 				// Draw black circle
 				ctx.save();
@@ -117,6 +130,7 @@
 		};
 
 		this.drawCCTV = function(cctvContext){
+
 			// The BLANK frame
 			prismSprite.frameIndex = (self.active) ? 3 : 2;
 			if(self.id){
@@ -125,6 +139,42 @@
 			prismSprite.x = self.x;
 			prismSprite.y = self.y;
 			prismSprite.draw(cctvContext);
+
+			// Draw eye pupils
+			if(self.active){
+
+				// Target - HACK!!!
+				var target;
+				if(level.dummies.dummies.length>0){
+					target = level.dummies.dummies[0];
+				}else{
+					target = {
+						x: level.player.x,
+						y: level.player.y - 65
+					};
+				}
+
+				// Looking at target
+				var vectToPlayer = {
+					x: target.x-self.x,
+					y: target.y-self.y
+				}
+				var mag = Math.sqrt(vectToPlayer.x*vectToPlayer.x + vectToPlayer.y*vectToPlayer.y);
+				vectToPlayer.x *= EYE_WIDTH/mag;
+				vectToPlayer.y *= EYE_HEIGHT/mag;
+
+				// Draw black circle
+				var ctx = cctvContext;
+				ctx.save();
+				ctx.translate(self.x+prismSprite.regX+21, self.y+prismSprite.regY+38);
+				ctx.fillStyle = "#999";
+				ctx.beginPath(); 
+				ctx.arc(vectToPlayer.x,vectToPlayer.y,2,0,Math.PI*2,true);
+				ctx.fill();
+				ctx.restore();
+
+			}
+
 		};
 
 	};

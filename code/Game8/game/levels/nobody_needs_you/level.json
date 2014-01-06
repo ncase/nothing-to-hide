@@ -1,32 +1,43 @@
 {
-	"player":{ "x":-0.5, "y":2.4 },
+	"player":{ "x":4, "y":18 },
 	"goal":{"ax":60,"bx":70,"ay":9.5,"by":11},
 
 	"shadows": [
-		{"ax":0,"bx":2,"ay":3,"by":3},
-		{"ax":2,"bx":2,"ay":3,"by":12},
 
-		{"ax":4,"bx":14,"ay":9,"by":9},
-		{"ax":4,"bx":14,"ay":8,"by":8},
-		{"ax":4,"bx":4,"ay":8,"by":9},
-		{"ax":14,"bx":14,"ay":8,"by":9},
+		{"ax":4,"bx":4,"ay":0,"by":19},
+		{"ax":5,"bx":5,"ay":8,"by":19},
+		{"ax":5,"bx":9,"ay":8,"by":8},
+		{"ax":9,"bx":9,"ay":0,"by":7},
+		{"ax":9,"bx":9,"ay":8,"by":12},
+		{"ax":9,"bx":23,"ay":12,"by":12},
+		{"ax":23,"bx":23,"ay":0,"by":12},
 
-		{"ax":9,"bx":10,"ay":3,"by":3},
-		{"ax":9,"bx":9,"ay":3,"by":5},
-		{"ax":9,"bx":10,"ay":5,"by":5},
-		{"ax":9,"bx":10,"ay":6,"by":6},
-		{"ax":9,"bx":9,"ay":6,"by":8}
+		{"ax":11,"bx":17,"ay":8,"by":8},
+		{"ax":17,"bx":18,"ay":8,"by":8},
+		{"ax":18,"bx":22,"ay":8,"by":8},
+		{"ax":11,"bx":11,"ay":8,"by":9},
+		{"ax":22,"bx":22,"ay":8,"by":9},
+
+		{"ax":17,"bx":18,"ay":3,"by":3},
+		{"ax":17,"bx":17,"ay":3,"by":4},
+		{"ax":17,"bx":17,"ay":4,"by":5},
+		{"ax":18,"bx":18,"ay":3,"by":4},
+		{"ax":18,"bx":18,"ay":4,"by":5},
+		{"ax":17,"bx":18,"ay":4,"by":4},
+		{"ax":17,"bx":18,"ay":6,"by":6},
+		{"ax":17,"bx":17,"ay":6,"by":8},
+		{"ax":18,"bx":18,"ay":6,"by":8}
 
 	],
 
 	"prisms": [
-		{ "x":6.4, "y":2.1 },
-		{ "x":5, "y":11 },
-		{ "x":11, "y":11, "id":"power" }
+		{ "x":4, "y":6.6 },
+		{ "x":13, "y":2 },
+		{ "x":19, "y":11, "id":"power" }
 	],
 
 	"dummies": [
-		{"x":5.6,"y":1.9}
+		{"x":15,"y":2}
 	],
 
 	"doors": [],
@@ -34,41 +45,68 @@
 
 	"conveyors": [
 		{
-			"belt": {"ax":5,"bx":7,"ay":2,"by":3},
+			"belt": {"ax":13,"bx":15,"ay":2,"by":3},
 			"direction": {"x":1.5,"y":0},
 			"activator": "power"
 		},
 		{
-			"belt": {"ax":7,"bx":8,"ay":2,"by":7},
+			"belt": {"ax":15,"bx":16,"ay":2,"by":7},
 			"direction": {"x":0,"y":1.5},
 			"activator": "power"
 		},
 		{
-			"belt": {"ax":6,"bx":8,"ay":7,"by":8},
+			"belt": {"ax":14,"bx":16,"ay":7,"by":8},
 			"direction": {"x":-1.5,"y":0},
 			"activator": "power"
 		},
 		{
-			"belt": {"ax":5,"bx":6,"ay":3,"by":8},
+			"belt": {"ax":13,"bx":14,"ay":3,"by":8},
 			"direction": {"x":0,"y":-1.5},
 			"activator": "power"
 		}
 	],
 
+	"checkpoints": [
+		{"ax":4,"bx":9,"ay":7,"by":8}
+	],
+
 	"camera": [
 		{
+			"type": "rails",
+			"zone": {"ax":4,"bx":5,"ay":11,"by":19},
+			"data": {"ax":4.5,"bx":4.5,"ay":11,"by":19}
+		},
+		{
 			"type": "fixed",
-			"zone": {"ax":-1,"bx":15,"ay":0,"by":9},
-			"data": {"x":7.5,"y":6}
+			"zone": {"ax":4,"bx":23,"ay":0,"by":11},
+			"data": {"x":13.5,"y":6}
+		}
+	],
+
+	"dialogues": [
+		{
+			"area": {"ax":4,"bx":5,"ay":17,"by":18},
+			"queue": [
+				{
+					"message": "I know it's illegal to help strangers, but… I have to save this mystery person!",
+					"duration": 5000
+				},
+				{
+					"message": "'Nobody' needs me!",
+					"duration": 2500
+				},
+				{
+					"message": "'NOBODY' NEEDS ME!",
+					"duration": 2500
+				}
+			]
 		}
 	],
 
 	"art": {
 		"background": false,
 		"cam": false,
-		"lights": [
-			{"ax":0,"ay":0,"bx":15,"by":10}
-		]
+		"lights": []
 	}
 
 }
