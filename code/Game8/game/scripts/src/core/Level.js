@@ -145,7 +145,22 @@
 				Game.nextLevel();
 			}
 
+			// HACK - Final level
+			if(self.config.id=="nobody_needs_you"){
+				var dandy = self.dummies.dummies[0];
+				var dx = self.player.x-dandy.x;
+				var dy = self.player.y-dandy.y;
+				if(dx*dx+dy*dy<50*50){
+					if(!alreadyExited){
+						alreadyExited = true;
+						window.top.gotoPage("cutscene/cutscene_end");
+					}
+				}
+			}
+
 		};
+		var alreadyExited = false;
+
 		function _isInArea(area,x,y){
 			x = self.player.x/Map.TILE_SIZE;
 			y = self.player.y/Map.TILE_SIZE;

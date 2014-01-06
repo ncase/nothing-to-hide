@@ -81,9 +81,9 @@ Asset.init({
 
 Game.init({
 	levels:[
-		/*'intro','pickup','big_puzzle',
+		'intro','pickup','big_puzzle',
 		'conveyor','conveyor_2',
-		'power','power_puzzle',*/
+		'power','power_puzzle',
 		'nobody_needs_you'
 	]
 });
