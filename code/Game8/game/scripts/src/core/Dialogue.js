@@ -63,6 +63,7 @@
 			if(!container) return;
 			var dx = container.offsetLeft + Game.level.camera.cx + Game.level.player.x;
 			var dy = container.offsetTop + Game.level.camera.cy + Game.level.player.y - 150;
+			if(dx<150) dx=150+(dx-150)*0.2;
 			if(dy<150) dy=150+(dy-150)*0.2;
 			Dialogue.dom.style.left = dx+"px";
 			Dialogue.dom.style.top = dy+"px";

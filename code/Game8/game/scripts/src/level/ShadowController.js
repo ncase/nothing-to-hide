@@ -46,7 +46,7 @@
 
 		// TO SEGMENTS
 		var border = VisibilityPolygon.convertToSegments([
-			[[-10,-10],[level.map.width+10,-10],[level.map.width+10,level.map.height+10],[-10,level.map.height+10]]
+			[[-1,-1],[level.map.width+1,-1],[level.map.width+1,level.map.height+1],[-1,level.map.height+1]]
 		]);
 
 		var _createPoly = function(lightX,lightY){
