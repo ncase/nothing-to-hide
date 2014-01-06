@@ -164,10 +164,9 @@
 			state.prisms = [];
 			for(var i=0;i<self.prisms.prisms.length;i++){
 				var p = self.prisms.prisms[i];
-				state.prisms.push({
-					x: p.x,
-					y: p.y
-				});
+				var savedPrism = { x:p.x, y:p.y };
+				if(p.id) savedPrism.id=p.id;
+				state.prisms.push(savedPrism);
 			}
 
 			// If you're holding any, yeah, drop it.

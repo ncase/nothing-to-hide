@@ -3,16 +3,37 @@
 	"goal":{"ax":11,"bx":12,"ay":0,"by":1},
 
 	"shadows": [
-		{"ax":2,"bx":6,"ay":4,"by":4},
-		{"ax":2,"bx":2,"ay":0,"by":4},
-		
-		{"ax":7,"bx":11,"ay":4,"by":4},
+
+		{"ax":1,"bx":1,"ay":0,"by":23},
+		{"ax":12,"bx":12,"ay":0,"by":23},
+		{"ax":1,"bx":12,"ay":23,"by":23},
+
+		{"ax":2,"bx":2,"ay":0,"by":18},
+		{"ax":2,"bx":2,"ay":17,"by":18},
+		{"ax":2,"bx":3,"ay":17,"by":17},
+		{"ax":3,"bx":6,"ay":17,"by":17},
+		{"ax":7,"bx":10,"ay":17,"by":17},
+		{"ax":10,"bx":11,"ay":17,"by":17},
+		{"ax":11,"bx":11,"ay":11,"by":17},
+		{"ax":11,"bx":11,"ay":17,"by":18},
+		{"ax":7,"bx":11,"ay":11,"by":11},
+		{"ax":3,"bx":6,"ay":11,"by":11},
+		{"ax":3,"bx":3,"ay":0,"by":11},
+
+		{"ax":10,"bx":12,"ay":5,"by":5},
+		{"ax":10,"bx":10,"ay":5,"by":6},
+
+		{"ax":3,"bx":3,"ay":11,"by":17},
+		{"ax":10,"bx":10,"ay":11,"by":17},
+
 		{"ax":11,"bx":11,"ay":0,"by":4}
+		
 	],
 
 	"prisms": [
-		{ "x":1, "y":8, "id":"power" },
-		{ "x":6, "y":2 }
+		{ "x":1, "y":22, "id":"power" },
+		{ "x":6, "y":15 },
+		{ "x":3, "y":5.3 }
 	],
 
 	"dummies": [],
@@ -23,41 +44,66 @@
 
 	"conveyors": [
 		{
-			"belt": {"ax":3,"bx":9,"ay":0,"by":1},
+			"belt": {"ax":3,"bx":9,"ay":13,"by":14},
 			"direction": {"x":2,"y":0},
 			"activator": "power"
 		},
 		{
-			"belt": {"ax":9,"bx":10,"ay":0,"by":2},
+			"belt": {"ax":9,"bx":10,"ay":13,"by":15},
 			"direction": {"x":0,"y":2},
 			"activator": "power"
 		},
 		{
-			"belt": {"ax":4,"bx":10,"ay":2,"by":3},
+			"belt": {"ax":4,"bx":10,"ay":15,"by":16},
 			"direction": {"x":-2,"y":0},
 			"activator": "power"
 		},
 		{
-			"belt": {"ax":3,"bx":4,"ay":1,"by":3},
+			"belt": {"ax":3,"bx":4,"ay":14,"by":16},
 			"direction": {"x":0,"y":-2},
 			"activator": "power"
 		}
 	],
 
+	"checkpoints": [
+		{"ax":1,"bx":2,"ay":18,"by":19},
+		{"ax":11,"bx":12,"ay":8,"by":11}
+	],
+
 	"camera": [
 		{
 			"type": "fixed",
-			"zone": {"ax":0,"bx":15,"ay":0,"by":19},
-			"data": {"x":6.5,"y":4.5}
+			"zone": {"ax":0,"bx":13,"ay":0,"by":5},
+			"data": {"x":6.5,"y":5}
+		},
+		{
+			"type": "rails",
+			"zone": {"ax":0,"bx":13,"ay":5,"by":17},
+			"data": {"ax":6.5,"bx":6.5,"ay":5,"by":17}
+		},
+		{
+			"type": "fixed",
+			"zone": {"ax":0,"bx":13,"ay":17,"by":22},
+			"data": {"x":6.5,"y":17}
+		}
+	],
+
+	"dialogues": [
+		{
+			"area": {"ax":1,"bx":2,"ay":5,"by":10},
+			"queue": [
+				{
+					"message": "I'm not sure, but I think that poor boy was in the room after this one...?",
+					"duration": 6000
+				}
+			]
 		}
 	],
 
 	"art": {
 		"background": false,
 		"cam": false,
-		"lights": [
-			{"ax":0,"ay":0,"bx":15,"by":10}
-		]
+		"lights": []
 	}
 
 }
