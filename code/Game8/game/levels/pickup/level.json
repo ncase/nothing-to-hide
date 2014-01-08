@@ -73,7 +73,7 @@
 
 	"dialogues": [
 		{
-			"area": {"ax":7,"bx":14,"ay":17,"by":19},
+			"area": {"ax":7,"bx":14,"ay":17,"by":20},
 			"queue": [
 				{
 					"message": "Oh… there's Daddy's campaign post. Look at my smile.",
@@ -97,7 +97,8 @@
 
 	"propaganda": [
 		{"type":"image", "img":"propaganda_tut_pickup", "x":0, "y":0},
-		{"type":"image", "img":"propaganda_tut_carpet", "x":0, "y":6}
+		{"type":"image", "img":"propaganda_tut_carpet", "x":0, "y":6},
+		{"type":"image", "img":"propaganda_pickup_gardner", "x":1, "y":12}
 	],
 
 	"art": {

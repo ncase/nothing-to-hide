@@ -82,7 +82,7 @@
 	],
 
 	"propaganda": [
-		{"type":"image", "img":"propaganda_tut_slidewalk", "x":5, "y":6}
+		{"type":"image", "img":"propaganda_tut_slidewalk", "x":6, "y":6}
 	],
 
 	"art": {

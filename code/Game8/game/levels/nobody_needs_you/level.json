@@ -102,6 +102,10 @@
 		}
 	],
 
+	"propaganda": [
+		{"type":"image", "img":"propaganda_needs_dummy", "x":4, "y":0}
+	],
+
 	"art": {
 		"background": false,
 		"cam": false,

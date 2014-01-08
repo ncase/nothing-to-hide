@@ -22,7 +22,12 @@ Asset.init({
 		propaganda_tut_reminder:'assets/propaganda/tut_reminder.png',
 		propaganda_tut_power:'assets/propaganda/tut_power.png',
 		propaganda_tut_slidewalk:'assets/propaganda/tut_slidewalk.png',
+		propaganda_tut_darker:'assets/propaganda/tut_darker.png',
+
 		propaganda_smile:'assets/propaganda/smile.png',
+		propaganda_puzzle_error:'assets/propaganda/puzzle_error.png',
+		propaganda_needs_dummy:'assets/propaganda/needs_dummy.png',
+		propaganda_pickup_gardner:'assets/propaganda/pickup_gardner.png',
 
 	},
 	sprites:{

@@ -146,14 +146,6 @@
 		// Propaganda Blackouts
 		var blackouts = [];
 		function _blackoutIsSeen(bo,poly){
-			
-			if(level.config.id=="intro" && !level.HACK_now_you_can_see){
-				setTimeout(function(){
-					level.HACK_now_you_can_see = true;
-				},5500);
-				return;
-			}
-
 			if(VisibilityPolygon.inPolygon([bo.x+bo.width/2,bo.y+bo.height/2],poly)) return true;
 			return false;
 		}

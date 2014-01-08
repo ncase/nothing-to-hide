@@ -51,7 +51,7 @@
 		{
 			"type": "fixed",
 			"zone": {"ax":0,"bx":18,"ay":5,"by":14},
-			"data": {"x":9,"y":9}
+			"data": {"x":9,"y":8.5}
 		},
 		{
 			"type": "rails",
@@ -92,6 +92,12 @@
 				}
 			]
 		}
+	],
+
+	"propaganda": [
+		{"type":"image", "img":"propaganda_puzzle_error", "x":1, "y":2},
+		{"type":"image", "img":"propaganda_puzzle_error", "x":7, "y":2},
+		{"type":"image", "img":"propaganda_puzzle_error", "x":12, "y":2}
 	],
 
 	"art": {
