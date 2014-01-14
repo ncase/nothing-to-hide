@@ -26,7 +26,7 @@
 
 			// CCTV
 			cctvY += 1;
-			if(cctvY>=15) cctvY=0;
+			if(cctvY>=25) cctvY=0;
 
 		};
 
@@ -50,7 +50,15 @@
 			// Sort props
 			var props = [level.player].concat(level.prisms.prisms).concat(level.dummies.dummies).concat(level.blocks.blocks);
 			props = props.sort(function(a,b){
-				return(a.y-b.y);
+				var ay = a.y;
+				var by = b.y;
+				if(a._CLASS=="Block"){
+					ay = a.y+a.bounds.top
+				}
+				if(b._CLASS=="Block"){
+					by = b.y+b.bounds.top
+				}
+				return(ay-by);
 			});
 
 			// TEMP LAYER - TRANSLATE

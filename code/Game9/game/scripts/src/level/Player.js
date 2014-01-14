@@ -198,7 +198,12 @@
 			var blocks = level.blocks.blocks;
 			for(var i=0;i<blocks.length;i++){
 				var block = blocks[i];
-				if(block.x-25<=x && block.x+25>=x && block.y-50<=y && block.y>=y){
+				if(
+					block.x+(block.bounds.left-1)<=x &&
+					block.x+(block.bounds.right+1)>=x &&
+					block.y+(block.bounds.top-1)<=y &&
+					block.y+(block.bounds.bottom+1)>=y
+				){
 					return true;
 				}
 			}

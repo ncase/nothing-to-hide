@@ -44,7 +44,9 @@ Asset.init({
 		Shimmer:'assets/sprites/Shimmer',
 
 		Cursor:'assets/sprites/Cursor',
-		Button:'assets/sprites/Button'
+		Button:'assets/sprites/Button',
+
+		SmallProps:'assets/sprites/SmallProps'
 
 	},
 	sounds:{

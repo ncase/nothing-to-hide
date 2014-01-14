@@ -7,9 +7,10 @@
 		// Properties
 		this.level = level;
 		this.config = config;
+		this._CLASS = "Block";
 
 		// Bounds
-		self.bounds = {
+		self.bounds = config.bounds || {
 			left: -24,
 			right: 24,
 			top: -49,
@@ -53,9 +54,14 @@
 		};
 
 		// Draw
+		var sprite = new Sprite(config.sprite || "SmallProps");
+		sprite.frameIndex = config.frame || 0;
+		sprite.regX = -50;
+		sprite.regY = -150;
 		this.draw = function(ctx){
-			ctx.fillStyle = "#000";
-			ctx.fillRect(self.x-25, self.y-50, 50, 50);
+			sprite.x = self.x;
+			sprite.y = self.y;
+			sprite.draw(ctx);
 		};
 		this.drawCCTV = this.draw;
 

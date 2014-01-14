@@ -52,7 +52,7 @@
 		};
 		this.hitTest = function(px,py){
 			var tile = this.getTile(px,py);
-			return(tile==Map.WALL || tile==Map.SCREEN || tile==Map.SCREEN_LINE || tile==Map.PROP);
+			return(tile==Map.WALL || tile==Map.SCREEN || tile==Map.SCREEN_LINE);
 		}
 
 		///////////////////
@@ -251,6 +251,7 @@
 	Map.SPACE = " ";
 	Map.METAL = "M";
 	Map.PROP = "@";
+	Map.CARPET_PROP = "!";
 	Map.CARPET = ".";
 	Map.TILE_SIZE = 50;
 
@@ -261,12 +262,11 @@
 			for(var x=0;x<tiles[y].length;x++){
 				switch(tiles[y][x]){
 					
-					case Map.SPACE: ctx.fillStyle="#D7E7E6"; break;
-					case Map.CARPET: ctx.fillStyle=textures.carpet; break;
+					case Map.PROP: case Map.SPACE: ctx.fillStyle="#D7E7E6"; break;
+					case Map.CARPET_PROP: case Map.CARPET: ctx.fillStyle=textures.carpet; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
 					case Map.SCREEN: ctx.fillStyle="#202328"; break;
 					case Map.SCREEN_LINE: ctx.fillStyle="#202328"; break;
-					case Map.PROP: ctx.fillStyle="#7F6A5F"; break;
 					
 					// Placeholder
 					//case Map.METAL: ctx.fillStyle="#9900FF"; break;
@@ -283,12 +283,11 @@
 			for(var x=0;x<tiles[y].length;x++){
 				switch(tiles[y][x]){
 
-					case Map.SPACE: ctx.fillStyle="#555"; break;
-					case Map.CARPET: ctx.fillStyle=textures.carpet_cctv; break;
+					case Map.PROP: case Map.SPACE: ctx.fillStyle="#555"; break;
+					case Map.CARPET_PROP: case Map.CARPET: ctx.fillStyle=textures.carpet_cctv; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
 					case Map.SCREEN: ctx.fillStyle="#000"; break;
 					case Map.SCREEN_LINE: ctx.fillStyle="#000"; break;
-					case Map.PROP: ctx.fillStyle="#666666"; break;
 
 					// Placeholder
 					//case Map.METAL: ctx.fillStyle="#9900FF"; break;
