@@ -10,12 +10,17 @@
 		this._CLASS = "Block";
 
 		// Bounds
-		self.bounds = config.bounds || {
-			left: -24,
-			right: 24,
-			top: -49,
+		var IS_BIG_PROP = !!config.width;
+		config.width = config.width || 1;
+		config.height = config.height || 1;
+		var w = config.width*Map.TILE_SIZE;
+		var h = config.height*Map.TILE_SIZE;
+		self.bounds = {
+			left: -(w/2-1),
+			right: (w/2-1),
+			top: -(h-1),
 			bottom: -1
-		};
+		}
 
 		// Position
 		self.x = config.x;
@@ -54,10 +59,15 @@
 		};
 
 		// Draw
-		var sprite = new Sprite(config.sprite || "SmallProps");
+		var sprite = new Sprite(IS_BIG_PROP ? "BigProps" : "SmallProps");
 		sprite.frameIndex = config.frame || 0;
-		sprite.regX = -50;
-		sprite.regY = -150;
+		if(IS_BIG_PROP){
+			sprite.regX = -100;
+			sprite.regY = -200;
+		}else{
+			sprite.regX = -50;
+			sprite.regY = -150;
+		}
 		this.draw = function(ctx){
 			sprite.x = self.x;
 			sprite.y = self.y;

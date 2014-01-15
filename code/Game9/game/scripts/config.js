@@ -46,7 +46,8 @@ Asset.init({
 		Cursor:'assets/sprites/Cursor',
 		Button:'assets/sprites/Button',
 
-		SmallProps:'assets/sprites/SmallProps'
+		SmallProps:'assets/sprites/SmallProps',
+		BigProps:'assets/sprites/BigProps'
 
 	},
 	sounds:{
