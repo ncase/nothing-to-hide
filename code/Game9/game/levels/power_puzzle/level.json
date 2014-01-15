@@ -40,6 +40,20 @@
 	"doors": [],
 
 	"blocks": [
+		{	
+			"x":6, "y":20.5,
+			"width":3, "height":1,
+			"frame":0
+		},
+
+		{"x":6, "y":17, "frame":4},
+
+		{"x":4, "y":5, "frame":0},
+		{"x":5, "y":5, "frame":0},
+		{"x":6, "y":5, "frame":0},
+		{"x":7, "y":5, "frame":0},
+		{"x":8, "y":5, "frame":0}
+
 	],
 
 	"conveyors": [

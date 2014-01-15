@@ -60,7 +60,7 @@
 
 		// Draw
 		var sprite = new Sprite(IS_BIG_PROP ? "BigProps" : "SmallProps");
-		sprite.frameIndex = config.frame || 0;
+		config.frame = config.frame || 0;
 		if(IS_BIG_PROP){
 			sprite.regX = -100;
 			sprite.regY = -200;
@@ -68,12 +68,21 @@
 			sprite.regX = -50;
 			sprite.regY = -150;
 		}
+		if(config.flip){
+			sprite.scaleX = -1;
+		}
 		this.draw = function(ctx){
+			sprite.frameIndex = config.frame;
 			sprite.x = self.x;
 			sprite.y = self.y;
 			sprite.draw(ctx);
 		};
-		this.drawCCTV = this.draw;
+		this.drawCCTV = function(ctx){
+			sprite.frameIndex = config.frame + 50;
+			sprite.x = self.x;
+			sprite.y = self.y;
+			sprite.draw(ctx);
+		};
 
 	};
 
