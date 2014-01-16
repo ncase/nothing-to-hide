@@ -20,7 +20,12 @@
 				var dy = self.y - level.player.y;
 				self.nearPlayer = ( (dx*dx + dy*dy < 50*50) && !level.player.holdingPrism );
 			}
+
+			// CCTV
+			dotOffset += 4;
+			if(dotOffset>=100) dotOffset=0;
 		};
+		var dotOffset = 0;
 
 		/////////////////////
 		///// DRAW LOOP /////
@@ -43,6 +48,9 @@
 		var EYE_WIDTH = 8;
 		var EYE_HEIGHT = 5;
 		this.draw = function(ctx){
+
+			// Sight Line
+			_drawSightLine(ctx);
 
 			// CLICK ME
 			if(self.nearPlayer){
@@ -131,6 +139,9 @@
 
 		this.drawCCTV = function(cctvContext){
 
+			// Sight Line
+			_drawSightLine(cctvContext);
+
 			// The BLANK frame
 			prismSprite.frameIndex = (self.active) ? 3 : 2;
 			if(self.id){
@@ -172,6 +183,53 @@
 				ctx.arc(vectToPlayer.x,vectToPlayer.y,2,0,Math.PI*2,true);
 				ctx.fill();
 				ctx.restore();
+
+			}
+
+		};
+
+		// Draw Sight Line
+		var _drawSightLine = function(ctx){
+
+			if(self.sightPolygon){
+
+				// Objects in sight
+				var humanoids = [level.player].concat(level.dummies.dummies);
+				var humanoidsSeen = [];
+				for(var i=0;i<humanoids.length;i++){
+					var hum = humanoids[i];
+					if(VisibilityPolygon.inPolygon([hum.x,hum.y], self.sightPolygon)){
+						humanoidsSeen.push(hum);
+					}
+				}
+
+				// A dotted to each humanoid seen
+				ctx.fillStyle = (self.id) ? "#99F" : "#FA0";
+				for(var i=0;i<humanoidsSeen.length;i++){
+					var hum = humanoidsSeen[i];
+					var vect = {
+						x: hum.x-self.x,
+						y: hum.y-self.y
+					};
+					var mag = Math.sqrt(vect.x*vect.x + vect.y*vect.y);
+					vect.x /= mag;
+					vect.y /= mag;
+					for(var dist=100-dotOffset;dist<mag;dist+=100){
+						var dotX = self.x + vect.x*dist;
+						var dotY = self.y + vect.y*dist;
+						if(dist<100){
+							ctx.globalAlpha = dist/100;
+						}else if(dist>mag-100){
+							ctx.globalAlpha = 1 - (dist-(mag-100))/100;
+						}else{
+							ctx.globalAlpha = 1;
+						}
+						ctx.beginPath(); 
+						ctx.arc(dotX,dotY,4,0,Math.PI*2,true);
+						ctx.fill();
+					}
+				}
+				ctx.globalAlpha = 1;
 
 			}
 

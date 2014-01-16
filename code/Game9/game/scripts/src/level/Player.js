@@ -10,6 +10,7 @@
 		this.x = config.x;
 		this.y = config.y;
 		this.vx = this.vy = 0;
+		this._CLASS = "Player";
 
 		///////////////////////
 		///// UPDATE LOOP /////

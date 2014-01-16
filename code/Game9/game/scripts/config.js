@@ -12,6 +12,7 @@ Asset.init({
 
 		screenline:'assets/textures/screenline.png',
 		exit:'assets/textures/exit.png',
+		exit_2:'assets/textures/exit_2.png',
 
 		// PROPAGANDA or TUTORIAL
 

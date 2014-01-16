@@ -262,20 +262,22 @@
 			for(var x=0;x<tiles[y].length;x++){
 				switch(tiles[y][x]){
 					
-					case Map.PROP: case Map.SPACE: ctx.fillStyle="#D7E7E6"; break;
+					case Map.METAL: case Map.PROP: case Map.SPACE: ctx.fillStyle="#C4D3D2"; break;
 					case Map.CARPET_PROP: case Map.CARPET: ctx.fillStyle=textures.carpet; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
 					case Map.SCREEN: ctx.fillStyle="#202328"; break;
 					case Map.SCREEN_LINE: ctx.fillStyle="#202328"; break;
-					
-					// Placeholder
-					//case Map.METAL: ctx.fillStyle="#9900FF"; break;
-					case Map.METAL: ctx.fillStyle="#D7E7E6"; break;
 
 				}
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
 			}
 		}
+
+		// DRAW GOAL
+		var gx = (self.goal.ax + self.goal.bx)/2 - 0.5;
+		var gy = (self.goal.ay + self.goal.by)/2 - 0.5;
+		ctx.drawImage(Asset.image.exit_2, gx*Map.TILE_SIZE, gy*Map.TILE_SIZE);
+
 	};
 	
 	var _makePlaceholderCCTV = function(self,ctx,tiles,config){
@@ -283,15 +285,11 @@
 			for(var x=0;x<tiles[y].length;x++){
 				switch(tiles[y][x]){
 
-					case Map.PROP: case Map.SPACE: ctx.fillStyle="#555"; break;
+					case Map.METAL: case Map.PROP: case Map.SPACE: ctx.fillStyle="#555"; break;
 					case Map.CARPET_PROP: case Map.CARPET: ctx.fillStyle=textures.carpet_cctv; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
 					case Map.SCREEN: ctx.fillStyle="#000"; break;
 					case Map.SCREEN_LINE: ctx.fillStyle="#000"; break;
-
-					// Placeholder
-					//case Map.METAL: ctx.fillStyle="#9900FF"; break;
-					case Map.METAL: ctx.fillStyle="#D7E7E6"; break;
 
 				}
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
