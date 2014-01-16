@@ -1,0 +1,122 @@
+{
+	"player":{ "x":0, "y":4 },
+	"goal":{"ax":20,"bx":21,"ay":4,"by":5},
+
+	"shadows": [
+		{"ax":0,"bx":5,"ay":5,"by":5},
+		{"ax":5,"bx":5,"ay":5,"by":17},
+		{"ax":16,"bx":21,"ay":5,"by":5},
+		{"ax":16,"bx":16,"ay":5,"by":17},
+
+		{"ax":6,"bx":15,"ay":5,"by":5},
+		{"ax":6,"bx":6,"ay":5,"by":10},
+		{"ax":15,"bx":15,"ay":5,"by":10},
+
+		{"ax":6,"bx":6,"ay":13,"by":14},
+		{"ax":6,"bx":10,"ay":13,"by":13},
+		{"ax":11,"bx":16,"ay":13,"by":13}
+	],
+
+	"prisms": [
+		{ "x":15,"y":4 },
+		{ "x":5,"y":9 },
+		{ "x":5,"y":16 }
+	],
+
+	"blocks": [
+		{"x":7, "y":4, "frame":0},
+		{"x":8, "y":4, "frame":0},
+		{"x":9, "y":4, "frame":0},
+		{"x":10, "y":4, "frame":0},
+		{"x":11, "y":4, "frame":0},
+		{"x":12, "y":4, "frame":0},
+		{"x":13, "y":4, "frame":0},
+
+		{"x":7, "y":11, "frame":0},
+		{"x":8, "y":11, "frame":0},
+		{"x":9, "y":11, "frame":0},
+		{"x":10, "y":11, "frame":0},
+		{"x":11, "y":11, "frame":0},
+		{"x":12, "y":11, "frame":0},
+		{"x":13, "y":11, "frame":0},
+
+		{"x":7, "y":12, "frame":0},
+		{"x":8, "y":12, "frame":0},
+		{"x":9, "y":12, "frame":0},
+		{"x":10, "y":12, "frame":0},
+		{"x":11, "y":12, "frame":0},
+		{"x":12, "y":12, "frame":0},
+		{"x":13, "y":12, "frame":0},
+
+		{"x":10, "y":13, "frame":4}
+	],
+
+	"dummies": [],
+	"doors": [],
+
+	"conveyors": [
+		{
+			"belt": {"ax":6,"bx":15,"ay":15,"by":16},
+			"direction": {"x":-0.6,"y":0},
+			"activator": ""
+		}
+	],
+
+	"camera": [
+		{
+			"type": "fixed",
+			"zone": {"ax":0,"bx":21,"ay":0,"by":6},
+			"data": {"x":10.5,"y":6}
+		},
+		{
+			"type": "rails",
+			"zone": {"ax":0,"bx":21,"ay":6,"by":11},
+			"data": {"ax":10.5,"bx":10.5,"ay":6,"by":11}
+		},
+		{
+			"type": "fixed",
+			"zone": {"ax":0,"bx":21,"ay":11,"by":17},
+			"data": {"x":10.5,"y":11}
+		}
+	],
+
+	"checkpoints": [
+		{"ax":15,"bx":16,"ay":5,"by":7}
+	],
+
+	"dialogues": [
+		{
+			"area": {"ax":3,"bx":7,"ay":3,"by":5},
+			"queue": [
+				{
+					"message": "Hu-- huh? These are my old pictures.",
+					"duration": 3000
+				},
+				{
+					"message": "Look at that smile! That looks genuine. ...That <i>was</i> genuine.",
+					"duration": 5000
+				}
+			]
+		},
+		{
+			"area": {"ax":14,"bx":21,"ay":3,"by":5},
+			"queue": [
+				{
+					"message": "I... used to be happy.",
+					"duration": 3000
+				}
+			]
+		}
+	],
+
+	"propaganda": [
+		{"type":"image", "img":"propaganda_tut_slidewalk", "x":6, "y":6}
+	],
+
+	"art": {
+		"background": false,
+		"cam": false,
+		"lights": []
+	}
+
+}
