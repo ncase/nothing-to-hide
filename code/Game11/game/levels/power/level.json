@@ -118,7 +118,9 @@
 	],
 
 	"propaganda": [
-		{"type":"image", "img":"propaganda_tut_power", "x":4, "y":14}
+		{"type":"image", "img":"propaganda_tut_power", "x":4, "y":14},
+		{"type":"image", "img":"propaganda_stream_wall", "x":1, "y":9},
+		{"type":"image", "img":"propaganda_stream_wall_2", "x":0, "y":0}
 	],
 
 	"art": {

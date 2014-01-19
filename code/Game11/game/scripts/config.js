@@ -32,6 +32,8 @@ Asset.init({
 		propaganda_nobody_the_wall:'assets/propaganda/nobody_the_wall.png',
 		propaganda_nobody_the_wall_2:'assets/propaganda/nobody_the_wall_2.png',
 		propaganda_nobody_messes:'assets/propaganda/nobody_messes.png',
+		propaganda_stream_wall:'assets/propaganda/stream_wall.png',
+		propaganda_stream_wall_2:'assets/propaganda/stream_wall_2.png',
 
 	},
 	sprites:{
