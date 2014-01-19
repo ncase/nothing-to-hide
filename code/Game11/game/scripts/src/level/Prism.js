@@ -8,6 +8,16 @@
 		this.level = level;
 		this.config = config;
 
+		// Bounds
+		var w = Map.TILE_SIZE;
+		var h = Map.TILE_SIZE/2;
+		self.bounds = {
+			left: -(w/2-1),
+			right: (w/2-1),
+			top: -(h-1),
+			bottom: -1
+		}
+
 		///////////////////////
 		///// UPDATE LOOP /////
 		///////////////////////

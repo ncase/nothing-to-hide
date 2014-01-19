@@ -53,7 +53,9 @@ Asset.init({
 		Button:'assets/sprites/Button',
 
 		SmallProps:'assets/sprites/SmallProps',
-		BigProps:'assets/sprites/BigProps'
+		BigProps:'assets/sprites/BigProps',
+		
+		Dandy:'assets/sprites/Dandy'
 
 	},
 	sounds:{

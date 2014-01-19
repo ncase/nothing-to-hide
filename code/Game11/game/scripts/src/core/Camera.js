@@ -53,10 +53,10 @@
 				var ay = a.y;
 				var by = b.y;
 				if(a._CLASS=="Block"){
-					ay = a.y+a.bounds.top
+					ay = a.y+a.bounds.top/2;
 				}
 				if(b._CLASS=="Block"){
-					by = b.y+b.bounds.top
+					by = b.y+b.bounds.top/2;
 				}
 				return(ay-by);
 			});
