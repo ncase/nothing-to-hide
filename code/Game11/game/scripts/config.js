@@ -29,6 +29,9 @@ Asset.init({
 		propaganda_puzzle_error:'assets/propaganda/puzzle_error.png',
 		propaganda_needs_dummy:'assets/propaganda/needs_dummy.png',
 		propaganda_pickup_gardner:'assets/propaganda/pickup_gardner.png',
+		propaganda_nobody_the_wall:'assets/propaganda/nobody_the_wall.png',
+		propaganda_nobody_the_wall_2:'assets/propaganda/nobody_the_wall_2.png',
+		propaganda_nobody_messes:'assets/propaganda/nobody_messes.png',
 
 	},
 	sprites:{
@@ -66,7 +69,7 @@ Asset.init({
 		sfx_metal_footstep_1:{src:'assets/sounds/mp3/metal_step_1.mp3|assets/sounds/ogg/metal_step_1.ogg'},
 		sfx_metal_footstep_2:{src:'assets/sounds/mp3/metal_step_2.mp3|assets/sounds/ogg/metal_step_2.ogg'},
 
-		music_bg: {src:'assets/music/mp3/a_healthy_dystopia.mp3'}
+		//music_bg: {src:'assets/music/mp3/a_healthy_dystopia.mp3'}
 
 	},
 	levels:{
@@ -83,7 +86,7 @@ Asset.init({
 		// intermission - tiny puzzle.
 		power_puzzle: 'levels/power_puzzle',
 		// intermission - dead person, with possibility for power
-		//nobody_needs_you: 'levels/nobody_needs_you'
+		nobody_needs_you: 'levels/nobody_needs_you'
 
 	}
 });
@@ -93,6 +96,6 @@ Game.init({
 		'intro','pickup','big_puzzle',
 		'conveyor','conveyor_2',
 		'power','power_puzzle',
-		//'nobody_needs_you'
+		'nobody_needs_you'
 	]
 });

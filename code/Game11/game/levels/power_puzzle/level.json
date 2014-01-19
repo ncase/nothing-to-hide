@@ -117,7 +117,8 @@
 	],
 
 	"propaganda": [
-		{"type":"image", "img":"propaganda_tut_darker", "x":2, "y":17}
+		{"type":"image", "img":"propaganda_tut_darker", "x":2, "y":17},
+		{"type":"image", "img":"propaganda_nobody_messes", "x":3, "y":0}
 	],
 
 	"art": {
