@@ -18,6 +18,7 @@
 
 		// Canvasses
 		Display.dom.appendChild(_addCanvas("game"));
+		Display.dom.appendChild(_addCanvas("dialogue"));
 		Display.dom.appendChild(_addCanvas("ui"));
 		_addCanvas("tmp");
 		_addCanvas("tmp2");
@@ -32,7 +33,7 @@
 		Display.height = height;
 
 		for(var id in Display.canvas){
-			if(id=="ui"){
+			if(id=="ui" || id=="dialogue"){
 				Display.canvas[id].width = window.innerWidth;
 				Display.canvas[id].height = window.innerHeight;
 			}else{

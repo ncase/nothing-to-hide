@@ -76,6 +76,7 @@
 		}
 
 		this.suspicion = new Suspicion(this);
+		this.dialogue = new Dialogue(this,{ dialogues:lvl.dialogues || [] });
 
 		this.camera = new Camera(this,{
 			actions: lvl.camera
@@ -95,14 +96,12 @@
 		// Checkpoints
 		self.saveState = saveState;
 		self.checkpoints = lvl.checkpoints || [];
-		self.dialogues = lvl.dialogues || [];
 
 		// Game Loop
 		self.goal = lvl.goal;
 		this.update = function(){
 
 			// UI everything
-			Dialogue.update();
 			Cursor.update();
 			Key.update();
 
@@ -116,25 +115,21 @@
 			this.dummies.update();
 			this.blocks.update();
 			this.suspicion.update();
+			this.dialogue.update();
 
 			// Are you in a checkpoint
 			for(var i=0;i<self.checkpoints.length;i++){
 				var cp = self.checkpoints[i];
-				if(!cp.saved && _isInArea(cp)){
-					cp.saved = true;
+				if(_isInArea(cp)){
 
-					// Create save state
-					self.saveState = _createSaveState();
+					// Create save state if just entered
+					if(!cp.currentlyInHere){
+						cp.currentlyInHere = true;
+						self.saveState = _createSaveState();
+					}
 
-				}
-			}
-
-			// Are you in a Dialogue spot?
-			for(var i=0;i<self.dialogues.length;i++){
-				var dialogue = self.dialogues[i];
-				if(!dialogue.said && _isInArea(dialogue.area)){
-					dialogue.said = true;
-					Dialogue.queue(dialogue.queue);
+				}else{
+					cp.currentlyInHere = false;
 				}
 			}
 
@@ -202,6 +197,7 @@
 		// Draw Loop: Camera draws everything
 		this.draw = function(){
 			this.camera.draw();
+			self.dialogue.draw();
 		};
 
 		// Kill
