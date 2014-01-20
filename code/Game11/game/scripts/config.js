@@ -35,6 +35,8 @@ Asset.init({
 		propaganda_stream_wall:'assets/propaganda/stream_wall.png',
 		propaganda_stream_wall_2:'assets/propaganda/stream_wall_2.png',
 		propaganda_questions:'assets/propaganda/questions.png',
+		propaganda_intro_pics:'assets/propaganda/intro_pics.png',
+		propaganda_pickup_lookout:'assets/propaganda/pickup_lookout.png',
 
 	},
 	sprites:{

@@ -120,6 +120,7 @@
 	"propaganda": [
 		{"type":"image", "img":"propaganda_tut_pickup", "x":0, "y":0},
 		{"type":"image", "img":"propaganda_tut_carpet", "x":0, "y":6},
+		{"type":"image", "img":"propaganda_pickup_lookout", "x":8, "y":7},
 		{"type":"image", "img":"propaganda_pickup_gardner", "x":1, "y":12}
 	],
 

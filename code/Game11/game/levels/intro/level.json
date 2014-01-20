@@ -64,21 +64,14 @@
 			"area": {"ax":9,"bx":11,"ay":0,"by":11},
 			"queue": [
 				{
-					"message": "nobody needs me...",
-					"duration": 2000
+					"message": "Nobody needs me...",
+					"duration": 3000
 				},
 				{
 					"message": "Guess I'm running away to Canada, then.",
 					"duration": 4000
 				}
 			]
-		},
-		{
-			"queue": [{
-				"message": "What happened here?...",
-				"duration": 2000
-			}],
-			"area": {"ax":37,"bx":39,"ay":10,"by":11}
 		}
 	],
 
