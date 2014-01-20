@@ -26,7 +26,8 @@ Asset.init({
 		propaganda_tut_darker:'assets/propaganda/tut_darker.png',
 
 		propaganda_smile:'assets/propaganda/smile.png',
-		propaganda_puzzle_error:'assets/propaganda/puzzle_error.png',
+		propaganda_puzzle_psa:'assets/propaganda/puzzle_psa.png',
+		propaganda_puzzle_mock:'assets/propaganda/puzzle_mock.png',
 		propaganda_needs_dummy:'assets/propaganda/needs_dummy.png',
 		propaganda_pickup_gardner:'assets/propaganda/pickup_gardner.png',
 		propaganda_nobody_the_wall:'assets/propaganda/nobody_the_wall.png',

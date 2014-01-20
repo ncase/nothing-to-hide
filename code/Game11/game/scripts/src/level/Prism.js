@@ -201,7 +201,7 @@
 		// Draw Sight Line
 		var _drawSightLine = function(ctx){
 
-			if(self.sightPolygon){
+			if(self.sightPolygon && self.active){
 
 				// Objects in sight
 				var humanoids = [level.player].concat(level.dummies.dummies);
