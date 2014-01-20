@@ -123,7 +123,7 @@
 				if(_isInArea(cp)){
 
 					// Create save state if just entered
-					if(!cp.currentlyInHere){
+					if(!cp.currentlyInHere && !self.suspicion.isHiding){
 						cp.currentlyInHere = true;
 						self.saveState = _createSaveState();
 					}
@@ -182,10 +182,12 @@
 			// If you're holding any, yeah, drop it.
 			var heldPrism = self.prisms.getHeldPrism();
 			if(heldPrism){
-				state.prisms.push({
+				var savedPrism = {
 					x: self.player.x,
 					y: self.player.y
-				});
+				};
+				if(heldPrism.id) savedPrism.id=heldPrism.id;
+				state.prisms.push(savedPrism);
 			}
 
 			// Todo: Blocks
