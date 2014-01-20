@@ -201,6 +201,7 @@
 		// Draw Sight Line
 		var _drawSightLine = function(ctx){
 
+			return;
 			if(self.sightPolygon && self.active){
 
 				// Objects in sight
