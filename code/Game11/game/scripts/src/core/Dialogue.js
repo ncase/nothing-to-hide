@@ -89,6 +89,7 @@
 		var _splitLines = function(ctx,string,width,lineHeight){
 
 			var drawLines = [];
+			string += " ";
 
 			ctx.font = '20px sans-serif';
 			ctx.textBaseline = 'top';

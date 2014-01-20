@@ -86,19 +86,6 @@
 
 	"dialogues": [
 		{
-			"area": {"ax":3,"bx":7,"ay":3,"by":5},
-			"queue": [
-				{
-					"message": "Hu-- huh? These are my old pictures.",
-					"duration": 3000
-				},
-				{
-					"message": "Look at that smile! That looks genuine. ...That <i>was</i> genuine.",
-					"duration": 5000
-				}
-			]
-		},
-		{
 			"area": {"ax":14,"bx":21,"ay":3,"by":5},
 			"queue": [
 				{
@@ -110,6 +97,7 @@
 	],
 
 	"propaganda": [
+		{"type":"image", "img":"propaganda_questions", "x":0, "y":0},
 		{"type":"image", "img":"propaganda_tut_slidewalk", "x":6, "y":6}
 	],
 

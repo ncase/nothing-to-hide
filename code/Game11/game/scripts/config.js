@@ -34,6 +34,7 @@ Asset.init({
 		propaganda_nobody_messes:'assets/propaganda/nobody_messes.png',
 		propaganda_stream_wall:'assets/propaganda/stream_wall.png',
 		propaganda_stream_wall_2:'assets/propaganda/stream_wall_2.png',
+		propaganda_questions:'assets/propaganda/questions.png',
 
 	},
 	sprites:{
@@ -54,7 +55,7 @@ Asset.init({
 
 		SmallProps:'assets/sprites/SmallProps',
 		BigProps:'assets/sprites/BigProps',
-		
+
 		Dandy:'assets/sprites/Dandy'
 
 	},
