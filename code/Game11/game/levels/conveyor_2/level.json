@@ -127,6 +127,11 @@
 		}
 	],
 
+	"propaganda": [
+		{"type":"image", "img":"propaganda_unsecret_ballot", "x":0, "y":0},
+		{"type":"image", "img":"propaganda_error", "x":13, "y":0}
+	],
+
 	"art": {
 		"background": false,
 		"cam": false,

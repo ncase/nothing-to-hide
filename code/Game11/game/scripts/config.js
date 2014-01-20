@@ -38,6 +38,8 @@ Asset.init({
 		propaganda_questions:'assets/propaganda/questions.png',
 		propaganda_intro_pics:'assets/propaganda/intro_pics.png',
 		propaganda_pickup_lookout:'assets/propaganda/pickup_lookout.png',
+		propaganda_unsecret_ballot:'assets/propaganda/unsecret_ballot.png',
+		propaganda_error:'assets/propaganda/error.png',
 
 	},
 	sprites:{
