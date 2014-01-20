@@ -127,13 +127,13 @@ window.onload = function(){
 		//////// INTERNAL MONOLOGUE //////////
 
 		_generatePost("conversation",poster.poppy,"14 minutes ago",{
-			message: "... I have to leave."
+			message: "I... I have to get out of here..."
 		}),
 		_generatePost("conversation",poster.poppy,"14 minutes ago",{
-			message: "Dad will be better off without me."
+			message: "Dad will be better off without me. His popularity metrics, too."
 		}),
 		_generatePost("conversation",poster.poppy,"14 minutes ago",{
-			message: "I don't deserve all the loving security he's given me."
+			message: "I don't deserve his loving security and discipline."
 		}),
 		_generatePost("conversation",poster.poppy,"14 minutes ago",{
 			message: "Goodbye, dad. I'm so sorry."
