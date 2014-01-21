@@ -62,7 +62,7 @@
 			ctx.lineWidth = 1;
 			ctx.fillRect(0,0,300,box.height+30);
 			ctx.strokeRect(0,0,300,box.height+30);
-			boxHeight = box.height + 120;
+			boxHeight = box.height + 200;
 
 			// Draw arrow
 			ctx.beginPath();
@@ -140,6 +140,7 @@
 
 		var lastPos = {x:0,y:0};
 		var ctx = Display.context.dialogue;
+		var container;
 		this.draw = function(){
 
 			// Wipe last thing
@@ -166,6 +167,10 @@
 			// My Position
 			var x = level.player.x + level.camera.cx;
 			var y = level.player.y + level.camera.cy;
+
+			container = container || document.querySelector("canvas#game");
+			x = x + container.offsetLeft;
+			y = y + container.offsetTop;
 			
 			if(x<200) x=200+(x-200)*0.2;
 			if(y<boxHeight) y=boxHeight+(y-boxHeight)*0.2;
@@ -177,12 +182,13 @@
 
 			// Draw the damn thing
 			ctx.save();
-			ctx.translate(x,y-60);
+			ctx.translate(x,y-140);
 			ctx.scale(scale,scale);
-			ctx.drawImage(cacheCanvas,-150,-(boxHeight-60));
+			ctx.drawImage(cacheCanvas,-150,-(boxHeight-140));
 			ctx.restore();
 
 		};
+		
 
 		this.queue = function(cues){
 

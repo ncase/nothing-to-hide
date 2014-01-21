@@ -145,7 +145,7 @@
 				var dandy = self.dummies.dummies[0];
 				var dx = self.player.x-dandy.x;
 				var dy = self.player.y-dandy.y;
-				if(dx*dx+dy*dy<50*50){
+				if(dx*dx+dy*dy<70*70){
 					if(!alreadyExited){
 						alreadyExited = true;
 						window.top.gotoPage("cutscene/cutscene_end");

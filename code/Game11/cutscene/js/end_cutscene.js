@@ -305,10 +305,13 @@ window.onload = function(){
 		}else{
 
 			var frame = Math.floor(END_FRAME/3);
+			if(frame>5) frame=6;
 			turnoff_frame.style.backgroundPosition = "0 -"+frame*200+"px";
 			END_FRAME++;
 
-			if(frame>5) return;
+			if(END_FRAME>60){
+				window.top.gotoPage("menu/menu");
+			}
 
 		}
 

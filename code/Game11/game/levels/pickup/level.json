@@ -1,5 +1,5 @@
 {
-	"player":{ "x":0, "y":5 },
+	"player":{ "x":7, "y":24 },
 	"goal":{"ax":9,"bx":10,"ay":36,"by":37},
 
 	"shadows": [
@@ -98,20 +98,12 @@
 			"area": {"ax":7,"bx":14,"ay":17,"by":20},
 			"queue": [
 				{
-					"message": "Oh… there's Daddy's campaign post. Look at my smile.",
+					"message": "Oh… there's Daddy's campaign post. Look at my smile. :)",
 					"duration": 4000
 				},
 				{
-					"message": ":)",
-					"duration": 2000
-				},
-				{
-					"message": "He disciplined me when it didn't look genuine enough.",
+					"message": "He disciplined me when my smile didn't look genuine enough. :)",
 					"duration": 4000
-				},
-				{
-					"message": ":)",
-					"duration": 2000
 				}
 			]
 		}

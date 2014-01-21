@@ -32,10 +32,10 @@
 			}
 
 			// CCTV
-			dotOffset += 4;
-			if(dotOffset>=100) dotOffset=0;
+			dashOffest += 3;
+			if(dashOffest>=60) dashOffest=0;
 		};
-		var dotOffset = 0;
+		var dashOffest = 0;
 
 		/////////////////////
 		///// DRAW LOOP /////
@@ -213,9 +213,13 @@
 					}
 				}
 
-				// A dotted to each humanoid seen
-				ctx.fillStyle = (self.id) ? "#99F" : "#FA0";
+				// Dashy lines
+				ctx.lineWidth = 4;
+				ctx.lineCap = "square";
+				ctx.strokeStyle = (self.id) ? "#99F" : "#FA0";
 				for(var i=0;i<humanoidsSeen.length;i++){
+
+					// Vector to humanoid
 					var hum = humanoidsSeen[i];
 					var vect = {
 						x: hum.x-self.x,
@@ -224,22 +228,40 @@
 					var mag = Math.sqrt(vect.x*vect.x + vect.y*vect.y);
 					vect.x /= mag;
 					vect.y /= mag;
-					for(var dist=100-dotOffset;dist<mag;dist+=100){
-						var dotX = self.x + vect.x*dist;
-						var dotY = self.y + vect.y*dist;
-						if(dist<100){
-							ctx.globalAlpha = dist/100;
-						}else if(dist>mag-100){
-							ctx.globalAlpha = 1 - (dist-(mag-100))/100;
+
+					// Begin drawing - ALL ONE STROKE
+					ctx.beginPath();
+
+					// Per dash
+					var drawDash = true;
+					for(var dist=-dashOffest;dist<mag;true){
+
+						drawDash = !drawDash;
+						if(dist>=mag) break;
+
+						var dashDist = (dist<0) ? 0 : dist;
+						var dashX = self.x + vect.x*dashDist;
+						var dashY = self.y + vect.y*dashDist;
+
+						if(drawDash){
+							ctx.moveTo(dashX,dashY);
+							dist += 20;
 						}else{
-							ctx.globalAlpha = 1;
+							ctx.lineTo(dashX,dashY);
+							dist += 40;
 						}
-						ctx.beginPath(); 
-						ctx.arc(dotX,dotY,4,0,Math.PI*2,true);
-						ctx.fill();
+
 					}
+
+					// End stroke
+					if(drawDash){
+						var dashX = hum.x;
+						var dashY = hum.y;
+						ctx.lineTo(dashX,dashY);
+					}
+					ctx.stroke();
+
 				}
-				ctx.globalAlpha = 1;
 
 			}
 
