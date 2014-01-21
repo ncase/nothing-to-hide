@@ -7,7 +7,7 @@
 		{"ax":1,"bx":1,"ay":0,"by":14},
 		{"ax":1,"bx":12,"ay":14,"by":14},
 		{"ax":12,"bx":12,"ay":14,"by":23},
-		{"ax":13,"bx":13,"ay":14,"by":21},
+		{"ax":13,"bx":13,"ay":14,"by":22},
 		{"ax":13,"bx":17,"ay":14,"by":14},
 		{"ax":17,"bx":17,"ay":0,"by":14},
 
@@ -79,7 +79,7 @@
 
 	"dialogues": [
 		{
-			"area": {"ax":1,"bx":6,"ay":7,"by":9},
+			"area": {"ax":12,"bx":17,"ay":5,"by":9},
 			"queue": [
 				{
 					"message": "This is the longest I've been alone. Ten whole minutes!",
@@ -88,15 +88,6 @@
 				{
 					"message": "Alone with my thoughts. My own... personal thoughts.",
 					"duration": 4000
-				}
-			]
-		},
-		{
-			"area": {"ax":12,"bx":17,"ay":20,"by":21},
-			"queue": [
-				{
-					"message": "I'm scared. Who will help discipline me if I have illegal thoughts?",
-					"duration": 5000
 				}
 			]
 		}

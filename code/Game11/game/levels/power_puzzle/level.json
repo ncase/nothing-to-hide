@@ -108,8 +108,8 @@
 			"area": {"ax":1,"bx":2,"ay":5,"by":10},
 			"queue": [
 				{
-					"message": "I'm not sure, but I think that poor boy was in the room after this one...?",
-					"duration": 6000
+					"message": "That poor 'Nobody' boy... I have to help him!",
+					"duration": 3000
 				}
 			]
 		}

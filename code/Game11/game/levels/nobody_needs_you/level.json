@@ -108,19 +108,15 @@
 
 	"dialogues": [
 		{
-			"area": {"ax":4,"bx":5,"ay":17,"by":18},
+			"area": {"ax":9,"bx":11,"ay":7,"by":8},
 			"queue": [
 				{
-					"message": "I know it's illegal to help strangers, but… I have to save this mystery person!",
-					"duration": 5000
+					"message": "For once in my life... I don't care how others will judge me! I... I have to help!",
+					"duration": 4000
 				},
 				{
 					"message": "'Nobody' needs me!",
-					"duration": 2500
-				},
-				{
-					"message": "'NOBODY' NEEDS ME!",
-					"duration": 2500
+					"duration": 2000
 				}
 			]
 		}

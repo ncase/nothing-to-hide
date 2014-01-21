@@ -196,6 +196,11 @@
 			for(var i=0;i<cues.length;i++){
 				var cue = cues[i];
 
+				// SOUND!
+				if(cue.sound){
+					createjs.Sound.play.apply(null,cue.sound);
+				}
+
 				// Waiting? Just... well... wait.
 				if(cue.wait){
 					startTime += Math.ceil(cue.wait*0.03);

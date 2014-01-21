@@ -95,36 +95,6 @@
 	],
 
 	"dialogues": [
-		{
-			"area": {"ax":3,"bx":5,"ay":3,"by":4},
-			"queue": [
-				{
-					"message": "Now that Daddy's not here to control my thoughts... I'm thinking...",
-					"duration": 4000
-				},
-				{
-					"message": "He... took away my <i>personal</i> life! For his <i>personal</i> gain!",
-					"duration": 5000
-				}
-			]
-		},
-		{
-			"area": {"ax":21,"bx":24,"ay":9,"by":10},
-			"queue": [
-				{
-					"message": "Daddy doesn't care about me! He's a... a...",
-					"duration": 4000
-				},
-				{
-					"message": "<b style='font-size:40px'>meanie</b>",
-					"duration": 2000
-				},
-				{
-					"message": "There! I thought it! I thought it, <i>in my head!</i>",
-					"duration": 4000
-				}
-			]
-		}
 	],
 
 	"propaganda": [

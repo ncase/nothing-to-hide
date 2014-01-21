@@ -98,7 +98,11 @@
 			"area": {"ax":15,"bx":18,"ay":14,"by":15},
 			"queue": [
 				{
-					"message": "What was that noise? :S",
+					"wait": 500,
+					"sound": ["sfx_shotdown",null,0,0,0,0.2,1]
+				},
+				{
+					"message": "What... what was that noise?",
 					"duration": 2000
 				}
 			]
@@ -107,12 +111,8 @@
 			"area": {"ax":7,"bx":12,"ay":4,"by":5},
 			"queue": [
 				{
-					"message": "Ahh! That boy got tranquilized!",
-					"duration": 3000
-				},
-				{
-					"message": "He looks about my age, and his name is… 'Nobody'?",
-					"duration": 5000
+					"message": "Oh... oh my...",
+					"duration": 1500
 				}
 			]
 		}

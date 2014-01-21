@@ -85,15 +85,6 @@
 	],
 
 	"dialogues": [
-		{
-			"area": {"ax":14,"bx":21,"ay":3,"by":5},
-			"queue": [
-				{
-					"message": "I... used to be happy.",
-					"duration": 3000
-				}
-			]
-		}
 	],
 
 	"propaganda": [

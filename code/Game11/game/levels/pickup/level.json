@@ -1,5 +1,5 @@
 {
-	"player":{ "x":7, "y":24 },
+	"player":{ "x":0, "y":5 },
 	"goal":{"ax":9,"bx":10,"ay":36,"by":37},
 
 	"shadows": [
