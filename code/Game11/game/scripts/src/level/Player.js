@@ -34,7 +34,7 @@
 	    	var my = Mouse.y - level.camera.cy;
 	    	var dx = self.x - mx;
 			var dy = (self.y-50) - my;
-			if(dx*dx + dy*dy < 25*25){
+			if(self.holdingPrism && dx*dx + dy*dy < 25*25){
 				hovering = true;
 				Cursor.hovering++;
 			}

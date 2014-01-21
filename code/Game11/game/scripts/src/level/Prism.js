@@ -57,8 +57,10 @@
 		buttonSprite.scaleX = buttonSprite.scaleY = 0;
 		var buttonRotation = 0;
 
-		var EYE_WIDTH = 8;
-		var EYE_HEIGHT = 5;
+		var eyeSprite = new Sprite("PrismEye");
+		eyeSprite.regX = -5;
+		eyeSprite.regY = -5;
+
 		this.draw = function(ctx){
 
 			// Sight Line
@@ -98,11 +100,6 @@
 			prismSprite.y = self.y;
 			prismSprite.draw(ctx);
 
-			// Translate, yo
-			ctx.save();
-		    ctx.translate(self.x,self.y);
-		    ctx.translate(prismSprite.regX,prismSprite.regY);
-
 			// Draw eye pupils
 			if(self.active){
 
@@ -123,20 +120,16 @@
 					y: target.y-self.y
 				}
 				var mag = Math.sqrt(vectToPlayer.x*vectToPlayer.x + vectToPlayer.y*vectToPlayer.y);
-				vectToPlayer.x *= EYE_WIDTH/mag;
-				vectToPlayer.y *= EYE_HEIGHT/mag;
+				vectToPlayer.x *= 5/mag;
+				vectToPlayer.y *= 5/mag;
 
-				// Draw black circle
-				ctx.save();
-				ctx.translate(21,38);
-				ctx.fillStyle = "#000";
-				ctx.beginPath(); 
-				ctx.arc(vectToPlayer.x,vectToPlayer.y,2,0,Math.PI*2,true);
-				ctx.fill();
-				ctx.restore();
+				// Draw eye
+				eyeSprite.frameIndex = 0;
+				eyeSprite.x = self.x+prismSprite.regX+21 + vectToPlayer.x;
+				eyeSprite.y = self.y+prismSprite.regY+38 + vectToPlayer.y;
+				eyeSprite.draw(ctx);
 
 			}
-			ctx.restore();
 
 			// Placeholder CLICK ME circle
 			if(buttonSprite.scaleX>0.03){
@@ -183,18 +176,14 @@
 					y: target.y-self.y
 				}
 				var mag = Math.sqrt(vectToPlayer.x*vectToPlayer.x + vectToPlayer.y*vectToPlayer.y);
-				vectToPlayer.x *= EYE_WIDTH/mag;
-				vectToPlayer.y *= EYE_HEIGHT/mag;
+				vectToPlayer.x *= 5/mag;
+				vectToPlayer.y *= 5/mag;
 
-				// Draw black circle
-				var ctx = cctvContext;
-				ctx.save();
-				ctx.translate(self.x+prismSprite.regX+21, self.y+prismSprite.regY+38);
-				ctx.fillStyle = "#999";
-				ctx.beginPath(); 
-				ctx.arc(vectToPlayer.x,vectToPlayer.y,2,0,Math.PI*2,true);
-				ctx.fill();
-				ctx.restore();
+				// Draw eye
+				eyeSprite.frameIndex = 1;
+				eyeSprite.x = self.x+prismSprite.regX+21 + vectToPlayer.x;
+				eyeSprite.y = self.y+prismSprite.regY+38 + vectToPlayer.y;
+				eyeSprite.draw(cctvContext);
 
 			}
 
