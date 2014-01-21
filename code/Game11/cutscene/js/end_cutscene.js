@@ -48,8 +48,8 @@ window.onload = function(){
 			data: {
 				height: 350,
 				layers:[
-					{img:"pics2/main_bg.png", depth:0.5, offset:0},
-					{img:"pics2/slidewalk000"+slidewalk+".png", depth:0.5, offset:-219},
+					{img:"pics2/main_bg.png", depth:0.3, offset:0},
+					{img:"pics2/slidewalk000"+slidewalk+".png", depth:0.3, offset:-219},
 					{img:"pics2/"+image+".png", depth:0.1, offset:-20}
 				]
 			}
@@ -113,14 +113,14 @@ window.onload = function(){
 			{
 			height: 450,
 			layers: [
-				{img:"pics2/meta_8.png", depth:0.60, offset:20},
-				{img:"pics2/meta_7.png", depth:0.59, offset:20},
-				{img:"pics2/meta_6.png", depth:0.58, offset:20},
-				{img:"pics2/meta_5.png", depth:0.57, offset:20},
-				{img:"pics2/meta_4.png", depth:0.55, offset:20},
-				{img:"pics2/meta_3.png", depth:0.50, offset:20},
-				{img:"pics2/meta_2.png", depth:0.40, offset:20},
-				{img:"pics2/meta_1.png", depth:0.20, offset:20}
+				{img:"pics2/meta0008.png", depth:0.60, offset:20},
+				{img:"pics2/meta0007.png", depth:0.59, offset:20},
+				{img:"pics2/meta0006.png", depth:0.58, offset:20},
+				{img:"pics2/meta0005.png", depth:0.57, offset:20},
+				{img:"pics2/meta0004.png", depth:0.55, offset:20},
+				{img:"pics2/meta0003.png", depth:0.50, offset:20},
+				{img:"pics2/meta0002.png", depth:0.40, offset:20},
+				{img:"pics2/meta0001.png", depth:0.20, offset:20}
 			]
 		}),
 
@@ -298,7 +298,7 @@ window.onload = function(){
 		cctv.style.backgroundPositionY = cctvY;*/
 
 		// END
-		if(footer.offsetTop - window.scrollY < 600 ){
+		if(footer.offsetTop - window.scrollY < window.innerHeight-80 ){
 			document.body.style.background = "#000";
 			document.body.innerHTML = "";
 			return;
