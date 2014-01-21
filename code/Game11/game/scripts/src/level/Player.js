@@ -230,7 +230,9 @@
 			
 			Walk: new Sprite("Poppy_Walk"),
 			Walk_Eye: new Sprite("Poppy_Walk_With_Eye"),
-			Walk_Eye_2: new Sprite("Poppy_Walk_With_Eye_2")
+			Walk_Eye_2: new Sprite("Poppy_Walk_With_Eye_2"),
+
+			Shot: new Sprite("Poppy_Shot")
 		};
 		for(var id in playerSprites){
 			var sprite = playerSprites[id];
@@ -245,7 +247,26 @@
 		buttonSprite.scaleX = buttonSprite.scaleY = 0;
 		var buttonRotation = 0;
 
+		// Shot Poppy
+		playerSprites.Shot.regX = -60;
+		playerSprites.Shot.regY = -160;
+
 		this.draw = function(ctx){
+
+			// WHEN YOU'RE DEAD //
+
+			if(level.YOU_ARE_DEAD){
+				var sprite = playerSprites.Shot;
+				sprite.x = self.x;
+				sprite.y = self.y;
+			    sprite.scaleX = faceDirection*0.95;
+			    sprite.scaleY = 0.95;
+			    sprite.draw(ctx);
+			    sprite.frameIndex += 1;
+			    return;
+			}
+
+			//////////////////////////////////////////////////////////////
 
 			// CLICK ME
 			if(self.holdingPrism){

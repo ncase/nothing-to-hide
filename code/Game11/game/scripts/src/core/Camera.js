@@ -32,6 +32,7 @@
 
 		var cctvTexture = Asset.image.cctv;
 		var cctvPattern = Display.context.tmp.createPattern(cctvTexture, 'repeat');
+
 		Display.context.tmp.fillStyle = cctvPattern;
 
 		var HACK_for_intro_alpha = 0;
@@ -46,6 +47,20 @@
 			// Centering the camera
 			self.cx = Math.round(Display.width/2-self.x);
 			self.cy = Math.round(Display.height/2-self.y);
+
+
+			////////////////////////////////////////////////////////////////////////////////////////
+
+			// WHEN YOU'RE DEAD, JUST DRAW POPPY //
+
+			if(level.YOU_ARE_DEAD){
+				ctx.translate(self.cx,self.cy);
+				level.player.draw(ctx);
+				ctx.translate(-self.cx,-self.cy);
+				return;
+			}
+
+			////////////////////////////////////////////////////////////////////////////////////////
 
 			// Sort props
 			var props = [level.player].concat(level.prisms.prisms).concat(level.dummies.dummies).concat(level.blocks.blocks);

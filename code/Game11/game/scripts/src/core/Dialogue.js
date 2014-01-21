@@ -163,6 +163,7 @@
 
 			// Don't draw
 			if(scale==0) return;
+			if(level.YOU_ARE_DEAD) return;
 
 			// My Position
 			var x = level.player.x + level.camera.cx;

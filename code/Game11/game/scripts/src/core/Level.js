@@ -105,6 +105,9 @@
 			Cursor.update();
 			Key.update();
 
+			// DEAD
+			if(self.YOU_ARE_DEAD) return;
+
 			// Update everything
 			this.camera.update();
 			this.prisms.update();

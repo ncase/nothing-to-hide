@@ -70,7 +70,8 @@
 
 				// End level if you're out of grace
 				createjs.Sound.play("sfx_shotdown",null,0,0,0,1,0);
-				setTimeout(Game.clearLevel,0);
+				alarm.stop();
+				level.YOU_ARE_DEAD = true;
 
 				// Reset with level's savestate
 				var saveState = level.saveState;
