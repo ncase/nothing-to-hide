@@ -94,15 +94,6 @@
 
 	"dialogues": [
 		{
-			"area": {"ax":9,"bx":10,"ay":24,"by":25},
-			"queue": [
-				{
-					"message": "I think... this is what having a private thought feels like. Feels weird.",
-					"duration": 4000
-				}
-			]
-		},
-		{
 			"area": {"ax":15,"bx":18,"ay":14,"by":15},
 			"queue": [
 				{

@@ -104,6 +104,15 @@
 					"duration": 4000
 				}
 			]
+		},
+		{
+			"area": {"ax":21,"bx":24,"ay":9,"by":10},
+			"queue": [
+				{
+					"message": "I think... this is what having a private thought feels like. Feels weird.",
+					"duration": 4000
+				}
+			]
 		}
 	],
 
