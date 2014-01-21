@@ -126,7 +126,7 @@ window.onload = function(){
 
 		_generateConvoPost(
 			poster.nobody, "3 minutes ago",
-			'"Poppy Gardner posted 1 minute ago. Sometimes Daddy wakes me up like this. Maybe this will..."'
+			'"Poppy Gardner posted 1 minute ago. Sometimes Daddy wakes me up like this. Maybe this will work..."'
 		),
 		_generateConvoPost(
 			poster.nobody, "3 minutes ago",
@@ -282,26 +282,34 @@ window.onload = function(){
 	// TODO: WHAT HAPPENS IF THE ZOOM IF KER_FUCKED.....
 
 	// Draw Loop
-	/*var cctv = document.getElementById("video_cctv");
-	cctvY = 0;*/
+	var ITS_THE_END = false;
+	var END_FRAME = 0;
 	var footer = document.getElementById("footer");
+	var the_wall = document.getElementById("the_wall");
+	var turnoff = document.getElementById("turnoff");
+	var turnoff_frame = document.getElementById("turnoff_frame");
 	function draw(){
 		
-		if(!drawnSinceLastUpdate){
-			drawnSinceLastUpdate = true;
-			onScroll();
-		}
+		if(!ITS_THE_END){
 
-		// CCTV
-		/*cctvY += 1;
-		if(cctvY>=15) cctvY=0;
-		cctv.style.backgroundPositionY = cctvY;*/
+			if(!drawnSinceLastUpdate){
+				drawnSinceLastUpdate = true;
+				onScroll();
+			}
+			if(footer.offsetTop - window.scrollY < window.innerHeight ){
+				ITS_THE_END = true;
+				the_wall.style.opacity = 0;
+				turnoff.style.display = "block";
+			}
 
-		// END
-		if(footer.offsetTop - window.scrollY < window.innerHeight-80 ){
-			document.body.style.background = "#000";
-			document.body.innerHTML = "";
-			return;
+		}else{
+
+			var frame = Math.floor(END_FRAME/3);
+			turnoff_frame.style.backgroundPosition = "0 -"+frame*200+"px";
+			END_FRAME++;
+
+			if(frame>5) return;
+
 		}
 
 		// RAF
