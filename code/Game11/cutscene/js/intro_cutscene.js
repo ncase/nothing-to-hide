@@ -14,7 +14,7 @@ window.onload = function(){
 			icon: "icons/poppy.png"
 		},
 		gardner: {
-			user: "John Gardner",
+			user: "George Gardner",
 			icon: "icons/gardner.png"
 		},
 		game: {
