@@ -91,10 +91,20 @@
 	],
 
 	"checkpoints": [
+		{"ax":7,"bx":12,"ay":4,"by":10},
 		{"ax":21,"bx":24,"ay":9,"by":10}
 	],
 
 	"dialogues": [
+		{
+			"area": {"ax":7,"bx":12,"ay":5,"by":9},
+			"queue": [
+				{
+					"message": "I wonder... why I'm using so many ellipses and question marks?",
+					"duration": 4000
+				}
+			]
+		}
 	],
 
 	"propaganda": [

@@ -81,10 +81,20 @@
 	],
 
 	"checkpoints": [
+		{"ax":5,"bx":6,"ay":9,"by":10},
 		{"ax":15,"bx":16,"ay":5,"by":7}
 	],
 
 	"dialogues": [
+		{
+			"area": {"ax":15,"bx":16,"ay":5,"by":7},
+			"queue": [
+				{
+					"message": "I wonder... if I'm my own watchman... am I hiding from myself?",
+					"duration": 4000
+				}
+			]
+		}
 	],
 
 	"propaganda": [

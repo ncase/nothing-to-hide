@@ -105,18 +105,21 @@
 
 	"dialogues": [
 		{
-			"area": {"ax":1,"bx":2,"ay":5,"by":10},
+			"area": {"ax":1,"bx":2,"ay":2,"by":4},
 			"queue": [
 				{
-					"message": "That poor 'Nobody' boy... I have to help him!",
-					"duration": 3000
+					"message": "Poor 'Nobody'. I think he picked up the only iEye that was looking at him.",
+					"duration": 4000
+				},
+				{
+					"message": "Glad I've never done that.",
+					"duration": 2000
 				}
 			]
 		}
 	],
 
 	"propaganda": [
-		{"type":"image", "img":"propaganda_tut_darker", "x":2, "y":17},
 		{"type":"image", "img":"propaganda_nobody_messes", "x":3, "y":0}
 	],
 

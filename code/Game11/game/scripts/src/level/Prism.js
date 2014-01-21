@@ -32,10 +32,12 @@
 			}
 
 			// CCTV
-			dashOffest += 3;
-			if(dashOffest>=60) dashOffest=0;
+			dashOffset -= 3;
+			if(dashOffset<0) dashOffset=DASH_LENGTH+DASH_GAP;
 		};
-		var dashOffest = 0;
+		var dashOffset = 0;
+		var DASH_LENGTH = 20;
+		var DASH_GAP = 60;
 
 		/////////////////////
 		///// DRAW LOOP /////
@@ -234,7 +236,7 @@
 
 					// Per dash
 					var drawDash = true;
-					for(var dist=-dashOffest;dist<mag;true){
+					for(var dist=-dashOffset;dist<mag;true){
 
 						drawDash = !drawDash;
 						if(dist>=mag) break;
@@ -245,10 +247,10 @@
 
 						if(drawDash){
 							ctx.moveTo(dashX,dashY);
-							dist += 20;
+							dist += DASH_LENGTH;
 						}else{
 							ctx.lineTo(dashX,dashY);
-							dist += 40;
+							dist += DASH_GAP;
 						}
 
 					}

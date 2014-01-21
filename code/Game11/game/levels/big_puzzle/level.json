@@ -82,11 +82,10 @@
 			"area": {"ax":12,"bx":17,"ay":5,"by":9},
 			"queue": [
 				{
-					"message": "This is the longest I've been alone. Ten whole minutes!",
-					"duration": 4000
+					"wait": 1500
 				},
 				{
-					"message": "Alone with my thoughts. My own... personal thoughts.",
+					"message": "I wonder... if these laws against upsetting others... upset others?",
 					"duration": 4000
 				}
 			]

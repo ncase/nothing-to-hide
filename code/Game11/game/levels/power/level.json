@@ -46,7 +46,6 @@
 		{"x":9,"y":10, 	"frame":16},
 		{"x":10,"y":10,	"frame":16},
 		{"x":8,"y":9, 	"frame":16},
-		{"x":9,"y":9, 	"frame":16},
 		{"x":10,"y":9, 	"frame":16},
 		{"x":8,"y":8, 	"frame":16},
 		{"x":10,"y":8, 	"frame":16}
@@ -95,6 +94,15 @@
 
 	"dialogues": [
 		{
+			"area": {"ax":9,"bx":10,"ay":24,"by":25},
+			"queue": [
+				{
+					"message": "I think... this is what having a private thought feels like. Feels weird.",
+					"duration": 4000
+				}
+			]
+		},
+		{
 			"area": {"ax":15,"bx":18,"ay":14,"by":15},
 			"queue": [
 				{
@@ -111,8 +119,8 @@
 			"area": {"ax":7,"bx":12,"ay":4,"by":5},
 			"queue": [
 				{
-					"message": "Oh... oh my...",
-					"duration": 1500
+					"message": "Oh my... that looks uncomfortable.",
+					"duration": 2000
 				}
 			]
 		}
