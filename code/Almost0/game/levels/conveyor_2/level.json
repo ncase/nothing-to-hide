@@ -1,0 +1,132 @@
+{
+	"player":{ "x":0, "y":3 },
+	"goal":{"ax":23,"bx":24,"ay":0,"by":1},
+
+	"shadows": [
+		
+		{"ax":0,"bx":7,"ay":4,"by":4},
+		{"ax":7,"bx":7,"ay":4,"by":10},
+
+		{"ax":12,"bx":12,"ay":0,"by":6},
+		{"ax":12,"bx":12,"ay":7,"by":10},
+		
+		{"ax":20,"bx":20,"ay":0,"by":6},
+		{"ax":20,"bx":20,"ay":7,"by":10},
+		{"ax":21,"bx":21,"ay":0,"by":6},
+		{"ax":21,"bx":21,"ay":7,"by":10},
+		{"ax":20,"bx":21,"ay":7,"by":7},
+
+		{"ax":22,"bx":22,"ay":0,"by":9},
+		{"ax":23,"bx":23,"ay":0,"by":9}
+
+	],
+
+	"prisms": [
+		{ "x":5,"y":3 },
+		{ "x":6,"y":3 }
+	],
+
+	"dummies": [],
+
+	"blocks": [
+		{"x":9,"y":4},
+		{"x":9,"y":8},
+
+		{"x":14, "y":3, "frame":0},
+		{"x":14, "y":4, "frame":0},
+		{"x":14, "y":6, "frame":0},
+		{"x":14, "y":7, "frame":0},
+		{"x":14, "y":8, "frame":0},
+
+		{"x":16, "y":3, "frame":0},
+		{"x":16, "y":5, "frame":0},
+		{"x":16, "y":6, "frame":0},
+		{"x":16, "y":7, "frame":0},
+		{"x":16, "y":9, "frame":0},
+
+		{"x":18, "y":4, "frame":0},
+		{"x":18, "y":5, "frame":0},
+		{"x":18, "y":6, "frame":0},
+		{"x":18, "y":9, "frame":0},
+		{"x":18, "y":10, "frame":0}
+
+	],
+
+	"doors": [],
+
+	"conveyors": [
+		{
+			"belt": {"ax":7,"bx":11,"ay":4,"by":5},
+			"direction": {"x":1,"y":0},
+			"activator": ""
+		},
+		{
+			"belt": {"ax":11,"bx":12,"ay":4,"by":8},
+			"direction": {"x":0,"y":1},
+			"activator": ""
+		},
+		{
+			"belt": {"ax":8,"bx":12,"ay":8,"by":9},
+			"direction": {"x":-1,"y":0},
+			"activator": ""
+		},
+		{
+			"belt": {"ax":7,"bx":8,"ay":5,"by":9},
+			"direction": {"x":0,"y":-1},
+			"activator": ""
+		}
+	],
+
+	"camera": [
+		{
+			"type": "rails",
+			"zone": {"ax":0,"bx":5,"ay":0,"by":10},
+			"data": {"ax":0,"bx":7,"ay":5,"by":5}
+		},
+		{
+			"type": "fixed",
+			"zone": {"ax":5,"bx":24,"ay":0,"by":10},
+			"data": {"x":14.5,"y":5}
+		}
+	],
+
+	"checkpoints": [
+		{"ax":7,"bx":12,"ay":4,"by":10},
+		{"ax":21,"bx":24,"ay":9,"by":10}
+	],
+
+	"dialogues": [
+		{
+			"area": {"ax":7,"bx":12,"ay":5,"by":9},
+			"queue": [
+				{
+					"message": "I wonder... why I'm using so many ellipses and question marks?",
+					"duration": 4000
+				}
+			]
+		},
+		{
+			"area": {"ax":21,"bx":24,"ay":9,"by":10},
+			"queue": [
+				{
+					"message": "I think... this is what having a private thought feels like. Feels weird.",
+					"duration": 4000
+				}
+			]
+		}
+	],
+
+	"propaganda": [
+		{"type":"image", "img":"propaganda_unsecret_ballot", "x":0, "y":0},
+		{"type":"image", "img":"propaganda_error", "x":13, "y":0}
+	],
+
+	"art": {
+		"background": false,
+		"cam": false,
+		"lights": [
+			{"ax":0,"ay":0,"bx":15,"by":10}
+		]
+	}
+
+}
