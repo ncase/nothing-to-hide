@@ -13,14 +13,46 @@
 	var gameLoop;
 	var gameKilled = false;
 	var RAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
+
 	Game.start = function(){
 
 		var drawnSinceLastUpdate = false;
 
 		// Update loop
 		gameLoop = setInterval(function(){
+
 			if(Game.level) Game.level.update();
 			drawnSinceLastUpdate = false;
+
+			// Music
+			if(SWITCH_MUSIC!=-1 && Game.levelIndex>=3){
+				if(SWITCH_MUSIC==0){
+					music_bg_2.play(null,0,0,-1,0,0);
+				}
+				if(SWITCH_MUSIC<1){
+					SWITCH_MUSIC += 0.01;
+					music_bg_2.setVolume( MUSIC_VOLUME * (SWITCH_MUSIC) );
+					music_bg.setVolume( MUSIC_VOLUME * (1-SWITCH_MUSIC) );
+				}else{
+					SWITCH_MUSIC = -1;
+					music_bg.stop();
+				}
+			}
+			if(SWITCH_MUSIC_BACK!=-1 && SWITCH_MUSIC==-1 && Game.levelIndex>=7){
+				if(SWITCH_MUSIC_BACK==0){
+					music_bg.play(null,0,0,-1,0,0);
+				}
+				if(SWITCH_MUSIC_BACK<1){
+					SWITCH_MUSIC_BACK += 0.01;
+					music_bg.setVolume( MUSIC_VOLUME * (SWITCH_MUSIC_BACK) );
+					music_bg_2.setVolume( MUSIC_VOLUME * (1-SWITCH_MUSIC_BACK) );
+				}else{
+					SWITCH_MUSIC_BACK = -1;
+					music_bg_2.stop();
+				}
+			}
+			
+
 		},1000/30);
 
 		// Draw Loop
@@ -46,7 +78,12 @@
 		draw();
 
 		// BG Music
-		createjs.Sound.play("music_bg",null,0,0,-1,0.4,0);
+		var MUSIC_VOLUME = 0.25;
+		var SWITCH_MUSIC = 0;
+		var SWITCH_MUSIC_BACK = 0;
+		var music_bg = createjs.Sound.createInstance("music_bg");
+		var music_bg_2 = createjs.Sound.createInstance("music_bg_2");
+		music_bg.play(null,0,0,-1,MUSIC_VOLUME,0);
 
 		// First level
 		Game.gotoLevel(0);

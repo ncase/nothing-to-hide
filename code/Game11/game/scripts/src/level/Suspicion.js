@@ -69,7 +69,7 @@
 				grace-=1;
 
 				// End level if you're out of grace
-				createjs.Sound.play("sfx_shotdown",null,0,0,0,1,0);
+				createjs.Sound.play("sfx_shotdown",null,0,0,0,0.8,0);
 				alarm.stop();
 				level.YOU_ARE_DEAD = true;
 

@@ -19,7 +19,8 @@ window.addEventListener("load",function(){
 		numLoaded += Object.keys(Asset.sound).length;
 		numLoaded += Object.keys(Asset.sprite).length;
 		
-		var bar = numLoaded/totalAssets; // Hard coded
+		var bar = numLoaded/totalAssets;
+		bar = bar*bar*bar*bar; // Because music takes FOREVER.
 		loading_bar_white.style.width = Math.round(bar*100)+"%";
 
 	},50);

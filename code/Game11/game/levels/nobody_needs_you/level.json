@@ -108,7 +108,7 @@
 
 	"dialogues": [
 		{
-			"area": {"ax":7,"bx":8,"ay":7,"by":8},
+			"area": {"ax":9,"bx":11,"ay":7,"by":8},
 			"queue": [
 				{
 					"message": "For once in my life... I don't care how others will judge me! I... I have to help!",
