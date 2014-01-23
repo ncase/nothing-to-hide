@@ -6,192 +6,36 @@ window.gotoGame = function(){
 	window.top.gotoPage("level");
 }
 
-window.onload = function(){
-
-	var poster = {
-		poppy: {
-			user: "Poppy Gardner",
-			icon: "icons/poppy.png"
-		},
-		nobody: {
-			user: "Nobody",
-			icon: "icons/nobody.png"
-		}
-	};
-
-	var _generatePost = function(type,poster,data){
-		return {
-			type: type+"_post",
-			user: poster.user,
-			icon: poster.icon,
-			date: poster.date,
-			data: data
-		}
-	};
-
-	var _generateConvoPost = function(poster,date,message){
-		return {
-			type: "conversation_post",
-			user: poster.user,
-			icon: poster.icon,
-			date: date,
-			data: { message: message }
-		}
-	};
-
-	var _generateMainPost = function(image,slidewalk,date){
-		return {
-			type: "parallax_post",
-			user: poster.poppy.user,
-			icon: poster.poppy.icon,
-			date: date,
-			data: {
-				height: 350,
-				layers:[
-					{img:"pics2/main_bg.png", depth:0.3, offset:0},
-					{img:"pics2/slidewalk000"+slidewalk+".png", depth:0.3, offset:-219},
-					{img:"pics2/"+image+".png", depth:0.1, offset:-20}
-				]
-			}
-		}
-	};
-
-	var posts = [
-
-		////// SLAP AWAKE ///////
-
-		_generateMainPost("slap_1",1,"4 minutes ago"),
-		_generateConvoPost(
-			poster.poppy, "4 minutes ago",
-			"please don't be dead oh god oh god oh god oh god oh god"
-		),
-		_generateConvoPost(
-			poster.poppy, "4 minutes ago",
-			"Okay. Okay okay. Idea."
-		),
-		_generateConvoPost(
-			poster.poppy, "4 minutes ago",
-			"Sometimes Daddy wakes me up like this. Maybe this will work..."
-		),
-		
-		_generateMainPost("slap_2",2,"4 minutes ago"),
-		_generateConvoPost(
-			poster.poppy, "4 minutes ago",
-			"<span>#DaddyDaughterMoment</span>"
-		),
-		_generateMainPost("slap_3",3,"4 minutes ago"),
-
-		_generateConvoPost(
-			poster.nobody, "3 minutes ago",
-			"Ow! Pain on the face! You..."
-		),
-		_generateConvoPost(
-			poster.poppy, "3 minutes ago",
-			"i'm sorry"
-		),
-		_generateConvoPost(
-			poster.nobody, "3 minutes ago",
-			"...saved my life! Don't apologize, yo!"
-		),
-		_generateConvoPost(
-			poster.poppy, "3 minutes ago",
-			"i'm sorry for being sorry"
-		),
-
-		_generateMainPost("slap_4",4,"3 minutes ago"),
-
-		_generateConvoPost(
-			poster.nobody, "3 minutes ago",
-			"Hold up, are we on The Wall?..."
-		),
-
-		_generatePost("parallax",{
-				user: "Nothing To Hide",
-				icon: "icons/game.png",
-				date: "3 minutes ago"
-			},
-			{
-			height: 450,
-			layers: [
-				{img:"pics2/meta0008.png", depth:0.60, offset:20},
-				{img:"pics2/meta0007.png", depth:0.59, offset:20},
-				{img:"pics2/meta0006.png", depth:0.58, offset:20},
-				{img:"pics2/meta0005.png", depth:0.57, offset:20},
-				{img:"pics2/meta0004.png", depth:0.55, offset:20},
-				{img:"pics2/meta0003.png", depth:0.50, offset:20},
-				{img:"pics2/meta0002.png", depth:0.40, offset:20},
-				{img:"pics2/meta0001.png", depth:0.20, offset:20}
-			]
-		}),
-
-		_generateConvoPost(
-			poster.nobody, "3 minutes ago",
-			'"Poppy Gardner posted 1 minute ago. Sometimes Daddy wakes me up like this. Maybe this will work..."'
-		),
-		_generateConvoPost(
-			poster.nobody, "3 minutes ago",
-			'Oh. Oh wow. Minister Gardner does that to his own... wow.'
-		),
-
-		_generateMainPost("phone_1",5,"2 minutes ago"),
-
-		_generateMainPost("phone_1_extra",6,"2 minutes ago"),
-
-		_generateConvoPost(
-			poster.nobody, "2 minutes ago",
-			"<i>Wellllllllll</i> if it makes you feel better, your dad's psychologically and physically abusive to the rest of the nation, too."
-		),
-
-		_generateConvoPost(
-			poster.nobody, "2 minutes ago",
-
-			"\"Watch what you say & hear & watch & <i>think.\"</i><br>When we got no place to hide, we got to hide our true selves. "
-			
-			/*"\"Watch what you say & hear & watch & <i>think.\"</i><br>When we got no place to hide, we got to hide our true selves. "+
-			"Minister Gardner forces us to be our own watchmen. Literally too, when you move them iEyes."*/
-
-		),
-
-		_generateConvoPost(
-			poster.nobody, "2 minutes ago",
-			"I can help you escape him."
-		),
-
-		_generateMainPost("phone_2",7,"1 minute ago"),
-
-		_generateConvoPost(
-			poster.nobody, "1 minute ago",
-			"In fact, I got an app for that!"
-		),
-
-		_generateMainPost("phone_3",8,"1 minute ago"),
-
-		_generateConvoPost(
-			poster.nobody, "58 seconds ago",
-			"Exploit! Made it myself. Just tap this screen here, and you'll be erased from The Wall. You'll be a Nobody, just like me."
-		),
-		_generateConvoPost(
-			poster.nobody, "42 seconds ago",
-			"Stop acting for the camera. Start being yourself."
-		),
-
-		_generateMainPost("phone_4",9,"25 seconds ago"),
-		_generateMainPost("phone_5",8,"19 seconds ago"),
-		_generateMainPost("phone_6",9,"13 seconds ago"),
-		_generateMainPost("phone_7",8,"8 seconds ago"),
-		_generateMainPost("phone_8",9,"3 seconds ago"),
-		_generateMainPost("phone_9",8,"just now")
-
-	];
-
-	///////////
+var onLoad = function(){
 
 	var timeline = document.getElementById("timeline");
+	var soundEffects = [];
+	var ambiences = [];
 	var addPost = function(post){
 		var dom = document.createElement("div");
 		dom.setAttribute("class",post.type);
 
 		var html;
+
+		// Sound Effect
+		if(post.data.sound){
+			soundEffects.push({
+				dom: dom,
+				sound: post.data.sound
+			});
+		}
+
+		// Ambience
+		if(post.data.ambience){
+			var a = post.data.ambience;
+			var sound = createjs.Sound.createInstance(a.play); 
+			sound.play(null,0,0,-1,0,0);
+			ambiences.push({
+				dom: dom,
+				sound: sound,
+				ambience: a
+			});
+		}
 
 		// Post header
 		html = ''+
@@ -224,7 +68,7 @@ window.onload = function(){
 			// PARALLAX
 			html += ''+
 				'<div id="layers" style="height:400px">'+
-					'<div style="background-image:url('+post.data.bg+')" depth="0.7" offset="0"></div>'+
+					'<div style="background-image:url('+post.data.bg+')" depth="0.7" offset="40"></div>'+
 
 					'<div id="video" depth="1" offset="0">'+
 						'<div id="video_cctv"></div>'+
@@ -254,6 +98,7 @@ window.onload = function(){
 	var parallaxes = document.querySelectorAll("#layers");
 	function onScroll(event){
 			
+		// ALL PARALLAX LAYERS DO THEIR THING
 		for(var i=0;i<parallaxes.length;i++){
 			
 			var parallax = parallaxes[i];
@@ -273,6 +118,44 @@ window.onload = function(){
 			}
 
 		}
+
+		// Check all sound effects, play if DOM passes it.
+		for(var i=0;i<soundEffects.length;i++){
+			
+			var sfx = soundEffects[i];
+
+			// Play when halfway at screen
+			if( (sfx.dom.offsetTop - window.scrollY) + sfx.sound.offset < window.innerHeight*0.4){
+				if(!sfx.past) createjs.Sound.play.apply(null,sfx.sound.play);
+				sfx.past = true;
+			}else{
+				sfx.past = false;
+			}
+
+		}
+
+		// Ambience
+		for(var i=0;i<ambiences.length;i++){
+
+			var a = ambiences[i];
+			var pos = window.innerHeight*0.4 - (a.dom.offsetTop - window.scrollY);
+			var interval = a.ambience.interval;
+			var vol = 0;
+			if(pos>interval[1] && pos<interval[2]){
+				vol = 1;
+			}else if(pos>interval[0] && pos<=interval[1]){
+				vol = (pos-interval[0])/(interval[1]-interval[0]);
+			}else if(pos<interval[3] && pos>=interval[2]){
+				vol = 1 - ((pos-interval[2])/(interval[3]-interval[2]));
+			}else{
+				vol = 0;
+			}
+
+			vol *= a.ambience.volume;
+			a.sound.setVolume(vol);
+
+		}
+
 
 	};
 
@@ -300,6 +183,13 @@ window.onload = function(){
 				ITS_THE_END = true;
 				the_wall.style.opacity = 0;
 				turnoff.style.display = "block";
+
+				for(var i=0;i<ambiences.length;i++){
+					var a = ambiences[i];
+					a.sound.stop();
+				}
+				createjs.Sound.play("tv");
+
 			}
 
 		}else{
