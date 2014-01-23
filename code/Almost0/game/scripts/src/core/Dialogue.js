@@ -36,6 +36,7 @@
 				if(action[1]){
 					active = true;
 					_drawDialogue(action[2]);
+					createjs.Sound.play("sfx_dialog",null,0,0,0,1,0);
 				}else{
 					active = false;
 				}

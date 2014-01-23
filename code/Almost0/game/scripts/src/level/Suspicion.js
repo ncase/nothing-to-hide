@@ -30,14 +30,14 @@
 			var hidingSpots = 0;
 			if(_isInShadows(x,y)) hidingSpots++;
 			if(hidingSpots==1){
-				size = 10;
+				size = 15;
 				if(_isInShadows(x-size,y)) hidingSpots++;
 				if(_isInShadows(x+size,y)) hidingSpots++;
 				if(_isInShadows(x,y-size)) hidingSpots++;
 				if(_isInShadows(x,y+size)) hidingSpots++;
 			}
 			if(hidingSpots==5){
-				size = 20;
+				size = 30;
 				if(_isInShadows(x-size,y)) hidingSpots++;
 				if(_isInShadows(x+size,y)) hidingSpots++;
 				if(_isInShadows(x,y-size)) hidingSpots++;

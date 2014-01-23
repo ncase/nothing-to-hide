@@ -9,7 +9,9 @@ Asset.init({
 
 	},
 	sounds:{
-		big_brother: {src:'assets/music/mp3_64/big_brother.mp3'}
+		big_brother: {src:'assets/music/mp3_64/big_brother.mp3'},
+		button_hover: {src:'assets/sounds/ogg/button_hover.ogg'},
+		button_press: {src:'assets/sounds/ogg/button_press.ogg'}
 	},
 	sprites:{},
 	levels:{

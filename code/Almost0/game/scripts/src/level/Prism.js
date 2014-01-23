@@ -10,7 +10,7 @@
 
 		// Bounds
 		var w = Map.TILE_SIZE;
-		var h = Map.TILE_SIZE/2;
+		var h = 10;
 		self.bounds = {
 			left: -(w/2-1),
 			right: (w/2-1),

@@ -81,6 +81,12 @@ var onLoad = function(){
 				'</div>';
 
 			// HACK!
+			dom.addEventListener("mouseover",function(){
+				createjs.Sound.play("button_hover",null,0,0,0,1,0);
+			},false);
+			dom.addEventListener("mousedown",function(){
+				createjs.Sound.play("button_press",null,0,0,0,1,0);
+			},false);
 			dom.onclick = gotoGame;
 
 		}

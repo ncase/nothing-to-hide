@@ -23,7 +23,7 @@
 			/*if(Key.justPressed.shift){
 				sneakMode = !sneakMode;
 			}*/
-			sneakMode = Key.shift;
+			sneakMode = Key.shift || level.suspicion.isHiding;
 
 			///////////////////////
 			// CLICK TO PUT DOWN
@@ -172,13 +172,31 @@
 
 			// Footstep Sounds!
 			if(animState=="Walk"){
+
+				var floorSound;
+				var floorVolume;
+				switch(level.map.getTile(self.x,self.y)){
+					case Map.METAL:
+						floorSound="sfx_metal_footstep_";
+						floorVolume = 1;
+						break;
+					case Map.CARPET:
+						floorSound="sfx_carpet_footstep_";
+						floorVolume = 1;
+						break;
+					default:
+						floorSound="sfx_footstep_";
+						floorVolume = 0.5;
+						break;
+				}
+
 				var cx = level.camera.x;
 				var pan = (self.x-cx)/(Display.width/2);
 				if(lastFrameIndex<2 && frameIndex>=2){
-					createjs.Sound.play("sfx_footstep_1", null,0,0,false,0.5,pan);
+					createjs.Sound.play(floorSound+"1", null,0,0,0,floorVolume,pan);
 				}
 				if(lastFrameIndex<17 && frameIndex>=17){
-					createjs.Sound.play("sfx_footstep_2", null,0,0,false,0.2,pan);
+					createjs.Sound.play(floorSound+"2", null,0,0,0,floorVolume,pan);
 				}
 			}
 			lastFrameIndex = frameIndex;

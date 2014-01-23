@@ -79,9 +79,12 @@ Asset.init({
 		sfx_footstep_2:{src:'assets/sounds/mp3/step_2.mp3|assets/sounds/ogg/step_2.ogg'},
 		sfx_metal_footstep_1:{src:'assets/sounds/mp3/metal_step_1.mp3|assets/sounds/ogg/metal_step_1.ogg'},
 		sfx_metal_footstep_2:{src:'assets/sounds/mp3/metal_step_2.mp3|assets/sounds/ogg/metal_step_2.ogg'},
+		sfx_carpet_footstep_1:{src:'assets/sounds/ogg/carpet_step_1.ogg'},
+		sfx_carpet_footstep_2:{src:'assets/sounds/ogg/carpet_step_2.ogg'},
 
 		sfx_cam:{src:'assets/sounds/ogg/cam.ogg'},
 		sfx_slidewalk:{src:'assets/sounds/ogg/slidewalk.ogg'},
+		sfx_dialog:{src:'assets/sounds/ogg/dialog.ogg'},
 
 		music_bg: {src:'assets/music/mp3_64/a_healthy_dystopia.mp3'},
 		music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3'}
