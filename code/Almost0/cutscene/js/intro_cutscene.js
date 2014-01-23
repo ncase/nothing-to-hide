@@ -6,12 +6,25 @@ window.gotoGame = function(){
 	window.top.gotoPage("level");
 }
 
-createjs.Sound.registerManifest([
-	{id:"door_open", src:"sounds/door_open.wav"},
-	{id:"door_close", src:"sounds/door_close.wav"}
-]);
-
 window.onload = function(){
+
+	var manifest = [
+		{id:"door_open", src:"sounds/door_open.wav"},
+		{id:"door_close", src:"sounds/door_close.wav"},
+		{id:"city", src:"sounds/city.mp3"},
+		{id:"room", src:"sounds/room.mp3"}
+	];
+
+	var soundsLeft = manifest.length;
+	createjs.Sound.addEventListener("fileload",function(event){
+		soundsLeft--;
+		if(soundsLeft==0) onLoad();
+	});
+	createjs.Sound.registerManifest(manifest);
+
+};
+
+var onLoad = function(){
 
 	var poster = {
 		poppy: {
@@ -60,7 +73,7 @@ window.onload = function(){
 			],
 			sound: {
 				offset: 0,
-				play: ["sounds/door_open.wav",null,0,0,0,1,-1]
+				play: ["door_open",null,0,0,0,1,-1]
 			}
 		}),
 		_generatePost("parallax",poster.poppy,"16 minutes ago",{
@@ -125,7 +138,7 @@ window.onload = function(){
 			],
 			sound: {
 				offset: 200,
-				play: ["sounds/door_close.wav",null,0,0,0,1,-1]
+				play: ["door_close",null,0,0,0,1,-1]
 			}
 		}),
 		_generatePost("parallax",poster.poppy,"14 minutes ago",{
@@ -149,7 +162,12 @@ window.onload = function(){
 			message: "I don't deserve his loving security and discipline."
 		}),
 		_generatePost("conversation",poster.poppy,"14 minutes ago",{
-			message: "Goodbye, dad. I'm so sorry."
+			message: "Goodbye, dad. I'm so sorry.",
+			ambience: {
+				interval: [-40001,-40000,-500,500],
+				play: "room",
+				volume: 1
+			}
 		}),
 
 
@@ -157,7 +175,12 @@ window.onload = function(){
 
 		_generatePost("parallax",poster.poppy,"8 minutes ago",{
 			height: 250,
-			layers:[{img:"pics/escape_1.png", depth:1, offset:150}]
+			layers:[{img:"pics/escape_1.png", depth:1, offset:150}],
+			ambience: {
+				interval: [-700,0,1700,2200],
+				play: "city",
+				volume: 1
+			}
 		}),
 		_generatePost("parallax",poster.poppy,"8 minutes ago",{
 			height: 250,
@@ -187,6 +210,7 @@ window.onload = function(){
 
 	var timeline = document.getElementById("timeline");
 	var soundEffects = [];
+	var ambiences = [];
 	var addPost = function(post){
 		var dom = document.createElement("div");
 		dom.setAttribute("class",post.type);
@@ -198,6 +222,18 @@ window.onload = function(){
 			soundEffects.push({
 				dom: dom,
 				sound: post.data.sound
+			});
+		}
+
+		// Ambience
+		if(post.data.ambience){
+			var a = post.data.ambience;
+			var sound = createjs.Sound.createInstance(a.play); 
+			sound.play(null,0,0,-1,0,0);
+			ambiences.push({
+				dom: dom,
+				sound: sound,
+				ambience: a
 			});
 		}
 
@@ -283,7 +319,7 @@ window.onload = function(){
 
 		}
 
-		// Check all sound effects, play (once) if DOM is past
+		// Check all sound effects, play if DOM passes it.
 		for(var i=0;i<soundEffects.length;i++){
 			
 			var sfx = soundEffects[i];
@@ -294,6 +330,37 @@ window.onload = function(){
 				sfx.played = true;
 				createjs.Sound.play.apply(null,sfx.sound.play);
 			}
+
+			/*// Play when halfway at screen
+			if( (sfx.dom.offsetTop - window.scrollY) + sfx.sound.offset < window.innerHeight*0.6){
+				if(!sfx.past) createjs.Sound.play.apply(null,sfx.sound.play);
+				sfx.past = true;
+			}else{
+				if(sfx.past) createjs.Sound.play.apply(null,sfx.sound.play);
+				sfx.past = false;
+			}*/
+
+		}
+
+		// Ambience
+		for(var i=0;i<ambiences.length;i++){
+
+			var a = ambiences[i];
+			var pos = window.innerHeight*0.6 - (a.dom.offsetTop - window.scrollY);
+			var interval = a.ambience.interval;
+			var vol = 0;
+			if(pos>interval[1] && pos<interval[2]){
+				vol = 1;
+			}else if(pos>interval[0] && pos<=interval[1]){
+				vol = (pos-interval[0])/(interval[1]-interval[0]);
+			}else if(pos<interval[3] && pos>=interval[2]){
+				vol = 1 - ((pos-interval[2])/(interval[3]-interval[2]));
+			}else{
+				vol = 0;
+			}
+
+			vol *= a.ambience.volume;
+			a.sound.setVolume(vol);
 
 		}
 
