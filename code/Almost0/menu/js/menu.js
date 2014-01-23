@@ -48,6 +48,9 @@ Menu.start = function(){
 	}
 	draw();
 
+	// Music
+	createjs.Sound.play("big_brother",null,0,0,-1,1,0);
+
 };
 
 Menu.update = function(){

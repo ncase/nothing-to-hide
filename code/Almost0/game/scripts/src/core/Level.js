@@ -208,6 +208,7 @@
 		// Kill
 		this.kill = function(){
 			self.suspicion.kill();
+			self.conveyors.kill();
 		};
 
 		// UPDATE NOW

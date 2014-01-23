@@ -175,6 +175,11 @@
 		if(tick++>60){
 			swiping = false;
 			pos = 100;
+
+			// Hide
+			var screenswipe = document.getElementById("screenswipe");
+			screenswipe.style.display = "none";
+
 		}
 
 		var s = -pos;
@@ -184,11 +189,15 @@
 
 	};
 	Game.screenswipe = function(){
+
+		// Sound
+		createjs.Sound.play("sfx_cam");
 		
 		// Copy Canvas
 		var screenswipe = document.getElementById("screenswipe");
 		screenswipe.width = Display.canvas.game.width;
 		screenswipe.height = Display.canvas.game.height;
+		screenswipe.style.display = "block";
 		var ctx = screenswipe.getContext("2d");
 		ctx.drawImage(Display.canvas.game,0,0);
 

@@ -8,7 +8,9 @@ Asset.init({
 		propaganda_title:'assets/propaganda/title.png'
 
 	},
-	sounds:{},
+	sounds:{
+		big_brother: {src:'assets/music/mp3_64/big_brother.mp3'}
+	},
 	sprites:{},
 	levels:{
 		menu: 'levels/menu',

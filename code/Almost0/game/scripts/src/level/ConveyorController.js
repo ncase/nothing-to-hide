@@ -9,6 +9,10 @@
 		this.config = config;
 		this.conveyors = [];
 
+		// Sound
+		var slidewalkSound = createjs.Sound.createInstance("sfx_slidewalk");
+		slidewalkSound.play(null,0,0,-1,0,0);
+
 		// Create Conveyors
 		for(var i=0;i<config.conveyors.length;i++){
 			var conf = config.conveyors[i];
@@ -17,9 +21,20 @@
 		}
 
 		this.update = function(){
+			
+			var active = false;
+
 			for(var i=0;i<self.conveyors.length;i++){
 				self.conveyors[i].update();
+				if(self.conveyors[i].active) active=true;
 			}
+
+			slidewalkSound.setVolume( active ? 1 : 0);
+
+		};
+
+		this.kill = function(){
+			slidewalkSound.stop();
 		};
 
 		this.draw = function(ctx){
