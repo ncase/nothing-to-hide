@@ -6,6 +6,11 @@ window.gotoGame = function(){
 	window.top.gotoPage("level");
 }
 
+createjs.Sound.registerManifest([
+	{id:"door_open", src:"sounds/door_open.wav"},
+	{id:"door_close", src:"sounds/door_close.wav"}
+]);
+
 window.onload = function(){
 
 	var poster = {
@@ -52,7 +57,11 @@ window.onload = function(){
 				{img:"pics/background_back.png", depth:0.8, offset:0},
 				{img:"pics/background_front.png", depth:0.6, offset:0},
 				{img:"pics/establishing_fg_2.png", depth:0.1, offset:50}
-			]
+			],
+			sound: {
+				offset: 0,
+				play: ["sounds/door_open.wav",null,0,0,0,1,-1]
+			}
 		}),
 		_generatePost("parallax",poster.poppy,"16 minutes ago",{
 			height: 250,
@@ -113,7 +122,11 @@ window.onload = function(){
 				{img:"pics/background_back.png", depth:0.8, offset:0},
 				{img:"pics/background_front.png", depth:0.6, offset:0},
 				{img:"pics/door_close_3.png", depth:0.1, offset:100}
-			]
+			],
+			sound: {
+				offset: 200,
+				play: ["sounds/door_close.wav",null,0,0,0,1,-1]
+			}
 		}),
 		_generatePost("parallax",poster.poppy,"14 minutes ago",{
 			height: 450,
@@ -173,11 +186,20 @@ window.onload = function(){
 	///////////
 
 	var timeline = document.getElementById("timeline");
+	var soundEffects = [];
 	var addPost = function(post){
 		var dom = document.createElement("div");
 		dom.setAttribute("class",post.type);
 
 		var html;
+
+		// Sound Effect
+		if(post.data.sound){
+			soundEffects.push({
+				dom: dom,
+				sound: post.data.sound
+			});
+		}
 
 		// Post header
 		html = ''+
@@ -240,6 +262,7 @@ window.onload = function(){
 	var parallaxes = document.querySelectorAll("#layers");
 	function onScroll(event){
 			
+		// ALL PARALLAX LAYERS DO THEIR THING
 		for(var i=0;i<parallaxes.length;i++){
 			
 			var parallax = parallaxes[i];
@@ -259,6 +282,21 @@ window.onload = function(){
 			}
 
 		}
+
+		// Check all sound effects, play (once) if DOM is past
+		for(var i=0;i<soundEffects.length;i++){
+			
+			var sfx = soundEffects[i];
+			if(sfx.played) continue; // play just once
+
+			// Play when halfway at screen
+			if( (sfx.dom.offsetTop - window.scrollY) + sfx.sound.offset < window.innerHeight*0.6){
+				sfx.played = true;
+				createjs.Sound.play.apply(null,sfx.sound.play);
+			}
+
+		}
+
 
 	};
 

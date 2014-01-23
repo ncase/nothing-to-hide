@@ -16,15 +16,19 @@
 	var onMouseUp = function(event){
 	    Mouse.pressed = false;
 	};
-
-	var container;
 	var onMouseMove = function(event){
 		
 		Mouse.realX = event.clientX;
 		Mouse.realY = event.clientY;
 
-		Mouse.x = Mouse.realX;
-		Mouse.y = Mouse.realY;
+		var container = document.querySelector("canvas#screen");
+		if(!container){
+			Mouse.x = Mouse.realX;
+			Mouse.y = Mouse.realY;
+			return;
+		}
+		Mouse.x = event.clientX - container.offsetLeft - container.parentNode.offsetLeft;
+		Mouse.y = event.clientY - container.offsetTop - container.parentNode.offsetTop;
 
 		// BOUNDS
 		if(Mouse.x<0) Mouse.x=0;
