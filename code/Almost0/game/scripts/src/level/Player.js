@@ -126,11 +126,13 @@
 		    self.y += moveY;
 
 		    // Crappy Collision
-		    var endLoop = MAX_SPEED*5;
-		    while(_hitTest(this.x+11,this.y) && (endLoop--)>0) this.x-=1;
-		    while(_hitTest(this.x-11,this.y) && (endLoop--)>0) this.x+=1;
+		    var endLoop;
+		    endLoop = MAX_SPEED*2;
 		    while(_hitTest(this.x,this.y+11) && (endLoop--)>0) this.y-=1;
 		    while(_hitTest(this.x,this.y-11) && (endLoop--)>0) this.y+=1;
+		    endLoop = MAX_SPEED*2;
+		    while(_hitTest(this.x-11,this.y) && (endLoop--)>0) this.x+=1;
+		    while(_hitTest(this.x+11,this.y) && (endLoop--)>0) this.x-=1;
 		    if(endLoop<=0) console.log("WOOPS");
 
 

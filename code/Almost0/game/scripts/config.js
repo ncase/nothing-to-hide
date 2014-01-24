@@ -98,12 +98,9 @@ Asset.init({
 
 		conveyor: 'levels/conveyor',
 		conveyor_2: 'levels/conveyor_2',
-		// change direction. or block?
 
 		power: 'levels/power',
-		// intermission - tiny puzzle.
 		power_puzzle: 'levels/power_puzzle',
-		// intermission - dead person, with possibility for power
 		nobody_needs_you: 'levels/nobody_needs_you'
 
 	}

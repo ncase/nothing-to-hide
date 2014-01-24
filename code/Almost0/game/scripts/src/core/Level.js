@@ -76,6 +76,7 @@
 		}
 
 		this.suspicion = new Suspicion(this);
+		if(saveState) lvl.dialogues=saveState.dialogues;
 		this.dialogue = new Dialogue(this,{ dialogues:lvl.dialogues || [] });
 
 		this.camera = new Camera(this,{
@@ -194,6 +195,10 @@
 			}
 
 			// Todo: Blocks
+			// Todo: Dummies
+
+			// Dialogue
+			state.dialogues = JSON.parse(JSON.stringify(self.dialogue.dialogues));
 
 			return state;
 

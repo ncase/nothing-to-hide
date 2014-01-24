@@ -24,19 +24,19 @@
 	};
 
 	// Event Handling
-	function _onKeyDown(event){
+	Key.onKeyDown = function(event){
 	    Key[KEY_CODES[event.keyCode]]=true;
 	    event.stopPropagation();
 	    event.preventDefault();
 	}
-	function _onKeyUp(event){
+	Key.onKeyUp = function(event){
 	    Key[KEY_CODES[event.keyCode]]=false;
 	    event.stopPropagation();
 	    event.preventDefault();
 	}
-	window.top.addEventListener("keydown",_onKeyDown,false);
-	window.top.addEventListener("keyup",_onKeyUp,false);
-	window.addEventListener("keydown",_onKeyDown,false);
-	window.addEventListener("keyup",_onKeyUp,false);
+	window.top.addEventListener("keydown",Key.onKeyDown,false);
+	window.top.addEventListener("keyup",Key.onKeyUp,false);
+	window.addEventListener("keydown",Key.onKeyDown,false);
+	window.addEventListener("keyup",Key.onKeyUp,false);
 
 })(window);

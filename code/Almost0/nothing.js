@@ -33,7 +33,6 @@ window.onload = function(){
 
 	// Load Ready
 	window.onProgress = function(progress){
-		console.log(progress);
 		progress = progress*progress*progress*progress; // to look fast
 		bar.style.width = (progress*100)+"%";
 		if(progress==1){
