@@ -1,9 +1,9 @@
 ///////
 var alreadyExited = false;
-window.gotoGame = function(){
+function _goBackToMenu(){
 	if(alreadyExited) return;
 	alreadyExited = true;
-	window.top.gotoPage("level");
+	window.top.gotoPage("menu/menu");
 }
 
 var onLoad = function(){
@@ -200,7 +200,7 @@ var onLoad = function(){
 			END_FRAME++;
 
 			if(END_FRAME>60){
-				window.top.gotoPage("menu/menu");
+				_goBackToMenu();
 			}
 
 		}
