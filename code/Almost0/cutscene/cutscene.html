@@ -35,10 +35,70 @@ window.onload = function(){
 
 	];
 
-	var soundsLeft = manifest.length;
+	// Images
+	var images = [
+		"icons/poppy.png",
+		"icons/gardner.png",
+		"icons/game.png",
+		"pics/background_back.png",
+		"pics/background_front.png",
+		"pics/establishing_fg.png",
+		"pics/background_back.png",
+		"pics/background_front.png",
+		"pics/establishing_fg_2.png",
+		"pics/background_back.png",
+		"pics/background_front.png",
+		"pics/establishing_fg_3.png",
+		"pics/background_back.png",
+		"pics/background_front.png",
+		"pics/door_close_1.png",
+		"pics/background_back.png",
+		"pics/background_front.png",
+		"pics/door_close_2.png",
+		"pics/background_back.png",
+		"pics/background_front.png",
+		"pics/door_close_3.png",
+		"pics/background_back.png",
+		"pics/background_front.png",
+		"pics/door_close_4.png",
+		"pics/escape_1.png",
+		"pics/escape_2.png",
+		"pics/escape_3.png",
+		"pics/escape_4.png",
+		"pics/escape_5.png",
+		"pics/game.png"
+	];
+
+	// On Asset Loaded
+	var imagesLoaded = 0;
+	var soundsLoaded = 0;
+	var imagesTotal = images.length;
+	var soundsTotal = manifest.length;
+	var _onAssetLoaded = function(){
+		var loaded = imagesLoaded + soundsLoaded;
+		var total = imagesTotal + soundsTotal;
+		if(window.top.onProgress){
+			window.top.onProgress(loaded/total);
+		}else{
+			console.log(loaded/total);
+		}
+		if(loaded==total) onLoad();
+	};
+
+	// Images loaded
+	for(var i=0;i<images.length;i++){
+		var img = new Image();
+		img.onload = function(){
+			imagesLoaded++;
+			_onAssetLoaded();
+		};
+		img.src = images[i];
+	}
+
+	// Sounds loaded
 	createjs.Sound.addEventListener("fileload",function(event){
-		soundsLeft--;
-		if(soundsLeft==0) onLoad();
+		soundsLoaded++;
+		_onAssetLoaded();
 	});
 	createjs.Sound.registerManifest(manifest);
 

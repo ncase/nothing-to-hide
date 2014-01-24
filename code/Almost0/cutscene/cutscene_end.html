@@ -57,10 +57,76 @@ window.onload = function(){
 		{id:"pocket", src:"sounds2/pocket.mp3"}
 	];
 
-	var soundsLeft = manifest.length;
+	// Images
+	var images = [
+
+		"pics2/turnoff.png",
+		"icons/poppy.png",
+		"icons/nobody.png",
+		"pics2/main_bg.png",
+		"icons/game.png",
+		"pics2/meta0008.png",
+		"pics2/meta0007.png",
+		"pics2/meta0006.png",
+		"pics2/meta0005.png",
+		"pics2/meta0004.png",
+		"pics2/meta0003.png",
+		"pics2/meta0002.png",
+		"pics2/meta0001.png",
+		"pics2/main_bg.png",
+
+		"pics2/slidewalk0001.png",
+		"pics2/slidewalk0002.png",
+		"pics2/slidewalk0003.png",
+		"pics2/slidewalk0004.png",
+		"pics2/slidewalk0005.png",
+		"pics2/slidewalk0006.png",
+		"pics2/slidewalk0007.png",
+		"pics2/slidewalk0008.png",
+		"pics2/slidewalk0009.png",
+
+		"pics2/phone_1.png",
+		"pics2/phone_1_extra.png",
+		"pics2/phone_2.png",
+		"pics2/phone_3.png",
+		"pics2/phone_4.png",
+		"pics2/phone_5.png",
+		"pics2/phone_6.png",
+		"pics2/phone_7.png",
+		"pics2/phone_8.png",
+		"pics2/phone_9.png"
+	];
+
+	// On Asset Loaded
+	var imagesLoaded = 0;
+	var soundsLoaded = 0;
+	var imagesTotal = images.length;
+	var soundsTotal = manifest.length;
+	var _onAssetLoaded = function(){
+		var loaded = imagesLoaded + soundsLoaded;
+		var total = imagesTotal + soundsTotal;
+		if(window.top.onProgress){
+			window.top.onProgress(loaded/total);
+		}else{
+			console.log(loaded/total);
+		}
+		if(loaded==total) onLoad();
+	};
+
+	// Images loaded
+	for(var i=0;i<images.length;i++){
+		var img = new Image();
+		img.onload = function(){
+			imagesLoaded++;
+			_onAssetLoaded();
+		};
+		img.src = images[i];
+	}
+
+	// Sounds loaded
 	createjs.Sound.addEventListener("fileload",function(event){
-		soundsLeft--;
-		if(soundsLeft==0) onLoad();
+		soundsLoaded++;
+		_onAssetLoaded();
 	});
 	createjs.Sound.registerManifest(manifest);
 

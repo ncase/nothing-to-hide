@@ -1,9 +1,5 @@
 window.addEventListener("load",function(){
 
-	var loading = document.getElementById("loading_screen");
-	var loading_bar = document.getElementById("loading_bar");
-	var loading_bar_white = document.getElementById("loading_bar_white");
-
 	// Loading
 	var preloaderInterval = setInterval(function(){
 
@@ -20,8 +16,11 @@ window.addEventListener("load",function(){
 		numLoaded += Object.keys(Asset.sprite).length;
 		
 		var bar = numLoaded/totalAssets;
-		bar = bar*bar*bar*bar; // Because music takes FOREVER.
-		loading_bar_white.style.width = Math.round(bar*100)+"%";
+		if(window.top.onProgress){
+			window.top.onProgress(bar);
+		}else{
+			console.log(bar);
+		}
 
 	},50);
 
@@ -33,21 +32,11 @@ window.addEventListener("load",function(){
 	// Preloader and stuff
 	Asset.load().then(function(){
 		console.log("===== LOADED! =====");
+		clearInterval(preloaderInterval);
+		if(window.top.onProgress) window.top.onProgress(1);
 		setTimeout(function(){
-			clearInterval(preloaderInterval);
-			_startGame();
-		},600);
+			Game.start();
+		},500);
 	});
-
-	function _startGame(){
-		
-		Game.start();
-
-		loading.style.opacity = 0;
-		setTimeout(function(){
-			loading.parentNode.removeChild(loading);
-		},1000);
-
-	}
 
 },false);

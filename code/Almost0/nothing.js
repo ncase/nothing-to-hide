@@ -1,33 +1,46 @@
 window.onload = function(){
 
 	var fade = document.getElementById("fade");
+	var bar = document.getElementById("loading_bar_white");
 
 	// Fade In
 	function fadeIn(){
-		fade.style.opacity = 0;
+		fade.setAttribute("closed",false);
+		bar.style.display = "none";
 		setTimeout(function(){
 			fade.style.display = "none";
-		},500);
+		},1000);
 	}
 
 	// Fade Out
 	function fadeOut(){
 		fade.style.display = "block";
+		bar.style.display = "block";
+		bar.style.width = "0";
 		setTimeout(function(){
-			fade.style.opacity = 1;
+			fade.setAttribute("closed",true);
 		},1);
 	}
 
+	// Go To Page
+	var wrapper = document.getElementById("wrapper");
 	window.gotoPage = function(page){
 		fadeOut();
 		setTimeout(function(){
-	    	document.getElementById("wrapper").src = page+".html";
-	    	setTimeout(function(){
-	    		fadeIn();
-	    	},50);
-	    },550);
+	    	wrapper.src = page+".html";
+	    },1000);
 	};
 
-	fadeIn();
+	// Load Ready
+	window.onProgress = function(progress){
+		console.log(progress);
+		progress = progress*progress*progress*progress; // to look fast
+		bar.style.width = (progress*100)+"%";
+		if(progress==1){
+			setTimeout(function(){
+				fadeIn();
+			},500);
+		}
+	};
 
 };

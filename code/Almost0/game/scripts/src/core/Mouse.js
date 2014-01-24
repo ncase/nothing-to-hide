@@ -2,8 +2,8 @@
 
 	// Singleton
 	var Mouse = {
-		x: 0,
-		y: 0,
+		x: window.innerWidth/2,
+		y: window.innerHeight/2,
 		pressed: false
 	};
 	exports.Mouse = Mouse;

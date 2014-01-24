@@ -3,7 +3,7 @@
 	// Singleton
 	var Mouse = {
 		x: WIDTH/2,
-		y: HEIGHT/2,
+		y: 125,
 		pressed: false
 	};
 	exports.Mouse = Mouse;

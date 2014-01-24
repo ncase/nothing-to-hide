@@ -8,6 +8,7 @@ var RAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || 
 Menu.start = function(){
 
 	var drawnSinceLastUpdate = false;
+	document.getElementById("canvas_container").style.display = "block";
 
 	// Initialize
 	var config = Asset.level.menu;
@@ -119,7 +120,33 @@ var _mask = function(poly,ctx){
 
 };
 
+// Loading
+var preloaderInterval = setInterval(function(){
+
+	var totalAssets = 0;
+	totalAssets += Object.keys(Asset.config.images).length;
+	totalAssets += Object.keys(Asset.config.levels).length;
+	totalAssets += Object.keys(Asset.config.sounds).length;
+
+	var numLoaded = 0;
+	numLoaded += Object.keys(Asset.image).length;
+	numLoaded += Object.keys(Asset.level).length;
+	numLoaded += Object.keys(Asset.sound).length;
+	
+	var bar = numLoaded/totalAssets;
+	if(window.top.onProgress){
+		window.top.onProgress(bar);
+	}else{
+		console.log(bar);
+	}
+
+},50);
+
 Asset.load().then(function(){
 	console.log("===== LOADED! =====");
-	Menu.start();
+	clearInterval(preloaderInterval);
+	if(window.top.onProgress) window.top.onProgress(1);
+	setTimeout(function(){
+		Menu.start();
+	},500);
 });
