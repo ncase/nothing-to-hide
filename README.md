@@ -1,25 +1,18 @@
-Nothing To Hide: Insecurity in Security
+Nothing To Hide has nothing to hide.
 ===
-
-*Nothing To Hide* has nothing to hide.
 
 All the newest art and code from Nothing To Hide gets pushed into this public repo.
 It's not clean, it's not organized, but it's *everything*.
 
-###Featured Prototypes
-
-* [Polished Prototype for Halloween](http://prototype.nothingtohide.cc/)
-* ["Cutscene" as Social Feed](http://nutcasenightmare.github.io/test-thewall/)
-* [The National Anthem, a musical sketch](https://s3.amazonaws.com/ncase/NTH+1+v2.mp3)
-
 ###Linky Links
 
-* [*Nothing*'s Website](http://nothingtohide.cc/)
 * [*Nothing*'s Newsletter](http://tinyletter.com/nothingtohide/letters)
+* [*Nothing*'s Website](http://nothingtohide.cc/)
+* [Polished Prototype for Halloween](http://prototype.nothingtohide.cc/)
 
 ###Credits
 
-[NCASE](http://www.ncase.me): Animation, Programming, Game design, Writing    
+[NCASE](http://www.ncase.me): Animation, Code, Design    
 [HalcyonicFalconX](https://www.facebook.com/HalcyonicFalconX): Music
 
 ###License Shenanigans
