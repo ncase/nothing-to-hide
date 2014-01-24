@@ -35,7 +35,22 @@
 
 	],
 	"propaganda": [
-		{"type":"image", "img":"propaganda_title", "x":0, "y":0}
+		{"type":"image", "img":"propaganda_title", "x":0, "y":0},
+
+		{"type":"image", "img":"propaganda_poppy", "x":0, "y":6},
+		{"type":"image", "img":"propaganda_poppy", "x":2, "y":6},
+		{"type":"image", "img":"propaganda_poppy", "x":4, "y":6},
+		{"type":"image", "img":"propaganda_poppy", "x":6, "y":6},
+		{"type":"image", "img":"propaganda_poppy", "x":13, "y":6},
+		{"type":"image", "img":"propaganda_poppy", "x":15, "y":6},
+		{"type":"image", "img":"propaganda_poppy", "x":17, "y":6},
+		{"type":"image", "img":"propaganda_poppy", "x":19, "y":6},
+
+		{"type":"image", "img":"propaganda_poppy", "x":3, "y":7},
+		{"type":"image", "img":"propaganda_poppy", "x":16, "y":7},
+
+		{"type":"image", "img":"propaganda_poppy", "x":7, "y":8},
+		{"type":"image", "img":"propaganda_poppy", "x":12, "y":8}
 	],
 	"art": {
 		"background": false,

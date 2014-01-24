@@ -133,6 +133,9 @@
 			}
 			ctx.translate(-1,0);
 
+			// Draw props over it ALL
+			ctx.drawImage(Asset.image.props,0,0);
+
 		};
 
 		this.drawCCTV = function(ctx){
@@ -146,7 +149,7 @@
 			if(VisibilityPolygon.inPolygon([bo.x+bo.width,bo.y],poly)) return true;
 			if(VisibilityPolygon.inPolygon([bo.x,bo.y+bo.height],poly)) return true;
 			if(VisibilityPolygon.inPolygon([bo.x+bo.width,bo.y+bo.height],poly)) return true;*/
-			if(VisibilityPolygon.inPolygon([bo.x+bo.width/2,bo.y+bo.height/2],poly)) return true;
+			if(VisibilityPolygon.inPolygon([bo.x+bo.width/2,bo.y+bo.height],poly)) return true;
 			return false;
 		}
 		function _isInBlackout(x,y){

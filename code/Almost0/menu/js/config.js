@@ -3,9 +3,11 @@ Asset.init({
 		
 		carpet:'assets/textures/carpet.png',
 		screenline:'assets/textures/screenline.png',
+		props:'assets/textures/props.png',
 
 		// PROPAGANDA
-		propaganda_title:'assets/propaganda/title.png'
+		propaganda_title:'assets/propaganda/title.png',
+		propaganda_poppy:'assets/propaganda/poppy.png'
 
 	},
 	sounds:{
