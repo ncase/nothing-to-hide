@@ -19,8 +19,8 @@
 
 	"prisms": [
 		{ "x":15,"y":4 },
-		{ "x":5,"y":9 },
-		{ "x":5,"y":16 }
+		{ "x":5,"y":10 },
+		{ "x":5,"y":15 }
 	],
 
 	"blocks": [
@@ -64,8 +64,18 @@
 
 	"conveyors": [
 		{
+			"belt": {"ax":5,"bx":6,"ay":5,"by":10},
+			"direction": {"x":0,"y":3},
+			"activator": ""
+		},
+		{
+			"belt": {"ax":15,"bx":16,"ay":5,"by":10},
+			"direction": {"x":0,"y":-3},
+			"activator": ""
+		},
+		{
 			"belt": {"ax":6,"bx":15,"ay":15,"by":16},
-			"direction": {"x":-0.6,"y":0},
+			"direction": {"x":-0.5,"y":0},
 			"activator": ""
 		}
 	],

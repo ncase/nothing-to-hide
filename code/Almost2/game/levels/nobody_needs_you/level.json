@@ -85,23 +85,23 @@
 
 	"conveyors": [
 		{
-			"belt": {"ax":13,"bx":15,"ay":2,"by":3},
-			"direction": {"x":1.5,"y":0},
-			"activator": "power"
-		},
-		{
-			"belt": {"ax":15,"bx":16,"ay":2,"by":7},
-			"direction": {"x":0,"y":1.5},
-			"activator": "power"
-		},
-		{
-			"belt": {"ax":14,"bx":16,"ay":7,"by":8},
+			"belt": {"ax":14,"bx":16,"ay":2,"by":3},
 			"direction": {"x":-1.5,"y":0},
 			"activator": "power"
 		},
 		{
-			"belt": {"ax":13,"bx":14,"ay":3,"by":8},
+			"belt": {"ax":15,"bx":16,"ay":3,"by":8},
 			"direction": {"x":0,"y":-1.5},
+			"activator": "power"
+		},
+		{
+			"belt": {"ax":13,"bx":15,"ay":7,"by":8},
+			"direction": {"x":1.5,"y":0},
+			"activator": "power"
+		},
+		{
+			"belt": {"ax":13,"bx":14,"ay":2,"by":7},
+			"direction": {"x":0,"y":1.5},
 			"activator": "power"
 		}
 	],
