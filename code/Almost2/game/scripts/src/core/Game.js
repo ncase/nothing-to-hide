@@ -104,9 +104,17 @@
 	var pauseButton = document.getElementById("pause");
 	var pauseMenu = document.getElementById("pause_menu");
 	Game.togglePause = function(){
+		
 		Game.PAUSED = !Game.PAUSED;
 		pauseButton.innerHTML = Game.PAUSED ? "PLAY" : "PAUSE";
 		pauseMenu.style.display = Game.PAUSED ? "block" : "none";
+
+		if(!Game.PAUSED){
+			var w = Math.min(Game.level.map.width, window.innerWidth);
+			var h = Math.min(Game.level.map.height, window.innerHeight);
+			Display.resize(w,h);
+		}
+
 	};
 	Game.forcePause = function(){
 		Game.PAUSED = false;

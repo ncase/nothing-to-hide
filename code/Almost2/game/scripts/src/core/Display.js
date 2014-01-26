@@ -44,6 +44,7 @@
 
 	};
 	window.onresize = function(event){
+		if(Game.PAUSED) return;
 		if(!Game.level) return;
 		var w = Math.min(Game.level.map.width, window.innerWidth);
 		var h = Math.min(Game.level.map.height, window.innerHeight);

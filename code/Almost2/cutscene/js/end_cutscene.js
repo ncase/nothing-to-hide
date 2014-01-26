@@ -195,11 +195,18 @@ var onLoad = function(){
 		}else{
 
 			var frame = Math.floor(END_FRAME/3);
-			if(frame>5) frame=6;
+			if(frame>30){
+				frame=6;		
+			}else if(frame>5){
+				if(END_FRAME==90){
+					createjs.Sound.play("drama");
+				}
+				frame=5;
+			}
 			turnoff_frame.style.backgroundPosition = "0 -"+frame*200+"px";
 			END_FRAME++;
 
-			if(END_FRAME>60){
+			if(END_FRAME>210){
 				_goBackToMenu();
 			}
 
