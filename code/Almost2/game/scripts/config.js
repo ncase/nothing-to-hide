@@ -79,6 +79,7 @@ Asset.init({
 		sfx_footstep_2:{src:'assets/sounds/mp3/step_2.mp3|assets/sounds/ogg/step_2.ogg'},
 		sfx_metal_footstep_1:{src:'assets/sounds/mp3/metal_step_1.mp3|assets/sounds/ogg/metal_step_1.ogg'},
 		sfx_metal_footstep_2:{src:'assets/sounds/mp3/metal_step_2.mp3|assets/sounds/ogg/metal_step_2.ogg'},
+		
 		sfx_carpet_footstep_1:{src:'assets/sounds/ogg/carpet_step_1.ogg'},
 		sfx_carpet_footstep_2:{src:'assets/sounds/ogg/carpet_step_2.ogg'},
 

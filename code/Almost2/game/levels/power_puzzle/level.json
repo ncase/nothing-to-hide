@@ -123,7 +123,8 @@
 	],
 
 	"propaganda": [
-		{"type":"image", "img":"propaganda_nobody_messes", "x":3, "y":0}
+		{"type":"image", "img":"propaganda_nobody_messes", "x":3, "y":0},
+		{"type":"image", "img":"propaganda_nobody_the_wall_2", "x":9, "y":5}
 	],
 
 	"art": {
