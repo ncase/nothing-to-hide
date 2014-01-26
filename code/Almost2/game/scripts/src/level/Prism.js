@@ -22,6 +22,10 @@
 		///// UPDATE LOOP /////
 		///////////////////////
 
+		// Bounciness
+		var bounce = 1;
+		var bounceVel = 0;
+
 		self.nearPlayer = false;
 		this.update = function(){
 			if(level.config.id!="intro"){
@@ -30,6 +34,15 @@
 				var dy = self.y - level.player.y;
 				self.nearPlayer = ( (dx*dx + dy*dy < 50*50) && !level.player.holdingPrism );
 			}
+
+			// Bounce
+		    if(self.justDropped){
+		    	bounceVel = -0.3;
+		    	self.justDropped = false;
+		    }
+		    bounceVel += (1-bounce)*0.8;
+		    bounceVel *= 0.5;
+			bounce += bounceVel;
 
 			// CCTV
 			dashOffset -= 3;
@@ -91,13 +104,18 @@
 				shimmerSprite.draw(ctx);
 			}
 
+			// Transform
+			ctx.save();
+			ctx.translate(self.x,self.y);
+			ctx.scale(1/bounce,bounce);
+
 			// What frame?
 			prismSprite.frameIndex = (self.active) ? 1 : 0;
 			if(self.id){
 				prismSprite.frameIndex += 11;
 			}
-			prismSprite.x = self.x;
-			prismSprite.y = self.y;
+			prismSprite.x = 0;
+			prismSprite.y = 0;
 			prismSprite.draw(ctx);
 
 			// Draw eye pupils
@@ -125,11 +143,14 @@
 
 				// Draw eye
 				eyeSprite.frameIndex = 0;
-				eyeSprite.x = self.x+prismSprite.regX+21 + vectToPlayer.x;
-				eyeSprite.y = self.y+prismSprite.regY+38 + vectToPlayer.y;
+				eyeSprite.x = prismSprite.regX+21 + vectToPlayer.x;
+				eyeSprite.y = prismSprite.regY+38 + vectToPlayer.y;
 				eyeSprite.draw(ctx);
 
 			}
+
+			// Restore
+			ctx.restore();
 
 			// Placeholder CLICK ME circle
 			if(buttonSprite.scaleX>0.03){

@@ -93,7 +93,7 @@
     		isHoldingPrism = true;
     		level.player.holdingPrism = true;
     		heldPrism = nearPrism;
-    		createjs.Sound.play( nearPrism.active ? "sfx_prism_pickup" : "sfx_prism_pickup_soft", null,0,0,false,0.4);
+    		createjs.Sound.play( nearPrism.active ? "sfx_prism_pickup" : "sfx_carpet_footstep_1", null,0,0,false,0.4);
 
 		};
 
@@ -103,12 +103,15 @@
 
 			var prism = heldPrism;
 			prism.x = level.player.x;
-			prism.y = level.player.y;
+			prism.y = level.player.y+0.001;
 			prism.active = (level.map.getTile(prism.x,prism.y)!=Map.CARPET); // You're NOT on carpet.
 			self.prisms.push(prism);
 			if(prism.id){
 				self.map[prism.id] = prism;
 			}
+
+			// Let it know it's been dropped
+			prism.justDropped = true;
     		
     		// Logic
     		heldPrism = null;
@@ -116,8 +119,7 @@
     		level.player.holdingPrism = false;
 
     		// Sound
-    		var isMetal = (level.map.getTile(player.x,player.y)==Map.METAL);
-    		createjs.Sound.play( isMetal ? "sfx_prism_putdown" : "sfx_prism_putdown_soft", null,0,0,false,0.4);
+    		createjs.Sound.play( prism.active ? "sfx_prism_putdown" : "sfx_carpet_footstep_2", null,0,0,false,0.4);
 
 		};
 
