@@ -121,7 +121,7 @@ var onLoad = function(){
 				var layer = layers[j];
 				var depth = parseFloat(layer.getAttribute("depth"));
 				var offset = parseFloat(layer.getAttribute("offset"));
-				layer.style.backgroundPositionY = -scroll*depth - offset;
+				layer.style.backgroundPosition = "0px " + (-scroll*depth - offset)+"px";;
 			}
 
 		}
@@ -182,7 +182,7 @@ var onLoad = function(){
 		// CCTV
 		cctvY += 1;
 		if(cctvY>=15) cctvY=0;
-		cctv.style.backgroundPositionY = cctvY;
+		cctv.style.backgroundPosition = "0px " + (cctvY)+"px"
 
 		// RAF
 		RAF(draw);

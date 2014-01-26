@@ -114,7 +114,7 @@ var onLoad = function(){
 				var layer = layers[j];
 				var depth = parseFloat(layer.getAttribute("depth"));
 				var offset = parseFloat(layer.getAttribute("offset"));
-				layer.style.backgroundPositionY = -scroll*depth - offset;
+				layer.style.backgroundPosition = "0px " + (-scroll*depth - offset)+"px";
 			}
 
 		}
