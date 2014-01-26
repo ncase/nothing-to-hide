@@ -172,6 +172,17 @@
 		    	animSuffix = "";
 		    }
 
+		    // Bounce
+		    if(animState!=lastAnimState || faceDirection!=lastFaceDirection || animSuffix!=lastAnimSuffix){
+		    	bounceVel -= 0.1;
+		    }
+		    bounceVel += (1-bounce)*0.8;
+		    bounceVel *= 0.5;
+			bounce += bounceVel;
+			lastAnimState = animState;
+			lastFaceDirection = faceDirection;
+			lastAnimSuffix = animSuffix;
+
 			// Footstep Sounds!
 			if(animState=="Walk"){
 
@@ -242,6 +253,9 @@
 		var faceDirection = 1;
 		var animState = "Idle";
 		var animSuffix = "";
+		var lastFaceDirection = 1;
+		var lastAnimState = "Idle";
+		var lastAnimSuffix = "Idle";
 
 		var playerSprites = {
 			Idle: new Sprite("Poppy_Idle"),
@@ -266,6 +280,10 @@
 		buttonSprite.regY = -40;
 		buttonSprite.scaleX = buttonSprite.scaleY = 0;
 		var buttonRotation = 0;
+
+		// Bounciness
+		var bounce = 1;
+		var bounceVel = 0;
 
 		// Shot Poppy
 		playerSprites.Shot.regX = -60;
@@ -312,7 +330,8 @@
 			sprite.frameIndex = Math.floor(frameIndex);
 			sprite.x = self.x;
 			sprite.y = self.y;
-		    sprite.scaleX = faceDirection*0.9;
+		    sprite.scaleX = faceDirection*0.9 * (1/bounce);
+		    sprite.scaleY = bounce*0.9;
 		    sprite.draw(ctx);
 
 			// Placeholder CLICK ME circle
@@ -344,7 +363,8 @@
 			sprite.frameIndex = Math.floor(frameIndex);
 			sprite.x = self.x;
 			sprite.y = self.y;
-		    sprite.scaleX = faceDirection*0.9;
+		    sprite.scaleX = faceDirection*0.9 * (1/bounce);
+		    sprite.scaleY = bounce*0.9;
 		    sprite.draw(cctvContext);
 		};
 

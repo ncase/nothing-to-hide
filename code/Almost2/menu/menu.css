@@ -14,10 +14,15 @@ body, canvas, div {
 }
 body{
 	font-family: Ostrich;
+	font-size: 30px;
+	letter-spacing: 1px;
 
     margin:0;
     overflow: hidden;
     background:#000;
+}
+a {
+	text-decoration: none;
 }
 
 #canvas_container {
@@ -42,6 +47,7 @@ body{
 	padding: 0px 0;
 	cursor: pointer;
 	font-size: 30px;
+	line-height: 46px;
 
 	-webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
@@ -58,6 +64,7 @@ body{
 	height:80px;
 	top:260px;
 	font-size: 65px;
+	line-height: 90px;
 }
 #play.button:hover {
 	padding: 10px 0;
@@ -83,11 +90,83 @@ body{
 	letter-spacing: 0.08em;
 }
 
-#cred.button{
+#share.button{
 	top:455px;
 	height:40px;
 }
-#cred.button:hover{
+#share.button:hover{
 	padding: 5px 0;
 	top:450px;
+}
+
+#footer {
+	width:100%;
+	font-size:30px; letter-spacing:2px; line-height:35px;
+	color:#fff;
+	position:absolute; bottom:0px;
+	text-align:center;
+}
+#footer a{
+	color: #CC2727;
+	text-decoration: underline;
+}
+#footer a:hover{
+	color: #FF3333;
+}
+
+/*** MODAL ***/
+
+#modal_container {
+	position: absolute;
+	width:100%; height:100%;
+}
+#modal_container_bg {
+	position: absolute;
+	width:100%; height:100%;
+	background: rgba(0,0,0,0.5);
+}
+#modal_container_content{
+	position: absolute;
+	width:800px;
+	height:100%;
+	top:0; left:0; right:0; bottom:0;
+	margin:auto;
+	color:#fff;
+	background: #000;
+
+	overflow-x: none;
+	overflow-y: scroll;
+}
+#close_button_container{
+	position: absolute;
+	width:800px;
+	height:100px;
+	background: #000;
+	left:0; right:0; bottom:0;
+	margin:auto;
+}
+#close_button{
+	cursor: pointer;
+	position:absolute;
+	left:60px; bottom:40px;
+	width:678px;
+	height:60px;
+	border: 1px solid #fff;
+	text-align: center;
+	background: #000;
+	color:#fff;
+	font-size: 50px;
+	line-height: 1.4em;
+}
+#close_button:hover{
+	color: #000;
+	background: #fff;
+}
+.dialog {
+	padding:60px 40px;
+}
+.dialog h1{
+	line-height: 1em;
+	font-size: 60px;
+	margin:0;
 }

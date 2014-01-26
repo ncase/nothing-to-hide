@@ -6,28 +6,63 @@
 	</head>
 	<body>
 
-		<div id="canvas_container" style="height:550px; display:none">
+		<div id="canvas_container" style="height:640px; display:none">
+
 			<canvas id="screen"></canvas>
+
 			<div id="play" class="button" onclick="startGame()">PLAY</div>
-			<!--div id="fund" class="button">BACK THIS GAME</div>
-			<div id="free" class="button">DOWNLOADS</div>
-			<div id="cred" class="button">CREDITS</div-->
 
-			<div id="fund" class="button">I AM A DEMO</div>
-			<div id="free" class="button">I AM A DEMO</div>
-			<div id="cred" class="button">A DEMO AM I</div>
+			<div id="fund" class="button" onclick="window.location.hash='fund'">FUND THIS GAME</div>
+			<div id="free" class="button" onclick="window.location.hash='free'">DOWNLOADS</div>
+			<div id="share" class="button" onclick="window.location.hash='share'">SHARE ME</div>
 
-			<!--div style="width:100%; font-family:sans-serif; color:white; position:absolute; bottom:0px; text-align:center">
-				<span style="color:#D40; font-size:26px;">
-					Hi! This prototype is an early build for Feedback Friday #65.
-				</span>
+			<div id="footer">
+				This HTML5 game has
+				<a href="#uncopyright">ZERO RIGHTS RESERVED</a>. Please share, record & remix all you want!
 				<br>
-				Sadly, it's Chrome only for now. But if you're using Chrome, great! Hope you enjoy the game.
-				<br>
-				You can keep up with my progress via <a style="color:inherit" target="_blank" href="http://tinyletter.com/nothingtohide/letters">the playtester newsletter</a>
-				or <a style="color:inherit" target="_blank" href="https://twitter.com/ncasenmare">my Twitter, @ncasenmare</a>.
-			</div-->
+				Created by
+				<a href="http://ncase.me" target="_blank">NCASE</a>
+				-
+				Music by
+				<a href="https://www.facebook.com/HalcyonicFalconX" target="_blank">HalcyonicFalconX</a>
+				-
+				<a href="#credits">Full Credits</a>
+			</div>
 
+		</div>
+
+		<div id="modal_container" style="display:none">
+			<div id="modal_container_bg" onclick="hideModal()"></div>
+			<div id="modal_container_content">
+				
+				<div class="dialog" id="dialog_fund">
+					<h1>BUILT AND BACKED IN THE OPEN</h1>
+					built for the public, backed by the public
+				</div>
+				<div class="dialog" id="dialog_free">
+					<h1>HERE, HAVE SOME FREE STUFF</h1>
+					original soundtrack, open art pack, PC builds, source code
+				</div>
+				<div class="dialog" id="dialog_share">
+					<h1>SHARING IS CARING</h1>
+					twitter, facebook, shtuff
+					<br>
+					<br>
+					Yes, I recognize the irony of sharing a game satirizing social media on your social media.
+				</div>
+				<div class="dialog" id="dialog_uncopyright">
+					<h1>YAY FREEDOM OF SPEECH</h1>
+					CC0
+				</div>
+				<div class="dialog" id="dialog_credits">
+					<h1>NOTHING TO HIDE HAS NOTHING TO HIDE</h1>
+					EVERYOOOONE
+				</div>
+
+			</div>
+			<div id="close_button_container">
+				<div id="close_button" onclick="hideModal()">BACK TO MAIN MENU</div>
+			</div>
 		</div>
 
 		<script src="js/Q.js"></script>

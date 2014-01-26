@@ -27,7 +27,7 @@ window.onload = function(){
 	window.gotoPage = function(page){
 		fadeOut();
 		setTimeout(function(){
-	    	wrapper.src = page+".html";
+	    	wrapper.src = page;
 	    },1000);
 	};
 

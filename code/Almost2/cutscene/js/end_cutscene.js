@@ -3,7 +3,7 @@ var alreadyExited = false;
 function _goBackToMenu(){
 	if(alreadyExited) return;
 	alreadyExited = true;
-	window.top.gotoPage("menu/menu");
+	window.top.gotoPage("menu/menu.html#fund");
 }
 
 var onLoad = function(){

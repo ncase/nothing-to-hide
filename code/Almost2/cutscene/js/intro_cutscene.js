@@ -3,7 +3,7 @@ var alreadyExited = false;
 window.gotoGame = function(){
 	if(alreadyExited) return;
 	alreadyExited = true;
-	window.top.gotoPage("game/game");
+	window.top.gotoPage("game/game.html");
 }
 
 

@@ -1,5 +1,5 @@
 function startGame(){
-	window.top.gotoPage("cutscene/cutscene");
+	window.top.gotoPage("cutscene/cutscene.html");
 }
 
 var Menu = {};
@@ -54,6 +54,8 @@ Menu.start = function(){
 
 	// Buttons
 	var buttons = document.querySelectorAll(".button");
+	buttons = Array.prototype.slice.call(buttons);
+	buttons.push(document.getElementById("close_button"));
 	for(var i=0;i<buttons.length;i++){
 		var butt = buttons[i];
 		butt.addEventListener("mouseover",function(){
@@ -63,6 +65,21 @@ Menu.start = function(){
 			createjs.Sound.play("button_press",null,0,0,0,1,0);
 		},false);
 	}
+
+	// Location Hash Change
+	var _onHashChange = function(hash){
+		if(hash==""){
+			modal.style.display = "none";
+		}else{
+			showModal(hash);
+		}
+	}
+	if(window.location.hash){
+		_onHashChange(window.location.hash);
+	}
+	window.onhashchange = function(){
+	    _onHashChange(window.location.hash);
+	};
 
 };
 
@@ -150,3 +167,36 @@ Asset.load().then(function(){
 		Menu.start();
 	},500);
 });
+
+
+//////////////////
+// MODAL SHTUFF //
+//////////////////
+
+var modal = document.getElementById("modal_container");
+var screens = document.querySelectorAll(".dialog");
+window.showModal = function(hash){
+
+	// Hide all screens
+	for(var i=0;i<screens.length;i++){
+		screens[i].style.display = "none";
+	}
+
+	// Show just that one
+	var screenID = "dialog_"+hash.substr(1);
+	var screenDOM = document.getElementById(screenID);
+	if(!screenDOM) return;
+	screenDOM.style.display = "block";
+
+	// Show modal
+	modal.style.display = "block";
+
+};
+window.hideModal = function(){
+	modal.style.display = "none";
+	window.location.hash = "";
+};
+
+
+
+

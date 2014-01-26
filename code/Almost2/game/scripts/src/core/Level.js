@@ -153,7 +153,7 @@
 					if(!alreadyExited){
 						self.GAME_IS_OVER = true; // HACK. To stop Poppy when she reaches Nobody.
 						alreadyExited = true;
-						window.top.gotoPage("cutscene/cutscene_end");
+						window.top.gotoPage("cutscene/cutscene_end.html");
 					}
 				}
 			}

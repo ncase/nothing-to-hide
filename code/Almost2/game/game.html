@@ -24,13 +24,13 @@
                     <div class="button_container">
                         <div class="button" onclick="Game.togglePause();">RESUME GAME</div>
                         <div class="button" onclick="Game.togglePause(); Game.resetLevel()">RESET LEVEL</div>
-                        <div class="button" onclick="window.top.gotoPage('menu/menu');">BACK TO MAIN MENU</div>
+                        <div class="button" onclick="window.top.gotoPage('menu/menu.html');">BACK TO MAIN MENU</div>
                     </div>
 
                     <!-- Level Select -->
-                    <div style="margin: 10px 0 5px 0; font-size:40px">Level Select:</div>
+                    <div style="margin: 25px 0 5px 0; font-size:40px">Level Select:</div>
                     <div id="level_select" class="button_container">
-                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene');">INTRO</div>
+                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene.html');">INTRO</div>
                         <div class="button" id="lvl_0" onclick="Game.togglePause(); Game.gotoLevel(0);">1</div>
                         <div class="button" id="lvl_1" onclick="Game.togglePause(); Game.gotoLevel(1);">2</div>
                         <div class="button" id="lvl_2" onclick="Game.togglePause(); Game.gotoLevel(2);">3</div>
@@ -39,18 +39,11 @@
                         <div class="button" id="lvl_5" onclick="Game.togglePause(); Game.gotoLevel(5);">6</div>
                         <div class="button" id="lvl_6" onclick="Game.togglePause(); Game.gotoLevel(6);">7</div>
                         <div class="button" id="lvl_7" onclick="Game.togglePause(); Game.gotoLevel(7);">8</div>
-                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene_end');">ENDING</div>
+                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene_end.html');">ENDING</div>
                     </div>
 
                     <!-- Share Game -->
-
                     <!-- Game Options -->
-                    <!--div style="margin: 10px 0 5px 0; font-size:40px">Video/Audio:</div>
-                    <div class="button_container">
-                        <div class="button" onclick="Game.togglePause(); Game.resetLevel()">FULLSCREEN</div>
-                        <div class="button" onclick="Game.togglePause();">RESUME GAME</div>
-                        <div class="button" onclick="window.top.gotoPage('menu/menu');">BACK TO MAIN MENU</div>
-                    </div-->
 
                 </div>
             </div>
