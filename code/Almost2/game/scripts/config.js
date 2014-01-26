@@ -80,18 +80,18 @@ Asset.init({
 		sfx_metal_footstep_1:{src:'assets/sounds/mp3/metal_step_1.mp3|assets/sounds/ogg/metal_step_1.ogg'},
 		sfx_metal_footstep_2:{src:'assets/sounds/mp3/metal_step_2.mp3|assets/sounds/ogg/metal_step_2.ogg'},
 		
-		sfx_carpet_footstep_1:{src:'assets/sounds/ogg/carpet_step_1.ogg'},
-		sfx_carpet_footstep_2:{src:'assets/sounds/ogg/carpet_step_2.ogg'},
+		sfx_carpet_footstep_1:{src:'assets/sounds/mp3/carpet_step_1.mp3|assets/sounds/ogg/carpet_step_1.ogg'},
+		sfx_carpet_footstep_2:{src:'assets/sounds/mp3/carpet_step_2.mp3|assets/sounds/ogg/carpet_step_2.ogg'},
 
-		sfx_cam:{src:'assets/sounds/ogg/cam.ogg'},
-		sfx_slidewalk:{src:'assets/sounds/ogg/slidewalk.ogg'},
-		sfx_dialog:{src:'assets/sounds/ogg/dialog.ogg'},
+		sfx_cam:{src:'assets/sounds/mp3/cam.mp3|assets/sounds/ogg/cam.ogg'},
+		sfx_slidewalk:{src:'assets/sounds/mp3/slidewalk.mp3|assets/sounds/ogg/slidewalk.ogg'},
+		sfx_dialog:{src:'assets/sounds/mp3/dialog.mp3|assets/sounds/ogg/dialog.ogg'},
 
-		button_hover: {src:'assets/sounds/ogg/button_hover.ogg'},
-		button_press: {src:'assets/sounds/ogg/button_press.ogg'},
+		button_hover: {src:'assets/sounds/mp3/button_hover.mp3|assets/sounds/ogg/button_hover.ogg'},
+		button_press: {src:'assets/sounds/mp3/button_press.mp3|assets/sounds/ogg/button_press.ogg'},
 
-		//music_bg: {src:'assets/music/mp3_64/a_healthy_dystopia.mp3'},
-		//music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3'}
+		music_bg: {src:'assets/music/mp3_64/a_healthy_dystopia.mp3|assets/music/ogg_64/a_healthy_dystopia.ogg'},
+		music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3|assets/music/ogg_64/home_sweet_homeland.ogg'}
 
 	},
 	levels:{
