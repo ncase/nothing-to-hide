@@ -93,7 +93,11 @@
     		isHoldingPrism = true;
     		level.player.holdingPrism = true;
     		heldPrism = nearPrism;
-    		createjs.Sound.play( nearPrism.active ? "sfx_prism_pickup" : "sfx_carpet_footstep_1", null,0,0,false,0.4);
+    		if(nearPrism.active){
+    			createjs.Sound.play("sfx_prism_pickup", null,0,0,false,0.4);
+    		}else{
+    			createjs.Sound.play("sfx_carpet_footstep_1", null,0,0,false,1);
+    		}
 
 		};
 
@@ -119,7 +123,11 @@
     		level.player.holdingPrism = false;
 
     		// Sound
-    		createjs.Sound.play( prism.active ? "sfx_prism_putdown" : "sfx_carpet_footstep_2", null,0,0,false,0.4);
+    		if(prism.active){
+    			createjs.Sound.play("sfx_prism_putdown", null,0,0,false,0.4);
+    		}else{
+    			createjs.Sound.play("sfx_carpet_footstep_2", null,0,0,false,1);
+    		}
 
 		};
 
