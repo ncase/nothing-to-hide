@@ -81,7 +81,6 @@ body, canvas, div {
 	bottom: 10px; right:10px;
 }
 #fps_counter {
-	background: #000;
 	color:#fff;
 	padding:10px;
 	width:80px;

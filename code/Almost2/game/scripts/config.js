@@ -89,8 +89,8 @@ Asset.init({
 		button_hover: {src:'assets/sounds/ogg/button_hover.ogg'},
 		button_press: {src:'assets/sounds/ogg/button_press.ogg'},
 
-		music_bg: {src:'assets/music/mp3_64/a_healthy_dystopia.mp3'},
-		music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3'}
+		//music_bg: {src:'assets/music/mp3_64/a_healthy_dystopia.mp3'},
+		//music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3'}
 
 	},
 	levels:{

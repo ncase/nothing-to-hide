@@ -108,6 +108,10 @@
 		pauseButton.innerHTML = Game.PAUSED ? "PLAY" : "PAUSE";
 		pauseMenu.style.display = Game.PAUSED ? "block" : "none";
 	};
+	Game.forcePause = function(){
+		Game.PAUSED = false;
+		Game.togglePause();
+	};
 
 	// End game
 	Game.kill = function(){

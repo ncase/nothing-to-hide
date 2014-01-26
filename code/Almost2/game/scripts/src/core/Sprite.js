@@ -32,7 +32,9 @@
 		    // Draw the damn thing
 		    var offset = self.data.frames[self.frameIndex].spriteSourceSize;
 		    ctx.translate(offset.x,offset.y);
-		    ctx.drawImage(self.image,frame.x,frame.y,frame.w,frame.h,0,0,frame.w,frame.h);
+		    if(frame.x>=0 && frame.y>=0 && frame.w>0 && frame.h>0){
+		    	ctx.drawImage(self.image,frame.x,frame.y,frame.w,frame.h,0,0,frame.w,frame.h);
+		    }
 
 		    ctx.restore();
 
