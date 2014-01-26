@@ -97,16 +97,14 @@ var onLoad = function(){
 
 	var parallaxes = document.querySelectorAll("#layers");
 	function onScroll(event){
+
+		var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
 			
 		// ALL PARALLAX LAYERS DO THEIR THING
 		for(var i=0;i<parallaxes.length;i++){
 			
 			var parallax = parallaxes[i];
-			var scroll = (parallax.offsetTop - window.scrollY) - 150;
-			/*if(scroll>700-150){
-				scroll = 700-150;
-			}*/
-			// So it's at its original position, by default, 150px from the top.
+			var scroll = (parallax.offsetTop - scrollTop) - 150;
 
 			var layers = parallax.children;
 
@@ -125,7 +123,7 @@ var onLoad = function(){
 			var sfx = soundEffects[i];
 
 			// Play when halfway at screen
-			if( (sfx.dom.offsetTop - window.scrollY) + sfx.sound.offset < window.innerHeight*0.4){
+			if( (sfx.dom.offsetTop - scrollTop) + sfx.sound.offset < window.innerHeight*0.4){
 				if(!sfx.past) createjs.Sound.play.apply(null,sfx.sound.play);
 				sfx.past = true;
 			}else{
@@ -138,7 +136,7 @@ var onLoad = function(){
 		for(var i=0;i<ambiences.length;i++){
 
 			var a = ambiences[i];
-			var pos = window.innerHeight*0.4 - (a.dom.offsetTop - window.scrollY);
+			var pos = window.innerHeight*0.4 - (a.dom.offsetTop - scrollTop);
 			var interval = a.ambience.interval;
 			var vol = 0;
 			if(pos>interval[1] && pos<interval[2]){
@@ -179,7 +177,9 @@ var onLoad = function(){
 				drawnSinceLastUpdate = true;
 				onScroll();
 			}
-			if(footer.offsetTop - window.scrollY < window.innerHeight ){
+
+			var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+			if(footer.offsetTop - scrollTop < window.innerHeight ){
 				ITS_THE_END = true;
 				the_wall.style.opacity = 0;
 				turnoff.style.display = "block";

@@ -120,6 +120,7 @@ body {
 	background-position: -150px;
 }*/
 .video_post #video_button {
+	background-color: rgba(0,0,0,0);
 	background-image: url(../img/play_small.png);
 	width:100px; height:100px;
 	left:350px; top:150px;
