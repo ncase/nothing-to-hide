@@ -151,6 +151,7 @@
 				var dy = self.player.y-dandy.y;
 				if(dx*dx+dy*dy<70*70){
 					if(!alreadyExited){
+						self.GAME_IS_OVER = true; // HACK. To stop Poppy when she reaches Nobody.
 						alreadyExited = true;
 						window.top.gotoPage("cutscene/cutscene_end");
 					}

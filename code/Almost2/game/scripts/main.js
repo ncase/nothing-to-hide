@@ -39,4 +39,16 @@ window.addEventListener("load",function(){
 		},500);
 	});
 
+	// HACK - Game UI
+	var buttons = document.querySelectorAll(".button");
+	for(var i=0;i<buttons.length;i++){
+		var butt = buttons[i];
+		butt.addEventListener("mouseover",function(){
+			createjs.Sound.play("button_hover",null,0,0,0,1,0);
+		},false);
+		butt.addEventListener("mousedown",function(){
+			createjs.Sound.play("button_press",null,0,0,0,1,0);
+		},false);
+	}
+
 },false);

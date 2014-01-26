@@ -70,7 +70,7 @@
 	    	var mx = Mouse.x - level.camera.cx;
 	    	var my = Mouse.y - level.camera.cy;
 
-		    if(Mouse.pressed && !Cursor.clicked){
+		    if(Mouse.pressed && !Cursor.clicked && !level.GAME_IS_OVER){
 			    var dx = mx - self.x;
 			    var dy = my - self.y;
 			    var mag = Math.sqrt(dx*dx+dy*dy);
@@ -85,7 +85,7 @@
 
 			}
 
-			if(keyMovement){
+			if(keyMovement && !level.GAME_IS_OVER){
 				
 				var dx = 0;
 				if(Key.left) dx -= MAX_SPEED;

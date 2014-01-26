@@ -10,7 +10,8 @@
 	var KEY_CODES = {
 		37:"left", 38:"up", 39:"right", 40:"down",
 		65:"left", 87:"up", 68:"right", 83:"down",
-		16:"shift", 32:"space"
+		16:"shift", 32:"space",
+		27:"pause", 80:"pause"
 	};
 
 	// Key update - which keys were JUST pressed...
@@ -25,12 +26,17 @@
 
 	// Event Handling
 	Key.onKeyDown = function(event){
-	    Key[KEY_CODES[event.keyCode]]=true;
+		var code = KEY_CODES[event.keyCode];
+	    Key[code] = true;
+	    if(code=="pause"){
+	    	Game.togglePause();
+	    }
 	    event.stopPropagation();
 	    event.preventDefault();
 	}
 	Key.onKeyUp = function(event){
-	    Key[KEY_CODES[event.keyCode]]=false;
+		var code = KEY_CODES[event.keyCode];
+	    Key[code] = false;
 	    event.stopPropagation();
 	    event.preventDefault();
 	}

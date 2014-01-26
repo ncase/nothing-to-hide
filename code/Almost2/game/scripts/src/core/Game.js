@@ -21,8 +21,14 @@
 		// Update loop
 		gameLoop = setInterval(function(){
 
-			if(Game.level) Game.level.update();
-			drawnSinceLastUpdate = false;
+			// Paused - do not update
+			if(Game.PAUSED) return;
+
+			// If there's a level, update it.
+			if(Game.level){
+				Game.level.update();
+				drawnSinceLastUpdate = false;
+			}
 
 			// Music
 			if(SWITCH_MUSIC!=-1 && Game.levelIndex>=3){
@@ -93,6 +99,16 @@
 
 	};
 
+	// Pause & play game
+	Game.PAUSED = false;
+	var pauseButton = document.getElementById("pause");
+	var pauseMenu = document.getElementById("pause_menu");
+	Game.togglePause = function(){
+		Game.PAUSED = !Game.PAUSED;
+		pauseButton.innerHTML = Game.PAUSED ? "PLAY" : "PAUSE";
+		pauseMenu.style.display = Game.PAUSED ? "block" : "none";
+	};
+
 	// End game
 	Game.kill = function(){
 		gameKilled = true;
@@ -109,14 +125,19 @@
 		}
 		Display.clear();
 	};
+
+	var levelSelectUI = document.getElementById("lvl_0");
 	Game.gotoLevel = function(index){
+
+		// Change Pause UI
+		levelSelectUI.setAttribute("selected",false);
+		levelSelectUI = document.getElementById("lvl_"+index)
+		levelSelectUI.setAttribute("selected",true);
 		
 		// Get next level config
 		Game.levelIndex = index;
 		var nextLevelName = Game.config.levels[Game.levelIndex];
 		if(!nextLevelName){
-			//return false;
-			alert("Hurray! That's it for now. Please leave me some critique, and thanks for playing my Feedback Friday demo. Thank you!");
 			return false;
 		}
 

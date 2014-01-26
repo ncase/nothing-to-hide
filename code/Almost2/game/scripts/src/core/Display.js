@@ -19,7 +19,7 @@
 		// Canvasses
 		Display.dom.appendChild(_addCanvas("game"));
 		Display.dom.appendChild(_addCanvas("dialogue"));
-		Display.dom.appendChild(_addCanvas("ui"));
+		_addCanvas("ui");
 		_addCanvas("tmp");
 		_addCanvas("tmp2");
 
@@ -53,7 +53,8 @@
 	// Add canvas
 	var _addCanvas = function(layerID){
 
-		var canvas = document.createElement("canvas");
+		var canvas;
+		canvas = document.querySelector("canvas#"+layerID) || document.createElement("canvas");
 		canvas.id = layerID;
 		canvas.width = Display.width;
 		canvas.height = Display.height;

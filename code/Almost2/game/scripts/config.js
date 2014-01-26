@@ -86,6 +86,9 @@ Asset.init({
 		sfx_slidewalk:{src:'assets/sounds/ogg/slidewalk.ogg'},
 		sfx_dialog:{src:'assets/sounds/ogg/dialog.ogg'},
 
+		button_hover: {src:'assets/sounds/ogg/button_hover.ogg'},
+		button_press: {src:'assets/sounds/ogg/button_press.ogg'},
+
 		music_bg: {src:'assets/music/mp3_64/a_healthy_dystopia.mp3'},
 		music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3'}
 

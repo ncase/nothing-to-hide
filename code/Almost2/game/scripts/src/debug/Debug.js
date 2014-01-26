@@ -15,7 +15,7 @@
 	var fpsFilter = 10; // The higher this value, the less the FPS will be affected by quick changes
 	var fpsOut = document.getElementById('fps_counter');
 	setInterval(function(){
-		fpsOut.innerHTML = fps.toFixed(1) + "fps";
+		fpsOut.innerHTML = fps.toFixed(1) + " fps";
 	},1000); 
 	Debug.fps = function(){
 		var delta = ((now=new Date) - lastUpdate);
