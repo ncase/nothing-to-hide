@@ -30,6 +30,7 @@ body{
     width:100%; height:50%;
     position: absolute;
     background: #000;
+    overflow:hidden;
 
 	-webkit-transition: top 1s ease-in-out;
     -moz-transition: top 1s ease-in-out;
@@ -42,6 +43,7 @@ body{
     width:100%; height:50%;
     position: absolute;
     background: #000;
+    overflow:hidden;
 
     -webkit-transition: bottom 1s ease-in-out;
     -moz-transition: bottom 1s ease-in-out;
@@ -53,7 +55,49 @@ body{
 #fade[closed=true] > #fade_top { top:0%; }
 #fade[closed=false] > #fade_bottom { bottom:-50%; }
 #fade[closed=true] > #fade_bottom { bottom:0%; }
-
+.spinner {
+    width: 100px;
+    height: 100px;
+    background: url(preloader.png);
+    z-index: 2;
+}
+#fade_top > .spinner{
+    position: absolute;
+    left:0; right:0; bottom:-50px;
+    margin:auto;
+}
+#fade_bottom > .spinner{
+    position: absolute;
+    left:0; right:0; top:-50px;
+    margin:auto;
+}
+.spinner {
+    -webkit-animation: spin 1s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-animation: spin 1s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-animation: spin 1s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-animation: spin 1s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation: spin 1s infinite cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(120deg);}
+}
+@-moz-keyframes spin {
+    0% { -moz-transform: rotate(0deg);}
+    100% { -moz-transform: rotate(120deg);}
+}
+@-ms-keyframes spin {
+    0% { -ms-transform: rotate(0deg);}
+    100% { -ms-transform: rotate(120deg);}
+}
+@-o-keyframes spin {
+    0% { -o-transform: rotate(0deg);}
+    100% { -o-transform: rotate(120deg);}
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(120deg);}
+}
 
 
 /*** LOADING ***/

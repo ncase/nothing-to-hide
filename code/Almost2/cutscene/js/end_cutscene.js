@@ -206,7 +206,7 @@ var onLoad = function(){
 			turnoff_frame.style.backgroundPosition = "0 -"+frame*200+"px";
 			END_FRAME++;
 
-			if(END_FRAME>210){
+			if(END_FRAME>240){
 				_goBackToMenu();
 			}
 

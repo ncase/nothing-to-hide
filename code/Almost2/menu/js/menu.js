@@ -53,8 +53,11 @@ Menu.start = function(){
 	createjs.Sound.play("big_brother",null,0,0,-1,1,0);
 
 	// Buttons
+	var links = document.querySelectorAll("#footer > a");
 	var buttons = document.querySelectorAll(".button");
 	buttons = Array.prototype.slice.call(buttons);
+	links = Array.prototype.slice.call(links);
+	buttons = buttons.concat(links);
 	buttons.push(document.getElementById("close_button"));
 	for(var i=0;i<buttons.length;i++){
 		var butt = buttons[i];
@@ -69,7 +72,7 @@ Menu.start = function(){
 	// Location Hash Change
 	var _onHashChange = function(hash){
 		if(hash==""){
-			modal.style.display = "none";
+			_modalHide();
 		}else{
 			showModal(hash);
 		}
@@ -189,14 +192,29 @@ window.showModal = function(hash){
 	screenDOM.style.display = "block";
 
 	// Show modal
-	modal.style.display = "block";
+	_modalReveal();
 
 };
 window.hideModal = function(){
-	modal.style.display = "none";
+	_modalHide();
 	window.location.hash = "";
 };
 
 
+// Fade In
+function _modalHide(){
+	modal.setAttribute("shown",false);
+	setTimeout(function(){
+		modal.style.display = "none";
+	},500);
+}
+
+// Fade Out
+function _modalReveal(){
+	modal.style.display = "block";
+	setTimeout(function(){
+		modal.setAttribute("shown",true);
+	},1);
+}
 
 
