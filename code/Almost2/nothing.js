@@ -28,6 +28,7 @@ window.onload = function(){
 		fadeOut();
 		setTimeout(function(){
 	    	wrapper.src = page;
+	    	wrapper.contentWindow.focus();
 	    },1000);
 	};
 

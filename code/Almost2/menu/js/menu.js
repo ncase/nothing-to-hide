@@ -2,6 +2,11 @@ function startGame(){
 	window.top.gotoPage("cutscene/cutscene.html");
 }
 
+// ALWAYS BE FOCUSING
+setInterval(function(){
+	window.focus();
+},500);
+
 var Menu = {};
 
 var RAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
