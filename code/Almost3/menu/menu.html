@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link href='menu.css' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+		<div id="canvas_container" style="height:640px; display:none">
+
+			<canvas id="screen"></canvas>
+
+			<div id="play" class="button" onclick="startGame()">PLAY</div>
+
+			<div id="fund" class="button" onclick="window.location.hash='fund'">FUND THIS GAME</div>
+			<div id="free" class="button" onclick="window.location.hash='free'">DOWNLOADS</div>
+			<div id="share" class="button" onclick="window.location.hash='share'">SHARE ME</div>
+
+			<div id="footer">
+				This HTML5 game has
+				<a href="#uncopyright">ZERO RIGHTS RESERVED</a>. Please share, record & remix all you want!
+				<br>
+				Created by
+				<a href="http://ncase.me" target="_blank">NCASE</a>
+				-
+				Music by
+				<a href="https://www.facebook.com/HalcyonicFalconX" target="_blank">HalcyonicFalconX</a>
+				-
+				<a href="#credits">Full Credits</a>
+			</div>
+
+		</div>
+
+		<div id="modal_container" shown="false">
+			<div id="modal_container_bg" onclick="hideModal()"></div>
+			<div id="modal_container_content">
+				
+				<div class="dialog" id="dialog_fund">
+					<h1>THANK YOU FOR PLAYING THIS DEMO!</h1>
+					built for the public, backed by the public
+				</div>
+				<div class="dialog" id="dialog_free">
+					<h1>HERE, HAVE SOME FREE STUFF</h1>
+					original soundtrack, open art pack, PC builds, source code
+				</div>
+				<div class="dialog" id="dialog_share">
+					<h1>SHARING IS CARING</h1>
+					twitter, facebook, shtuff
+					<br>
+					<br>
+					Yes, I recognize the irony of sharing a game satirizing social media on your social media.
+				</div>
+				<div class="dialog" id="dialog_uncopyright">
+					<h1>YAY FREEDOM OF SPEECH</h1>
+					CC0
+				</div>
+				<div class="dialog" id="dialog_credits">
+					<h1>NOTHING TO HIDE HAS NOTHING TO HIDE</h1>
+					EVERYOOOONE
+				</div>
+
+			</div>
+			<div id="close_button_container">
+				<div id="close_button" onclick="hideModal()">BACK TO MAIN MENU</div>
+			</div>
+		</div>
+
+		<script src="js/Q.js"></script>
+		<script src="js/soundjs-0.5.0.min.js"></script>
+		<script src="js/visibility_polygon.js"></script>
+
+		<script src="js/Asset.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/menu.js"></script>
+
+		<script src="js/Map.js"></script>
+		<script src="js/ShadowController.js"></script>
+		<script src="js/Mouse.js"></script>
+
+	</body>
+</html>
