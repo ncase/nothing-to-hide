@@ -64,12 +64,12 @@
 
 	"conveyors": [
 		{
-			"belt": {"ax":5,"bx":6,"ay":5,"by":10},
+			"belt": {"ax":5,"bx":6,"ay":5,"by":9},
 			"direction": {"x":0,"y":3},
 			"activator": ""
 		},
 		{
-			"belt": {"ax":15,"bx":16,"ay":5,"by":10},
+			"belt": {"ax":15,"bx":16,"ay":5,"by":9},
 			"direction": {"x":0,"y":-3},
 			"activator": ""
 		},
