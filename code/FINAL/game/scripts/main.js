@@ -61,4 +61,22 @@ window.addEventListener("load",function(){
 		},false);
 	}
 
+	// A helper for popup windows
+	window.SS_POPUP = function(url,type){
+
+		var w,h;
+		switch(type){
+			case "twitter": w=550; h=500; break;
+			case "facebook": w=670; h=400; break;
+			default: w=500; h=500; break;
+		}
+		var x = (screen.width/2)-(w/2);
+			var y = (screen.height/2)-(h/2);
+
+		var popupConfig = "width="+w+",height="+h+",left="+x+",top="+y+",";
+		popupConfig += "resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=yes";
+		window.open(url,"popup",popupConfig);
+
+	};
+
 },false);
