@@ -1,0 +1,971 @@
+{"frames": [
+
+{
+	"filename": "Poppy Idle with iEye0000",
+	"frame": {"x":5,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0001",
+	"frame": {"x":110,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0002",
+	"frame": {"x":215,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0003",
+	"frame": {"x":320,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0004",
+	"frame": {"x":425,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0005",
+	"frame": {"x":425,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0006",
+	"frame": {"x":425,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0007",
+	"frame": {"x":425,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0008",
+	"frame": {"x":425,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0009",
+	"frame": {"x":530,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0010",
+	"frame": {"x":530,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0011",
+	"frame": {"x":635,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0012",
+	"frame": {"x":740,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0013",
+	"frame": {"x":845,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0014",
+	"frame": {"x":5,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0015",
+	"frame": {"x":110,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0016",
+	"frame": {"x":215,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0017",
+	"frame": {"x":320,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0018",
+	"frame": {"x":425,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0019",
+	"frame": {"x":530,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0020",
+	"frame": {"x":635,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0021",
+	"frame": {"x":740,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0022",
+	"frame": {"x":845,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0023",
+	"frame": {"x":5,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0024",
+	"frame": {"x":110,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0025",
+	"frame": {"x":215,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0026",
+	"frame": {"x":320,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0027",
+	"frame": {"x":425,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0028",
+	"frame": {"x":530,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0029",
+	"frame": {"x":635,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0030",
+	"frame": {"x":740,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0031",
+	"frame": {"x":845,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0032",
+	"frame": {"x":5,"y":470,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0033",
+	"frame": {"x":110,"y":470,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0034",
+	"frame": {"x":215,"y":470,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0035",
+	"frame": {"x":320,"y":470,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0036",
+	"frame": {"x":425,"y":470,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0037",
+	"frame": {"x":530,"y":470,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0038",
+	"frame": {"x":635,"y":470,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0039",
+	"frame": {"x":740,"y":470,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0040",
+	"frame": {"x":845,"y":470,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0041",
+	"frame": {"x":5,"y":625,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0042",
+	"frame": {"x":110,"y":625,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0043",
+	"frame": {"x":215,"y":625,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0044",
+	"frame": {"x":320,"y":625,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0045",
+	"frame": {"x":425,"y":625,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0046",
+	"frame": {"x":530,"y":625,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0047",
+	"frame": {"x":635,"y":625,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0048",
+	"frame": {"x":740,"y":625,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0049",
+	"frame": {"x":845,"y":625,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0050",
+	"frame": {"x":5,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0051",
+	"frame": {"x":110,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0052",
+	"frame": {"x":215,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0053",
+	"frame": {"x":320,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0054",
+	"frame": {"x":425,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0055",
+	"frame": {"x":425,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0056",
+	"frame": {"x":425,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0057",
+	"frame": {"x":530,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0058",
+	"frame": {"x":635,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0059",
+	"frame": {"x":740,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0060",
+	"frame": {"x":845,"y":780,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0061",
+	"frame": {"x":5,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0062",
+	"frame": {"x":5,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0063",
+	"frame": {"x":5,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0064",
+	"frame": {"x":110,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0065",
+	"frame": {"x":110,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0066",
+	"frame": {"x":215,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0067",
+	"frame": {"x":320,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0068",
+	"frame": {"x":425,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0069",
+	"frame": {"x":530,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0070",
+	"frame": {"x":635,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0071",
+	"frame": {"x":635,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0072",
+	"frame": {"x":740,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0073",
+	"frame": {"x":845,"y":935,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0074",
+	"frame": {"x":5,"y":1090,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0075",
+	"frame": {"x":110,"y":1090,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0076",
+	"frame": {"x":215,"y":1090,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0077",
+	"frame": {"x":320,"y":1090,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0078",
+	"frame": {"x":425,"y":1090,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0079",
+	"frame": {"x":530,"y":1090,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0080",
+	"frame": {"x":635,"y":1090,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0081",
+	"frame": {"x":740,"y":1090,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0082",
+	"frame": {"x":845,"y":1090,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0083",
+	"frame": {"x":5,"y":1245,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0084",
+	"frame": {"x":110,"y":1245,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0085",
+	"frame": {"x":215,"y":1245,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0086",
+	"frame": {"x":320,"y":1245,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0087",
+	"frame": {"x":425,"y":1245,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0088",
+	"frame": {"x":530,"y":1245,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0089",
+	"frame": {"x":635,"y":1245,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0090",
+	"frame": {"x":740,"y":1245,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0091",
+	"frame": {"x":845,"y":1245,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0092",
+	"frame": {"x":5,"y":1400,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0093",
+	"frame": {"x":110,"y":1400,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0094",
+	"frame": {"x":215,"y":1400,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0095",
+	"frame": {"x":320,"y":1400,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0096",
+	"frame": {"x":425,"y":1400,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0097",
+	"frame": {"x":530,"y":1400,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0098",
+	"frame": {"x":635,"y":1400,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0099",
+	"frame": {"x":740,"y":1400,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0100",
+	"frame": {"x":845,"y":1400,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0101",
+	"frame": {"x":5,"y":1555,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0102",
+	"frame": {"x":110,"y":1555,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0103",
+	"frame": {"x":215,"y":1555,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0104",
+	"frame": {"x":320,"y":1555,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0105",
+	"frame": {"x":425,"y":1555,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0106",
+	"frame": {"x":530,"y":1555,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0107",
+	"frame": {"x":635,"y":1555,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0108",
+	"frame": {"x":740,"y":1555,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0109",
+	"frame": {"x":845,"y":1555,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0110",
+	"frame": {"x":5,"y":1710,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0111",
+	"frame": {"x":110,"y":1710,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0112",
+	"frame": {"x":215,"y":1710,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0113",
+	"frame": {"x":215,"y":1710,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0114",
+	"frame": {"x":215,"y":1710,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0115",
+	"frame": {"x":215,"y":1710,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0116",
+	"frame": {"x":320,"y":1710,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0117",
+	"frame": {"x":425,"y":1710,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0118",
+	"frame": {"x":530,"y":1710,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Idle with iEye0119",
+	"frame": {"x":5,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}],
+"meta": {
+	"app": "Adobe Flash CS6",
+	"version": "12.0.0.481",
+	"image": "Poppy_Idle_With_Eye.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":2048},
+	"scale": "1"
+}
+}

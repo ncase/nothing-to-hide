@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link href='css/cutscene.css' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+		<div id="header">
+			<div id="header_content"></div>
+		</div>
+
+		<div id="timeline"></div>
+
+		<div id="footer">
+			<div id="footer_icon"></div>
+			<div id="footer_copy">Copyright &copy; 2044 PanoptiCorp.</div>
+		</div>
+
+
+		<script src="js/soundjs-0.5.2.min.js"></script>
+		<script src="js/intro_cutscene.js"></script>
+		<script>
+
+		// ALWAYS BE FOCUSING
+		setInterval(function(){
+			window.focus();
+		},500);
+
+		window.onload = function(){
+
+			var manifest = [
+				
+				{id:"door_open", src:"sounds/mp3/door_open.mp3|sounds/ogg/door_open.ogg"},
+				{id:"door_close", src:"sounds/mp3/door_close.mp3|sounds/ogg/door_close.ogg"},
+				{id:"city", src:"sounds/mp3/city.mp3|sounds/ogg/city.ogg"},
+				{id:"room", src:"sounds/mp3/room.mp3|sounds/ogg/room.ogg"},
+				{id:"step_1", src:"sounds/mp3/step_1.mp3|sounds/ogg/step_1.ogg"},
+				{id:"step_2", src:"sounds/mp3/step_2.mp3|sounds/ogg/step_2.ogg"},
+				{id:"squeak", src:"sounds/mp3/squeak.mp3|sounds/ogg/squeak.ogg"},
+				{id:"whack", src:"sounds/mp3/whack.mp3|sounds/ogg/whack.ogg"},
+				{id:"cough", src:"sounds/mp3/cough.mp3|sounds/ogg/cough.ogg"},
+
+				{id:"button_hover", src:'sounds/mp3/button_hover.mp3|sounds/ogg/button_hover.ogg'},
+				{id:"button_press", src:'sounds/mp3/button_press.mp3|sounds/ogg/button_press.ogg'}
+
+			];
+
+			// Images
+			var images = [
+				"icons/poppy.png",
+				"icons/gardner.png",
+				"icons/game.png",
+				"pics/background_back.png",
+				"pics/background_front.png",
+				"pics/establishing_fg.png",
+				"pics/background_back.png",
+				"pics/background_front.png",
+				"pics/establishing_fg_2.png",
+				"pics/background_back.png",
+				"pics/background_front.png",
+				"pics/establishing_fg_3.png",
+				"pics/background_back.png",
+				"pics/background_front.png",
+				"pics/door_close_1.png",
+				"pics/background_back.png",
+				"pics/background_front.png",
+				"pics/door_close_2.png",
+				"pics/background_back.png",
+				"pics/background_front.png",
+				"pics/door_close_3.png",
+				"pics/background_back.png",
+				"pics/background_front.png",
+				"pics/door_close_4.png",
+				"pics/escape_1.png",
+				"pics/escape_2.png",
+				"pics/escape_3.png",
+				"pics/escape_4.png",
+				"pics/escape_5.png",
+				"pics/game.png"
+			];
+
+			// On Asset Loaded
+			var imagesLoaded = 0;
+			var soundsLoaded = 0;
+			var imagesTotal = images.length;
+			var soundsTotal = manifest.length;
+			var _onAssetLoaded = function(){
+				var loaded = imagesLoaded + soundsLoaded;
+				var total = imagesTotal + soundsTotal;
+				if(window.top.onProgress){
+					window.top.onProgress(loaded/total);
+				}else{
+					console.log(loaded/total);
+				}
+				if(loaded==total) onLoad();
+			};
+
+			// Images loaded
+			for(var i=0;i<images.length;i++){
+				var img = new Image();
+				img.onload = function(){
+					imagesLoaded++;
+					_onAssetLoaded();
+				};
+				img.src = images[i];
+			}
+
+			// Sounds loaded
+			createjs.Sound.addEventListener("fileload",function(event){
+				soundsLoaded++;
+				_onAssetLoaded();
+			});
+			createjs.Sound.registerManifest(manifest);
+
+		};
+
+		var poster = {
+			poppy: {
+				user: "Poppy Gardner",
+				icon: "icons/poppy.png"
+			},
+			gardner: {
+				user: "George Gardner",
+				icon: "icons/gardner.png"
+			},
+			game: {
+				user: "Nothing To Hide",
+				icon: "icons/game.png",
+				date: "just now"
+			}
+		};
+
+		var _generatePost = function(type,poster,date,data){
+			return {
+				type: type+"_post",
+				user: poster.user,
+				icon: poster.icon,
+				date: date,
+				data: data
+			}
+		};
+
+		var posts = [
+
+			////// ESTABLISHING SHOT ///////
+
+			_generatePost("parallax",poster.poppy,"16 minutes ago",{
+				height: 450,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/establishing_fg.png", depth:0.1, offset:50}
+				]
+			}),
+			_generatePost("parallax",poster.poppy,"16 minutes ago",{
+				height: 350,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/establishing_fg_2.png", depth:0.1, offset:50}
+				],
+				sound: {
+					offset: -100,
+					play: ["door_open",null,0,0,0,1,-1]
+				}
+			}),
+			_generatePost("parallax",poster.poppy,"16 minutes ago",{
+				height: 250,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/establishing_fg_3.png", depth:0.1, offset:50}
+				]
+			}),
+
+
+			//////// MR GARDNER TO POPPY //////////
+
+			_generatePost("conversation",poster.gardner,"16 minutes ago",{
+				message: "Poppy?"
+			}),
+			_generatePost("conversation",poster.gardner,"16 minutes ago",{
+				message: "Hey sweetie. Please don't be sad."
+			}),
+			_generatePost("conversation",poster.gardner,"16 minutes ago",{
+				message: "It's really hurting my popularity ranking."
+			}),
+			_generatePost("conversation",poster.gardner,"15 minutes ago",{
+				message: "The first un-secret ballot election is coming up. "+
+						"It's very important to Daddy's career, "+
+						"so I need you to post more happy pictures of yourself to The Wall. "+
+						"At least 400 per day, okay?"
+			}),
+			_generatePost("conversation",poster.gardner,"15 minutes ago",{
+				message: "Please, Poppy? I don't want the voters to think I'm a bad parent."
+			}),
+
+
+			///// CLOSE DOOR /////
+
+			_generatePost("parallax",poster.poppy,"15 minutes ago",{
+				height: 450,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/door_close_1.png", depth:0.1, offset:50}
+				]
+			}),
+			_generatePost("conversation",poster.gardner,"15 minutes ago",{
+				message: "Well, goodnight! <span>#DaddyDaughterMoment</span>"
+			}),
+			_generatePost("parallax",poster.poppy,"15 minutes ago",{
+				height: 450,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/door_close_2.png", depth:0.1, offset:75}
+				]
+			}),
+			_generatePost("parallax",poster.poppy,"14 minutes ago",{
+				height: 450,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/door_close_3.png", depth:0.1, offset:100}
+				],
+				sound: {
+					offset: 200,
+					play: ["door_close",null,0,0,0,1,-1]
+				}
+			}),
+			_generatePost("parallax",poster.poppy,"14 minutes ago",{
+				height: 450,
+				layers:[
+					{img:"pics/background_back.png", depth:0.8, offset:0},
+					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/door_close_4.png", depth:0.1, offset:100}
+				],
+				sound: {
+					offset: 300,
+					play: ["squeak",null,0,0,0,0.5,0]
+				}
+			}),
+
+			//////// INTERNAL MONOLOGUE //////////
+
+			_generatePost("conversation",poster.poppy,"14 minutes ago",{
+				message: "I... I have to get out of here..."
+			}),
+			_generatePost("conversation",poster.poppy,"14 minutes ago",{
+				message: "Dad will be better off without me. His Popularity Metrics&trade;, too."
+			}),
+			_generatePost("conversation",poster.poppy,"14 minutes ago",{
+				message: "I don't deserve his loving security and discipline."
+			}),
+			_generatePost("conversation",poster.poppy,"14 minutes ago",{
+				message: "Goodbye, dad. I'm so sorry.",
+				ambience: {
+					interval: [-40001,-40000,-1000,200],
+					play: "room",
+					volume: 1
+				}
+			}),
+
+
+			//////// ESCAPE //////////
+
+			_generatePost("parallax",poster.poppy,"8 minutes ago",{
+				height: 250,
+				layers:[{img:"pics/escape_1.png", depth:1, offset:150}],
+				ambience: {
+					interval: [-1000,0,1700,2200],
+					play: "city",
+					volume: 0.8
+				}
+			}),
+			_generatePost("parallax",poster.poppy,"8 minutes ago",{
+				height: 250,
+				layers:[{img:"pics/escape_2.png", depth:1, offset:150}],
+				sound: {
+					offset: 200,
+					play: ["whack",null,0,0,0,1,0]
+				}
+			}),
+			_generatePost("parallax",poster.poppy,"8 minutes ago",{
+				height: 250,
+				layers:[{img:"pics/escape_3.png", depth:1, offset:150}],
+				sound: {
+					offset: 200,
+					play: ["cough",null,0,0,0,1,0]
+				}
+			}),
+			_generatePost("parallax",poster.poppy,"8 minutes ago",{
+				height: 250,
+				layers:[{img:"pics/escape_4.png", depth:1, offset:150}],
+				sound: {
+					offset: 200,
+					play: ["step_1",null,0,0,0,0.6,0.8]
+				}
+			}),
+			_generatePost("parallax",poster.poppy,"8 minutes ago",{
+				height: 250,
+				layers:[{img:"pics/escape_5.png", depth:1, offset:150}],
+				sound: {
+					offset: 200,
+					play: ["step_2",null,0,0,0,0.3,1]
+				}
+			}),
+
+			//////// PLAY GAME /////////
+			_generatePost("video",poster.game,"just now",{
+				bg: "pics/game.png"
+			})
+
+		];
+
+		</script>
+
+	</body>
+</html>
