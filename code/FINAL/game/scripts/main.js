@@ -50,5 +50,15 @@ window.addEventListener("load",function(){
 			createjs.Sound.play("button_press",null,0,0,0,1,0);
 		},false);
 	}
+	var buttons = document.querySelectorAll(".social_big");
+	for(var i=0;i<buttons.length;i++){
+		var butt = buttons[i];
+		butt.addEventListener("mouseover",function(){
+			createjs.Sound.play("button_hover",null,0,0,0,1,0);
+		},false);
+		butt.addEventListener("mousedown",function(){
+			createjs.Sound.play("button_press",null,0,0,0,1,0);
+		},false);
+	}
 
 },false);
