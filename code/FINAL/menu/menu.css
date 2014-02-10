@@ -74,11 +74,11 @@ a {
 #fund.button{
 	top:355px;
 	height:40px;
-	letter-spacing: 0px;
 }
 #fund.button:hover{
 	padding: 5px 0;
 	top:350px;
+	letter-spacing: 0.07em;
 }
 
 #uncopyright.button{
@@ -115,7 +115,7 @@ a {
 }*/
 
 #tdwfb{
-	background: url("tdwfb.png");
+	background: url("img/tdwfb.png");
 	width: 1000px;
 	height: 80px;
 	position: absolute;
@@ -164,14 +164,22 @@ a {
 #modal_container_content{
 	position: absolute;
 	width:800px;
-	height:100%;
-	top:0; left:0; right:0; bottom:0;
-	margin:auto;
+	
+	height:-webkit-calc(100% - 100px);
+	height:-moz-calc(100% - 100px);
+	height:-ms-calc(100% - 100px);
+	height:-o-calc(100% - 100px);
+	height:calc(100% - 100px);
+
+	top:0px; left:0; right:0; bottom:0;
+	margin:0 auto;
 	color:#fff;
 	background: #000;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
 
 	overflow-x: none;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 #close_button_container{
 	position: absolute;
@@ -180,6 +188,8 @@ a {
 	background: #000;
 	left:0; right:0; bottom:0;
 	margin:auto;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
 }
 #close_button{
 	cursor: pointer;
@@ -199,10 +209,53 @@ a {
 	background: #fff;
 }
 .dialog {
-	padding:60px 40px;
+	padding:60px 40px 30px 40px;
+	color:#fff;
+}
+.dialog span{
+	color:#888;
+	font-family: sans-serif;
+	font-size: 18px;
+	font-weight: 100;
 }
 .dialog h1{
 	line-height: 1em;
-	font-size: 60px;
+	font-size: 50px;
 	margin:0;
+	margin-bottom: 20px;
+	text-align: center;
 }
+.dialog a{
+	color: #CC2727;
+	text-decoration: underline;
+}
+.dialog a:hover{
+	color: #FF3333;
+}
+
+#back_this_game{
+	background: #cc2727;
+	color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 10px 0;
+	text-align: center;
+	width: 400px;
+	font-size: 50px;
+	height: 40px;
+	margin: 20px auto;
+	letter-spacing: 3px;
+}
+#back_this_game:hover{
+	background: #FF3333;
+}
+.social_big{
+	background: url(img/share_big.png);
+	width:125px; height:50px;
+}
+.social_big#tweet{ background-position: 0px 0px; }
+.social_big#tweet:hover{ background-position: 0px -50px; }
+.social_big#facebook{ background-position: 0px -100px; }
+.social_big#facebook:hover{ background-position: 0px -150px; }
+
+

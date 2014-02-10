@@ -3,13 +3,7 @@
 	// Singleton
 	var Debug = {};
 	exports.Debug = Debug;
-
-	// For making real art out of placeholders
-	Debug.getMapArt = function(){
-		console.log(Game.level.map._getBackgroundImage());
-		console.log(Game.level.map._getCCTVImage());
-	};
-
+	
 	// For recording the FPS rate
 	var fps = 0, now, lastUpdate = (new Date)*1 - 1;
 	var fpsFilter = 10; // The higher this value, the less the FPS will be affected by quick changes

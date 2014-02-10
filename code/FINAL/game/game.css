@@ -98,7 +98,7 @@ body, canvas, div {
 }
 #pause_menu_2 {
 	position: absolute;
-    width:100%; height:350px;
+    width:100%; height:450px;
     top:0; left:0; right:0; bottom:0;
     margin:auto; background:rgba(0,0,0,0.8)
 }
@@ -109,3 +109,11 @@ body, canvas, div {
 	color:#000;
 	background: #fff;
 }
+.social_big{
+	background: url(img/share_big.png);
+	width:125px; height:50px;
+}
+.social_big#tweet{ background-position: 0px 0px; }
+.social_big#tweet:hover{ background-position: 0px -50px; }
+.social_big#facebook{ background-position: 0px -100px; }
+.social_big#facebook:hover{ background-position: 0px -150px; }

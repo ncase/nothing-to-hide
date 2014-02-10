@@ -72,7 +72,7 @@
 				}else{
 					Display.clear();
 				}
-				Debug.fps();
+				//Debug.fps();
 			}
 
 			// Cursor, draw anyway!...

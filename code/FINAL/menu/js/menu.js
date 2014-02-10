@@ -14,6 +14,7 @@ Menu.start = function(){
 
 	var drawnSinceLastUpdate = false;
 	document.getElementById("canvas_container").style.display = "block";
+	document.getElementById("canvas_container").focus();
 
 	// Initialize
 	var config = Asset.level.menu;
@@ -58,7 +59,7 @@ Menu.start = function(){
 	createjs.Sound.play("big_brother",null,0,0,-1,1,0);
 
 	// Buttons
-	var links = document.querySelectorAll("#footer > a");
+	var links = document.querySelectorAll(".link");
 	var buttons = document.querySelectorAll(".button");
 	buttons = Array.prototype.slice.call(buttons);
 	links = Array.prototype.slice.call(links);
