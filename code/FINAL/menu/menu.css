@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Ostrich';
-	src: url(../../fonts/OstrichSans.woff) format('woff');
+	src: url(../fonts/OstrichSans.woff) format('woff');
 }
 
 body, canvas, div {
@@ -74,32 +74,32 @@ a {
 #fund.button{
 	top:355px;
 	height:40px;
+	letter-spacing: 0px;
 }
 #fund.button:hover{
 	padding: 5px 0;
 	top:350px;
 }
 
-#free.button{
+#uncopyright.button{
 	top:405px;
 	height:40px;
 }
-#free.button:hover{
+#uncopyright.button:hover{
 	padding: 5px 0;
 	top:400px;
-	letter-spacing: 0.08em;
 }
 
-#share.button{
+#credits.button{
 	top:455px;
 	height:40px;
 }
-#share.button:hover{
+#credits.button:hover{
 	padding: 5px 0;
 	top:450px;
 }
 
-#footer {
+/*#footer {
 	width:100%;
 	font-size:30px; letter-spacing:2px; line-height:35px;
 	color:#fff;
@@ -112,6 +112,14 @@ a {
 }
 #footer a:hover{
 	color: #FF3333;
+}*/
+
+#tdwfb{
+	background: url("tdwfb.png");
+	width: 1000px;
+	height: 80px;
+	position: absolute;
+	bottom: 0;
 }
 
 /*** MODAL ***/

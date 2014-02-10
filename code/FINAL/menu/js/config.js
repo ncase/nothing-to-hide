@@ -11,7 +11,7 @@ Asset.init({
 
 	},
 	sounds:{
-		big_brother: {src:'assets/music/mp3_64/big_brother.mp3|assets/music/ogg_64/big_brother.ogg'},
+		//big_brother: {src:'assets/music/mp3_64/big_brother.mp3|assets/music/ogg_64/big_brother.ogg'},
 		button_hover: {src:'assets/sounds/mp3/button_hover.mp3|assets/sounds/ogg/button_hover.ogg'},
 		button_press: {src:'assets/sounds/mp3/button_press.mp3|assets/sounds/ogg/button_press.ogg'}
 	},

@@ -6,30 +6,17 @@
 	</head>
 	<body>
 
-		<div id="canvas_container" style="height:640px; display:none">
+		<div id="canvas_container" style="height:630px; display:none">
 
 			<canvas id="screen"></canvas>
 
 			<div id="play" class="button" onclick="startGame()">PLAY</div>
 
 			<div id="fund" class="button" onclick="window.location.hash='fund'">BACK THIS GAME</div>
-			<div id="free" class="button" onclick="window.location.hash='free'">DOWNLOADS</div>
-			<div id="share" class="button" onclick="window.location.hash='share'">SHARE ME</div>
+			<div id="uncopyright" class="button" onclick="window.location.hash='uncopyright'">UNCOPYRIGHT</div>
+			<div id="credits" class="button" onclick="window.location.hash='credits'">CREDITS</div>
 
-			<div id="footer">
-				<!--This HTML5 game has
-				<a href="#uncopyright">ZERO RIGHTS RESERVED</a>. Please share, record & remix all you want!-->
-				<!-- Mod, Share, and Record/Let's Play?... -->
-				Hello there! This web demo is for r/gamedev's feedback friday #67
-				<br>
-				Created by
-				<a href="http://ncase.me" target="_blank">NCASE</a>
-				-
-				Music by
-				<a href="https://www.facebook.com/HalcyonicFalconX" target="_blank">HalcyonicFalconX</a>
-				-
-				<a href="#credits">Full Credits</a>
-			</div>
+			<a href="https://thedaywefightback.org/" target="_blank"><div id="tdwfb"></div></a>
 
 		</div>
 
@@ -39,22 +26,19 @@
 				
 				<div class="dialog" id="dialog_fund">
 					<h1>THANK YOU FOR PLAYING THIS DEMO!</h1>
-					built for the public, backed by the public
-				</div>
-				<div class="dialog" id="dialog_free">
-					<h1>HERE, HAVE SOME FREE STUFF</h1>
-					original soundtrack, open art pack, PC builds, source code
-				</div>
-				<div class="dialog" id="dialog_share">
-					<h1>SHARING IS CARING</h1>
-					twitter, facebook, shtuff
-					<br>
-					<br>
-					Yes, I recognize the irony of sharing a game satirizing social media on your social media.
+					built for the public, backed by the public.
+					Also, share/tweet.
 				</div>
 				<div class="dialog" id="dialog_uncopyright">
-					<h1>YAY FREEDOM OF SPEECH</h1>
-					CC0
+					<h1>NOTHING TO HIDE HAS NOTHING TO HIDE</h1>
+					This game is
+					<a href="https://github.com/ncase/nothing-to-hide" target="_blank">open source</a>,
+					<a href="http://tinyletter.com/nothingtohide/letters" target="_blank">openly designed</a>,
+					and with your help,
+					<a href="http://back.nothingtohide.cc" target="_blank">openly funded</a>.
+					<br>
+					<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">Zero rights reserved</a>.
+					Please share, mod, & let's play all you want!
 				</div>
 				<div class="dialog" id="dialog_credits">
 					<h1>NOTHING TO HIDE HAS NOTHING TO HIDE</h1>
