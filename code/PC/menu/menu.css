@@ -81,20 +81,20 @@ a {
 	letter-spacing: 0.07em;
 }
 
-#uncopyright.button{
+#credits.button{
 	top:405px;
 	height:40px;
 }
-#uncopyright.button:hover{
+#credits.button:hover{
 	padding: 5px 0;
 	top:400px;
 }
 
-#credits.button{
+#quit.button{
 	top:455px;
 	height:40px;
 }
-#credits.button:hover{
+#quit.button:hover{
 	padding: 5px 0;
 	top:450px;
 }

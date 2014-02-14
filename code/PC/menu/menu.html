@@ -6,18 +6,15 @@
 	</head>
 	<body>
 
-		<div id="canvas_container" style="height:640px; display:none">
+		<div id="canvas_container" style="display:none">
 
 			<canvas id="screen"></canvas>
 
 			<div id="play" class="button" onclick="startGame()">PLAY</div>
 
-			<div id="fund" class="button" onclick="window.location.hash='fund'">SUPPORT & SHARE</div>
-			<div id="uncopyright" class="button" onclick="window.location.hash='uncopyright'">UNCOPYRIGHT</div>
+			<div id="fund" class="button" onclick="window.location.hash='fund'">BACK THIS GAME!</div>
 			<div id="credits" class="button" onclick="window.location.hash='credits'">CREDITS</div>
-
-			<iframe class="link" id="campaign_embed" src="http://back.nothingtohide.cc/embed" scrolling="no"></iframe>
-
+			<div id="quit" class="button" onclick="quitApp()">QUIT</div>
 		</div>
 
 		<div id="modal_container" shown="false">
@@ -32,73 +29,33 @@
 					We've got a long way to go, and we need your help.</span>
 					<br>
 
-					<a href="http://back.nothingtohide.cc" target="_blank" style="text-decoration:none">
-						<div id="back_this_game" class="link">back this game</div>
-					</a>
+					<div onclick="openExternal('http://back.nothingtohide.cc')" id="back_this_game" class="link">back this game</div>
 
-					<span>Why crowdfunding? Well, this game is open source and uncopyrighted.
-					We're built for the public, and backed by the public!
-					And I know this is kind of ironic, being a satire of social media and all, but...</span>
+					<span>
+					[draft] why back us:<br>
+					* Our game is open source<br>
+					* 10% goes to charity<br>
+					* Backer rewards and stuff<br>
+					</span>
 
-					<div style="width:260px;height:50px;margin:20px auto 30px auto; overflow:hidden;">
-						<div style="float:left; cursor:pointer" class="social_big link" id="tweet" onclick='window.SS_POPUP("https://twitter.com/share?url=http%3A%2F%2Fdemo.nothingtohide.cc%2F&text=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.&via=ncasenmare","twitter")'></div>
-                        <div style="float:right; cursor:pointer" class="social_big link" id="facebook" onclick='window.SS_POPUP("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdemo.nothingtohide.cc%2F&t=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.","facebook")'></div>
-					</div>
-
+					<br><br>
 					Thanks again, you dissident, you!
 
-				</div>
-				<div class="dialog" id="dialog_uncopyright">
-					<h1>NOTHING TO HIDE HAS NOTHING TO HIDE</h1>
-
-					We're
-					<a href="https://github.com/ncase/nothing-to-hide" target="_blank">open source</a>,
-					<a href="http://tinyletter.com/nothingtohide/letters" target="_blank">openly designed</a>,
-					and with your help,
-					<a href="http://back.nothingtohide.cc" target="_blank">openly funded</a>.
-					But most of all, uncopyrighted. That's right -
-					<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">Zero Rights Reserved</a>.
-					<br><br>
-
-					You're totally welcome to:
-					<br>
-					<span>
-						- "Pirate" this game.
-						<br>
-						- Record and monetize Let's Plays.
-						<br>
-						- Re-host this game on your website.
-						<br>
-						- Use the art/music/code in your own projects.
-						<br>
-						- Make a mod where the main character is replaced with Princess Luna from the
-						hit cartoon show, My Little Pony: Friendship Is Magic.
-						Well, actually, you'll probably get a cease and desist from Hasbro for that.
-						But not from me.
-					</span>
-					<br><br>
-
-					By giving up "power" over our art, our art can have more power.					
-					
 				</div>
 				<div class="dialog" id="dialog_credits">
 
 					<h1>WITH THE HELP OF HUNDREDS</h1>
 					
-					<a href="https://twitter.com/ncasenmare" target="_blank">NCASE</a> - Developer, designer, artist
+					NutcaseNightmare <span>- Developer, designer, artist</span>
 					<br>
-					<a href="https://www.facebook.com/HalcyonicFalconX" target="_blank">HalcyonicFalconX</a> - Musician
+					HalcyonicFalconX <span>- Musician</span>
 					<br>
-					Code libraries -
-					<a href="https://code.google.com/p/visibility-polygon-js/" target="_blank">Visibility-Polygon</a>,
-					<a href="http://createjs.com/#!/SoundJS" target="_blank">SoundJS</a>,
-					<a href="http://documentup.com/kriskowal/q/" target="_blank">Q</a>
+					Code libraries <span>- Visibility-Polygon, SoundJS, Q, Node-Webkit</span>
 					<br>
-					Sound effects from Freesound.org <a href="https://gist.github.com/ncase/8936191" target="_blank">(full credits list)</a>
+					Sound effects from Freesound.org
 					<br><br>
 
 					The Council of Feedback
-					<a href="http://tinyletter.com/nothingtohide/letters" target="_blank">(join the council)</a>
 					<br>
 					<span>
 					AustYn Burgess, Branaja, Brendan Z, Cool_Muhl, Crazyjrocks, im_tw1g, Jackson Powell,
@@ -159,6 +116,17 @@
 		<script src="js/Map.js"></script>
 		<script src="js/ShadowController.js"></script>
 		<script src="js/Mouse.js"></script>
+
+		<script>
+		var gui = require('nw.gui');
+		console.log(gui.App.argv);
+		function quitApp(){
+			gui.App.quit();
+		}
+		function openExternal(url){
+			gui.Shell.openExternal(url);
+		}
+		</script>
 
 	</body>
 </html>

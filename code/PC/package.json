@@ -1,0 +1,16 @@
+{
+  "main": "index.html",
+  "name": "Nothing To Hide",
+  "description": "a surveillance state anti-stealth game",
+  "version": "1.0.0",
+  "window": {
+    "title": "Nothing To Hide",
+    "toolbar": false,
+    "width": 1120,
+    "height": 630,
+    "fullscreen": false
+  },
+  "webkit": {
+    "plugin": false
+  }
+}
