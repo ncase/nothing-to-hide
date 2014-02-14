@@ -114,12 +114,14 @@ a {
 	color: #FF3333;
 }*/
 
-#tdwfb{
-	background: url("img/tdwfb.png");
+#campaign_embed{
 	width: 1000px;
-	height: 80px;
+	height: 70px;
 	position: absolute;
 	bottom: 0;
+	display: block;
+	border:none;
+	overflow: hidden;
 }
 
 /*** MODAL ***/
