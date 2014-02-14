@@ -80,6 +80,10 @@ body, canvas, div {
 	width:60px;
 	bottom: 10px; right:10px;
 }
+#skip_level {
+	width:100px;
+	bottom: 10px; right:100px;
+}
 #fps_counter {
 	color:#fff;
 	padding:15px 10px;

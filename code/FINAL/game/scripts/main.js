@@ -79,4 +79,14 @@ window.addEventListener("load",function(){
 
 	};
 
+	// Helper to skip levels
+	window.skipLevel = function(){
+		var index = Game.levelIndex+1;
+		if(index==8){
+			window.top.gotoPage('cutscene/cutscene_end.html');
+		}else{
+			Game.gotoLevel(Game.levelIndex+1)
+		}
+	};
+
 },false);
