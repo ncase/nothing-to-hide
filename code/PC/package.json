@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "window": {
     "title": "Nothing To Hide",
+    "icon": "icon.png",
     "toolbar": false,
     "width": 1120,
     "height": 630,

@@ -12,9 +12,10 @@
 
 			<div id="play" class="button" onclick="startGame()">PLAY</div>
 
-			<div id="fund" class="button" onclick="window.location.hash='fund'">BACK THIS GAME!</div>
+			<div id="fund" class="button" onclick="window.location.hash='fund'" style="color:#fff;background:#cc2727">BACK THIS GAME!</div>
 			<div id="credits" class="button" onclick="window.location.hash='credits'">CREDITS</div>
 			<div id="quit" class="button" onclick="quitApp()">QUIT</div>
+
 		</div>
 
 		<div id="modal_container" shown="false">
@@ -29,13 +30,17 @@
 					We've got a long way to go, and we need your help.</span>
 					<br>
 
-					<div onclick="openExternal('http://back.nothingtohide.cc')" id="back_this_game" class="link">back this game</div>
+					<div onclick="openExternal('http://back.nothingtohide.cc')" id="back_this_game" class="link">
+						back this game
+						<div style="font-size:20px; color:#000; letter-spacing:4px">link opens in your browser</div>
+					</div>
 
+					<br>
+					Why supporting us would be awesome: <br>
 					<span>
-					[draft] why back us:<br>
-					* Our game is open source<br>
-					* 10% goes to charity<br>
-					* Backer rewards and stuff<br>
+					- You get uncopyrighted downloads of the soundtrack and art files.<br>
+					- You get our full, un-edited source code.<br>
+					- 10% of your pledge goes to charity.
 					</span>
 
 					<br><br>
