@@ -1,3 +1,15 @@
+Nothing To Hide internationalized
+===
+
+This is a fork of [nothing to hide by ncase](https://github.com/ncase/nothing-to-hide).
+In this fork we attempt to internationalize the game [by using the i18next library](http://i18next.com).
+Language files for English (en-US) and German (de) are currently drafted.
+As of now we solely translate the web version (in the "FINAL" directory), not the "PC" version.
+Contributors are welcome to get in touch in order to speed things up.
+
+
+###Original project description
+
 Nothing To Hide has nothing to hide.
 ===
 
