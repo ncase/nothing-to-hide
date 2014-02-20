@@ -1,8 +1,8 @@
 {
 	"app": {
 		"name": "Nichts Zu Verbergen",
-		"titleseparator": ": ",
-		"subtitle": "ein Anti-Schleichspiel in welchem du dich selbst überwachst."
+		"subtitle": "ein Anti-Schleichspiel in welchem du dich selbst überwachst.",
+		"longtitle": "Nichts Zu Verbergen: ein Anti-Schleichspiel in welchem du dich selbst überwachst."
 	},
 	"menu": {
 		"play": "SPIELEN",
