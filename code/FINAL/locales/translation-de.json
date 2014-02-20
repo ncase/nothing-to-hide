@@ -1,7 +1,37 @@
 {
 	"app": {
-		"name": "Nichts zu verbergen",
+		"name": "Nichts Zu Verbergen",
 		"titleseparator": ": ",
 		"subtitle": "ein Anti-Schleichspiel in welchem du dich selbst überwachst."
+	},
+	"menu": {
+		"play": "SPIELEN",
+		"support": "UNTERSTÜTZEN",
+		"uncopyright": "GEMEINFREI",
+		"credits": "AUTOREN"
+	},
+	"dialog": {
+		"fund": {
+			"title": "DANKE FUER DAS SPIELEN DIESER DEMO!",
+			"staytuned": [
+				"Sei gespannt. Das war nicht mal ein Zehntel des gesamten Spiels!",
+				"Auf der anderen Seite....dies war nicht mal ein Zehntel des gesamten Spiels.",
+				"Wir haben noch einen langen Weg für uns und brauchen deine Hilfe."
+			],
+			"backthisgame": "unterstütze uns",
+			"whycrowdfunding": [
+				"Wieso Crowdfunding? Nun, dieses Spiel ist Open Source und ohne Urheberrechte.",
+				"Wir werden von der Allgemeinheit gebildet und werden durch sie unterstützt!",
+				"Und ich weiss, dass das etwas ironisch ist, aber Satire auf sozialen Netzwerken und so, aber..."
+			],
+			"thanksdissident": "Danke nochmals fuer's spielen, du Dissident!"
+		},
+		"uncopyright": {
+			"title": "NICHTS ZU VERBERGEN HAT NICHTS ZU VERBERGEN"
+			
+		}
+	},
+	"commands": {
+		"backtomainmenu": "ZURÜCK ZUM HAUPTMENÜ"
 	}
 }

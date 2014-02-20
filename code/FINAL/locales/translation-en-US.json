@@ -1,7 +1,37 @@
 {
 	"app": {
 		"name": "Nothing To Hide",
-		"titleseparator": ": ",
-		"subtitle": "an anti-stealth game where you are your own watchdog."
+		"subtitle": "an anti-stealth game where you are your own watchdog.",
+		"longtitle": "Nothing To Hide: an anti-stealth game where you are your own watchdog."
+	},
+	"menu": {
+		"play": "PLAY",
+		"support": "SUPPORT & SHARE",
+		"uncopyright": "UNCOPYRIGHT",
+		"credits": "CREDITS"
+	},
+	"dialog": {
+		"fund": {
+			"title": "THANK YOU FOR PLAYING THIS DEMO!",
+			"staytuned": [
+				"Be excited. This wasn't even a tenth of what the full game will be!",
+				"On the downside... this wasn't even a tenth of what the full game will be.",
+				"We've got a long way to go, and we need your help."
+			],
+			"backthisgame": "back this game",
+			"whycrowdfunding": [
+				"Why crowdfunding? Well, this game is open source and uncopyrighted.",
+				"We're built for the public, and backed by the public!",
+				"And I know this is kind of ironic, being a satire of social media and all, but..."
+			],
+			"thanksdissident": "Thanks again, you dissident, you!"
+		},
+		"uncopyright": {
+			"title": "NOTHING TO HIDE HAS NOTHING TO HIDE"
+			
+		}
+	},
+	"commands": {
+		"backtomainmenu": "BACK TO MAIN MENU"
 	}
 }

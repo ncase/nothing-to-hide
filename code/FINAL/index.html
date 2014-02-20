@@ -2,12 +2,33 @@
 
 <html>
 	<head>
+		<!--jQuery for simplifying access to DOM elements when using i18next -->
+		<script src="jquery.min.js"></script>
+		<!--i18next for translation to other languages -->
+		<script src="i18next.min.js"></script>
+		<script>
+			$.i18n.init({
+				//loads sth like locales/translation-en-us.json
+				resGetPath: 'locales/__ns__-__lng__.json',
+				//set to true to turn on caching production use
+				useLocalStorage: false, 
+				//set to false for production use
+				debug: true
+			}, function() {
+			    $('title').text($.t('app.longtitle'));
+				$('#metadescription').attr( "content", $.t('app.longtitle') );
+   				$('#metaogtitle').attr( "content", $.t('app.name') );
+   				$('#metaogdescription').attr( "content", $.t('app.subtitle') );
+   				$('#metatwittertitle').attr( "content", $.t('app.name') );
+   				$('#metatwitterdescription').attr( "content", $.t('app.subtitle') );
+			});
+		</script>
 		<title>Nothing To Hide: an anti-stealth game where you are your own watchdog.</title>
 
-		<meta name="description" content="Nothing To Hide: an anti-stealth game where you are your own watchdog.">
+		<meta id="metadescription" name="description" content="Nothing To Hide: an anti-stealth game where you are your own watchdog.">
  
-		<meta property="og:title" content="Nothing To Hide">
-		<meta property="og:description" content="An anti-stealth game where you are your own watchdog.">
+		<meta id="metaogtitle" property="og:title" content="Nothing To Hide">
+		<meta id="metaogdescription" property="og:description" content="An anti-stealth game where you are your own watchdog.">
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="http://back.nothingtohide.cc">
 		<meta property="og:image" content="http://back.nothingtohide.cc/thumbs/thumb.png">
@@ -16,8 +37,8 @@
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@ncasenmare">
 		<meta name="twitter:creator" content="@ncasenmare">
-		<meta name="twitter:title" content="Nothing To Hide">
-		<meta name="twitter:description" content="An anti-stealth game where you are your own watchdog.">
+		<meta id="metatwittertitle" name="twitter:title" content="Nothing To Hide">
+		<meta id="metatwitterdescription" name="twitter:description" content="An anti-stealth game where you are your own watchdog.">
 		<meta name="twitter:image" content="http://back.nothingtohide.cc/thumbs/thumb.png">
 		
 		<link rel="icon" type="image/ico" href="/favicon.ico"/>
