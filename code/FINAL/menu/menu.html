@@ -16,7 +16,16 @@
 				debug: true
 			}, function() {
 				$("body").i18n();
-				//TODO: dialog_uncopyright, dialog_credits
+				//TODO: consider translating dialog_credits
+			
+				var urls =[
+					"https://github.com/ncase/nothing-to-hide" ,
+					"http://tinyletter.com/nothingtohide/letters",
+					"http://back.nothingtohide.cc",
+					"https://creativecommons.org/publicdomain/zero/1.0/"
+				];
+				var answer = i18n.t($.t('dialog.uncopyright.linkdescription'), { postProcess: 'sprintf', sprintf: urls});
+				$('#linkdescription').append(answer);
 			});
 		</script>
 		<link href='menu.css' rel='stylesheet' type='text/css'>
@@ -44,7 +53,7 @@
 				<div class="dialog" id="dialog_fund"> <!-- or, the end? -->
 					<h1 data-i18n="dialog.fund.title">THANK YOU FOR PLAYING THIS DEMO!</h1>
 					
-					<span data-i18n="dialog.fund.staytuned">
+					<span data-i18n="dialog.fund.staytuned" class="sub">
 					Be excited. This wasn't even a tenth of what the full game will be!
 					On the downside... this wasn't even a tenth of what the full game will be.
 					We've got a long way to go, and we need your help.</span>
@@ -54,7 +63,7 @@
 						<div id="back_this_game" class="link" data-i18n="dialog.fund.backthisgame">back this game</div>
 					</a>
 
-					<span data-i18n="dialog.fund.whycrowdfunding">
+					<span data-i18n="dialog.fund.whycrowdfunding" class="sub">
 					Why crowdfunding? Well, this game is open source and uncopyrighted.
 					We're built for the public, and backed by the public!
 					And I know this is kind of ironic, being a satire of social media and all, but...</span>
@@ -70,39 +79,36 @@
 				<div class="dialog" id="dialog_uncopyright">
 					<h1 data-i18n="dialog.uncopyright.title">NOTHING TO HIDE HAS NOTHING TO HIDE</h1>
 
-					We're
-					<a href="https://github.com/ncase/nothing-to-hide" target="_blank">open source</a>,
-					<a href="http://tinyletter.com/nothingtohide/letters" target="_blank">openly designed</a>,
-					and with your help,
-					<a href="http://back.nothingtohide.cc" target="_blank">openly funded</a>.
-					But most of all, uncopyrighted. That's right -
-					<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">Zero Rights Reserved</a>.
+					<span id="linkdescription"></span>
+
 					<br><br>
 
-					You're totally welcome to:
+					<span data-i18n="dialog.uncopyright.youarewelcometo">You're totally welcome to:</span>
 					<br>
-					<span>
-						- "Pirate" this game.
+					<span class='sub'>
+						<span data-i18n="dialog.uncopyright.piratethisgame">- "Pirate" this game.</span>
 						<br>
-						- Record and monetize Let's Plays.
+						<span data-i18n="dialog.uncopyright.recordandmonetize">- Record and monetize Let's Plays.</span>
 						<br>
-						- Re-host this game on your website.
+						<span data-i18n="dialog.uncopyright.rehostthisgame">- Re-host this game on your website.</span>
 						<br>
-						- Use the art/music/code in your own projects.
+						<span data-i18n="dialog.uncopyright.useartmusiccode">- Use the art/music/code in your own projects.</span>
 						<br>
-						- Make a mod where the main character is replaced with Princess Luna from the
-						hit cartoon show, My Little Pony: Friendship Is Magic.
-						Well, actually, you'll probably get a cease and desist from Hasbro for that.
-						But not from me.
+						<span data-i18n="dialog.uncopyright.makeamod">
+							- Make a mod where the main character is replaced with Princess Luna from the
+							hit cartoon show, My Little Pony: Friendship Is Magic.
+							Well, actually, you'll probably get a cease and desist from Hasbro for that.
+							But not from me.
+						</span>
 					</span>
 					<br><br>
 
-					By giving up "power" over our art, our art can have more power.					
+					<span data-i18n="dialog.uncopyright.givinguppower">By giving up "power" over our art, our art can have more power.</span>			
 					
 				</div>
 				<div class="dialog" id="dialog_credits">
 
-					<h1>WITH THE HELP OF HUNDREDS</h1>
+					<h1 data-i18n="dialog.credits.withthehelp">WITH THE HELP OF HUNDREDS</h1>
 					
 					<a href="https://twitter.com/ncasenmare" target="_blank">NCASE</a> - Developer, designer, artist
 					<br>

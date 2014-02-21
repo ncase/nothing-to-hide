@@ -27,8 +27,31 @@
 			"thanksdissident": "Danke nochmals fuer's spielen, du Dissident!"
 		},
 		"uncopyright": {
-			"title": "NICHTS ZU VERBERGEN HAT NICHTS ZU VERBERGEN"
-			
+			"title": "NICHTS ZU VERBERGEN HAT NICHTS ZU VERBERGEN" ,
+			"linkdescription": [
+				"Wir sind",
+				"<a href='%s' target='_blank'>open source</a>,",
+				"<a href='%s' target='_blank'>offen designed</a>,",
+				"und mit deiner Hilfe,",
+				"<a href='%s' target='_blank'>öffentlich finanziert</a>.",
+				"Aber vor allem, sind wir ohne Urheberrecht. Genau -",
+				"<a href='%s' target='_blank'>keinerlei Rechte vorbehalten</a>."
+			],
+			"youarewelcometo": "Du bist herzlich eingeladen:",
+			"piratethisgame": "- Dieses Spiel zu \"raubkopieren\".",
+			"recordandmonetize": "- Spielvideos aufzunehmen und damit Geld zu verdienen.",
+			"rehostthisgame": "- Dieses Spiel auf deiner eigenen Website zu publizieren.",
+			"useartmusiccode": "- Grafik, Musik oder Code in deinen eigenen Projekten zu nutzen.",
+			"makeamod": [
+				"- Eine Modifikation zu machen in welcher der Hauptcharakter durch Prinzession Luna",
+				"aus der Zeichentrickshow My Little Pony – Freundschaft ist Magie.",
+				"Vielleicht bekommst du eine Abmahnung von Hasbro dafür.",
+				"Aber nicht von mir."
+			],
+			"givinguppower": "Indem wir unsere \"Macht\" über unsere Kunst freigeben, kann unsere Kunst mehr Kraft entfalten."
+		},
+		"credits": {
+			"withthehelp": "MIT DER HILFE VON HUNDERTEN"
 		}
 	},
 	"commands": {
