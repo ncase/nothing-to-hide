@@ -20,22 +20,22 @@
 			],
 			"backthisgame": "назад в эту игру",
 			"whycrowdfunding": [
-				"Why crowdfunding? Well, this game is open source and uncopyrighted.",
-				"We're built for the public, and backed by the public!",
+				"Почему краудфаандинг? Потому что эта игра имеет открытые исходники и мы не охраняем ее авторским правом.",
+				"Мы созданы для общественности, и при поддержке общественности!",
 				"And I know this is kind of ironic, being a satire of social media and all, but..."
 			],
-			"thanksdissident": "Thanks again, you dissident, you!"
+			"thanksdissident": "Еще раз спасибо, вы диссидент, вы!"
 		},
 		"uncopyright": {
-			"title": "NOTHING TO HIDE HAS NOTHING TO HIDE",
+			"title": "NOTHING TO HIDE НИЧЕГО НЕ СКРЫВАЕТ",
 			"linkdescription": [
-							"We're",
+							"Мы",
 							"<a href='%s' target='_blank'>open source</a>,",
-							"<a href='%s' target='_blank'>openly designed</a>,",
-							"and with your help,",
-							"<a href='%s' target='_blank'>openly funded</a>.",
-							"But most of all, uncopyrighted. That's right -",
-							"<a href='%s' target='_blank'>Zero Rights Reserved</a>."
+							"<a href='%s' target='_blank'>открытый дизайн</a>,",
+							"и с вашей помощью,",
+							"<a href='%s' target='_blank'>открыто финансируется</a>.",
+							"Но скорее всего, вне авторского права. Верно -",
+							"<a href='%s' target='_blank'>Ноль Прав Защищены</a>."
 			],
 			"youarewelcometo": "You're totally welcome to:",
 			"piratethisgame": "- \"Pirate\" this game.",
@@ -51,11 +51,11 @@
 			"givinguppower": "By giving up \"power\" over our art, our art can have more power."
 		},
 		"credits": {
-			"withthehelp": "WITH THE HELP OF HUNDREDS"
+			"withthehelp": "С ПОМОЩЬЮ МНОГИХ"
 		}
 		
 	},
 	"commands": {
-		"backtomainmenu": "BACK TO MAIN MENU"
+		"backtomainmenu": "ВЕРНУТСЯ В ГЛАВНОЕ МЕНЮ"
 	}
 }
