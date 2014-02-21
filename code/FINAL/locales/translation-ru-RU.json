@@ -2,7 +2,7 @@
 	"app": {
 		"name": "Nothing To Hide",
 		"subtitle": "анти-стелс игра, где вы сами себе сторожевой.",
-		"longtitle": "Nothing To Hide: an anti-stealth game where you are your own watchdog."
+		"longtitle": "Nothing To Hide: анти-стелс игра, где вы сами себе наблюдатель.."
 	},
 	"menu": {
 		"play": "ИГРАТЬ",
@@ -12,13 +12,13 @@
 	},
 	"dialog": {
 		"fund": {
-			"title": "THANK YOU FOR PLAYING THIS DEMO!",
+			"title": "СПАСИБО ЗА ИГРУ В ЭТУ ДЕМО-ВЕРСИЮ.!",
 			"staytuned": [
-				"Be excited. This wasn't even a tenth of what the full game will be!",
-				"On the downside... this wasn't even a tenth of what the full game will be.",
-				"We've got a long way to go, and we need your help."
+				"Будьте рады. Это была даже не десятая часть будущей полной игра!",
+				"С другой стороны... это была даже не десятая часть будущей полной игра.",
+				"Нас ждет долгий путь, и нам нужна ваша помощь."
 			],
-			"backthisgame": "back this game",
+			"backthisgame": "назад в эту игру",
 			"whycrowdfunding": [
 				"Why crowdfunding? Well, this game is open source and uncopyrighted.",
 				"We're built for the public, and backed by the public!",
