@@ -37,16 +37,16 @@
 							"Но скорее всего, вне авторского права. Верно -",
 							"<a href='%s' target='_blank'>Ноль Прав Защищены</a>."
 			],
-			"youarewelcometo": "You're totally welcome to:",
-			"piratethisgame": "- \"Pirate\" this game.",
-			"recordandmonetize": "- Record and monetize Let's Plays.",
-			"rehostthisgame": "- Re-host this game on your website.",
-			"useartmusiccode": "- Use the art/music/code in your own projects.",
+			"youarewelcometo": "Вы полностью можете:",
+			"piratethisgame": "- \"Пиратить\" эту игру.",
+			"recordandmonetize": "- Записывать и монетизировать летсплеи.",
+			"rehostthisgame": "- Установить эту игру на ваш сайт.",
+			"useartmusiccode": "- Использовать творчество/музыку/код в ваших собственных проектах.",
 			"makeamod": [
-				"- Make a mod where the main character is replaced with Princess Luna from the",
-				"hit cartoon show, My Little Pony: Friendship Is Magic.",
-				"Well, actually, you'll probably get a cease and desist from Hasbro for that.",
-				"But not from me."
+				"- Сделать мод, где главный герой будет заменен на Princess Luna из",
+				"из хитового мультфильма, My Little Pony: Friendship Is Magic.",
+				"На самом деле, вы возможно получите запрет от Hasbro на это.",
+				"Но не от меня."
 			],
 			"givinguppower": "By giving up \"power\" over our art, our art can have more power."
 		},
