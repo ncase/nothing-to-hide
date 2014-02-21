@@ -9,6 +9,9 @@
 		<script>
 			translationinit( function() {
 				//add translation code here to be executed when initializing webpage
+				$("body").i18n();
+				
+				//TODO consider adding translation for Twitter/Facebook buttons
 			});
 		</script>
         <title>Nothing To Hide</title>
@@ -28,19 +31,19 @@
         <div id="pause_menu">
             <div id="pause_menu_2">
                 <div id="pause_menu_3">
-                    <div style="font-size:100px">PANOPTICON PAUSED</div>
+                    <div style="font-size:100px" data-i18n="game.general.panopticonpaused">PANOPTICON PAUSED</div>
 
                     <!-- Top Actions -->
                     <div class="button_container">
-                        <div class="button" onclick="Game.togglePause();">RESUME GAME</div>
-                        <div class="button" onclick="Game.togglePause(); Game.resetLevel()">RESET LEVEL</div>
-                        <div class="button" onclick="window.top.gotoPage('menu/menu.html');">BACK TO MAIN MENU</div>
+                        <div class="button" onclick="Game.togglePause();" data-i18n="command.resumegame">RESUME GAME</div>
+                        <div class="button" onclick="Game.togglePause(); Game.resetLevel()" data-i18n="command.resetlevel">RESET LEVEL</div>
+                        <div class="button" onclick="window.top.gotoPage('menu/menu.html');" data-i18n="command.backtomainmenu">BACK TO MAIN MENU</div>
                     </div>
 
                     <!-- Level Select -->
-                    <div style="margin: 25px 0 5px 0; font-size:40px">Level Select:</div>
+                    <div style="margin: 25px 0 5px 0; font-size:40px" data-i18n="game.general.levelselect">Level Select:</div>
                     <div id="level_select" class="button_container">
-                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene.html');">INTRO</div>
+                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene.html');" data-i18n="game.general.intro">INTRO</div>
                         <div class="button" id="lvl_0" onclick="Game.togglePause(); Game.gotoLevel(0);">1</div>
                         <div class="button" id="lvl_1" onclick="Game.togglePause(); Game.gotoLevel(1);">2</div>
                         <div class="button" id="lvl_2" onclick="Game.togglePause(); Game.gotoLevel(2);">3</div>
@@ -49,11 +52,11 @@
                         <div class="button" id="lvl_5" onclick="Game.togglePause(); Game.gotoLevel(5);">6</div>
                         <div class="button" id="lvl_6" onclick="Game.togglePause(); Game.gotoLevel(6);">7</div>
                         <div class="button" id="lvl_7" onclick="Game.togglePause(); Game.gotoLevel(7);">8</div>
-                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene_end.html');">ENDING</div>
+                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene_end.html');" data-i18n="game.general.ending">ENDING</div>
                     </div>
 
                     <!-- Share Game -->
-                    <div style="margin: 25px 0 5px 0; font-size:40px">Share Game:</div>
+                    <div style="margin: 25px 0 5px 0; font-size:40px" data-i18n="game.general.sharegame">Share Game:</div>
                     <div id="level_select" class="button_container" >
                         <div style="float:left; cursor:pointer" class="social_big" id="tweet" onclick='window.SS_POPUP("https://twitter.com/share?url=http%3A%2F%2Fdemo.nothingtohide.cc%2F&text=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.&via=ncasenmare","twitter")'></div>
                         <div style="float:left; cursor:pointer" class="social_big" id="facebook" onclick='window.SS_POPUP("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdemo.nothingtohide.cc%2F&t=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.","facebook")'></div>
@@ -64,8 +67,8 @@
         </div>
 
         <div id="ui_container">
-            <div id="pause" class="button" onclick="Game.togglePause()">PAUSE</div>
-            <div id="skip_level" class="button" onclick="skipLevel()">SKIP LEVEL</div>
+            <div id="pause" class="button" onclick="Game.togglePause()" data-i18n="command.pause">PAUSE</div>
+            <div id="skip_level" class="button" onclick="skipLevel()" data-i18n="command.skiplevel">SKIP LEVEL</div>
             <div id="fps_counter"></div>
         </div>
 

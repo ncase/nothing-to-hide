@@ -44,7 +44,7 @@ var onLoad = function(){
 			'	<div id="poster_icon" style="background:url('+post.icon+')"></div>'+
 			'	<div id="poster_info">'+
 			'		<span id="poster_info_name">'+post.user+'</span><br>'+
-			'		<span id="poster_info_date">posted '+post.date+'</span>'+
+			'		<span id="poster_info_date">'+i18n.t('game.thewall.posted')+' '+post.date+'</span>'+
 			'	</div>'+
 			'</div>';
 

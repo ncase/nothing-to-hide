@@ -54,7 +54,65 @@
 			"withthehelp": "MIT DER HILFE VON HUNDERTEN"
 		}
 	},
-	"commands": {
-		"backtomainmenu": "ZURÜCK ZUM HAUPTMENÜ"
+	"command": {
+		"backtomainmenu": "ZURÜCK ZUM HAUPTMENÜ",
+		"resumegame": "SPIEL FORTSETZEN",
+		"resetlevel": "LEVEL ZURÜCKSETZEN",
+		"pause": "PAUSE",
+		"skiplevel": "ÜBERSPRINGE LEVEL"
+	},
+	"game": {
+		"general":{ 
+			"panopticonpaused": "PANOPTICON PAUSIERT",
+			"levelselect": "Level auswählen:",
+			"intro": "PROLOG",
+			"ending": "EPILOG",
+			"sharegame": "Spiel mit Anderen teilen"
+		},
+		"thewall":{
+			"posted": "geschrieben",
+			"justnow": "gerade eben",
+			"minutesago": "vor einer Minute",
+			"minutesago_plural": "vor __count__  Minuten",
+			"secondsago": "vor einer Sekunde",
+			"secondsago_plural": "vor __count__  Sekunden"
+		}
+	},
+	"character":{
+		"poppy": "Pia",
+		"poppygardner": "Pia Gärtner",
+		"georgegardner": "Georg Gärtner",
+		"nobody": "Niemand"
+	},
+	"cutscene":{
+		"intro":[
+				"Pia?",
+				"Hallo Liebling. Bitte sei nicht traurig.",
+				"Es schadet wirklich meinen Beliebtheitswerten.",
+				"Die erste nicht-geheime Wahl kommt bald. Die ist für Papis Karriere sehr wichtig, weshalb du mehr fröhliche Bilder an die Pinwand posten solltest.  Mindestens 400 pro Tag, okay?",
+				"Bitte, Pia? Ich will nicht, dass die Wähler denken, dass ich ein schlecher Vater bin.",
+				"Na dann, gute Nacht! <span>#VaterTochterMoment</span>",
+				"Ich... ich muss hier raus...",
+				"Papi wird besser dran sein ohne mich. Sein Beliebtheitswert&trade;, auch."
+		],
+		"end":[
+			"bitte sei nicht tot oh Gott oh Gott oh Gott oh Gott oh Gott",
+			"Okay. Okay okay. Idee.",
+			"Manchmal weckt mich Papi so auf. Vielleicht hilft's...",
+			"<span>#VaterTochterMoment</span>",
+			"Au! Schmerzen im Gesicht! Du...",
+			"tut mir leid",
+			"...hast mir das Leben gerettet! Entschuldig dich nicht, hey!",
+			"tut mir leid, dass es mir leid tut",
+			"Wart mal, sind wir auf der Pinwand?...",
+			"\"Pia Gärtner geschrieben vor einer Minute. Manchmal weckt mich Papi so auf. Vielleicht hilft's...\"",
+			"Oh. Oh wow. Minister Gärtner macht das mit seiner eigenen... wow.",
+			"<i>Aaaaaaaalso</i> falls es dir hilft: dein Papi ist gegenüber dem Rest des Lands auch psychisch und physisch etwas brutal.",
+			"\"Pass auf was du sagst & hörst & siehst & <i>denkst.\"</i><br>Wenn wir keinen Platz finden um uns zu verstecken, verstecken wir unser wahres Selbst.",
+			"Ich kann dir helfen ihm zu entkommen.",
+			"Um genau zu sein, habe ich eine App dafür!",
+			"Exploit! Habe ich selbst gemacht. Einfach hier auf den Bildschirm tippen, und du wirst von der Pinwand gelöscht. Du wirst ein Niemand sein, genauso wie ich.",
+			"Hör auf für die Kamera zu spielen. Fang an du selbst zu sein."
+		]
 	}
 }

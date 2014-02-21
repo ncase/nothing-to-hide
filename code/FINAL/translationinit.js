@@ -13,3 +13,15 @@ function translationinit(onInitAction){
 				debug: true
 			}, onInitAction);
 }
+
+/**
+ * Shortcut function for the cutscenes
+ * TODO: consider if it should be moved somewhere else
+ * TODO: consider using the API differently for multiple plural forms http://i18next.com/pages/doc_features.html
+ */
+function minutesago(num){
+	return (num==0?i18n.t("game.thewall.justnow"):(num==1?i18n.t("game.thewall.minutesago"):i18n.t("game.thewall.minutesago", { count: num })));
+}
+function secondsago(num){
+	return (num==0?i18n.t("game.thewall.justnow"):(num==1?i18n.t("game.thewall.secondsago"):i18n.t("game.thewall.secondsago", { count: num })));
+}

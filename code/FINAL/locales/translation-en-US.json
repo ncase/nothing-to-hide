@@ -55,7 +55,65 @@
 		}
 		
 	},
-	"commands": {
-		"backtomainmenu": "BACK TO MAIN MENU"
+	"command": {
+		"backtomainmenu": "BACK TO MAIN MENU",
+		"resumegame": "RESUME GAME",
+		"resetlevel": "RESET LEVEL",
+		"pause": "PAUSE",
+		"skiplevel": "SKIP LEVEL"
+	},
+	"game": {
+		"general":{ 
+			"panopticonpaused": "PANOPTICON PAUSED",
+			"levelselect": "Level Select:",
+			"intro": "INTRO",
+			"ending": "ENDING",
+			"sharegame": "Share Game:"
+		},
+		"thewall":{
+			"posted": "posted",
+			"justnow": "just now",
+			"minutesago": "one minute ago",
+			"minutesago_plural": "__count__  minutes ago",
+			"secondsago": "one second ago",
+			"secondsago_plural": "__count__  seconds ago"
+		}
+	},
+	"character":{
+		"poppy": "Poppy",
+		"poppygardner": "Poppy Gardner",
+		"georgegardner": "George Gardner",
+		"nobody": "Nobody"
+	},
+	"cutscene":{
+		"intro":[
+				"Poppy?",
+				"Hey sweetie. Please don't be sad.",
+				"It's really hurting my popularity ranking.",
+				"The first un-secret ballot election is coming up. It's very important to Daddy's career, so I need you to post more happy pictures of yourself to The Wall. At least 400 per day, okay?",
+				"Please, Poppy? I don't want the voters to think I'm a bad parent.",
+				"Well, goodnight! <span>#DaddyDaughterMoment</span>",
+				"I... I have to get out of here...",
+				"Dad will be better off without me. His Popularity Metrics&trade;, too."
+		],
+		"end":[
+			"please don't be dead oh god oh god oh god oh god oh god",
+			"Okay. Okay okay. Idea.",
+			"Sometimes Daddy wakes me up like this. Maybe this will work...",
+			"<span>#DaddyDaughterMoment</span>",
+			"Ow! Pain on the face! You...",
+			"i'm sorry",
+			"...saved my life! Don't apologize, yo!",
+			"i'm sorry for being sorry",
+			"Hold up, are we on The Wall?...",
+			"\"Poppy Gardner posted 1 minute ago. Sometimes Daddy wakes me up like this. Maybe this will work...\"",
+			"Oh. Oh wow. Minister Gardner does that to his own... wow.",
+			"<i>Wellllllllll</i> if it makes you feel better, your dad's psychologically and physically abusive to the rest of the nation, too.",
+			"\"Watch what you say & hear & watch & <i>think.\"</i><br>When we got no place to hide, we got to hide our true selves. ",
+			"I can help you escape him.",
+			"In fact, I got an app for that!",
+			"Exploit! Made it myself. Just tap this screen here, and you'll be erased from The Wall. You'll be a Nobody, just like me.",
+			"Stop acting for the camera. Start being yourself."
+		]
 	}
 }
