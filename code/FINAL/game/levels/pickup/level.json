@@ -99,11 +99,11 @@
 			"area": {"ax":7,"bx":14,"ay":17,"by":20},
 			"queue": [
 				{
-					"message": "Oh… there's Daddy's campaign post. Look at my smile. :)",
+					"message": "pickup.lookMySmile",
 					"duration": 4000
 				},
 				{
-					"message": "He disciplined me when my smile didn't look genuine enough. :)",
+					"message": "pickup.disciplinedToSmile",
 					"duration": 4000
 				}
 			]

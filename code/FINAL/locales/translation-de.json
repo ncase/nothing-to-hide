@@ -114,5 +114,40 @@
 			"Exploit! Habe ich selbst gemacht. Einfach hier auf den Bildschirm tippen, und du wirst von der Pinwand gelöscht. Du wirst ein Niemand sein, genauso wie ich.",
 			"Hör auf für die Kamera zu spielen. Fang an du selbst zu sein."
 		]
+	},
+	"dialogue": {
+		"postedjustnow": "schrieb gerade jetzt",
+		"level": {
+			"intro": {
+				"nobodyNeedsMe": "Niemand braucht mich...",
+				"runningAway":  "Werde dann wohl nach Russland abhauen."
+			},
+			"pickup": {
+				"lookMySmile": "Oh… da ist Papi's Wahlposter. Mit meinem hübschen Lächeln. :)",
+				"disciplinedToSmile": "Er hat mich diszipliniert, weil mein Lächeln nicht genug authentisch war. :)"
+			},
+			"big_puzzle": {
+				"iWonder": "Ich frag mich... ob diese Gesetze gegen das Aufregen von Leuten... Leute aufregen?"
+			},
+			"conveyor": {
+				"myOwnWatchman": "Ich frag mich... wenn ich mein eigener Überwacher bin... verstecke ich mich vor mir selbst?"
+			},
+			"conveyor_2": {
+				"whyQuestionMarks": "Ich frag mich... wieso verwende ich soviel Auslassung und Fragezeichen?",
+				"havingAPrivateThought": "Ich denke... dies ist wie sich ein privater Gedanke anfühlt. Komisches Gefühl."
+			},
+			"power": {
+				"whatWasNoise": "Was... was war das für ein Krach?",
+				"looksUncomfortable": "Oje... das sieht unangenehm aus."
+			},
+			"power_puzzle": {
+				"poorNobodyOnlyIEye" : "Armer 'Niemand'. Ich denke er hat das einzige iEye genommen, welches ihn angesehen hat.",
+				"neverDoneThat" : "Zum Glück habe ich das nie getan."
+			},
+			"nobody_needs_you": {
+				"onceInMyLife": "Einmal im Leben... ist es mir egal wie andere mich beurteilen! Ich... ich muss helfen",
+				"nobodyNeedsMe": "'Niemand' braucht mich!"
+			}
+		}
 	}
 }

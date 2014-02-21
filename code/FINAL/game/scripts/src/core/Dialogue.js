@@ -75,7 +75,7 @@
 			// Draw HEADER
 			ctx.fillStyle = "#bbb";
 			ctx.font = '15px sans-serif';
-			ctx.fillText("Poppy Gardner posted just now", 15, 17);
+			ctx.fillText(i18n.t("character.poppygardner")+" "+i18n.t("dialogue.postedjustnow"), 15, 17);
 
 			// Draw lines
 			ctx.fillStyle = "#000";
@@ -209,7 +209,7 @@
 				}else{
 
 					// Expand and say it
-					actions.push([startTime,true,cue.message]);
+					actions.push([startTime,true,i18n.t("dialogue.level."+cue.message)]);
 
 					// Transition & Message
 					startTime += 4 + Math.ceil(cue.duration*0.03);

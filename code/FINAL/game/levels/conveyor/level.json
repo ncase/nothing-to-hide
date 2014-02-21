@@ -108,7 +108,7 @@
 			"area": {"ax":15,"bx":16,"ay":5,"by":7},
 			"queue": [
 				{
-					"message": "I wonder... if I'm my own watchman... am I hiding from myself?",
+					"message": "conveyor.myOwnWatchman",
 					"duration": 4000
 				}
 			]

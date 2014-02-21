@@ -67,11 +67,11 @@
 			"area": {"ax":9,"bx":11,"ay":0,"by":11},
 			"queue": [
 				{
-					"message": "Nobody needs me...",
+					"message": "intro.nobodyNeedsMe",
 					"duration": 3000
 				},
 				{
-					"message": "Guess I'm running away to Canada, then.",
+					"message": "intro.runningAway",
 					"duration": 4000
 				}
 			]

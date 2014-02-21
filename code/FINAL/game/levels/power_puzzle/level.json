@@ -111,11 +111,11 @@
 			"area": {"ax":1,"bx":2,"ay":2,"by":4},
 			"queue": [
 				{
-					"message": "Poor 'Nobody'. I think he picked up the only iEye that was looking at him.",
+					"message": "power_puzzle.poorNobodyOnlyIEye",
 					"duration": 4000
 				},
 				{
-					"message": "Glad I've never done that.",
+					"message": "power_puzzle.neverDoneThat",
 					"duration": 2000
 				}
 			]
