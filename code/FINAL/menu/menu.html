@@ -8,26 +8,6 @@
 		<script src="../i18next.min.js"></script>
 		<script src="../translationinit.js"></script>
 		<script>
-			/*$.i18n.init({
-				//loads sth like locales/translation-en-us.json
-				resGetPath: '../locales/__ns__-__lng__.json',
-				//set to true to turn on caching production use
-				useLocalStorage: false, 
-				//set to false for production use
-				debug: true
-			}, function() {
-				$("body").i18n();
-				//TODO: consider translating dialog_credits
-			
-				var urls =[
-					"https://github.com/ncase/nothing-to-hide" ,
-					"http://tinyletter.com/nothingtohide/letters",
-					"http://back.nothingtohide.cc",
-					"https://creativecommons.org/publicdomain/zero/1.0/"
-				];
-				var answer = i18n.t($.t('dialog.uncopyright.linkdescription'), { postProcess: 'sprintf', sprintf: urls});
-				$('#linkdescription').append(answer);
-			});*/
 			translationinit( function() {
 				$("body").i18n();
 				//TODO: consider translating dialog_credits
