@@ -6,15 +6,9 @@
 		<script src="jquery.min.js"></script>
 		<!--i18next for translation to other languages -->
 		<script src="i18next.min.js"></script>
+		<script src="translationinit.js"></script>
 		<script>
-			$.i18n.init({
-				//loads sth like locales/translation-en-us.json
-				resGetPath: 'locales/__ns__-__lng__.json',
-				//set to true to turn on caching production use
-				useLocalStorage: false, 
-				//set to false for production use
-				debug: true
-			}, function() {
+			translationinit(function() {
 			    $('title').text($.t('app.longtitle'));
 				$('#metadescription').attr( "content", $.t('app.longtitle') );
    				$('#metaogtitle').attr( "content", $.t('app.name') );
