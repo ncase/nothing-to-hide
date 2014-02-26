@@ -44,7 +44,7 @@ body{
 }
 
 #footer_support{
-    font-family: Ostrich;
+    font-family: Ostrich, sans-serif;
     font-size: 35px;
     letter-spacing: 1px;
     height:0;

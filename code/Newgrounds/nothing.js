@@ -27,7 +27,7 @@ var wrapper = document.getElementById("wrapper");
 window.gotoPage = function(page){
 	fadeOut();
 	setTimeout(function(){
-    	wrapper.src = page;
+    	wrapper.contentWindow.location.replace(page);
     	wrapper.contentWindow.focus();
     },1000);
 };

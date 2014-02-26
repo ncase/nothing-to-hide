@@ -13,7 +13,7 @@ body, canvas, div {
 	user-select: none; 
 }
 body{
-	font-family: Ostrich;
+	font-family: Ostrich, sans-serif;
 	font-size: 30px;
 	letter-spacing: 1px;
 
