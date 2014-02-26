@@ -43,9 +43,22 @@ window.onProgress = function(progress){
 	}
 };
 
-// Unlock Medal
-window.unlockMedal = function(medalName){
-	alert("Achievement Unlocked - "+medalName);
+// NEWGROUNDS! Unlock Medal
+NG.connect("35852:kuhwxFXW","uncjHFhEJ2DRctEdZfodmbz1FLwoU7XB");
+var medalNames = {
+	begin: "BE SOMEBODY",
+	surveillance: "Self Surveillance",
+	slidewalk: "Slidewalking",
+	power: "An Act of Activation",
+	ending: "BE NOBODY",
+	support: "Support & Share"
+};
+window.unlockMedal = function(nickname){
+
+	// Unlock medal with actual name
+	var actualName = medalNames[nickname];
+	NG.unlockMedal(actualName);
+
 };
 
 //};
@@ -77,10 +90,12 @@ window.SS_POPUP = function(url,type){
 		default: w=500; h=500; break;
 	}
 	var x = (screen.width/2)-(w/2);
-		var y = (screen.height/2)-(h/2);
+	var y = (screen.height/2)-(h/2);
 
 	var popupConfig = "width="+w+",height="+h+",left="+x+",top="+y+",";
 	popupConfig += "resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=yes";
 	window.open(url,"popup",popupConfig);
 
 };
+
+
