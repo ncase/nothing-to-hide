@@ -6,7 +6,7 @@ Asset.init({
 		props:'assets/textures/props.png',
 
 		// PROPAGANDA
-		propaganda_title:'assets/propaganda/title.png',
+		propaganda_title:'assets/propaganda/title.svg',
 		propaganda_poppy:'assets/propaganda/poppy.png'
 
 	},

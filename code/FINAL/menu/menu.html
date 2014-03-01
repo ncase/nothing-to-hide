@@ -20,6 +20,7 @@
 				];
 				var answer = i18n.t($.t('dialog.uncopyright.linkdescription'), { postProcess: 'sprintf', sprintf: urls});
 				$('#linkdescription').append(answer);
+				adaptfonts();
 			});
 		</script>
 		<link href='menu.css' rel='stylesheet' type='text/css'>
@@ -30,11 +31,11 @@
 
 			<canvas id="screen"></canvas>
 
-			<div id="play" class="button" onclick="startGame()" data-i18n="menu.play">PLAY</div>
+			<div id="play" class="button jtextfill" onclick="startGame()" ><span data-i18n="menu.play">PLAY</span></div>
 
-			<div id="fund" class="button" onclick="window.location.hash='fund'" data-i18n="menu.support">SUPPORT & SHARE</div>
-			<div id="uncopyright" class="button" onclick="window.location.hash='uncopyright'" data-i18n="menu.uncopyright">UNCOPYRIGHT</div>
-			<div id="credits" class="button" onclick="window.location.hash='credits'" data-i18n="menu.credits">CREDITS</div>
+			<div id="fund" class="button jtextfill" onclick="window.location.hash='fund'" data-i18n="menu.support">SUPPORT & SHARE</div>
+			<div id="uncopyright" class="button jtextfill" onclick="window.location.hash='uncopyright'" data-i18n="menu.uncopyright">UNCOPYRIGHT</div>
+			<div id="credits" class="button jtextfill" onclick="window.location.hash='credits'" data-i18n="menu.credits">CREDITS</div>
 
 			<iframe class="link" id="campaign_embed" src="http://back.nothingtohide.cc/embed" scrolling="no"></iframe>
 

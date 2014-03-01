@@ -114,7 +114,7 @@ body, canvas, div {
 	background: #fff;
 }
 .social_big{
-	background: url(img/share_big.png);
+	background: url(img/share_big.svg);
 	width:125px; height:50px;
 }
 .social_big#tweet{ background-position: 0px 0px; }

@@ -45,16 +45,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1085"
-     inkscape:window-height="687"
+     inkscape:window-width="1920"
+     inkscape:window-height="1032"
      id="namedview4"
      showgrid="false"
      inkscape:zoom="1.907168"
      inkscape:cx="146.36532"
      inkscape:cy="203.47605"
-     inkscape:window-x="584"
-     inkscape:window-y="223"
-     inkscape:window-maximized="0"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <image
      width="250"
@@ -92,17 +92,7 @@
        x="20.933432"
        y="108.93637"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
-       id="tspan3060">amendment</tspan><tspan
-       sodipodi:role="line"
-       x="20.933432"
-       y="138.93637"
-       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
-       id="tspan3062">protects</tspan><tspan
-       sodipodi:role="line"
-       x="20.933432"
-       y="168.93637"
-       id="tspan3010-9-1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial" /></text>
+       id="tspan3062" /></text>
   <g
      id="g3067"
      transform="matrix(0.82146317,-0.15438996,0.0704225,0.99005955,-138.8325,73.82349)">
@@ -142,4 +132,30 @@
            id="tspan3010-9" /></text>
     </g>
   </g>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:100%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="21.560005"
+     y="108.57843"
+     id="text3006-5-4-6"
+     sodipodi:linespacing="100%"
+     transform="matrix(0.99465177,-0.10328534,0.10328534,0.99465177,0,0)"><tspan
+       sodipodi:role="line"
+       x="21.560005"
+       y="108.57843"
+       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan3060-9">amendment</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:100%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="21.177591"
+     y="138.58669"
+     id="text3006-5-4-1"
+     sodipodi:linespacing="100%"
+     transform="matrix(0.99465177,-0.10328534,0.10328534,0.99465177,0,0)"><tspan
+       sodipodi:role="line"
+       x="21.177591"
+       y="138.58669"
+       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:100%;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial"
+       id="tspan3062-3">protects</tspan></text>
 </svg>

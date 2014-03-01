@@ -136,25 +136,10 @@
      id="text3300-8-6-6"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
-       id="tspan3302-4-3-8"
        x="345.4801"
        y="68.38353"
-       style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">THANK YOU FOR</tspan><tspan
-       sodipodi:role="line"
-       x="345.4801"
-       y="114.58784"
        style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan3901">PARTICIPATING</tspan><tspan
-       sodipodi:role="line"
-       x="345.4801"
-       y="160.79218"
-       style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan3903">IN YOUR OWN</tspan><tspan
-       sodipodi:role="line"
-       x="345.4801"
-       y="206.99649"
-       style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan3905">SURVEILLANCE</tspan></text>
+       id="tspan3905">THANK YOU FOR</tspan></text>
   <rect
      style="fill:#363b43;fill-opacity:1;stroke:none"
      id="rect3907-2-8"
@@ -208,4 +193,40 @@
        y="215.97644"
        style="font-size:32.92165375px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan4045-3">CIRCLE</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:32.85640717px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#202328;fill-opacity:1;stroke:none;font-family:Sans"
+     x="345.37439"
+     y="114.50118"
+     id="text3300-8-6-6-3"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="345.37439"
+       y="114.50118"
+       style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
+       id="tspan3905-7">PARTICIPATING</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:32.85640717px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#202328;fill-opacity:1;stroke:none;font-family:Sans"
+     x="345.81448"
+     y="161.71375"
+     id="text3300-8-6-6-3-7"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="345.81448"
+       y="161.71375"
+       style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
+       id="tspan3905-7-3">IN YOUR OWN</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:32.85640717px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#202328;fill-opacity:1;stroke:none;font-family:Sans"
+     x="345.78741"
+     y="206.62938"
+     id="text3300-8-6-6-3-7-3"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="345.78741"
+       y="206.62938"
+       style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
+       id="tspan3905-7-3-7">SURVEILLANCE</tspan></text>
 </svg>
