@@ -150,5 +150,189 @@
 				"nobodyNeedsMe": "'Nobody' needs me!"
 			}
 		}
+	},
+	"images": {
+		"general":{
+			"controls": {
+				"scrolldown": "SCROLL DOWN",
+				"mouse": "MOUSE",
+				"keys": "KEYS"
+			},
+			"or": "OR",
+			"tweet": "TWEET",
+			"share": "SHARE"
+			
+		},
+		"propaganda": {
+			"dont_help_hiders": {
+				"donthelp1": "DON'T HELP",
+				"donthelp2": "HIDERS",
+				"fourthAmendment1": "but the fourth",
+				"fourthAmendment2": "amendment",
+				"fourthAmendment3": "protects"
+			},
+			"error.svg": {
+				"ERROR": "ERROR",
+				"AudienceNotFound1": "`TARGETED_AUDIENCE`",
+				"AudienceNotFound2": "CANNOT BE FOUND",
+				"MeantForNobody1": "&gt; this wall is meant",
+				"MeantForNobody2": "&gt; for NOBODY"
+			},
+			"intro_pics.svg": {
+				"PoppyGardner": "Poppy Gardner",
+				"posted4DaysAgo": "posted 4 days ago",
+				"Message1": "Thank you for 4 billion followers! I'm so",
+				"Message2": "happy! Vote for my dad in the un-secret",
+				"Message3": "ballot! So happy. Haha! Ha. ha..."
+			},
+			"needs_dummy.svg": {
+				"YES, MY SIGNAL": "YES, MY SIGNAL",
+				"DEPLOYS": "DEPLOYS",
+				"FOR ALL THE": "FOR ALL THE",
+				"GIRLS &amp; BOYS!": "GIRLS &amp; BOYS!"
+			},
+			"nobody_messes.svg": {
+				"posted4DaysAgo": "posted 4 days ago",
+				"THEWALL": "THE WALL",
+				"gotRidSecretBallot": "Aw yiss, 'bout time we got rid of the secret ballot!",
+				"NobodyMessesWith": "Nobody messes with the Ministry!"
+			},
+			"nobody_the_wall.svg": {
+				"THEWALL": "THE WALL"
+			},
+			"nobody_the_wall_2.svg": {
+				"THEWALL": " THE WALL THE WALL THE WALL THE WALL THE WALL THE WALL THE WALL"
+			},
+			"pickup_gardner.svg": {
+				"ProtectorPatriotPop": "PROTECTOR. PATRIOT. POP.",
+				"VoteGardner1": "WITH YOUR UN-SECRET BALLOT",
+				"VoteGardner2": "VOTE GARDNER"
+			},
+			"pickup_lookout.svg": {
+				"LookOut1": "LOOK OUT FOR",
+				"LookOut2": "YOURSELF"
+			},
+			"puzzle_mock.svg": {
+				"RememberToBe": "REMEMBER TO BE",
+				"POPULAR": "POPULAR",
+				"PRETTY": "PRETTY",
+				"PATRIOTIC": "PATRIOTIC",
+				"HowSelfWorth1": "HOW ELSE CAN YOU",
+				"HowSelfWorth2": "MEASURE YOUR",
+				"HowSelfWorth3": "SELF-WORTH?"
+			},
+			"puzzle_psa.svg": {
+				"PatriotPSA1": "PATRIOT SERVICE",
+				"PatriotPSA2": "ANOUNCEMENT",
+				
+				"WatchWhatYouSay1": "WATCH",
+				"WatchWhatYouSay2": "WHAT YOU",
+				"WatchWhatYouSay3": "SAY",
+				
+				"WatchWhatYouHear1": "WATCH",
+				"WatchWhatYouHear2": "WHAT YOU",
+				"WatchWhatYouHear3": "HEAR",
+
+				"WatchWhatYouWatch1": "WATCH",
+				"WatchWhatYouWatch2": "WHAT YOU",
+				"WatchWhatYouWatch3": "WATCH"
+			},
+			"questions.svg": {
+				"DoNotAsk": "DO NOT ASK BACK",
+				"KeepYouSafe": "TO KEEP YOU SAFE, THE MINISTRY KEEPS SECRETS",
+				"EspeciallyYours": "ESPECIALLY YOURS!",
+				"Q:": "Q:",
+				"SafeFromWhat": "SAFE FROM WHAT?",
+				"A:": "A:",
+				"ThatsSecret": "THAT'S SECRET."
+			},
+			"smile.svg": {
+				"SmileForTheCam": "SMILE FOR THE CAMERA",
+				"HidingIsCriminal": "HIDING IS CRIMINAL",
+				"OnlyCriminals": "ONLY CRIMINALS HAVE SOMETHING TO HIDE",
+				"StayAlwaysInSight": "ALWAYS STAY IN SIGHT OF AT LEAST ONE °EYE"
+			},
+			"stream_wall.svg": {
+				"StatusLeft": "STATUS:      STATUS:      STATUS:",
+				"SecureLeft": "SECURE       SECURE       SECURE       SECURE",
+				"StatusRight": "STATUS:      STATUS:      STATUS:      STATUS:",
+				"SecureRight": "SECURE       SECURE       SECURE"
+			},
+			"stream_wall_2.svg": {
+				"CriminalNeutralized": "CRIMINAL NEUTRALIZED",
+				"Name1": "NAME:",
+				"Name2": "&quot;NOBODY&quot;",
+				"Time1:": "TIME:",
+				"Time2": "2044 PST (1 MIN AGO)",
+				"Crime1": "CRIME:",
+				"Crime2": "HIDING FROM CAMERA",
+				"Status1:": "STATUS:",
+				"Status2": "TRANQUILIZED (POSSIBLE OVERDOSE)"
+			},
+			"tut_carpet.svg": {
+				"DeviceInactiveCarpet": "RE: DEVICE INACTIVE ON CARPET",
+				"FeatureNotBug": "IT'S NOT A BUG, IT'S A FEATURE.",
+				"IssueClosed": "[ISSUE MARKED AS CLOSED]"
+			},
+			"tut_darker.svg": {
+				"LookForLines1": "LOOK FOR THE",
+				"LookForLines2": "DARKER",
+				"LookForLines3": "LINES"
+			},
+			"tut_pickup.svg": {
+				"MovingIEyes": "MOVING °EYES",
+				"SpaceKey": "SPACE KEY",
+				"Or": "- - - - - - OR - - - - - - ",
+				"ClickCircle1": "CLICK",
+				"ClickCircle2": "CIRCLE",
+				"ToPickupDrop": "TO PICKUP/DROP",
+				"ThanksForSurveillance1": "THANK YOU FOR",
+				"ThanksForSurveillance2": "PARTICIPATING",
+				"ThanksForSurveillance3": "IN YOUR OWN",
+				"ThanksForSurveillance4": "SURVEILLANCE"
+			},
+			"tut_power.svg": {
+				"ActiveSlidewalks1": "SOME °EYES WILL ACTIVATE SOME SLIDEWALKS",
+				"ActiveSlidewalks2": "WILL ACTIVATE",
+				"ActiveSlidewalks3": "Only when they see",
+				"ActiveSlidewalks4": "SOMEBODY"
+			},
+			"tut_reminder.svg": {
+				"StayInSight": "STAY IN SIGHT"
+			},
+			"tut_slidewalk.svg": {
+				"SLIDEWALK": "SLIDEWALK",
+				"AvoidUsingLegs": "A REVOLUTIONARY NEW WAY TO AVOID USING YOUR LEGS"
+			},
+			"tut_slow.svg": {
+				"SlowDown": "SLOW DOWN",
+				"ForNarrowPaths": "For narrow paths",
+				"ShiftKey": "SHIFT KEY",
+				"OR": "- - - - - - - OR - - - - - - -",
+				"MoveMouseSlowly1": "MOVE MOUSE",
+				"MoveMouseSlowly2": "SLOWLY"
+			},
+			"tut_walk.svg": {
+				"Walking": "WALKING",
+				"Arrow": "ARROW",
+				"Click": "CLICK",
+				"OR": "- - - - - OR - - - - - - ",
+				"LowTechTransportation1": "A FORM OF LOW-TECH",
+				"LowTechTransportation2": "TRANSPORTATION"
+			},
+			"unsecret_ballot.svg": {
+				"WrongChoice1": "WRONG CHOICE",
+				"WrongChoice2": "WRONG CHOICE",
+				"GARDNER": "GARDNER",
+				"WrongChoice3": "WRONG CHOICE",
+				"WrongChoice4": "WRONG CHOICE",
+				"RemberCantHide1": "REMEMBER...",
+				"RemberCantHide2": "REMEMBER... You CAN'T HIDE",
+				"RemberCantHide3": "YOUR UN-SECRET BALLOT. SO",
+				"RememberVoteWinner1": "REMEMBER...",
+				"RememberVoteWinner2": "REMEMBER... TO VOTE FOR",
+				"RememberVoteWinner3": "THE WINNER"
+			}
+		}
 	}
 }
