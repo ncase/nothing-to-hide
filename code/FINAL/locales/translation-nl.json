@@ -171,48 +171,48 @@
 				"fourthAmendment2": "amendement",
 				"fourthAmendment3": "beschermd"
 			},
-			"error.svg": {
+			"error": {
 				"ERROR": "ERROR",
 				"AudienceNotFound1": "`GERICHTE_DOELGROEP`",
 				"AudienceNotFound2": "NIET GEVONDEN",
 				"MeantForNobody1": "&gt; deze muur is bedoeld",
 				"MeantForNobody2": "&gt; voor NIEMAND"
 			},
-			"intro_pics.svg": {
+			"intro_pics": {
 				"PoppyGardner": "Poppy Gardner",
 				"posted4DaysAgo": "postte 4 dagen geleden",
 				"Message1": "Dank jullie voor 4 miljard volgers! Ik ben zo",
 				"Message2": "blij! Stem voor mijn vader in de niet geheime",
 				"Message3": "verkiezing! Zo blij. Haha! Ha. ha..."
 			},
-			"needs_dummy.svg": {
+			"needs_dummy": {
 				"YesMySignal1": "YES, MIJN SIGNAAL",
 				"YesMySignal2": "ONTPLOOI",
 				"YesMySignal3": "VOOR AL DE",
 				"YesMySignal4": "MEISJES &amp; JONGENS!"
 			},
-			"nobody_messes.svg": {
+			"nobody_messes": {
 				"posted4DaysAgo": "postte 4 dagen geleden",
 				"THEWALL": "DE MUUR",
 				"gotRidSecretBallot": "Ah jaa, Het werd tijd van de geheime verkiezing kwijt speelde!",
 				"NobodyMessesWith": "Niemand knoeit met het parlement!"
 			},
-			"nobody_the_wall.svg": {
+			"nobody_the_wall": {
 				"THEWALL": "DE MUUR"
 			},
-			"nobody_the_wall_2.svg": {
+			"nobody_the_wall_2": {
 				"THEWALL": " DE MUUR DE MUUR DE MUUR DE MUUR DE MUUR DE MUUR DE MUUR"
 			},
-			"pickup_gardner.svg": {
+			"pickup_gardner": {
 				"ProtectorPatriotPop": "BESCHERMER. PATRIOT. POP.",
 				"VoteGardner1": "MET JOUW NIET GEHEIME STEMMING",
 				"VoteGardner2": "STEM GARDNER"
 			},
-			"pickup_lookout.svg": {
+			"pickup_lookout": {
 				"LookOut1": "KIJK UIT VOOR",
 				"LookOut2": "JEZELF"
 			},
-			"puzzle_mock.svg": {
+			"puzzle_mock": {
 				"RememberToBe": "VERGEET NIET OM",
 				"POPULAR": "POPULAR",
 				"PRETTY": "MOOI",
@@ -221,7 +221,7 @@
 				"HowSelfWorth2": "JE ZELFVERTROUWEN",
 				"HowSelfWorth3": "METEN?"
 			},
-			"puzzle_psa.svg": {
+			"puzzle_psa": {
 				"PatriotPSA1": "PATRIOT SERVICE$",
 				"PatriotPSA2": "AANKONDIGING",
 				
@@ -237,7 +237,7 @@
 				"WatchWhatYouWatch2": "WAT JE",
 				"WatchWhatYouWatch3": "KIJKT"
 			},
-			"questions.svg": {
+			"questions": {
 				"DoNotAsk": "STEL GEEN VRAGEN",
 				"KeepYouSafe": "OM JEZELF VEILIG TE STELLEN, HOUDT HET PARLEMENT GEHEIMEN BIJ",
 				"EspeciallyYours": "ZEKER DE JOUWE!",
@@ -246,19 +246,19 @@
 				"A:": "A:",
 				"ThatsSecret": "DAT IS GEHEIM."
 			},
-			"smile.svg": {
+			"smile": {
 				"SmileForTheCam": "LACH VOOR DE CAMERA",
 				"HidingIsCriminal": "VERBERGEN IS CRIMINEEL",
 				"OnlyCriminals": "ALLEEN CRIMINELEN HEBBEN IETS TE VERBERGEN",
 				"StayAlwaysInSight": "BLIJFT ALTIJD IN HET ZICHT VAN MINSTENS EEN °OOG"
 			},
-			"stream_wall.svg": {
+			"stream_wall": {
 				"StatusLeft": "STATUS:      STATUS:      STATUS:",
 				"SecureLeft": "VEILIG       VEILIG       VEILIG       VEILIG",
 				"StatusRight": "STATUS:      STATUS:      STATUS:      STATUS:",
 				"SecureRight": "VEILIG       VEILIG       VEILIG"
 			},
-			"stream_wall_2.svg": {
+			"stream_wall_2": {
 				"CriminalNeutralized": "CRIMINAL NEUTRALIZED",
 				"Name1": "NAAM:",
 				"Name2": "&quot;NIEMAND&quot;",
@@ -269,17 +269,17 @@
 				"Status1:": "STATUS:",
 				"Status2": "VERDOOFD (MOGELIJKE OVERDOSIS)"
 			},
-			"tut_carpet.svg": {
+			"tut_carpet": {
 				"DeviceInactiveCarpet": "RE: APPARAAT INACTIEF OP TAPIJT",
 				"FeatureNotBug": "HET IS GEEN BUG, HET IS EEN FEATURE.",
 				"IssueClosed": "[PROBLEEM GEMARKEERD ALS GESLOTEN]"
 			},
-			"tut_darker.svg": {
+			"tut_darker": {
 				"LookForLines1": "KIJK VOOR DE",
 				"LookForLines2": "DONKERDERE",
 				"LookForLines3": "LIJNEN"
 			},
-			"tut_pickup.svg": {
+			"tut_pickup": {
 				"MovingIEyes": "BEWEGENDE °OGEN",
 				"SpaceKey": "SPATIEBAR",
 				"Or": "- - - - - - OF - - - - - - ",
@@ -291,20 +291,20 @@
 				"ThanksForSurveillance3": "IN JE EIGEN",
 				"ThanksForSurveillance4": "SURVEILLANCE"
 			},
-			"tut_power.svg": {
+			"tut_power": {
 				"ActiveSlidewalks1": "SOMMIGE °OGEN ZULLEN ROLTRAPPEN ACTIVEREN",
 				"ActiveSlidewalks2": "ZULLEN ACTIVEREN",
 				"ActiveSlidewalks3": "Alleen bij het zien van",
 				"ActiveSlidewalks4": "IEMAND"
 			},
-			"tut_reminder.svg": {
+			"tut_reminder": {
 				"StayInSight": "BLIJF IN ZICHT"
 			},
-			"tut_slidewalk.svg": {
+			"tut_slidewalk": {
 				"SLIDEWALK": "ROLTRAP",
 				"AvoidUsingLegs": "EEN REVOLUTIONAIRE MANIER OM HET GEBRUIKEN VAN JE BENEN TE VERMIJDEN"
 			},
-			"tut_slow.svg": {
+			"tut_slow": {
 				"SlowDown": "VERTRAAG",
 				"ForNarrowPaths": "Voor smalle wegen",
 				"ShiftKey": "SHIFT",
@@ -312,7 +312,7 @@
 				"MoveMouseSlowly1": "BEWEEG MUIS",
 				"MoveMouseSlowly2": "TRAAG"
 			},
-			"tut_walk.svg": {
+			"tut_walk": {
 				"Walking": "STAPPEN",
 				"Arrow": "PIJL",
 				"Click": "KLIK",
@@ -320,7 +320,7 @@
 				"LowTechTransportation1": "EEN VORM VAN LOW-TECH",
 				"LowTechTransportation2": "TRANSPORTATIE"
 			},
-			"unsecret_ballot.svg": {
+			"unsecret_ballot": {
 				"WrongChoice1": "FOUTE KEUZE",
 				"WrongChoice2": "FOUTE KEUZE",
 				"GARDNER": "GARDNER",

@@ -13,8 +13,8 @@ define("FONTBASE64", "d09GRgABAAAAACWcABAAAAAASkQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 //TODO add smart loading of ressources in code of all config.js files: load from subdirectories, depending on selected language
 $filelist=array(
 	"FINAL/cutscene/pics/establishing_fg.svg",
-	"FINAL/menu/assets/propaganda/title.svg"/*, 
-	"FINAL/game/assets/propaganda/dont_help_hiders.svg",
+	"FINAL/menu/assets/propaganda/title.svg", 
+	"FINAL/game/assets/propaganda/dont_help_hiders.svg",/*
 	"FINAL/game/assets/propaganda/error.svg",
 	"FINAL/game/assets/propaganda/intro_pics.svg",
 	"FINAL/game/assets/propaganda/needs_dummy.svg",
@@ -37,9 +37,9 @@ $filelist=array(
 	"FINAL/game/assets/propaganda/tut_slidewalk.svg",
 	"FINAL/game/assets/propaganda/tut_slow.svg",
 	"FINAL/game/assets/propaganda/tut_walk.svg",
-	"FINAL/game/assets/propaganda/unsecret_ballot.svg",
+	"FINAL/game/assets/propaganda/unsecret_ballot.svg",*/
 	"FINAL/game/img/share_big.svg",
-	"FINAL/menu/img/share_big.svg"*/
+	"FINAL/menu/img/share_big.svg"
 );
 
 $action = "";
@@ -188,7 +188,7 @@ function doTranslate($file,$languages){
 			
 			//append with translation of said string
 			$replaceText = getI18nText($dataName,$lang);
-			echo "$dataName=$replaceText\n";	
+			echo "* $dataName=$replaceText\n";	
 			$translated .= $replaceText;
 			
 			//go to end of translated string
@@ -198,8 +198,16 @@ function doTranslate($file,$languages){
 		}
 		//append part of file after last translated string
 		$translated .= substr($buffer,$posR,-1);// getTextAfter($buffer,$posR);
+		
+		//if language directory does not exist, create it
+		$directory = $filenamepart[0]."$key/"; 
+		if (!is_dir($directory)) {
+			mkdir($directory);
+			echo "* created directory $directory\n";
+		}
+		
 		//create file for language
-		$newFile=$filenamepart[0]."$key/".$filenamepart[1];
+		$newFile=$directory.$filenamepart[1];
 		file_put_contents($newFile,$translated);
 		
 	}
@@ -328,7 +336,8 @@ function updateFont($file){
 	$posR = getNextCurlyBracket($buffer,$posL);
 	$out=getTextBefore($buffer,0,$posL-1);
 	$out.="@font-face { font-family: Ostrich Sans; src: url(\"data:application/font-woff;charset=utf-8;base64,".FONTBASE64."\"); }";
-	$out.=getTextAfter($buffer,$posR+1);
+	//avoid this really strange bug, where the last char gets deleted by appending a space
+	$out.=getTextAfter($buffer,$posR+1)." ";
 	file_put_contents($file,$out);
 	/*find next @font-face (there should be only one)
 	find closing }
