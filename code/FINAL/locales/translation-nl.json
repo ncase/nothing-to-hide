@@ -1,0 +1,338 @@
+{
+	"app": {
+		"name": "Nothing To Hide",
+		"subtitle": "Een anti-stealth spel waar jij je eigen waakhond bent.",
+		"longtitle": "Nothing To Hide: Een anti-stealth spel waar jij je eigen waakhond bent."
+	},
+	"menu": {
+		"play": "START",
+		"support": "STEUN & DEEL",
+		"uncopyright": "UNCOPYRIGHT",
+		"credits": "CREDITS"
+	},
+	"dialog": {
+		"fund": {
+			"title": "DANKU VOOR HET SPELEN VAN DEZE DEMO!",
+			"staytuned": [
+				"Wees opgewonden. Dit was nog niet eens een tiende van wat het hele spel zal zijn!",
+				"Aan de keerzijde... Dit was niet eens een tiende van wat het hele spel zal zijn.",
+				"We hebben nog een lange weg te gaan, en we hebben je hulp nodig."
+			],
+			"backthisgame": "back this game",
+			"whycrowdfunding": [
+				"Waarom Crowdfunding? Wel, dit spel is open source en uncopyrighted.",
+				"We zijn gemaakt voor de menigte, en gesteund door de menigte!",
+				"En ik weet dat dit een soort vanironisch is, als satire van de social media en al, maar..."
+			],
+			"thanksdissident": "Nog eens bedankt, Jij hebt onenig, jij!"
+		},
+		"uncopyright": {
+			"title": "NIETS TE VERBERGEN HEEFT NIETS TE VERBERGEN",
+			"linkdescription": [
+							"Wij zijn",
+							"<a href='%s' target='_blank'>open source</a>,",
+							"<a href='%s' target='_blank'>open designed</a>,",
+							"and with your help,",
+							"<a href='%s' target='_blank'>open funded</a>.",
+							"Maar vooral, uncopyrighted. Dat is waar -",
+							"<a href='%s' target='_blank'>Geen rechten voorbehouden</a>."
+			],
+			"youarewelcometo": "Je bent helemaal welkom om:",
+			"piratethisgame": "- \"Pirate\" dit spel.",
+			"recordandmonetize": "- Dit spel opnemen en er geld aan verdienen.",
+			"rehostthisgame": "- Dit spel uit te geven op je website.",
+			"useartmusiccode": "- De kunst/muziek/code in je eigen projecten te gebruiken.",
+			"makeamod": [
+				"- Een mod maken waar het hoofdpersonage veranders is met Princess Luna",
+				"Van de hit cartoon, My Little Pony: Friendship Is Magic.",
+				"Maar...,Waarscijnlijk zou je een aanmaling krijgen van Hasbro om hem te verweideren.",
+				"Maar niet van mij."
+			],
+			"givinguppower": "Door het opgeven van de  \"kracht\" over onze kunst, kan onze kunst meer kracht hebben."
+		},
+		"credits": {
+			"withthehelp": "MET DE HELP VAN HONDERDEN"
+		}
+		
+	},
+	"command": {
+		"backtomainmenu": "TERUG NAAR HOOFDMENU",
+		"resumegame": "HERVATTEN",
+		"resetlevel": "LEVEL RESETTEN",
+		"pause": "PAUZE",
+		"skiplevel": "LEVEL OVERSLAAN"
+	},
+	"game": {
+		"general":{ 
+			"panopticonpaused": "PANOPTICON GEPAUZEERD",
+			"levelselect": "Level Keuze:",
+			"intro": "BEGIN",
+			"ending": "EINDE",
+			"sharegame": "Deel Spel:"
+		},
+		"thewall":{
+			"posted": "Gepost",
+			"justnow": "Nu juist",
+			"minutesago": "Een minuut geleden",
+			"minutesago_plural": "__count__  minuten geleden",
+			"secondsago": "een seconde geleden",
+			"secondsago_plural": "__count__  secondes geleden"
+		}
+	},
+	"character":{
+		"poppy": "Poppy",
+		"poppygardner": "Poppy Gardner",
+		"georgegardner": "George Gardner",
+		"nobody": "Niemand"
+	},
+	"cutscene":{
+		"intro":[
+				"Poppy?",
+				"Hey lieverd. Wees niet triest.",
+				"Het is echt slecht voor mijn populariteits ranglijst.",
+				"De eerste niet geheime stem verkiezing komt eraan. Het is heel belangrijk voor papa's carrière, Dus ik moet dat jij zoveel mogelijk blije foto's van jezelf op je muur zet. Minstens 400 per dag, oke?",
+				"Alstublieft, Poppy? Ik wil niet dat de stemmers denken dat ik een slechte vader ben.",
+				"Wel, slaapwel! <span>#VaderDochterMoment</span>",
+				"Ik... IK moet hier weg zien te komen...",
+				"Vader zal vele beter af zijn zonder mij. Zijn populariteits statistieken&trade;, ook."
+		],
+		"end":[
+			"Wees niet dood oh god oh god oh god oh god oh god",
+			"Oké. Oké oké. Idee.",
+			"Soms maakt papa me zo wakker, misschien werkt dit wel...",
+			"<span>#VaderDochterMoment</span>",
+			"Auw! Pijn in mijn gezich! Jij...",
+			"Het spijt me",
+			"...redde mijn leven! Verondschuldig je niet, yo!",
+			"het spijt mij dat ik me verontschuldig",
+			"Wacht, zijn we op de Muur?...",
+			"\"Poppy Gardner postte 1 minuut geleden. Soms maakt papa me zo wakker, misschien werkt dit wel...\"",
+			"Oh. Oh wauww. Minister Gardner doet dat tegen zijn eigen... wauw.",
+			"<i>Wellllllllll</i> Als dit je blijer maakt, je vader zijn psychologische en lichamelijke misbruik zijn nu ook voor de rest van de wereld.",
+			"\"Kijk uit wat je zegt & hoort & kijkt & <i> denkt.\"</i><br>Wanner we geen plaats hebben om te schuilen, moeten we onszelf verbergen. ",
+			"Ik kan helpen met te ontsnappen van hem.",
+			"In feite, I heb er een app voor!",
+			"Uitbuiten! Zelf gemaakt. Tap gewoon op het scherm, En je zult worden verweiderd van De Muur. Je zal Niemand zijn, Net zoals ik.",
+			"Stop met acteren voor de camera. Start met jezelf te zijn."
+		]
+	},
+	"dialogue": {
+		"postedjustnow": "juist gepost",
+		"level": {
+			"intro": {
+				"nobodyNeedsMe":"Niemand heeft me nodig...",
+				"runningAway": "Denk dat ik dan maar wegloop naar Duitsland."
+			},
+			"pickup": {
+				"lookMySmile": "Oh… Dar is mijn vaders campagne post. Kijk naar mijn lach. :)",
+				"disciplinedToSmile": "Hij strafte mij wanneer mijn lach niet echt genoeg leek. :)"
+			},
+			"big_puzzle": {
+				"iWonder": "Ik vraag me af... of deze wet tegen het vanstreek maken van mensen... mensen van streek maakt?"
+			},
+			"conveyor": {
+				"myOwnWatchman": "Ik vraag me af... als ik mijn eigen waakhond ben... ben ik dan mezelf aan het verstoppen voor mezelf?"
+			},
+			"conveyor_2": {
+				"whyQuestionMarks": "Ik vraag me af... waarom gebruik ik zoveel punten en vraagtekens?",
+				"havingAPrivateThought": "Ik denk... dat dit is hoe persoonlijke gedachten aanvoelen. Voelt raar."
+			},
+			"power": {
+				"whatWasNoise": "Wat... wat is dat geluid?",
+				"looksUncomfortable": "Oh nee... dat ziet er oncomfortable uit."
+			},
+			"power_puzzle": {
+				"poorNobodyOnlyIEye" : "Arme 'Niemand'. Ik denk dat hij de enigste IOog heeft opgenomen die naar hem aan het kijken was.",
+				"neverDoneThat" : "Blij dat ik dat nog niet heb gedaan."
+			},
+			"nobody_needs_you": {
+				"onceInMyLife": "Voor een keer in mijn leven... Geef ik niet andere me zullen beoordelen! Ik... Ik moet hem helpen!",
+				"nobodyNeedsMe": "'Niemand' heeft me nodig!"
+			}
+		}
+	},
+	"images": {
+		"general":{
+			"controls": {
+				"scrolldown": "SCROLL NAAR BENEDEN",
+				"mouse": "MUIS",
+				"keys": "TOETSENBORD"
+			},
+			"or": "OF",
+			"tweet": "TWEET",
+			"share": "SHARE"
+			
+		},
+		"propaganda": {
+			"dont_help_hiders": {
+				"donthelp1": "HELP GEEN",
+				"donthelp2": "ONDERDUIKEN",
+				"fourthAmendment1": "maar het vierde",
+				"fourthAmendment2": "amendement",
+				"fourthAmendment3": "beschermd"
+			},
+			"error.svg": {
+				"ERROR": "ERROR",
+				"AudienceNotFound1": "`GERICHTE_DOELGROEP`",
+				"AudienceNotFound2": "NIET GEVONDEN",
+				"MeantForNobody1": "&gt; deze muur is bedoeld",
+				"MeantForNobody2": "&gt; voor NIEMAND"
+			},
+			"intro_pics.svg": {
+				"PoppyGardner": "Poppy Gardner",
+				"posted4DaysAgo": "postte 4 dagen geleden",
+				"Message1": "Dank jullie voor 4 miljard volgers! Ik ben zo",
+				"Message2": "blij! Stem voor mijn vader in de niet geheime",
+				"Message3": "verkiezing! Zo blij. Haha! Ha. ha..."
+			},
+			"needs_dummy.svg": {
+				"YES, MY SIGNAL": "YES, MIJN SIGNAAL",
+				"DEPLOYS": "ONTPLOOI",
+				"FOR ALL THE": "VOOR AL DE",
+				"GIRLS &amp; BOYS!": "MEISJES &amp; JONGENS!"
+			},
+			"nobody_messes.svg": {
+				"posted4DaysAgo": "postte 4 dagen geleden",
+				"THEWALL": "DE MUUR",
+				"gotRidSecretBallot": "Ah jaa, Het werd tijd van de geheime verkiezing kwijt speelde!",
+				"NobodyMessesWith": "Niemand knoeit met het parlement!"
+			},
+			"nobody_the_wall.svg": {
+				"THEWALL": "DE MUUR"
+			},
+			"nobody_the_wall_2.svg": {
+				"THEWALL": " DE MUUR DE MUUR DE MUUR DE MUUR DE MUUR DE MUUR DE MUUR"
+			},
+			"pickup_gardner.svg": {
+				"ProtectorPatriotPop": "BESCHERMER. PATRIOT. POP.",
+				"VoteGardner1": "MET JOUW NIET GEHEIME STEMMING",
+				"VoteGardner2": "STEM GARDNER"
+			},
+			"pickup_lookout.svg": {
+				"LookOut1": "KIJK UIT VOOR",
+				"LookOut2": "JEZELF"
+			},
+			"puzzle_mock.svg": {
+				"RememberToBe": "VERGEET NIET OM",
+				"POPULAR": "POPULAR",
+				"PRETTY": "MOOI",
+				"PATRIOTIC": "PATRIOTISCH",
+				"HowSelfWorth1": "HOE ANDERS KAN JE",
+				"HowSelfWorth2": "JE ZELFVERTROUWEN",
+				"HowSelfWorth3": "METEN?"
+			},
+			"puzzle_psa.svg": {
+				"PatriotPSA1": "PATRIOT SERVICE$",
+				"PatriotPSA2": "AANKONDIGING",
+				
+				"WatchWhatYouSay1": "KIJK UIT",
+				"WatchWhatYouSay2": "WAT JE",
+				"WatchWhatYouSay3": "ZEGT",
+				
+				"WatchWhatYouHear1": "KIJK UIT",
+				"WatchWhatYouHear2": "WAT JE",
+				"WatchWhatYouHear3": "HOORT",
+
+				"WatchWhatYouWatch1": "KIJK UIT",
+				"WatchWhatYouWatch2": "WAT JE",
+				"WatchWhatYouWatch3": "KIJKT"
+			},
+			"questions.svg": {
+				"DoNotAsk": "STEL GEEN VRAGEN",
+				"KeepYouSafe": "OM JEZELF VEILIG TE STELLEN, HOUDT HET PARLEMENT GEHEIMEN BIJ",
+				"EspeciallyYours": "ZEKER DE JOUWE!",
+				"Q:": "Q:",
+				"SafeFromWhat": "VEILIG VOOR WAT?",
+				"A:": "A:",
+				"ThatsSecret": "DAT IS GEHEIM."
+			},
+			"smile.svg": {
+				"SmileForTheCam": "LACH VOOR DE CAMERA",
+				"HidingIsCriminal": "VERBERGEN IS CRIMINEEL",
+				"OnlyCriminals": "ALLEEN CRIMINELEN HEBBEN IETS TE VERBERGEN",
+				"StayAlwaysInSight": "BLIJFT ALTIJD IN HET ZICHT VAN MINSTENS EEN °OOG"
+			},
+			"stream_wall.svg": {
+				"StatusLeft": "STATUS:      STATUS:      STATUS:",
+				"SecureLeft": "VEILIG       VEILIG       VEILIG       VEILIG",
+				"StatusRight": "STATUS:      STATUS:      STATUS:      STATUS:",
+				"SecureRight": "VEILIG       VEILIG       VEILIG"
+			},
+			"stream_wall_2.svg": {
+				"CriminalNeutralized": "CRIMINAL NEUTRALIZED",
+				"Name1": "NAAM:",
+				"Name2": "&quot;NIEMAND&quot;",
+				"Time1:": "TIJD:",
+				"Time2": "2044 PST (1 MIN GELEDEN)",
+				"Crime1": "MISDAAD:",
+				"Crime2": "SCHUILEN VOOR DE CAMERA",
+				"Status1:": "STATUS:",
+				"Status2": "VERDOOFD (MOGELIJKE OVERDOSIS)"
+			},
+			"tut_carpet.svg": {
+				"DeviceInactiveCarpet": "RE: APPARAAT INACTIEF OP TAPIJT",
+				"FeatureNotBug": "HET IS GEEN BUG, HET IS EEN FEATURE.",
+				"IssueClosed": "[PROBLEEM GEMARKEERD ALS GESLOTEN]"
+			},
+			"tut_darker.svg": {
+				"LookForLines1": "KIJK VOOR DE",
+				"LookForLines2": "DONKERDERE",
+				"LookForLines3": "LIJNEN"
+			},
+			"tut_pickup.svg": {
+				"MovingIEyes": "BEWEGENDE °OGEN",
+				"SpaceKey": "SPATIEBAR",
+				"Or": "- - - - - - OF - - - - - - ",
+				"ClickCircle1": "KLIK",
+				"ClickCircle2": "CIRKEL",
+				"ToPickupDrop": "VOOR OPRAPEN/NEERLEGGEN",
+				"ThanksForSurveillance1": "DANKU VOOR",
+				"ThanksForSurveillance2": "DEELNEMEN",
+				"ThanksForSurveillance3": "IN JE EIGEN",
+				"ThanksForSurveillance4": "SURVEILLANCE"
+			},
+			"tut_power.svg": {
+				"ActiveSlidewalks1": "SOMMIGE °OGEN ZULLEN ROLTRAPPEN ACTIVEREN",
+				"ActiveSlidewalks2": "ZULLEN ACTIVEREN",
+				"ActiveSlidewalks3": "Alleen bij het zien van",
+				"ActiveSlidewalks4": "IEMAND"
+			},
+			"tut_reminder.svg": {
+				"StayInSight": "BLIJF IN ZICHT"
+			},
+			"tut_slidewalk.svg": {
+				"SLIDEWALK": "ROLTRAP",
+				"AvoidUsingLegs": "EEN REVOLUTIONAIRE MANIER OM HET GEBRUIKEN VAN JE BENEN TE VERMIJDEN"
+			},
+			"tut_slow.svg": {
+				"SlowDown": "VERTRAAG",
+				"ForNarrowPaths": "Voor smalle wegen",
+				"ShiftKey": "SHIFT",
+				"OR": "- - - - - - - OF - - - - - - -",
+				"MoveMouseSlowly1": "BEWEEG MUIS",
+				"MoveMouseSlowly2": "TRAAG"
+			},
+			"tut_walk.svg": {
+				"Walking": "STAPPEN",
+				"Arrow": "PIJL",
+				"Click": "KLIK",
+				"OR": "- - - - - OF - - - - - - ",
+				"LowTechTransportation1": "EEN VORM VAN LOW-TECH",
+				"LowTechTransportation2": "TRANSPORTATIE"
+			},
+			"unsecret_ballot.svg": {
+				"WrongChoice1": "FOUTE KEUZE",
+				"WrongChoice2": "FOUTE KEUZE",
+				"GARDNER": "GARDNER",
+				"WrongChoice3": "FOUTE KEUZE",
+				"WrongChoice4": "FOUTE KEUZE",
+				"RemberCantHide1": "ONTHOU...",
+				"RemberCantHide2": "ONTHOU... You CAN'T HIDE",
+				"RemberCantHide3": "JOUW NIET GEHEIME STEMMEN. DUS",
+				"RememberVoteWinner1": "ONTHOU...",
+				"RememberVoteWinner2": "ONTHOU... TE STEMMEN VOOR",
+				"RememberVoteWinner3": "DE WINNAAR"
+			}
+		}
+	}
+}
