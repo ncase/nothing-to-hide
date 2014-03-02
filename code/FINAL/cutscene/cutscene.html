@@ -2,6 +2,17 @@
 
 <html>
 	<head>
+		<!--jQuery for simplifying access to DOM elements when using i18next -->
+		<script src="../jquery.min.js"></script>
+		<!--i18next for translation to other languages -->
+		<script src="../i18next.min.js"></script>
+		<script src="../translationinit.js"></script>
+		<script>
+			translationinit( function() {
+				//add translation code here to be executed when initializing webpage
+				//window.onload = onloadFunc();
+			});
+		</script>
 		<link href='css/cutscene.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -27,7 +38,8 @@
 			window.focus();
 		},500);
 
-		window.onload = function(){
+		var posts = [];
+		translationinit( function() {
 
 			var manifest = [
 				
@@ -53,7 +65,7 @@
 				"icons/game.png",
 				"pics/background_back.png",
 				"pics/background_front.png",
-				"pics/establishing_fg.png",
+				"pics/"+getLC()+"/establishing_fg.svg",
 				"pics/background_back.png",
 				"pics/background_front.png",
 				"pics/establishing_fg_2.png",
@@ -113,21 +125,21 @@
 			});
 			createjs.Sound.registerManifest(manifest);
 
-		};
-
+		
+ 
 		var poster = {
 			poppy: {
-				user: "Poppy Gardner",
+				user: $.i18n.t("character.poppygardner"),
 				icon: "icons/poppy.png"
 			},
 			gardner: {
-				user: "George Gardner",
+				user: i18n.t("character.georgegardner"),
 				icon: "icons/gardner.png"
 			},
 			game: {
-				user: "Nothing To Hide",
+				user: i18n.t("app.name"),
 				icon: "icons/game.png",
-				date: "just now"
+				date: minutesago(0)
 			}
 		};
 
@@ -140,20 +152,22 @@
 				data: data
 			}
 		};
-
-		var posts = [
+				
+		var messages = i18n.t("cutscene.intro", { returnObjectTrees: true });
+		var m=0;
+		posts = [
 
 			////// ESTABLISHING SHOT ///////
 
-			_generatePost("parallax",poster.poppy,"16 minutes ago",{
+			_generatePost("parallax",poster.poppy, minutesago(16),{
 				height: 450,
 				layers:[
 					{img:"pics/background_back.png", depth:0.8, offset:0},
 					{img:"pics/background_front.png", depth:0.6, offset:0},
-					{img:"pics/establishing_fg.png", depth:0.1, offset:50}
+					{img:"pics/"+getLC()+"/establishing_fg.svg", depth:0.1, offset:50}
 				]
 			}),
-			_generatePost("parallax",poster.poppy,"16 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(16),{
 				height: 350,
 				layers:[
 					{img:"pics/background_back.png", depth:0.8, offset:0},
@@ -165,7 +179,7 @@
 					play: ["door_open",null,0,0,0,1,-1]
 				}
 			}),
-			_generatePost("parallax",poster.poppy,"16 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(16),{
 				height: 250,
 				layers:[
 					{img:"pics/background_back.png", depth:0.8, offset:0},
@@ -173,33 +187,34 @@
 					{img:"pics/establishing_fg_3.png", depth:0.1, offset:50}
 				]
 			}),
-
+			
+				/*+ "The first un-secret ballot election is coming up. "+
+						"It's very important to Daddy's career, "+
+						"so I need you to post more happy pictures of yourself to The Wall. "+
+						"At least 400 per day, okay?"*/
 
 			//////// MR GARDNER TO POPPY //////////
 
-			_generatePost("conversation",poster.gardner,"16 minutes ago",{
-				message: "Poppy?"
+			_generatePost("conversation",poster.gardner,minutesago(16),{
+				message: messages[m++]
 			}),
-			_generatePost("conversation",poster.gardner,"16 minutes ago",{
-				message: "Hey sweetie. Please don't be sad."
+			_generatePost("conversation",poster.gardner,minutesago(16),{
+				message: messages[m++]
 			}),
-			_generatePost("conversation",poster.gardner,"16 minutes ago",{
-				message: "It's really hurting my popularity ranking."
+			_generatePost("conversation",poster.gardner,minutesago(16),{
+				message: messages[m++]
 			}),
-			_generatePost("conversation",poster.gardner,"15 minutes ago",{
-				message: "The first un-secret ballot election is coming up. "+
-						"It's very important to Daddy's career, "+
-						"so I need you to post more happy pictures of yourself to The Wall. "+
-						"At least 400 per day, okay?"
+			_generatePost("conversation",poster.gardner,minutesago(15),{
+				message: messages[m++]
 			}),
-			_generatePost("conversation",poster.gardner,"15 minutes ago",{
-				message: "Please, Poppy? I don't want the voters to think I'm a bad parent."
+			_generatePost("conversation",poster.gardner,minutesago(15),{
+				message: messages[m++]
 			}),
 
 
 			///// CLOSE DOOR /////
 
-			_generatePost("parallax",poster.poppy,"15 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(15),{
 				height: 450,
 				layers:[
 					{img:"pics/background_back.png", depth:0.8, offset:0},
@@ -207,10 +222,10 @@
 					{img:"pics/door_close_1.png", depth:0.1, offset:50}
 				]
 			}),
-			_generatePost("conversation",poster.gardner,"15 minutes ago",{
-				message: "Well, goodnight! <span>#DaddyDaughterMoment</span>"
+			_generatePost("conversation",poster.gardner,minutesago(15),{
+				message: messages[m++]
 			}),
-			_generatePost("parallax",poster.poppy,"15 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(15),{
 				height: 450,
 				layers:[
 					{img:"pics/background_back.png", depth:0.8, offset:0},
@@ -218,7 +233,7 @@
 					{img:"pics/door_close_2.png", depth:0.1, offset:75}
 				]
 			}),
-			_generatePost("parallax",poster.poppy,"14 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(14),{
 				height: 450,
 				layers:[
 					{img:"pics/background_back.png", depth:0.8, offset:0},
@@ -230,7 +245,7 @@
 					play: ["door_close",null,0,0,0,1,-1]
 				}
 			}),
-			_generatePost("parallax",poster.poppy,"14 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(14),{
 				height: 450,
 				layers:[
 					{img:"pics/background_back.png", depth:0.8, offset:0},
@@ -245,11 +260,11 @@
 
 			//////// INTERNAL MONOLOGUE //////////
 
-			_generatePost("conversation",poster.poppy,"14 minutes ago",{
-				message: "I... I have to get out of here..."
+			_generatePost("conversation",poster.poppy,minutesago(14),{
+				message: messages[m++]
 			}),
-			_generatePost("conversation",poster.poppy,"14 minutes ago",{
-				message: "Dad will be better off without me. His Popularity Metrics&trade;, too.",
+			_generatePost("conversation",poster.poppy,minutesago(14),{
+				message: messages[m++],
 				ambience: {
 					interval: [-40001,-40000,-1000,200],
 					play: "room",
@@ -260,7 +275,7 @@
 
 			//////// ESCAPE //////////
 
-			_generatePost("parallax",poster.poppy,"8 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(8),{
 				height: 250,
 				layers:[{img:"pics/escape_1.png", depth:1, offset:150}],
 				ambience: {
@@ -269,7 +284,7 @@
 					volume: 0.8
 				}
 			}),
-			_generatePost("parallax",poster.poppy,"8 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(8),{
 				height: 250,
 				layers:[{img:"pics/escape_2.png", depth:1, offset:150}],
 				sound: {
@@ -277,7 +292,7 @@
 					play: ["whack",null,0,0,0,1,0]
 				}
 			}),
-			_generatePost("parallax",poster.poppy,"8 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(8),{
 				height: 250,
 				layers:[{img:"pics/escape_3.png", depth:1, offset:150}],
 				sound: {
@@ -285,7 +300,7 @@
 					play: ["cough",null,0,0,0,1,0]
 				}
 			}),
-			_generatePost("parallax",poster.poppy,"8 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(8),{
 				height: 250,
 				layers:[{img:"pics/escape_4.png", depth:1, offset:150}],
 				sound: {
@@ -293,7 +308,7 @@
 					play: ["step_1",null,0,0,0,0.6,0.8]
 				}
 			}),
-			_generatePost("parallax",poster.poppy,"8 minutes ago",{
+			_generatePost("parallax",poster.poppy,minutesago(8),{
 				height: 250,
 				layers:[{img:"pics/escape_5.png", depth:1, offset:150}],
 				sound: {
@@ -303,13 +318,12 @@
 			}),
 
 			//////// PLAY GAME /////////
-			_generatePost("video",poster.game,"just now",{
+			_generatePost("video",poster.game,minutesago(0),{
 				bg: "pics/game.png"
 			})
 
 		];
-
+		});
 		</script>
-
 	</body>
 </html>

@@ -91,7 +91,7 @@
 					"wait": 1500
 				},
 				{
-					"message": "I wonder... if these laws against upsetting people... upset people?",
+					"message": "big_puzzle.iWonder",
 					"duration": 4000
 				}
 			]

@@ -2,6 +2,27 @@
 
 <html>
 	<head>
+		<!--jQuery for simplifying access to DOM elements when using i18next -->
+		<script src="../jquery.min.js"></script>
+		<!--i18next for translation to other languages -->
+		<script src="../i18next.min.js"></script>
+		<script src="../translationinit.js"></script>
+		<script>
+			translationinit( function() {
+				$("body").i18n();
+				//TODO: consider translating dialog_credits
+			
+				var urls =[
+					"https://github.com/ncase/nothing-to-hide" ,
+					"http://tinyletter.com/nothingtohide/letters",
+					"http://back.nothingtohide.cc",
+					"https://creativecommons.org/publicdomain/zero/1.0/"
+				];
+				var answer = i18n.t($.t('dialog.uncopyright.linkdescription'), { postProcess: 'sprintf', sprintf: urls});
+				$('#linkdescription').append(answer);
+				adaptfonts();
+			});
+		</script>
 		<link href='menu.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -10,11 +31,11 @@
 
 			<canvas id="screen"></canvas>
 
-			<div id="play" class="button" onclick="startGame()">PLAY</div>
+			<div id="play" class="button jtextfill" onclick="startGame()" ><span data-i18n="menu.play">PLAY</span></div>
 
-			<div id="fund" class="button" onclick="window.location.hash='fund'">SUPPORT & SHARE</div>
-			<div id="uncopyright" class="button" onclick="window.location.hash='uncopyright'">UNCOPYRIGHT</div>
-			<div id="credits" class="button" onclick="window.location.hash='credits'">CREDITS</div>
+			<div id="fund" class="button jtextfill" onclick="window.location.hash='fund'" data-i18n="menu.support">SUPPORT & SHARE</div>
+			<div id="uncopyright" class="button jtextfill" onclick="window.location.hash='uncopyright'" data-i18n="menu.uncopyright">UNCOPYRIGHT</div>
+			<div id="credits" class="button jtextfill" onclick="window.location.hash='credits'" data-i18n="menu.credits">CREDITS</div>
 
 			<iframe class="link" id="campaign_embed" src="http://back.nothingtohide.cc/embed" scrolling="no"></iframe>
 
@@ -25,18 +46,20 @@
 			<div id="modal_container_content">
 				
 				<div class="dialog" id="dialog_fund"> <!-- or, the end? -->
-					<h1>THANK YOU FOR PLAYING THIS DEMO!</h1>
+					<h1 data-i18n="dialog.fund.title">THANK YOU FOR PLAYING THIS DEMO!</h1>
 					
-					<span>Be excited. This wasn't even a tenth of what the full game will be!
+					<span data-i18n="dialog.fund.staytuned" class="sub">
+					Be excited. This wasn't even a tenth of what the full game will be!
 					On the downside... this wasn't even a tenth of what the full game will be.
 					We've got a long way to go, and we need your help.</span>
 					<br>
 
 					<a href="http://back.nothingtohide.cc" target="_blank" style="text-decoration:none">
-						<div id="back_this_game" class="link">back this game</div>
+						<div id="back_this_game" class="link" data-i18n="dialog.fund.backthisgame">back this game</div>
 					</a>
 
-					<span>Why crowdfunding? Well, this game is open source and uncopyrighted.
+					<span data-i18n="dialog.fund.whycrowdfunding" class="sub">
+					Why crowdfunding? Well, this game is open source and uncopyrighted.
 					We're built for the public, and backed by the public!
 					And I know this is kind of ironic, being a satire of social media and all, but...</span>
 
@@ -45,45 +68,42 @@
                         <div style="float:right; cursor:pointer" class="social_big link" id="facebook" onclick='window.SS_POPUP("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdemo.nothingtohide.cc%2F&t=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.","facebook")'></div>
 					</div>
 
-					Thanks again, you dissident, you!
+					<span data-i18n="dialog.fund.thanksdissident">Thanks again, you dissident, you!</span>
 
 				</div>
 				<div class="dialog" id="dialog_uncopyright">
-					<h1>NOTHING TO HIDE HAS NOTHING TO HIDE</h1>
+					<h1 data-i18n="dialog.uncopyright.title">NOTHING TO HIDE HAS NOTHING TO HIDE</h1>
 
-					We're
-					<a href="https://github.com/ncase/nothing-to-hide" target="_blank">open source</a>,
-					<a href="http://tinyletter.com/nothingtohide/letters" target="_blank">openly designed</a>,
-					and with your help,
-					<a href="http://back.nothingtohide.cc" target="_blank">openly funded</a>.
-					But most of all, uncopyrighted. That's right -
-					<a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">Zero Rights Reserved</a>.
+					<span id="linkdescription"></span>
+
 					<br><br>
 
-					You're totally welcome to:
+					<span data-i18n="dialog.uncopyright.youarewelcometo">You're totally welcome to:</span>
 					<br>
-					<span>
-						- "Pirate" this game.
+					<span class='sub'>
+						<span data-i18n="dialog.uncopyright.piratethisgame">- "Pirate" this game.</span>
 						<br>
-						- Record and monetize Let's Plays.
+						<span data-i18n="dialog.uncopyright.recordandmonetize">- Record and monetize Let's Plays.</span>
 						<br>
-						- Re-host this game on your website.
+						<span data-i18n="dialog.uncopyright.rehostthisgame">- Re-host this game on your website.</span>
 						<br>
-						- Use the art/music/code in your own projects.
+						<span data-i18n="dialog.uncopyright.useartmusiccode">- Use the art/music/code in your own projects.</span>
 						<br>
-						- Make a mod where the main character is replaced with Princess Luna from the
-						hit cartoon show, My Little Pony: Friendship Is Magic.
-						Well, actually, you'll probably get a cease and desist from Hasbro for that.
-						But not from me.
+						<span data-i18n="dialog.uncopyright.makeamod">
+							- Make a mod where the main character is replaced with Princess Luna from the
+							hit cartoon show, My Little Pony: Friendship Is Magic.
+							Well, actually, you'll probably get a cease and desist from Hasbro for that.
+							But not from me.
+						</span>
 					</span>
 					<br><br>
 
-					By giving up "power" over our art, our art can have more power.					
+					<span data-i18n="dialog.uncopyright.givinguppower">By giving up "power" over our art, our art can have more power.</span>			
 					
 				</div>
 				<div class="dialog" id="dialog_credits">
 
-					<h1>WITH THE HELP OF HUNDREDS</h1>
+					<h1 data-i18n="dialog.credits.withthehelp">WITH THE HELP OF HUNDREDS</h1>
 					
 					<a href="https://twitter.com/ncasenmare" target="_blank">NCASE</a> - Developer, designer, artist
 					<br>
@@ -144,7 +164,7 @@
 
 			</div>
 			<div id="close_button_container">
-				<div id="close_button" onclick="hideModal()">BACK TO MAIN MENU</div>
+				<div id="close_button" onclick="hideModal()" data-i18n="command.backtomainmenu">BACK TO MAIN MENU</div>
 			</div>
 		</div>
 

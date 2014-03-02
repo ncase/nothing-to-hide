@@ -104,7 +104,7 @@
 					"sound": ["sfx_shotdown",null,0,0,0,0.4,1]
 				},
 				{
-					"message": "What... what was that noise?",
+					"message": "power.whatWasNoise",
 					"duration": 2000
 				}
 			]
@@ -113,7 +113,7 @@
 			"area": {"ax":7,"bx":12,"ay":4,"by":5},
 			"queue": [
 				{
-					"message": "Oh my... that looks uncomfortable.",
+					"message": "power.looksUncomfortable",
 					"duration": 2000
 				}
 			]

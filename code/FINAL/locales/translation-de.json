@@ -1,0 +1,344 @@
+{
+	"translator": "Pat Mächler",
+	"app": {
+		"name": "Nichts Zu Verbergen",
+		"subtitle": "ein Anti-Schleichspiel in welchem du dich selbst überwachst.",
+		"longtitle": "Nichts Zu Verbergen: ein Anti-Schleichspiel in welchem du dich selbst überwachst."
+	},
+	"menu": {
+		"play": "SPIELEN",
+		"support": "UNTERSTÜTZEN",
+		"uncopyright": "GEMEINFREI",
+		"credits": "AUTOREN"
+	},
+	"dialog": {
+		"fund": {
+			"title": "DANKE FUER DAS SPIELEN DIESER DEMO!",
+			"staytuned": [
+				"Sei gespannt. Das war nicht mal ein Zehntel des gesamten Spiels!",
+				"Auf der anderen Seite....dies war nicht mal ein Zehntel des gesamten Spiels.",
+				"Wir haben noch einen langen Weg für uns und brauchen deine Hilfe."
+			],
+			"backthisgame": "unterstütze uns",
+			"whycrowdfunding": [
+				"Wieso Crowdfunding? Nun, dieses Spiel ist Open Source und ohne Urheberrechte.",
+				"Wir werden von der Allgemeinheit gebildet und werden durch sie unterstützt!",
+				"Und ich weiss, dass das etwas ironisch ist, aber Satire auf sozialen Netzwerken und so, aber..."
+			],
+			"thanksdissident": "Danke nochmals fuer's spielen, du Dissident!"
+		},
+		"uncopyright": {
+			"title": "NICHTS ZU VERBERGEN HAT NICHTS ZU VERBERGEN" ,
+			"linkdescription": [
+				"Wir sind",
+				"<a href='%s' target='_blank'>open source</a>,",
+				"<a href='%s' target='_blank'>offen designed</a>,",
+				"und mit deiner Hilfe,",
+				"<a href='%s' target='_blank'>öffentlich finanziert</a>.",
+				"Aber vor allem, sind wir ohne Urheberrecht. Genau -",
+				"<a href='%s' target='_blank'>keinerlei Rechte vorbehalten</a>."
+			],
+			"youarewelcometo": "Du bist herzlich eingeladen:",
+			"piratethisgame": "- Dieses Spiel zu \"raubkopieren\".",
+			"recordandmonetize": "- Spielvideos aufzunehmen und damit Geld zu verdienen.",
+			"rehostthisgame": "- Dieses Spiel auf deiner eigenen Website zu publizieren.",
+			"useartmusiccode": "- Grafik, Musik oder Code in deinen eigenen Projekten zu nutzen.",
+			"makeamod": [
+				"- Eine Modifikation zu machen in welcher der Hauptcharakter durch Prinzession Luna",
+				"aus der Zeichentrickshow My Little Pony – Freundschaft ist Magie.",
+				"Vielleicht bekommst du eine Abmahnung von Hasbro dafür.",
+				"Aber nicht von mir."
+			],
+			"givinguppower": "Indem wir unsere \"Macht\" über unsere Kunst freigeben, kann unsere Kunst mehr Kraft entfalten."
+		},
+		"credits": {
+			"withthehelp": "MIT DER HILFE VON HUNDERTEN"
+		}
+	},
+	"command": {
+		"backtomainmenu": "ZURÜCK ZUM HAUPTMENÜ",
+		"resumegame": "SPIEL FORTSETZEN",
+		"resetlevel": "LEVEL ZURÜCKSETZEN",
+		"pause": "PAUSE",
+		"skiplevel": "ÜBERSPRINGE LEVEL"
+	},
+	"game": {
+		"general":{ 
+			"panopticonpaused": "PANOPTICON PAUSIERT",
+			"levelselect": "Level auswählen:",
+			"intro": "PROLOG",
+			"ending": "EPILOG",
+			"sharegame": "Spiel mit Anderen teilen"
+		},
+		"thewall":{
+			"posted": "geschrieben",
+			"justnow": "gerade eben",
+			"minutesago": "vor einer Minute",
+			"minutesago_plural": "vor __count__  Minuten",
+			"secondsago": "vor einer Sekunde",
+			"secondsago_plural": "vor __count__  Sekunden"
+		}
+	},
+	"character":{
+		"poppy": "Pia",
+		"poppygardner": "Pia Gärtner",
+		"georgegardner": "Georg Gärtner",
+		"nobody": "Niemand"
+	},
+	"cutscene":{
+		"intro":[
+				"Pia?",
+				"Hallo Liebling. Bitte sei nicht traurig.",
+				"Es schadet wirklich meinen Beliebtheitswerten.",
+				"Die erste nicht-geheime Wahl kommt bald. Die ist für Papis Karriere sehr wichtig, weshalb du mehr fröhliche Bilder an die Pinwand posten solltest.  Mindestens 400 pro Tag, okay?",
+				"Bitte, Pia? Ich will nicht, dass die Wähler denken, dass ich ein schlecher Vater bin.",
+				"Na dann, gute Nacht! <span>#VaterTochterMoment</span>",
+				"Ich... ich muss hier raus...",
+				"Papi wird besser dran sein ohne mich. Sein Beliebtheitswert&trade;, auch."
+		],
+		"end":[
+			"bitte sei nicht tot oh Gott oh Gott oh Gott oh Gott oh Gott",
+			"Okay. Okay okay. Idee.",
+			"Manchmal weckt mich Papi so auf. Vielleicht hilft's...",
+			"<span>#VaterTochterMoment</span>",
+			"Au! Schmerzen im Gesicht! Du...",
+			"tut mir leid",
+			"...hast mir das Leben gerettet! Entschuldig dich nicht, hey!",
+			"tut mir leid, dass es mir leid tut",
+			"Wart mal, sind wir auf der Pinwand?...",
+			"\"Pia Gärtner geschrieben vor einer Minute. Manchmal weckt mich Papi so auf. Vielleicht hilft's...\"",
+			"Oh. Oh wow. Minister Gärtner macht das mit seiner eigenen... wow.",
+			"<i>Aaaaaaaalso</i> falls es dir hilft: dein Papi ist gegenüber dem Rest des Lands auch psychisch und physisch etwas brutal.",
+			"\"Pass auf was du sagst & hörst & siehst & <i>denkst.\"</i><br>Wenn wir keinen Platz finden um uns zu verstecken, verstecken wir unser wahres Selbst.",
+			"Ich kann dir helfen ihm zu entkommen.",
+			"Um genau zu sein, habe ich eine App dafür!",
+			"Exploit! Habe ich selbst gemacht. Einfach hier auf den Bildschirm tippen, und du wirst von der Pinwand gelöscht. Du wirst ein Niemand sein, genauso wie ich.",
+			"Hör auf für die Kamera zu spielen. Fang an du selbst zu sein."
+		]
+	},
+	"dialogue": {
+		"postedjustnow": "schrieb gerade jetzt",
+		"level": {
+			"intro": {
+				"nobodyNeedsMe": "Niemand braucht mich...",
+				"runningAway":  "Werde dann wohl nach Russland abhauen."
+			},
+			"pickup": {
+				"lookMySmile": "Oh… da ist Papi's Wahlposter. Mit meinem hübschen Lächeln. :)",
+				"disciplinedToSmile": "Er hat mich diszipliniert, weil mein Lächeln nicht genug authentisch war. :)"
+			},
+			"big_puzzle": {
+				"iWonder": "Ich frag mich... ob diese Gesetze gegen das Aufregen von Leuten... Leute aufregen?"
+			},
+			"conveyor": {
+				"myOwnWatchman": "Ich frag mich... wenn ich mein eigener Überwacher bin... verstecke ich mich vor mir selbst?"
+			},
+			"conveyor_2": {
+				"whyQuestionMarks": "Ich frag mich... wieso verwende ich soviel Auslassung und Fragezeichen?",
+				"havingAPrivateThought": "Ich denke... dies ist wie sich ein privater Gedanke anfühlt. Komisches Gefühl."
+			},
+			"power": {
+				"whatWasNoise": "Was... was war das für ein Krach?",
+				"looksUncomfortable": "Oje... das sieht unangenehm aus."
+			},
+			"power_puzzle": {
+				"poorNobodyOnlyIEye" : "Armer 'Niemand'. Ich denke er hat das einzige iEye genommen, welches ihn angesehen hat.",
+				"neverDoneThat" : "Zum Glück habe ich das nie getan."
+			},
+			"nobody_needs_you": {
+				"onceInMyLife": "Einmal im Leben... ist es mir egal wie andere mich beurteilen! Ich... ich muss helfen",
+				"nobodyNeedsMe": "'Niemand' braucht mich!"
+			}
+		}
+	},
+	"images": {
+		"general":{
+			"controls": {
+				"scrolldown": "SCROLL RUNTER",
+				"mouse": "¬MAUS¬",
+				"keys": "PFEILTASTEN"
+			},
+			"or": "ODER",
+			"tweet": "ZWITSCHER",
+			"share": "TEILEN"
+			
+		},
+		"propaganda": {
+			"dont_help_hiders": {
+				"donthelp1": "HILF KEINEN",
+				"donthelp2": "VERBERGERN",
+				"fourthAmendment1": "aber unsere",
+				"fourthAmendment2": "Grundrechte",
+				"fourthAmendment3": "schützen"
+			},
+			"error": {
+				"ERROR": "FEHLER:",
+				"AudienceNotFound1": "`KUNDENZIELGRUPPE`",
+				"AudienceNotFound2": "CANNOT BE FOUND",
+				"MeantForNobody1": "&gt; diese Pinwand ist für",
+				"MeantForNobody2": "&gt; NIEMAND gedacht"
+			},
+			"intro_pics": {
+				"posted4DaysAgo": "geschrieben vor 4 Tagen",
+				"Message1": "Danke ihr 4 Milliarden Follower! Ich bin so",
+				"Message2": "glücklich! Wähl meinen Papi in der nicht-",
+				"Message3": "geheimen Wahl! So glücklich. Haha!Ha.ha."
+			},
+			"needs_dummy": {
+				"YesMySignal1": "JA ICH PASSE",
+				"YesMySignal2": "AUF",
+				"YesMySignal3": "AUF",
+				"YesMySignal4": "JEDERMANN!"
+			},
+			"nobody_messes": {
+				"posted4DaysAgo": "geschrieben vor 4 Tagen",
+				"THEWALL": "DIE PINWAND",
+				"gotRidSecretBallot1": "Wurde Zeit, dass die geheime Wahl weg sind!",
+				"gotRidSecretBallot2": "Lasst uns all die unpatriotischen anprangern, die",
+				"gotRidSecretBallot3": "was zu verbergen haben. #waehlegaertner",
+				"NobodyMessesWith1": "Niemand legt sich mit der Regierung an!",
+				"NobodyMessesWith2": "Niemand kümmert sich um Privatsphäre!",
+				"NobodyMessesWith3": "Niemand! ^_^"
+			},
+			"nobody_the_wall": {
+				"THEWALL": "DIE PINWAND"
+			},
+			"nobody_the_wall_2": {
+				"THEWALL": " DIE PINWAND DIE PINWAND DIE PINWAND DIE PINWAND DIE PINWAND"
+			},
+			"pickup_gardner": {
+				"ProtectorPatriotPop": "BESCHÜTZER. PATRIOT. PAPI.",
+				"VoteGardner1": "IN DER NICHT-GEHEIMEN WAHL",
+				"VoteGardner2": "WÄHLE GÄRTNER"
+			},
+			"pickup_lookout": {
+				"LookOut1": "PASS AUF",
+				"LookOut2": "DICH AUF"
+			},
+			"puzzle_mock": {
+				"RememberToBe": "MERK DIR: SEI",
+				"POPULAR": "POPULÄR",
+				"PRETTY": "PASSEND",
+				"PATRIOTIC": "PATRIOTISCH",
+				"HowSelfWorth1": "WOHER KOMMT",
+				"HowSelfWorth2": "SONST DEIN",
+				"HowSelfWorth3": "SELBSTWERT?"
+			},
+			"puzzle_psa": {
+				"PatriotPSA1": "NATIONALE",
+				"PatriotPSA2": "ANKÜNDIGUNG",
+				
+				"WatchWhatYouSay1": "PASS AUF",
+				"WatchWhatYouSay2": "WAS DU",
+				"WatchWhatYouSay3": "SAGST",
+				
+				"WatchWhatYouHear1": "PASS AUF",
+				"WatchWhatYouHear2": "WAS DU",
+				"WatchWhatYouHear3": "HÖRST",
+
+				"WatchWhatYouWatch1": "PASS AUF",
+				"WatchWhatYouWatch2": "AUF WAS DU",
+				"WatchWhatYouWatch3": "AUFPASST"
+			},
+			"questions": {
+				"DoNotAsk": "FRAG NICHT ZURÜCK",
+				"KeepYouSafe": "DAMIT DU SICHER BIST, HAT DIE REGIERUNG GEHEIMNISSE",
+				"EspeciallyYours": "VOR ALLEM DEINE!",
+				"Q:": "F:",
+				"SafeFromWhat": "SICHER VOR WAS?",
+				"A:": "A:",
+				"ThatsSecret": "DAS IST GEHEIM."
+			},
+			"smile": {
+				"SmileForTheCam": "LÄCHLE FÜR DIE KAMERA",
+				"HidingIsCriminal": "VERBERGEN IST KRIMINELL",
+				"OnlyCriminals": "NUR KRIMINELLE HABEN ETWAS ZU VERBERGEN",
+				"StayAlwaysInSight": "SEI IMMER IN SICHTWEITE EINES °EYE"
+			},
+			"stream_wall": {
+				"StatusLeft": "STATUS:      STATUS:      STATUS:",
+				"SecureLeft": "SICHER       SICHER       SICHER       SICHER",
+				"StatusRight": "STATUS:      STATUS:      STATUS:      STATUS:",
+				"SecureRight": "SICHER       SICHER       SICHER"
+			},
+			"stream_wall_2": {
+				"CriminalNeutralized": "KRIMINELLER NEUTRALISIERT",
+				"Name1": "NAME:",
+				"Name2": "&quot;NIEMAND&quot;",
+				"Time1": "ZEIT:",
+				"Time2": "2044 PST (VOR 1 MINUTE)",
+				"Crime1": "VERBRECHEN:",
+				"Crime2": "VOR KAMERA VERSTECKT",
+				"Status1": "STATUS:",
+				"Status2": "RUHIG GESTELLT (GGF. ÜBERDOSIS)"
+			},
+			"tut_carpet": {
+				"DeviceInactiveCarpet": "RE: GERÄT NICHT AKTIV AUF TEPPICH",
+				"FeatureNotBug": "DAS IST SO GEDACHT, KEIN FEHLER.",
+				"IssueClosed": "[FRAGE ALS BEANTWORTET MARKIERT]"
+			},
+			"tut_darker": {
+				"LookForLines1": "SCHAU AUF DIE",
+				"LookForLines2": "DUNKLEN",
+				"LookForLines3": "LINIEN"
+			},
+			"tut_pickup": {
+				"MovingIEyes": "°EYES BEWEGEN",
+				"SpaceKey": "LEERTASTE",
+				"Or": " - - - - - ODER - - - - - -",
+				"ClickCircle1": "KREISE",
+				"ClickCircle2": "KLICKEN",
+				"ToPickupDrop": "ZUM AUFHEBEN/FALLENLASSEN",
+				"ThanksForSurveillance1": "DANKE, DASS DU",
+				"ThanksForSurveillance2": "AN DER EIGENEN",
+				"ThanksForSurveillance3": "ÜBERWACHUNG",
+				"ThanksForSurveillance4": "TEILNIMMST"
+			},
+			"tut_power": {
+				"ActiveSlidewalks1": "EINIGE °EYES AKTIVIEREN FAHRSTEIGE",
+				"ActiveSlidewalks2": "AKTIVIEREN",
+				"ActiveSlidewalks3": "NUR WENN SIE JEMANDEN",
+				"ActiveSlidewalks4": "SEHEN"
+			},
+			"tut_reminder": {
+				"StayInSight": "BLEIB IN SICHT"
+			},
+			"tut_slidewalk": {
+				"SLIDEWALK": "FAHRSTEIG",
+				"AvoidUsingLegs": "EINE ERFINDUNG UM DIE BEINE NICHT ZU BENUTZEN"
+			},
+			"tut_slow": {
+				"SlowDown": "VERLANGSAME",
+				"ForNarrowPaths": "für enge Wege",
+				"ShiftKey": "UMSCHALTTASTE",
+				"OR": "- - - - - - ODER - - - - - -",
+				"MoveMouseSlowly1": "MAUS LANGSAM",
+				"MoveMouseSlowly2": "BEWEGEN"
+			},
+			"tut_walk": {
+				"Walking": "GEHEN",
+				"ArrowKeys1": "PFEIL-",
+				"ArrowKeys2": "TASTEN",
+				"OR": "- - - - ODER - - - - - -",
+				"WalkingMouse1": "KLICKEN",
+				"WalkingMouse2": "&amp; GEDRÜCKT",
+				"WalkingMouse3": "HALTEN",
+				"LowTechTransportation1": "EINE EINFACHE FORM VON",
+				"LowTechTransportation2": "SELBST-TRANSPORT"
+			},
+			"unsecret_ballot": {
+				"WrongChoice1": "FALSCHE WAHL",
+				"WrongChoice2": "FALSCHE WAHL",
+				"GARDNER": "GÄRTNER",
+				"WrongChoice3": "FALSCHE WAHL",
+				"WrongChoice4": "FALSCHE WAHL",
+				"RemberCantHide1": "BEACHTE...",
+				"RemberCantHide2": "BEACHTE... DU KANNST DEN WAHL-",
+				"RemberCantHide3": "ZETTEL NICHT VERSTECKEN. DAHER",
+				"RememberVoteWinner1": "BEACHTE...",
+				"RememberVoteWinner2": "BEACHTE... DASS DU RICHTIG",
+				"RememberVoteWinner3": "WÄHLST"
+			}
+		}
+	}
+}

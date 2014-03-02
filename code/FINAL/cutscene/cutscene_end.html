@@ -2,6 +2,16 @@
 
 <html>
 	<head>
+		<!--jQuery for simplifying access to DOM elements when using i18next -->
+		<script src="../jquery.min.js"></script>
+		<!--i18next for translation to other languages -->
+		<script src="../i18next.min.js"></script>
+		<script src="../translationinit.js"></script>
+		<script>
+			/*translationinit( function() {
+			*	//add translation code here to be executed when initializing webpage
+			});*/
+		</script>
 		<link href='css/cutscene.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -58,7 +68,9 @@
 			window.focus();
 		},500);
 
-		window.onload = function(){
+		var posts=[];
+		
+		translationinit( function() {
 
 			var manifest = [
 				{id:"slap", src:"sounds2/mp3/slap.mp3|sounds2/ogg/slap.ogg"},
@@ -143,15 +155,15 @@
 			});
 			createjs.Sound.registerManifest(manifest);
 
-		};
+		
 
 		var poster = {
 			poppy: {
-				user: "Poppy Gardner",
+				user: i18n.t("character.poppygardner"),
 				icon: "icons/poppy.png"
 			},
 			nobody: {
-				user: "Nobody",
+				user: i18n.t("character.nobody"),
 				icon: "icons/nobody.png"
 			}
 		};
@@ -194,64 +206,66 @@
 			}
 		};
 
-		var posts = [
+		var messages = i18n.t("cutscene.end", { returnObjectTrees: true });
+		var m=0;
+		posts = [
 
 			////// SLAP AWAKE ///////
 
-			_generateMainPost("slap_1",1,"4 minutes ago"),
+			_generateMainPost("slap_1",1,minutesago(4)),
 			_generateConvoPost(
-				poster.poppy, "4 minutes ago",
-				"please don't be dead oh god oh god oh god oh god oh god"
+				poster.poppy, minutesago(4),
+				messages[m++]
 			),
 			_generateConvoPost(
-				poster.poppy, "4 minutes ago",
-				"Okay. Okay okay. Idea."
+				poster.poppy, minutesago(4),
+				messages[m++]
 			),
 			_generateConvoPost(
-				poster.poppy, "4 minutes ago",
-				"Sometimes Daddy wakes me up like this. Maybe this will work..."
+				poster.poppy, minutesago(4),
+				messages[m++]
 			),
 			
-			_generateMainPost("slap_2",2,"4 minutes ago",{
+			_generateMainPost("slap_2",2,minutesago(4),{
 				offset: 0,
 				play: ["slap",null,0,0,0,1,0]
 			}),
 			_generateConvoPost(
-				poster.poppy, "4 minutes ago",
-				"<span>#DaddyDaughterMoment</span>"
+				poster.poppy, minutesago(4),
+				messages[m++]
 			),
-			_generateMainPost("slap_3",3,"4 minutes ago"),
+			_generateMainPost("slap_3",3,minutesago(4)),
 
 			_generateConvoPost(
-				poster.nobody, "3 minutes ago",
-				"Ow! Pain on the face! You..."
+				poster.nobody, minutesago(3),
+				messages[m++]
 			),
 			_generateConvoPost(
-				poster.poppy, "3 minutes ago",
-				"i'm sorry"
+				poster.poppy, minutesago(3),
+				messages[m++]
 			),
 			_generateConvoPost(
-				poster.nobody, "3 minutes ago",
-				"...saved my life! Don't apologize, yo!"
+				poster.nobody, minutesago(3),
+				messages[m++]
 			),
 			_generateConvoPost(
-				poster.poppy, "3 minutes ago",
-				"i'm sorry for being sorry"
+				poster.poppy, minutesago(3),
+				messages[m++]
 			),
 
-			_generateMainPost("slap_4",4,"3 minutes ago"),
+			_generateMainPost("slap_4",4,minutesago(3)),
 
 			_generateConvoPost(
-				poster.nobody, "3 minutes ago",
-				"Hold up, are we on The Wall?..."
+				poster.nobody, minutesago(3),
+				messages[m++]
 			),
 
 			////// SO META ///////
 
 			_generatePost("parallax",{
-					user: "Nothing To Hide",
+					user: i18n.t("app.name"),
 					icon: "icons/game.png",
-					date: "3 minutes ago"
+					date: minutesago(3)
 				},
 				{
 				height: 450,
@@ -275,76 +289,73 @@
 			////// I WILL HELP YOU ///////
 
 			_generateConvoPost(
-				poster.nobody, "3 minutes ago",
-				'"Poppy Gardner posted 1 minute ago. Sometimes Daddy wakes me up like this. Maybe this will work..."'
+				poster.nobody, minutesago(3),
+				messages[m++]
 			),
 			_generateConvoPost(
-				poster.nobody, "3 minutes ago",
-				'Oh. Oh wow. Minister Gardner does that to his own... wow.'
+				poster.nobody, minutesago(3),
+				messages[m++]
 			),
 
-			_generateMainPost("phone_1",5,"2 minutes ago"),
+			_generateMainPost("phone_1",5,minutesago(2)),
 
-			_generateMainPost("phone_1_extra",6,"2 minutes ago"),
+			_generateMainPost("phone_1_extra",6,minutesago(2)),
 
 			_generateConvoPost(
-				poster.nobody, "2 minutes ago",
-				"<i>Wellllllllll</i> if it makes you feel better, your dad's psychologically and physically abusive to the rest of the nation, too."
+				poster.nobody, minutesago(2),
+				messages[m++]
 			),
 
 			_generateConvoPost(
-				poster.nobody, "2 minutes ago",
-
-				"\"Watch what you say & hear & watch & <i>think.\"</i><br>When we got no place to hide, we got to hide our true selves. "
-				
+				poster.nobody, minutesago(2),
+				messages[m++]
 				/*"\"Watch what you say & hear & watch & <i>think.\"</i><br>When we got no place to hide, we got to hide our true selves. "+
 				"Minister Gardner forces us to be our own watchmen. Literally too, when you move them iEyes."*/
-
 			),
 
 			_generateConvoPost(
-				poster.nobody, "2 minutes ago",
-				"I can help you escape him."
+				poster.nobody, minutesago(2),
+				messages[m++]
 			),
 
-			_generateMainPost("phone_2",7,"1 minute ago",{
+			_generateMainPost("phone_2",7,minutesago(1),{
 				offset: 0,
 				play: ["pocket",null,0,0,0,1,0]
 			}),
 
 			_generateConvoPost(
-				poster.nobody, "1 minute ago",
-				"In fact, I got an app for that!"
+				poster.nobody, minutesago(1),
+				messages[m++]
 			),
 
-			_generateMainPost("phone_3",8,"1 minute ago"),
+			_generateMainPost("phone_3",8,minutesago(1)),
 
 			_generateConvoPost(
-				poster.nobody, "58 seconds ago",
-				"Exploit! Made it myself. Just tap this screen here, and you'll be erased from The Wall. You'll be a Nobody, just like me."
+				poster.nobody, secondsago(58),
+				messages[m++]
 			),
 			_generateConvoPost(
-				poster.nobody, "42 seconds ago",
-				"Stop acting for the camera. Start being yourself."
+				poster.nobody, secondsago(42),
+				messages[m++]
 			),
 
 			////// GOOD BYE ///////
 
-			_generateMainPost("phone_4",9,"25 seconds ago"),
-			_generateMainPost("phone_5",8,"19 seconds ago",{
+			_generateMainPost("phone_4",9,secondsago(25)),
+			_generateMainPost("phone_5",8,secondsago(19),{
 				offset: 100,
 				play: ["clap",null,0,0,0,1,0]
 			}),
 
-			_generateMainPost("phone_6",9,"13 seconds ago"),
-			_generateMainPost("phone_7",8,"8 seconds ago"),
-			_generateMainPost("phone_8",9,"3 seconds ago"),
+			_generateMainPost("phone_6",9,secondsago(13)),
+			_generateMainPost("phone_7",8,secondsago(8)),
+			_generateMainPost("phone_8",9,secondsago(3)),
 
 			{
 				type: "parallax_post",
 				user: poster.poppy.user,
 				icon: poster.poppy.icon,
-				date: "just now",
+				date: secondsago(0),
 				data: {
 					height: 350,
 					layers:[
@@ -361,6 +372,7 @@
 			}
 
 		];
+		});
 		</script>
 
 	</body>

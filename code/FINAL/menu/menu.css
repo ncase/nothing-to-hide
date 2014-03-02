@@ -214,11 +214,15 @@ a {
 	padding:60px 40px 30px 40px;
 	color:#fff;
 }
-.dialog span{
+.dialog span.sub{
 	color:#888;
 	font-family: sans-serif;
 	font-size: 18px;
 	font-weight: 100;
+}
+
+.dialog span{
+	letter-spacing: 1px;
 }
 .dialog h1{
 	line-height: 1em;
@@ -252,7 +256,7 @@ a {
 	background: #FF3333;
 }
 .social_big{
-	background: url(img/share_big.png);
+	background: url(img/share_big.svg);
 	width:125px; height:50px;
 }
 .social_big#tweet{ background-position: 0px 0px; }

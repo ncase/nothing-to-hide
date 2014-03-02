@@ -128,11 +128,11 @@
 			"area": {"ax":9,"bx":11,"ay":7,"by":8},
 			"queue": [
 				{
-					"message": "For once in my life... I don't care how others will judge me! I... I have to help!",
+					"message": "nobody_needs_you.onceInMyLife",
 					"duration": 4000
 				},
 				{
-					"message": "'Nobody' needs me!",
+					"message": "nobody_needs_you.nobodyNeedsMe",
 					"duration": 2000
 				}
 			]
