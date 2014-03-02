@@ -186,10 +186,10 @@
 				"Message3": "verkiezing! Zo blij. Haha! Ha. ha..."
 			},
 			"needs_dummy.svg": {
-				"YES, MY SIGNAL": "YES, MIJN SIGNAAL",
-				"DEPLOYS": "ONTPLOOI",
-				"FOR ALL THE": "VOOR AL DE",
-				"GIRLS &amp; BOYS!": "MEISJES &amp; JONGENS!"
+				"YesMySignal1": "YES, MIJN SIGNAAL",
+				"YesMySignal2": "ONTPLOOI",
+				"YesMySignal3": "VOOR AL DE",
+				"YesMySignal4": "MEISJES &amp; JONGENS!"
 			},
 			"nobody_messes.svg": {
 				"posted4DaysAgo": "postte 4 dagen geleden",
