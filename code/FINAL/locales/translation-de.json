@@ -185,16 +185,20 @@
 				"Message3": "geheimen Wahl! So glücklich. Haha!Ha.ha."
 			},
 			"needs_dummy": {
-				"YesMySignal1": "ICH SENDE MEIN",
-				"YesMySignal2": "SIGNAL",
-				"YesMySignal3": "FÜR",
+				"YesMySignal1": "JA ICH PASSE",
+				"YesMySignal2": "AUF",
+				"YesMySignal3": "AUF",
 				"YesMySignal4": "JEDERMANN!"
 			},
 			"nobody_messes": {
 				"posted4DaysAgo": "geschrieben vor 4 Tagen",
 				"THEWALL": "DIE PINWAND",
-				"gotRidSecretBallot": "Mann, wurde Zeit, dass die geheime Wahl abeschafft wurde!",
-				"NobodyMessesWith": "Niemand legt sich mit der Regierung an!"
+				"gotRidSecretBallot1": "Wurde Zeit, dass die geheime Wahl weg sind!",
+				"gotRidSecretBallot2": "Lasst uns all die unpatriotischen anprangern, die",
+				"gotRidSecretBallot3": "was zu verbergen haben. #waehlegaertner",
+				"NobodyMessesWith1": "Niemand legt sich mit der Regierung an!",
+				"NobodyMessesWith2": "Niemand kümmert sich um Privatsphäre!",
+				"NobodyMessesWith3": "Niemand! ^_^"
 			},
 			"nobody_the_wall": {
 				"THEWALL": "DIE PINWAND"
@@ -261,16 +265,16 @@
 				"CriminalNeutralized": "KRIMINELLER NEUTRALISIERT",
 				"Name1": "NAME:",
 				"Name2": "&quot;NIEMAND&quot;",
-				"Time1:": "ZEIT:",
+				"Time1": "ZEIT:",
 				"Time2": "2044 PST (VOR 1 MINUTE)",
 				"Crime1": "VERBRECHEN:",
 				"Crime2": "VOR KAMERA VERSTECKT",
-				"Status1:": "STATUS:",
+				"Status1": "STATUS:",
 				"Status2": "RUHIG GESTELLT (GGF. ÜBERDOSIS)"
 			},
 			"tut_carpet": {
 				"DeviceInactiveCarpet": "RE: GERÄT NICHT AKTIV AUF TEPPICH",
-				"FeatureNotBug": "DAS IST KEIN FEHLER, SONDERN SO GEDACHT.",
+				"FeatureNotBug": "DAS IST SO GEDACHT, KEIN FEHLER.",
 				"IssueClosed": "[FRAGE ALS BEANTWORTET MARKIERT]"
 			},
 			"tut_darker": {
@@ -279,11 +283,11 @@
 				"LookForLines3": "LINIEN"
 			},
 			"tut_pickup": {
-				"MovingIEyes": "BEWEGENDE °EYES",
+				"MovingIEyes": "°EYES BEWEGEN",
 				"SpaceKey": "LEERTASTE",
 				"Or": " - - - - - ODER - - - - - -",
 				"ClickCircle1": "KREISE",
-				"ClickCircle2": "ANKLICKEN",
+				"ClickCircle2": "KLICKEN",
 				"ToPickupDrop": "ZUM AUFHEBEN/FALLENLASSEN",
 				"ThanksForSurveillance1": "DANKE, DASS DU",
 				"ThanksForSurveillance2": "AN DER EIGENEN",
@@ -313,9 +317,12 @@
 			},
 			"tut_walk": {
 				"Walking": "GEHEN",
-				"Arrow": "PFEIL",
-				"Click": "KLICK",
+				"ArrowKeys1": "PFEIL-",
+				"ArrowKeys2": "TASTEN",
 				"OR": "- - - - ODER - - - - - -",
+				"WalkingMouse1": "KLICKEN",
+				"WalkingMouse2": "&amp; GEDRÜCKT",
+				"WalkingMouse3": "HALTEN",
 				"LowTechTransportation1": "EINE EINFACHE FORM VON",
 				"LowTechTransportation2": "SELBST-TRANSPORT"
 			},

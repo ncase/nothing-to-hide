@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg3027"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   width="400"
+   height="100"
+   sodipodi:docname="tut_carpet.png">
+  <metadata
+     id="metadata3033">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3031" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1032"
+     id="namedview3029"
+     showgrid="false"
+     inkscape:zoom="1.825"
+     inkscape:cx="419.11411"
+     inkscape:cy="-35.161144"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3027" />
+  <rect
+     style="fill:#000000;fill-opacity:1;stroke:none"
+     id="rect4191"
+     width="400"
+     height="100"
+     x="0"
+     y="0" />
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="13.243164"
+     y="30.684931"
+     id="text4193"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4195"
+       x="13.243164"
+       y="30.684931"
+                     data-i18n="images.propaganda.tut_carpet.DeviceInactiveCarpet"
+
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Monospace;-inkscape-font-specification:Monospace">RE: APPARAAT INACTIEF OP TAPIJT</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+     x="12.733398"
+     y="55.31937"
+     id="text4193-6"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4195-0"
+       x="12.733398"
+       y="55.31937"
+                            data-i18n="images.propaganda.tut_carpet.FeatureNotBug"
+
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Monospace;-inkscape-font-specification:Monospace">HET IS GEEN BUG, HET IS EEN FEATURE.</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
+     x="13.301493"
+     y="80.520187"
+     id="text4193-6-1"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4195-0-5"
+       x="13.301493"
+       y="80.520187"
+                                   data-i18n="images.propaganda.tut_carpet.IssueClosed"
+
+       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace">[PROBLEEM GEMARKEERD ALS GESLOTEN]</tspan></text>
+</svg>

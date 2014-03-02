@@ -194,8 +194,12 @@
 			"nobody_messes": {
 				"posted4DaysAgo": "posted 4 days ago",
 				"THEWALL": "THE WALL",
-				"gotRidSecretBallot": "Aw yiss, 'bout time we got rid of the secret ballot!",
-				"NobodyMessesWith": "Nobody messes with the Ministry!"
+				"gotRidSecretBallot1": "Aw yiss, 'bout time we got rid of the secret ballot!",
+				"gotRidSecretBallot2": "Let's expose all those un-Americans who have",
+				"gotRidSecretBallot3": "something to hide. #votegardner",
+				"NobodyMessesWith1": "Nobody messes with the Ministry!",
+				"NobodyMessesWith2": "Nobody cares for privacy!",
+				"NobodyMessesWith3": "Nobody! ^_^"
 			},
 			"nobody_the_wall": {
 				"THEWALL": "THE WALL"
@@ -262,11 +266,11 @@
 				"CriminalNeutralized": "CRIMINAL NEUTRALIZED",
 				"Name1": "NAME:",
 				"Name2": "&quot;NOBODY&quot;",
-				"Time1:": "TIME:",
+				"Time1": "TIME:",
 				"Time2": "2044 PST (1 MIN AGO)",
 				"Crime1": "CRIME:",
 				"Crime2": "HIDING FROM CAMERA",
-				"Status1:": "STATUS:",
+				"Status1": "STATUS:",
 				"Status2": "TRANQUILIZED (POSSIBLE OVERDOSE)"
 			},
 			"tut_carpet": {
@@ -314,9 +318,12 @@
 			},
 			"tut_walk": {
 				"Walking": "WALKING",
-				"Arrow": "ARROW",
-				"Click": "CLICK",
+				"ArrowKeys1": "ARROW",
+				"ArrowKeys2": "KEYS",
 				"OR": "- - - - - OR - - - - - - ",
+				"WalkingMouse1": "CLICK",
+				"WalkingMouse2": "&amp; HOLD",
+				"WalkingMouse3": "MOUSE",
 				"LowTechTransportation1": "A FORM OF LOW-TECH",
 				"LowTechTransportation2": "TRANSPORTATION"
 			},

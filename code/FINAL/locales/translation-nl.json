@@ -195,7 +195,12 @@
 				"posted4DaysAgo": "postte 4 dagen geleden",
 				"THEWALL": "DE MUUR",
 				"gotRidSecretBallot": "Ah jaa, Het werd tijd van de geheime verkiezing kwijt speelde!",
-				"NobodyMessesWith": "Niemand knoeit met het parlement!"
+				"gotRidSecretBallot1": "Aw yiss, 'bout time we got rid of the secret ballot!",
+				"gotRidSecretBallot2": "Laten we al die niet-Amerikanen die iets te",
+				"gotRidSecretBallot3": "verbergen hebben bloot. #stemgardner",
+				"NobodyMessesWith1": "Niemand knoeit met het parlement!",
+				"NobodyMessesWith2": "Niemand zorgt voor privacy!",
+				"NobodyMessesWith3": "Niemand! ^_^"
 			},
 			"nobody_the_wall": {
 				"THEWALL": "DE MUUR"
@@ -262,11 +267,11 @@
 				"CriminalNeutralized": "CRIMINAL NEUTRALIZED",
 				"Name1": "NAAM:",
 				"Name2": "&quot;NIEMAND&quot;",
-				"Time1:": "TIJD:",
+				"Time1": "TIJD:",
 				"Time2": "2044 PST (1 MIN GELEDEN)",
 				"Crime1": "MISDAAD:",
 				"Crime2": "SCHUILEN VOOR DE CAMERA",
-				"Status1:": "STATUS:",
+				"Status1": "STATUS:",
 				"Status2": "VERDOOFD (MOGELIJKE OVERDOSIS)"
 			},
 			"tut_carpet": {
@@ -314,9 +319,12 @@
 			},
 			"tut_walk": {
 				"Walking": "STAPPEN",
-				"Arrow": "PIJL",
-				"Click": "KLIK",
+				"ArrowKeys1": "PIJL",
+				"ArrowKeys2": "TOETSEN",
 				"OR": "- - - - - OF - - - - - - ",
+				"WalkingMouse1": "KLIK",
+				"WalkingMouse2": "&amp; HOUD",
+				"WalkingMouse3": "DE MUIS",
 				"LowTechTransportation1": "EEN VORM VAN LOW-TECH",
 				"LowTechTransportation2": "TRANSPORTATIE"
 			},

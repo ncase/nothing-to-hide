@@ -67,6 +67,8 @@
        id="tspan4195"
        x="13.243164"
        y="30.684931"
+                     data-i18n="images.propaganda.tut_carpet.DeviceInactiveCarpet"
+
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Monospace;-inkscape-font-specification:Monospace">RE: DEVICE INACTIVE ON CARPET</tspan></text>
   <text
      xml:space="preserve"
@@ -79,6 +81,8 @@
        id="tspan4195-0"
        x="12.733398"
        y="55.31937"
+                            data-i18n="images.propaganda.tut_carpet.FeatureNotBug"
+
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Monospace;-inkscape-font-specification:Monospace">IT'S NOT A BUG, IT'S A FEATURE.</tspan></text>
   <text
      xml:space="preserve"
@@ -91,5 +95,7 @@
        id="tspan4195-0-5"
        x="13.301493"
        y="80.520187"
+                                   data-i18n="images.propaganda.tut_carpet.IssueClosed"
+
        style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace">[ISSUE MARKED AS CLOSED]</tspan></text>
 </svg>
