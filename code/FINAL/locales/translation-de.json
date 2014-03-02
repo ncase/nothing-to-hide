@@ -185,152 +185,152 @@
 				"Message3": "geheimen Wahl! So glücklich. Haha!Ha.ha."
 			},
 			"needs_dummy": {
-				"YesMySignal1": "JA, MEIN SIGNAL",
-				"YesMySignal2": "DEPLOYS",
-				"YesMySignal3": "FOR ALL THE",
-				"YesMySignal4": "GIRLS &amp; BOYS!"
+				"YesMySignal1": "ICH SENDE MEIN",
+				"YesMySignal2": "SIGNAL",
+				"YesMySignal3": "FÜR",
+				"YesMySignal4": "JEDERMANN!"
 			},
 			"nobody_messes": {
-				"posted4DaysAgo": "posted 4 days ago",
-				"THEWALL": "THE WALL",
-				"gotRidSecretBallot": "Aw yiss, 'bout time we got rid of the secret ballot!",
-				"NobodyMessesWith": "Nobody messes with the Ministry!"
+				"posted4DaysAgo": "geschrieben vor 4 Tagen",
+				"THEWALL": "DIE PINWAND",
+				"gotRidSecretBallot": "Mann, wurde Zeit, dass die geheime Wahl abeschafft wurde!",
+				"NobodyMessesWith": "Niemand legt sich mit der Regierung an!"
 			},
 			"nobody_the_wall": {
-				"THEWALL": "THE WALL"
+				"THEWALL": "DIE PINWAND"
 			},
 			"nobody_the_wall_2": {
-				"THEWALL": " THE WALL THE WALL THE WALL THE WALL THE WALL THE WALL THE WALL"
+				"THEWALL": " DIE PINWAND DIE PINWAND DIE PINWAND DIE PINWAND DIE PINWAND"
 			},
 			"pickup_gardner": {
-				"ProtectorPatriotPop": "PROTECTOR. PATRIOT. POP.",
-				"VoteGardner1": "WITH YOUR UN-SECRET BALLOT",
-				"VoteGardner2": "VOTE GARDNER"
+				"ProtectorPatriotPop": "BESCHÜTZER. PATRIOT. PAPI.",
+				"VoteGardner1": "IN DER NICHT-GEHEIMEN WAHL",
+				"VoteGardner2": "WÄHLE GÄRTNER"
 			},
 			"pickup_lookout": {
-				"LookOut1": "LOOK OUT FOR",
-				"LookOut2": "YOURSELF"
+				"LookOut1": "PASS AUF",
+				"LookOut2": "DICH AUF"
 			},
 			"puzzle_mock": {
-				"RememberToBe": "REMEMBER TO BE",
-				"POPULAR": "POPULAR",
-				"PRETTY": "PRETTY",
-				"PATRIOTIC": "PATRIOTIC",
-				"HowSelfWorth1": "HOW ELSE CAN YOU",
-				"HowSelfWorth2": "MEASURE YOUR",
-				"HowSelfWorth3": "SELF-WORTH?"
+				"RememberToBe": "MERK DIR: SEI",
+				"POPULAR": "POPULÄR",
+				"PRETTY": "PASSEND",
+				"PATRIOTIC": "PATRIOTISCH",
+				"HowSelfWorth1": "WOHER KOMMT",
+				"HowSelfWorth2": "SONST DEIN",
+				"HowSelfWorth3": "SELBSTWERT?"
 			},
 			"puzzle_psa": {
-				"PatriotPSA1": "PATRIOT SERVICE",
-				"PatriotPSA2": "ANOUNCEMENT",
+				"PatriotPSA1": "NATIONALE",
+				"PatriotPSA2": "ANKÜNDIGUNG",
 				
-				"WatchWhatYouSay1": "WATCH",
-				"WatchWhatYouSay2": "WHAT YOU",
-				"WatchWhatYouSay3": "SAY",
+				"WatchWhatYouSay1": "PASS AUF",
+				"WatchWhatYouSay2": "WAS DU",
+				"WatchWhatYouSay3": "SAGST",
 				
-				"WatchWhatYouHear1": "WATCH",
-				"WatchWhatYouHear2": "WHAT YOU",
-				"WatchWhatYouHear3": "HEAR",
+				"WatchWhatYouHear1": "PASS AUF",
+				"WatchWhatYouHear2": "WAS DU",
+				"WatchWhatYouHear3": "HÖRST",
 
-				"WatchWhatYouWatch1": "WATCH",
-				"WatchWhatYouWatch2": "WHAT YOU",
-				"WatchWhatYouWatch3": "WATCH"
+				"WatchWhatYouWatch1": "PASS AUF",
+				"WatchWhatYouWatch2": "AUF WAS DU",
+				"WatchWhatYouWatch3": "AUFPASST"
 			},
 			"questions": {
-				"DoNotAsk": "DO NOT ASK BACK",
-				"KeepYouSafe": "TO KEEP YOU SAFE, THE MINISTRY KEEPS SECRETS",
-				"EspeciallyYours": "ESPECIALLY YOURS!",
-				"Q:": "Q:",
-				"SafeFromWhat": "SAFE FROM WHAT?",
+				"DoNotAsk": "FRAG NICHT ZURÜCK",
+				"KeepYouSafe": "DAMIT DU SICHER BIST, HAT DIE REGIERUNG GEHEIMNISSE",
+				"EspeciallyYours": "VOR ALLEM DEINE!",
+				"Q:": "F:",
+				"SafeFromWhat": "SICHER VOR WAS?",
 				"A:": "A:",
-				"ThatsSecret": "THAT'S SECRET."
+				"ThatsSecret": "DAS IST GEHEIM."
 			},
 			"smile": {
-				"SmileForTheCam": "SMILE FOR THE CAMERA",
-				"HidingIsCriminal": "HIDING IS CRIMINAL",
-				"OnlyCriminals": "ONLY CRIMINALS HAVE SOMETHING TO HIDE",
-				"StayAlwaysInSight": "ALWAYS STAY IN SIGHT OF AT LEAST ONE °EYE"
+				"SmileForTheCam": "LÄCHLE FÜR DIE KAMERA",
+				"HidingIsCriminal": "VERBERGEN IST KRIMINELL",
+				"OnlyCriminals": "NUR KRIMINELLE HABEN ETWAS ZU VERBERGEN",
+				"StayAlwaysInSight": "SEI IMMER IN SICHTWEITE EINES °EYE"
 			},
 			"stream_wall": {
 				"StatusLeft": "STATUS:      STATUS:      STATUS:",
-				"SecureLeft": "SECURE       SECURE       SECURE       SECURE",
+				"SecureLeft": "SICHER       SICHER       SICHER       SICHER",
 				"StatusRight": "STATUS:      STATUS:      STATUS:      STATUS:",
-				"SecureRight": "SECURE       SECURE       SECURE"
+				"SecureRight": "SICHER       SICHER       SICHER"
 			},
 			"stream_wall_2": {
-				"CriminalNeutralized": "CRIMINAL NEUTRALIZED",
+				"CriminalNeutralized": "KRIMINELLER NEUTRALISIERT",
 				"Name1": "NAME:",
-				"Name2": "&quot;NOBODY&quot;",
-				"Time1:": "TIME:",
-				"Time2": "2044 PST (1 MIN AGO)",
-				"Crime1": "CRIME:",
-				"Crime2": "HIDING FROM CAMERA",
+				"Name2": "&quot;NIEMAND&quot;",
+				"Time1:": "ZEIT:",
+				"Time2": "2044 PST (VOR 1 MINUTE)",
+				"Crime1": "VERBRECHEN:",
+				"Crime2": "VOR KAMERA VERSTECKT",
 				"Status1:": "STATUS:",
-				"Status2": "TRANQUILIZED (POSSIBLE OVERDOSE)"
+				"Status2": "RUHIG GESTELLT (GGF. ÜBERDOSIS)"
 			},
 			"tut_carpet": {
-				"DeviceInactiveCarpet": "RE: DEVICE INACTIVE ON CARPET",
-				"FeatureNotBug": "IT'S NOT A BUG, IT'S A FEATURE.",
-				"IssueClosed": "[ISSUE MARKED AS CLOSED]"
+				"DeviceInactiveCarpet": "RE: GERÄT NICHT AKTIV AUF TEPPICH",
+				"FeatureNotBug": "DAS IST KEIN FEHLER, SONDERN SO GEDACHT.",
+				"IssueClosed": "[FRAGE ALS BEANTWORTET MARKIERT]"
 			},
 			"tut_darker": {
-				"LookForLines1": "LOOK FOR THE",
-				"LookForLines2": "DARKER",
-				"LookForLines3": "LINES"
+				"LookForLines1": "SCHAU AUF DIE",
+				"LookForLines2": "DUNKLEN",
+				"LookForLines3": "LINIEN"
 			},
 			"tut_pickup": {
-				"MovingIEyes": "MOVING °EYES",
-				"SpaceKey": "SPACE KEY",
-				"Or": "- - - - - - OR - - - - - - ",
-				"ClickCircle1": "CLICK",
-				"ClickCircle2": "CIRCLE",
-				"ToPickupDrop": "TO PICKUP/DROP",
-				"ThanksForSurveillance1": "THANK YOU FOR",
-				"ThanksForSurveillance2": "PARTICIPATING",
-				"ThanksForSurveillance3": "IN YOUR OWN",
-				"ThanksForSurveillance4": "SURVEILLANCE"
+				"MovingIEyes": "BEWEGENDE °EYES",
+				"SpaceKey": "LEERTASTE",
+				"Or": " - - - - - ODER - - - - - -",
+				"ClickCircle1": "KREISE",
+				"ClickCircle2": "ANKLICKEN",
+				"ToPickupDrop": "ZUM AUFHEBEN/FALLENLASSEN",
+				"ThanksForSurveillance1": "DANKE, DASS DU",
+				"ThanksForSurveillance2": "AN DER EIGENEN",
+				"ThanksForSurveillance3": "ÜBERWACHUNG",
+				"ThanksForSurveillance4": "TEILNIMMST"
 			},
 			"tut_power": {
-				"ActiveSlidewalks1": "SOME °EYES WILL ACTIVATE SOME SLIDEWALKS",
-				"ActiveSlidewalks2": "WILL ACTIVATE",
-				"ActiveSlidewalks3": "Only when they see",
-				"ActiveSlidewalks4": "SOMEBODY"
+				"ActiveSlidewalks1": "EINIGE °EYES AKTIVIEREN FAHRSTEIGE",
+				"ActiveSlidewalks2": "AKTIVIEREN",
+				"ActiveSlidewalks3": "NUR WENN SIE JEMANDEN",
+				"ActiveSlidewalks4": "SEHEN"
 			},
 			"tut_reminder": {
-				"StayInSight": "STAY IN SIGHT"
+				"StayInSight": "BLEIB IN SICHT"
 			},
 			"tut_slidewalk": {
-				"SLIDEWALK": "SLIDEWALK",
-				"AvoidUsingLegs": "A REVOLUTIONARY NEW WAY TO AVOID USING YOUR LEGS"
+				"SLIDEWALK": "FAHRSTEIG",
+				"AvoidUsingLegs": "EINE ERFINDUNG UM DIE BEINE NICHT ZU BENUTZEN"
 			},
 			"tut_slow": {
-				"SlowDown": "SLOW DOWN",
-				"ForNarrowPaths": "For narrow paths",
-				"ShiftKey": "SHIFT KEY",
-				"OR": "- - - - - - - OR - - - - - - -",
-				"MoveMouseSlowly1": "MOVE MOUSE",
-				"MoveMouseSlowly2": "SLOWLY"
+				"SlowDown": "VERLANGSAME",
+				"ForNarrowPaths": "für enge Wege",
+				"ShiftKey": "UMSCHALTTASTE",
+				"OR": "- - - - - - ODER - - - - - -",
+				"MoveMouseSlowly1": "MAUS LANGSAM",
+				"MoveMouseSlowly2": "BEWEGEN"
 			},
 			"tut_walk": {
-				"Walking": "WALKING",
-				"Arrow": "ARROW",
-				"Click": "CLICK",
-				"OR": "- - - - - OR - - - - - - ",
-				"LowTechTransportation1": "A FORM OF LOW-TECH",
-				"LowTechTransportation2": "TRANSPORTATION"
+				"Walking": "GEHEN",
+				"Arrow": "PFEIL",
+				"Click": "KLICK",
+				"OR": "- - - - ODER - - - - - -",
+				"LowTechTransportation1": "EINE EINFACHE FORM VON",
+				"LowTechTransportation2": "SELBST-TRANSPORT"
 			},
 			"unsecret_ballot": {
-				"WrongChoice1": "WRONG CHOICE",
-				"WrongChoice2": "WRONG CHOICE",
-				"GARDNER": "GARDNER",
-				"WrongChoice3": "WRONG CHOICE",
-				"WrongChoice4": "WRONG CHOICE",
-				"RemberCantHide1": "REMEMBER...",
-				"RemberCantHide2": "REMEMBER... You CAN'T HIDE",
-				"RemberCantHide3": "YOUR UN-SECRET BALLOT. SO",
-				"RememberVoteWinner1": "REMEMBER...",
-				"RememberVoteWinner2": "REMEMBER... TO VOTE FOR",
-				"RememberVoteWinner3": "THE WINNER"
+				"WrongChoice1": "FALSCHE WAHL",
+				"WrongChoice2": "FALSCHE WAHL",
+				"GARDNER": "GÄRTNER",
+				"WrongChoice3": "FALSCHE WAHL",
+				"WrongChoice4": "FALSCHE WAHL",
+				"RemberCantHide1": "BEACHTE...",
+				"RemberCantHide2": "BEACHTE... DU KANNST DEN WAHL-",
+				"RemberCantHide3": "ZETTEL NICHT VERSTECKEN. DAHER",
+				"RememberVoteWinner1": "BEACHTE...",
+				"RememberVoteWinner2": "BEACHTE... DASS DU RICHTIG",
+				"RememberVoteWinner3": "WÄHLST"
 			}
 		}
 	}
