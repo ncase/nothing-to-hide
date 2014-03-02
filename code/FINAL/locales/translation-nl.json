@@ -155,10 +155,10 @@
 		"general":{
 			"controls": {
 				"scrolldown": "SCROLL NAAR BENEDEN",
-				"mouse": "MUIS",
+				"mouse": "¬¬MUIS¬¬",
 				"keys": "TOETSENBORD"
 			},
-			"or": "OF",
+			"or": "¬OF¬",
 			"tweet": "TWEET",
 			"share": "SHARE"
 			

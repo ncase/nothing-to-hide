@@ -154,7 +154,7 @@
 		"general":{
 			"controls": {
 				"scrolldown": "SCROLL RUNTER",
-				"mouse": "MAUS",
+				"mouse": "¬MAUS¬",
 				"keys": "PFEILTASTEN"
 			},
 			"or": "ODER",
@@ -164,7 +164,7 @@
 		},
 		"propaganda": {
 			"dont_help_hiders": {
-				"donthelp1": "HILF NICHT",
+				"donthelp1": "HILF KEINEN",
 				"donthelp2": "VERBERGERN",
 				"fourthAmendment1": "aber unsere",
 				"fourthAmendment2": "Grundrechte",

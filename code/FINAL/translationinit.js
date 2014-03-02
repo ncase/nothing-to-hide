@@ -12,8 +12,20 @@ function translationinit(onInitAction){
 				//set to true to turn on caching production use
 				useLocalStorage: false, 
 				//set to false for production use
-				debug: true
+				debug: true,
+				//set fallback language to English
+				fallbackLng: 'en'
 			}, onInitAction);
+}
+
+/**
+ * Shortcut function to get just the language code
+ * Necessary for loading graphics at the moment
+ * Will change probably again if we start to use country specific translations
+ */
+function getLC(){
+	var lang = i18n.lng();
+	return lang.substring(0,2);
 }
 
 /**
