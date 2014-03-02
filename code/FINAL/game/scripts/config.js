@@ -28,7 +28,7 @@ Asset.init({
 		propaganda_smile:'assets/propaganda/smile.svg',
 		propaganda_puzzle_psa:'assets/propaganda/puzzle_psa.svg',
 		propaganda_puzzle_mock:'assets/propaganda/puzzle_mock.svg',
-		propaganda_dont_help_hiders:'assets/propaganda/dont_help_hiders.svg',
+		propaganda_dont_help_hiders:'assets/propaganda/'+getLC()+'/dont_help_hiders.svg',
 		propaganda_pickup_gardner:'assets/propaganda/pickup_gardner.svg',
 		propaganda_nobody_the_wall:'assets/propaganda/nobody_the_wall.svg',
 		propaganda_nobody_the_wall_2:'assets/propaganda/nobody_the_wall_2.svg',

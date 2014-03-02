@@ -173,7 +173,7 @@
 				"fourthAmendment3": "protects"
 			},
 			"error": {
-				"ERROR": "ERROR",
+				"ERROR": "ERROR:",
 				"AudienceNotFound1": "`TARGETED_AUDIENCE`",
 				"AudienceNotFound2": "CANNOT BE FOUND",
 				"MeantForNobody1": "&gt; this wall is meant",

@@ -80,7 +80,7 @@
        data-i18n="images.propaganda.error.ERROR"
        textLength="120"
 	   lengthAdjust="spacingAndGlyphs"
-       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Monospace;-inkscape-font-specification:Monospace">ERROR:</tspan></text>
+       style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ff0000;font-family:Monospace;-inkscape-font-specification:Monospace">FEHLER:</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -97,7 +97,7 @@
            data-i18n="images.propaganda.error.AudienceNotFound1"
        textLength="205"
 	   lengthAdjust="spacingAndGlyphs"
-       id="tspan3054-1">`TARGETED_AUDIENCE`</tspan><tspan
+       id="tspan3054-1">`KUNDENZIELGRUPPE`</tspan><tspan
        sodipodi:role="line"
        x="69.516968"
        y="84.001373"
@@ -136,7 +136,7 @@
        data-i18n="images.propaganda.error.MeantForNobody1"
        textLength="200"
 	   lengthAdjust="spacingAndGlyphs"
-       style="font-size:15px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;font-family:Monospace;-inkscape-font-specification:Monospace">&gt; this wall is meant</tspan><tspan
+       style="font-size:15px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;font-family:Monospace;-inkscape-font-specification:Monospace">&gt; diese Pinwand ist für</tspan><tspan
        sodipodi:role="line"
        x="71.974213"
        y="132.14862"
@@ -158,6 +158,6 @@
            data-i18n="images.propaganda.error.MeantForNobody2"
        textLength="120"
 	   lengthAdjust="spacingAndGlyphs"
-       id="tspan3054-14">&gt; for NOBODY</tspan></text>
+       id="tspan3054-14">&gt; NIEMAND gedacht</tspan></text>
 
 </svg>

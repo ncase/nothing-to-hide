@@ -173,7 +173,7 @@
 				"fourthAmendment3": "beschermd"
 			},
 			"error": {
-				"ERROR": "ERROR",
+				"ERROR": "ERROR:",
 				"AudienceNotFound1": "`GERICHTE_DOELGROEP`",
 				"AudienceNotFound2": "NIET GEVONDEN",
 				"MeantForNobody1": "&gt; deze muur is bedoeld",

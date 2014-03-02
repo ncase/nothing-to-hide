@@ -11,8 +11,8 @@ define("FONTBASE64", "d09GRgABAAAAACWcABAAAAAASkQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 $filelist=array(
 	"FINAL/cutscene/pics/establishing_fg.svg",
 	"FINAL/menu/assets/propaganda/title.svg", 
-	"FINAL/game/assets/propaganda/dont_help_hiders.svg",/*
-	"FINAL/game/assets/propaganda/error.svg",
+	"FINAL/game/assets/propaganda/dont_help_hiders.svg",
+	"FINAL/game/assets/propaganda/error.svg",/*
 	"FINAL/game/assets/propaganda/intro_pics.svg",
 	"FINAL/game/assets/propaganda/needs_dummy.svg",
 	"FINAL/game/assets/propaganda/nobody_messes.svg",

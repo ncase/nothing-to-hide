@@ -172,11 +172,11 @@
 				"fourthAmendment3": "schützen"
 			},
 			"error": {
-				"ERROR": "FEHLER",
-				"AudienceNotFound1": "`ZIELGRUPPE`",
+				"ERROR": "FEHLER:",
+				"AudienceNotFound1": "`KUNDENZIELGRUPPE`",
 				"AudienceNotFound2": "CANNOT BE FOUND",
-				"MeantForNobody1": "&gt; diese Pinwand ist",
-				"MeantForNobody2": "&gt; für NOBODY gedacht"
+				"MeantForNobody1": "&gt; diese Pinwand ist für",
+				"MeantForNobody2": "&gt; NIEMAND gedacht"
 			},
 			"intro_pics": {
 				"PoppyGardner": "Pia Gärtner",
