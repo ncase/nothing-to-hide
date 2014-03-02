@@ -153,33 +153,33 @@
 	"images": {
 		"general":{
 			"controls": {
-				"scrolldown": "SCROLL DOWN",
-				"mouse": "MOUSE",
-				"keys": "KEYS"
+				"scrolldown": "SCROLL RUNTER",
+				"mouse": "MAUS",
+				"keys": "PFEILTASTEN"
 			},
-			"or": "OR",
-			"tweet": "TWEET",
-			"share": "SHARE"
+			"or": "ODER",
+			"tweet": "ZWITSCHERN",
+			"share": "TEILEN"
 			
 		},
 		"propaganda": {
 			"dont_help_hiders": {
-				"donthelp1": "DON'T HELP",
-				"donthelp2": "HIDERS",
-				"fourthAmendment1": "but the fourth",
-				"fourthAmendment2": "amendment",
-				"fourthAmendment3": "protects"
+				"donthelp1": "HILF NICHT",
+				"donthelp2": "VERBERGERN",
+				"fourthAmendment1": "aber unsere",
+				"fourthAmendment2": "Grundrechte",
+				"fourthAmendment3": "schützen"
 			},
 			"error.svg": {
-				"ERROR": "ERROR",
-				"AudienceNotFound1": "`TARGETED_AUDIENCE`",
+				"ERROR": "FEHLER",
+				"AudienceNotFound1": "`ZIELGRUPPE`",
 				"AudienceNotFound2": "CANNOT BE FOUND",
-				"MeantForNobody1": "&gt; this wall is meant",
-				"MeantForNobody2": "&gt; for NOBODY"
+				"MeantForNobody1": "&gt; diese Pinwand ist",
+				"MeantForNobody2": "&gt; für NOBODY gedacht"
 			},
 			"intro_pics.svg": {
-				"PoppyGardner": "Poppy Gardner",
-				"posted4DaysAgo": "posted 4 days ago",
+				"PoppyGardner": "Pia Gärtner",
+				"posted4DaysAgo": "geschrieben vor 4 Tagen",
 				"Message1": "Thank you for 4 billion followers! I'm so",
 				"Message2": "happy! Vote for my dad in the un-secret",
 				"Message3": "ballot! So happy. Haha! Ha. ha..."

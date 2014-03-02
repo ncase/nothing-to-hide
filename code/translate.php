@@ -9,7 +9,7 @@ define("FONTBASE64", "d09GRgABAAAAACWcABAAAAAASmwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
 $filelist=array(
-	"FINAL/cutscene/pics/establishing_fg.svg",
+	"FINAL/cutscene/pics/establishing_fg.svg" /*,
 	"FINAL/game/assets/propaganda/dont_help_hiders.svg",
 	"FINAL/game/assets/propaganda/error.svg",
 	"FINAL/game/assets/propaganda/intro_pics.svg",
@@ -36,21 +36,25 @@ $filelist=array(
 	"FINAL/game/assets/propaganda/unsecret_ballot.svg",
 	"FINAL/game/img/share_big.svg",
 	"FINAL/menu/assets/propaganda/title.svg",
-	"FINAL/menu/img/share_big.svg"
+	"FINAL/menu/img/share_big.svg"*/
 );
-
-//TODO replace by file list which is read from "locales" directory instead of a static list
-$langList=array("en","de","ru");
 
 $action = "";
 if (count($argv)>1){
 	$action = $argv[1];
 }
 
+//TODO replace by file list which is read from "locales" directory instead of a static list
+$langList=array("en","de","ru");
+if 	($action==="doTranslate"||$action==="")
+	$languages = getLanguages($langList);
+
+
 foreach ($filelist as $file){
 	switch ($action){
 		case "updateFont":
 			updateFont($file);
+			//TODO probably also add doTranslate, so all translation get updated by itself
 			break;
 		case "extractStrings":
 			extractStrings($file);
@@ -58,7 +62,7 @@ foreach ($filelist as $file){
 		case "doTranslate":
 		case "":
 		case null:
-			doTranslate($file,$langList);
+			doTranslate($file,$langList,$languages);
 			break;
 		case "?": case "help": 
 			printHelp();
@@ -70,6 +74,19 @@ foreach ($filelist as $file){
 	}
 }
 
+/**
+ * returns an array of all languages from the JSON files, given an array of language codes
+ */
+function getLanguages($langList){
+	$languages = array();
+	foreach ($langList as $lang){
+		$json=file_get_contents ("FINAL/locales/translation-$lang.json");
+		//we want an associative array, thus second parameter is true
+		$languages[$lang] = json_decode($json,true);
+		//print_r($obj);
+	}
+	return $languages;
+}
 
 
 function explodeFile($file){
@@ -126,7 +143,55 @@ function printHelp(){
 	- translate text in that DOM tag from locales files, similar to i18next for all translation files
 	- create files in subdirectories of the actual SVG (e.g. "FINAL/cutscene/pics/establishing_fg.svg" => "FINAL/cutscene/pics/XX/establishing_fg.svg" where XX is "en", "de", "ru", etc.
 * */
-function doTranslate($file){
+function doTranslate($file,$langList,$languages){
+	echo "\n\n=============================\n";
+	echo "Translating $file\n";
+	echo "=============================\n";
+	$filenamepart=explodeFile($file);
+	$buffer=file_get_contents($file);
+	//loop through the languages
+	foreach ($langList as $key){
+		echo "-----------------------------\n";
+		echo "Language $key\n";
+		echo "-----------------------------\n";
+		$lang = $languages[$key];
+		$posR=0;
+		$pos=0;
+		//$notfirst=false;
+		$translated = "";
+		while (true){//$posR!==false){
+			//echo $posR;
+			$pos1 = getNextDataI18N($buffer,$posR+1);
+			//echo "text $pos\n";
+			if ($pos1==false) {break;}
+			$pos2 = getNextQuote($buffer,$pos1+1);
+			//echo "tspan $pos\n";
+			//if ($pos2==false) {break;}
+			$name = getTextBetweenQuotes($buffer,$pos1,$pos2);
+			$replaceText = getI18nText($name,$lang);
+echo "$name=$replaceText\n";			
+			//getDataI18N = 
+			
+			$posL = getNextGt($buffer,$pos2);
+			//echo "gt $posL\n";
+			$translated .= getTextBeforeGt($buffer,$posR-1,$posL+1);
+			$posR = getNextLt($buffer,$posL);
+			//echo "lt $posR\n";
+			$text = $replaceText;//getTextBetweenGtAndLt($buffer,$posL,$posR);
+
+			$translated .= $text;
+			$pos1 = $posR;
+			
+			//if ($notfirst) { echo ","; $notfirst=true;}
+			//echo $text."-".$pos."\n";
+			//echo "    '$text': '$text'\n";
+			
+		}
+		$translated .= substr($buffer,$posR,-1);
+		$newFile=$filenamepart[0]."$key/".$filenamepart[1];
+		file_put_contents($newFile,$translated);
+		
+	}
 	/*
 	$filenamepart=explodeFile($file);
 	echo "'".$filenamepart[1]."': {\n";
@@ -159,51 +224,21 @@ function doTranslate($file){
 	
 }
 
-//TODO likely remove
-function doTranslateOLD($file,$langList){
-	$filenamepart=explodeFile($file);
-	echo $filenamepart[0]."\n";
-	echo $filenamepart[1]."\n";
-	//echo "\na\n";
-	 //$handle= @fopen( "./../"+$file , "r");
-/*	 $handle= @fopen( $file , "r");
-	// $handle = @fopen("/tmp/inputfile.txt", "r");
-	if ($handle) {
-		$pos=0;
-		$buffer="";
-    while (($buffer = fgets($handle, 4096)) !== false) {
-        //echo $buffer;
-        * */
-        $buffer=file_get_contents ($file);
-        //echo $buffer;
-        $pos=0;
-        while ($pos!==false){
-        $pos = getNextText($buffer,$pos);
-        //echo "text $pos\n";
-        if ($pos==false) {break;}
-        $pos = getNextTSpan($buffer,$pos);
-        //echo "tspan $pos\n";
-        if ($pos==false) {break;}
-        $posL = getNextGt($buffer,$pos);
-        //echo "gt $posL\n";
-        $posR = getNextLt($buffer,$posL);
-        //echo "lt $posR\n";
-        $text = getTextBetweenGtAndLt($buffer,$posL,$posR);
-        $pos = $posR;
-        
-        //echo $text."-".$pos."\n";
-        echo "$text\n";
-    }
-    /*if (!feof($handle)) {
-        echo "Error: unexpected fgets() fail\n";
-    }
-    fclose($handle);
-	} else {
-		echo "could not open ../".$file;
-		echo getcwd();
-	}*/
+/**
+ * Gets the corresponding text from a string like "key1.key2.key3";
+ */
+function getI18nText($name,$lang) {
+	//explode into parts
+	$nameparts=explode(".",$name);
+	for ($i=0;$i<count($nameparts);$i++){
+		$name = $nameparts[$i];
+		//echo "$name.";
+		//print_r($lang);
+		$lang = $lang[$name];
+	}
+	//echo "== $lang\n";
+	return $lang;
 }
-
 
 //TODO
 function updateFont($file){
@@ -212,8 +247,15 @@ function updateFont($file){
 	//STYLESTRING
 }
 
+function getNextDataI18N($buffer,$pos){
+	$a = strpos($buffer,'data-i18n="',$pos);
+	if ($a!==false) {$a+=strlen('data-i18n="')-1;}
+	return $a;
+}
 
-
+function getNextQuote($buffer,$pos){
+	return strpos($buffer,'"',$pos);
+}
 
 function getNextText($buffer, $pos){
 	return strpos($buffer,"<text",$pos);
@@ -233,4 +275,14 @@ function getNextGt($buffer,$pos){
 
 function getTextBetweenGtAndLt($buffer,$pos1,$pos2){
 	return substr($buffer, $pos1+1, $pos2-$pos1-1);
+}
+
+//just an alias of function above
+function getTextBeforeGt($buffer,$pos1,$pos2){
+	return getTextBetweenGtAndLt($buffer,$pos1,$pos2);
+}
+
+//just an alias of function above
+function getTextBetweenQuotes($buffer,$pos1,$pos2){
+	return getTextBetweenGtAndLt($buffer,$pos1,$pos2);
 }
