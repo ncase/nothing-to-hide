@@ -65,15 +65,17 @@
      inkscape:current-layer="svg2" />
   <text
      xml:space="preserve"
-     style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:85.00000237999999797%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-     x="105.93333"
+     style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:85.00000238%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+     x="107.93333"
      y="394.98376"
      id="text3300-3"
+     textLength="140"
+     lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="85.000002%"><tspan
        sodipodi:role="line"
-       x="78.511452"
+       x="107.93333"
        y="394.98376"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:85.00000237999999797%;text-anchor:middle;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:85.00000238%;text-anchor:middle;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan3325"
        data-i18n="images.general.controls.keys">KEYS</tspan></text>
   <text
@@ -91,28 +93,32 @@
        data-i18n="images.general.or">OR</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:85.00000237999999797%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-     x="276.65936"
+     style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:85.00000238%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
+     x="288.65936"
      y="392.93655"
      id="text3300-3-0"
+     textLength="140"
+     lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="85.000002%"><tspan
        sodipodi:role="line"
-       x="241.28827"
+       x="288.65936"
        y="392.93655"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:85.00000237999999797%;text-anchor:middle;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:85.00000238%;text-anchor:middle;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan3325-8"
        data-i18n="images.general.controls.mouse">MOUSE</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;text-align:start;line-height:85.00000238%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-     x="53.835327"
+     x="45.292847"
      y="180.71008"
      id="text3300-3-3"
+     textLength="288"
+     lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="85.000002%"><tspan
        sodipodi:role="line"
-       x="53.835327"
+       x="45.292847"
        y="180.71008"
-       style="font-size:75px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:85.00000238%;letter-spacing:-0.5px;text-anchor:start;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
+       style="font-size:75px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;line-height:85.00000238%;letter-spacing:0px;text-anchor:start;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan3325-6"
        data-i18n="images.general.controls.scrolldown">SCROLL DOWN</tspan></text>
   <image
