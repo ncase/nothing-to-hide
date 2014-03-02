@@ -38,22 +38,38 @@ $filelist=array(
 	"FINAL/menu/assets/propaganda/title.svg",
 	"FINAL/menu/img/share_big.svg"
 );
-$langlist=array("en","de","ru");
 
-$doFont = false;
+//TODO replace by file list which is read from "locales" directory instead of a static list
+$langList=array("en","de","ru");
+
+$action = "";
+if (count($argv)>1){
+	$action = $argv[1];
+}
 
 foreach ($filelist as $file){
-
-	/*echo $filename;
-	echo $filepath;*/
-	if ($doFont){
-		doFont($file);
-	} else { 
-		extractStrings($file);
-	}/* else { 
-		doTranslate($file);
-	}*/
+	switch ($action){
+		case "updateFont":
+			updateFont($file);
+			break;
+		case "extractStrings":
+			extractStrings($file);
+			break;
+		case "doTranslate":
+		case "":
+		case null:
+			doTranslate($file,$langList);
+			break;
+		case "?": case "help": 
+			printHelp();
+			break 2;
+		default:
+			echo "You entered an invalid command\n\n";
+			printHelp();
+			break 2;
+	}
 }
+
 
 
 function explodeFile($file){
@@ -66,12 +82,11 @@ function explodeFile($file){
 function extractStrings($file){
 	$filenamepart=explodeFile($file);
 	echo "'".$filenamepart[1]."': {\n";
-	//echo $filenamepart[1]."\n";
-        $buffer=file_get_contents ($file);
-        //echo $buffer;
-        $pos=0;
-        $notfirst=false;
-        while ($pos!==false){
+    $buffer=file_get_contents ($file);
+	//echo $buffer;
+    $pos=0;
+    $notfirst=false;
+    while ($pos!==false){
         $pos = getNextText($buffer,$pos);
         //echo "text $pos\n";
         if ($pos==false) {break;}
@@ -89,20 +104,63 @@ function extractStrings($file){
         //echo $text."-".$pos."\n";
         echo "    '$text': '$text'\n";
         
-    }
-    echo "},\n";
-    /*if (!feof($handle)) {
-        echo "Error: unexpected fgets() fail\n";
-    }
-    fclose($handle);
-	} else {
-		echo "could not open ../".$file;
-		echo getcwd();
-	}*/
+   }
+   echo "},\n";
 }
 
+function printHelp(){
+	global $argv;
+	echo "Usage: php ".$argv[0]." <action>\n";
+	echo "<action> can be: \n";
+	echo "* (empty) or 'doTranslate': translates all images given the current language files\n";
+	echo "* 'updateFont': updates all SVGs with Ostrich-Sans text to use a different BASE64 code after changing it in the source of this script\n";
+	echo "* 'extractStrings': tries to extract all strings from the SVGs, printing them as JSON code. Experimental! Don't rely solely on it.\n";
+}
 
+//TODO to be implemented
+//TODO add to all SVGs this attributes: data-i18n, textLength (visually from Inkscape), lengthAdjust="spacingAndGlyphs"
+//TODO add smart loading of ressources in code of config.js files: load from subdirectories, depending on selected language
+/* general approach: 
+	- read in translation files from locales
+	- find text occurence of data-i18n attribute in DOM tags
+	- translate text in that DOM tag from locales files, similar to i18next for all translation files
+	- create files in subdirectories of the actual SVG (e.g. "FINAL/cutscene/pics/establishing_fg.svg" => "FINAL/cutscene/pics/XX/establishing_fg.svg" where XX is "en", "de", "ru", etc.
+* */
 function doTranslate($file){
+	/*
+	$filenamepart=explodeFile($file);
+	echo "'".$filenamepart[1]."': {\n";
+    $buffer=file_get_contents ($file);
+	//echo $buffer;
+    $pos=0;
+    $notfirst=false;
+    while ($pos!==false){
+        $pos = getNextText($buffer,$pos);
+        //echo "text $pos\n";
+        if ($pos==false) {break;}
+        $pos = getNextTSpan($buffer,$pos);
+        //echo "tspan $pos\n";
+        if ($pos==false) {break;}
+        $posL = getNextGt($buffer,$pos);
+        //echo "gt $posL\n";
+        $posR = getNextLt($buffer,$posL);
+        //echo "lt $posR\n";
+        $text = getTextBetweenGtAndLt($buffer,$posL,$posR);
+        $pos = $posR;
+        
+        if ($notfirst) { echo ","; $notfirst=true;}
+        //echo $text."-".$pos."\n";
+        echo "    '$text': '$text'\n";
+        
+   }
+   echo "},\n";
+   * //fputs stuff here for each language
+	*/
+	
+}
+
+//TODO likely remove
+function doTranslateOLD($file,$langList){
 	$filenamepart=explodeFile($file);
 	echo $filenamepart[0]."\n";
 	echo $filenamepart[1]."\n";
@@ -146,6 +204,17 @@ function doTranslate($file){
 	}*/
 }
 
+
+//TODO
+function updateFont($file){
+	$filenamepart=explodeFile($file);
+	
+	//STYLESTRING
+}
+
+
+
+
 function getNextText($buffer, $pos){
 	return strpos($buffer,"<text",$pos);
 }
@@ -164,11 +233,4 @@ function getNextGt($buffer,$pos){
 
 function getTextBetweenGtAndLt($buffer,$pos1,$pos2){
 	return substr($buffer, $pos1+1, $pos2-$pos1-1);
-}
-
-
-function doFont($file){
-		$filenamepart=explodeFile($file);
-
-	//STYLESTRING
 }
