@@ -9,10 +9,21 @@ Yup, *zero* rights reserved.
 
 ![](http://i.imgur.com/zRonTm3.png)
 
+##[We're crowdfunding this thing!](https://back.nothingtohide.cc) (10 days left)
+
+10% of all donations go to EFF, Mozilla, Demand Progress, Creative Commons, and Freedom of the Press Foundation.
+
+###What's all this about, then?
+
+Nothing To Hide is an "anti-stealth" game where you are forced to help in your own surveillance.
+The puzzles are challenging but fair, with depth in a deceptively simple mechanic, similar to games such as Braid and Portal.
+It's a story of a teenage girl riddled with insecurity in a world obsessed with security.
+She's never had a private thought. If you can't hide who you are... you have to hide who you *really* are. 
+
 ###Links
 
-* [The Demo (HTML5)](http://demo.nothingtohide.cc/)
-* [Crowdfunding Campaign](http://back.nothingtohide.cc/)
+* [The Browser Demo (HTML5)](http://demo.nothingtohide.cc/)
+* [Website / Crowdfunding Campaign](http://back.nothingtohide.cc/)
 * [Nothing To Say Newsletter](http://tinyletter.com/nothingtohide/letters)
 
 ###Credits
