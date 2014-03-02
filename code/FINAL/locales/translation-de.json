@@ -179,11 +179,10 @@
 				"MeantForNobody2": "&gt; NIEMAND gedacht"
 			},
 			"intro_pics": {
-				"PoppyGardner": "Pia Gärtner",
 				"posted4DaysAgo": "geschrieben vor 4 Tagen",
-				"Message1": "Thank you for 4 billion followers! I'm so",
-				"Message2": "happy! Vote for my dad in the un-secret",
-				"Message3": "ballot! So happy. Haha! Ha. ha..."
+				"Message1": "Danke ihr 4 Milliarden Follower! Ich bin so",
+				"Message2": "glücklich! Wähl meinen Papi in der nicht-",
+				"Message3": "geheimen Wahl! So glücklich. Haha!Ha.ha."
 			},
 			"needs_dummy": {
 				"YesMySignal1": "JA, MEIN SIGNAL",
