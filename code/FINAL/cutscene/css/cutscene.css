@@ -23,7 +23,7 @@ body {
 #header_content {
 	width:800px;
 	height:40px;
-	background: url(../img/header.png);
+	/**background: url(../img/header.png);*/
 	margin:20px auto;
 }
 

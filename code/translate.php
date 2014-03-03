@@ -11,6 +11,7 @@ define("FONTBASE64", "d09GRgABAAAAACWcABAAAAAASkQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 //TODO add to all SVG files these attributes: data-i18n, textLength (visually from Inkscape), lengthAdjust="spacingAndGlyphs"
 //TODO add smart loading of ressources in code of all config.js files: load from subdirectories, depending on selected language
 $filelist=array(
+	"FINAL/cutscene/img/header.svg",
 	"FINAL/cutscene/pics/establishing_fg.svg",
 	"FINAL/menu/assets/propaganda/title.svg", 
 	"FINAL/game/assets/propaganda/dont_help_hiders.svg",

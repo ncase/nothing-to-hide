@@ -7,13 +7,14 @@
 		<!--i18next for translation to other languages -->
 		<script src="../i18next.min.js"></script>
 		<script src="../translationinit.js"></script>
+		<link href='css/cutscene.css' rel='stylesheet' type='text/css'>
 		<script>
 			translationinit( function() {
 				//add translation code here to be executed when initializing webpage
 				//window.onload = onloadFunc();
+				$("#header_content").css("background", "url('img/"+getLC()+"/header.svg')");
 			});
 		</script>
-		<link href='css/cutscene.css' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 
