@@ -68,10 +68,10 @@
   <rect
      style="fill:#ffffff;fill-opacity:1;stroke:none"
      id="rect3250-5"
-     width="199.25642"
-     height="50.211864"
-     x="0.84121794"
-     y="24.258478" />
+     width="200"
+     height="50"
+     x="0"
+     y="24" />
   <rect
      style="fill:#000000;fill-opacity:1;stroke:none"
      id="rect3250"
@@ -82,36 +82,39 @@
   <text
      xml:space="preserve"
      style="font-size:38.72517776px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="-0.19442439"
-     y="67.048477"
+     x="5"
+     y="67"
      id="text3117"
+		textLength="200"  lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="125%"
      transform="scale(0.96812947,1.0329197)"><tspan
        sodipodi:role="line"
        id="tspan3119"
-       x="-0.19442439"
-       y="67.048477"
+       x="5"
+       y="67"
+		textLength="200"  lengthAdjust="spacingAndGlyphs"
                   data-i18n="images.propaganda.tut_slow.SlowDown"
-
        style="font-size:58.08776855px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">
        SLOW DOWN</tspan></text>
 
   <text
      xml:space="preserve"
      style="font-size:38.56130219px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="10.687605"
-     y="112.81799"
+     x="5"
+     y="112"
      id="text3117-8"
+     		textLength="200"  lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="125%"
      transform="scale(0.96403257,1.0373094)"><tspan
        sodipodi:role="line"
        id="tspan3119-0"
-       x="10.687605"
-       y="112.81799"
-                  data-i18n="images.propaganda.tut_slow.ForNarrowPaths"
+       x="5"
+       y="112"
+       		textLength="200"  lengthAdjust="spacingAndGlyphs"
+                         data-i18n="images.propaganda.tut_slow.ForNarrowPaths"
 
        style="font-size:31.81307411px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">
-       FOr narrow PATHS</tspan></text>
+       For narrow PATHS</tspan></text>
   <g
      id="g3246">
     <rect
@@ -132,15 +135,17 @@
   <text
      xml:space="preserve"
      style="font-size:37.91693497px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="105.68394"
-     y="225.9169"
+     x="106"
+     y="226"
      id="text3117-8-1"
+     textLength="100"  lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="125%"
      transform="scale(0.94792339,1.0549376)"><tspan
        sodipodi:role="line"
        id="tspan3119-0-9"
-       x="105.68394"
-       y="225.9169"
+       x="106"
+       y="226"
+       textLength="100"  lengthAdjust="spacingAndGlyphs"
                   data-i18n="images.propaganda.tut_slow.ShiftKey"
 
        style="font-size:30.33354759px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">
@@ -148,14 +153,18 @@
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#5a636e;fill-opacity:1;stroke:none;font-family:Sans"
-     x="-19.797312"
-     y="286.6897"
+     x="-20"
+     y="286"
      id="text3117-8-1-6"
+                 textLength="240"  lengthAdjust="spacingAndGlyphs"
+
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3119-0-9-8"
-       x="-19.797312"
-       y="286.6897"
+       x="-20"
+       y="286"
+            textLength="240"  lengthAdjust="spacingAndGlyphs"
+
                   data-i18n="images.propaganda.tut_slow.OR"
 
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:-0.5px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">
@@ -163,30 +172,37 @@
   <text
      xml:space="preserve"
      style="font-size:39.032444px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="100.28281"
-     y="321.67886"
+     x="100"
+     y="322"
      id="text3117-8-1-9"
      sodipodi:linespacing="125%"
+            textLength="100"  lengthAdjust="spacingAndGlyphs"
+
      transform="scale(0.97581107,1.0247885)"><tspan
        sodipodi:role="line"
        id="tspan3119-0-9-3"
-       x="100.28281"
-       y="321.67886"
+       x="100"
+       y="322"
+              textLength="100"  lengthAdjust="spacingAndGlyphs"
+
                   data-i18n="images.propaganda.tut_slow.MoveMouseSlowly1"
        style="font-size:24.39527702px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">
        MOVE MOUSE</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:39.15684891px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="100.3679"
-     y="352.33148"
+     x="100"
+     y="352"
      id="text3117-8-1-9-7"
      sodipodi:linespacing="125%"
+            textLength="100"  lengthAdjust="spacingAndGlyphs"
+
      transform="scale(0.97892127,1.0215326)"><tspan
        sodipodi:role="line"
        id="tspan3119-0-9-3-3"
-       x="100.3679"
-       y="352.33148"
+       x="100"
+       y="352"
+              textLength="100"  lengthAdjust="spacingAndGlyphs"
                   data-i18n="images.propaganda.tut_slow.MoveMouseSlowly2"
        style="font-size:36.22008514px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">
        SLOWLY</tspan></text>

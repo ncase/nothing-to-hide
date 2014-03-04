@@ -297,10 +297,11 @@
 				"ThanksForSurveillance4": "SURVEILLANCE"
 			},
 			"tut_power": {
-				"ActiveSlidewalks1": "SOME °EYES WILL ACTIVATE SOME SLIDEWALKS",
+				"ActiveSlidewalks1": "SOME °EYES",
 				"ActiveSlidewalks2": "WILL ACTIVATE",
-				"ActiveSlidewalks3": "Only when they see",
-				"ActiveSlidewalks4": "SOMEBODY"
+				"ActiveSlidewalks3": "SOME SLIDEWALKS",
+				"ActiveSlidewalks4": "Only when they see",
+				"ActiveSlidewalks5": "SOMEBODY"
 			},
 			"tut_reminder": {
 				"StayInSight": "STAY IN SIGHT"
@@ -335,10 +336,10 @@
 				"WrongChoice3": "WRONG CHOICE",
 				"WrongChoice4": "WRONG CHOICE",
 				"RemberCantHide1": "REMEMBER...",
-				"RemberCantHide2": "REMEMBER... You CAN'T HIDE",
+				"RemberCantHide2": "YOU CAN'T HIDE",
 				"RemberCantHide3": "YOUR UN-SECRET BALLOT. SO",
 				"RememberVoteWinner1": "REMEMBER...",
-				"RememberVoteWinner2": "REMEMBER... TO VOTE FOR",
+				"RememberVoteWinner2": "TO VOTE FOR",
 				"RememberVoteWinner3": "THE WINNER"
 			}
 		}

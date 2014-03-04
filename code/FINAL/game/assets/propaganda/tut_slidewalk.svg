@@ -73,30 +73,38 @@
   <text
      xml:space="preserve"
      style="font-size:47.39555359px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="8.0507584"
-     y="139.82668"
+     x="8"
+     y="140"
      id="text3300"
+                          textLength="360"
+	   lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="125%"
      transform="scale(1.1848888,0.84396103)"><tspan
        sodipodi:role="line"
        id="tspan3302"
-       x="8.0507584"
-       y="139.82668"
+       x="8"
+       y="140"
+                            textLength="360"
+	   lengthAdjust="spacingAndGlyphs"
                   data-i18n="images.propaganda.tut_slidewalk.SLIDEWALK"
        style="font-size:118.48888397px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ff0000;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">
        SLIDEWALK</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:41.00164795px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="9.77598"
-     y="155.554"
+     x="8"
+     y="155"
      id="text3300-8"
      sodipodi:linespacing="125%"
+                               textLength="420"
+	   lengthAdjust="spacingAndGlyphs"
      transform="scale(1.0250412,0.97557053)"><tspan
        sodipodi:role="line"
        id="tspan3302-4"
-       x="9.77598"
-       y="155.554"
+       x="8"
+       y="155"
+                                 textLength="420"
+	   lengthAdjust="spacingAndGlyphs"
                   data-i18n="images.propaganda.tut_slidewalk.AvoidUsingLegs"
        style="font-size:26.65107155px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">
        A REVOLUTIONARY NEW WAY TO AVOID USING YOUR LEGS</tspan></text>

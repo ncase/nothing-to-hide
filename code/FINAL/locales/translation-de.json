@@ -296,10 +296,11 @@
 				"ThanksForSurveillance4": "TEILNIMMST"
 			},
 			"tut_power": {
-				"ActiveSlidewalks1": "EINIGE °EYES AKTIVIEREN FAHRSTEIGE",
+				"ActiveSlidewalks1": "EINIGE °EYES",
 				"ActiveSlidewalks2": "AKTIVIEREN",
-				"ActiveSlidewalks3": "NUR WENN SIE JEMANDEN",
-				"ActiveSlidewalks4": "SEHEN"
+				"ActiveSlidewalks3": "EINIGE FAHRSTEIGE",
+				"ActiveSlidewalks4": "NUR WENN SIE JEMANDEN",
+				"ActiveSlidewalks5": "SEHEN"
 			},
 			"tut_reminder": {
 				"StayInSight": "BLEIB IN SICHT"
@@ -317,7 +318,7 @@
 				"MoveMouseSlowly2": "BEWEGEN"
 			},
 			"tut_walk": {
-				"Walking": "GEHEN",
+				"Walking": "LAUFEN",
 				"ArrowKeys1": "PFEIL-",
 				"ArrowKeys2": "TASTEN",
 				"OR": "- - - - ODER - - - - - -",
@@ -334,11 +335,11 @@
 				"WrongChoice3": "FALSCHE WAHL",
 				"WrongChoice4": "FALSCHE WAHL",
 				"RemberCantHide1": "BEACHTE...",
-				"RemberCantHide2": "BEACHTE... DU KANNST DEN WAHL-",
+				"RemberCantHide2": "DU KANNST DEN WAHL-",
 				"RemberCantHide3": "ZETTEL NICHT VERSTECKEN. DAHER",
 				"RememberVoteWinner1": "BEACHTE...",
-				"RememberVoteWinner2": "BEACHTE... DASS DU RICHTIG",
-				"RememberVoteWinner3": "WÄHLST"
+				"RememberVoteWinner2": "DASS DU DEN GE-",
+				"RememberVoteWinner3": "WINNER WÄHLST"
 			}
 		}
 	}

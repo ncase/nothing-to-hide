@@ -142,11 +142,15 @@
      x="455.99652"
      y="112.06953"
      id="text4457"
+       textLength="375"
+	   lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan4459"
        x="455.99652"
        y="112.06953"
+       textLength="375"
+	   lengthAdjust="spacingAndGlyphs"
        data-i18n="images.propaganda.questions.EspeciallyYours"
 
        style="font-size:70px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#cc2727;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">

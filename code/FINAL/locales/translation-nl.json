@@ -298,10 +298,11 @@
 				"ThanksForSurveillance4": "SURVEILLANCE"
 			},
 			"tut_power": {
-				"ActiveSlidewalks1": "SOMMIGE °OGEN ZULLEN ROLTRAPPEN ACTIVEREN",
-				"ActiveSlidewalks2": "ZULLEN ACTIVEREN",
-				"ActiveSlidewalks3": "Alleen bij het zien van",
-				"ActiveSlidewalks4": "IEMAND"
+				"ActiveSlidewalks1": "SOMMIGE °OGEN",
+				"ActiveSlidewalks2": "ZULLEN ROLTRAPPEN",
+				"ActiveSlidewalks3": "ACTIVEREN",
+				"ActiveSlidewalks4": "Alleen bij het zien van",
+				"ActiveSlidewalks5": "IEMAND"
 			},
 			"tut_reminder": {
 				"StayInSight": "BLIJF IN ZICHT"
@@ -336,10 +337,10 @@
 				"WrongChoice3": "FOUTE KEUZE",
 				"WrongChoice4": "FOUTE KEUZE",
 				"RemberCantHide1": "ONTHOU...",
-				"RemberCantHide2": "ONTHOU... You CAN'T HIDE",
-				"RemberCantHide3": "JOUW NIET GEHEIME STEMMEN. DUS",
+				"RemberCantHide2": "JOUW NIET",
+				"RemberCantHide3": "GEHEIME STEMMEN. DUS",
 				"RememberVoteWinner1": "ONTHOU...",
-				"RememberVoteWinner2": "ONTHOU... TE STEMMEN VOOR",
+				"RememberVoteWinner2": "TE STEMMEN VOOR",
 				"RememberVoteWinner3": "DE WINNAAR"
 			}
 		}

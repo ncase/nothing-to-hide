@@ -70,19 +70,13 @@
      height="73.150688"
      x="200.13701"
      y="30.136984" />
-  <text
-     xml:space="preserve"
-     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="205.06848"
-     y="88.904106"
-     id="text3300"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan3302"
-       x="205.06848"
-       y="88.904106"
-            data-i18n="images.propaganda.tut_walk.Walking"
-       style="font-size:75px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">WALKING</tspan></text>
+  <rect
+     style="fill:#363b43;fill-opacity:1;stroke:none"
+     id="rect3413"
+     width="188.63013"
+     height="69.452057"
+     x="207.53426"
+     y="113.56165" />
   <rect
      style="fill:#363b43;fill-opacity:1;stroke:none"
      id="rect3413-7-8"
@@ -92,22 +86,78 @@
      y="19.24658" />
   <text
      xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="205"
+     y="89"
+     id="text3300"
+            textLength="190"  lengthAdjust="spacingAndGlyphs"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3302"
+       x="205"
+       y="89"
+              textLength="190"  lengthAdjust="spacingAndGlyphs"
+            data-i18n="images.propaganda.tut_walk.Walking"
+       style="font-size:75px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">WALKING</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-size:36.53955078px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#5a636e;fill-opacity:1;stroke:none;font-family:Sans"
+     x="210"
+     y="144"
+     id="text3117-8-1-6-8-0"
+     textLength="180"  lengthAdjust="spacingAndGlyphs"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3119-0-9-8-7-7"
+       x="210"
+       y="144"
+       textLength="180"  lengthAdjust="spacingAndGlyphs"
+            data-i18n="images.propaganda.tut_walk.LowTechTransportation1"
+       style="font-size:29.23164176999999952px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">A FORM OF LOW-TECH</tspan><tspan
+       sodipodi:role="line"
+       x="209.77885"
+       y="180.6241"
+       style="font-size:29.23164177px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:-0.4567444px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
+       id="tspan3387" /></text>
+  <text
+     xml:space="preserve"
+     style="font-size:38.82167435px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#5a636e;fill-opacity:1;stroke:none;font-family:Sans"
+     x="210"
+     y="175"
+     id="text3117-8-1-6-8-0-9"
+     textLength="180"  lengthAdjust="spacingAndGlyphs"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3119-0-9-8-7-7-4"
+       x="210"
+       y="175"
+       textLength="180"  lengthAdjust="spacingAndGlyphs"
+            data-i18n="images.propaganda.tut_walk.LowTechTransportation2"
+
+       style="font-size:36.88059235000000058px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">TRANSPORTATION</tspan><tspan
+       sodipodi:role="line"
+       x="210.22754"
+       y="221.41817"
+       style="font-size:31.05734062px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:-0.48527095px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
+       id="tspan3387-3" /></text>
+  <text
+     xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
-     x="520.75568"
-     y="52.11787"
+     x="520"
+     y="52"
      id="text3300-3"
-     
+            
      sodipodi:linespacing="85%"><tspan
        sodipodi:role="line"
        id="tspan3302-1"
-       x="520.75568"
-       y="52.11787"
+       x="520"
+       y="52"
             data-i18n="images.propaganda.tut_walk.ArrowKeys1"
 
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium;line-height:85%;fill:#ffffff">ARROW</tspan><tspan
        sodipodi:role="line"
-       x="520.75568"
-       y="89.617874"
+       x="520"
+       y="80"
        data-i18n="images.propaganda.tut_walk.ArrowKeys2"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium;line-height:85%;fill:#ffffff"
        id="tspan3325">KEYS</tspan></text>
@@ -139,69 +189,28 @@
      x="517.37683"
      y="172.1666"
      id="text3300-3-7"
+      textLength="70"  lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="85.000002%"><tspan
        sodipodi:role="line"
        x="517.37683"
        y="172.1666"
             data-i18n="images.propaganda.tut_walk.WalkingMouse1"
+              textLength="70"  lengthAdjust="spacingAndGlyphs"
 
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:85.00000238%;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan3325-6">CLICK</tspan><tspan
        sodipodi:role="line"
        x="517.37683"
        y="197.6666"
+             textLength="70"  lengthAdjust="spacingAndGlyphs"
        data-i18n="images.propaganda.tut_walk.WalkingMouse2"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:85.00000238%;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan3353">&amp; HOLD</tspan><tspan
        sodipodi:role="line"
        x="517.37683"
        y="223.1666"
+             textLength="70"  lengthAdjust="spacingAndGlyphs"
        data-i18n="images.propaganda.tut_walk.WalkingMouse3"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:85.00000238%;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan3355">MOUSE</tspan></text>
-  <rect
-     style="fill:#363b43;fill-opacity:1;stroke:none"
-     id="rect3413"
-     width="188.63013"
-     height="69.452057"
-     x="207.53426"
-     y="113.56165" />
-  <text
-     xml:space="preserve"
-     style="font-size:36.53955078px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#5a636e;fill-opacity:1;stroke:none;font-family:Sans"
-     x="209.77885"
-     y="144.08455"
-     id="text3117-8-1-6-8-0"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan3119-0-9-8-7-7"
-       x="209.77885"
-       y="144.08455"
-            data-i18n="images.propaganda.tut_walk.LowTechTransportation1"
-
-       style="font-size:29.23164176999999952px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">A FORM OF LOW-TECH</tspan><tspan
-       sodipodi:role="line"
-       x="209.77885"
-       y="180.6241"
-       style="font-size:29.23164177px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:-0.4567444px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan3387" /></text>
-  <text
-     xml:space="preserve"
-     style="font-size:38.82167435px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#5a636e;fill-opacity:1;stroke:none;font-family:Sans"
-     x="210.22754"
-     y="175.31743"
-     id="text3117-8-1-6-8-0-9"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan3119-0-9-8-7-7-4"
-       x="210.22754"
-       y="175.31743"
-            data-i18n="images.propaganda.tut_walk.LowTechTransportation2"
-
-       style="font-size:36.88059235000000058px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">TRANSPORTATION</tspan><tspan
-       sodipodi:role="line"
-       x="210.22754"
-       y="221.41817"
-       style="font-size:31.05734062px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:-0.48527095px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan3387-3" /></text>
 </svg>

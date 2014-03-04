@@ -80,62 +80,97 @@
   <rect
      style="fill:#000000;fill-opacity:1;stroke:none"
      id="rect3728-3"
-     width="550.0069"
-     height="44.594311"
-     x="-0.003455162"
-     y="248.31927" />
+     width="550"
+     height="44.6"
+     x="0"
+     y="248" />
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="14.199144"
-     y="46.291565"
+     x="14"
+     y="46"
+              textLength="130"
+	   lengthAdjust="spacingAndGlyphs"
      id="text3300-8-6-9"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3302-4-3-6"
-       x="14.199144"
-       y="46.291565"
+       x="14"
+       y="46"
+              textLength="130"
+	   lengthAdjust="spacingAndGlyphs"
                           data-i18n="images.propaganda.tut_power.ActiveSlidewalks1"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ff0000;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">EINIGE °EYES AKTIVIEREN FAHRSTEIGE</tspan></text>
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ff0000;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">EINIGE °EYES</tspan></text>
 
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="150.22719"
-     y="46.272568"
+     x="150"
+     y="46"
      id="text3300-8-6"
+                   textLength="175"
+	   lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3302-4-3"
-       x="150.22719"
-       y="46.272568"
+       x="150"
+       y="46"
+                     textLength="175"
+	   lengthAdjust="spacingAndGlyphs"
                           data-i18n="images.propaganda.tut_power.ActiveSlidewalks2"
        style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">AKTIVIEREN</tspan></text>
+       
+  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="330"
+     y="46"
+     id="text3300-8-6-9"
+                   textLength="190"
+	   lengthAdjust="spacingAndGlyphs"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan3302-4-3-6"
+       x="330"
+       y="46"
+                     textLength="190"
+	   lengthAdjust="spacingAndGlyphs"
+                          data-i18n="images.propaganda.tut_power.ActiveSlidewalks3"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ff0000;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">EINIGE FAHRSTEIGE</tspan></text>
+
 
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="6.3037095"
-     y="292.40021"
+     x="6"
+     y="292"
      id="text3300-8-6-1"
+                   textLength="360"
+	   lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3302-4-3-5"
-       x="6.3037095"
-       y="292.40021"
-                          data-i18n="images.propaganda.tut_power.ActiveSlidewalks3"
+       x="6"
+       y="292"
+                     textLength="360"
+	   lengthAdjust="spacingAndGlyphs"
+                          data-i18n="images.propaganda.tut_power.ActiveSlidewalks4"
        style="font-size:58px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">NUR WENN SIE JEMANDEN</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
-     x="374.60532"
-     y="292.74414"
+     x="374"
+     y="292"
      id="text3300-8-6-1-8"
+                   textLength="165"
+	   lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3302-4-3-5-9"
-       x="374.60532"
-       y="292.74414"
-                          data-i18n="images.propaganda.tut_power.ActiveSlidewalks4"
+       x="374"
+       y="292"
+                     textLength="165"
+	   lengthAdjust="spacingAndGlyphs"
+                          data-i18n="images.propaganda.tut_power.ActiveSlidewalks5"
        style="font-size:58px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ff0000;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">SEHEN</tspan></text>
 </svg>
