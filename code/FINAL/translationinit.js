@@ -89,7 +89,7 @@ function tfill(object, fontSize) {
  * Function to add to the end of translationinit() if defined and applicable to document
  * i.e. when in a document with translated elements of DOM class "jtextfill"
  */
-function adaptfonts(){
+/*function adaptfonts(){
 	console.log("=======================================");
     //$$('.jtextfill').each(console.log(72));
     var a = document.getElementsByClassName("jtextfill");
@@ -97,9 +97,57 @@ function adaptfonts(){
     for (var x in a)
 	{
 		//txt=txt + person[x];
-		console.log(a.onclick);
-		console.log(i++);
+		//console.log(a.onclick);
+		//console.log(i++);
+		var fontSize = options.maxFontPixels;
+        var ourText = "TESTEEEEEEEEEEEEEEEEEE";//$('span:visible:first', this);
+		var maxHeight = x.height();
+        var maxWidth = x.width();
+        var textHeight;
+        var textWidth;
+        do {
+            ourText.css('font-size', fontSize);
+            textHeight = ourText.height();
+            textWidth = ourText.width();
+            fontSize = fontSize - 1;
+        } while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
 	}
     //console.log(72)
     console.log("=======================================");
 }
+*/ 
+
+
+function textfill(options) {
+	$('.jtextfill').each(function( index ) {
+						var fontSize = options.maxFontPixels;
+						var ourText = $('span:visible:first', this);
+						var maxHeight = $(this).height();
+						var maxWidth = $(this).width();
+						var textHeight;
+						var textWidth;
+						do {
+							ourText.css('font-size', fontSize);
+							textHeight = ourText.height();
+							textWidth = ourText.width();
+							fontSize = fontSize - 1;
+						} while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
+					});
+ }
+ 
+ /*
+ function textfill(obj,options) {
+						var fontSize = options.maxFontPixels;
+						var ourText = obj;//$('span:visible:first', obj);
+						var maxHeight = obj.height();
+						var maxWidth = obj.width();
+						var textHeight;
+						var textWidth;
+						do {
+							ourText.css('font-size', fontSize);
+							textHeight = ourText.height();
+							textWidth = ourText.width();
+							fontSize = fontSize - 1;
+						} while ((textHeight > maxHeight || textWidth > maxWidth) && fontSize > 3);
+ }
+*/
