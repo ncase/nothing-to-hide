@@ -7,7 +7,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2"
@@ -47,9 +46,9 @@
      inkscape:window-height="1032"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="0.9125"
-     inkscape:cx="170.74002"
-     inkscape:cy="14.10093"
+     inkscape:zoom="14.6"
+     inkscape:cx="740.10559"
+     inkscape:cy="17.133268"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -71,35 +70,7 @@
        x="52"
        y="38"
        data-i18n="images.general.THEWALL"
-
-       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       >THE WALL</tspan></text>
-  <image
-     y="-0.14769772"
-     x="704.93909"
-     id="image2995"
-     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF8AAAAoCAYAAACYayaMAAAABHNCSVQICAgIfAhkiAAAA+NJREFU
-aIHdWtt1IjEMvdqz/0kH0EHSAaQCshWEDpKtALaCkApIKgipALaCsBUwqQCo4O6HPWEYZsC2NIFw
-z+EH27qyxg9JlqABkOwA6FY0zUXkrQnO7wixFEZyAKAPoL2n2wrASET+WHKX9OgBuIVbAFW6ZABm
-ACZWi4HkFYBRxJAHC16QvCA5ZRymJC9MFNjo0SH5HqnH0n8sLfdFJK/N3Em+RhLneDVRwOnQS9Qh
-x6OBDsGwmDNIDpSTHhvocEW3grW4U+oxDeSZauecT9oCHYUOLdoYPkfyEcTwE+AVAH6kEnkMleNz
-PCt1uLRRA0DcpVnGPKaf1vhd5fgcbZKt2EF+TN9Ih6IuqcdPFtMv2fj+qLBccbdfNKZJuVlMP+3K
-t0TKh+xaK6GRKyJ/Y/qdkvFTYLnzrOSuQtu/u/FPEYcu3c92jfEzxdgqzIzlHQtZaHuy8UXkI4Ao
-Rl7QeVlCqGv3lXKz0HbtsfOsHJ8j1beeGfFbyg0+dlSgSyZpo8slFUkmkgslfxWiY46CPp0DspOj
-+SoybUJLlVEMmGwsBgY2qYVWdhVZj/E7wCSV6/nHaXbewTsNUr17bLG0mG8VYUxmcUH3+GDJPz4F
-w3tdpjUc+mzmAeK7PeSvVKZtD3DfJxp+bGV4r8e4jqfY76cVYQ4ReQHwYi03EIeiyzImAPoisqa7
-ZNdGemQh/5sb/xggeQ9nyHbh7xXqXdgM7v12Tfce8ABgSHIiIr8MVKpzJ5uKSxzo3M9O3a8Bvh79
-RVY47h4PHSN0d9Sg4miweE6se2TauudMqhf8RPv+dx0wZA4XoD2LSPJW97wZXEnKDd0L0cjLf0B9
-drKN/RUW3cSIu6jbjlspIqbVIvlXXtReZfux1OwGusv9c7XS7boB9YGfxbty2SYLrcwygdXDdZLb
-yY1XcU8bo+dQG4q7Hp+tm1lBkDxZJrh6hvw7MLDNY0nkzl2ieUZswfANF/ZvscdG2e3dcYM1rmbI
-xRqDLoAnY5nHxATbi3NS7qAxflsxtgopH3OOZt5x1f64iPwDcLOvjyafbx0wZAljZsY6NC13C986
-whWRN5IZ7HehpnAqjz+G2N7NcwBDTVxTJOgYOxhJrlgDeljk8+vKBm0KgxuYdLIfzPRsZhlq43AT
-+NXhM6t7FqUjIvIEV2WWKcSMjJJq/dD2szA+4M5/uDN2ljC8KyK/bTU6jLMxPgCIyFpEbuAu4BHq
-d8IM8bn/UDRfvcATOvMT9W9xczGq08gFufsqOrYqNc5q5cdARD78Gd+FYc2ndyWvsbvC5wCui65m
-cn6Z9rXxmX+CPBvQZWsvAax8xLuF/wmZJkuEi5KRAAAAAElFTkSuQmCC
-"
-     height="40"
-     width="95" />
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">THE WALL</tspan></text>
   <rect
      style="fill:#ffffff;fill-opacity:1;stroke:none"
      id="rect2998"
@@ -121,4 +92,10 @@ cn6Z9rXxmX+CPBvQZWsvAax8xLuF/wmZJkuEi5KRAAAAAElFTkSuQmCC
      height="40"
      x="28"
      y="6.1062266e-16" />
+  <path
+     style="fill:#ffffff"
+     d="m 720.33765,33.332676 c 0,-8.508002 1.53389,-10.092916 9.76796,-10.092916 4.34693,0 5.78214,0.459195 7.82727,2.50432 2.18621,2.186212 2.46624,3.23416 2.20454,8.25 L 739.83765,40 l -9.75,0 -9.75,0 z m 49,4.907084 c -0.825,-0.533156 -5.18826,-1.421461 -7.49669,-2.05019 -6.89244,-0.76221 -12.17551,-7.555888 -7.65512,-13.467584 1.53659,-1.894726 1.69988,-2.093451 1.23748,0.0771 -0.45655,2.143118 -0.7814,3.334684 1.96516,1.914384 4.01297,-1.835115 13.05743,-2.208269 16.07927,-5.623148 2.23594,3.057832 2.20978,11.900464 -0.59481,14.705057 -1.39528,1.39528 -2.36686,3.185434 -1.89301,3.954546 1.11074,1.802844 0.40412,1.812319 -1.64228,0.489835 z m 20.97542,-0.529614 c -1.95919,-2.360681 0.27947,-6.470386 3.52458,-6.470386 3.24511,0 5.48377,4.109705 3.52458,6.470386 -0.69821,0.841288 -2.28427,1.529614 -3.52458,1.529614 -1.24031,0 -2.82637,-0.688326 -3.52458,-1.529614 z m 1.59578,-9.646479 c -0.48654,-1.523654 -3.58873,-23.6954239 -3.5782,-25.5739069 0.005,-0.847636 1.7774,-1.25 5.507,-1.25 6.46551,0 6.18956,-1.20484704 3.66203,15.9888919 -1.36756,9.303023 -2.01987,11.552631 -3.42849,11.823906 -0.95677,0.184258 -1.92983,-0.260743 -2.16234,-0.988891 z m -35.14782,-6.37466 c 0.3433,-1.367819 0.17612,-2.449247 -0.37865,-2.449247 -1.94003,0 -4.24449,-6.121677 -3.59923,-9.5612009 1.74621,-9.30808604 16.03465,-11.667438 20.88923,-3.449295 3.93688,6.6646149 0.0502,14.2381439 -7.93427,15.4605869 -2.14525,0.328445 -5.19197,0.981174 -6.74613,1.522788 -3.09237,1.077665 -2.81019,0.784238 -2.23095,-1.523632 z m -33.34666,-4.038141 c -2.55236,-2.147673 -3.07672,-3.317687 -3.07672,-6.865141 0,-5.3035169 2.85391,-9.2403299 7.30374,-10.07512394 6.60699,-1.239478 12.09626,3.42810604 12.09626,10.28557394 0,2.675358 -0.75556,4.172088 -3.21578,6.370289 -4.18791,3.741903 -8.87756,3.843658 -13.1075,0.284402 z"
+     id="path3006"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="sssscccssccsccssssssssscsssssssssssssssss" />
 </svg>
