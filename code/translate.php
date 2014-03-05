@@ -12,6 +12,15 @@ define("FONTBASE64", "d09GRgABAAAAACWcABAAAAAASkQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 //TODO add smart loading of ressources in code of all config.js files: load from subdirectories, depending on selected language
 $filelist=array(
 	"FINAL/cutscene/img/header.svg",
+	"FINAL/cutscene/pics2/meta0001.svg",
+	"FINAL/cutscene/pics2/meta0002.svg",
+	"FINAL/cutscene/pics2/meta0003.svg",
+	"FINAL/cutscene/pics2/meta0004.svg",
+	"FINAL/cutscene/pics2/meta0005.svg",
+	"FINAL/cutscene/pics2/meta0006.svg",
+	"FINAL/cutscene/pics2/meta0007.svg",
+	"FINAL/cutscene/pics2/meta0008.svg",
+	
 	"FINAL/cutscene/pics/establishing_fg.svg",
 	"FINAL/menu/assets/propaganda/title.svg", 
 	"FINAL/game/assets/propaganda/dont_help_hiders.svg",
