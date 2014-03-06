@@ -1,115 +1,115 @@
 {
-	"translator": "NCase",
+	"translator": "Nosteps",
 	"app": {
-		"name": "Nothing To Hide",
-		"subtitle": "an anti-stealth game where you are your own watchdog.",
-		"longtitle": "Nothing To Hide: an anti-stealth game where you are your own watchdog."
+		"name": "Rien à cacher",
+		"subtitle": "Un jeu contre la surveillance où vous êtes votre propre chien de garde.",
+		"longtitle": "Rien à cacher: un jeu contre la surveillance où vous êtes votre propre chien de garde."
 	},
 	"menu": {
-		"play": "PLAY",
-		"support": "SUPPORT & SHARE",
+		"play": "JOUER",
+		"support": "AIDE & PARTAGE",
 		"uncopyright": "UNCOPYRIGHT",
 		"credits": "CREDITS"
 	},
 	"dialog": {
 		"fund": {
-			"title": "THANK YOU FOR PLAYING THIS DEMO!",
+			"title": "MERCI DE JOUER A CETTE DEMO!",
 			"staytuned": [
-				"Be excited. This wasn't even a tenth of what the full game will be!",
-				"On the downside... this wasn't even a tenth of what the full game will be.",
-				"We've got a long way to go, and we need your help."
+				"Réjouis-toi. Ce n'est même pas le dixième du jeu complet!",
+				"On the downside...  Ce n'est même pas le dixième du jeu complet.",
+				"On a une longue route à faire, et on a beosin de ton aide."
 			],
-			"backthisgame": "back this game",
+			"backthisgame": "retour au jeu",
 			"whycrowdfunding": [
-				"Why crowdfunding? Well, this game is open source and uncopyrighted.",
-				"We're built for the public, and backed by the public!",
-				"And I know this is kind of ironic, being a satire of social media and all, but..."
+				"Pourquoi du financement participatif? Alors, ce jeu est open source et non protégé par un droit d'auteur.",
+				"Nous avons été conçu pour le publique et soutenus par le public!",
+				"Et je sais que cela est ironique, ce jeu étant une satire de média social, mais..."
 			],
-			"thanksdissident": "Thanks again, you dissident, you!"
+			"thanksdissident": "Merci encore, toi le dissident, toi!"
 		},
 		"uncopyright": {
-			"title": "NOTHING TO HIDE HAS NOTHING TO HIDE",
+			"title": "RIEN A CACHER N'A RIEN A CACHER",
 			"linkdescription": [
-							"We're",
+							"Nous sommes",
 							"<a href='%s' target='_blank'>open source</a>,",
 							"<a href='%s' target='_blank'>openly designed</a>,",
-							"and with your help,",
+							"et avec ton aide,",
 							"<a href='%s' target='_blank'>openly funded</a>.",
-							"But most of all, uncopyrighted. That's right -",
-							"<a href='%s' target='_blank'>Zero Rights Reserved</a>."
+							"Mais par dessus tout sans copyright. C'est juste -",
+							"<a href='%s' target='_blank'>Zéro Droits Réservés</a>."
 			],
-			"youarewelcometo": "You're totally welcome to:",
-			"piratethisgame": "- \"Pirate\" this game.",
-			"recordandmonetize": "- Record and monetize Let's Plays.",
-			"rehostthisgame": "- Re-host this game on your website.",
-			"useartmusiccode": "- Use the art/music/code in your own projects.",
+			"youarewelcometo": "Tu est totalement le bienvenu à:",
+			"piratethisgame": "- \"Pirater\" ce jeu.",
+			"recordandmonetize": "- Enregistrer et monétiser Let's Plays.",
+			"rehostthisgame": "- Héberger ce jeu sur ton propre site internet.",
+			"useartmusiccode": "- Utiliser cet art/musique/code dans tes propres projets.",
 			"makeamod": [
-				"- Make a mod where the main character is replaced with Princess Luna from the",
-				"hit cartoon show, My Little Pony: Friendship Is Magic.",
-				"Well, actually, you'll probably get a cease and desist from Hasbro for that.",
+				"- Fais un mode ou le principal caractère est remplacé par Princesse Luna, du",
+				"dessin animé Mon Petit Poney: Les Amies c'est Magique.",
+				"Bon, arrivé à ce point, you'll probably get a cease and desist from Hasbro for that.",
 				"But not from me."
 			],
-			"givinguppower": "By giving up \"power\" over our art, our art can have more power."
+			"givinguppower": "En abandonnant le \"pouvoir\" à travers notre art, notre art peut avoir plus de pouvoir."
 		},
 		"credits": {
-			"withthehelp": "WITH THE HELP OF HUNDREDS"
+			"withthehelp": "AVEC L'AIDE DE CENTAINES"
 		}
 		
 	},
 	"command": {
-		"backtomainmenu": "BACK TO MAIN MENU",
-		"resumegame": "RESUME GAME",
-		"resetlevel": "RESET LEVEL",
+		"backtomainmenu": "RETOUR AU MENU",
+		"resumegame": "REPRENDRE LE JEU",
+		"resetlevel": "REPRENDRE LE NIVEAU",
 		"pause": "PAUSE",
-		"skiplevel": "SKIP LEVEL"
+		"skiplevel": "EVITER LE NIVEAU"
 	},
 	"game": {
 		"general":{ 
-			"panopticonpaused": "PANOPTICON PAUSED",
-			"levelselect": "Level Select:",
+			"panopticonpaused": "PANOPTICON EN PAUSE",
+			"levelselect": "Choix du niveau:",
 			"intro": "INTRO",
-			"ending": "ENDING",
-			"sharegame": "Share Game:"
+			"ending": "FIN",
+			"sharegame": "Partager le jeu:"
 		},
 		"thewall":{
-			"posted": "posted",
-			"justnow": "just now",
-			"minutesago": "one minute ago",
-			"minutesago_plural": "__count__  minutes ago",
-			"secondsago": "one second ago",
-			"secondsago_plural": "__count__  seconds ago"
+			"posted": "posté",
+			"justnow": "à l'instant",
+			"minutesago": "il y a une minute",
+			"minutesago_plural": "il y a __count__  minutes",
+			"secondsago": "il y a une seconde",
+			"secondsago_plural": "il y a __count__  secondes"
 		}
 	},
 	"character":{
 		"poppy": "Poppy",
 		"poppygardner": "Poppy Gardner",
 		"georgegardner": "George Gardner",
-		"nobody": "Nobody"
+		"nobody": "Personne"
 	},
 	"cutscene":{
 		"intro":[
 				"Poppy?",
-				"Hey sweetie. Please don't be sad.",
-				"It's really hurting my popularity ranking.",
-				"The first un-secret ballot election is coming up. It's very important to Daddy's career, so I need you to post more happy pictures of yourself to The Wall. At least 400 per day, okay?",
-				"Please, Poppy? I don't want the voters to think I'm a bad parent.",
-				"Well, goodnight! <span>#DaddyDaughterMoment</span>",
-				"I... I have to get out of here...",
-				"Dad will be better off without me. His Popularity Metrics&trade;, too."
+				"Salut mon joli. Ne sois pas triste.",
+				"Ca touche vraiment à mon classement de popularité.",
+				"Le premier scrutin électoral pas secret arrive. C'est très important pour la carrière de Papa. Alors j'ai besoin que tu publie plus d'images joyeuses de toi sur Le Mur. Au moins 400 par jour, d'accord?",
+				"S'il te plaît Poppy? Je ne veux pas que les votants pensent que je suis un mauvais parent.",
+				"Bon, bonne nuit! <span>#DaddyDaughterMoment</span>",
+				"Je... je dois quitter tout ça...",
+				"Dad sera mieux sans moi. Sa popularité métrique et commerciale, aussi."
 		],
 		"end":[
-			"please don't be dead oh god oh god oh god oh god oh god",
-			"Okay. Okay okay. Idea.",
-			"Sometimes Daddy wakes me up like this. Maybe this will work...",
-			"<span>#DaddyDaughterMoment</span>",
-			"Ow! Pain on the face! You...",
-			"i'm sorry",
-			"...saved my life! Don't apologize, yo!",
-			"i'm sorry for being sorry",
-			"Hold up, are we on The Wall?...",
-			"\"Poppy Gardner posted 1 minute ago. Sometimes Daddy wakes me up like this. Maybe this will work...\"",
-			"Oh. Oh wow. Minister Gardner does that to his own... wow.",
-			"<i>Wellllllllll</i> if it makes you feel better, your dad's psychologically and physically abusive to the rest of the nation, too.",
+			"Non ne sois pas mort, oh mon Dieu, oh mon Dieu, oh mon Dieu, oh mon Dieu, oh mon Dieu",
+			"D'accord. D'accord. D'accord. Idée.",
+			"Mon Papa me réveille comme ça des fois. Peut-être que ça va marcher...",
+			"<span>#MomentFilleàPapa</span>",
+			"Oh! Douleur sur le visage! Tu...",
+			"je suis désolé",
+			"...tu m'as sauvé la vie! Ne t'excuse pas, yo!",
+			"je suis désolé d'être désolé",
+			"Attends, est-ce qu'on est sur Le Mur?...",
+			"\"Poppy Gardner a publié il y a une minute. Mon Papa me réveille comme ça des fois. Peut-être que ça va marcher...\"",
+			"Oh. Oh là là. Minister Gardner a fait ça pour lui... wow.",
+			"<i>Booooonnnnnn</i> si ça te permet de te sentir mieux, your dad's psychologically and physically abusive to the rest of the nation, too.",
 			"\"Watch what you say & hear & watch & <i>think.\"</i><br>When we got no place to hide, we got to hide our true selves. ",
 			"I can help you escape him.",
 			"In fact, I got an app for that!",
@@ -155,33 +155,33 @@
 	"images": {
 		"general":{
 			"controls": {
-				"scrolldown": "SCROLL DOWN",
-				"mouse": "¬MOUSE¬",
-				"keys": "¬¬KEYS¬¬"
+				"scrolldown": "DESCENDRE",
+				"mouse": "¬SOURIS¬",
+				"keys": "¬¬TOUCHES¬¬"
 			},
-			"or": "¬OR¬",
+			"or": "¬OU¬",
 			"tweet": "TWEET",
-			"share": "SHARE",
-			"THEWALL": "THE WALL"
+			"share": "PARTAGE",
+			"THEWALL": "LE MUR"
 			
 		},
 		"propaganda": {
 			"dont_help_hiders": {
-				"donthelp1": "DON'T HELP",
+				"donthelp1": "N'AIDE PAS",
 				"donthelp2": "HIDERS",
-				"fourthAmendment1": "but the fourth",
+				"fourthAmendment1": "mais le quatrième",
 				"fourthAmendment2": "amendment",
-				"fourthAmendment3": "protects"
+				"fourthAmendment3": "protections"
 			},
 			"error": {
-				"ERROR": "ERROR:",
-				"AudienceNotFound1": "`TARGETED_AUDIENCE`",
-				"AudienceNotFound2": "CANNOT BE FOUND",
-				"MeantForNobody1": "&gt; this wall is meant",
-				"MeantForNobody2": "&gt; for NOBODY"
+				"ERROR": "ERREUR:",
+				"AudienceNotFound1": "`AUDIENCE_TOUCHEE`",
+				"AudienceNotFound2": "INTROUVABLE",
+				"MeantForNobody1": "&gt; ce mur est censé",
+				"MeantForNobody2": "&gt; pour PERSONNE"
 			},
 			"intro_pics": {
-				"posted4DaysAgo": "posted 4 days ago",
+				"posted4DaysAgo": "publié il y a 4 jours",
 				"Message1": "Thank you for 4 billion followers! I'm so",
 				"Message2": "happy! Vote for my dad in the un-secret",
 				"Message3": "ballot! So happy. Haha! Ha. ha..."
