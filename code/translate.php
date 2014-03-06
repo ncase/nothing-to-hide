@@ -57,7 +57,7 @@ if (count($argv)>1){
 }
 
 //TODO replace by file list which is read from "locales" directory instead of a static list
-$langList=array("en","de","nl","ru","fr");
+$langList=array("en","de","nl","ru","fr","it");
 //do this only once to avoid unecessary file operations
 if 	($action==="doTranslate"||$action==="")
 	$languages = getLanguages($langList);
