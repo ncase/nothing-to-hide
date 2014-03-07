@@ -1,0 +1,347 @@
+{
+	"translator": "NCase",
+	"app": {
+		"name": "Nothing To Hide",
+		"subtitle": "an anti-stealth game where you are your own watchdog. å ä ö",
+		"longtitle": "Nothing To Hide: an anti-stealth game where you are your own watchdog."
+	},
+	"menu": {
+		"play": "PLAY å ä ö",
+		"support": "SUPPORT & SHARE",
+		"uncopyright": "UNCOPYRIGHT",
+		"credits": "CREDITS"
+	},
+	"dialog": {
+		"fund": {
+			"title": "THANK YOU FOR PLAYING THIS DEMO!",
+			"staytuned": [
+				"Be excited. This wasn't even a tenth of what the full game will be!",
+				"On the downside... this wasn't even a tenth of what the full game will be.",
+				"We've got a long way to go, and we need your help."
+			],
+			"backthisgame": "back this game",
+			"whycrowdfunding": [
+				"Why crowdfunding? Well, this game is open source and uncopyrighted.",
+				"We're built for the public, and backed by the public!",
+				"And I know this is kind of ironic, being a satire of social media and all, but..."
+			],
+			"thanksdissident": "Thanks again, you dissident, you!"
+		},
+		"uncopyright": {
+			"title": "NOTHING TO HIDE HAS NOTHING TO HIDE",
+			"linkdescription": [
+							"We're",
+							"<a href='%s' target='_blank'>open source</a>,",
+							"<a href='%s' target='_blank'>openly designed</a>,",
+							"and with your help,",
+							"<a href='%s' target='_blank'>openly funded</a>.",
+							"But most of all, uncopyrighted. That's right -",
+							"<a href='%s' target='_blank'>Zero Rights Reserved</a>."
+			],
+			"youarewelcometo": "You're totally welcome to:",
+			"piratethisgame": "- \"Pirate\" this game.",
+			"recordandmonetize": "- Record and monetize Let's Plays.",
+			"rehostthisgame": "- Re-host this game on your website.",
+			"useartmusiccode": "- Use the art/music/code in your own projects.",
+			"makeamod": [
+				"- Make a mod where the main character is replaced with Princess Luna from the",
+				"hit cartoon show, My Little Pony: Friendship Is Magic.",
+				"Well, actually, you'll probably get a cease and desist from Hasbro for that.",
+				"But not from me."
+			],
+			"givinguppower": "By giving up \"power\" over our art, our art can have more power."
+		},
+		"credits": {
+			"withthehelp": "WITH THE HELP OF HUNDREDS"
+		}
+		
+	},
+	"command": {
+		"backtomainmenu": "BACK TO MAIN MENU",
+		"resumegame": "RESUME GAME",
+		"resetlevel": "RESET LEVEL",
+		"pause": "PAUSE",
+		"skiplevel": "SKIP LEVEL"
+	},
+	"game": {
+		"general":{ 
+			"panopticonpaused": "PANOPTICON PAUSED",
+			"levelselect": "Level Select:",
+			"intro": "INTRO",
+			"ending": "ENDING",
+			"sharegame": "Share Game:"
+		},
+		"thewall":{
+			"posted": "posted",
+			"justnow": "just now",
+			"minutesago": "one minute ago",
+			"minutesago_plural": "__count__  minutes ago",
+			"secondsago": "one second ago",
+			"secondsago_plural": "__count__  seconds ago"
+		}
+	},
+	"character":{
+		"poppy": "Poppy",
+		"poppygardner": "Poppy Gardner",
+		"georgegardner": "George Gardner",
+		"nobody": "Nobody"
+	},
+	"cutscene":{
+		"intro":[
+				"Poppy?",
+				"Hey sweetie. Please don't be sad.",
+				"It's really hurting my popularity ranking.",
+				"The first un-secret ballot election is coming up. It's very important to Daddy's career, so I need you to post more happy pictures of yourself to The Wall. At least 400 per day, okay?",
+				"Please, Poppy? I don't want the voters to think I'm a bad parent.",
+				"Well, goodnight! <span>#DaddyDaughterMoment</span>",
+				"I... I have to get out of here...",
+				"Dad will be better off without me. His Popularity Metrics&trade;, too."
+		],
+		"end":[
+			"please don't be dead oh god oh god oh god oh god oh god",
+			"Okay. Okay okay. Idea.",
+			"Sometimes Daddy wakes me up like this. Maybe this will work...",
+			"<span>#DaddyDaughterMoment</span>",
+			"Ow! Pain on the face! You...",
+			"i'm sorry",
+			"...saved my life! Don't apologize, yo!",
+			"i'm sorry for being sorry",
+			"Hold up, are we on The Wall?...",
+			"\"Poppy Gardner posted 1 minute ago. Sometimes Daddy wakes me up like this. Maybe this will work...\"",
+			"Oh. Oh wow. Minister Gardner does that to his own... wow.",
+			"<i>Wellllllllll</i> if it makes you feel better, your dad's psychologically and physically abusive to the rest of the nation, too.",
+			"\"Watch what you say & hear & watch & <i>think.\"</i><br>When we got no place to hide, we got to hide our true selves. ",
+			"I can help you escape him.",
+			"In fact, I got an app for that!",
+			"Exploit! Made it myself. Just tap this screen here, and you'll be erased from The Wall. You'll be a Nobody, just like me.",
+			"Stop acting for the camera. Start being yourself."
+		]
+	},
+	"dialogue": {
+		"postedjustnow": "posted just now",
+		"level": {
+			"intro": {
+				"nobodyNeedsMe":"Nobody needs me...",
+				"runningAway": "Guess I'm running away to Canada, then."
+			},
+			"pickup": {
+				"lookMySmile": "Oh… there's Daddy's campaign post. Look at my smile. :)",
+				"disciplinedToSmile": "He disciplined me when my smile didn't look genuine enough. :)"
+			},
+			"big_puzzle": {
+				"iWonder": "I wonder... if these laws against upsetting people... upset people?"
+			},
+			"conveyor": {
+				"myOwnWatchman": "I wonder... if I'm my own watchman... am I hiding from myself?"
+			},
+			"conveyor_2": {
+				"whyQuestionMarks": "I wonder... why I'm using so many ellipses and question marks?",
+				"havingAPrivateThought": "I think... this is what having a private thought feels like. Feels weird."
+			},
+			"power": {
+				"whatWasNoise": "What... what was that noise?",
+				"looksUncomfortable": "Oh my... that looks uncomfortable."
+			},
+			"power_puzzle": {
+				"poorNobodyOnlyIEye" : "Poor 'Nobody'. I think he picked up the only iEye that was looking at him.",
+				"neverDoneThat" : "Glad I've never done that."
+			},
+			"nobody_needs_you": {
+				"onceInMyLife": "For once in my life... I don't care how others will judge me! I... I have to help!",
+				"nobodyNeedsMe": "'Nobody' needs me!"
+			}
+		}
+	},
+	"images": {
+		"general":{
+			"controls": {
+				"scrolldown": "SCROLL DOWN",
+				"mouse": "¬MOUSE¬",
+				"keys": "¬¬KEYS¬¬"
+			},
+			"or": "¬OR¬",
+			"tweet": "TWEET",
+			"share": "SHARE",
+			"THEWALL": "THE WALL"
+			
+		},
+		"propaganda": {
+			"dont_help_hiders": {
+				"donthelp1": "DON'T HELP",
+				"donthelp2": "HIDERS",
+				"fourthAmendment1": "but the fourth",
+				"fourthAmendment2": "amendment",
+				"fourthAmendment3": "protects"
+			},
+			"error": {
+				"ERROR": "ERROR:",
+				"AudienceNotFound1": "`TARGETED_AUDIENCE`",
+				"AudienceNotFound2": "CANNOT BE FOUND",
+				"MeantForNobody1": "&gt; this wall is meant",
+				"MeantForNobody2": "&gt; for NOBODY"
+			},
+			"intro_pics": {
+				"posted4DaysAgo": "posted 4 days ago",
+				"Message1": "Thank you for 4 billion followers! I'm so",
+				"Message2": "happy! Vote for my dad in the un-secret",
+				"Message3": "ballot! So happy. Haha! Ha. ha..."
+			},
+			"needs_dummy": {
+				"YesMySignal1": "YES, MY SIGNAL",
+				"YesMySignal2": "DEPLOYS",
+				"YesMySignal3": "FOR ALL THE",
+				"YesMySignal4": "GIRLS &amp; BOYS!"
+			},
+			"nobody_messes": {
+				"posted4DaysAgo": "posted 4 days ago",
+				"THEWALL": "THE WALL",
+				"gotRidSecretBallot1": "Aw yiss, 'bout time we got rid of the secret ballot!",
+				"gotRidSecretBallot2": "Let's expose all those un-Americans who have",
+				"gotRidSecretBallot3": "something to hide. #votegardner",
+				"NobodyMessesWith1": "Nobody messes with the Ministry!",
+				"NobodyMessesWith2": "Nobody cares for privacy!",
+				"NobodyMessesWith3": "Nobody! ^_^"
+			},
+			"nobody_the_wall": {
+				"THEWALL": "THE WALL"
+			},
+			"nobody_the_wall_2": {
+				"THEWALL": " THE WALL THE WALL THE WALL THE WALL THE WALL THE WALL THE WALL"
+			},
+			"pickup_gardner": {
+				"ProtectorPatriotPop": "PROTECTOR. PATRIOT. POP.",
+				"VoteGardner1": "WITH YOUR UN-SECRET BALLOT",
+				"VoteGardner2": "VOTE GARDNER"
+			},
+			"pickup_lookout": {
+				"LookOut1": "LOOK OUT FOR",
+				"LookOut2": "YOURSELF"
+			},
+			"puzzle_mock": {
+				"RememberToBe": "REMEMBER TO BE",
+				"POPULAR": "POPULAR",
+				"PRETTY": "PRETTY",
+				"PATRIOTIC": "PATRIOTIC",
+				"HowSelfWorth1": "HOW ELSE CAN YOU",
+				"HowSelfWorth2": "MEASURE YOUR",
+				"HowSelfWorth3": "SELF-WORTH?"
+			},
+			"puzzle_psa": {
+				"PatriotPSA1": "PATRIOT SERVICE",
+				"PatriotPSA2": "ANOUNCEMENT",
+				
+				"WatchWhatYouSay1": "WATCH",
+				"WatchWhatYouSay2": "WHAT YOU",
+				"WatchWhatYouSay3": "SAY",
+				
+				"WatchWhatYouHear1": "WATCH",
+				"WatchWhatYouHear2": "WHAT YOU",
+				"WatchWhatYouHear3": "HEAR",
+
+				"WatchWhatYouWatch1": "WATCH",
+				"WatchWhatYouWatch2": "WHAT YOU",
+				"WatchWhatYouWatch3": "WATCH"
+			},
+			"questions": {
+				"DoNotAsk": "DO NOT ASK BACK",
+				"KeepYouSafe": "TO KEEP YOU SAFE, THE MINISTRY KEEPS SECRETS",
+				"EspeciallyYours": "ESPECIALLY YOURS!",
+				"Q:": "Q:",
+				"SafeFromWhat": "SAFE FROM WHAT?",
+				"A:": "A:",
+				"ThatsSecret": "THAT'S SECRET."
+			},
+			"smile": {
+				"SmileForTheCam": "SMILE FOR THE CAMERA",
+				"HidingIsCriminal": "HIDING IS CRIMINAL",
+				"OnlyCriminals": "ONLY CRIMINALS HAVE SOMETHING TO HIDE",
+				"StayAlwaysInSight": "ALWAYS STAY IN SIGHT OF AT LEAST ONE °EYE"
+			},
+			"stream_wall": {
+				"StatusLeft": "STATUS:      STATUS:      STATUS:",
+				"SecureLeft": "SECURE       SECURE       SECURE       SECURE",
+				"StatusRight": "STATUS:      STATUS:      STATUS:      STATUS:",
+				"SecureRight": "SECURE       SECURE       SECURE"
+			},
+			"stream_wall_2": {
+				"CriminalNeutralized": "CRIMINAL NEUTRALIZED",
+				"Name1": "NAME:",
+				"Name2": "&quot;NOBODY&quot;",
+				"Time1": "TIME:",
+				"Time2": "2044 PST (1 MIN AGO)",
+				"Crime1": "CRIME:",
+				"Crime2": "HIDING FROM CAMERA",
+				"Status1": "STATUS:",
+				"Status2": "TRANQUILIZED (POSSIBLE OVERDOSE)"
+			},
+			"tut_carpet": {
+				"DeviceInactiveCarpet": "RE: DEVICE INACTIVE ON CARPET",
+				"FeatureNotBug": "IT'S NOT A BUG, IT'S A FEATURE.",
+				"IssueClosed": "[ISSUE MARKED AS CLOSED]"
+			},
+			"tut_darker": {
+				"LookForLines1": "LOOK FOR THE",
+				"LookForLines2": "DARKER",
+				"LookForLines3": "LINES"
+			},
+			"tut_pickup": {
+				"MovingIEyes": "MOVING °EYES",
+				"SpaceKey": "SPACE KEY",
+				"Or": "- - - - - - OR - - - - - - ",
+				"ClickCircle1": "CLICK",
+				"ClickCircle2": "CIRCLE",
+				"ToPickupDrop": "TO PICKUP/DROP",
+				"ThanksForSurveillance1": "THANK YOU FOR",
+				"ThanksForSurveillance2": "PARTICIPATING",
+				"ThanksForSurveillance3": "IN YOUR OWN",
+				"ThanksForSurveillance4": "SURVEILLANCE"
+			},
+			"tut_power": {
+				"ActiveSlidewalks1": "SOME °EYES",
+				"ActiveSlidewalks2": "WILL ACTIVATE",
+				"ActiveSlidewalks3": "SOME SLIDEWALKS",
+				"ActiveSlidewalks4": "Only when they see",
+				"ActiveSlidewalks5": "SOMEBODY"
+			},
+			"tut_reminder": {
+				"StayInSight": "STAY IN SIGHT"
+			},
+			"tut_slidewalk": {
+				"SLIDEWALK": "SLIDEWALK",
+				"AvoidUsingLegs": "A REVOLUTIONARY NEW WAY TO AVOID USING YOUR LEGS"
+			},
+			"tut_slow": {
+				"SlowDown": "SLOW DOWN",
+				"ForNarrowPaths": "For narrow paths",
+				"ShiftKey": "SHIFT KEY",
+				"OR": "- - - - - - - OR - - - - - - -",
+				"MoveMouseSlowly1": "MOVE MOUSE",
+				"MoveMouseSlowly2": "SLOWLY"
+			},
+			"tut_walk": {
+				"Walking": "WALKING",
+				"ArrowKeys1": "ARROW",
+				"ArrowKeys2": "KEYS",
+				"OR": "- - - - - OR - - - - - - ",
+				"WalkingMouse1": "CLICK",
+				"WalkingMouse2": "&amp; HOLD",
+				"WalkingMouse3": "MOUSE",
+				"LowTechTransportation1": "A FORM OF LOW-TECH",
+				"LowTechTransportation2": "TRANSPORTATION"
+			},
+			"unsecret_ballot": {
+				"WrongChoice1": "WRONG CHOICE",
+				"WrongChoice2": "WRONG CHOICE",
+				"GARDNER": "GARDNER",
+				"WrongChoice3": "WRONG CHOICE",
+				"WrongChoice4": "WRONG CHOICE",
+				"RemberCantHide1": "REMEMBER...",
+				"RemberCantHide2": "YOU CAN'T HIDE",
+				"RemberCantHide3": "YOUR UN-SECRET BALLOT. SO",
+				"RememberVoteWinner1": "REMEMBER...",
+				"RememberVoteWinner2": "TO VOTE FOR",
+				"RememberVoteWinner3": "THE WINNER"
+			}
+		}
+	}
+}
