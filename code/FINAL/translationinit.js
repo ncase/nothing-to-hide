@@ -3,7 +3,7 @@ var scripts= document.getElementsByTagName('script');
 var path= scripts[scripts.length-1].src.split('?')[0];      // remove any ?query
 var translationscriptdir= path.split('/').slice(0, -1).join('/')+'/';  // remove last filename part of path
 
-//var translationscriptdir="/nothing-to-hide/code/FINAL/";
+var langs = ['en', 'de', 'fr', 'it', 'ru', 'nl'];
 
 function translationinit(onInitAction){
 	i18n.init({
@@ -14,7 +14,8 @@ function translationinit(onInitAction){
 				//set to false for production use
 				debug: true,
 				//set fallback language to English
-				fallbackLng: 'en'
+				fallbackLng: 'en',
+				supportedLngs: langs
 			}, onInitAction);
 }
 
@@ -25,6 +26,8 @@ function translationinit(onInitAction){
  */
 function getLC(){
 	var lang = i18n.lng();
+	if (langs.indexOf(lang)==-1)
+		{ lang="en"; }
 	return lang.substring(0,2);
 }
 
