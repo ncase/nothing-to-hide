@@ -2,13 +2,13 @@
 	"translator": "Airon90",
 	"app": {
 		"name": "Nulla da nascondere",
-		"subtitle": "an anti-stealth game where you are your own watchdog.",
-		"longtitle": "Nothing To Hide: an anti-stealth game where you are your own watchdog."
+		"subtitle": "un gioco anti-stealth dove tu sei il cane da guardia di te stesso.",
+		"longtitle": "Niente da nascondere: un gioco anti-stealth dove tu sei il cane da guardia di te stesso.."
 	},
 	"menu": {
 		"play": "GIOCA",
 		"support": "SOSTIENI E CONDIVIDI",
-		"uncopyright": "NON-COPYRIGHT",
+		"uncopyright": "SENZA-COPYRIGHT",
 		"credits": "RICONOSCIMENTI"
 	},
 	"dialog": {
@@ -16,16 +16,16 @@
 			"title": "GRAZIE PER GIOCARE A QUESTA DEMO!",
 			"staytuned": [
 				"Sii eccitato. Questo non e` nemmeno un decimo di cio` che  sara` il gioco completo!",
-				"On the downside... this wasn't even a tenth of what the full game will be.",
-				"We've got a long way to go, and we need your help."
+				"Il lato negativo... questo non e` nemmeno un decimo di cio` che  sara` il gioco completo.",
+				"Abbiamo una strada lunga da percorrere, e abbiamo bisogno del tuo aiuto."
 			],
-			"backthisgame": "back this game",
+			"backthisgame": "sostieni questo gioco",
 			"whycrowdfunding": [
 				"Perche' il crowdfunding? Beh, questo gioco e` open source non-protetto da copyright.",
-				"We're built for the public, and backed by the public!",
-				"And I know this is kind of ironic, being a satire of social media and all, but..."
+				"Stiamo costruendp per il pubblico, sostenuti dal pubblico!",
+				"E so che suona come ironico, esssendo una satira sui social media e tutto il resto, ma..."
 			],
-			"thanksdissident": "Grazie mille, dissidente, a te!"
+			"thanksdissident": "Grazie mille, dissidente, grazie a te!"
 		},
 		"uncopyright": {
 			"title": "NULLA DA NASCONDERE HA NULLA DA NASCONDERE",
@@ -270,6 +270,7 @@
 				"Time2": "2044 PST (1 MIN AGO)",
 				"Crime1": "CRIME:",
 				"Crime2": "HIDING FROM CAMERA",
+				"Status1:": "STATUS:",
 				"Status1": "STATUS:",
 				"Status2": "TRANQUILIZED (POSSIBLE OVERDOSE)"
 			},
@@ -296,8 +297,11 @@
 				"ThanksForSurveillance4": "SURVEILLANCE"
 			},
 			"tut_power": {
+				"ActiveSlidewalks1": "SOME °EYES WILL ACTIVATE SOME SLIDEWALKS",
 				"ActiveSlidewalks1": "SOME °EYES",
 				"ActiveSlidewalks2": "WILL ACTIVATE",
+				"ActiveSlidewalks3": "Only when they see",
+				"ActiveSlidewalks4": "SOMEBODY"
 				"ActiveSlidewalks3": "SOME SLIDEWALKS",
 				"ActiveSlidewalks4": "Only when they see",
 				"ActiveSlidewalks5": "SOMEBODY"
@@ -319,6 +323,8 @@
 			},
 			"tut_walk": {
 				"Walking": "WALKING",
+				"Arrow": "ARROW",
+				"Click": "CLICK",
 				"ArrowKeys1": "ARROW",
 				"ArrowKeys2": "KEYS",
 				"OR": "- - - - - OR - - - - - - ",

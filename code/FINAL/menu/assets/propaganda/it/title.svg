@@ -93,7 +93,7 @@
            sodipodi:role="line"
            data-i18n="app.name"
            textLength="798" lengthAdjust="spacingAndGlyphs"
-           dx="0">Nulla da nascondere</tspan></text>
+           dx="0"></tspan></text>
       <rect
          y="845.29626"
          x="285.15442"
@@ -115,7 +115,7 @@
            id="tspan3017-6"
            data-i18n="app.subtitle"
 			textLength="798" lengthAdjust="spacingAndGlyphs"
-           sodipodi:role="line">an anti-stealth game where you are your own watchdog.</tspan></text>
+           sodipodi:role="line"></tspan></text>
     </g>
   </g>
 </svg>

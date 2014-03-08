@@ -89,7 +89,7 @@
 	   lengthAdjust="spacingAndGlyphs"
               data-i18n="images.propaganda.stream_wall_2.CriminalNeutralized"
 
-       style="font-size:43.86601257px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Monospace;-inkscape-font-specification:Monospace">CRIMINAL NEUTRALIZED</tspan></text>
+       style="font-size:43.86601257px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Monospace;-inkscape-font-specification:Monospace"></tspan></text>
   <rect
      style="fill:#000000;fill-opacity:1;stroke:none"
      id="rect4336"
@@ -111,7 +111,7 @@
        data-i18n="images.propaganda.stream_wall_2.Name1"
 
        style="font-size:18.97385788px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;letter-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace"
-       id="tspan4289">NAME:</tspan></text>
+       id="tspan4289"></tspan></text>
   <text
      xml:space="preserve"
      style="font-size:41.78479004px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
@@ -126,7 +126,7 @@
               data-i18n="images.propaganda.stream_wall_2.Name2"
 
        style="font-size:18.8031559px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;letter-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace"
-       id="tspan4289-0">&quot;NOBODY&quot;</tspan><tspan
+       id="tspan4289-0"></tspan><tspan
        sodipodi:role="line"
        x="482.10229"
        y="130.57915"
@@ -145,7 +145,7 @@
        y="131.95642"
        data-i18n="images.propaganda.stream_wall_2.Time1"
        style="font-size:18.97385788px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;letter-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace"
-       id="tspan4289-2">TIME:</tspan></text>
+       id="tspan4289-2"></tspan></text>
   <text
      xml:space="preserve"
      style="font-size:41.78479004px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
@@ -159,7 +159,7 @@
        y="130.29291"
        data-i18n="images.propaganda.stream_wall_2.Time2"
        style="font-size:18.8031559px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;letter-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace"
-       id="tspan4330-2">2044 PST (1 MIN AGO)</tspan><tspan
+       id="tspan4330-2"></tspan><tspan
        sodipodi:role="line"
        x="482.31219"
        y="153.79686"
@@ -180,7 +180,7 @@
        data-i18n="images.propaganda.stream_wall_2.Crime1"
        style="font-size:18.97385788px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;letter-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace"
               textLength="75" lengthAdjust="spacingAndGlyphs"
-       id="tspan4289-2-3">CRIME:</tspan></text>
+       id="tspan4289-2-3"></tspan></text>
   <text
      xml:space="preserve"
      style="font-size:41.78479004px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
@@ -195,7 +195,7 @@
               data-i18n="images.propaganda.stream_wall_2.Crime2"
 
        style="font-size:18.8031559px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;letter-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace"
-       id="tspan4332-2-1">HIDING FROM CAMERA</tspan></text>
+       id="tspan4332-2-1"></tspan></text>
 
 
   <text
@@ -212,7 +212,7 @@
               data-i18n="images.propaganda.stream_wall_2.Status1"
 
        style="font-size:18.97385788px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:end;letter-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace"
-       id="tspan4289-2-3-2">STATUS:</tspan></text>
+       id="tspan4289-2-3-2"></tspan></text>
   <text
      xml:space="preserve"
      style="font-size:41.78479004px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
@@ -227,5 +227,5 @@
                      data-i18n="images.propaganda.stream_wall_2.Status2"
 
        style="font-size:18.8031559px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;letter-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace"
-       id="tspan4334-6-2-8">TRANQUILIZED (POSSIBLE OVERDOSE)</tspan></text>
+       id="tspan4334-6-2-8"></tspan></text>
 </svg>

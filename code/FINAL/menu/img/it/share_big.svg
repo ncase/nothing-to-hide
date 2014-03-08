@@ -430,7 +430,7 @@ QmCC
          data-i18n="images.general.tweet"
 		textLength="70"
 		lengthAdjust="spacingAndGlyphs"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">TWEET</tspan></text>
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
     <rect
        style="fill:#33b3da;fill-opacity:1;stroke:none"
        id="rect3000-4"
@@ -454,7 +454,7 @@ QmCC
          data-i18n="images.general.tweet"
 		textLength="70"
 		lengthAdjust="spacingAndGlyphs"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">TWEET</tspan></text>
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
     <rect
        style="fill:#3b5998;fill-opacity:1;stroke:none"
        id="rect3000-4-8"
@@ -478,7 +478,7 @@ QmCC
          data-i18n="images.general.share"
 		textLength="60"
 		lengthAdjust="spacingAndGlyphs"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">SHARE</tspan></text>
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
     <rect
        style="fill:#627aac;fill-opacity:1;stroke:none"
        id="rect3000-4-8-1"
@@ -502,6 +502,6 @@ QmCC
          data-i18n="images.general.share"
 		textLength="60"
 		lengthAdjust="spacingAndGlyphs"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">SHARE</tspan></text>
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
   </g>
 </svg> 

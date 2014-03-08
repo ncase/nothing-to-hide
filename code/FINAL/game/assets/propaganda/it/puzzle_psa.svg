@@ -109,7 +109,7 @@
        y="-777.4032"
        style="font-size:30px;line-height:80.00000119%"
             data-i18n="images.propaganda.puzzle_psa.PatriotPSA1"
-       id="tspan3039">PATRIOT SERVICE</tspan><tspan
+       id="tspan3039"></tspan><tspan
        sodipodi:role="line"
        x="5.3275847"
        y="-753.4032"
@@ -128,7 +128,7 @@
        y="-753.34839"
        style="font-size:30px;line-height:80.00000119%"
                    data-i18n="images.propaganda.puzzle_psa.PatriotPSA2"
-       id="tspan4807-3">ANOUNCEMENT</tspan></text>
+       id="tspan4807-3"></tspan></text>
   <g
      id="g4952">
     <text
@@ -143,7 +143,7 @@
          x="11.886215"
          id="tspan4763-3-8"
                    data-i18n="images.propaganda.puzzle_psa.WatchWhatYouSay1"
-         sodipodi:role="line">WATCH</tspan></text>
+         sodipodi:role="line"></tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4761-1-1-0"
@@ -156,7 +156,7 @@
          x="13.821518"
          id="tspan4763-3-2-6"
                    data-i18n="images.propaganda.puzzle_psa.WatchWhatYouSay2"
-         sodipodi:role="line">WHAT YOU</tspan></text>
+         sodipodi:role="line"></tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4761-1-4-30"
@@ -169,7 +169,7 @@
          x="13.547596"
          id="tspan4763-3-7-9"
                    data-i18n="images.propaganda.puzzle_psa.WatchWhatYouSay3"
-         sodipodi:role="line">SAY</tspan></text>
+         sodipodi:role="line"></tspan></text>
   </g>
 
   <g
@@ -186,7 +186,7 @@
          x="311.61221"
          id="tspan4763-3-28"
                    data-i18n="images.propaganda.puzzle_psa.WatchWhatYouHear1"
-         sodipodi:role="line">WATCH</tspan></text>
+         sodipodi:role="line"></tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4761-1-1-7"
@@ -199,7 +199,7 @@
          x="313.54752"
          id="tspan4763-3-2-7"
 data-i18n="images.propaganda.puzzle_psa.WatchWhatYouHear2"
-         sodipodi:role="line">WHAT YOU</tspan></text>
+         sodipodi:role="line"></tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4761-1-4-3"
@@ -212,7 +212,7 @@ data-i18n="images.propaganda.puzzle_psa.WatchWhatYouHear2"
          x="312.72565"
          id="tspan4763-3-7-5"
 data-i18n="images.propaganda.puzzle_psa.WatchWhatYouHear3"
-         sodipodi:role="line">HEAR</tspan></text>
+         sodipodi:role="line"></tspan></text>
   </g>
 
   <g
@@ -229,7 +229,7 @@ data-i18n="images.propaganda.puzzle_psa.WatchWhatYouHear3"
          x="561.74048"
          id="tspan4763-3"
 data-i18n="images.propaganda.puzzle_psa.WatchWhatYouWatch1"
-         sodipodi:role="line">WATCH</tspan></text>
+         sodipodi:role="line"></tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4761-1-1"
@@ -242,7 +242,7 @@ data-i18n="images.propaganda.puzzle_psa.WatchWhatYouWatch1"
          x="563.67578"
          id="tspan4763-3-2"
 data-i18n="images.propaganda.puzzle_psa.WatchWhatYouWatch2"
-         sodipodi:role="line">WHAT YOU</tspan></text>
+         sodipodi:role="line"></tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4761-1-4"
@@ -255,7 +255,7 @@ data-i18n="images.propaganda.puzzle_psa.WatchWhatYouWatch2"
          x="562.30597"
          id="tspan4763-3-7"
 data-i18n="images.propaganda.puzzle_psa.WatchWhatYouWatch3"
-         sodipodi:role="line">WATCH</tspan></text>
+         sodipodi:role="line"></tspan></text>
   </g>
 
 </svg>

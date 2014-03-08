@@ -297,7 +297,7 @@ IiIiIpnYkSIiIiIiIpLp/wOlbaUuZh9xAwAAAABJRU5ErkJggg==
        x="4.165225"
        y="139.96399"
                       data-i18n="images.propaganda.stream_wall.SecureLeft"
-       style="font-size:12.75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Monospace;-inkscape-font-specification:Monospace">SECURE       SECURE       SECURE       SECURE</tspan></text>
+       style="font-size:12.75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Monospace;-inkscape-font-specification:Monospace"></tspan></text>
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#616161;fill-opacity:1;stroke:none;font-family:Sans"
@@ -310,7 +310,7 @@ IiIiIpnYkSIiIiIiIpLp/wOlbaUuZh9xAwAAAABJRU5ErkJggg==
        x="52.206837"
        y="139.82098"
        data-i18n="images.propaganda.stream_wall.StatusLeft"
-       style="font-size:12.75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#616161;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace">STATUS:      STATUS:      STATUS:</tspan></text>
+       style="font-size:12.75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#616161;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace"></tspan></text>
   <rect
      style="fill:#000000;fill-opacity:1;stroke:none"
      id="rect4382-2"
@@ -334,7 +334,7 @@ IiIiIpnYkSIiIiIiIpLp/wOlbaUuZh9xAwAAAABJRU5ErkJggg==
                    textLength="260"
 	   lengthAdjust="spacingAndGlyphs"
        data-i18n="images.propaganda.stream_wall.SecureRight"
-       style="font-size:12.75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Monospace;-inkscape-font-specification:Monospace">SECURE       SECURE       SECURE</tspan></text>
+       style="font-size:12.75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Monospace;-inkscape-font-specification:Monospace"></tspan></text>
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#616161;fill-opacity:1;stroke:none;font-family:Sans"
@@ -351,6 +351,6 @@ textLength="260"
             textLength="260"
 	   lengthAdjust="spacingAndGlyphs"
        data-i18n="images.propaganda.stream_wall.StatusRight"
-       style="font-size:12.75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#616161;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace">STATUS:      STATUS:      STATUS:      STATUS:</tspan></text>
+       style="font-size:12.75px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#616161;fill-opacity:1;font-family:Monospace;-inkscape-font-specification:Monospace"></tspan></text>
 -->
 </svg>
