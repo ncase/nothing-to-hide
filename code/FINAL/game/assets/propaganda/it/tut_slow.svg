@@ -94,7 +94,7 @@
        y="67"
 		textLength="200"  lengthAdjust="spacingAndGlyphs"
                   data-i18n="images.propaganda.tut_slow.SlowDown"
-       style="font-size:58.08776855px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:58.08776855px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">SLOW DOWN</tspan></text>
 
   <text
      xml:space="preserve"
@@ -112,7 +112,7 @@
        		textLength="200"  lengthAdjust="spacingAndGlyphs"
                          data-i18n="images.propaganda.tut_slow.ForNarrowPaths"
 
-       style="font-size:31.81307411px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:31.81307411px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">For narrow paths</tspan></text>
   <g
      id="g3246">
     <rect
@@ -146,7 +146,7 @@
        textLength="100"  lengthAdjust="spacingAndGlyphs"
                   data-i18n="images.propaganda.tut_slow.ShiftKey"
 
-       style="font-size:30.33354759px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:30.33354759px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">SHIFT KEY</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#5a636e;fill-opacity:1;stroke:none;font-family:Sans"
@@ -164,7 +164,7 @@
 
                   data-i18n="images.propaganda.tut_slow.OR"
 
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:-0.5px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:-0.5px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">- - - - - - - OR - - - - - - -</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:39.032444px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -182,7 +182,7 @@
               textLength="100"  lengthAdjust="spacingAndGlyphs"
 
                   data-i18n="images.propaganda.tut_slow.MoveMouseSlowly1"
-       style="font-size:24.39527702px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:24.39527702px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">MOVE MOUSE</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:39.15684891px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -199,5 +199,5 @@
        y="352"
               textLength="100"  lengthAdjust="spacingAndGlyphs"
                   data-i18n="images.propaganda.tut_slow.MoveMouseSlowly2"
-       style="font-size:36.22008514px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:36.22008514px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">SLOWLY</tspan></text>
 </svg>

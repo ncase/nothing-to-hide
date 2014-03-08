@@ -124,7 +124,7 @@
                    textLength="190"
 	   lengthAdjust="spacingAndGlyphs"
                    data-i18n="images.propaganda.tut_pickup.MovingIEyes"
-       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#202328;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#202328;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">MOVING °EYES</tspan></text>
      
   <text
      xml:space="preserve"
@@ -138,7 +138,7 @@
        y="101.89363"
                    data-i18n="images.propaganda.tut_pickup.SpaceKey"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:94.99999881%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan3905-8"></tspan></text>
+       id="tspan3905-8">SPACE KEY</tspan></text>
 
   <text
      xml:space="preserve"
@@ -153,7 +153,7 @@
        x="463.30109"
        y="139.70474"
                    data-i18n="images.propaganda.tut_pickup.Or"
-       style="font-size:30.82215309px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:30.82215309px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#5a636e;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">- - - - - - OR - - - - - - </tspan></text>
   <text
      xml:space="preserve"
      style="font-size:45.2109108px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -167,7 +167,7 @@
        y="208.2206"
                    data-i18n="images.propaganda.tut_pickup.ClickCircle1"
        style="font-size:36.16872787px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan4045"></tspan></text>
+       id="tspan4045">CLICK</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:41.15206909px;font-style:normal;font-weight:normal;line-height:80.00000119%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -181,7 +181,7 @@
        y="215.97644"
                    data-i18n="images.propaganda.tut_pickup.ClickCircle2"
        style="font-size:32.92165375px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan4045-3"></tspan></text>
+       id="tspan4045-3">CIRCLE</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:41.54393387px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -199,7 +199,7 @@
        textLength="190"
 	   lengthAdjust="spacingAndGlyphs"
                    data-i18n="images.propaganda.tut_pickup.ToPickupDrop"
-       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">TO PICKUP/DROP</tspan></text>
        
   <text
      xml:space="preserve"
@@ -217,7 +217,7 @@
 	   lengthAdjust="spacingAndGlyphs"
                    data-i18n="images.propaganda.tut_pickup.ThanksForSurveillance1"
        style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan3905"></tspan></text>
+       id="tspan3905">THANK YOU FOR</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:32.85640717px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#202328;fill-opacity:1;stroke:none;font-family:Sans"
@@ -234,7 +234,7 @@
 	   lengthAdjust="spacingAndGlyphs"
                    data-i18n="images.propaganda.tut_pickup.ThanksForSurveillance2"
        style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan3905-7"></tspan></text>
+       id="tspan3905-7">PARTICIPATING</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:32.85640717px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#202328;fill-opacity:1;stroke:none;font-family:Sans"
@@ -251,7 +251,7 @@
 	   lengthAdjust="spacingAndGlyphs"
                    data-i18n="images.propaganda.tut_pickup.ThanksForSurveillance3"
        style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan3905-7-3"></tspan></text>
+       id="tspan3905-7-3">IN YOUR OWN</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:32.85640717px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#202328;fill-opacity:1;stroke:none;font-family:Sans"
@@ -268,5 +268,5 @@
 	   lengthAdjust="spacingAndGlyphs"
                    data-i18n="images.propaganda.tut_pickup.ThanksForSurveillance4"
        style="font-size:36.9634552px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       id="tspan3905-7-3-7"></tspan></text>
+       id="tspan3905-7-3-7">SURVEILLANCE</tspan></text>
 </svg>

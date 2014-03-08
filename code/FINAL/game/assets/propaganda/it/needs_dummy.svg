@@ -134,7 +134,7 @@
        data-i18n="images.propaganda.needs_dummy.YesMySignal1"
        textLength="220"
 	   lengthAdjust="spacingAndGlyphs"
-       style="font-size:48.75694275px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:100%;letter-spacing:2.6594696px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:48.75694275px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:100%;letter-spacing:2.6594696px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">YES, MY SIGNAL</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:100%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -147,7 +147,7 @@
        y="109.82422"
        id="tspan3816-7"
        data-i18n="images.propaganda.needs_dummy.YesMySignal2"
-       style="font-size:55px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:100%;letter-spacing:0px;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium;fill:#ffffff"></tspan></text>
+       style="font-size:55px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:100%;letter-spacing:0px;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium;fill:#ffffff">DEPLOYS</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:38.88963318px;font-style:normal;font-weight:normal;line-height:100%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -161,7 +161,7 @@
        y="275.08615"
        id="tspan3816-8"
        data-i18n="images.propaganda.needs_dummy.YesMySignal3"
-       style="font-size:43.75083542px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:100%;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:43.75083542px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:100%;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">FOR ALL THE</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:100%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -178,5 +178,5 @@
        data-i18n="images.propaganda.needs_dummy.YesMySignal4"
        textLength="220"
 	   lengthAdjust="spacingAndGlyphs"
-       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:0%;letter-spacing:0px;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium;fill:#ffffff"></tspan></text>
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:0%;letter-spacing:0px;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium;fill:#ffffff">GIRLS &amp; BOYS!</tspan></text>
 </svg>

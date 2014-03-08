@@ -114,7 +114,7 @@
        textLength="300"
 	   lengthAdjust="spacingAndGlyphs"
        data-i18n="images.propaganda.questions.DoNotAsk"
-       style="font-size:59.41539001px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#363b43;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:59.41539001px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#363b43;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">DO NOT ASK BACK</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:38.83692932px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
@@ -132,7 +132,7 @@
        textLength="450"
 	   lengthAdjust="spacingAndGlyphs"
        data-i18n="images.propaganda.questions.KeepYouSafe"
-       style="font-size:33.01139069px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>  
+       style="font-size:33.01139069px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">TO KEEP YOU SAFE, THE MINISTRY KEEPS SECRETS</tspan></text>  
        
   <text
      xml:space="preserve"
@@ -151,7 +151,7 @@
 	   lengthAdjust="spacingAndGlyphs"
        data-i18n="images.propaganda.questions.EspeciallyYours"
 
-       style="font-size:70px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#cc2727;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:70px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#cc2727;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">ESPECIALLY YOURS!</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cc2727;fill-opacity:1;stroke:none;font-family:Sans"
@@ -165,7 +165,7 @@
        y="175.26953"
               data-i18n="images.propaganda.questions.Q:"
 
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#cc2727;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#cc2727;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">Q:</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:38.61963654px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
@@ -179,7 +179,7 @@
        x="494.07587"
        y="170.40915"
        data-i18n="images.propaganda.questions.SafeFromWhat"
-       style="font-size:38.61963654px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#666666;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:38.61963654px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#666666;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">SAFE FROM WHAT?</tspan></text>
 
   <text
      xml:space="preserve"
@@ -194,7 +194,7 @@
        y="176.5"
         data-i18n="images.propaganda.questions.A:"
 
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#cc2727;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#cc2727;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">A:</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:38.61963654px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#666666;fill-opacity:1;stroke:none;font-family:Sans"
@@ -209,5 +209,5 @@
        y="170.40915"
         data-i18n="images.propaganda.questions.ThatsSecret"
 
-       style="font-size:38.61963654px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#666666;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:38.61963654px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#666666;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">THAT'S SECRET.</tspan></text>
 </svg>

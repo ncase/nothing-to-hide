@@ -79,7 +79,7 @@
        id="tspan3325-6"
 		textLength="300"
 		lengthAdjust="spacingAndGlyphs"
-       data-i18n="images.general.controls.scrolldown"></tspan></text>
+       data-i18n="images.general.controls.scrolldown">SCROLL DOWN</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:52px;font-style:normal;font-weight:normal;text-align:start;line-height:85.00000238%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -96,7 +96,7 @@
        id="tspan3325"
        textLength="140"
 	   lengthAdjust="spacingAndGlyphs"
-       data-i18n="images.general.controls.keys"></tspan></text>
+       data-i18n="images.general.controls.keys">¬¬KEYS¬¬</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:35px;font-style:normal;font-weight:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#5a636e;fill-opacity:1;stroke:none;font-family:Sans"
@@ -113,7 +113,7 @@
 		textLength="60"
 		lengthAdjust="spacingAndGlyphs"
        style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:start;letter-spacing:-0.78324729px;text-anchor:start;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
-       data-i18n="images.general.or"></tspan></text>
+       data-i18n="images.general.or">¬OR¬</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:52px;font-style:normal;font-weight:normal;text-align:start;line-height:85.00000238%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
@@ -130,7 +130,7 @@
        id="tspan3325-8"
 		textLength="140"
 		lengthAdjust="spacingAndGlyphs"
-       data-i18n="images.general.controls.mouse"></tspan></text>
+       data-i18n="images.general.controls.mouse">¬MOUSE¬</tspan></text>
   <image
      y="0"
      x="0"

@@ -98,7 +98,7 @@
        textLength="148"
 	   lengthAdjust="spacingAndGlyphs"
            data-i18n="images.propaganda.pickup_lookout.LookOut1"
-       style="font-size:37.50026321px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#6c7783;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:37.50026321px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#6c7783;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">LOOK OUT FOR</tspan></text>
   <text
      transform="scale(0.98368928,1.0165812)"
      xml:space="preserve"
@@ -116,5 +116,5 @@
        textLength="148"
 	   lengthAdjust="spacingAndGlyphs"
                   data-i18n="images.propaganda.pickup_lookout.LookOut2"
-       style="font-size:54.22224045px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#6c7783;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"></tspan></text>
+       style="font-size:54.22224045px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;fill:#6c7783;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">YOURSELF</tspan></text>
 </svg>
