@@ -3,7 +3,7 @@ var scripts= document.getElementsByTagName('script');
 var path= scripts[scripts.length-1].src.split('?')[0];      // remove any ?query
 var translationscriptdir= path.split('/').slice(0, -1).join('/')+'/';  // remove last filename part of path
 
-var langs = ['en', 'de', 'fr', 'it', 'ru', 'nl','sv'];
+var langs = ['en', 'de', 'fr', 'it', 'ru', 'nl','sv','cs'];
 
 function translationinit(onInitAction){
 	i18n.init({
