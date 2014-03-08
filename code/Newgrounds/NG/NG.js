@@ -96,12 +96,17 @@ NG.login = function(){
 /*** NG Medals ***/
 
 NG.getMedal = function(medalName){
+
+	if(!NG.medals) return;
+	
 	return NG.medals.filter(function(medal){
 		return( medal.medal_name == medalName );
 	})[0];
 };
 
 NG.unlockMedal = function(medalName){
+
+	if(!NG.medals) return;
 
 	// Get Medal ID
 	var medal = NG.getMedal(medalName);
