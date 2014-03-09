@@ -1,5 +1,5 @@
 {
-    "traductor": "Cuerdo",
+    "translator": "Cuerdo",
     "app": {
         "name": "Nada que esconder",
         "subtitle": "un juego para cazar furtivos en el que te vigilas a ti mismo.",
@@ -118,7 +118,7 @@
     },
     "dialogue": {
         "postedjustnow": "publicado ahora mismo",
-        "nivel": {
+        "level": {
             "intro": {
                 "nobodyNeedsMe": "Nadie me necesita...",
                 "runningAway": "Pues supongo que huir&eacute; a Canad&aacute;."
