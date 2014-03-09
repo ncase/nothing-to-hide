@@ -194,27 +194,26 @@
      x="517.37683"
      y="172.1666"
      id="text3300-3-7"
-      textLength="70"  lengthAdjust="spacingAndGlyphs"
+             textLength="170"  lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="85.000002%"><tspan
        sodipodi:role="line"
        x="517.37683"
        y="172.1666"
             data-i18n="images.propaganda.tut_walk.WalkingMouse1"
-              textLength="70"  lengthAdjust="spacingAndGlyphs"
-
+             textLength="170"  lengthAdjust="spacingAndGlyphs"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:85.00000238%;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan3325-6">CLICK</tspan><tspan
        sodipodi:role="line"
        x="517.37683"
        y="197.6666"
-             textLength="70"  lengthAdjust="spacingAndGlyphs"
+             textLength="170"  lengthAdjust="spacingAndGlyphs"
        data-i18n="images.propaganda.tut_walk.WalkingMouse2"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:85.00000238%;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan3353">&amp; HOLD</tspan><tspan
        sodipodi:role="line"
        x="517.37683"
        y="223.1666"
-             textLength="70"  lengthAdjust="spacingAndGlyphs"
+		textLength="170"  lengthAdjust="spacingAndGlyphs"
        data-i18n="images.propaganda.tut_walk.WalkingMouse3"
        style="font-size:30px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:85.00000238%;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan3355">MOUSE</tspan></text>

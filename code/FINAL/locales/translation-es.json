@@ -155,10 +155,10 @@
         "general": {
             "controls": {
                 "scrolldown": "AVANZAR",
-                "mouse": "Â¬RATÓNÂ¬",
-                "keys": "Â¬Â¬TECLASSÂ¬Â¬"
+                "mouse": "¬¬RATÓN¬¬",
+                "keys": "¬¬TECLAS¬¬"
             },
-            "or": "Â¬OÂ¬",
+            "or": "¬O¬",
             "tweet": "TUITEAR",
             "share": "COMPARTIR",
             "THEWALL": "EL MURO"
@@ -168,8 +168,8 @@
                 "donthelp1": "NO AYUDAR",
                 "donthelp2": "OCULTOS",
                 "fourthAmendment1": "pero la cuarta",
-                "fourthAmendment2": "enmienda",
-                "fourthAmendment3": "nos protege"
+                "fourthAmendment2": "enmienda nos",
+                "fourthAmendment3": "protege ¬¬¬"
             },
             "error": {
                 "ERROR": "ERROR:",
@@ -180,9 +180,9 @@
             },
             "intro_pics": {
                 "posted4DaysAgo": "publicado hace 4 días",
-                "Message1": "Gracias por los 4.000 millones de seguidores! Estoy tan",
-                "Message2": "contenta! Vota a mi padre en las elecciones",
-                "Message3": "sin voto secreto! Soy tan feliz. Jaja! Ja. ja..."
+                "Message1": "Gracias por los 4000 millones de seguidores!",
+                "Message2": "Estoy tan contenta! Vota a mi padre en las",
+                "Message3": "elecciones sin voto secreto! Soy tan feliz. Ja."
             },
             "needs_dummy": {
                 "YesMySignal1": "SÍ, MI SEÑAL",
@@ -250,7 +250,7 @@
                 "SmileForTheCam": "SONRÍE A LA CÁMARA",
                 "HidingIsCriminal": "ESCONDERSE ES UN CRIMEN",
                 "OnlyCriminals": "SOLO LOS CRIMINALES TIENEN ALGO QUE ESCONDER",
-                "StayAlwaysInSight": "MANTENTE SIEMPRE A LA VISTA DE POR LO MENOS UN OJO Â°"
+                "StayAlwaysInSight": "MANTENTE SIEMPRE A LA VISTA DE POR LO MENOS UN °OJO"
             },
             "stream_wall": {
                 "StatusLeft": "ESTADO:      ESTADO:      ESTADO:",
@@ -280,7 +280,7 @@
                 "LookForLines3": "OSCURAS"
             },
             "tut_pickup": {
-                "MovingIEyes": "OJOS MÓVILES",
+                "MovingIEyes": "°OJOS MÓVILES",
                 "SpaceKey": "BARRA ESPACIADORA",
                 "Or": "- - - - - - O - - - - - - ",
                 "ClickCircle1": "PULSA SOBRE",
@@ -292,7 +292,7 @@
                 "ThanksForSurveillance4": "VIGILANCIA"
             },
             "tut_power": {
-                "ActiveSlidewalks1": "ALGUNOS OJOS",
+                "ActiveSlidewalks1": "ALGUNOS °OJOS",
                 "ActiveSlidewalks2": "ACTIVARÁN",
                 "ActiveSlidewalks3": "VÍAS RÁPIDAS",
                 "ActiveSlidewalks4": "Solo cuando veas a",
@@ -318,8 +318,8 @@
                 "ArrowKeys1": "FLECHAS",
                 "ArrowKeys2": "TECLADO",
                 "OR": "- - - - - O - - - - - -",
-                "WalkingMouse1": "CLIC",
-                "WalkingMouse2": "y MANTENER",
+                "WalkingMouse1": "CLIC y",
+                "WalkingMouse2": "MANTENER",
                 "WalkingMouse3": "RATÓN",
                 "LowTechTransportation1": "UNA FORMA DE TRANSPORTE",
                 "LowTechTransportation2": "PRIMITIVA"

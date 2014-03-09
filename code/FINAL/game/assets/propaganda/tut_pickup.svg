@@ -133,10 +133,14 @@
      x="553.04462"
      y="101.89363"
      id="text3300-8-6-6-9"
+       textLength="150"
+	   lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="94.999999%"><tspan
        sodipodi:role="line"
        x="553.04462"
        y="101.89363"
+       textLength="150"
+	   lengthAdjust="spacingAndGlyphs"
                    data-i18n="images.propaganda.tut_pickup.SpaceKey"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:94.99999881%;letter-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
        id="tspan3905-8">SPACE KEY</tspan></text>

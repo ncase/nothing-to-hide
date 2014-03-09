@@ -76,11 +76,16 @@
      x="4.2062283"
      y="45.045319"
      id="text3300-8"
+            textLength="245"
+	   lengthAdjust="spacingAndGlyphs"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3302-4"
        x="4.2062283"
        y="45.045319"
+              textLength="245"
+	   lengthAdjust="spacingAndGlyphs"
                                  data-i18n="images.propaganda.tut_reminder.StayInSight"
-       style="font-size:60px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium">STAY IN SIGHT</tspan></text>
+       style="font-size:60px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;letter-spacing:0px;fill:#ffffff;font-family:Ostrich Sans;-inkscape-font-specification:Ostrich Sans Medium"
+       >STAY IN SIGHT</tspan></text>
 </svg>

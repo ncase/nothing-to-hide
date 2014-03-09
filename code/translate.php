@@ -6,7 +6,7 @@
 define("FONTBASE64", shell_exec("base64 -w 0 ./FINAL/fonts/OstrichSans.woff"));
 
 //TODO replace by file list which is read from "locales" directory instead of a static list
-$langList=array("en","de","nl","ru","fr","it","sv","cs");
+$langList=array("en","de","nl","ru","fr","it","sv","cs","es");
 
 /*
 To add a SVG graphic for translation
