@@ -2,8 +2,8 @@
     "translator": "Cuerdo",
     "app": {
         "name": "Nada que esconder",
-        "subtitle": "un juego de vigilancia en el que eres tu propio perro guardian.",
-        "longtitle": "Nada que esconder: un juego de vigilancia en el que eres tu propio perro guardian."
+        "subtitle": "un juego de vigilancia en el que eres tu propio perro guardián.",
+        "longtitle": "Nada que esconder: un juego de vigilancia en el que eres tu propio perro guardián."
     },
     "menu": {
         "play": "JUGAR",
@@ -13,41 +13,41 @@
     },
     "dialog": {
         "fund": {
-            "title": "GRACIAS POR JUGAR ESTA DEMO!",
+            "title": "¡GRACIAS POR JUGAR ESTA DEMO!",
             "staytuned": [
-                "Buenas noticias! Esto no es ni la décima parte de lo que será el juego completo!",
+                "Buenas noticias. ¡Esto no es ni la décima parte de lo que será el juego completo!",
                 "La mala noticia es que esto no es ni la décima parte de lo que será el juego.",
                 "Nos queda mucho por hacer y necesitamos tu ayuda."
             ],
             "backthisgame": "apoya este juego",
             "whycrowdfunding": [
-                "Por qué crowdfunding? Este juego es de código abierto y no tiene derechos de autor.",
-                "El juego lo ha creado el pueblo para el pueblo!",
+                "¿Por qué crowdfunding? Este juego es de código abierto y no tiene derechos de autor.",
+                "¡El juego ha sido creado por el pueblo y para el pueblo!",
                 "Y sabemos que es irónico, al ser una sátira sobre los medios sociales, pero..."
             ],
-            "thanksdissident": "Gracias de nuevo, disidente!"
+            "thanksdissident": "¡Gracias de nuevo, disidente!"
         },
         "uncopyright": {
             "title": "NADA QUE ESCONDER NO TIENE NADA QUE ESCONDER",
             "linkdescription": [
                 "Somos",
-                "<a href='%s' target='_blank'>open source</a>,",
-                "<a href='%s' target='_blank'>diseño abierto</a>,",
+                "<a href='%s' target='_blank'>de código abierto</a>,",
+                "<a href='%s' target='_blank'>con diseño abierto</a>,",
                 "y con tu ayuda,",
                 "<a href='%s' target='_blank'>con financiación abierta</a>.",
-                "Pero sobretodo, sin copyright. Así es ",
+                "Pero sobre todo, sin copyright. Así es ",
                 "<a href='%s' target='_blank'>Cero derechos reservados</a>."
             ],
             "youarewelcometo": "Te invitamos a :",
             "piratethisgame": "- \"piratear\" este juego.",
             "recordandmonetize": "- Grabar y monetizar el juego.",
-            "rehostthisgame": "- Realojar el juego en tu sitio web.",
+            "rehostthisgame": "- Publicar el juego en tu sitio web.",
             "useartmusiccode": "- Utilizar los diseños, música y código en tus propios proyectos.",
             "makeamod": [
                 "- Hacer una modificación donde se sustituya al personaje principal por la Princesa Luna",
-                "de los dibujos animados Mi pequeño pony: La amistad es magía.",
-                "Bueno, es probable que en ese caso te meta un puro Hasbro.",
-                "Pero yo no."
+                "de los dibujos animados Mi pequeño pony: La amistad es magia.",
+                "Bueno, es probable que en ese caso recibas una demanda de Hasbro.",
+                "Pero no de nosotros."
             ],
             "givinguppower": "Al renunciar a nuestro \"poder\" sobre nuestro arte, nuestro arte puede tener más poder."
         },
@@ -76,7 +76,7 @@
             "minutesago": "hace un minuto",
             "minutesago_plural": "hace __count__  minutos",
             "secondsago": "hace un segundo",
-            "secondsago_plural": "__count__  seconds ago"
+            "secondsago_plural": "hace __count__  segundos"
         }
     },
     "character": {
@@ -87,32 +87,32 @@
     },
     "cutscene": {
         "intro": [
-            "Poppy?",
+            "¿Poppy?",
             "Hola preciosa. No estés triste.",
-            "Está afectando a mi ránking de popularidad.",
-            "Se aproximan las primeras elecciones sin voto secreto. Es muy importante para la carrera de papá, necesito que publiques más fotos felices de ti misma en El muro. Por lo menos 400 al día, vale?",
+            "Eso afecta mi ránking de popularidad.",
+            "Se aproximan las primeras elecciones con voto no-secreto. Es muy importante para la carrera de papá, necesito que publiques más fotos felices de tí misma en El Muro. Por lo menos 400 al día, ¿vale?",
             "Por favor, Poppy... No quiero que los votantes piensen que soy un mal padre.",
-            "Bueno, buenas noches! <span>#DaddyDaughterMoment</span>",
+            "Bueno, ¡buenas noches! <span>#DaddyDaughterMoment</span>",
             "Yo... tengo que salir de aquí...",
-            "Papá estará mejor sin mi. Sus índices de popularidad™ también."
+            "Papá estará mejor sin mí. Sus índices de popularidad&trade; también."
         ],
         "end": [
-            "por favor, no estés muerto... o no!",
+            "por favor, no estés muerto... ¡oh no no no no no!",
             "Vale. Vale, vale. Idea.",
             "A veces papá me despierta así. Tal vez esto funcione...",
             "<span>#DaddyDaughterMoment</span>",
-            "Ah! En toda la cara! Tú...",
+            "¡Ah! ¡En toda la cara! Tú...",
             "lo siento",
-            "...me has salvado la vida! No te disculpes, eh!",
+            "...¡me has salvado la vida! No te disculpes, ¡eh!",
             "pues siento sentirlo",
-            "Espera, estamos en El muro?...",
+            "Espera, ¿estamos en El Muro?...",
             "\"Poppy Gardner publicó hace 1 minuto. A veces papá me despierta así. Tal vez esto funcione...\"",
             "Oh. Oh wow. El ministro Gardner se lo hace a su propia... wow.",
-            "<i>Bueeeno</i> si te hace sentir mejor, tu padre abusa psicológica y físicamente a toda la nación también.",
-            "\"Cuidado con lo que escuches, veas y <i>pienses.\"</i><br>Cuando no tienes donde esconderte, tenemos que esconder nuestra identidad propia. ",
-            "Puedo ayudarte a escaparte de él.",
-            "De hecho, tengo una aplicación para ello!",
-            "Exploit! La he hecho yo mismo. Simplemente pulsa sobre esta pantalla, serás borrada de El muro. Ya no serás Nadie, igual que yo.",
+            "<i>Bueeeno</i> si te hace sentir mejor, tu padre abusa psicológica y físicamente del resto de la población también.",
+            "\"Cuidado con lo que escuches, veas y <i>pienses.\"</i><br>Cuando no tenemos donde escondernos, tenemos que esconder nuestra identidad propia. ",
+            "Puedo ayudarte a escapar de él.",
+            "De hecho, ¡tengo una aplicación para ello!",
+            "¡Exploit! La he hecho yo mismo. Simplemente pulsa sobre esta pantalla, serás borrada de El muro. Ya no serás Nadie, igual que yo.",
             "Deja de actuar para la cámara. Empieza a ser tú misma."
         ]
     },
@@ -124,30 +124,30 @@
                 "runningAway": "Pues supongo que huiré a Canadá."
             },
             "pickup": {
-                "lookMySmile": "Mira! ahí está el post de campaña de papá. Mira mi sonrisa. :)",
+                "lookMySmile": "¡Mira! ahí está el post de campaña de papá. Mira mi sonrisa. :)",
                 "disciplinedToSmile": "Me castigaba cuando mi sonrisa no era lo suficientemente natural. :)"
             },
             "big_puzzle": {
-                "iWonder": "Me pregunto si estas leyes sobre no molestar a la gente... molestan a la gente?"
+                "iWonder": "Me pregunto si estas leyes sobre no molestar a la gente... ¿no molestarán a la gente?"
             },
             "conveyor": {
-                "myOwnWatchman": "Me pregunto... si soy mi propio vigilante... me estoy escondiendo de mi misma?"
+                "myOwnWatchman": "Me pregunto... si soy mi propio vigilante... ¿me estoy escondiendo de mí misma?"
             },
             "conveyor_2": {
-                "whyQuestionMarks": "Me pregunto... por qué uso tantos puntos suspensivos e interrogantes?",
+                "whyQuestionMarks": "Me pregunto... ¿por qué uso tantos puntos suspensivos e interrogantes?",
                 "havingAPrivateThought": "Creo que... así debe ser tener pensamientos privados. Es raro."
             },
             "power": {
-                "whatWasNoise": "Qué... qué es ese ruido?",
-                "looksUncomfortable": "Vaya... eso parece incomodo."
+                "whatWasNoise": "Qué... ¿qué es ese ruido?",
+                "looksUncomfortable": "Vaya... eso parece incómodo."
             },
             "power_puzzle": {
                 "poorNobodyOnlyIEye": "Pobre 'Nadie'. Creo que cogió el único iEye que le estaba mirando.",
                 "neverDoneThat": "Me alegro de no haberlo hecho nunca."
             },
             "nobody_needs_you": {
-                "onceInMyLife": "Por una vez en la vida... no me importa que otros intenten juzgarme! Yo... tengo que ayudar!",
-                "nobodyNeedsMe": "Nadie me necesita!"
+                "onceInMyLife": "Por una vez en la vida... ¡no me importa que otros intenten juzgarme! Yo... ¡tengo que ayudar!",
+                "nobodyNeedsMe": "¡'Nadie' me necesita!"
             }
         }
     },
@@ -155,7 +155,7 @@
         "general": {
             "controls": {
                 "scrolldown": "AVANZAR",
-                "mouse": "¬¬RATÓN¬¬",
+                "mouse": "¬RATÓN¬",
                 "keys": "¬¬TECLAS¬¬"
             },
             "or": "¬O¬",
@@ -169,20 +169,20 @@
                 "donthelp2": "OCULTOS",
                 "fourthAmendment1": "pero la cuarta",
                 "fourthAmendment2": "enmienda nos",
-                "fourthAmendment3": "protege ¬¬¬"
+                "fourthAmendment3": "protege"
             },
             "error": {
                 "ERROR": "ERROR:",
                 "AudienceNotFound1": "`PÚBLICO`",
                 "AudienceNotFound2": "NO ENCONTRADO",
-                "MeantForNobody1": "> este es el muro de",
-                "MeantForNobody2": "> NADIE"
+                "MeantForNobody1": "&gt; este es el muro de",
+                "MeantForNobody2": "&gt; NADIE"
             },
             "intro_pics": {
                 "posted4DaysAgo": "publicado hace 4 días",
-                "Message1": "Gracias por los 4000 millones de seguidores!",
-                "Message2": "Estoy tan contenta! Vota a mi padre en las",
-                "Message3": "elecciones sin voto secreto! Soy tan feliz. Ja."
+                "Message1": "¡Gracias por los 4000 millones de seguidores!",
+                "Message2": "¡Estoy tan contenta! Vota a mi padre en las",
+                "Message3": "elecciones con voto no-secreto! Soy tan feliz. ¡Ja Ja!. Ja. ja..."
             },
             "needs_dummy": {
                 "YesMySignal1": "SÍ, MI SEÑAL",
@@ -208,48 +208,48 @@
             },
             "pickup_gardner": {
                 "ProtectorPatriotPop": "PROTECTOR. PATRIOTA. POPULAR.",
-                "VoteGardner1": "CON TU VOTO NO SECRETO",
+                "VoteGardner1": "CON TU VOTO NO-SECRETO",
                 "VoteGardner2": "VOTA GARDNER"
             },
             "pickup_lookout": {
                 "LookOut1": "CUIDA",
-                "LookOut2": "DE TI MISMO"
+                "LookOut2": "DE TÍ MISMO"
             },
             "puzzle_mock": {
                 "RememberToBe": "RECUERDA SER",
                 "POPULAR": "POPULAR",
                 "PRETTY": "GUAPA",
                 "PATRIOTIC": "PATRIOTA",
-                "HowSelfWorth1": "CÓMO PUEDES SINO",
-                "HowSelfWorth2": "MEDIR TU",
-                "HowSelfWorth3": "PROPIO ESFUERZO?"
+                "HowSelfWorth1": "¿DE QUÉ OTRA MANERA",
+                "HowSelfWorth2": "PUEDES SABER",
+                "HowSelfWorth3": "CUÁNTO VALES?"
             },
             "puzzle_psa": {
                 "PatriotPSA1": "SERVICIO PATRIOTA",
                 "PatriotPSA2": "ANUNCIO",
-                "WatchWhatYouSay1": "VIGILA",
+                "WatchWhatYouSay1": "CUIDADO CON",
                 "WatchWhatYouSay2": "LO QUE",
                 "WatchWhatYouSay3": "DICES",
-                "WatchWhatYouHear1": "VIGILA",
+                "WatchWhatYouHear1": "CUIDADO CON",
                 "WatchWhatYouHear2": "LO QUE",
                 "WatchWhatYouHear3": "OYES",
-                "WatchWhatYouWatch1": "VIGILA",
+                "WatchWhatYouWatch1": "CUIDADO CON",
                 "WatchWhatYouWatch2": "LO QUE",
                 "WatchWhatYouWatch3": "VES"
             },
             "questions": {
                 "DoNotAsk": "NO PREGUNTES",
                 "KeepYouSafe": "EL GOBIERNO GUARDA SECRETOS PARA PROTEGERTE",
-                "EspeciallyYours": "ESPECIALMENTE LOS TUYOS!",
+                "EspeciallyYours": "¡ESPECIALMENTE LOS TUYOS!",
                 "Q:": "P:",
-                "SafeFromWhat": "PROTEGERNOS DE QUÉ?",
+                "SafeFromWhat": "¿PROTEGERNOS DE QUÉ?",
                 "A:": "R:",
                 "ThatsSecret": "ESO ES SECRETO."
             },
             "smile": {
                 "SmileForTheCam": "SONRÍE A LA CÁMARA",
                 "HidingIsCriminal": "ESCONDERSE ES UN CRIMEN",
-                "OnlyCriminals": "SOLO LOS CRIMINALES TIENEN ALGO QUE ESCONDER",
+                "OnlyCriminals": "SÓLO LOS CRIMINALES TIENEN ALGO QUE ESCONDER",
                 "StayAlwaysInSight": "MANTENTE SIEMPRE A LA VISTA DE POR LO MENOS UN °OJO"
             },
             "stream_wall": {
@@ -261,7 +261,7 @@
             "stream_wall_2": {
                 "CriminalNeutralized": "CRIMINAL NEUTRALIZADO",
                 "Name1": "NOMBRE:",
-                "Name2": "\"NADIE\"",
+                "Name2": "&quot;NADIE&quot;",
                 "Time1": "TIEMPO:",
                 "Time2": "2044 PST (HACE 1 MIN)",
                 "Crime1": "CRIMEN:",
@@ -295,7 +295,7 @@
                 "ActiveSlidewalks1": "ALGUNOS °OJOS",
                 "ActiveSlidewalks2": "ACTIVARÁN",
                 "ActiveSlidewalks3": "VÍAS RÁPIDAS",
-                "ActiveSlidewalks4": "Solo cuando veas a",
+                "ActiveSlidewalks4": "Sólo cuando veas a",
                 "ActiveSlidewalks5": "ALGUIEN"
             },
             "tut_reminder": {
@@ -332,7 +332,7 @@
                 "WrongChoice4": "OPCIÓN ERRÓNEA",
                 "RemberCantHide1": "RECUERDA...",
                 "RemberCantHide2": "NOTE PUEDES ESCONDER",
-                "RemberCantHide3": "TU VOTO NO SECRETO. POR LO TANTO",
+                "RemberCantHide3": "TU VOTO NO-SECRETO. POR LO TANTO",
                 "RememberVoteWinner1": "RECUERDA...",
                 "RememberVoteWinner2": "VOTAR AL",
                 "RememberVoteWinner3": "GANADOR"
