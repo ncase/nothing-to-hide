@@ -120,7 +120,7 @@
        x="71.974213"
        y="113.39861"
        data-i18n="images.propaganda.error.MeantForNobody1"
-       style="font-size:15px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;font-family:Monospace;-inkscape-font-specification:Monospace">> este es el muro de</tspan><tspan
+       style="font-size:15px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;font-family:Monospace;-inkscape-font-specification:Monospace">&gt; este es el muro de</tspan><tspan
        sodipodi:role="line"
        x="71.974213"
        y="132.14862"
@@ -138,6 +138,6 @@
        y="132.49391"
        style="font-size:15px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#666666;font-family:Monospace;-inkscape-font-specification:Monospace"
            data-i18n="images.propaganda.error.MeantForNobody2"
-       id="tspan3054-14">> NADIE</tspan></text>
+       id="tspan3054-14">&gt; NADIE</tspan></text>
 
 </svg>
