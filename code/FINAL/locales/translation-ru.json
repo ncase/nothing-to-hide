@@ -15,15 +15,15 @@
 		"fund": {
 			"title": "СПАСИБО ЗА ИГРУ В ЭТУ ДЕМО-ВЕРСИЮ.!",
 			"staytuned": [
-				"Будьте рады. Это была даже не десятая часть будущей полной игра!",
-				"С другой стороны... это была даже не десятая часть будущей полной игра.",
+				"Будьте рады. Это была даже не десятая часть будущей полной игры!",
+				"С другой стороны... это была даже не десятая часть будущей полной игры.",
 				"Нас ждет долгий путь, и нам нужна ваша помощь."
 			],
 			"backthisgame": "назад в эту игру",
 			"whycrowdfunding": [
 				"Почему краудфаандинг? Потому что эта игра имеет открытые исходники и мы не охраняем ее авторским правом.",
 				"Мы созданы для общественности, и при поддержке общественности!",
-				"And I know this is kind of ironic, being a satire of social media and all, but..."
+				"И я знаю, что это забавно, быть пародией на социальные медиа и всего, но..."
 			],
 			"thanksdissident": "Еще раз спасибо, вы диссидент, вы!"
 		},
@@ -58,44 +58,44 @@
 	},
 	"command": {
 		"backtomainmenu": "ВЕРНУТСЯ В ГЛАВНОЕ МЕНЮ",
-		"resumegame": "RESUME GAME",
-		"resetlevel": "RESET LEVEL",
-		"pause": "PAUSE",
-		"skiplevel": "SKIP LEVEL"
+		"resumegame": "ПРОДОЛЖИТЬ ИГРУ",
+		"resetlevel": "НАЧАТЬ ЗАНОВО",
+		"pause": "ПАУЗА",
+		"skiplevel": "ПРОПУСТИТЬ УРОВЕНЬ"
 	},
 	"game": {
 		"general":{ 
 			"panopticonpaused": "PANOPTICON PAUSED",
-			"levelselect": "Level Select:",
-			"intro": "INTRO",
-			"ending": "ENDING",
+			"levelselect": "Выбор уровня:",
+			"intro": "ВСТУПЛЕНИЕ",
+			"ending": "ОКОНЧАНИЕ",
 			"sharegame": "Share Game:"
 		},
 		"thewall":{
-			"posted": "posted",
-			"justnow": "just now",
-			"minutesago": "one minute ago",
-			"minutesago_plural": "__count__  minutes ago",
-			"secondsago": "one second ago",
-			"secondsago_plural": "__count__  seconds ago"
+			"posted": "добавленно",
+			"justnow": "только что",
+			"minutesago": "минуту назад",
+			"minutesago_plural": "__count__  минут назад",
+			"secondsago": "секунду назад",
+			"secondsago_plural": "__count__  секунд назад"
 		}
 	},
 	"character":{
-		"poppy": "Poppy",
-		"poppygardner": "Poppy Gardner",
-		"georgegardner": "George Gardner",
-		"nobody": "Nobody"
+		"poppy": "Поппи",
+		"poppygardner": "Поппи Гарднер",
+		"georgegardner": "Джордж Гарднер",
+		"nobody": "Никто"
 	},
 	"cutscene":{
 		"intro":[
-				"Poppy?",
-				"Hey sweetie. Please don't be sad.",
-				"It's really hurting my popularity ranking.",
-				"The first un-secret ballot election is coming up. It's very important to Daddy's career, so I need you to post more happy pictures of yourself to The Wall. At least 400 per day, okay?",
-				"Please, Poppy? I don't want the voters to think I'm a bad parent.",
-				"Well, goodnight! <span>#DaddyDaughterMoment</span>",
-				"I... I have to get out of here...",
-				"Dad will be better off without me. His Popularity Metrics&trade;, too."
+				"Поппи?",
+				"Эй дорогая. Пожалуйста, не будь грустной.",
+				"Это сильно бьёт по моей популярности.",
+				"Прихоит первый не засекреченный избирательный бюллетень. Это очень важно для Папиной карьеры, и мне нужно чтобы ты выкладывала больше своих весёлых фотографий на Стену. Как минимум 400 в день, хорошо?",
+				"Пожалуйста, Поппи. Я не хочу чтобы избиратели думали, что я плохой отец.",
+				"Отлично, спокойной ночи! <span>#ПапаДочьМомент</span>",
+				"Я... Я должна выбраться отсюда...",
+				"Папе будет лучше без меня. Для его Метрики Популярности&trade;, тоже."
 		],
 		"end":[
 			"please don't be dead oh god oh god oh god oh god oh god",
