@@ -98,57 +98,57 @@
 				"Папе будет лучше без меня. Для его Метрики Популярности&trade;, тоже."
 		],
 		"end":[
-			"please don't be dead oh god oh god oh god oh god oh god",
-			"Okay. Okay okay. Idea.",
-			"Sometimes Daddy wakes me up like this. Maybe this will work...",
-			"<span>#DaddyDaughterMoment</span>",
-			"Ow! Pain on the face! You...",
-			"i'm sorry",
-			"...saved my life! Don't apologize, yo!",
-			"i'm sorry for being sorry",
-			"Hold up, are we on The Wall?...",
-			"\"Poppy Gardner posted 1 minute ago. Sometimes Daddy wakes me up like this. Maybe this will work...\"",
-			"Oh. Oh wow. Minister Gardner does that to his own... wow.",
-			"<i>Wellllllllll</i> if it makes you feel better, your dad's psychologically and physically abusive to the rest of the nation, too.",
-			"\"Watch what you say & hear & watch & <i>think.\"</i><br>When we got no place to hide, we got to hide our true selves. ",
-			"I can help you escape him.",
-			"In fact, I got an app for that!",
-			"Exploit! Made it myself. Just tap this screen here, and you'll be erased from The Wall. You'll be a Nobody, just like me.",
-			"Stop acting for the camera. Start being yourself."
+			"пожалуйста, не будь мёртвым о боже о боже о боже о боже о боже",
+			"Хорошо. Хорошо. Хорошо. Идея.",
+			"Иногда папа будит меня так. Может это сработает...",
+			"<span>#ПапаДочьМомент</span>",
+			"О! Моё лицо болит! Ты...",
+			"мне жаль",
+			"...сохранила мне жизнь! Не извиняйся, ё!",
+			"прости за то, что мне жаль",
+			"Держись, мы на Стене?...",
+			"\"Поппи Гарднер довавила минуту назад. Иногда папа будит меня так. Может это сработает...\"",
+			"Оу. Оу вау. Министр Гарднер делает это с его собственной... вау.",
+			"<i>Ладнооооооо</i> если это помогает тебе чувствовать себя лучше, твой отец тоже психологически и физически оскорблён остальной частью нации.",
+			"\"Следи за тем что говоришь и видишь и слушаешь и <i>думаешь.\"</i><br>Когда нам негде прятаться, мы скрываем свою истинную сущность. ",
+			"Я могу помочь убежать от него.",
+			"Фактически, у меня есть приложение для этого!",
+			"Эксплоит! Самодельный. Только нажми на экран и ты будешь удалена со Стены. Ты будешь Никем, как я.",
+			"Хватит притворяться для камеры. Стань самим собой."
 		]
 	},
 	"dialogue": {
-		"postedjustnow": "posted just now",
+		"postedjustnow": "добавлено только что",
 		"level": {
 			"intro": {
-				"nobodyNeedsMe":"Nobody needs me...",
-				"runningAway": "Guess I'm running away to Canada, then."
+				"nobodyNeedsMe":"Я никому не нужна...",
+				"runningAway": "Думаю, я тогда убегу в Канаду."
 			},
 			"pickup": {
-				"lookMySmile": "Oh… there's Daddy's campaign post. Look at my smile. :)",
-				"disciplinedToSmile": "He disciplined me when my smile didn't look genuine enough. :)"
+				"lookMySmile": "О… плакат в поддержку папиной кампании. Поглядите на мою улыбку. :)",
+				"disciplinedToSmile": "Он наказал меня, когда моя улыбка не выглядела достаточно искренней. :)"
 			},
 			"big_puzzle": {
-				"iWonder": "I wonder... if these laws against upsetting people... upset people?"
+				"iWonder": "Интересно... что если законы против огорчения людей... огорчают их?"
 			},
 			"conveyor": {
-				"myOwnWatchman": "I wonder... if I'm my own watchman... am I hiding from myself?"
+				"myOwnWatchman": "Интересно... что если я сама себе сторож... я прячусь от себя?"
 			},
 			"conveyor_2": {
-				"whyQuestionMarks": "I wonder... why I'm using so many ellipses and question marks?",
-				"havingAPrivateThought": "I think... this is what having a private thought feels like. Feels weird."
+				"whyQuestionMarks": "Интересно... почему я использую так много эллипсов и вопросительных знаков?",
+				"havingAPrivateThought": "Я думаю... это то, что чувствет человек с частными мыслями. Странные чувства."
 			},
 			"power": {
-				"whatWasNoise": "What... what was that noise?",
-				"looksUncomfortable": "Oh my... that looks uncomfortable."
+				"whatWasNoise": "Что... что это за шум?",
+				"looksUncomfortable": "О мой... Это выглядит не комфортно."
 			},
 			"power_puzzle": {
-				"poorNobodyOnlyIEye" : "Poor 'Nobody'. I think he picked up the only iEye that was looking at him.",
-				"neverDoneThat" : "Glad I've never done that."
+				"poorNobodyOnlyIEye" : "Бедный Никто. Я думаю что он взял единственный iEye ,смотрящий на него.",
+				"neverDoneThat" : "Я рада, что никогда не делала этого"
 			},
 			"nobody_needs_you": {
-				"onceInMyLife": "For once in my life... I don't care how others will judge me! I... I have to help!",
-				"nobodyNeedsMe": "'Nobody' needs me!"
+				"onceInMyLife": "Единственный раз в жизни... Меня не волнует то, что скажут обо мне другие! Мне... Мне нужна помощь!",
+				"nobodyNeedsMe": "Я нужна Никому!"
 			}
 		}
 	},
