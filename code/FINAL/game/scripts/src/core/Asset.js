@@ -81,7 +81,7 @@
 			Asset.sound[event.id] = event.src;
 			console.log("Loaded sound "+event.id);
 			soundsLeft--;
-			if(soundsLeft==0){
+			if(soundsLeft===0){
 				allSoundsLoaded.resolve(true);
 			}
 		});
