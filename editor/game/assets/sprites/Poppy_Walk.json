@@ -1,0 +1,235 @@
+{"frames": [
+
+{
+	"filename": "Poppy Walk0000",
+	"frame": {"x":5,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0001",
+	"frame": {"x":110,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0002",
+	"frame": {"x":215,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0003",
+	"frame": {"x":320,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0004",
+	"frame": {"x":425,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0005",
+	"frame": {"x":530,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0006",
+	"frame": {"x":635,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0007",
+	"frame": {"x":740,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0008",
+	"frame": {"x":845,"y":5,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0009",
+	"frame": {"x":5,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0010",
+	"frame": {"x":110,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0011",
+	"frame": {"x":215,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0012",
+	"frame": {"x":320,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0013",
+	"frame": {"x":425,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0014",
+	"frame": {"x":530,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0015",
+	"frame": {"x":635,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0016",
+	"frame": {"x":740,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0017",
+	"frame": {"x":845,"y":160,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0018",
+	"frame": {"x":5,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0019",
+	"frame": {"x":110,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0020",
+	"frame": {"x":215,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0021",
+	"frame": {"x":320,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0022",
+	"frame": {"x":425,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0023",
+	"frame": {"x":530,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0024",
+	"frame": {"x":635,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0025",
+	"frame": {"x":740,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0026",
+	"frame": {"x":845,"y":315,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}
+,{
+	"filename": "Poppy Walk0027",
+	"frame": {"x":5,"y":470,"w":100,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":150},
+	"sourceSize": {"w":100,"h":150}
+}],
+"meta": {
+	"app": "Adobe Flash CS6",
+	"version": "12.0.0.481",
+	"image": "Poppy_Walk.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":1024},
+	"scale": "1"
+}
+}

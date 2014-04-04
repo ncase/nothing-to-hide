@@ -1,0 +1,93 @@
+{
+	"player":{ "x":2.2, "y":5.7 },
+	"goal":{"ax":51,"bx":52,"ay":3,"by":4},
+
+	"shadows": [
+		
+		{"ax":12,"bx":12,"ay":0,"by":9},
+		{"ax":28,"bx":28,"ay":0,"by":9},
+		{"ax":32,"bx":32,"ay":0,"by":9},
+		{"ax":32,"bx":32,"ay":9,"by":10},
+		{"ax":33,"bx":33,"ay":0,"by":9},
+
+		{"ax":0,"bx":8,"ay":7,"by":7},
+		{"ax":8,"bx":8,"ay":7,"by":11},
+
+		{"ax":40,"bx":52,"ay":4,"by":4},
+		{"ax":40,"bx":40,"ay":4,"by":11},
+		
+		{"ax":32,"bx":33,"ay":9,"by":9},
+		{"ax":33,"bx":37,"ay":9,"by":9},
+		{"ax":37,"bx":37,"ay":9,"by":10},
+		{"ax":39,"bx":39,"ay":9,"by":10},
+		{"ax":39,"bx":40,"ay":9,"by":9}
+
+	],
+
+	"prisms": [
+		{"x":0.5,"y":5.5},
+		{"x":11.5,"y":9.3},
+		{"x":31,"y":8},
+
+		{"x":39,"y":9.8},
+		{"x":43,"y":3}
+	],
+
+	"camera": [
+		{
+			"type": "fixed",
+			"zone": {"ax":0,"bx":10,"ay":0,"by":11},
+			"data": {"x":10,"y":5.5}
+		},
+		{
+			"type": "rails",
+			"zone": {"ax":10,"bx":28,"ay":0,"by":11},
+			"data": {"ax":10,"bx":28,"ay":5.5,"by":5.5}
+		},
+		{
+			"type": "fixed",
+			"zone": {"ax":28,"bx":41,"ay":0,"by":11},
+			"data": {"x":36,"y":5.5}
+		},
+		{
+			"type": "rails",
+			"zone": {"ax":41,"bx":52,"ay":0,"by":11},
+			"data": {"ax":41,"bx":52,"ay":5.5,"by":5.5}
+		}
+	],
+
+	"blocks": [],
+
+	"checkpoints": [
+		{"ax":32,"bx":35,"ay":10,"by":11}
+	],
+
+	"dialogues": [
+		{
+			"area": {"ax":9,"bx":11,"ay":0,"by":11},
+			"queue": [
+				{
+					"message": "Nobody needs me...",
+					"duration": 3000
+				},
+				{
+					"message": "Guess I'm running away to Canada, then.",
+					"duration": 4000
+				}
+			]
+		}
+	],
+
+	"propaganda": [
+		{"type":"image", "img":"propaganda_tut_walk", "x":0, "y":0},
+		{"type":"image", "img":"propaganda_smile", "x":12, "y":2},
+		{"type":"image", "img":"propaganda_tut_slow", "x":28, "y":0},
+		{"type":"image", "img":"propaganda_tut_reminder", "x":32, "y":9},
+		{"type":"image", "img":"propaganda_intro_pics", "x":33, "y":0}
+	],
+
+	"art": {
+		"ignoreCameras": false
+	}
+
+}
