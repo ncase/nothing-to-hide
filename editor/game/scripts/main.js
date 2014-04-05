@@ -34,9 +34,7 @@ window.addEventListener("load",function(){
 		console.log("===== LOADED! =====");
 		clearInterval(preloaderInterval);
 		if(window.top.onProgress) window.top.onProgress(1);
-		setTimeout(function(){
-			Game.start();
-		},500);
+		Game.start();
 	});
 
 	// HACK - Game UI

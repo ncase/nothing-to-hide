@@ -64,7 +64,7 @@
 		music_bg.play(null,0,0,-1,MUSIC_VOLUME,0);
 
 		// First level
-		Game.gotoLevel(0);
+		//Game.gotoLevel(0);
 
 		// Cursor
 		Cursor.init();
@@ -141,7 +141,10 @@
 		Game.gotoLevelByConfig(levelConfig);	
 
 	};
+	var currentConfig = null;
 	Game.gotoLevelByConfig = function(levelConfig){
+
+		currentConfig = levelConfig;
 
 		// Dimensions
 		var lvlWidth = (levelConfig.map[0].length) * Map.TILE_SIZE;
@@ -153,6 +156,7 @@
 		Display.resize(w,h);
 
 		// Go to level
+		delete Game.level;
 		Game.level = new Level(levelConfig,HACK_saveState);
 		HACK_saveState = null;
 
@@ -164,7 +168,7 @@
 	};
 	Game.resetLevel = function(saveState){
 		HACK_saveState = saveState;
-		Game.gotoLevel(Game.levelIndex);
+		Game.gotoLevelByConfig(currentConfig);
 	};
 
 	// DO A COOL SCENE TRANSITION

@@ -1,13 +1,14 @@
 <link href='editor.css' rel='stylesheet' type='text/css'>
 
-<iframe id="game" src="game/game.html"></iframe>
-<div id="tabs">
-	<div id="tab_game" selected>GAME</div>
-	<div id="tab_map">MAP</div>
-	<div id="tab_level">LEVEL</div>
+<div id="views">
+	<textarea id="view_map" selected></textarea>
+	<textarea id="view_level"></textarea>
+	<iframe id="view_game" src="game/game.html"></iframe>
 </div>
-<script>
-
-
-
-</script>
+<div id="tabs">
+	<div id="tab_map" selected>MAP</div>
+	<div id="tab_level">LEVEL</div>
+	<div id="tab_game">GAME</div>
+</div>
+<script src="data.js"></script>
+<script src="editor.js"></script>
