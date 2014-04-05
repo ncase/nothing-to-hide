@@ -55,9 +55,6 @@
 
 		this.map = new Map(this,{
 			map: map,
-			art: lvl.art,
-			background: art.background,
-			cam: art.cam,
 			propaganda: lvl.propaganda,
 			goal: lvl.goal
 		});

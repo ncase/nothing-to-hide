@@ -117,39 +117,14 @@
 				var config = {
 					level: levelData,
 					map: mapData,
-					art: {}
+					id: id
 				};
-
-				// Now, load art or use placeholder
-				var bgSource = dirpath+"/bg.png";
-				var camSource = dirpath+"/cam.png";
-				var finalDeferred = Q.defer();
-				var artPromises = 0;
-				function resolveArt(){
-					artPromises--;
-					if(artPromises<=0){
-						console.log("Loaded level "+id);
-						Asset.level[id] = config;
-						config.id = id;
-						finalDeferred.resolve(config);
-					}
-				};
-				if(levelData.art.background){
-					artPromises++;
-					_promiseImage(bgSource).then(function(bg){
-						config.art.background = bg;
-						resolveArt();
-					});
-				}
-				if(levelData.art.cam && !levelData.art.hideCam){
-					artPromises++;
-					_promiseImage(camSource).then(function(cam){
-						config.art.cam = cam;
-						resolveArt();
-					});
-				}
-				if(artPromises==0) resolveArt();
-				return finalDeferred.promise;
+				Asset.level[id] = config;
+				
+				// Return it
+				var deferred = Q.defer();
+				deferred.resolve(config);
+				return deferred.promise;
 
 			});
 

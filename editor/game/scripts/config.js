@@ -88,31 +88,26 @@ Asset.init({
 		button_hover: {src:'assets/sounds/mp3/button_hover.mp3|assets/sounds/ogg/button_hover.ogg'},
 		button_press: {src:'assets/sounds/mp3/button_press.mp3|assets/sounds/ogg/button_press.ogg'},
 
-		music_bg: {src:'assets/music/mp3_64/a_healthy_dystopia.mp3|assets/music/ogg_64/a_healthy_dystopia.ogg'},
-		music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3|assets/music/ogg_64/home_sweet_homeland.ogg'}
+		//music_bg: {src:'assets/music/mp3_64/a_healthy_dystopia.mp3|assets/music/ogg_64/a_healthy_dystopia.ogg'},
+		//music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3|assets/music/ogg_64/home_sweet_homeland.ogg'}
 
 	},
 	levels:{
 		
-		intro: 'levels/intro',
+		//intro: 'levels/intro',
 		pickup: 'levels/pickup',
-		big_puzzle: 'levels/big_puzzle',
+		/*big_puzzle: 'levels/big_puzzle',
 
 		conveyor: 'levels/conveyor',
 		conveyor_2: 'levels/conveyor_2',
 
 		power: 'levels/power',
 		power_puzzle: 'levels/power_puzzle',
-		nobody_needs_you: 'levels/nobody_needs_you'
+		nobody_needs_you: 'levels/nobody_needs_you'*/
 
 	}
 });
 
 Game.init({
-	levels:[
-		'intro','pickup','big_puzzle',
-		'conveyor','conveyor_2',
-		'power','power_puzzle',
-		'nobody_needs_you'
-	]
+	levels:['pickup']
 });

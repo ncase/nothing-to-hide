@@ -18,42 +18,43 @@
         <div id="pause_menu">
             <div id="pause_menu_2">
                 <div id="pause_menu_3">
-                    <div style="font-size:100px">PANOPTICON PAUSED</div>
+                    <span style="display:none">
+                        <div style="font-size:100px">PANOPTICON PAUSED</div>
 
-                    <!-- Top Actions -->
-                    <div class="button_container">
-                        <div class="button" onclick="Game.togglePause();">RESUME GAME</div>
-                        <div class="button" onclick="Game.togglePause(); Game.resetLevel()">RESET LEVEL</div>
-                        <div class="button" onclick="window.top.gotoPage('menu/menu.html');">BACK TO MAIN MENU</div>
-                    </div>
+                        <!-- Top Actions -->
+                        <div class="button_container">
+                            <div class="button" onclick="Game.togglePause();">RESUME GAME</div>
+                            <div class="button" onclick="Game.togglePause(); Game.resetLevel()">RESET LEVEL</div>
+                            <div class="button" onclick="window.top.gotoPage('menu/menu.html');">BACK TO MAIN MENU</div>
+                        </div>
 
-                    <!-- Level Select -->
-                    <div style="margin: 25px 0 5px 0; font-size:40px">Level Select:</div>
-                    <div id="level_select" class="button_container">
-                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene.html');">INTRO</div>
-                        <div class="button" id="lvl_0" onclick="Game.togglePause(); Game.gotoLevel(0);">1</div>
-                        <div class="button" id="lvl_1" onclick="Game.togglePause(); Game.gotoLevel(1);">2</div>
-                        <div class="button" id="lvl_2" onclick="Game.togglePause(); Game.gotoLevel(2);">3</div>
-                        <div class="button" id="lvl_3" onclick="Game.togglePause(); Game.gotoLevel(3);">4</div>
-                        <div class="button" id="lvl_4" onclick="Game.togglePause(); Game.gotoLevel(4);">5</div>
-                        <div class="button" id="lvl_5" onclick="Game.togglePause(); Game.gotoLevel(5);">6</div>
-                        <div class="button" id="lvl_6" onclick="Game.togglePause(); Game.gotoLevel(6);">7</div>
-                        <div class="button" id="lvl_7" onclick="Game.togglePause(); Game.gotoLevel(7);">8</div>
-                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene_end.html');">ENDING</div>
-                    </div>
+                        <!-- Level Select -->
+                        <div style="margin: 25px 0 5px 0; font-size:40px">Level Select:</div>
+                        <div id="level_select" class="button_container">
+                            <div class="button" onclick="window.top.gotoPage('cutscene/cutscene.html');">INTRO</div>
+                            <div class="button" id="lvl_0" onclick="Game.togglePause(); Game.gotoLevel(0);">1</div>
+                            <div class="button" id="lvl_1" onclick="Game.togglePause(); Game.gotoLevel(1);">2</div>
+                            <div class="button" id="lvl_2" onclick="Game.togglePause(); Game.gotoLevel(2);">3</div>
+                            <div class="button" id="lvl_3" onclick="Game.togglePause(); Game.gotoLevel(3);">4</div>
+                            <div class="button" id="lvl_4" onclick="Game.togglePause(); Game.gotoLevel(4);">5</div>
+                            <div class="button" id="lvl_5" onclick="Game.togglePause(); Game.gotoLevel(5);">6</div>
+                            <div class="button" id="lvl_6" onclick="Game.togglePause(); Game.gotoLevel(6);">7</div>
+                            <div class="button" id="lvl_7" onclick="Game.togglePause(); Game.gotoLevel(7);">8</div>
+                            <div class="button" onclick="window.top.gotoPage('cutscene/cutscene_end.html');">ENDING</div>
+                        </div>
 
-                    <!-- Share Game -->
-                    <div style="margin: 25px 0 5px 0; font-size:40px">Share Game:</div>
-                    <div id="level_select" class="button_container" >
-                        <div style="float:left; cursor:pointer" class="social_big" id="tweet" onclick='window.SS_POPUP("https://twitter.com/share?url=http%3A%2F%2Fdemo.nothingtohide.cc%2F&text=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.&via=ncasenmare","twitter")'></div>
-                        <div style="float:left; cursor:pointer" class="social_big" id="facebook" onclick='window.SS_POPUP("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdemo.nothingtohide.cc%2F&t=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.","facebook")'></div>
-                    </div>
-
+                        <!-- Share Game -->
+                        <div style="margin: 25px 0 5px 0; font-size:40px">Share Game:</div>
+                        <div id="level_select" class="button_container" >
+                            <div style="float:left; cursor:pointer" class="social_big" id="tweet" onclick='window.SS_POPUP("https://twitter.com/share?url=http%3A%2F%2Fdemo.nothingtohide.cc%2F&text=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.&via=ncasenmare","twitter")'></div>
+                            <div style="float:left; cursor:pointer" class="social_big" id="facebook" onclick='window.SS_POPUP("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdemo.nothingtohide.cc%2F&t=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.","facebook")'></div>
+                        </div>
+                    </span>
                 </div>
             </div>
         </div>
 
-        <div id="ui_container">
+        <div id="ui_container" style="display:none">
             <div id="pause" class="button" onclick="Game.togglePause()">PAUSE</div>
             <div id="skip_level" class="button" onclick="skipLevel()">SKIP LEVEL</div>
             <div id="fps_counter"></div>

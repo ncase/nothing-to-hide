@@ -29,34 +29,6 @@
 				Game.level.update();
 				drawnSinceLastUpdate = false;
 			}
-
-			// Music
-			if(SWITCH_MUSIC!=-1 && Game.levelIndex>=3){
-				if(SWITCH_MUSIC==0){
-					music_bg_2.play(null,0,0,-1,0,0);
-				}
-				if(SWITCH_MUSIC<1){
-					SWITCH_MUSIC += 0.01;
-					music_bg_2.setVolume( MUSIC_VOLUME * (SWITCH_MUSIC) );
-					music_bg.setVolume( MUSIC_VOLUME * (1-SWITCH_MUSIC) );
-				}else{
-					SWITCH_MUSIC = -1;
-					music_bg.stop();
-				}
-			}
-			if(SWITCH_MUSIC_BACK!=-1 && SWITCH_MUSIC==-1 && Game.levelIndex>=7){
-				if(SWITCH_MUSIC_BACK==0){
-					music_bg.play(null,0,0,-1,0,0);
-				}
-				if(SWITCH_MUSIC_BACK<1){
-					SWITCH_MUSIC_BACK += 0.01;
-					music_bg.setVolume( MUSIC_VOLUME * (SWITCH_MUSIC_BACK) );
-					music_bg_2.setVolume( MUSIC_VOLUME * (1-SWITCH_MUSIC_BACK) );
-				}else{
-					SWITCH_MUSIC_BACK = -1;
-					music_bg_2.stop();
-				}
-			}
 			
 
 		},1000/30);
@@ -164,6 +136,12 @@
 		// Find level
 		Game.clearLevel();
 		var levelConfig = Asset.level[nextLevelName];
+		Game.levelIndex = Game.config.levels.indexOf(nextLevelName);
+
+		Game.gotoLevelByConfig(levelConfig);	
+
+	};
+	Game.gotoLevelByConfig = function(levelConfig){
 
 		// Dimensions
 		var lvlWidth = (levelConfig.map[0].length) * Map.TILE_SIZE;
@@ -177,9 +155,6 @@
 		// Go to level
 		Game.level = new Level(levelConfig,HACK_saveState);
 		HACK_saveState = null;
-
-		// Index
-		Game.levelIndex = Game.config.levels.indexOf(nextLevelName);
 
 	};
 	Game.nextLevel = function(){
