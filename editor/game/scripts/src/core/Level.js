@@ -12,15 +12,6 @@
 		///// PARSING CONFIG DATA /////
 		///////////////////////////////
 
-		// Shadows to scale of Tile Size
-		for(var i=0;i<lvl.shadows.length;i++){
-			var shadow = lvl.shadows[i];
-			shadow.ax *= Map.TILE_SIZE;
-			shadow.ay *= Map.TILE_SIZE;
-			shadow.bx *= Map.TILE_SIZE;
-			shadow.by *= Map.TILE_SIZE;
-		}
-
 		// Prisms to scale of Tile Size
 		// Savestate?...
 		if(saveState){
@@ -80,7 +71,7 @@
 			actions: lvl.camera
 		});
 
-		this.shadows = new ShadowController(this,{ shadows:lvl.shadows });
+		this.shadows = new ShadowController(this);
 		this.prisms = new PrismController(this,{ prisms:lvl.prisms });
 		this.conveyors = new ConveyorController(this,{ conveyors:lvl.conveyors || [] });
 		this.doors = new DoorController(this,{ doors:lvl.doors || [] });
