@@ -32,9 +32,11 @@ function showView(view){
 	// Specific logic
 	var Game = view_game.contentWindow.Game;
 	if(view==view_game){
-		updateGame();
-		view_game.focus();
-		if(Game.PAUSED) Game.togglePause();
+		if(GAME_IS_READY){
+			updateGame();
+			view_game.focus();
+			if(Game.PAUSED) Game.togglePause();
+		}
 	}else{
 		if(!Game.PAUSED) Game.togglePause();
 	}
@@ -77,5 +79,17 @@ var updateGame = function(){
 	Game.gotoLevelByConfig(config);
 };
 
+// LOADING GAME ENGINE
+var GAME_IS_READY = false;
+window.onProgress = function(val){
+	if(val==1){
+		GAME_IS_READY=true; 
+		if(view_game.getAttribute("selected")=="true"){
+			updateGame();
+			view_game.focus();
+			if(Game.PAUSED) Game.togglePause();
+		}
+	}
+}
 
 

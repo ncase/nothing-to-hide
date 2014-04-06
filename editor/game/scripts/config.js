@@ -92,22 +92,7 @@ Asset.init({
 		//music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3|assets/music/ogg_64/home_sweet_homeland.ogg'}
 
 	},
-	levels:{
-		
-		//intro: 'levels/intro',
-		pickup: 'levels/pickup',
-		/*big_puzzle: 'levels/big_puzzle',
-
-		conveyor: 'levels/conveyor',
-		conveyor_2: 'levels/conveyor_2',
-
-		power: 'levels/power',
-		power_puzzle: 'levels/power_puzzle',
-		nobody_needs_you: 'levels/nobody_needs_you'*/
-
-	}
+	levels:{}
 });
 
-Game.init({
-	levels:['pickup']
-});
+Game.init({levels:[]});

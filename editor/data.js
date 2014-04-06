@@ -67,14 +67,10 @@ var LEVEL = JSON.stringify({
 
 	"dialogues": [
 		{
-			"area": {"ax":7,"bx":14,"ay":17,"by":20},
+			"area": {"ax":3,"bx":5,"ay":4,"by":6},
 			"queue": [
 				{
-					"message": "Oh… there's Daddy's campaign post. Look at my smile. :)",
-					"duration": 4000
-				},
-				{
-					"message": "He disciplined me when my smile didn't look genuine enough. :)",
+					"message": "Howdy, my name is Poppy Gardner! <3",
 					"duration": 4000
 				}
 			]
@@ -100,9 +96,9 @@ var MAP = "=============\n"+
 "========###  \n"+
 "===========  \n"+
 "....    ===  \n"+
-"....    ===  \n"+
-"....##       \n"+
-"....##       \n"+
+"....##  ===  \n"+
+"....==       \n"+
+"....         \n"+
 ".============\n"+
 ".============\n"+
 ".============\n"+
