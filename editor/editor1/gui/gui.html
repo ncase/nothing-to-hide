@@ -1,0 +1,140 @@
+<style>
+body{
+	background: #334;
+	margin: 0;
+}
+#grid{
+	overflow: hidden;
+}
+#grid > div{
+	display:block; float:left;
+	width:50px; height:50px;
+}
+div.floor{ background:#C4D3D2; }
+div.carpet{ background:url(textures/carpet.png); }
+div.wall{ background:#000; }
+div.screen{ background:#404348; background-image:url(textures/screenline.png); }
+
+#toolbar {
+	width:60px; height:240px;
+	position: fixed;
+	padding: 10px;
+	right:0;
+	top:0;
+}
+#toolbar > div{
+	display:block; float:left;
+	width:50px; height:50px;
+	border: 5px solid #334;
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+#toolbar > div[selected]{
+	display:block; float:left;
+	width:50px; height:50px;
+	border: 5px solid #fff;
+}
+
+</style>
+
+<div id="grid"></div>
+
+<div id="toolbar">
+	<div class="floor" selected></div>
+	<div class="carpet"></div>
+	<div class="wall"></div>
+	<div class="screen"></div>
+</div>
+
+<script>
+
+var grid = document.getElementById("grid");
+var tilesDOM;
+var tiles;
+function render(config){
+	var html = "";
+	tiles = config.map;
+	for(var y=0;y<tiles.length;y++){
+		for(var x=0;x<tiles[0].length;x++){
+			html += "<div class='"+CONSTANTS[tiles[y][x]]+"'></div>";
+		}
+	}
+	grid.innerHTML = html;
+
+	tilesDOM = Array.prototype.slice.call(document.querySelectorAll("#grid > div"));
+
+	grid.style.width = tiles[0].length*50;
+	grid.style.height = tiles.length*50;
+
+}
+
+// Get Tile Map NOW
+function getMap(){
+	return tiles.splice(0);
+}
+
+var CONSTANTS = {
+	"#": "wall",
+	"=": "screen",
+	" ": "floor",
+	".": "carpet"
+};
+var REVERSE_CONSTANTS = {
+	"wall": "#",
+	"screen": "=",
+	"floor": " ",
+	"carpet": "."
+};
+
+// CHANGING THE TILES
+var Mouse = {
+	x:0, y:0,
+	pressed: false,
+	onUp: function(e){
+		Mouse.pressed = false;
+	},
+	onDown: function(e){
+		Mouse.pressed = true;
+		Mouse.onMove(e);
+	},
+	onMove: function(e){
+		Mouse.x = e.pageX;
+		Mouse.y = e.pageY;
+
+		// If pressed
+		if(!Mouse.pressed) return;
+
+		// Change tile
+		var x = Math.floor(Mouse.x/50);
+		var y = Math.floor(Mouse.y/50);
+		if(x<0||x>=tiles[0].length) return;
+		if(y<0||y>=tiles.length) return;
+		var index = y*tiles[0].length+x;
+		tilesDOM[index].setAttribute("class",CURRENT_TOOL);
+
+		// Change tile DATA
+		tiles[y][x] = REVERSE_CONSTANTS[CURRENT_TOOL];
+
+	}
+};
+document.body.onmousedown = Mouse.onDown;
+document.body.onmouseup = Mouse.onUp;
+document.body.onmousemove = Mouse.onMove;
+
+// TOOLS
+var CURRENT_TOOL = "floor";
+var tools = Array.prototype.slice.call(document.querySelectorAll("#toolbar > div"));
+tools.forEach(function(tool){
+	tool.onclick = function(){
+
+		// Tab
+		for(var i=0;i<tools.length;i++){
+			tools[i].removeAttribute("selected");
+		}
+		tool.setAttribute("selected","true");
+		CURRENT_TOOL = tool.classList[0];
+
+	};
+});
+
+</script>

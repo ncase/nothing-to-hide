@@ -20,7 +20,9 @@ tabs.forEach(function(tab){
 var view_game = document.getElementById("view_game");
 var view_map = document.getElementById("view_map");
 var view_level = document.getElementById("view_level");
-var views = [view_game,view_map,view_level];
+var view_gui = document.getElementById("view_gui");
+var views = [view_game,view_map,view_level,view_gui];
+var CURRENT_VIEW = view_gui;
 function showView(view){
 
 	// DOM visibility
@@ -30,6 +32,24 @@ function showView(view){
 	view.setAttribute("selected","true");
 
 	// Specific logic
+	if(view==view_gui){
+		view_gui.contentWindow.render(getConfig());
+	}else if(CURRENT_VIEW==view_gui){
+
+		// Set Map to whatever the GUI was
+		var mapText = "";
+		var mapTiles = view_gui.contentWindow.getMap();
+		for(var y=0;y<mapTiles.length;y++){
+			for(var x=0;x<mapTiles[0].length;x++){
+				mapText+=mapTiles[y][x];
+			}
+			if(y<mapTiles.length-1){
+				mapText+="\n";
+			}
+		}
+		view_map.value = mapText;
+
+	}
 	var Game = view_game.contentWindow.Game;
 	if(view==view_game){
 		if(GAME_IS_READY){
@@ -40,6 +60,9 @@ function showView(view){
 	}else{
 		if(!Game.PAUSED) Game.togglePause();
 	}
+
+	// CURRENT VIEW
+	CURRENT_VIEW = view;
 
 }
 
@@ -78,6 +101,11 @@ var updateGame = function(){
 	var Game = view_game.contentWindow.Game;
 	Game.gotoLevelByConfig(config);
 };
+
+// Setting GUI
+setTimeout(function(){
+	view_gui.contentWindow.render(getConfig());
+},500);
 
 // LOADING GAME ENGINE
 var GAME_IS_READY = false;
