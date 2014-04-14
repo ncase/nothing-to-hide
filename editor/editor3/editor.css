@@ -1,7 +1,7 @@
 body{
 	margin:0;
 	font-family: sans-serif;
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 100;
 	overflow: hidden;
 	background: #000;
@@ -43,7 +43,7 @@ body{
 	background:#000;
 }
 #tabs > div{
-	width:100px; height:30px;
+	width:60px; height:30px;
 	padding:10px;
 	color:#fff;
 	border-right:1px solid #fff;
@@ -58,4 +58,24 @@ body{
 	background: #fff;
 	color:#000;
 	border-right:1px solid #000;
+}
+
+/*** BUTTONS ***/
+#buttons{
+	position: absolute;
+	width:300px; height:50px;
+	bottom:0;
+	right:0;
+}
+#buttons > button{
+	font-size: 20px;
+	border: 0;
+	background: #fff;
+	color: #000;
+	border-radius: 25px;
+	padding:7px 20px;
+	margin-top:7px;
+	margin-right: 10px;
+	float:right;
+	cursor: pointer;
 }

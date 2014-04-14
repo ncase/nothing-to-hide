@@ -72,7 +72,9 @@ Asset.init({
 		//music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3|assets/music/ogg_64/home_sweet_homeland.ogg'}
 
 	},
-	levels:{}
+	levels:{
+		download: 'levels/download'
+	}
 });
 
 Game.init({levels:[]});

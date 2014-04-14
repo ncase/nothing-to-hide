@@ -55,11 +55,10 @@ function showView(view){
 		if(GAME_IS_READY){
 			updateGame();
 			view_game.focus();
-			//if(Game.PAUSED) Game.togglePause();
+			if(Game.PAUSED) Game.togglePause();
 		}
 	}else{
-		//if(!Game.PAUSED) Game.togglePause();
-		Game.clearLevel();
+		if(!Game.PAUSED) Game.togglePause();
 	}
 
 	// CURRENT VIEW
@@ -121,4 +120,20 @@ window.onProgress = function(val){
 	}
 }
 
+// EXPORT A LEVEL ZIP
+function exportZIP(){
 
+	// Get data
+	var levelData = view_level.value;
+	var mapData = view_map.value;
+
+	// Create ZIP
+	var zip = new JSZip();
+	zip.file("map.txt", mapData);
+	zip.file("level.json", levelData);
+
+	// Auto Download
+	var content = zip.generate();
+	location.href="data:application/zip;base64,"+content;
+
+}
