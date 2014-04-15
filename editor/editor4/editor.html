@@ -1,0 +1,20 @@
+<link href='editor.css' rel='stylesheet' type='text/css'>
+
+<div id="views">
+	<iframe id="view_gui" src="gui/gui.html" selected></iframe>
+	<textarea id="view_map"></textarea>
+	<textarea id="view_level"></textarea>
+	<iframe id="view_game" src="../game/game.html"></iframe>
+</div>
+<div id="tabs">
+	<div id="tab_gui" selected>GUI</div>
+	<div id="tab_map">MAP</div>
+	<div id="tab_level">LEVEL</div>
+	<div id="tab_game">GAME</div>
+</div>
+<div id="buttons">
+	<button onclick="exportZIP()">export</button>
+</div>
+<script src="jszip.min.js"></script>
+<script src="data.js"></script>
+<script src="editor.js"></script>
