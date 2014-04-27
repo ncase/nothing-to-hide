@@ -9,11 +9,6 @@ Yup, *zero* rights reserved.
 
 ![](http://i.imgur.com/zRonTm3.png)
 
-##[We're crowdfunding this thing!](https://back.nothingtohide.cc) (4 days left)
-
-10% of all donations go to EFF, Mozilla, Demand Progress, Creative Commons, and Freedom of the Press Foundation.
-Pledges accepted via PayPal, credit card, and bitcoin.
-
 ###What's all this about, then?
 
 Nothing To Hide is an "anti-stealth" game where you are forced to help in your own surveillance.
