@@ -2,35 +2,6 @@
 	"player":{ "x":0, "y":5 },
 	"goal":{"ax":9,"bx":10,"ay":36,"by":37},
 
-	"shadows": [
-
-		{"ax":0,"bx":11,"ay":6,"by":6},
-		{"ax":8,"bx":8,"ay":6,"by":10},
-		{"ax":11,"bx":11,"ay":6,"by":10},
-		
-		{"ax":1,"bx":4,"ay":12,"by":12},
-		{"ax":4,"bx":4,"ay":9,"by":12},
-		{"ax":4,"bx":6,"ay":9,"by":9},
-		{"ax":6,"bx":6,"ay":9,"by":12},
-		{"ax":6,"bx":13,"ay":12,"by":12},
-
-		{"ax":1,"bx":1,"ay":12,"by":17},
-
-		{"ax":0,"bx":3,"ay":20,"by":20},
-		{"ax":4,"bx":9,"ay":20,"by":20},
-		{"ax":10,"bx":13,"ay":20,"by":20},
-		{"ax":3,"bx":3,"ay":20,"by":21},
-		{"ax":4,"bx":4,"ay":20,"by":21},
-		{"ax":9,"bx":9,"ay":20,"by":21},
-		{"ax":10,"bx":10,"ay":20,"by":21},
-
-		{"ax":0,"bx":9,"ay":25,"by":25},
-		{"ax":9,"bx":9,"ay":25,"by":37},
-		{"ax":10,"bx":10,"ay":25,"by":37},
-		{"ax":10,"bx":13,"ay":25,"by":25}
-
-	],
-
 	"blocks": [
 		{	
 			"x":0.5, "y":19,
@@ -115,12 +86,6 @@
 		{"type":"image", "img":"propaganda_tut_carpet", "x":0, "y":6},
 		{"type":"image", "img":"propaganda_pickup_lookout", "x":8, "y":7},
 		{"type":"image", "img":"propaganda_pickup_gardner", "x":1, "y":12}
-	],
-
-	"art": {
-		"background": false,
-		"cam": false,
-		"lights": []
-	}
+	]
 
 }

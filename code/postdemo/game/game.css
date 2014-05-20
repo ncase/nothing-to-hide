@@ -28,7 +28,7 @@ body, canvas, div {
 
 /*** GAME ***/
 #container {
-	cursor: none;
+	/*cursor: none;*/
 	position: absolute;
 	background: #000;
 	width:100%; height:100%;

@@ -20,10 +20,8 @@
 		this.update = function(){
 
 			// Sneak Mode
-			/*if(Key.justPressed.shift){
-				sneakMode = !sneakMode;
-			}*/
-			sneakMode = Key.shift || level.suspicion.isHiding;
+			sneakMode = Key.shift || level.suspicion.isHiding
+						|| (level.heldObject&&level.heldObject.type=="dummy"); // Holding a person slows you down.
 
 			///////////////////////
 			// CLICK TO PUT DOWN
@@ -34,16 +32,16 @@
 	    	var my = Mouse.y - level.camera.cy;
 	    	var dx = self.x - mx;
 			var dy = (self.y-50) - my;
-			if(self.holdingPrism && dx*dx + dy*dy < 25*25){
+			if(level.heldObject && dx*dx + dy*dy < 25*25){
 				hovering = true;
 				Cursor.hovering++;
 			}
 
 			// Adding/Removing a new light.
-			if(self.holdingPrism && !self.isMoving){
+			if(level.heldObject && !self.isMoving){
 				if(!lastMousePressed && Mouse.pressed){
 			    	if(hovering){
-			    		level.prisms.dropPrism();
+			    		level.heldObject.drop();
 			    		Mouse.pressed = false;
 			    		Cursor.clicked = true;
 			    		return;
@@ -53,8 +51,8 @@
 			lastMousePressed = Mouse.pressed;
 
 			// Adding/Removing a new light.
-			if(self.holdingPrism && Key.justPressed.space){
-	    		level.prisms.dropPrism();
+			if(level.heldObject && Key.justPressed.space){
+	    		level.heldObject.drop();
 	    		Key.justPressed.space = false;
 			}
 
@@ -165,7 +163,7 @@
 		    }
 
 		    // Anim Suffix
-		    var heldPrism = level.prisms.getHeldPrism()
+		    var heldPrism = (self.heldObject && self.heldObject.type=="prism") ? self.heldObject : null;
 		    if(heldPrism){
 		    	animSuffix = (heldPrism.id) ? "_Eye_2" : "_Eye";
 		    }else{
@@ -307,7 +305,7 @@
 			//////////////////////////////////////////////////////////////
 
 			// CLICK ME
-			if(self.holdingPrism){
+			if(level.heldObject){
 				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 0.75*0.5;
 			}else{
 				buttonSprite.scaleX = buttonSprite.scaleX*0.5 + 0*0.5;

@@ -67,7 +67,7 @@
 		Game.gotoLevel(0);
 
 		// Cursor
-		Cursor.init();
+		//Cursor.init();
 
 	};
 

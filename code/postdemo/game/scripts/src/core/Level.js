@@ -172,8 +172,8 @@
 				state.prisms.push(savedPrism);
 			}
 
-			// If you're holding any, yeah, drop it.
-			var heldPrism = self.prisms.getHeldPrism();
+			// If you're holding any prisms, yeah, drop it.
+			var heldPrism = (self.heldObject && self.heldObject.type=="prism") ? self.heldObject : null;
 			if(heldPrism){
 				var savedPrism = {
 					x: self.player.x,

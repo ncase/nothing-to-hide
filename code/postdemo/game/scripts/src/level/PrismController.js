@@ -13,9 +13,7 @@
 		///// UPDATE LOOP /////
 		///////////////////////
 
-		var isHoldingPrism = false;
 		var lastMousePressed = false;
-		var heldPrism = null;
 		this.update = function(){
 
 			if(level.config.id!="intro"){
@@ -33,7 +31,7 @@
 			    if(!lastMousePressed && Mouse.pressed){// && Cursor.still){
 
 			    	// Did you click on a Prism
-			    	if(!isHoldingPrism && clickedPrism && clickedPrism.nearPlayer){
+			    	if(!level.heldObject && clickedPrism && clickedPrism.nearPlayer){
 			    		self.pickUpPrism(clickedPrism);
 			    		Cursor.clicked = true;
 			    		Mouse.pressed = false;
@@ -50,7 +48,7 @@
 			    	var nearPrism = self.isNearPrism(player.x,player.y+25,50);
 
 			    	// Did you click on a Prism
-			    	if(!isHoldingPrism && nearPrism){
+			    	if(!level.heldObject && nearPrism){
 			    		self.pickUpPrism(nearPrism);
 			    		Key.justPressed.space = false;
 					}
@@ -90,9 +88,7 @@
     		}
 
     		// Pick it up!
-    		isHoldingPrism = true;
-    		level.player.holdingPrism = true;
-    		heldPrism = nearPrism;
+    		level.heldObject = nearPrism;
     		/*if(nearPrism.active){
     			createjs.Sound.play("sfx_prism_pickup", null,0,0,false,0.4);
     		}else{
@@ -106,7 +102,7 @@
 
 			var player = level.player;
 
-			var prism = heldPrism;
+			var prism = level.heldObject;
 			prism.x = level.player.x;
 			prism.y = level.player.y+0.001;
 			prism.active = (level.map.getTile(prism.x,prism.y)!=Map.CARPET); // You're NOT on carpet.
@@ -119,9 +115,7 @@
 			prism.justDropped = true;
     		
     		// Logic
-    		heldPrism = null;
-    		isHoldingPrism = false;
-    		level.player.holdingPrism = false;
+    		level.heldObject = null;
 
     		// Sound
     		if(prism.active){
@@ -147,12 +141,9 @@
 			prism.x = x;
 			prism.y = y;
 			prism.active = (level.map.getTile(x,y)!=Map.CARPET); // You're NOT on carpet.
+			prism.drop = self.dropPrism; // HACK.
 			self.prisms.push(prism);
 			return prism;
-		};
-
-		this.getHeldPrism = function(){
-			return heldPrism;
 		};
 
 		//////////

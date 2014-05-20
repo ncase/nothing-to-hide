@@ -7,6 +7,7 @@
 		// Properties
 		this.level = level;
 		this.config = config;
+		this.type = "prism";
 
 		// Bounds
 		var w = Map.TILE_SIZE;
@@ -32,7 +33,7 @@
 				// Are you near?
 				var dx = self.x - level.player.x;
 				var dy = self.y - level.player.y;
-				self.nearPlayer = ( (dx*dx + dy*dy < 50*50) && !level.player.holdingPrism );
+				self.nearPlayer = ( (dx*dx + dy*dy < 50*50) && !level.heldObject );
 			}
 
 			// Bounce

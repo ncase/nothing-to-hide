@@ -3,6 +3,7 @@
 	var Dummy = function(level,config){
 
 		var self = this;
+		self.type = "dummy";
 		
 		// Properties
 		this.level = level;

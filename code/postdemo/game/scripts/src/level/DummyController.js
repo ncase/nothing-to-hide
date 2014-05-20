@@ -13,46 +13,22 @@
 		///// UPDATE LOOP /////
 		///////////////////////
 
-		//var isHoldingDummy = false;
-		//var lastSpace = false;
-		//var heldDummy = null;
 		this.update = function(){
 
-			// Adding/Removing a new dummy.
-			/*var player = level.player;
-		    if(!lastSpace){// && Key.space){
+			// Did you pick up any?
+			var player = level.player;
+		    if(Key.justPressed.space){
+		    	var nearDummy = self.isNearDummy(player.x,player.y+25,50);
+		    	if(!level.heldObject && nearDummy){
+		    		self.pickUpDummy(nearDummy);
+		    		Key.justPressed.space = false;
+				}
+		    }
 
-		    	// Are you near a dummy?
-		    	var nearDummy = self.isNearDummy(player.x,player.y,50);
-		    	if(nearDummy && !isHoldingDummy){
-
-		    		// Remove Dummy
-		    		index = self.dummies.indexOf(nearDummy);
-		    		if(index>=0) self.dummies.splice(index,1);
-		    		if(nearDummy.id){
-		    			self.map[nearDummy.id] = null;
-		    		}
-
-		    		// Pick it up!
-		    		isHoldingDummy = true;
-		    		heldDummy = nearDummy;
-
-		    	}else if(isHoldingDummy){
-
-		    		var dummy = heldDummy;
-					dummy.x = level.player.x;
-					dummy.y = level.player.y;
-					self.dummies.push(dummy);
-					if(dummy.id){
-						self.map[dummy.id] = dummy;
-					}
-		    		
-		    		// Logic
-		    		isHoldingDummy = false;
-		    	}
-
-		    }*/
-		    //lastSpace = Key.space;
+		    // Update all
+			for(var i=0;i<self.dummies.length;i++){
+				self.dummies[i].update();
+			}
 
 		};
 
@@ -70,6 +46,31 @@
 		///// HELPERS /////
 		///////////////////
 
+		this.pickUpDummy = function(nearPrism){
+
+			// Remove dummy
+    		index = self.dummies.indexOf(nearPrism);
+    		if(index>=0) self.dummies.splice(index,1);
+
+    		// Pick it up!
+    		level.heldObject = nearPrism;
+
+		};
+
+		this.dropDummy = function(){
+
+			var player = level.player;
+
+			var dummy = level.heldObject;
+			dummy.x = level.player.x;
+			dummy.y = level.player.y+0.001;
+			self.dummies.push(dummy);
+    		
+    		// Logic
+    		level.heldObject = null;
+
+		};
+
 		this.isNearDummy = function(x,y,size){
 			for(var i=0;i<self.dummies.length;i++){
 				var dummy = self.dummies[i];
@@ -84,6 +85,7 @@
 			var dummy = new Dummy(level);
 			dummy.x = x;
 			dummy.y = y;
+			dummy.drop = self.dropDummy; // HACK.
 			self.dummies.push(dummy);
 			return dummy;
 		};
