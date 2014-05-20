@@ -188,10 +188,10 @@
 
 			// Create mask polygon path
 			ctx.beginPath();
-			ctx.moveTo(poly[0][0], poly[0][1]);
+			ctx.moveTo(poly[0].x, poly[0].y);
 			ctx.fillStyle = "#000";
 			for (var i = 1; i < poly.length; ++i) {
-				ctx.lineTo(poly[i][0], poly[i][1]);
+				ctx.lineTo(poly[i].x, poly[i].y);
 			}
 
 			// Fill in mask
@@ -219,9 +219,9 @@
 				var poly = prism.sightPolygon;
 					
 				temp.beginPath();
-				temp.moveTo(poly[0][0], poly[0][1]);
+				temp.moveTo(poly[0].x, poly[0].y);
 				for (var j=1; j<poly.length; ++j) {
-					temp.lineTo(poly[j][0], poly[j][1]);
+					temp.lineTo(poly[j].x, poly[j].y);
 				}
 				temp.closePath();
 				temp.fill();
@@ -252,9 +252,9 @@
 					var poly = prism.sightPolygon;
 					ctx.fillStyle = cctvPattern;
 					ctx.beginPath();
-					ctx.moveTo(poly[0][0], poly[0][1]);
+					ctx.moveTo(poly[0].x, poly[0].y);
 					for (var i = 1; i < poly.length; ++i) {
-						ctx.lineTo(poly[i][0], poly[i][1]);
+						ctx.lineTo(poly[i].x, poly[i].y);
 					}
 
 					ctx.translate(0,cctvY);

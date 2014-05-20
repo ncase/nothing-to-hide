@@ -98,7 +98,7 @@
 			for(var i=0;i<prisms.length;i++){
 				var prism = prisms[i];
 				if(!prism.active) continue;
-				if(VisibilityPolygon.inPolygon([x,y], prism.sightPolygon)){
+				if(SightAndLight.inPolygon({x:x,y:y}, prism.sightPolygon)){
 					return false;
 				}
 			}

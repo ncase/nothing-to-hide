@@ -52,7 +52,7 @@
 		};
 		this.hitTest = function(px,py){
 			var tile = this.getTile(px,py);
-			return(tile==Map.WALL || tile==Map.SCREEN || tile==Map.SCREEN_LINE);
+			return(tile==Map.WALL || tile==Map.SCREEN);
 		}
 
 		///////////////////
@@ -146,8 +146,11 @@
 		// Propaganda Blackouts
 		var blackouts = [];
 		function _blackoutIsSeen(bo,poly){
-			if(VisibilityPolygon.inPolygon([bo.x+bo.width/2,bo.y+bo.height/2],poly)) return true;
-			return false;
+			var blackoutPoint = {
+				x: bo.x+bo.width/2,
+				y: bo.y+bo.height/2
+			};
+			return SightAndLight.inPolygon(blackoutPoint,poly);
 		}
 		function _isInBlackout(x,y){
 			for(var i=0;i<blackouts.length;i++){
@@ -164,25 +167,17 @@
 			var x,y,tile;
 
 			// Get right-most side of screen
-			var width = 0;
+			var width = 1;
 			x = startX;
 			y = startY;
 			tile = tiles[y][x];
-			while(tile==Map.SCREEN){
-				x++;
-				width++;
-				tile = tiles[y][x];
-			}
-			if(tile==Map.SCREEN_LINE){ // if it was a line, not a wall, add another.
-				width++;
-			}
 
 			// Get bottom-most side of screen
 			var height = 0;
 			x = startX;
 			y = startY;
 			tile = tiles[y][x];
-			while(tile==Map.SCREEN || tile==Map.SCREEN_LINE){
+			while(tile==Map.SCREEN){
 				y++;
 				height++;
 				tile = tiles[y][x];
@@ -205,7 +200,7 @@
 		for(var y=0;y<tiles.length;y++){
 			for(var x=0;x<tiles[y].length;x++){
 				var tile = tiles[y][x];
-				if((tile==Map.SCREEN || tile==Map.SCREEN_LINE) && !_isInBlackout(x,y)){
+				if(tile==Map.SCREEN && !_isInBlackout(x,y)){
 					blackouts.push(_findBlackout(x,y));
 				}
 			}
@@ -220,13 +215,15 @@
 
 		// Screen Lines.
 		var screenlines = [];
+		/*
 		for(var y=0;y<tiles.length;y++){
 			for(var x=0;x<tiles[y].length;x++){
-				if(tiles[y][x]==Map.SCREEN_LINE){
+				if(tiles[y][x]==Map.SCREEN){
 					screenlines.push({ x:x, y:y });
 				}
 			}
 		}
+		*/
 
 
 		///////////////////
@@ -247,11 +244,8 @@
 	// CONSTANTS
 	Map.WALL = "#";
 	Map.SCREEN = "=";
-	Map.SCREEN_LINE = "+";
 	Map.SPACE = " ";
 	Map.METAL = "M";
-	Map.PROP = "@";
-	Map.CARPET_PROP = "!";
 	Map.CARPET = ".";
 	Map.TILE_SIZE = 50;
 
@@ -262,11 +256,10 @@
 			for(var x=0;x<tiles[y].length;x++){
 				switch(tiles[y][x]){
 					
-					case Map.METAL: case Map.PROP: case Map.SPACE: ctx.fillStyle="#C4D3D2"; break;
-					case Map.CARPET_PROP: case Map.CARPET: ctx.fillStyle=textures.carpet; break;
+					case Map.METAL: case Map.SPACE: ctx.fillStyle="#C4D3D2"; break;
+					case Map.CARPET: ctx.fillStyle=textures.carpet; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
 					case Map.SCREEN: ctx.fillStyle="#202328"; break;
-					case Map.SCREEN_LINE: ctx.fillStyle="#202328"; break;
 
 				}
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
@@ -285,11 +278,10 @@
 			for(var x=0;x<tiles[y].length;x++){
 				switch(tiles[y][x]){
 
-					case Map.METAL: case Map.PROP: case Map.SPACE: ctx.fillStyle="#555"; break;
-					case Map.CARPET_PROP: case Map.CARPET: ctx.fillStyle=textures.carpet_cctv; break;
+					case Map.METAL: case Map.SPACE: ctx.fillStyle="#555"; break;
+					case Map.CARPET: ctx.fillStyle=textures.carpet_cctv; break;
 					case Map.WALL: ctx.fillStyle="#000"; break;
 					case Map.SCREEN: ctx.fillStyle="#000"; break;
-					case Map.SCREEN_LINE: ctx.fillStyle="#000"; break;
 
 				}
 				ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
@@ -316,7 +308,7 @@
 		for(var y=0;y<tiles.length;y++){
 			for(var x=0;x<tiles[y].length;x++){
 				var tile = tiles[y][x];
-				if(tile==Map.WALL || tile==Map.SCREEN || tile==Map.SCREEN_LINE){
+				if(tile==Map.WALL || tile==Map.SCREEN){
 					ctx.fillRect(
 						x*Map.TILE_SIZE-1,
 						y*Map.TILE_SIZE-1,
@@ -331,7 +323,7 @@
 		for(var y=0;y<tiles.length;y++){
 			for(var x=0;x<tiles[y].length;x++){
 				var tile = tiles[y][x];
-				if(tile==Map.WALL || tile==Map.SCREEN || tile==Map.SCREEN_LINE){
+				if(tile==Map.WALL || tile==Map.SCREEN){
 					ctx.fillStyle="#000";
 					ctx.fillRect(x*Map.TILE_SIZE,y*Map.TILE_SIZE,Map.TILE_SIZE,Map.TILE_SIZE);
 				}

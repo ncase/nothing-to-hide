@@ -67,7 +67,9 @@ Asset.init({
 	},
 	sounds:{
 
-		sfx_shotdown:{src:'assets/sounds/mp3/shotdown.mp3|assets/sounds/ogg/shotdown.ogg'},
+		sfx_cam:{src:'assets/sounds/mp3/cam.mp3|assets/sounds/ogg/cam.ogg'}
+
+		/*sfx_shotdown:{src:'assets/sounds/mp3/shotdown.mp3|assets/sounds/ogg/shotdown.ogg'},
 		sfx_alarm:{src:'assets/sounds/mp3/alarm.mp3|assets/sounds/ogg/alarm.ogg'},
 		
 		sfx_prism_pickup:{src:'assets/sounds/mp3/prism_pickup.mp3|assets/sounds/ogg/prism_pickup.ogg'},
@@ -86,33 +88,19 @@ Asset.init({
 		sfx_dialog:{src:'assets/sounds/mp3/dialog.mp3|assets/sounds/ogg/dialog.ogg'},
 
 		button_hover: {src:'assets/sounds/mp3/button_hover.mp3|assets/sounds/ogg/button_hover.ogg'},
-		button_press: {src:'assets/sounds/mp3/button_press.mp3|assets/sounds/ogg/button_press.ogg'},
+		button_press: {src:'assets/sounds/mp3/button_press.mp3|assets/sounds/ogg/button_press.ogg'},*/
 
-		music_bg: {src:'assets/music/mp3_64/a_healthy_dystopia.mp3|assets/music/ogg_64/a_healthy_dystopia.ogg'},
-		music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3|assets/music/ogg_64/home_sweet_homeland.ogg'}
+		//music_bg: {src:'assets/music/mp3_64/a_healthy_dystopia.mp3|assets/music/ogg_64/a_healthy_dystopia.ogg'},
+		//music_bg_2: {src:'assets/music/mp3_64/home_sweet_homeland.mp3|assets/music/ogg_64/home_sweet_homeland.ogg'}
 
 	},
 	levels:{
-		
-		intro: 'levels/intro',
-		pickup: 'levels/pickup',
-		big_puzzle: 'levels/big_puzzle',
-
-		conveyor: 'levels/conveyor',
-		conveyor_2: 'levels/conveyor_2',
-
-		power: 'levels/power',
-		power_puzzle: 'levels/power_puzzle',
-		nobody_needs_you: 'levels/nobody_needs_you'
-
+		dummy: 'levels/dummy'
 	}
 });
 
 Game.init({
 	levels:[
-		'intro','pickup','big_puzzle',
-		'conveyor','conveyor_2',
-		'power','power_puzzle',
-		'nobody_needs_you'
+		'dummy'
 	]
 });

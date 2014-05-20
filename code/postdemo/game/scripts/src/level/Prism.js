@@ -220,7 +220,7 @@
 				var humanoidsSeen = [];
 				for(var i=0;i<humanoids.length;i++){
 					var hum = humanoids[i];
-					if(VisibilityPolygon.inPolygon([hum.x,hum.y], self.sightPolygon)){
+					if(SightAndLight.inPolygon(hum, self.sightPolygon)){
 						humanoidsSeen.push(hum);
 					}
 				}
