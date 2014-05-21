@@ -2,24 +2,16 @@
 	"player":{ "x":0, "y":5 },
 	"goal":{"ax":9,"bx":10,"ay":36,"by":37},
 
-	"dummies": [
-		{"x":6,"y":8}
-	],
+	"dummies": [],
 
 	"blocks": [],
 
 	"prisms": [
 		{"x":0,"y":11},
-		{"x":12,"y":5,"id":"power"}
+		{"x":12,"y":11}
 	],
 
-	"conveyors": [
-		{
-			"belt": {"ax":1,"bx":12,"ay":8,"by":9},
-			"direction": {"x":-1,"y":0},
-			"activator": "power"
-		}
-	],
+	"conveyors": [],
 
 	"camera": [
 		{
@@ -29,12 +21,12 @@
 		}
 	],
 
+	"lights": [
+		{"x":6,"y":8}
+	],
+
 	"checkpoints": [],
-
 	"dialogues": [],
-
-	"propaganda": [
-		{"type":"image", "img":"propaganda_tut_pickup", "x":0, "y":0}
-	]
+	"propaganda": []
 
 }
