@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nothing To Hide</title>
+        <link href='game.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body onblur="Game.forcePause()">
+
+        <div id="container">
+	        <div id="game_container"></div>
+            <div id="swipe_container">
+                <canvas id="screenswipe"></canvas>
+            </div>
+        </div>
+
+        <canvas id="ui" style="position:absolute;top:0;left:0;/*cursor:none*/"></canvas>
+
+        <div id="pause_menu">
+            <div id="pause_menu_2">
+                <div id="pause_menu_3" style="display:none">
+                    <div style="font-size:100px">PANOPTICON PAUSED</div>
+
+                    <!-- Top Actions -->
+                    <div class="button_container">
+                        <div class="button" onclick="Game.togglePause();">RESUME GAME</div>
+                        <div class="button" onclick="Game.togglePause(); Game.resetLevel()">RESET LEVEL</div>
+                        <div class="button" onclick="window.top.gotoPage('menu/menu.html');">BACK TO MAIN MENU</div>
+                    </div>
+
+                    <!-- Level Select -->
+                    <div style="margin: 25px 0 5px 0; font-size:40px">Level Select:</div>
+                    <div id="level_select" class="button_container">
+                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene.html');">INTRO</div>
+                        <div class="button" id="lvl_0" onclick="Game.togglePause(); Game.gotoLevel(0);">1</div>
+                        <div class="button" id="lvl_1" onclick="Game.togglePause(); Game.gotoLevel(1);">2</div>
+                        <div class="button" id="lvl_2" onclick="Game.togglePause(); Game.gotoLevel(2);">3</div>
+                        <div class="button" id="lvl_3" onclick="Game.togglePause(); Game.gotoLevel(3);">4</div>
+                        <div class="button" id="lvl_4" onclick="Game.togglePause(); Game.gotoLevel(4);">5</div>
+                        <div class="button" id="lvl_5" onclick="Game.togglePause(); Game.gotoLevel(5);">6</div>
+                        <div class="button" id="lvl_6" onclick="Game.togglePause(); Game.gotoLevel(6);">7</div>
+                        <div class="button" id="lvl_7" onclick="Game.togglePause(); Game.gotoLevel(7);">8</div>
+                        <div class="button" onclick="window.top.gotoPage('cutscene/cutscene_end.html');">ENDING</div>
+                    </div>
+
+                    <!-- Share Game -->
+                    <div style="margin: 25px 0 5px 0; font-size:40px">Share Game:</div>
+                    <div id="level_select" class="button_container" >
+                        <div style="float:left; cursor:pointer" class="social_big" id="tweet" onclick='window.SS_POPUP("https://twitter.com/share?url=http%3A%2F%2Fdemo.nothingtohide.cc%2F&text=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.&via=ncasenmare","twitter")'></div>
+                        <div style="float:left; cursor:pointer" class="social_big" id="facebook" onclick='window.SS_POPUP("https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdemo.nothingtohide.cc%2F&t=Nothing%20To%20Hide%3A%20an%20anti-stealth%20game%20where%20you%20are%20your%20own%20watchdog.","facebook")'></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="ui_container">
+            <div id="pause" class="button" onclick="Game.togglePause()">PAUSE</div>
+            <div id="skip_level" class="button" onclick="skipLevel()">SKIP LEVEL</div>
+            <div id="fps_counter"></div>
+        </div>
+
+    </body>
+</html>
+
+<!-- Libraries -->
+<script src="scripts/lib/Q.js"></script>
+<script src="scripts/lib/sight-and-light.js"></script>
+<script src="scripts/lib/soundjs-0.5.2.min.js"></script>
+
+<!-- Core game engine -->
+<script src="scripts/src/core/Key.js"></script>
+<script src="scripts/src/core/Mouse.js"></script>
+<script src="scripts/src/core/Dialogue.js"></script>
+<script src="scripts/src/core/Display.js"></script>
+<script src="scripts/src/core/Asset.js"></script>
+<script src="scripts/src/core/Camera.js"></script>
+<script src="scripts/src/core/Level.js"></script>
+<script src="scripts/src/core/Cursor.js"></script>
+<script src="scripts/src/core/Sprite.js"></script>
+<script src="scripts/src/core/Game.js"></script>
+
+<!-- For the levels -->
+<script src="scripts/src/level/Block.js"></script>
+<script src="scripts/src/level/BlockController.js"></script>
+<script src="scripts/src/level/Prism.js"></script>
+<script src="scripts/src/level/PrismController.js"></script>
+<script src="scripts/src/level/Dummy.js"></script>
+<script src="scripts/src/level/DummyController.js"></script>
+<script src="scripts/src/level/Conveyor.js"></script>
+<script src="scripts/src/level/ConveyorController.js"></script>
+<script src="scripts/src/level/DoorController.js"></script>
+<script src="scripts/src/level/ShadowController.js"></script>
+<script src="scripts/src/level/Player.js"></script>
+<script src="scripts/src/level/Map.js"></script>
+<script src="scripts/src/level/Suspicion.js"></script>
+
+<!-- Debug -->
+<!--script src="scripts/src/debug/Debug.js"></script-->
+
+<!-- Config -->
+<script src="scripts/config.js"></script>
+<script src="scripts/main.js"></script>
