@@ -1,131 +1,131 @@
-{"frames": [
+﻿{"frames": [
 
 {
 	"filename": "prism0000",
-	"frame": {"x":5,"y":5,"w":51,"h":50},
+	"frame": {"x":5,"y":5,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0001",
-	"frame": {"x":61,"y":5,"w":51,"h":50},
+	"frame": {"x":60,"y":5,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0002",
-	"frame": {"x":117,"y":5,"w":51,"h":51},
+	"frame": {"x":115,"y":5,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0003",
-	"frame": {"x":173,"y":5,"w":51,"h":51},
+	"frame": {"x":170,"y":5,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0004",
-	"frame": {"x":5,"y":61,"w":50,"h":50},
+	"frame": {"x":5,"y":85,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0005",
-	"frame": {"x":5,"y":61,"w":50,"h":50},
+	"frame": {"x":60,"y":85,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0006",
-	"frame": {"x":5,"y":61,"w":50,"h":50},
+	"frame": {"x":115,"y":85,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0007",
-	"frame": {"x":5,"y":61,"w":50,"h":50},
+	"frame": {"x":170,"y":85,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0008",
-	"frame": {"x":5,"y":61,"w":50,"h":50},
+	"frame": {"x":5,"y":165,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0009",
-	"frame": {"x":5,"y":61,"w":50,"h":50},
+	"frame": {"x":5,"y":85,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0010",
-	"frame": {"x":5,"y":61,"w":50,"h":50},
+	"frame": {"x":5,"y":85,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0011",
-	"frame": {"x":60,"y":61,"w":51,"h":50},
+	"frame": {"x":60,"y":165,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0012",
-	"frame": {"x":116,"y":61,"w":51,"h":50},
+	"frame": {"x":115,"y":165,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0013",
-	"frame": {"x":172,"y":61,"w":51,"h":51},
+	"frame": {"x":170,"y":165,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }
 ,{
 	"filename": "prism0014",
-	"frame": {"x":5,"y":117,"w":51,"h":51},
+	"frame": {"x":5,"y":245,"w":50,"h":75},
 	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":51},
-	"sourceSize": {"w":51,"h":51}
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":75},
+	"sourceSize": {"w":50,"h":75}
 }],
 "meta": {
-	"app": "Adobe Flash CS6",
-	"version": "12.0.0.481",
+	"app": "Adobe Flash Professional",
+	"version": "13.1.0.226",
 	"image": "MrPrism.png",
 	"format": "RGBA8888",
-	"size": {"w":256,"h":256},
+	"size": {"w":256,"h":512},
 	"scale": "1"
 }
 }

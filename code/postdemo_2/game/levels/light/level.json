@@ -1,0 +1,40 @@
+{
+	"player":{ "x":0, "y":5 },
+	"goal":{"ax":9,"bx":10,"ay":36,"by":37},
+
+	"dummies": [
+		{"x":6,"y":8}
+	],
+
+	"blocks": [],
+
+	"prisms": [
+		{"x":0,"y":11},
+		{"x":12,"y":5,"id":"power"}
+	],
+
+	"conveyors": [
+		{
+			"belt": {"ax":1,"bx":12,"ay":8,"by":9},
+			"direction": {"x":-1,"y":0},
+			"activator": "power"
+		}
+	],
+
+	"camera": [
+		{
+			"type": "fixed",
+			"zone": {"ax":0,"bx":13,"ay":0,"by":12},
+			"data": {"x":6.5,"y":6}
+		}
+	],
+
+	"checkpoints": [],
+
+	"dialogues": [],
+
+	"propaganda": [
+		{"type":"image", "img":"propaganda_tut_pickup", "x":0, "y":0}
+	]
+
+}

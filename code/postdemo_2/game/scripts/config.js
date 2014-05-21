@@ -95,12 +95,12 @@ Asset.init({
 
 	},
 	levels:{
-		dummy: 'levels/dummy'
+		light: 'levels/light'
 	}
 });
 
 Game.init({
 	levels:[
-		'dummy'
+		'light'
 	]
 });

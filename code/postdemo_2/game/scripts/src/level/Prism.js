@@ -63,7 +63,7 @@
 
 		var prismSprite = new Sprite("MrPrism");
 		prismSprite.regX = -25;
-		prismSprite.regY = -50;
+		prismSprite.regY = -75;
 
 		var buttonSprite = new Sprite("Button");
 		buttonSprite.regX = -40;
@@ -72,8 +72,8 @@
 		var buttonRotation = 0;
 
 		var eyeSprite = new Sprite("PrismEye");
-		eyeSprite.regX = -5;
-		eyeSprite.regY = -5;
+		eyeSprite.regX = -8;
+		eyeSprite.regY = -8;
 
 		this.draw = function(ctx){
 
@@ -144,8 +144,8 @@
 
 				// Draw eye
 				eyeSprite.frameIndex = 0;
-				eyeSprite.x = prismSprite.regX+21 + vectToPlayer.x;
-				eyeSprite.y = prismSprite.regY+38 + vectToPlayer.y;
+				eyeSprite.x = prismSprite.regX+23 + vectToPlayer.x;
+				eyeSprite.y = prismSprite.regY+59 + vectToPlayer.y;
 				eyeSprite.draw(ctx);
 
 			}
@@ -203,8 +203,8 @@
 
 				// Draw eye
 				eyeSprite.frameIndex = 1;
-				eyeSprite.x = self.x+prismSprite.regX+21 + vectToPlayer.x;
-				eyeSprite.y = self.y+prismSprite.regY+38 + vectToPlayer.y;
+				eyeSprite.x = self.x+prismSprite.regX+23 + vectToPlayer.x;
+				eyeSprite.y = self.y+prismSprite.regY+59 + vectToPlayer.y;
 				eyeSprite.draw(cctvContext);
 
 			}
