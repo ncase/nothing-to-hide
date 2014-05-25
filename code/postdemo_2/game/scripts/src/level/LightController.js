@@ -103,14 +103,9 @@
 		// INIT //
 		//////////
 
-		self.map = {};
 		for(var i=0;i<config.lights.length;i++){
 			var lightConfig = config.lights[i];
 			var light = this.addLight(lightConfig.x,lightConfig.y);
-			light.id = lightConfig.id;
-			if(lightConfig.id){
-				self.map[lightConfig.id] = light;
-			}
 		}
 
 
