@@ -107,6 +107,12 @@
 				// Background elements
 				level.map.drawCCTV(ctxTemp);
 				level.conveyors.drawCCTV(ctxTemp);
+				
+				for(var i=0;i<level.lights.lights.length;i++){
+					var light = level.lights.lights[i];
+					light.drawCCTV(ctxTemp);
+				}
+
 				_drawCCTV(ctxTemp);
 
 				// Draw props

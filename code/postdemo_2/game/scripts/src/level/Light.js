@@ -23,7 +23,12 @@
 		///// UPDATE LOOP /////
 		///////////////////////
 
+		var poly = [];
 		this.update = function(){
+			self.updatePolygon();
+		};
+		this.updatePolygon = function(){
+			poly = SightAndLight.compute({x:self.x,y:self.y}, level.shadows.shadows);
 		};
 
 		/////////////////////
@@ -31,14 +36,29 @@
 		/////////////////////
 
 		this.draw = function(ctx){
-			ctx.save();
-			ctx.translate(self.x,self.y);
-			ctx.fillStyle = "#fff";
-			ctx.fillRect(0,0,100,100);
-			ctx.restore();
+			_drawLight(ctx,"rgba(255,255,255,0.7)","#cc2727");
 		};
 
 		this.drawCCTV = function(cctvContext){
+			_drawLight(cctvContext,"rgba(255,255,255,0.7)","#000");
+		};
+
+		var _drawLight = function(ctx,lightStyle, sourceStyle){
+
+			// Create mask polygon path
+			ctx.beginPath();
+			ctx.moveTo(poly[0].x, poly[0].y);
+			ctx.fillStyle = lightStyle;
+			for (var i = 1; i < poly.length; ++i) {
+				ctx.lineTo(poly[i].x, poly[i].y);
+			}
+			ctx.fill();
+
+			// Draw a red circle
+			ctx.beginPath();
+			ctx.arc(self.x, self.y, 5, 0, 2*Math.PI, false);
+			ctx.fillStyle = sourceStyle
+			ctx.fill();
 
 		};
 

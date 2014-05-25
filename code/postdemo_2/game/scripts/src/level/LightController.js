@@ -65,6 +65,7 @@
 			var light = level.heldObject;
 			light.x = level.player.x;
 			light.y = level.player.y;
+			light.updatePolygon();
 			self.lights.push(light);
     		
     		// Logic
