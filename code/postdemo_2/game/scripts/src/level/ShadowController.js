@@ -58,6 +58,9 @@
 			this.lightShadows.push({ax:block.left, bx:block.right, ay:block.bottom, by:block.bottom}); // bottom
 		}
 
+		// HACK
+		this.lightShadows.push({ax:400, bx:410, ay:400, by:410});
+
 		///////////////////////
 		///// UPDATE LOOP /////
 		///////////////////////

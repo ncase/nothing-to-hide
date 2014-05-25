@@ -45,13 +45,31 @@
 
 		var _drawLight = function(ctx,lightStyle, sourceStyle){
 
+			// Save
+			ctx.save();
+
 			// Create mask polygon path
 			ctx.beginPath();
 			ctx.moveTo(poly[0].x, poly[0].y);
-			ctx.fillStyle = lightStyle;
+			//ctx.fillStyle = lightStyle;
 			for (var i = 1; i < poly.length; ++i) {
 				ctx.lineTo(poly[i].x, poly[i].y);
 			}
+			ctx.clip(); 
+
+			// Draw light circles
+			ctx.beginPath();
+			ctx.fillStyle = "rgba(255,255,255,0.2)";
+			ctx.arc(self.x, self.y, 130, 0, 2*Math.PI, false);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.arc(self.x, self.y, 120, 0, 2*Math.PI, false);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.arc(self.x, self.y, 110, 0, 2*Math.PI, false);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.arc(self.x, self.y, 100, 0, 2*Math.PI, false);
 			ctx.fill();
 
 			// Draw a red circle
@@ -59,6 +77,9 @@
 			ctx.arc(self.x, self.y, 5, 0, 2*Math.PI, false);
 			ctx.fillStyle = sourceStyle
 			ctx.fill();
+
+			// Restore
+			ctx.restore();
 
 		};
 
