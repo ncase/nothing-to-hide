@@ -12,33 +12,28 @@
 		///// PARSING CONFIG DATA /////
 		///////////////////////////////
 
+		// Scaling Function
+		var _toMapScale = function(array,xOffset,yOffset){
+			for(var i=0;i<array.length;i++){
+				var item = array[i];
+				item.x = (item.x+xOffset)*Map.TILE_SIZE;
+				item.y = (item.y+yOffset)*Map.TILE_SIZE;
+			}
+			return array;
+		};
+
 		// Prisms to scale of Tile Size
 		// Savestate?...
 		if(saveState){
 			lvl.prisms = saveState.prisms;
 		}else{
-			for(var i=0;i<lvl.prisms.length;i++){
-				var prism = lvl.prisms[i];
-				prism.x = (prism.x+0.5)*Map.TILE_SIZE;
-				prism.y = (prism.y+0.75)*Map.TILE_SIZE; // A little downwards
-			}
+			lvl.prisms = _toMapScale(lvl.prisms,0.5,0.75); // A little downwards
 		}
 
-		// Dummies to scale of Tile Size
-		lvl.dummies = lvl.dummies || [];
-		for(var i=0;i<lvl.dummies.length;i++){
-			var dummy = lvl.dummies[i];
-			dummy.x = (dummy.x+0.5)*Map.TILE_SIZE;
-			dummy.y = (dummy.y+0.5)*Map.TILE_SIZE;
-		}
-
-		// Blocks, too
-		lvl.blocks = lvl.blocks || [];
-		for(var i=0;i<lvl.blocks.length;i++){
-			var block = lvl.blocks[i];
-			block.x = (block.x+0.5)*Map.TILE_SIZE;
-			block.y = (block.y+1.0)*Map.TILE_SIZE; // Actually there, not half-way
-		}
+		// Dummies & Blocks & Lights, too
+		lvl.dummies = _toMapScale(lvl.dummies,0.5,0.5);
+		lvl.lights = _toMapScale(lvl.lights,0.5,0.5);
+		lvl.blocks = _toMapScale(lvl.blocks,0.5,1.0);
 
 		/////////////////////////////
 		///// INIT GAME OBJECTS /////
@@ -73,6 +68,7 @@
 
 		this.shadows = new ShadowController(this);
 		this.prisms = new PrismController(this,{ prisms:lvl.prisms });
+		this.lights = new LightController(this,{ lights:lvl.lights || [] });
 		this.conveyors = new ConveyorController(this,{ conveyors:lvl.conveyors || [] });
 		this.doors = new DoorController(this,{ doors:lvl.doors || [] });
 		this.dummies = new DummyController(this,{ dummies:lvl.dummies || [] });
@@ -100,6 +96,7 @@
 			// Update everything
 			this.camera.update();
 			this.prisms.update();
+			this.lights.update();
 			this.player.update();
 			this.shadows.update();
 			this.conveyors.update();

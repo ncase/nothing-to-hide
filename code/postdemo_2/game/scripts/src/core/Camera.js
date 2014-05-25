@@ -141,6 +141,7 @@
 			// Background elements
 			level.map.draw(ctxTemp);
 			level.conveyors.draw(ctxTemp);
+			level.lights.draw(ctxTemp);
 
 			// Don't draw CCTV on walls
 			var temp = Display.context.tmp2;
