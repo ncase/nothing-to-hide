@@ -25,7 +25,7 @@
 
 		    	// Did you click on a Light
 		    	if(!level.heldObject && nearLight){
-		    		self.pickUpItem(nearLight);
+		    		self.pickUpLight(nearLight);
 		    		Key.justPressed.space = false;
 				}
 
@@ -65,6 +65,7 @@
 			var light = level.heldObject;
 			light.x = level.player.x;
 			light.y = level.player.y;
+			self.lights.push(light);
     		
     		// Logic
     		level.heldObject = null;
@@ -92,6 +93,7 @@
 			var light = new Light(level);
 			light.x = x;
 			light.y = y;
+			light.drop = self.dropLight; // HACK.
 			self.lights.push(light);
 			return light;
 		};
