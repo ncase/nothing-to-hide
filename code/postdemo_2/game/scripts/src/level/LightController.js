@@ -47,6 +47,11 @@
 				self.lights[i].draw(ctx);
 	    	}
 		};
+		this.drawCCTV = function(ctx){
+			for(var i=0;i<self.lights.length;i++){
+				self.lights[i].drawCCTV(ctx);
+	    	}
+		};
 
 		///////////////////
 		///// HELPERS /////

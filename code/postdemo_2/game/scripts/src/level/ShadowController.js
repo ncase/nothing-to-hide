@@ -51,15 +51,12 @@
 		this.shadows.push({ax:-1, bx:-1, ay:-1, by:level.map.height+1}); // left
 		this.shadows.push({ax:level.map.width+1, bx:level.map.width+1, ay:-1, by:level.map.height+1}); // right
 
-		// Now, the shadow-walls for IEYES & LIGHTS.
+		// Now, the shadow-walls for IEYES & LIGHTS. (same thing but with a bottom)
 		this.lightShadows = JSON.parse(JSON.stringify(this.shadows));
 		for(var i=0;i<blocks.length;i++){
 			var block = blocks[i];
 			this.lightShadows.push({ax:block.left, bx:block.right, ay:block.bottom, by:block.bottom}); // bottom
 		}
-
-		// HACK
-		this.lightShadows.push({ax:400, bx:410, ay:400, by:410});
 
 		///////////////////////
 		///// UPDATE LOOP /////

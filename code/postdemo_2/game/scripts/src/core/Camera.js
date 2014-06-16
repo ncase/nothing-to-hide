@@ -63,7 +63,10 @@
 			////////////////////////////////////////////////////////////////////////////////////////
 
 			// Sort props
-			var props = [level.player].concat(level.prisms.prisms).concat(level.dummies.dummies).concat(level.blocks.blocks);
+			var props = [level.player]
+						.concat(level.prisms.prisms)
+						.concat(level.dummies.dummies)
+						.concat(level.blocks.blocks);
 			props = props.sort(function(a,b){
 				var ay = a.y;
 				var by = b.y;
@@ -95,47 +98,28 @@
 			// DRAW CCTV LAYER //
 			/////////////////////
 
-			// HACK: HARDCODE FOR FIRST LEVEL
-			if(level.config.id!="intro" || HACK_for_intro_alpha>0.01){
-				
-				// HACK: ALPHA
-				if(level.config.id=="intro") ctxTemp.globalAlpha = HACK_for_intro_alpha;
+			// Clear				
+			ctxTemp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
 
-				// Clear				
-				ctxTemp.clearRect(-self.cx,-self.cy,Display.width,Display.height);
+			// Background elements
+			level.map.drawCCTV(ctxTemp);
+			level.conveyors.drawCCTV(ctxTemp);
+			level.lights.drawCCTV(ctxTemp);
+			level.shades.drawCCTV(ctxTemp);
+			_drawCCTV(ctxTemp);
 
-				// Background elements
-				level.map.drawCCTV(ctxTemp);
-				level.conveyors.drawCCTV(ctxTemp);
-				
-				for(var i=0;i<level.lights.lights.length;i++){
-					var light = level.lights.lights[i];
-					light.drawCCTV(ctxTemp);
-				}
-
-				_drawCCTV(ctxTemp);
-
-				// Draw props
-				for(var i=0;i<props.length;i++){
-					var prop = props[i];
-					prop.drawCCTV(ctxTemp);
-				}
-
-				// Mask with prism eyes
-				_mask2(ctxTemp);
-
-				// HACK: ALPHA
-				if(level.config.id=="intro") ctxTemp.globalAlpha = 1;
-				
-				// Draw to main
-				ctx.drawImage(Display.canvas.tmp,0,0);
-
+			// Draw props
+			for(var i=0;i<props.length;i++){
+				var prop = props[i];
+				prop.drawCCTV(ctxTemp);
 			}
 
-			if(level.config.id=="intro"){
-				var HACK_goto_alpha = (level.player.x>28*Map.TILE_SIZE) ? 1 : 0;
-				HACK_for_intro_alpha = HACK_for_intro_alpha*0.8 + HACK_goto_alpha*0.2;
-			}
+			// Mask with prism eyes
+			_mask2(ctxTemp);
+			
+			// Draw to main
+			ctx.drawImage(Display.canvas.tmp,0,0);
+			
 
 			/////////////////////
 			// DRAW MAIN LAYER //
@@ -148,6 +132,7 @@
 			level.map.draw(ctxTemp);
 			level.conveyors.draw(ctxTemp);
 			level.lights.draw(ctxTemp);
+			level.shades.draw(ctxTemp);
 
 			// Don't draw CCTV on walls
 			var temp = Display.context.tmp2;

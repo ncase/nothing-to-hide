@@ -33,6 +33,7 @@
 		// Dummies & Blocks & Lights, too
 		lvl.dummies = _toMapScale(lvl.dummies,0.5,0.5);
 		lvl.lights = _toMapScale(lvl.lights,0.5,0.5);
+		lvl.shades = _toMapScale(lvl.shades,0.5,0.5);
 		lvl.blocks = _toMapScale(lvl.blocks,0.5,1.0);
 
 		/////////////////////////////
@@ -72,6 +73,7 @@
 		this.conveyors = new ConveyorController(this,{ conveyors:lvl.conveyors || [] });
 		this.doors = new DoorController(this,{ doors:lvl.doors || [] });
 		this.dummies = new DummyController(this,{ dummies:lvl.dummies || [] });
+		this.shades = new ShadeController(this,{ shades:lvl.shades || [] });
 		this.blocks = new BlockController(this,{ blocks:lvl.blocks || [] });
 
 		//////////////////////
@@ -97,6 +99,7 @@
 			this.camera.update();
 			this.prisms.update();
 			this.lights.update();
+			this.shades.update();
 			this.player.update();
 			this.shadows.update();
 			this.conveyors.update();

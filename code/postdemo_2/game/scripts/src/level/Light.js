@@ -28,7 +28,15 @@
 			self.updatePolygon();
 		};
 		this.updatePolygon = function(){
-			poly = SightAndLight.compute({x:self.x,y:self.y}, level.shadows.lightShadows);
+
+			// Shadows = Walls + Shades
+			var wallShadows = level.shadows.lightShadows;
+			var shadeShadows = level.shades.getShadows();
+			var shadows = wallShadows.concat(shadeShadows);
+
+			// My Sight Polygon
+			poly = SightAndLight.compute({x:self.x,y:self.y},shadows);
+
 		};
 
 		/////////////////////
