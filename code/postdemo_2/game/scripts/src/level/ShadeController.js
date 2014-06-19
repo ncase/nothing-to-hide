@@ -59,17 +59,29 @@
 
 		this.getShadows = function(){
 			var shadows = [];
-			var l,r,t,b, shade;
+			var x0,x1,x2,x3, y0,y1,y2,y3, shade;
 			for(var i=0;i<self.shades.length;i++){
+				
 				shade = self.shades[i];
-				l = shade.x - 25;
-				r = shade.x + 25;
-				t = shade.y - 25;
-				b = shade.y + 25;
-				shadows.push({ax:l, bx:r, ay:t, by:t}); // top
-				shadows.push({ax:l, bx:l, ay:t, by:b}); // left
-				shadows.push({ax:r, bx:r, ay:t, by:b}); // right
-				shadows.push({ax:l, bx:r, ay:b, by:b}); // bottom
+
+				// Coordinates
+				x0 = shade.x - 22.5;
+				x1 = shade.x - 7.5;
+				x2 = shade.x + 7.5;
+				x3 = shade.x + 22.5;
+				y0 = shade.y - 22.5;
+				y1 = shade.y - 7.5;
+				y2 = shade.y + 7.5;
+				y3 = shade.y + 22.5;
+
+				shadows.push({ax:x1, bx:x2, ay:y0, by:y0}); // top
+				shadows.push({ax:x2, bx:x3, ay:y0, by:y1}); // TR corner
+				shadows.push({ax:x3, bx:x3, ay:y1, by:y2}); // right
+				shadows.push({ax:x3, bx:x2, ay:y2, by:y3}); // BR corner
+				shadows.push({ax:x2, bx:x1, ay:y3, by:y3}); // bottom
+				shadows.push({ax:x1, bx:x0, ay:y3, by:y2}); // BL corner
+				shadows.push({ax:x0, bx:x0, ay:y2, by:y1}); // left
+				shadows.push({ax:x0, bx:x1, ay:y1, by:y0}); // TL corner
 			}
 			return shadows;
 		};
