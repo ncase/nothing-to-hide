@@ -21,7 +21,7 @@
 		    if(Key.justPressed.space){
 
 		    	// All lights near player
-		    	var nearLight = self.isNearLight(player.x,player.y+25,50);
+		    	var nearLight = self.isNearLight(player.x,player.y,25);
 
 		    	// Did you click on a Light
 		    	if(!level.heldObject && nearLight){

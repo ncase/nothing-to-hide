@@ -21,7 +21,7 @@
 		    if(Key.justPressed.space){
 
 		    	// All shades near player
-		    	var nearShade = self.isNearShade(player.x,player.y+25,50);
+		    	var nearShade = self.isNearShade(player.x,player.y,25);
 
 		    	// Did you click on a Shade
 		    	if(!level.heldObject && nearShade){
