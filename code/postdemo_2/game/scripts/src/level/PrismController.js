@@ -155,6 +155,8 @@
 			var prismConfig = config.prisms[i];
 			var prism = this.addPrism(prismConfig.x,prismConfig.y);
 			prism.id = prismConfig.id;
+			prism.behaviour = prismConfig.behaviour;
+			// TODO - these should be IN THE CONFIG
 			if(prismConfig.id){
 				self.map[prismConfig.id] = prism;
 			}

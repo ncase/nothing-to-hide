@@ -29,12 +29,11 @@
 
 		self.nearPlayer = false;
 		this.update = function(){
-			if(level.config.id!="intro"){
-				// Are you near?
-				var dx = self.x - level.player.x;
-				var dy = self.y - level.player.y;
-				self.nearPlayer = ( (dx*dx + dy*dy < 50*50) && !level.heldObject );
-			}
+			
+			// Are you near?
+			var dx = self.x - level.player.x;
+			var dy = self.y - level.player.y;
+			self.nearPlayer = ( (dx*dx + dy*dy < 50*50) && !level.heldObject );
 
 			// Bounce
 		    if(self.justDropped){
@@ -48,6 +47,27 @@
 			// CCTV
 			dashOffset -= 3;
 			if(dashOffset<0) dashOffset=DASH_LENGTH+DASH_GAP;
+
+			// HACK -- Will kill you if it sees you carrying a human
+			if(self.behaviour=="killer" && self.active // You're an awake killer
+				&& level.heldObject && level.heldObject.type=="dummy" // I'm carrying a dummy
+				&& SightAndLight.inPolygon(level.player, self.sightPolygon)){ // In your line of sight.
+
+				// End level if you're out of grace
+				createjs.Sound.play("sfx_shotdown",null,0,0,0,0.8,0);
+				//alarm.stop();
+				level.YOU_ARE_DEAD = true;
+
+				alert("KILL COZ YOU CARRIED A PEEP");
+
+				// Reset with level's savestate
+				var saveState = level.saveState;
+				setTimeout(function(){
+					Game.resetLevel(saveState);
+				},1500);
+
+			}
+
 		};
 		var dashOffset = 0;
 		var DASH_LENGTH = 20;
@@ -148,6 +168,14 @@
 				eyeSprite.y = prismSprite.regY+59 + vectToPlayer.y;
 				eyeSprite.draw(ctx);
 
+			}
+
+			// HACK -- killer // Draw a red circle
+			if(self.behaviour=="killer"){
+				ctx.beginPath();
+				ctx.arc(0, -60, 15, 0, 2*Math.PI, false);
+				ctx.fillStyle = "#cc2727";
+				ctx.fill();
 			}
 
 			// Restore

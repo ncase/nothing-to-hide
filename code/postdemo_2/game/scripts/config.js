@@ -95,12 +95,13 @@ Asset.init({
 
 	},
 	levels:{
-		light: 'levels/light'
+		light: 'levels/light',
+		doors: 'levels/doors'
 	}
 });
 
 Game.init({
 	levels:[
-		'light'
+		'doors'
 	]
 });

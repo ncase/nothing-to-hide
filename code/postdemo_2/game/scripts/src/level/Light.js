@@ -83,7 +83,7 @@
 			// Draw a red circle
 			ctx.beginPath();
 			ctx.arc(self.x, self.y, 5, 0, 2*Math.PI, false);
-			ctx.fillStyle = sourceStyle
+			ctx.fillStyle = sourceStyle;
 			ctx.fill();
 
 			// Restore

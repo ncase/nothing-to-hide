@@ -1,0 +1,46 @@
+{
+	"player":{ "x":0, "y":0 },
+	"goal":{"ax":9,"bx":10,"ay":36,"by":37},
+
+	"dummies": [
+		{ "x":7, "y":10 }
+	],
+	"doors": [
+		{
+			"shadow":{"ax":5,"ay":7,"bx":8,"by":7},
+			"activator":"power"
+		},
+		{
+			"shadow":{"ax":5,"ay":8,"bx":8,"by":8},
+			"activator":"power"
+		}
+	],
+	"lights": [],
+	"shades": [],
+	"blocks": [
+		{"x":12,"y":7},
+		{"x":5,"y":7},
+		{"x":6,"y":7},
+		{"x":7,"y":7}
+	],
+
+	"prisms": [
+		{"x":0,"y":4, "id":"power"},
+		{"x":12,"y":4, "behaviour":"killer"}
+	],
+
+	"conveyors": [],
+
+	"camera": [
+		{
+			"type": "fixed",
+			"zone": {"ax":0,"bx":13,"ay":0,"by":12},
+			"data": {"x":6.5,"y":7}
+		}
+	],
+
+	"checkpoints": [],
+	"dialogues": [],
+	"propaganda": []
+
+}
