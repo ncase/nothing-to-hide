@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link href='css/cutscene.css' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+		<style>
+		#turnoff {
+			display: none;
+			z-index: 2;
+
+			position: fixed;
+			top:0; left:0;
+			width:100%; height:100%;
+			background: #000;
+		}
+		#turnoff_frame{
+			
+			position: absolute;
+			display: block;
+
+			width:800px; height:200px;
+			background-image:url(pics2/turnoff.png);
+			background-repeat: no-repeat;
+			
+			top:0; left:0; right:0; bottom:0;
+			margin:auto;
+
+		}
+		</style>
+
+		<div id="the_wall">
+
+			<div id="header">
+				<div id="header_content"></div>
+			</div>
+
+			<div id="timeline"></div>
+
+			<div id="footer">
+				<div id="footer_icon"></div>
+				<div id="footer_copy">Copyright &copy; 2044 PanoptiCorp.</div>
+			</div>
+
+		</div>
+
+		<div id="turnoff"><div id="turnoff_frame"></div></div>
+		<img src="pics2/turnoff.png" style="position:absolute;left:-1000px"></img>
+
+		<script src="js/soundjs-0.5.2.min.js"></script>
+		<script src="js/end_cutscene.js"></script>
+		<script>
+
+		// ALWAYS BE FOCUSING
+		setInterval(function(){
+			window.focus();
+		},500);
+
+		window.onload = function(){
+
+			var manifest = [
+				{id:"slap", src:"sounds2/mp3/slap.mp3|sounds2/ogg/slap.ogg"},
+				{id:"tv", src:"sounds2/mp3/tv.mp3|sounds2/ogg/tv.ogg"},
+				{id:"feedback", src:"sounds2/mp3/feedback.mp3|sounds2/ogg/feedback.ogg"},
+				{id:"slidewalk", src:"sounds2/mp3/slidewalk.mp3|sounds2/ogg/slidewalk.ogg"},
+				{id:"clap", src:"sounds2/mp3/clap.mp3|sounds2/ogg/clap.ogg"},
+				{id:"pocket", src:"sounds2/mp3/pocket.mp3|sounds2/ogg/pocket.ogg"},
+				{id:"drama", src:"sounds2/mp3/drama.mp3|sounds2/ogg/drama.ogg"}
+			];
+
+			// Images
+			var images = [
+
+				"pics2/turnoff.png",
+				"icons/poppy.png",
+				"icons/nobody.png",
+				"pics2/main_bg.png",
+				"icons/game.png",
+				"pics2/meta0008.png",
+				"pics2/meta0007.png",
+				"pics2/meta0006.png",
+				"pics2/meta0005.png",
+				"pics2/meta0004.png",
+				"pics2/meta0003.png",
+				"pics2/meta0002.png",
+				"pics2/meta0001.png",
+				"pics2/main_bg.png",
+
+				"pics2/slidewalk0001.png",
+				"pics2/slidewalk0002.png",
+				"pics2/slidewalk0003.png",
+				"pics2/slidewalk0004.png",
+				"pics2/slidewalk0005.png",
+				"pics2/slidewalk0006.png",
+				"pics2/slidewalk0007.png",
+				"pics2/slidewalk0008.png",
+				"pics2/slidewalk0009.png",
+
+				"pics2/phone_1.png",
+				"pics2/phone_1_extra.png",
+				"pics2/phone_2.png",
+				"pics2/phone_3.png",
+				"pics2/phone_4.png",
+				"pics2/phone_5.png",
+				"pics2/phone_6.png",
+				"pics2/phone_7.png",
+				"pics2/phone_8.png",
+				"pics2/phone_9.png"
+			];
+
+			// On Asset Loaded
+			var imagesLoaded = 0;
+			var soundsLoaded = 0;
+			var imagesTotal = images.length;
+			var soundsTotal = manifest.length;
+			var _onAssetLoaded = function(){
+				var loaded = imagesLoaded + soundsLoaded;
+				var total = imagesTotal + soundsTotal;
+				if(window.top.onProgress){
+					window.top.onProgress(loaded/total);
+				}else{
+					console.log(loaded/total);
+				}
+				if(loaded==total) onLoad();
+			};
+
+			// Images loaded
+			for(var i=0;i<images.length;i++){
+				var img = new Image();
+				img.onload = function(){
+					imagesLoaded++;
+					_onAssetLoaded();
+				};
+				img.src = images[i];
+			}
+
+			// Sounds loaded
+			createjs.Sound.addEventListener("fileload",function(event){
+				soundsLoaded++;
+				_onAssetLoaded();
+			});
+			createjs.Sound.registerManifest(manifest);
+
+		};
+
+		var poster = {
+			poppy: {
+				user: "Poppy Gardner",
+				icon: "icons/poppy.png"
+			},
+			nobody: {
+				user: "Nobody",
+				icon: "icons/nobody.png"
+			}
+		};
+
+		var _generatePost = function(type,poster,data){
+			return {
+				type: type+"_post",
+				user: poster.user,
+				icon: poster.icon,
+				date: poster.date,
+				data: data
+			}
+		};
+
+		var _generateConvoPost = function(poster,date,message){
+			return {
+				type: "conversation_post",
+				user: poster.user,
+				icon: poster.icon,
+				date: date,
+				data: { message: message }
+			}
+		};
+
+		var _generateMainPost = function(image,slidewalk,date,sound){
+			return {
+				type: "parallax_post",
+				user: poster.poppy.user,
+				icon: poster.poppy.icon,
+				date: date,
+				data: {
+					height: 350,
+					layers:[
+						{img:"pics2/main_bg.png", depth:0.3, offset:0},
+						{img:"pics2/slidewalk000"+slidewalk+".png", depth:0.3, offset:-219},
+						{img:"pics2/"+image+".png", depth:0.1, offset:-20}
+					],
+					sound: sound
+				}
+			}
+		};
+
+		var posts = [
+
+			////// SLAP AWAKE ///////
+
+			_generateMainPost("slap_1",1,"4 minutes ago"),
+			_generateConvoPost(
+				poster.poppy, "4 minutes ago",
+				"please don't be dead oh god oh god oh god oh god oh god"
+			),
+			_generateConvoPost(
+				poster.poppy, "4 minutes ago",
+				"Okay. Okay okay. Idea."
+			),
+			_generateConvoPost(
+				poster.poppy, "4 minutes ago",
+				"Sometimes Daddy wakes me up like this. Maybe this will work..."
+			),
+			
+			_generateMainPost("slap_2",2,"4 minutes ago",{
+				offset: 0,
+				play: ["slap",null,0,0,0,1,0]
+			}),
+			_generateConvoPost(
+				poster.poppy, "4 minutes ago",
+				"<span>#DaddyDaughterMoment</span>"
+			),
+			_generateMainPost("slap_3",3,"4 minutes ago"),
+
+			_generateConvoPost(
+				poster.nobody, "3 minutes ago",
+				"Ow! Pain on the face! You..."
+			),
+			_generateConvoPost(
+				poster.poppy, "3 minutes ago",
+				"i'm sorry"
+			),
+			_generateConvoPost(
+				poster.nobody, "3 minutes ago",
+				"...saved my life! Don't apologize, yo!"
+			),
+			_generateConvoPost(
+				poster.poppy, "3 minutes ago",
+				"i'm sorry for being sorry"
+			),
+
+			_generateMainPost("slap_4",4,"3 minutes ago"),
+
+			_generateConvoPost(
+				poster.nobody, "3 minutes ago",
+				"Hold up, are we on The Wall?..."
+			),
+
+			////// SO META ///////
+
+			_generatePost("parallax",{
+					user: "Nothing To Hide",
+					icon: "icons/game.png",
+					date: "3 minutes ago"
+				},
+				{
+				height: 450,
+				layers: [
+					{img:"pics2/meta0008.png", depth:0.60, offset:20},
+					{img:"pics2/meta0007.png", depth:0.59, offset:20},
+					{img:"pics2/meta0006.png", depth:0.58, offset:20},
+					{img:"pics2/meta0005.png", depth:0.57, offset:20},
+					{img:"pics2/meta0004.png", depth:0.55, offset:20},
+					{img:"pics2/meta0003.png", depth:0.50, offset:20},
+					{img:"pics2/meta0002.png", depth:0.40, offset:20},
+					{img:"pics2/meta0001.png", depth:0.20, offset:20}
+				],
+				ambience: {
+					interval: [-600,200,500,1500],
+					play: "feedback",
+					volume: 0.5
+				}
+			}),
+
+			////// I WILL HELP YOU ///////
+
+			_generateConvoPost(
+				poster.nobody, "3 minutes ago",
+				'"Poppy Gardner posted 1 minute ago. Sometimes Daddy wakes me up like this. Maybe this will work..."'
+			),
+			_generateConvoPost(
+				poster.nobody, "3 minutes ago",
+				'Oh. Oh wow. Minister Gardner does that to his own... wow.'
+			),
+
+			_generateMainPost("phone_1",5,"2 minutes ago"),
+
+			_generateMainPost("phone_1_extra",6,"2 minutes ago"),
+
+			_generateConvoPost(
+				poster.nobody, "2 minutes ago",
+				"<i>Wellllllllll</i> if it makes you feel better, your dad's psychologically and physically abusive to the rest of the nation, too."
+			),
+
+			_generateConvoPost(
+				poster.nobody, "2 minutes ago",
+
+				"\"Watch what you say & hear & watch & <i>think.\"</i><br>When we got no place to hide, we got to hide our true selves. "
+				
+				/*"\"Watch what you say & hear & watch & <i>think.\"</i><br>When we got no place to hide, we got to hide our true selves. "+
+				"Minister Gardner forces us to be our own watchmen. Literally too, when you move them iEyes."*/
+
+			),
+
+			_generateConvoPost(
+				poster.nobody, "2 minutes ago",
+				"I can help you escape him."
+			),
+
+			_generateMainPost("phone_2",7,"1 minute ago",{
+				offset: 0,
+				play: ["pocket",null,0,0,0,1,0]
+			}),
+
+			_generateConvoPost(
+				poster.nobody, "1 minute ago",
+				"In fact, I got an app for that!"
+			),
+
+			_generateMainPost("phone_3",8,"1 minute ago"),
+
+			_generateConvoPost(
+				poster.nobody, "58 seconds ago",
+				"Exploit! Made it myself. Just tap this screen here, and you'll be erased from The Wall. You'll be a Nobody, just like me."
+			),
+			_generateConvoPost(
+				poster.nobody, "42 seconds ago",
+				"Stop acting for the camera. Start being yourself."
+			),
+
+			////// GOOD BYE ///////
+
+			_generateMainPost("phone_4",9,"25 seconds ago"),
+			_generateMainPost("phone_5",8,"19 seconds ago",{
+				offset: 100,
+				play: ["clap",null,0,0,0,1,0]
+			}),
+
+			_generateMainPost("phone_6",9,"13 seconds ago"),
+			_generateMainPost("phone_7",8,"8 seconds ago"),
+			_generateMainPost("phone_8",9,"3 seconds ago"),
+
+			{
+				type: "parallax_post",
+				user: poster.poppy.user,
+				icon: poster.poppy.icon,
+				date: "just now",
+				data: {
+					height: 350,
+					layers:[
+						{img:"pics2/main_bg.png", depth:0.3, offset:0},
+						{img:"pics2/slidewalk0008.png", depth:0.3, offset:-219},
+						{img:"pics2/phone_9.png", depth:0.1, offset:-20}
+					],
+					ambience: {
+						interval: [-40001,-40000,0,500],
+						play: "slidewalk",
+						volume: 0.5
+					}
+				}
+			}
+
+		];
+		</script>
+
+	</body>
+</html>
