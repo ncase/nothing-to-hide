@@ -1,0 +1,62 @@
+{
+	"player":{ "x":0, "y":11 },
+	"goal":{"ax":9,"bx":10,"ay":36,"by":37},
+
+	"dummies": [
+		{ "x":14, "y":8 }
+	],
+	
+	"doors": [],
+	"lights": [],
+	"shades": [],
+	
+	"blocks": [
+		
+		{"x":9,"y":6},
+		{"x":10,"y":6},
+		{"x":11,"y":6},
+		{"x":13,"y":6},
+		{"x":14,"y":6},
+		{"x":15,"y":6},
+
+		{"x":14,"y":11},
+		{"x":13,"y":10},
+		{"x":13,"y":11},
+		{"x":13,"y":12},
+		{"x":15,"y":10},
+		{"x":15,"y":11},
+		{"x":15,"y":12}
+
+	],
+
+	"prisms": [
+		{"x":7,"y":11},
+		{"x":10,"y":11},
+		{"x":10,"y":5, "id":"power"}
+	],
+
+	"conveyors": [
+		{ "belt": {"ax":13,"bx":15,"ay":10,"by":11}, "direction": {"x":2,"y":0}, "activator": "power" },
+		{ "belt": {"ax":15,"bx":16,"ay":10,"by":12}, "direction": {"x":0,"y":2}, "activator": "power" },
+		{ "belt": {"ax":14,"bx":16,"ay":12,"by":13}, "direction": {"x":-2,"y":0}, "activator": "power" },
+		{ "belt": {"ax":13,"bx":14,"ay":11,"by":13}, "direction": {"x":0,"y":-2}, "activator": "power" },
+
+		{ "belt": {"ax":17,"bx":19,"ay":10,"by":11}, "direction": {"x":2,"y":0}, "activator": "" },
+		{ "belt": {"ax":19,"bx":20,"ay":10,"by":12}, "direction": {"x":0,"y":2}, "activator": "" },
+		{ "belt": {"ax":18,"bx":20,"ay":12,"by":13}, "direction": {"x":-2,"y":0}, "activator": "" },
+		{ "belt": {"ax":17,"bx":18,"ay":11,"by":13}, "direction": {"x":0,"y":-2}, "activator": "" }
+	],
+
+	"camera": [
+		{
+			"type": "fixed",
+			"zone": {"ax":0,"bx":13,"ay":0,"by":12},
+			"data": {"x":13,"y":7}
+		}
+	],
+
+	"checkpoints": [],
+	"dialogues": [],
+	"propaganda": []
+
+}

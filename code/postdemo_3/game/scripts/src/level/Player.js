@@ -20,8 +20,8 @@
 		this.update = function(){
 
 			// Sneak Mode
-			sneakMode = Key.shift || level.suspicion.isHiding
-						|| (level.heldObject&&level.heldObject.type=="dummy"); // Holding a person slows you down.
+			sneakMode = Key.shift || level.suspicion.isHiding;
+						//|| (level.heldObject&&level.heldObject.type=="dummy"); // Holding a person slows you down.
 
 			///////////////////////
 			// CLICK TO PUT DOWN
