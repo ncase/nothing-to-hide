@@ -39,14 +39,20 @@ var onLoad = function(){
 		}
 
 		// Post header
-		html = ''+
+		/*html = ''+
 			'<div id="poster">'+
 			'	<div id="poster_icon" style="background:url('+post.icon+')"></div>'+
 			'	<div id="poster_info">'+
 			'		<span id="poster_info_name">'+post.user+'</span><br>'+
 			'		<span id="poster_info_date">posted '+post.date+'</span>'+
 			'	</div>'+
-			'</div>';
+			'</div>';*/
+		html = ''+
+			'<div id="poster">'+
+			'	<div id="poster_info">'+
+			'		<span id="poster_info_name">'+post.user+' <span style="color:#bbb">posted '+post.date+'</span></span>'+
+			'	</div>'+
+			'</div>'
 
 		// Parallax Post
 		if(post.type==="parallax_post"){
@@ -182,9 +188,11 @@ var onLoad = function(){
 		}
 
 		// CCTV
+		/*
 		cctvY += 1;
 		if(cctvY>=15) cctvY=0;
 		cctv.style.backgroundPosition = "0px " + (cctvY)+"px"
+		*/
 
 		// RAF
 		RAF(draw);

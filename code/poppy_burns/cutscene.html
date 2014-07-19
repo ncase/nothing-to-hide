@@ -31,7 +31,7 @@
 
 			var manifest = [
 				
-				{id:"door_open", src:"sounds/mp3/door_open.mp3|sounds/ogg/door_open.ogg"},
+				/*{id:"door_open", src:"sounds/mp3/door_open.mp3|sounds/ogg/door_open.ogg"},
 				{id:"door_close", src:"sounds/mp3/door_close.mp3|sounds/ogg/door_close.ogg"},
 				{id:"city", src:"sounds/mp3/city.mp3|sounds/ogg/city.ogg"},
 				{id:"room", src:"sounds/mp3/room.mp3|sounds/ogg/room.ogg"},
@@ -42,7 +42,7 @@
 				{id:"cough", src:"sounds/mp3/cough.mp3|sounds/ogg/cough.ogg"},
 
 				{id:"button_hover", src:'sounds/mp3/button_hover.mp3|sounds/ogg/button_hover.ogg'},
-				{id:"button_press", src:'sounds/mp3/button_press.mp3|sounds/ogg/button_press.ogg'}
+				{id:"button_press", src:'sounds/mp3/button_press.mp3|sounds/ogg/button_press.ogg'}*/
 
 			];
 
@@ -51,33 +51,11 @@
 				"icons/poppy.png",
 				"icons/gardner.png",
 				"icons/game.png",
-				"pics/background_back.png",
-				"pics/background_front.png",
-				"pics/establishing_fg.png",
-				"pics/background_back.png",
-				"pics/background_front.png",
-				"pics/establishing_fg_2.png",
-				"pics/background_back.png",
-				"pics/background_front.png",
-				"pics/establishing_fg_3.png",
-				"pics/background_back.png",
-				"pics/background_front.png",
-				"pics/door_close_1.png",
-				"pics/background_back.png",
-				"pics/background_front.png",
-				"pics/door_close_2.png",
-				"pics/background_back.png",
-				"pics/background_front.png",
-				"pics/door_close_3.png",
-				"pics/background_back.png",
-				"pics/background_front.png",
-				"pics/door_close_4.png",
-				"pics/escape_1.png",
-				"pics/escape_2.png",
-				"pics/escape_3.png",
-				"pics/escape_4.png",
-				"pics/escape_5.png",
-				"pics/game.png"
+				"pics/sketch0001.png",
+				"pics/sketch0002.png",
+				"pics/sketch0003.png",
+				"pics/sketch0004.png",
+				"pics/sketch0005.png"
 			];
 
 			// On Asset Loaded
@@ -143,21 +121,92 @@
 
 		var posts = [
 
-			////// ESTABLISHING SHOT ///////
-
-			_generatePost("parallax",poster.poppy,"16 minutes ago",{
+			_generatePost("parallax",poster.poppy,"40 minutes ago",{
 				height: 450,
 				layers:[
-					{img:"pics/background_back.png", depth:0.8, offset:0},
-					{img:"pics/background_front.png", depth:0.6, offset:0},
+					{img:"pics/sketch0001.png", depth:0.2, offset:50}
+				]
+			}),
+			_generatePost("parallax",poster.poppy,"40 minutes ago",{
+				height: 450,
+				layers:[
+					{img:"pics/sketch0002.png", depth:0.2, offset:50}
+				]
+			}),
+			_generatePost("parallax",poster.poppy,"40 minutes ago",{
+				height: 450,
+				layers:[
+					{img:"pics/sketch0003.png", depth:0.2, offset:50}
+				]
+			}),
+
+			_generatePost("parallax",poster.poppy,"39 minutes ago",{
+				height: 450,
+				layers:[
+					{img:"pics/sketch0004.png", depth:0.2, offset:50}
+				]
+			}),
+			_generatePost("conversation",poster.game,"39 minutes ago",{
+				message: "Hey! Long time no see, Poppy!"
+			}),
+
+			_generatePost("parallax",poster.poppy,"39 minutes ago",{
+				height: 450,
+				layers:[
+					{img:"pics/sketch0005.png", depth:0.2, offset:50}
+				]
+			}),
+			_generatePost("conversation",poster.game,"38 minutes ago",{
+				message: "Wow, you managed to make yourself look even *worse*. That's actually impressive! I always knew you'd somehow find a way."
+			}),
+
+			_generatePost("parallax",poster.poppy,"37 minutes ago",{
+				height: 450,
+				layers:[
+					{img:"pics/sketch0006.png", depth:0.2, offset:50}
+				]
+			}),
+			_generatePost("conversation",poster.game,"37 minutes ago",{
+				message: "Ah, pulling up your old posts and pictures? I guess misery loves company, eh Poppy?"
+			}),
+
+			_generatePost("parallax",poster.poppy,"37 minutes ago",{
+				height: 400,
+				layers:[
+					{img:"pics/sketch0007.png", depth:1, offset:100}
+				]
+			}),
+			_generatePost("conversation",poster.game,"37 minutes ago",{
+				message: "...Poppy?"
+			}),
+			_generatePost("parallax",poster.poppy,"37 minutes ago",{
+				height: 400,
+				layers:[
+					{img:"pics/sketch0008.png", depth:1, offset:100}
+				]
+			}),
+			_generatePost("parallax",poster.poppy,"4 months and 2 weeks ago",{
+				height: 400,
+				layers:[
+					{img:"pics/sketch0009.png", depth:1, offset:100}
+				]
+			}),
+
+			////// ESTABLISHING SHOT ///////
+
+			/*_generatePost("parallax",poster.poppy,"16 minutes ago",{
+				height: 450,
+				layers:[
+					//{img:"pics/background_back.png", depth:0.8, offset:0},
+					//{img:"pics/background_front.png", depth:0.6, offset:0},
 					{img:"pics/establishing_fg.png", depth:0.1, offset:50}
 				]
 			}),
 			_generatePost("parallax",poster.poppy,"16 minutes ago",{
 				height: 350,
 				layers:[
-					{img:"pics/background_back.png", depth:0.8, offset:0},
-					{img:"pics/background_front.png", depth:0.6, offset:0},
+					//{img:"pics/background_back.png", depth:0.8, offset:0},
+					//{img:"pics/background_front.png", depth:0.6, offset:0},
 					{img:"pics/establishing_fg_2.png", depth:0.1, offset:50}
 				],
 				sound: {
@@ -168,8 +217,8 @@
 			_generatePost("parallax",poster.poppy,"16 minutes ago",{
 				height: 250,
 				layers:[
-					{img:"pics/background_back.png", depth:0.8, offset:0},
-					{img:"pics/background_front.png", depth:0.6, offset:0},
+					//{img:"pics/background_back.png", depth:0.8, offset:0},
+					//{img:"pics/background_front.png", depth:0.6, offset:0},
 					{img:"pics/establishing_fg_3.png", depth:0.1, offset:50}
 				]
 			}),
@@ -202,8 +251,8 @@
 			_generatePost("parallax",poster.poppy,"15 minutes ago",{
 				height: 450,
 				layers:[
-					{img:"pics/background_back.png", depth:0.8, offset:0},
-					{img:"pics/background_front.png", depth:0.6, offset:0},
+					//{img:"pics/background_back.png", depth:0.8, offset:0},
+					//{img:"pics/background_front.png", depth:0.6, offset:0},
 					{img:"pics/door_close_1.png", depth:0.1, offset:50}
 				]
 			}),
@@ -213,16 +262,16 @@
 			_generatePost("parallax",poster.poppy,"15 minutes ago",{
 				height: 450,
 				layers:[
-					{img:"pics/background_back.png", depth:0.8, offset:0},
-					{img:"pics/background_front.png", depth:0.6, offset:0},
+					//{img:"pics/background_back.png", depth:0.8, offset:0},
+					//{img:"pics/background_front.png", depth:0.6, offset:0},
 					{img:"pics/door_close_2.png", depth:0.1, offset:75}
 				]
 			}),
 			_generatePost("parallax",poster.poppy,"14 minutes ago",{
 				height: 450,
 				layers:[
-					{img:"pics/background_back.png", depth:0.8, offset:0},
-					{img:"pics/background_front.png", depth:0.6, offset:0},
+					//{img:"pics/background_back.png", depth:0.8, offset:0},
+					//{img:"pics/background_front.png", depth:0.6, offset:0},
 					{img:"pics/door_close_3.png", depth:0.1, offset:100}
 				],
 				sound: {
@@ -233,8 +282,8 @@
 			_generatePost("parallax",poster.poppy,"14 minutes ago",{
 				height: 450,
 				layers:[
-					{img:"pics/background_back.png", depth:0.8, offset:0},
-					{img:"pics/background_front.png", depth:0.6, offset:0},
+					//{img:"pics/background_back.png", depth:0.8, offset:0},
+					//{img:"pics/background_front.png", depth:0.6, offset:0},
 					{img:"pics/door_close_4.png", depth:0.1, offset:100}
 				],
 				sound: {
@@ -305,7 +354,7 @@
 			//////// PLAY GAME /////////
 			_generatePost("video",poster.game,"just now",{
 				bg: "pics/game.png"
-			})
+			})*/
 
 		];
 
