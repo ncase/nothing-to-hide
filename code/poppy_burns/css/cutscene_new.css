@@ -55,7 +55,7 @@ body {
 }
 
 #poster{
-	width:100%; height:70px;
+	width:100%; height:50px;
 	position:relative;
 	padding-left:20px; padding-top:20px;
 	overflow:hidden;
@@ -71,7 +71,8 @@ body {
 	float:left;
 }
 #poster_info_name{
-	font-size:18px
+	font-size:18px;
+	color:#666;
 }
 #poster_info_date{
 	font-size:14px; color:#aaa

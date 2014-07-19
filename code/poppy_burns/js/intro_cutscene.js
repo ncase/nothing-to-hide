@@ -39,20 +39,20 @@ var onLoad = function(){
 		}
 
 		// Post header
-		/*html = ''+
+		html = ''+
 			'<div id="poster">'+
 			'	<div id="poster_icon" style="background:url('+post.icon+')"></div>'+
 			'	<div id="poster_info">'+
 			'		<span id="poster_info_name">'+post.user+'</span><br>'+
 			'		<span id="poster_info_date">posted '+post.date+'</span>'+
 			'	</div>'+
-			'</div>';*/
-		html = ''+
+			'</div>';
+		/*html = ''+
 			'<div id="poster">'+
 			'	<div id="poster_info">'+
 			'		<span id="poster_info_name">'+post.user+' <span style="color:#bbb">posted '+post.date+'</span></span>'+
 			'	</div>'+
-			'</div>'
+			'</div>';*/
 
 		// Parallax Post
 		if(post.type==="parallax_post"){
