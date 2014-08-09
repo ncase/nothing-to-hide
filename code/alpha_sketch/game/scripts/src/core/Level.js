@@ -14,6 +14,7 @@
 
 		// Scaling Function
 		var _toMapScale = function(array,xOffset,yOffset){
+			array = array || [];
 			for(var i=0;i<array.length;i++){
 				var item = array[i];
 				item.x = (item.x+xOffset)*Map.TILE_SIZE;

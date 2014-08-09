@@ -19,6 +19,8 @@
 
 		this.update = function(){
 
+			return; // nah
+
 			tick++;
 			
 			// Are you in a Dialogue spot?

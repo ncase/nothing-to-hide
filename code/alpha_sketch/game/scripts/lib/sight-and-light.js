@@ -91,7 +91,12 @@
 			var uniquePoint = uniquePoints[j];
 			var angle = Math.atan2(uniquePoint.y-sightY,uniquePoint.x-sightX);
 			uniquePoint.angle = angle;
-			uniqueAngles.push(angle-0.00001,angle,angle+0.00001);
+
+			// Actually make the angles unique!
+			if(uniqueAngles.indexOf(angle)==-1){
+				uniqueAngles.push(angle-0.00001,angle,angle+0.00001);
+			}
+
 		}
 
 		// RAYS IN ALL DIRECTIONS
