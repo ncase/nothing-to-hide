@@ -123,6 +123,13 @@
 		    self.x += moveX;
 		    self.y += moveY;
 
+		    // Is my top being hit, and by a WALL?
+			if(level.map.hitTest(this.x,this.y-11)){
+				var x = Math.floor(this.x/Map.TILE_SIZE);
+				var y = Math.floor((this.y-11)/Map.TILE_SIZE);
+				console.log(x,y);
+			}
+
 		    // Crappy Collision
 		    var endLoop;
 		    endLoop = MAX_SPEED*2;

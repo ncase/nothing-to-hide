@@ -56,7 +56,9 @@
 		}
 	],
 
-	"blocks": [],
+	"blocks": [
+		{"x":10, "y":6, "frame":16}
+	],
 
 	"checkpoints": [
 		{"ax":32,"bx":35,"ay":10,"by":11}
