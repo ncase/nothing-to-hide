@@ -127,7 +127,10 @@
 			if(level.map.hitTest(this.x,this.y-11)){
 				var x = Math.floor(this.x/Map.TILE_SIZE);
 				var y = Math.floor((this.y-11)/Map.TILE_SIZE);
+				
 				console.log(x,y);
+				publish("game/hitting_wall", [x,y]);
+
 			}
 
 		    // Crappy Collision

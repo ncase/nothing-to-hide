@@ -16,6 +16,10 @@ Asset.init({
 
 		// PROPAGANDA or TUTORIAL
 
+		propaganda_cat:'assets/propaganda/cat.png',
+		propaganda_up:'assets/propaganda/button_up.png',
+		propaganda_down:'assets/propaganda/button_down.png',
+
 		propaganda_tut_walk:'assets/propaganda/tut_walk.png',
 		propaganda_tut_slow:'assets/propaganda/tut_slow.png',
 		propaganda_tut_pickup:'assets/propaganda/tut_pickup.png',

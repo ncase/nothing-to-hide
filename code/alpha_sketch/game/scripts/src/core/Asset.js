@@ -104,6 +104,7 @@
 
 				// Parsing to proper data format
 				try{
+					levelData = levelData.replace(/\/\*(.|\n)+?\*\/|\/\/.*(?=[\n\r])/g, ''); // remove comments dammit
 					levelData = JSON.parse(levelData);
 				}catch(e){
 					console.error("JSON PARSING FAILED ON LEVEL JSON "+id);

@@ -81,8 +81,28 @@
 	],
 
 	"propaganda": [
+		{
+			"type":"scroll",
+			"img":"propaganda_cat",
+			"x":12, "y":2,
+			"down": "scroll_down",
+			"up": "scroll_up"
+		},
+		{
+			"type":"button",
+			"x":20,"y":8,
+			"message": "scroll_down"
+		},
+		{
+			"type":"button",
+			"x":21,"y":8,
+			"message": "scroll_up"
+		},
+		{"type":"image", "img":"propaganda_down", "x":20, "y":-7},
+		{"type":"image", "img":"propaganda_up", "x":21, "y":-7},
+
 		{"type":"image", "img":"propaganda_tut_walk", "x":0, "y":0},
-		{"type":"image", "img":"propaganda_smile", "x":12, "y":2},
+		// {"type":"image", "img":"propaganda_smile", "x":12, "y":2},
 		{"type":"image", "img":"propaganda_tut_slow", "x":28, "y":0},
 		{"type":"image", "img":"propaganda_tut_reminder", "x":32, "y":9},
 		{"type":"image", "img":"propaganda_intro_pics", "x":33, "y":0}

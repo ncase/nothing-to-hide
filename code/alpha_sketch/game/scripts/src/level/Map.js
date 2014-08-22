@@ -89,13 +89,40 @@
 		_makePlaceholderCCTV(self,camContext,tiles,config);
 		_makePlaceholderBG(self,bgContext,tiles,config);
 		_makePlaceholderLine(self,lineContext,tiles,config);
-		_makePropaganda(self,liesContext,tiles,config);
+		//_makePropaganda(self,liesContext,tiles,config);
+
+		// Propaganda walls respond
+		for(var i=0;i<self.propaganda.length;i++){
+			var lie = self.propaganda[i];
+			switch(lie.type){
+				case "scroll":
+					lie.scroll_pos = 0;
+					lie.scroll_vel= 0;
+					(function(lie){
+						subscribe("level/"+lie.down, function(){ lie.scroll_vel -= 2; });
+						subscribe("level/"+lie.up, function(){ lie.scroll_vel += 2; });
+					})(lie);
+					break;
+				case "button":
+					(function(lie){
+						subscribe("game/hitting_wall", function(x,y){
+							if(lie.x==x && lie.y==y){
+								publish("level/"+lie.message);
+						    }
+						});
+					})(lie);
+					break;
+			}
+		}
 
 		// Draw Loop
 		this.draw = function(ctx){
 			
 			// Draw background
 			ctx.drawImage(bgCache,0,0);
+
+			// Update Propaganda
+			_drawPropaganda(self,liesContext,tiles,config);
 
 			// Draw Propaganda Images & Blackouts
 			var bump = 0;
@@ -337,7 +364,7 @@
 
 	};
 
-	var _makePropaganda = function(self,ctx,tiles,config){
+	var _drawPropaganda = function(self,ctx,tiles,config){
 
 		// Default background
 		ctx.fillStyle = "#363B43";
@@ -350,6 +377,12 @@
 				case "image":
 					var lieImage = Asset.image[lie.img]; // ????
 					ctx.drawImage(lieImage, lie.x*Map.TILE_SIZE, lie.y*Map.TILE_SIZE);
+					break;
+				case "scroll":
+					var lieImage = Asset.image[lie.img]; // ????
+					lie.scroll_pos += lie.scroll_vel;
+					lie.scroll_vel *= 0.8;
+					ctx.drawImage(lieImage, lie.x*Map.TILE_SIZE, lie.y*Map.TILE_SIZE + lie.scroll_pos);
 					break;
 			}
 		}
