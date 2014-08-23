@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>nothing to hide</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #000000;
+		}
+	</style>
+</head>
+<body>
+</body>
+</html>
+	
+<script src="engine/lib/pixi.dev.js"></script>
+<script src="engine/lib/Stats.js"></script>
+
+<script>
+
+// FPS STATS //
+var stats = new Stats();
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+
+// CREATE STAGE //
+var stage = new PIXI.Stage(0xDA7A55);
+var renderer = PIXI.autoDetectRenderer(window.innerWidth, window.innerHeight, null, false, true);
+// var renderer = new PIXI.CanvasRenderer(window.innerWidth, window.innerHeight);
+renderer.view.style.display = "block";
+document.body.appendChild(renderer.view);
+
+// POPPY SPRITESHEET //
+var base = PIXI.BaseTexture.fromImage("200x200_bored_walk.png");
+var textures = [];
+for(var y=0; y<4; y++){
+	for(var x=0; x<5; x++){
+		var texture = new PIXI.Texture(base,{x:x*200, y:y*200, width:200, height:200});
+		textures.push(texture);
+	}
+};
+
+// POPPY MOVIECLIP //
+var poppies = new PIXI.DisplayObjectContainer();
+stage.addChild(poppies);
+function addPoppy(){
+	var poppy = new PIXI.MovieClip(textures);
+	poppy.anchor.x = 0.5;
+	poppy.anchor.y = 1;
+	poppy.position.x = Math.random()*renderer.width;
+	poppy.position.y = Math.random()*renderer.height;
+	poppy.animationSpeed = 0.5;
+	poppy.gotoAndPlay(Math.floor(Math.random()*poppy.totalFrames));
+	poppies.addChild(poppy);
+}
+for(var i=0;i<50;i++){
+	addPoppy();
+}
+
+// FILTERS // 
+//var alphaTexture = PIXI.Texture.fromImage("mask.png");
+
+
+var alphaTexture = new PIXI.RenderTexture(256,256);
+var graphics = new PIXI.Graphics();
+graphics.beginFill(0x000000);
+graphics.drawRect(0,0,256,256);
+graphics.endFill();
+graphics.beginFill(0xFFFFFF);
+graphics.drawRect(50,50,100,100);
+graphics.endFill();
+var doc = new PIXI.DisplayObjectContainer();
+doc.addChild(graphics);
+alphaTexture.render(doc);
+
+var alphaFilter = new PIXI.AlphaMaskFilter(alphaTexture);
+poppies.filters = [alphaFilter];
+
+//stage.addChild(new PIXI.Sprite(alphaTexture));
+
+// DRAW LOOP //
+function update(){
+	
+}
+
+// ANIMATE LOOP //
+function animate() {
+	stats.begin();
+	update();
+    renderer.render(stage);
+    requestAnimFrame(animate);
+    stats.end();
+}
+requestAnimFrame(animate);
+
+
+</script>
