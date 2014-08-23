@@ -20,6 +20,7 @@
 		if(Object.keys(conf.images).length>0) promises.push(Asset.loadImages(conf.images));
 		if(Object.keys(conf.levels).length>0) promises.push(Asset.loadLevels(conf.levels));
 		if(Object.keys(conf.sprites).length>0) promises.push(Asset.loadSprites(conf.sprites));
+		if(Object.keys(conf.spritesheets).length>0) promises.push(Asset.loadSpritesheets(conf.spritesheets));
 		if(Object.keys(conf.sounds).length>0) promises.push(Asset.loadSounds(conf.sounds));
 		return Q.all(promises);
 	};
@@ -40,6 +41,31 @@
 	};
 
 	// Loading all Sprites
+	Asset.loadSpritesheets = function(map){
+		map = map || {};
+
+		// Helper to promise sprites
+		var promiseSprite = function(id,filepath){
+			var imgSource = filepath;
+			var size = filepath.match(/\d+x\d+/)[0].split("x"); // Info should be embedded in the filename.
+			size = { width:size[0], height:size[1] };
+			return _promiseImage(imgSource).then(function(img){
+				console.log("Loaded sprite "+id);
+				Asset.sprite[id] = {image:img, size:size};
+			});
+		}
+
+		// Promise all
+		var promises = [];
+		for(var id in map){
+			var filepath = map[id];
+			promises.push(promiseSprite(id,filepath));
+		}
+		return Q.all(promises);
+
+	};
+
+	// Loading all Sprite
 	Asset.loadSprites = function(map){
 		map = map || {};
 

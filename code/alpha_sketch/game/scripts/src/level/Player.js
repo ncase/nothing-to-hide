@@ -125,10 +125,10 @@
 
 		    // Is my top being hit, and by a WALL?
 			if(level.map.hitTest(this.x,this.y-11)){
+				
 				var x = Math.floor(this.x/Map.TILE_SIZE);
 				var y = Math.floor((this.y-11)/Map.TILE_SIZE);
 				
-				console.log(x,y);
 				publish("game/hitting_wall", [x,y]);
 
 			}
@@ -161,15 +161,15 @@
 		    		frameIndex=0;
 		    		animState = "Walk";
 		    	}
-		    	frameIndex += 3 * (moveSpeed/MAX_SPEED);
-		    	if(frameIndex>=28) frameIndex=0;
+		    	frameIndex += 2 * (moveSpeed/MAX_SPEED);
+		    	if(frameIndex>=20) frameIndex=0;
 		    }else{
 		    	if(animState!="Idle"){
 		    		frameIndex=0;
 		    		animState = "Idle";
 		    	}
 		    	frameIndex += 1;
-		    	if(frameIndex>=120) frameIndex=0;
+		    	if(frameIndex>=60) frameIndex=0;
 		    }
 
 		    // Anim Suffix
@@ -266,11 +266,11 @@
 		var lastAnimSuffix = "Idle";
 
 		var playerSprites = {
-			Idle: new Sprite("Poppy_Idle"),
+			Idle: new Spritesheet("Poppy_Idle"),
 			Idle_Eye: new Sprite("Poppy_Idle_With_Eye"),
 			Idle_Eye_2: new Sprite("Poppy_Idle_With_Eye_2"),
 			
-			Walk: new Sprite("Poppy_Walk"),
+			Walk: new Spritesheet("Poppy_Walk"),
 			Walk_Eye: new Sprite("Poppy_Walk_With_Eye"),
 			Walk_Eye_2: new Sprite("Poppy_Walk_With_Eye_2"),
 
@@ -278,9 +278,9 @@
 		};
 		for(var id in playerSprites){
 			var sprite = playerSprites[id];
-			sprite.scaleX = sprite.scaleY = 0.9;
-			sprite.regX = -25;
-			sprite.regY = -150;
+			sprite.scaleX = sprite.scaleY = 0.125;
+			sprite.regX = -100;
+			sprite.regY = -200;
 		}
 
 		var buttonSprite = new Sprite("Button");
@@ -338,8 +338,8 @@
 			sprite.frameIndex = Math.floor(frameIndex);
 			sprite.x = self.x;
 			sprite.y = self.y;
-		    sprite.scaleX = faceDirection*0.9 * (1/bounce);
-		    sprite.scaleY = bounce*0.9;
+		    sprite.scaleX = faceDirection * (1/bounce);
+		    sprite.scaleY = bounce;
 		    sprite.draw(ctx);
 
 			// Placeholder CLICK ME circle
@@ -371,8 +371,8 @@
 			sprite.frameIndex = Math.floor(frameIndex);
 			sprite.x = self.x;
 			sprite.y = self.y;
-		    sprite.scaleX = faceDirection*0.9 * (1/bounce);
-		    sprite.scaleY = bounce*0.9;
+		    sprite.scaleX = faceDirection * (1/bounce);
+		    sprite.scaleY = bounce;
 		    sprite.draw(cctvContext);
 		};
 
