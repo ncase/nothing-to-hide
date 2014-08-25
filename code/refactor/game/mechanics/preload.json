@@ -1,0 +1,6 @@
+{
+	"script": [
+		"gamelogic/Player.js",
+		"gamelogic/Monolith.js"
+	]
+}

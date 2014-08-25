@@ -1,22 +1,46 @@
+/****************************
+
+0. Be told what the list of levels are
+1. Load all the common assets
+2. Load first level - its metadata & custom assets
+3. Play first level
+
+****************************/
+
 // FPS STATS //
 var stats = new Stats();
 stats.setMode(0);
 stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
+stats.domElement.style.right = '0px';
 stats.domElement.style.top = '0px';
 document.body.appendChild(stats.domElement);
+subscribe("fps/begin",function(){ stats.begin(); });
+subscribe("fps/end",function(){ stats.end(); });
 
-// LEVELS TO LOAD //
-var levels = ["common","0_intro"];
+// LIST OF LEVELS
+var levels = ["0_intro"];
 
-Game.gotoLevel(levels[1]);
+// COMMON ASSETS //
+function loadAssetPath(path){
+	var deferred = Q.defer();
+	Loader.loadJSON(path+"/preload.json").then(function(batch){
+		Asset.loadBatch(batch,path).then(function(){
+			deferred.resolve(true);
+		});
+	});
+	return deferred.promise;
+}
+Q.all([loadAssetPath("assets"),loadAssetPath("mechanics")]).then(function(){
 
-/*****
+	// LOAD & PLAY
+	Asset.loadLevel(levels[0]).then(function(){
 
-1) Wait to be told what levels to load.
+		// So that Q doesn't be dumb and catch exceptions...
+		setTimeout(function(){
+			Game.start();
+			Game.gotoLevel(levels[0]);
+		},0);
+		
+	});
 
-2) Load common + them.
-
-3) Initialize the first level
-
-*****/
+});

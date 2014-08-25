@@ -1,0 +1,11 @@
+{
+	"image":{
+		"carpet": "textures/carpet.png"
+	},
+	"sprite":{
+		"Poppy_Bored_Idle": "sprites/poppy/200x200_bored_idle.png",
+		"Poppy_Bored_Walk": "sprites/poppy/200x200_bored_walk.png"
+	},
+	"sound":{},
+	"script":[]
+}

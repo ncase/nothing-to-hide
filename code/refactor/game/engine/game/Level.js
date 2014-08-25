@@ -1,17 +1,89 @@
-function Level(){
+var W, H;
+function Level(config){
 
 	var self = this;
+	self.config = config;
 
-	self.init = function(map,level){
+	///////////////////////////////
+
+	self.TILE_WIDTH = 50;
+	self.TILE_HEIGHT = 50;
+
+	W = self.TILE_WIDTH;
+	H = self.TILE_HEIGHT;
+	
+	///////////////////////////////
+
+	self.init = function(){
+
+		// Create map
+		self.map = new Map(self, config.map);
+		self.map.init();
+
+		// Create game pieces
+		_initLevelObjects("realobjects");
+		_initLevelObjects("wallobjects");
+		_initLevelObjects("gamelogic");
+
+		// Shadow Logic
+		self.shadow = new Shadow(self);
+		self.shadow.init();
+
+		// Initialize Renderer
+		self.renderer = new LevelRenderer(self);
+		self.renderer.init();
+
 	};
 
+	var _initLevelObjects = function(category){
+		self[category] = [];
+		var levelObjects = config.level[category];
+		for(var i=0;i<levelObjects.length;i++){
+			
+			// Create new object of Class type
+			var conf = levelObjects[i];
+			var Type = window[conf.type];
+			if(!Type){
+				console.error("NO SUCH TYPE CLASS: "+conf.type);
+			}
+			var obj = new Type(self);
+
+			// Override variables
+			for(var key in conf){
+				obj[key] = conf[key];
+			}
+
+			// Initialize
+			obj.init();
+
+			// Add to the list
+			self[category].push(obj);
+
+		}
+	}
+
+	///////////////////////////////
+
 	self.update = function(){
+		_callArray(self.realobjects,"update");
+		_callArray(self.wallobjects,"update");
+		_callArray(self.gamelogic,"update");
+	};
+
+	self.draw = function(ctx){
+		self.renderer.draw(ctx); // LET THIS HANDLE IT ALL
 	};
 
 	self.kill = function(){
+		_callArray(self.realobjects,"kill");
+		_callArray(self.wallobjects,"kill");
+		_callArray(self.gamelogic,"kill");
 	};
 
-	self.addCustomLogic = function(handlers){
+	var _callArray = function(array,funcName,args){
+		for(var i=0;i<array.length;i++){
+			array[i][funcName].apply(null,args);
+		}
 	};
 
 }

@@ -1,219 +1,84 @@
+/*****************
+
+Loads and STORES more complex resources.
+Each method also returns a promise for when it's done.
+Also does batch loading.
+
+*****************/
 (function(exports){
 
 	// Singleton
 	var Asset = {};
 	exports.Asset = Asset;
 
-	// Initialize
-	Asset.init = function(config){
-		Asset.config = config;
-		Asset.image = {};
-		Asset.level = {};
-		Asset.sprite = {};
-		Asset.sound = {};
-	};
+	// LEVELS
+	Asset.levelConfig = {};
+	Asset.loadLevel = function(levelID){
 
-	// Load everything from config
-	Asset.load = function(){
-		var conf = Asset.config;
-		var promises = [];
-		if(Object.keys(conf.images).length>0) promises.push(Asset.loadImages(conf.images));
-		if(Object.keys(conf.levels).length>0) promises.push(Asset.loadLevels(conf.levels));
-		if(Object.keys(conf.sprites).length>0) promises.push(Asset.loadSprites(conf.sprites));
-		if(Object.keys(conf.spritesheets).length>0) promises.push(Asset.loadSpritesheets(conf.spritesheets));
-		if(Object.keys(conf.sounds).length>0) promises.push(Asset.loadSounds(conf.sounds));
-		return Q.all(promises);
-	};
+		var deferred = Q.defer();
 
-	// Loading all Images
-	Asset.loadImages = function(map){
-		map = map || {};
+		var path = "levels/"+levelID;
+		Q.all([
+			Loader.loadText(path+"/map.txt"), // map
+			Loader.loadJSON(path+"/level.json"), // game pieces
+			Loader.loadText(path+"/custom.js"), // custom script
+			Loader.loadJSON(path+"/preload.json") // custom assets
+		]).spread(function(map,level,custom,preload){
 
-		// Promise all images
-		var promises = [];
-		for(var id in map){
-			var src = map[id];
-			var img = new Image();
-			Asset.image[id] = img;
-			promises.push(_promiseImage(src,img));
-		}
-		return Q.all(promises);
-	};
+			// Preload Asset Batch
+			Asset.loadBatch(preload,path).then(function(){
 
-	// Loading all Sprites
-	Asset.loadSpritesheets = function(map){
-		map = map || {};
-
-		// Helper to promise sprites
-		var promiseSprite = function(id,filepath){
-			var imgSource = filepath;
-			var size = filepath.match(/\d+x\d+/)[0].split("x"); // Info should be embedded in the filename.
-			size = { width:size[0], height:size[1] };
-			return _promiseImage(imgSource).then(function(img){
-				console.log("Loaded sprite "+id);
-				Asset.sprite[id] = {image:img, size:size};
-			});
-		}
-
-		// Promise all
-		var promises = [];
-		for(var id in map){
-			var filepath = map[id];
-			promises.push(promiseSprite(id,filepath));
-		}
-		return Q.all(promises);
-
-	};
-
-	// Loading all Sprite
-	Asset.loadSprites = function(map){
-		map = map || {};
-
-		// Helper to promise sprites
-		var promiseSprite = function(id,filepath){
-			var imgSource = filepath+".png";
-			var dataSource = filepath+".json";
-			return Q.all([_promiseImage(imgSource),_promiseData(dataSource)]).spread(function(img,data){
-				console.log("Loaded sprite "+id);
-				data = JSON.parse(data);
-				Asset.sprite[id] = {image:img, data:data};
-			});
-		}
-
-		// Promise all
-		var promises = [];
-		for(var id in map){
-			var filepath = map[id];
-			promises.push(promiseSprite(id,filepath));
-		}
-		return Q.all(promises);
-
-	};
-
-	// Loading all Sounds
-	Asset.loadSounds = function(map){
-		map = map || {};
-
-		// Convert to manifest
-		var manifest = [];
-		for(var id in map){
-			manifest.push({id:id, src:map[id].src, data:map[id].data});
-		}
-
-		// Promise manifest loaded
-		var allSoundsLoaded = Q.defer();
-		var soundsLeft = manifest.length;
-		createjs.Sound.addEventListener("fileload",function(event){
-			Asset.sound[event.id] = event.src;
-			console.log("Loaded sound "+event.id);
-			soundsLeft--;
-			if(soundsLeft==0){
-				allSoundsLoaded.resolve(true);
-			}
-		});
-        createjs.Sound.registerManifest(manifest);
-		return allSoundsLoaded.promise;
-
-	};
-
-	// Loading all Levels: COMPLICATED
-	Asset.loadLevels = function(map){
-		map = map || {};
-
-		// Helper to promise levels
-		var promiseLevel = function(id,dirpath){
-			
-			var levelSource = dirpath+"/level.json";
-			var mapSource = dirpath+"/map.txt";
-
-			return Q.all([_promiseData(levelSource),_promiseData(mapSource)]).spread(function(levelData,mapData){
-
-				// Parsing to proper data format
-				try{
-					levelData = levelData.replace(/\/\*(.|\n)+?\*\/|\/\/.*(?=[\n\r])/g, ''); // remove comments dammit
-					levelData = JSON.parse(levelData);
-				}catch(e){
-					console.error("JSON PARSING FAILED ON LEVEL JSON "+id);
-				}
-				mapData = mapData.split("\n");
-				for(var i=0;i<mapData.length;i++){
-					mapData[i] = mapData[i].split("");
+				// Map to 2D Array
+				map = map.split("\n");
+				for(var i=0;i<map.length;i++){
+					map[i] = map[i].split("");
 				}
 
-				// Config
+				// Level Config
 				var config = {
-					level: levelData,
-					map: mapData,
-					id: id
+					map: map,
+					level: level,
+					custom: custom
 				};
-				Asset.level[id] = config;
-				
-				// Return it
-				var deferred = Q.defer();
+
+				// Resolve
+				Asset.levelConfig[levelID] = config;
 				deferred.resolve(config);
-				return deferred.promise;
 
 			});
 
-		}
+		});
 
-		// Promise all
-		var promises = [];
-		for(var id in map){
-			var dirpath = map[id];
-			promises.push(promiseLevel(id,dirpath));
-		}
-		return Q.all(promises);
+		return deferred.promise;
 
 	};
 
-	///////////////////////////////
-	/////// HELPER METHODS ////////
-	///////////////////////////////
+	// BATCH LOADING ASSETS
+	Asset.loadBatch = function(batch,basePath){
 
-	function _promiseImage(src,img){
-		var deferred = Q.defer();
-		img = img || new Image();
-		img.onload = function(){
-			console.log("Loaded image "+src);
-			deferred.resolve(img);
-		};
-		img.src = src;
-		return deferred.promise;
-	}
-
-	function _promiseData(src){
-
-		var isNodeWebkit = (typeof process == "object");
-
-		var deferred = Q.defer();
-		var xhr = _createXMLHTTPObject();
-		xhr.open("GET", src);
-		xhr.onreadystatechange = function() {
-			if( (xhr.readyState===4 && xhr.status===200) || (isNodeWebkit && xhr.readyState===3) ){
-				console.log("Loaded data "+src);
-				deferred.resolve(xhr.responseText);
+		var _loadType = function(type,loader){
+			map = batch[type] || {};
+			var promises = [];
+			for(var id in map){
+				var src = basePath + "/" + map[id];
+				(function(id){
+					promises.push(loader(src).then(function(asset){
+						Asset[type] = Asset[type] || {};
+						Asset[type][id] = asset;
+					}));
+				})(id);
 			}
+			return Q.all(promises);
 		};
-		xhr.send();
-		return deferred.promise;
 
-	}
+		return Q.all([
+			_loadType("image", Loader.loadImage),
+			_loadType("sprite", Loader.loadSprite),
+			_loadType("script", Loader.loadScript),
+			//_loadType("sound", Loader.loadSound)
+		]);
 
-	// Because IE still sucks.
-	function _createXMLHTTPObject() {
-		var XMLHttpFactories = [
-		    function(){return new XMLHttpRequest()},
-		    function(){return new ActiveXObject("Msxml2.XMLHTTP")},
-		    function(){return new ActiveXObject("Msxml3.XMLHTTP")},
-		    function(){return new ActiveXObject("Microsoft.XMLHTTP")}
-		];
-	    var xmlhttp;
-	    for(var i=0;i<XMLHttpFactories.length;i++){
-	        try{ xmlhttp = XMLHttpFactories[i](); }catch(e){ continue; }
-	        break;
-	    }
-	    return xmlhttp;
-	}
+	};
+
 
 })(window);
