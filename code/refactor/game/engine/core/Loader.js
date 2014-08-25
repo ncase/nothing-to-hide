@@ -55,11 +55,11 @@ Each method returns a promise for the resource.
 
 	Loader.loadSprite = function(src){
 		var deferred = Q.defer();
-		var size = src.match(/\d+x\d+/)[0].split("x"); // Info should be embedded in the filename.
-		size = { width:size[0], height:size[1] };
-		Loader.loadImage(src).then(function(img){
+		var imageSource = src+".png";
+		var dataSource = src+".json";
+		Q.all([Loader.loadImage(imageSource),Loader.loadJSON(dataSource)]).spread(function(img,data){
 			console.log("Loaded sprite: "+src);
-			deferred.resolve({image:img, size:size});
+			deferred.resolve({image:img, data:data});
 		});
 		return deferred.promise;
 	};

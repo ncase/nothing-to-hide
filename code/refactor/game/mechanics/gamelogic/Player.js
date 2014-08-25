@@ -30,19 +30,34 @@ function Player(level){
 	self.update = function(){
 
 		// MOVE based on KEY INPUT
-
 		var speed = Key.slow ? self.SLOW_SPEED : self.NORMAL_SPEED;
 		if(Key.left) self.vx-=speed;
 		if(Key.right) self.vx+=speed;
 		if(Key.up) self.vy-=speed;
 		if(Key.down) self.vy+=speed;
 
+		// MOVEMENT and Velocity
 		self.x += self.vx;
 		self.y += self.vy;
-		self.vx *= 0.8;
-		self.vy *= 0.8;
+		self.vx *= 0.5;
+		self.vy *= 0.5;
+
+		// Crappy Collision Detection
+		var map = self.level.map;
+	    var endLoop;
+	    endLoop = 100;
+	    while(map.hitTest(self.x,self.y+0.01) && (endLoop--)>0) self.y-=0.01;
+	    while(map.hitTest(self.x,self.y-0.2) && (endLoop--)>0) self.y+=0.01;
+	    endLoop = 100;
+	    while(map.hitTest(self.x-0.2,self.y) && (endLoop--)>0) self.x+=0.01;
+	    while(map.hitTest(self.x+0.2,self.y) && (endLoop--)>0) self.x-=0.01;
+	    if(endLoop<=0) console.log("WOOPS");
 
 	};
+
+	var direction = 1;
+	var bounceVel = 0;
+	var bounce = 1;
 	self.draw = function(ctx){
 
 		// What sprite to use
@@ -53,14 +68,29 @@ function Player(level){
 			sprite = self.IDLE_ANIM;
 		}
 
-		// If new sprite, start anim from 0
+		// Which direction to face
+		if(Key.left && !Key.right) direction=-1;
+		if(Key.right && !Key.left) direction=1;
+
+		// If new sprite, start anim from 0, else animate
 		if(sprite!=self.currentSprite){
 			sprite.frameIndex = 0;
+			self.currentSprite = sprite;
+			bounceVel -= 0.1;
+		}else{
+			sprite.nextFrame(); // TODO: SLOW DOWN ANIM.
+			bounceVel += (1-bounce)*0.8;
+			bounceVel *= 0.5;
+			bounce += bounceVel;
 		}
 
-		// Position the sprite
+		// Position & scale the sprite
 		sprite.x = self.x*W;
 		sprite.y = self.y*H;
+		sprite.scaleX = direction * (1/bounce);
+		sprite.scaleY = bounce;
+
+		// Draw it
 	    sprite.draw(ctx);
 
 	};

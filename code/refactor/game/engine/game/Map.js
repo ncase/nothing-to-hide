@@ -66,4 +66,17 @@ function Map(level, map){
 		ctx.drawImage(self.bgCanvas,0,0);
 	}
 
+	///////////////////////
+
+	self.hitTest = function(x,y){
+
+		// Out of bounds
+		if(x<0 || x>self.width || y<0 || y>self.height) return true;
+		
+		// If not, return if it's hitting a Wall or Screen
+		var tile = self.map[Math.floor(y)][Math.floor(x)];
+	    return( tile==self.WALL || tile==self.SCREEN );
+
+	}
+
 }

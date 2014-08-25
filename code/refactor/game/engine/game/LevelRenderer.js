@@ -19,6 +19,7 @@ function LevelRenderer(level){
 
 	3. DRAW THEM TOGETHER
 	- Translate to camera position
+	- Draw Poppy, because she's gotta appear on top of everything.
 	- Draw both layers onto the main canvas
 
 	*********************/
