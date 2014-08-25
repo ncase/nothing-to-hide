@@ -1,6 +1,14 @@
 {
 	"script": [
-		"gamelogic/Player.js",
-		"gamelogic/Monolith.js"
+
+		// Camera Game Logic
+		"gamelogic/ZoneCamera.js",
+		"gamelogic/FixedCamera.js",
+		"gamelogic/RailsCamera.js",
+
+		// Real Object Pieces
+		"realobjects/Player.js",
+		"realobjects/Monolith.js"
+		
 	]
 }

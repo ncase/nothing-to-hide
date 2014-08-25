@@ -20,18 +20,18 @@ function Level(config){
 		self.map = new Map(self, config.map);
 		self.map.init();
 
-		// Create game pieces
-		_initLevelObjects("realobjects");
-		_initLevelObjects("wallobjects");
-		_initLevelObjects("gamelogic");
+		// Initialize Renderer
+		self.renderer = new LevelRenderer(self);
+		self.renderer.init();
 
 		// Shadow Logic
 		self.shadow = new Shadow(self);
 		self.shadow.init();
 
-		// Initialize Renderer
-		self.renderer = new LevelRenderer(self);
-		self.renderer.init();
+		// Create game pieces
+		_initLevelObjects("realobjects");
+		_initLevelObjects("wallobjects");
+		_initLevelObjects("gamelogic");
 
 	};
 
