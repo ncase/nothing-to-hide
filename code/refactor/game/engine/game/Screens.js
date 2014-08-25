@@ -73,14 +73,19 @@ function Screens(level){
 				tile = tiles[y][x];
 			}
 
+			// Activation Countdown - linear distance from player
+			var countdown = Math.floor(Math.abs(startX+0.5 - level.player.x)) + 5;
+
 			// Return the beast
+			// ALSO: Position, Velocity, and Activation Countdown
 			return {
 				x: startX,
 				y: startY,
 				width: 1,
 				height: height,
 				pos: 0,
-				vel: 0
+				vel: 0,
+				countdown: countdown
 			};
 
 		}
@@ -92,26 +97,21 @@ function Screens(level){
 		// Calculate each wall section's bounce factor.
 		
 		for(var i=0;i<self.segments.length;i++){
-			_updateSegment(self.segments[i]);
-		}
+			
+			var seg = self.segments[i];
 
-		// HELPER METHODS //
+			// Activation countdown
+			if(seg.countdown>0){
+				seg.countdown--;
+				continue;
+			}
 
-		function _updateSegment(segment){
-
-			// Am I seen by the player?
-			var segmentCenter = {
-				x: segment.x+segment.width/2,
-				y: segment.y+segment.height/2
-			};
-			var playerSightPolygon = SightAndLight.compute(level.player, level.shadow.shadows);
-			var seenByPlayer = SightAndLight.inPolygon(segmentCenter,playerSightPolygon);
-
-			// If so/not, bounce to hidden/showing
+			// If is/not seen, bounce to hidden/showing
+			var seenByPlayer = _isSeenByPlayer(seg);
 			var gotoPosition = seenByPlayer ? 1 : 0;
-			segment.vel += (gotoPosition-segment.pos)*0.2;
-			segment.vel *= 0.7;
-			segment.pos += segment.vel;
+			seg.vel += (gotoPosition-seg.pos)*0.2;
+			seg.vel *= 0.7;
+			seg.pos += seg.vel;
 
 		}
 
@@ -153,5 +153,16 @@ function Screens(level){
 		}
 
 	};
+
+	// HELPER METHODS //
+
+	function _isSeenByPlayer(segment){
+		var segmentCenter = {
+			x: segment.x+segment.width/2,
+			y: segment.y+segment.height/2
+		};
+		var playerSightPolygon = SightAndLight.compute(level.player, level.shadow.shadows);
+		return SightAndLight.inPolygon(segmentCenter,playerSightPolygon);
+	}
 	
 }

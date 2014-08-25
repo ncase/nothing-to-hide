@@ -18,15 +18,11 @@ function Level(config){
 
 		// QUESTION: Do we even need the init() two-step process?
 
-		// Create map
+		// Stuff that needs to exist before gameobjects
 		self.map = new Map(self);
 		self.map.init();
-
-		// Shadow Logic
 		self.shadow = new Shadow(self);
 		self.shadow.init();
-
-		// Initialize Renderer
 		self.renderer = new LevelRenderer(self);
 		self.renderer.init();
 
@@ -35,7 +31,7 @@ function Level(config){
 		_initLevelObjects("wallobjects");
 		_initLevelObjects("gamelogic");
 
-		// Screen Logic
+		// Stuff that needs to exist after gameobjects
 		self.screens = new Screens(self);
 		self.screens.init();
 
@@ -83,7 +79,7 @@ function Level(config){
 		_callArray(self.gamelogic,"update");
 
 		self.screens.update();
-		
+
 	};
 
 	self.draw = function(ctx){
