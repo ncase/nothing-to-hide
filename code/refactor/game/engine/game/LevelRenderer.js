@@ -63,15 +63,14 @@ function LevelRenderer(level){
 		ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
 
 		// - The map's static background
-		
 		lvl.map.draw(ctx);
 
-		// - The wall screen
+		// - The screen wallobjects
+		lvl.screens.draw(ctx);
 		
 		// - The floor realobjects
 		
 		// - The solid realobjects
-
 		lvl.player.draw(ctx);
 
 		// - Mask in the same canvas

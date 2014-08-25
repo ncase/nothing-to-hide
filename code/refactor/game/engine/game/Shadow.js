@@ -16,7 +16,7 @@
 			this.shadows = [];
 
 			var map = level.map;
-			var tiles = map.map;
+			var tiles = map.tiles;
 			var blocks = [];
 
 			// 1. Iterate from left-to-right, top-to-bottom
@@ -30,13 +30,6 @@
 					}
 				}
 			}
-			/*for(var i=0;i<blocks.length;i++){
-				var block = blocks[i];
-				block.left *= map.TILE_SIZE;
-				block.top *= map.TILE_SIZE;
-				block.right *= map.TILE_SIZE;
-				block.bottom *= map.TILE_SIZE; 
-			}*/
 
 			// Add shadows for each block, yo!
 			// Both Walls & Screens have no "bottom"
@@ -68,7 +61,7 @@
 			function _findWallBlock(startX,startY){
 
 				var x,y,tile;
-				var tiles = map.map;
+				var tiles = map.tiles;
 
 				// Get initial tile info
 				x = startX;
@@ -106,7 +99,7 @@
 			function _findTopBottom(startX,startY){
 
 				var x,y,tile;
-				var tiles = map.map;
+				var tiles = map.tiles;
 
 				// Get initial tile info
 				x = startX;
@@ -159,48 +152,6 @@
 			};
 
 		};
-
-		/*
-
-		///////////////////////
-		///// UPDATE LOOP /////
-		///////////////////////
-
-		this.update = function(){
-
-			var player = level.player;
-		    player.sightPolygon = _createPoly(player.x,player.y);
-
-		    // All Camera Sight shadows
-			var prisms = level.prisms.prisms;
-			for(var i=0;i<prisms.length;i++){
-				
-				var prism = prisms[i];
-				if(!prism.active) continue;
-				
-				prism.sightPolygon = _createPoly(prism.x, prism.y);
-
-				// Hack:
-				var humanoids = [level.player].concat(level.dummies.dummies);
-				var humanoidsSeen = 0;
-				for(var j=0;j<humanoids.length;j++){
-					var hum = humanoids[j];
-					if(SightAndLight.inPolygon(hum, prism.sightPolygon)){
-						humanoidsSeen += 1;
-					}
-				}
-				prism.seesHuman = (humanoidsSeen>0);
-
-			}
-
-		};
-
-		this.draw = function(){};
-		var _createPoly = function(lightX,lightY){
-			var poly = SightAndLight.compute({x:lightX,y:lightY}, self.shadows);
-			return poly;
-		};*/
-
 
 	};
 

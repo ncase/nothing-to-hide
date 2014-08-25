@@ -1,4 +1,4 @@
-function Map(level, map){
+function Map(level){
 
 	var self = this;
 
@@ -17,15 +17,15 @@ function Map(level, map){
 	///////////////////////////////////
 
 	self.level = level;
-	self.map = map;
+	self.tiles = level.config.map;
 
 	/////////////////////////////
 
 	self.init = function(){
 
 		// Dimensions
-		self.width = self.map[0].length;
-		self.height = self.map.length;
+		self.width = self.tiles[0].length;
+		self.height = self.tiles.length;
 
 		// Background Canvas
 		self.bgCanvas = document.createElement("canvas");
@@ -45,10 +45,10 @@ function Map(level, map){
 
 		// DRAW STATIC BACKGROUND
 		var ctx = self.bgContext;
-		for(var y=0;y<self.map.length;y++){
-			for(var x=0;x<self.map[y].length;x++){
+		for(var y=0;y<self.tiles.length;y++){
+			for(var x=0;x<self.tiles[y].length;x++){
 				var fill;
-				switch(self.map[y][x]){
+				switch(self.tiles[y][x]){
 					case self.SPACE: fill=self.FILL_SPACE; break;
 					case self.CARPET: fill=self.FILL_CARPET; break;
 					case self.WALL: fill=self.FILL_WALL; break;
@@ -74,7 +74,7 @@ function Map(level, map){
 		if(x<0 || x>self.width || y<0 || y>self.height) return true;
 		
 		// If not, return if it's hitting a Wall or Screen
-		var tile = self.map[Math.floor(y)][Math.floor(x)];
+		var tile = self.tiles[Math.floor(y)][Math.floor(x)];
 	    return( tile==self.WALL || tile==self.SCREEN );
 
 	}

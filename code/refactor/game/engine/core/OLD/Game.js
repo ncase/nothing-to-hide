@@ -16,7 +16,7 @@
 
 	Game.start = function(){
 
-		var drawnSinceLastUpdate = false;
+		var drawnSinceLastUpdate = true;
 
 		// Update loop
 		gameLoop = setInterval(function(){
