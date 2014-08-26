@@ -36,7 +36,7 @@
 	Game.FPS = 30;
 	Game.start = function(){
 
-		var drawnSinceLastUpdate = false;
+		var drawnSinceLastUpdate = true;
 
 		// UPDATE LOOP: 30 FPS
 		gameLoop = setInterval(function(){

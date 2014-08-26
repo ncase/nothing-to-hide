@@ -5,6 +5,10 @@ function Monolith(level){
 
 	//////////////////////
 
+	level.setTag(self,"sighted");
+
+	//////////////////////
+
 	// ANIMATION //
 	self.BODY = "Monolith_Body";
 	self.EYE = "Monolith_Eye";
@@ -102,7 +106,11 @@ function Monolith(level){
 
 	};
 
-	// HELPER METHOD //
+	self.updateSight = function(){
+		self.sightPolygon = SightAndLight.compute(self, level.shadow.shadows);
+	};
+
+	// HELPER METHODS //
 	function _getUnitVector(from,to){
 		var dx = to.x - from.x;
 		var dy = to.y - from.y;

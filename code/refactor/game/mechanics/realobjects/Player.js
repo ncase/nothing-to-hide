@@ -2,7 +2,11 @@ function Player(level){
 
 	var self = this;
 	self.level = level;
+
+	///////////
+
 	self.level.player = self;
+	level.setTag(self,"sighted");
 
 	//////////////
 
@@ -105,6 +109,10 @@ function Player(level){
 		// Draw it
 	    sprite.draw(ctx);
 
+	};
+
+	self.updateSight = function(){
+		self.sightPolygon = SightAndLight.compute(self, level.shadow.shadows);
 	};
 	
 }

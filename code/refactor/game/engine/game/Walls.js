@@ -53,6 +53,9 @@ function Walls(level){
 			if(seg.countdown>0){
 				seg.countdown--;
 				continue;
+			}else if(seg.countdown==-1){
+				// Just started Countdown - linear distance from player
+				seg.countdown = Math.floor(Math.abs(seg.x+0.5 - level.player.x)) + 5;
 			}
 
 			// If is/not seen, bounce to hidden/showing
@@ -139,9 +142,6 @@ function Walls(level){
 			tile = tiles[y][x];
 		}
 
-		// Activation Countdown - linear distance from player
-		var countdown = Math.floor(Math.abs(startX+0.5 - level.player.x)) + 5;
-
 		// Return the beast
 		// ALSO: Position, Velocity, and Activation Countdown
 		return {
@@ -151,7 +151,7 @@ function Walls(level){
 			height: height,
 			pos: 0,
 			vel: 0,
-			countdown: countdown
+			countdown: -1
 		};
 
 	}

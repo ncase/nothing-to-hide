@@ -25,24 +25,15 @@ function Level(config){
 		self.shadow.init();
 		self.renderer = new LevelRenderer(self);
 		self.renderer.init();
-
-		// Create game pieces
-		_initLevelObjects("realobjects");
-		
-		// Stuff that needs to exist after realobjects
 		self.walls = new Walls(self);
 		self.walls.init();
 
+		// Create game pieces
+		_initLevelObjects("realobjects");
 		_initLevelObjects("wallobjects");
 		_initLevelObjects("gamelogic");
 
 
-	};
-
-	self.getGameObjects = function(category,type){
-		return self[category].filter(function(el){
-			return(el.type == type);
-		});
 	};
 
 	var _initLevelObjects = function(category){
@@ -74,12 +65,30 @@ function Level(config){
 
 	///////////////////////////////
 
+	self.tagged = {};
+	self.getTagged = function(tag){
+		self.tagged[tag] = self.tagged[tag] || [];
+		return self.tagged[tag];
+	};
+	self.setTag = function(thing,tag){
+		self.tagged[tag] = self.tagged[tag] || [];
+		self.tagged[tag].push(thing);
+	};
+
 	self.update = function(){
 		
+		// Update game objects
 		_callArray(self.realobjects,"update");
 		_callArray(self.wallobjects,"update");
 		_callArray(self.gamelogic,"update");
 
+		// Update all sight polygons
+		var sighted = self.getTagged("sighted");
+		for(var i=0;i<sighted.length;i++){
+			sighted[i].updateSight();
+		}
+
+		// Update misc things
 		self.walls.update();
 
 	};

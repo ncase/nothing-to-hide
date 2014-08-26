@@ -47,11 +47,11 @@
 			this.shadows.push({ax:map.width+0.01, bx:map.width+0.01, ay:-0.01, by:map.height+0.01}); // right
 
 			// Now, the shadow-walls for IEYES & LIGHTS. (same thing but with a bottom)
-			this.lightShadows = JSON.parse(JSON.stringify(this.shadows));
+			/*this.lightShadows = JSON.parse(JSON.stringify(this.shadows));
 			for(var i=0;i<blocks.length;i++){
 				var block = blocks[i];
 				this.lightShadows.push({ax:block.left, bx:block.right, ay:block.bottom, by:block.bottom}); // bottom
-			}
+			}*/
 
 			/////////////////////////
 			//// HELPER METHODS /////

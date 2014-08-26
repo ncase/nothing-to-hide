@@ -8,14 +8,15 @@ function LevelRenderer(level){
 	1. DRAW THE VISIBLE LAYER
 	- The map's static background
 	- The wall screen
+	- The cam's CCTV lines (nice polygon technique)
 	- The floor realobjects
 	- The solid realobjects
+	// save this canvas!
 	- Mask in the same canvas
 
 	2. DRAW THE CCTV LAYER
-	? Just use grayscale
-	- New canvas for the masks
-	- Mask it
+	- Just use grayscale
+	- Create Monolith mask
 
 	3. DRAW THEM TOGETHER
 	- Translate to camera position
@@ -36,10 +37,16 @@ function LevelRenderer(level){
 		self.seenContext = self.seenCanvas.getContext('2d');
 
 		// CCTV Canvas
-		self.cctvCanvas = document.createElement("canvas");
+		/*self.cctvCanvas = document.createElement("canvas");
 		self.cctvCanvas.width = canvasWidth;
 		self.cctvCanvas.height = canvasHeight;
-		self.cctvContext = self.cctvCanvas.getContext('2d');
+		self.cctvContext = self.cctvCanvas.getContext('2d');*/
+		// Grayscale WebGL Filter
+		self.cctvCanvas = fx.canvas();
+		self.smallCanvas = document.createElement("canvas");
+		self.smallCanvas.width = canvasWidth*0.25;
+		self.smallCanvas.height = canvasHeight*0.25;
+		self.smallContext = self.smallCanvas.getContext('2d');
 
 		// Camera Translations
 		self.camera = {
@@ -67,7 +74,13 @@ function LevelRenderer(level){
 
 		// - The screen wallobjects
 		lvl.walls.draw(ctx);
-		
+
+		// - The cam's CCTV lines
+
+		// Approach 1: Monomask, Linemasked, LinesOnWorld, Monomask, MaskedCCTV
+		// Approach 2: Monomask, Lines, Linemasked, LinesOnWorld, MaskedCCTV
+		// Approach 3: LinesOnWorld, Monomask, MaskedCCTV -- needs complex way to find lines inside polygon. (Not really?)
+
 		// - The floor realobjects
 		
 		// - The solid realobjects, depth sorted
@@ -78,15 +91,21 @@ function LevelRenderer(level){
 			reals[i].draw(ctx);
 		}
 
+		// - Save as grayscale
+		self.smallContext.drawImage(self.seenCanvas,0,0,self.smallCanvas.width,self.smallCanvas.height);
+		var texture = self.cctvCanvas.texture(self.smallCanvas);
+    	self.cctvCanvas.draw(texture).hueSaturation(0,-1).brightnessContrast(-0.2,0).update();
+    	texture.destroy();
+
 		// - Mask in the same canvas
 
 		ctx.globalCompositeOperation = "destination-in";
 		ctx.beginPath();
-		var _sightPolygon = SightAndLight.compute(lvl.player, lvl.shadow.shadows);
-		var p0 = _sightPolygon[0];
+		var sightPolygon = lvl.player.sightPolygon;
+		var p0 = sightPolygon[0];
 		ctx.moveTo(p0.x*W, p0.y*H);
-		for(var i=1;i<_sightPolygon.length;i++){
-			var p = _sightPolygon[i];
+		for(var i=1;i<sightPolygon.length;i++){
+			var p = sightPolygon[i];
 			ctx.lineTo(p.x*W, p.y*H);
 		}
 		ctx.fill();
@@ -115,6 +134,7 @@ function LevelRenderer(level){
 		// - Draw Poppy, because she's gotta appear on top of everything.
 
 		// - Draw both layers onto the main canvas
+		ctx.drawImage(self.cctvCanvas,0,0,self.seenCanvas.width,self.seenCanvas.height);
 		ctx.drawImage(self.seenCanvas,0,0);
 
 		ctx.restore();

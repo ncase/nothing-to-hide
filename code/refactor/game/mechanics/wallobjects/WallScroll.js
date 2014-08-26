@@ -20,9 +20,10 @@ function WallScroll(level){
 	self.init = function(){
 		
 		self.image = Asset.image[self.image];
-		self.dirty = true;
 
-		self.pos = 0;
+		// Force a redraw
+		self.lastPos = -10000;
+		self.pos = -10000;
 		self.vel = 0;
 
 		// Handler: Scroll up/down based on messages
@@ -37,6 +38,10 @@ function WallScroll(level){
 
 	self.update = function(){
 
+		// Last position & new position
+		self.lastPos = self.pos;
+		self.pos += self.vel;
+
 		// Update velocity & acceleration
 		self.vel *= 0.8;
 		if(self.pos<0){
@@ -49,17 +54,13 @@ function WallScroll(level){
 			self.pos = end;
 		}
 
-		// Position, and if it changes, the dirtiness
-		self.dirty = (Math.abs(self.vel)>0.01);
-		self.pos += self.vel;
-
 	};
 
 	self.draw = function(ctx){
 
-		// Dirty dirty!
-		if(!self.dirty) return;
-		self.dirty = false;
+		// Only redraw if it's moved far enough
+		if(Math.abs(self.lastPos-self.pos)<0.01) return;
+		console.log("redraw");
 		
 		// Draw it within the frame
 		var sx = 0;
