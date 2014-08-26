@@ -42,8 +42,13 @@ function Player(level){
 		self.vx *= 0.5;
 		self.vy *= 0.5;
 
-		// Crappy Collision Detection
+		// Pressing against wall?
 		var map = self.level.map;
+		if(map.hitTest(self.x,self.y-0.2)){
+			publish("wall/press", [self.x, self.y-0.2]);
+		}
+
+		// Crappy Collision Detection
 	    var endLoop;
 	    endLoop = 100;
 	    while(map.hitTest(self.x,self.y+0.01) && (endLoop--)>0) self.y-=0.01;

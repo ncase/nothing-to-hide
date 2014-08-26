@@ -1,4 +1,4 @@
-function Screens(level){
+function Walls(level){
 	
 	var self = this;
 	self.level = level;
@@ -38,50 +38,6 @@ function Screens(level){
 		var ctx = self.screenContext;
 		ctx.fillStyle = self.FILL_BACKGROUND;
 		ctx.fillRect(0,0,self.screenCanvas.width,self.screenCanvas.height);
-
-		// HELPER METHODS //
-
-		function _isInSegment(x,y){
-			for(var i=0;i<self.segments.length;i++){
-				var segment = self.segments[i];
-				if(x>=segment.x && x<segment.x+segment.width
-					&& y>=segment.y && y<segment.y+segment.height){
-					return true;
-				}
-			}
-			return false;
-		}
-		function _createSegment(startX,startY){
-
-			var x,y,tile;
-
-			// Get bottom-most edge of screen
-			var height = 0;
-			x = startX;
-			y = startY;
-			tile = tiles[y][x];
-			while(tile==self.map.SCREEN){
-				y++;
-				height++;
-				tile = tiles[y][x];
-			}
-
-			// Activation Countdown - linear distance from player
-			var countdown = Math.floor(Math.abs(startX+0.5 - level.player.x)) + 5;
-
-			// Return the beast
-			// ALSO: Position, Velocity, and Activation Countdown
-			return {
-				x: startX,
-				y: startY,
-				width: 1,
-				height: height,
-				pos: 0,
-				vel: 0,
-				countdown: countdown
-			};
-
-		}
 
 	};
 	
@@ -151,7 +107,54 @@ function Screens(level){
 
 	};
 
+	// EXTERNAL METHODS //
+
+	self.findSegmentByTile = _isInSegment;
+
 	// HELPER METHODS //
+
+	function _isInSegment(x,y){
+		for(var i=0;i<self.segments.length;i++){
+			var segment = self.segments[i];
+			if(x>=segment.x && x<segment.x+segment.width
+				&& y>=segment.y && y<segment.y+segment.height){
+				return segment;
+			}
+		}
+		return null;
+	}
+	function _createSegment(startX,startY){
+
+		var x,y,tile;
+		var tiles = self.map.tiles;
+
+		// Get bottom-most edge of screen
+		var height = 0;
+		x = startX;
+		y = startY;
+		tile = tiles[y][x];
+		while(tile==self.map.SCREEN){
+			y++;
+			height++;
+			tile = tiles[y][x];
+		}
+
+		// Activation Countdown - linear distance from player
+		var countdown = Math.floor(Math.abs(startX+0.5 - level.player.x)) + 5;
+
+		// Return the beast
+		// ALSO: Position, Velocity, and Activation Countdown
+		return {
+			x: startX,
+			y: startY,
+			width: 1,
+			height: height,
+			pos: 0,
+			vel: 0,
+			countdown: countdown
+		};
+
+	}
 
 	function _isSeenByPlayer(segment){
 		var segmentCenter = {

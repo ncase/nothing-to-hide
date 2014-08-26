@@ -66,7 +66,7 @@ function LevelRenderer(level){
 		lvl.map.draw(ctx);
 
 		// - The screen wallobjects
-		lvl.screens.draw(ctx);
+		lvl.walls.draw(ctx);
 		
 		// - The floor realobjects
 		

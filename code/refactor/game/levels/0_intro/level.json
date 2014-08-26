@@ -13,6 +13,25 @@
 	],
 
 	"wallobjects": [
+		{
+			"type": "WallScroll",
+			"image": "intro/comic",
+			"listenUp": "up",
+			"listenDown": "down",
+			"x":0, "y":0, "width":4, "height":5
+		},
+		{
+			"type": "WallButton",
+			"icon": "Wall_Down",
+			"message": "down",
+			"x":4, "y":3
+		},
+		{
+			"type": "WallButton",
+			"icon": "Wall_Up",
+			"message": "up",
+			"x":5, "y":3
+		}
 		/*{
 			"type": "WallRecord",
 			"x":14, "y":2.5,

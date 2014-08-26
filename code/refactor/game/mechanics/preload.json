@@ -10,6 +10,8 @@
 		"wallobjects/WallImage.js",
 		"wallobjects/WallSprite.js",
 		"wallobjects/WallRecord.js",
+		"wallobjects/WallScroll.js",
+		"wallobjects/WallButton.js",
 
 		// Real Object Pieces
 		"realobjects/Player.js",

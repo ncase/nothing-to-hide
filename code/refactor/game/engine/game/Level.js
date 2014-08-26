@@ -28,12 +28,14 @@ function Level(config){
 
 		// Create game pieces
 		_initLevelObjects("realobjects");
+		
+		// Stuff that needs to exist after realobjects
+		self.walls = new Walls(self);
+		self.walls.init();
+
 		_initLevelObjects("wallobjects");
 		_initLevelObjects("gamelogic");
 
-		// Stuff that needs to exist after gameobjects
-		self.screens = new Screens(self);
-		self.screens.init();
 
 	};
 
@@ -78,7 +80,7 @@ function Level(config){
 		_callArray(self.wallobjects,"update");
 		_callArray(self.gamelogic,"update");
 
-		self.screens.update();
+		self.walls.update();
 
 	};
 

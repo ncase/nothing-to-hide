@@ -1,3 +1,13 @@
+/***********************
+
+{
+	"type": "WallImage",
+	"image": "intro/smile",
+	"x":12, "y":2
+}
+
+***********************/
+
 function WallImage(level){
 	
 	var self = this;
