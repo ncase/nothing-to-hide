@@ -5,5 +5,7 @@
 	},
 	"sprite":{},
 	"sound":{},
-	"script":[]
+	"script":[
+		"assets/FreakMonolith.js"
+	]
 }

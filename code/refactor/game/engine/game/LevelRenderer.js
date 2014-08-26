@@ -70,8 +70,13 @@ function LevelRenderer(level){
 		
 		// - The floor realobjects
 		
-		// - The solid realobjects
-		lvl.player.draw(ctx);
+		// - The solid realobjects, depth sorted
+		var reals = lvl.realobjects.sort(function(a,b){
+			return a.y-b.y;
+		});
+		for(var i=0;i<reals.length;i++){
+			reals[i].draw(ctx);
+		}
 
 		// - Mask in the same canvas
 

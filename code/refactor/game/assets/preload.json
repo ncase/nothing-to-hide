@@ -1,10 +1,20 @@
 {
 	"image":{
-		"carpet": "textures/carpet.png"
+
+		// Map textures
+		"Texture_Carpet": "textures/carpet.png"
+
 	},
 	"sprite":{
+
+		// Poppy's animations
 		"Poppy_Bored_Idle": "sprites/poppy/bored_idle",
-		"Poppy_Bored_Walk": "sprites/poppy/bored_walk"
+		"Poppy_Bored_Walk": "sprites/poppy/bored_walk",
+
+		// Monolith
+		"Monolith_Eye": "sprites/monolith/monolith_eye",
+		"Monolith_Body": "sprites/monolith/monolith_body"
+
 	},
 	"sound":{},
 	"script":[]

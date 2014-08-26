@@ -60,7 +60,6 @@ function WallScroll(level){
 		// Dirty dirty!
 		if(!self.dirty) return;
 		self.dirty = false;
-		console.log("WAH");
 		
 		// Draw it within the frame
 		var sx = 0;

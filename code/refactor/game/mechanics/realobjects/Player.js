@@ -22,9 +22,16 @@ function Player(level){
 	//////////////
 
 	self.init = function(){
+
+		// Position should be in center of its tile
+		self.x += 0.5;
+		self.y += 0.5;
+
+		// Animation
 		self.IDLE_ANIM = new Sprite(self.IDLE_ANIM);
 		self.WALK_ANIM = new Sprite(self.WALK_ANIM);
 		self.currentSprite = self.IDLE_ANIM;
+
 	};
 
 	self.update = function(){
