@@ -6,6 +6,11 @@
 		"gamelogic/FixedCamera.js",
 		"gamelogic/RailsCamera.js",
 
+		// Wall Object Pieces
+		"wallobjects/WallImage.js",
+		"wallobjects/WallSprite.js",
+		"wallobjects/WallRecord.js",
+
 		// Real Object Pieces
 		"realobjects/Player.js",
 		"realobjects/Monolith.js"

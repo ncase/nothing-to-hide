@@ -30,21 +30,14 @@ function Screens(level){
 		}
 
 		// DRAW SCREEN CANVAS //
-		// 1. Create blank canvas
-		// 2. Draw solid background colour on all segments
-		// 3. Draw all ScreenImage objects
 
 		self.screenCanvas = document.createElement("canvas");
 		self.screenCanvas.width = self.map.width * W;
 		self.screenCanvas.height = self.map.height * H;
 		self.screenContext = self.screenCanvas.getContext('2d');
-
 		var ctx = self.screenContext;
-		for(var i=0;i<self.segments.length;i++){
-			var segment = self.segments[i];
-			ctx.fillStyle = self.FILL_BACKGROUND;
-			ctx.fillRect(segment.x*W, segment.y*H, segment.width*W, segment.height*H);
-		}
+		ctx.fillStyle = self.FILL_BACKGROUND;
+		ctx.fillRect(0,0,self.screenCanvas.width,self.screenCanvas.height);
 
 		// HELPER METHODS //
 
@@ -117,12 +110,16 @@ function Screens(level){
 
 	};
 
-	self.draw = function(ctx){
-		
-		// Only redraw the areas that are non-static (most are)
+	self.draw = function(gameContext){
+
+		// Redraw all Wall Objects
+		var wallobjects = level.wallobjects;
+		for(var i=0;i<wallobjects.length;i++){
+			wallobjects[i].draw(self.screenContext);
+		}
 
 		// Draw bits of our canvas, offput by the bounce factor
-
+		var ctx = gameContext;
 		for(var i=0;i<self.segments.length;i++){
 			var seg = self.segments[i];
 			var t = seg.pos;

@@ -14,8 +14,19 @@
 
 	"wallobjects": [
 		/*{
+			"type": "WallRecord",
+			"x":14, "y":2.5,
+			"width":12, "height":6
+		}
+		{
 			"type": "WallImage",
-			"x":0, "y":5
+			"image": "intro/smile",
+			"x":12, "y":2
+		},
+		{
+			"type": "WallSprite",
+			"sprite": "Poppy_Bored_Walk",
+			"x":1, "y":1
 		}*/
 	],
 

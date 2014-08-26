@@ -1,5 +1,7 @@
 {
-	"image":{},
+	"image":{
+		"intro/smile": "assets/smile.png"
+	},
 	"sprite":{},
 	"sound":{},
 	"script":[]
