@@ -186,6 +186,7 @@
 	exports.SightAndLight = {};
 	SightAndLight.compute = getSightPolygon;
 	SightAndLight.inPolygon = isInPolygon;
+	SightAndLight.getIntersection = getIntersection;
 
 
 })(window);

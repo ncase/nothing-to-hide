@@ -6,6 +6,7 @@ function Monolith(level){
 	//////////////////////
 
 	level.setTag(self,"sighted");
+	level.setTag(self,"monolith");
 
 	//////////////////////
 
@@ -107,7 +108,7 @@ function Monolith(level){
 	};
 
 	self.updateSight = function(){
-		self.sightPolygon = SightAndLight.compute(self, level.shadow.shadows);
+		self.sightPolygon = SightAndLight.compute(self, level.shadow.cctvShadows);
 	};
 
 	// HELPER METHODS //

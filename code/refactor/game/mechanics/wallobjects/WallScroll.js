@@ -60,7 +60,6 @@ function WallScroll(level){
 
 		// Only redraw if it's moved far enough
 		if(Math.abs(self.lastPos-self.pos)<0.01) return;
-		console.log("redraw");
 		
 		// Draw it within the frame
 		var sx = 0;

@@ -19,6 +19,7 @@ function LevelRenderer(level){
 	- Create Monolith mask
 
 	3. DRAW THEM TOGETHER
+	- Oh wait, outline world
 	- Translate to camera position
 	- Draw Poppy, because she's gotta appear on top of everything.
 	- Draw both layers onto the main canvas
@@ -31,22 +32,19 @@ function LevelRenderer(level){
 		var canvasHeight = self.level.map.height * H;
 
 		// SEEN Canvas
-		self.seenCanvas = document.createElement("canvas");
-		self.seenCanvas.width = canvasWidth;
-		self.seenCanvas.height = canvasHeight;
+		self.seenCanvas = _createCanvas(canvasWidth,canvasHeight);
 		self.seenContext = self.seenCanvas.getContext('2d');
 
 		// CCTV Canvas
-		/*self.cctvCanvas = document.createElement("canvas");
-		self.cctvCanvas.width = canvasWidth;
-		self.cctvCanvas.height = canvasHeight;
-		self.cctvContext = self.cctvCanvas.getContext('2d');*/
 		// Grayscale WebGL Filter
-		self.cctvCanvas = fx.canvas();
-		self.smallCanvas = document.createElement("canvas");
-		self.smallCanvas.width = canvasWidth*0.25;
-		self.smallCanvas.height = canvasHeight*0.25;
+		self.cctvCanvas = _createCanvas(canvasWidth,canvasHeight);//fx.canvas();
+		self.cctvContext = self.cctvCanvas.getContext('2d');
+		self.smallCanvas = _createCanvas(canvasWidth,canvasHeight);
 		self.smallContext = self.smallCanvas.getContext('2d');
+
+		// Monolith Mask Canvas
+		self.maskCanvas = _createCanvas(canvasWidth,canvasHeight);
+		self.maskContext = self.maskCanvas.getContext('2d');
 
 		// Camera Translations
 		self.camera = {
@@ -58,9 +56,14 @@ function LevelRenderer(level){
 
 	};
 
-	self.draw = function(gameContext){
+	function _createCanvas(w,h){
+		canvas = document.createElement("canvas");
+		canvas.width = w;
+		canvas.height = h;
+		return canvas;
+	}
 
-		var lvl = self.level;
+	self.draw = function(gameContext){
 
 		///////////////////////////////
 		// 1. DRAW THE VISIBLE LAYER //
@@ -70,12 +73,14 @@ function LevelRenderer(level){
 		ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
 
 		// - The map's static background
-		lvl.map.draw(ctx);
+		level.map.draw(ctx);
 
 		// - The screen wallobjects
-		lvl.walls.draw(ctx);
+		level.walls.draw(ctx);
 
 		// - The cam's CCTV lines
+		var path = _getCCTVLines();
+		_drawCCTVLines(ctx,path);
 
 		// Approach 1: Monomask, Linemasked, LinesOnWorld, Monomask, MaskedCCTV
 		// Approach 2: Monomask, Lines, Linemasked, LinesOnWorld, MaskedCCTV
@@ -84,7 +89,7 @@ function LevelRenderer(level){
 		// - The floor realobjects
 		
 		// - The solid realobjects, depth sorted
-		var reals = lvl.realobjects.sort(function(a,b){
+		var reals = level.realobjects.sort(function(a,b){
 			return a.y-b.y;
 		});
 		for(var i=0;i<reals.length;i++){
@@ -92,20 +97,23 @@ function LevelRenderer(level){
 		}
 
 		// - Save as grayscale
-		self.smallContext.drawImage(self.seenCanvas,0,0,self.smallCanvas.width,self.smallCanvas.height);
+		self.cctvContext.drawImage(self.seenCanvas,0,0);
+		self.cctvContext.fillStyle = "rgba(0,0,0,0.4)";
+		self.cctvContext.fillRect(0,0,self.cctvCanvas.width,self.cctvCanvas.height);
+		/*self.smallContext.drawImage(self.seenCanvas,0,0,self.smallCanvas.width,self.smallCanvas.height);
 		var texture = self.cctvCanvas.texture(self.smallCanvas);
     	self.cctvCanvas.draw(texture).hueSaturation(0,-1).brightnessContrast(-0.2,0).update();
-    	texture.destroy();
+    	texture.destroy();*/
 
 		// - Mask in the same canvas
 
 		ctx.globalCompositeOperation = "destination-in";
 		ctx.beginPath();
-		var sightPolygon = lvl.player.sightPolygon;
-		var p0 = sightPolygon[0];
-		ctx.moveTo(p0.x*W, p0.y*H);
-		for(var i=1;i<sightPolygon.length;i++){
-			var p = sightPolygon[i];
+		var poly = level.player.sightPolygon;
+		var p = poly[0];
+		ctx.moveTo(p.x*W, p.y*H);
+		for(var i=1;i<poly.length;i++){
+			p = poly[i];
 			ctx.lineTo(p.x*W, p.y*H);
 		}
 		ctx.fill();
@@ -114,6 +122,24 @@ function LevelRenderer(level){
 		////////////////////////////
 		// 2. DRAW THE CCTV LAYER //
 		////////////////////////////
+
+		// - Create Monolith mask
+
+		var ctx = self.maskContext;
+		ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+
+		var monoliths = level.getTagged("monolith");
+		for(var x=0;x<monoliths.length;x++){
+			ctx.beginPath();
+			var poly = monoliths[x].sightPolygon;
+			var p = poly[0];
+			ctx.moveTo(p.x*W, p.y*H);
+			for(var i=1;i<poly.length;i++){
+				p = poly[i];
+				ctx.lineTo(p.x*W, p.y*H);
+			}
+			ctx.fill();
+		}
 
 		///////////////////////////
 		// 3. DRAW THEM TOGETHER //
@@ -130,16 +156,104 @@ function LevelRenderer(level){
 		cam.y = cam.y*0.8 + cam.gotoY*0.2;
 		ctx.translate(Game.canvas.width/2, Game.canvas.height/2);
 		ctx.translate(-cam.x*W, -cam.y*H);
+
+		// - Oh wait, outline world
 		
 		// - Draw Poppy, because she's gotta appear on top of everything.
 
 		// - Draw both layers onto the main canvas
-		ctx.drawImage(self.cctvCanvas,0,0,self.seenCanvas.width,self.seenCanvas.height);
+		// And mask it.
+
+		ctx.drawImage(self.maskCanvas,0,0);
+		ctx.globalCompositeOperation = "source-in";
+		ctx.drawImage(self.cctvCanvas,0,0);
+		ctx.globalCompositeOperation = "source-over";
 		ctx.drawImage(self.seenCanvas,0,0);
 
 		ctx.restore();
 		
 
 	};
+
+	// HELPER METHODS //
+
+	var offset = 0;
+	function _getCCTVLines(){
+
+		offset = (offset+0.025)%0.5;
+
+		// Get monoliths
+		var monoliths = level.getTagged("monolith");
+
+		// Begin drawing...
+		var path = [];
+
+		// For each monolith's sight polygon...
+		for(var x=0;x<monoliths.length;x++){
+			var poly = monoliths[x].sightPolygon;
+
+			// For each horizontal CCTV ray...
+			for(var y=0.5;y<level.map.height;y+=0.5){
+
+				// HACK - 0.01 offset to prevent odd-number polygon intersections. Hopefully.
+				var ray = {
+					a:{
+						x: -1,
+						y: y+offset+0.01
+					},
+					b:{
+						x: 0,
+						y: y+offset+0.01
+					}
+				};
+
+				// Get array of all intersections, sorted by x
+				var intersections = [];
+				for(var z=0;z<poly.length;z++){
+					var curr = poly[z];
+					var next = poly[(z+1)%poly.length];
+					var segment = {
+						ax: curr.x,
+						ay: curr.y,
+						bx: next.x,
+						by: next.y
+					};
+					var intersect = SightAndLight.getIntersection(ray,segment);
+					var prev = intersections[intersections.length-1];
+					if(intersect && !(prev && prev.x==intersect.x && prev.y==intersect.y)){
+						intersections.push(intersect);
+					}
+				}
+				intersections.sort(function(a,b){ return a.x-b.x; });
+
+				// Add to total path
+				path = path.concat(intersections);
+
+			}
+		}
+
+		// Return total path!
+		return path;		
+
+	}
+	function _drawCCTVLines(ctx,path){
+
+		// Assume path is of form [start, end, start, end]
+		// Or else we're screwed.
+		ctx.beginPath();
+		for(var i=0;i<path.length;i++){
+			var p = path[i];
+			if(i%2==0){
+				ctx.moveTo(p.x*W, p.y*H);
+			}else{
+				ctx.lineTo(p.x*W, p.y*H);
+			}
+		}
+		ctx.strokeStyle = "rgba(0,0,0,0.25)";
+		ctx.lineWidth = 2;
+		ctx.stroke();
+
+	}
+
 
 }

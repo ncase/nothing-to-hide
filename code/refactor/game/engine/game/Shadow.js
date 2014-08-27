@@ -13,7 +13,7 @@
 
 		self.init = function(){
 
-			this.shadows = [];
+			self.shadows = [];
 
 			var map = level.map;
 			var tiles = map.tiles;
@@ -35,23 +35,23 @@
 			// Both Walls & Screens have no "bottom"
 			for(var i=0;i<blocks.length;i++){
 				var block = blocks[i];
-				this.shadows.push({ax:block.left, bx:block.right, ay:block.top, by:block.top}); // top
-				this.shadows.push({ax:block.left, bx:block.left, ay:block.top, by:block.bottom}); // left
-				this.shadows.push({ax:block.right, bx:block.right, ay:block.top, by:block.bottom}); // right
+				self.shadows.push({ax:block.left, bx:block.right, ay:block.top, by:block.top}); // top
+				self.shadows.push({ax:block.left, bx:block.left, ay:block.top, by:block.bottom}); // left
+				self.shadows.push({ax:block.right, bx:block.right, ay:block.top, by:block.bottom}); // right
 			}
 
 			// Add border
-			this.shadows.push({ax:-0.01, bx:map.width+0.01, ay:-0.01, by:-0.01}); // top
-			this.shadows.push({ax:-0.01, bx:map.width+0.01, ay:map.height+0.01, by:map.height+0.01}); // bottom
-			this.shadows.push({ax:-0.01, bx:-0.01, ay:-0.01, by:map.height+0.01}); // left
-			this.shadows.push({ax:map.width+0.01, bx:map.width+0.01, ay:-0.01, by:map.height+0.01}); // right
+			self.shadows.push({ax:-0.01, bx:map.width+0.01, ay:-0.01, by:-0.01}); // top
+			self.shadows.push({ax:-0.01, bx:map.width+0.01, ay:map.height+0.01, by:map.height+0.01}); // bottom
+			self.shadows.push({ax:-0.01, bx:-0.01, ay:-0.01, by:map.height+0.01}); // left
+			self.shadows.push({ax:map.width+0.01, bx:map.width+0.01, ay:-0.01, by:map.height+0.01}); // right
 
-			// Now, the shadow-walls for IEYES & LIGHTS. (same thing but with a bottom)
-			/*this.lightShadows = JSON.parse(JSON.stringify(this.shadows));
+			// Now, the shadow-walls for MONOLITHS. (same thing but with a bottom)
+			self.cctvShadows = JSON.parse(JSON.stringify(self.shadows));
 			for(var i=0;i<blocks.length;i++){
 				var block = blocks[i];
-				this.lightShadows.push({ax:block.left, bx:block.right, ay:block.bottom, by:block.bottom}); // bottom
-			}*/
+				self.cctvShadows.push({ax:block.left, bx:block.right, ay:block.bottom, by:block.bottom}); // bottom
+			}
 
 			/////////////////////////
 			//// HELPER METHODS /////

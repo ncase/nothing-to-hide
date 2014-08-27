@@ -56,6 +56,7 @@ function Walls(level){
 			}else if(seg.countdown==-1){
 				// Just started Countdown - linear distance from player
 				seg.countdown = Math.floor(Math.abs(seg.x+0.5 - level.player.x)) + 5;
+				continue;
 			}
 
 			// If is/not seen, bounce to hidden/showing
