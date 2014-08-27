@@ -69,14 +69,9 @@ function Player(level){
 	    while(map.hitTest(self.x+0.2,self.y) && (endLoop--)>0) self.x-=0.01;
 	    if(endLoop<=0) console.log("WOOPS");
 
-	};
+	    // ANIMATION //
 
-	var direction = 1;
-	var bounceVel = 0;
-	var bounce = 1;
-	self.draw = function(ctx){
-
-		// What sprite to use
+	    // What sprite to use
 		var sprite;
 		if(Key.left||Key.right||Key.down||Key.up||Key.slow){
 			sprite = self.WALK_ANIM;
@@ -84,11 +79,7 @@ function Player(level){
 			sprite = self.IDLE_ANIM;
 		}
 
-		// Which direction to face
-		if(Key.left && !Key.right) direction=-1;
-		if(Key.right && !Key.left) direction=1;
-
-		// If new sprite, start anim from 0, else animate
+	    // If new sprite, start anim from 0, else animate
 		if(sprite!=self.currentSprite){
 			sprite.frameIndex = 0;
 			self.currentSprite = sprite;
@@ -99,6 +90,19 @@ function Player(level){
 			bounceVel *= 0.5;
 			bounce += bounceVel;
 		}
+
+	};
+
+	var direction = 1;
+	var bounceVel = 0;
+	var bounce = 1;
+	self.draw = function(ctx){
+
+		var sprite = self.currentSprite;
+
+		// Which direction to face
+		if(Key.left && !Key.right) direction=-1;
+		if(Key.right && !Key.left) direction=1;
 
 		// Position & scale the sprite
 		sprite.x = self.x*W;
