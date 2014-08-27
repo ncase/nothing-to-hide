@@ -7,30 +7,38 @@
 		{ "type": "Monolith", "x":0.5,"y":5.5},
 		{ "type": "FreakMonolith", "x":11,"y":10},
 		{ "type": "Monolith", "x":31,"y":8 },
-		{ "type": "Monolith", "x":39,"y":9.8 },
+		{ "type": "Monolith", "x":37.9,"y":9.8 },
 		{ "type": "Monolith", "x":43,"y":3 }
 
 	],
 
 	"wallobjects": [
 		{
+			"type": "WallRecord",
+			"x":12.1, "y":2.1, "width":7.8, "height":6.8
+		},
+		{
+			"type": "WallRecord",
+			"x":20.1, "y":2.1, "width":7.8, "height":6.8
+		},
+		{
 			"type": "WallScroll",
 			"image": "intro/comic",
 			"listenUp": "up",
 			"listenDown": "down",
-			"x":0, "y":0, "width":4, "height":5
+			"x":8, "y":0, "width":4, "height":5
 		},
 		{
 			"type": "WallButton",
-			"icon": "Wall_Down",
+			"icon": "Icon_Down",
 			"message": "down",
-			"x":4, "y":3
+			"x":6, "y":3
 		},
 		{
 			"type": "WallButton",
-			"icon": "Wall_Up",
+			"icon": "Icon_Up",
 			"message": "up",
-			"x":5, "y":3
+			"x":7, "y":3
 		}
 	],
 
@@ -52,7 +60,7 @@
 		{
 			"type": "FixedCamera",
 			"zone": {"left":0,"right":10,"top":0,"bottom":11},
-			"data": {"x":10,"y":5.5}
+			"data": {"x":7,"y":5.5}
 		},
 		{
 			"type": "RailsCamera",

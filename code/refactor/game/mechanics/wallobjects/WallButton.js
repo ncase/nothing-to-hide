@@ -30,6 +30,9 @@ function WallButton(level){
 			}
 		});
 
+		// Icon
+		self.icon = Asset.image[self.icon];
+
 	};
 	self.update = function(){
 	};
@@ -57,6 +60,12 @@ function WallButton(level){
 		ctx.beginPath();
 		ctx.arc(x, y+height, W*0.4, 0, 2*Math.PI, false);
 		ctx.stroke();
+
+		// Draw the square icon with size W*0.8
+		var iconSize = W*0.8;
+		var iconX = x-iconSize/2;
+		var iconY = y+height-iconSize/2;
+		ctx.drawImage(self.icon, iconX, iconY, iconSize, iconSize);
 
 	};
 	

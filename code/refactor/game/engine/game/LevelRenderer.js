@@ -19,8 +19,8 @@ function LevelRenderer(level){
 	- Create Monolith mask
 
 	3. DRAW THEM TOGETHER
-	- Oh wait, outline world
 	- Translate to camera position
+	- Oh wait, outline world
 	- Draw Poppy, because she's gotta appear on top of everything.
 	- Draw both layers onto the main canvas
 
@@ -141,6 +141,12 @@ function LevelRenderer(level){
 			ctx.fill();
 		}
 
+		// Mask it.
+		var ctx = self.cctvContext;
+		ctx.globalCompositeOperation = "destination-in";
+		ctx.drawImage(self.maskCanvas,0,0);
+		ctx.globalCompositeOperation = "source-over";
+
 		///////////////////////////
 		// 3. DRAW THEM TOGETHER //
 		///////////////////////////
@@ -156,18 +162,13 @@ function LevelRenderer(level){
 		cam.y = cam.y*0.8 + cam.gotoY*0.2;
 		ctx.translate(Game.canvas.width/2, Game.canvas.height/2);
 		ctx.translate(-cam.x*W, -cam.y*H);
-
-		// - Oh wait, outline world
 		
 		// - Draw Poppy, because she's gotta appear on top of everything.
 
-		// - Draw both layers onto the main canvas
-		// And mask it.
-
-		ctx.drawImage(self.maskCanvas,0,0);
-		ctx.globalCompositeOperation = "source-in";
-		ctx.drawImage(self.cctvCanvas,0,0);
-		ctx.globalCompositeOperation = "source-over";
+		// Draw all the layers
+		ctx.drawImage(level.map.lineCanvas,0,0);
+		level.player.draw(ctx);
+		//ctx.drawImage(self.cctvCanvas,0,0);
 		ctx.drawImage(self.seenCanvas,0,0);
 
 		ctx.restore();

@@ -28,9 +28,7 @@ function Map(level){
 		self.height = self.tiles.length;
 
 		// Background Canvas
-		self.bgCanvas = document.createElement("canvas");
-		self.bgCanvas.width = self.width * W;
-		self.bgCanvas.height = self.height * H;
+		self.bgCanvas = _createCanvas(self.width*W, self.height*H);
 		self.bgContext = self.bgCanvas.getContext('2d');
 
 		// CREATE TEXTURES
@@ -44,11 +42,12 @@ function Map(level){
 		self.FILL_SPACE = _createTextureIfNeeded(self.FILL_SPACE);
 
 		// DRAW STATIC BACKGROUND
+		var tiles = self.tiles;
 		var ctx = self.bgContext;
-		for(var y=0;y<self.tiles.length;y++){
-			for(var x=0;x<self.tiles[y].length;x++){
+		for(var y=0;y<tiles.length;y++){
+			for(var x=0;x<tiles[y].length;x++){
 				var fill;
-				switch(self.tiles[y][x]){
+				switch(tiles[y][x]){
 					case self.SPACE: fill=self.FILL_SPACE; break;
 					case self.CARPET: fill=self.FILL_CARPET; break;
 					case self.WALL: fill=self.FILL_WALL; break;
@@ -59,7 +58,48 @@ function Map(level){
 			}
 		}
 
+		// Outline Canvas
+		self.lineCanvas = _createCanvas(self.width*W, self.height*H);
+		self.lineContext = self.lineCanvas.getContext('2d');
+
+		// DRAW OUTLINE BACKGROUND
+		var cvs = self.lineCanvas;
+		var ctx = self.lineContext;
+
+		// Outline border
+		ctx.fillStyle="#fff";
+		ctx.fillRect(0,0,cvs.width,1);
+		ctx.fillRect(0,0,1,cvs.height);
+		ctx.fillRect(0,cvs.height-1,cvs.width,1);
+		ctx.fillRect(cvs.width-1,0,1,cvs.height);
+
+		// Outline walls/screens
+		for(var y=0;y<tiles.length;y++){
+			for(var x=0;x<tiles[y].length;x++){
+				var tile = tiles[y][x];
+				if(tile==self.WALL || tile==self.SCREEN){
+					ctx.fillRect(x*W-1, y*H-1, W+2, H+2);
+				}
+			}
+		}
+		ctx.fillStyle="#000";
+		for(var y=0;y<tiles.length;y++){
+			for(var x=0;x<tiles[y].length;x++){
+				var tile = tiles[y][x];
+				if(tile==self.WALL || tile==self.SCREEN){
+					ctx.fillRect(x*W,y*H,W,H);
+				}
+			}
+		}
+
 	};
+
+	function _createCanvas(w,h){
+		canvas = document.createElement("canvas");
+		canvas.width = w;
+		canvas.height = h;
+		return canvas;
+	}
 
 	// DRAW EVERY FRAME
 	self.draw = function(ctx){

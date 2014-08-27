@@ -1,13 +1,19 @@
+/***********************
+
+{
+	"type": "WallRecord",
+	"x":12.1, "y":2.1, "width":7.8, "height":6.8
+}
+
+***********************/
+
 function WallRecord(level){
 	
 	var self = this;
 	self.level = level;
 
-	self.init = function(){
-	};
-	
-	self.update = function(){
-	};
+	self.init = function(){};
+	self.update = function(){};
 
 	self.draw = function(ctx){
 
