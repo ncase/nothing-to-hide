@@ -36,10 +36,9 @@ function LevelRenderer(level){
 		self.seenContext = self.seenCanvas.getContext('2d');
 
 		// CCTV Canvas
-		// Grayscale WebGL Filter
-		self.cctvCanvas = fx.canvas(); //_createCanvas(canvasWidth,canvasHeight);//
+		self.cctvCanvas = _createCanvas(canvasWidth,canvasHeight);//fx.canvas();
 		self.cctvContext = self.cctvCanvas.getContext('2d');
-		self.smallCanvas = _createCanvas(canvasWidth*0.25,canvasHeight*0.25);
+		self.smallCanvas = _createCanvas(canvasWidth,canvasHeight);
 		self.smallContext = self.smallCanvas.getContext('2d');
 
 		// Monolith Mask Canvas
@@ -97,13 +96,10 @@ function LevelRenderer(level){
 		}
 
 		// - Save as grayscale
+		
 		/*self.cctvContext.drawImage(self.seenCanvas,0,0);
 		self.cctvContext.fillStyle = "rgba(0,0,0,0.4)";
 		self.cctvContext.fillRect(0,0,self.cctvCanvas.width,self.cctvCanvas.height);*/
-		self.smallContext.drawImage(self.seenCanvas,0,0,self.smallCanvas.width,self.smallCanvas.height);
-		var texture = self.cctvCanvas.texture(self.smallCanvas);
-    	self.cctvCanvas.draw(texture).hueSaturation(0,-1).brightnessContrast(-0.2,0).update();
-    	texture.destroy();
 
 		// - Mask in the same canvas
 
@@ -142,10 +138,10 @@ function LevelRenderer(level){
 		}
 
 		// Mask it.
-		/*var ctx = self.cctvContext;
+		var ctx = self.cctvContext;
 		ctx.globalCompositeOperation = "destination-in";
 		ctx.drawImage(self.maskCanvas,0,0);
-		ctx.globalCompositeOperation = "source-over";*/
+		ctx.globalCompositeOperation = "source-over";
 
 		///////////////////////////
 		// 3. DRAW THEM TOGETHER //
@@ -168,7 +164,7 @@ function LevelRenderer(level){
 		// Draw all the layers
 		ctx.drawImage(level.map.lineCanvas,0,0);
 		level.player.draw(ctx);
-		ctx.drawImage(self.cctvCanvas,0,0,self.seenCanvas.width,self.seenCanvas.height);
+		//ctx.drawImage(self.cctvCanvas,0,0);
 		ctx.drawImage(self.seenCanvas,0,0);
 
 		ctx.restore();
