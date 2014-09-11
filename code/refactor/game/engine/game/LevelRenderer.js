@@ -100,10 +100,10 @@ function LevelRenderer(level){
 		/*self.cctvContext.drawImage(self.seenCanvas,0,0);
 		self.cctvContext.fillStyle = "rgba(0,0,0,0.4)";
 		self.cctvContext.fillRect(0,0,self.cctvCanvas.width,self.cctvCanvas.height);*/
-		self.smallContext.drawImage(self.seenCanvas,0,0,self.smallCanvas.width,self.smallCanvas.height);
+		/*self.smallContext.drawImage(self.seenCanvas,0,0,self.smallCanvas.width,self.smallCanvas.height);
 		var texture = self.cctvCanvas.texture(self.smallCanvas);
     	self.cctvCanvas.draw(texture).hueSaturation(0,-1).brightnessContrast(-0.2,0).update();
-    	texture.destroy();
+    	texture.destroy();*/
 
 		// - Mask in the same canvas
 
@@ -168,7 +168,7 @@ function LevelRenderer(level){
 		// Draw all the layers
 		ctx.drawImage(level.map.lineCanvas,0,0);
 		level.player.draw(ctx);
-		ctx.drawImage(self.cctvCanvas,0,0,self.seenCanvas.width,self.seenCanvas.height);
+		//ctx.drawImage(self.cctvCanvas,0,0,self.seenCanvas.width,self.seenCanvas.height);
 		ctx.drawImage(self.seenCanvas,0,0);
 
 		ctx.restore();

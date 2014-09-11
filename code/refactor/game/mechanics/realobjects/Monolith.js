@@ -19,8 +19,10 @@ function Monolith(level){
 	self.init = function(){
 
 		// Position should be in center of its tile
-		self.x += 0.5;
-		self.y += 0.8;
+		if(!self.exact){
+			self.x += 0.5;
+			self.y += 0.8;
+		}
 
 		// Animation
 		self.body = new Sprite(self.BODY);

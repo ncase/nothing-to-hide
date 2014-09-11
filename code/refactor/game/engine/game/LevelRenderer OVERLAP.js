@@ -36,9 +36,10 @@ function LevelRenderer(level){
 		self.seenContext = self.seenCanvas.getContext('2d');
 
 		// CCTV Canvas
-		self.cctvCanvas = _createCanvas(canvasWidth,canvasHeight);//fx.canvas();
+		// Grayscale WebGL Filter
+		self.cctvCanvas = fx.canvas(); //_createCanvas(canvasWidth,canvasHeight);//
 		self.cctvContext = self.cctvCanvas.getContext('2d');
-		self.smallCanvas = _createCanvas(canvasWidth,canvasHeight);
+		self.smallCanvas = _createCanvas(canvasWidth/*0.25*/,canvasHeight/*0.25*/);
 		self.smallContext = self.smallCanvas.getContext('2d');
 
 		// Monolith Mask Canvas
@@ -78,8 +79,13 @@ function LevelRenderer(level){
 		level.walls.draw(ctx);
 
 		// - The cam's CCTV lines
-		var path = _getCCTVLines();
-		_drawCCTVLines(ctx,path);
+		var monoliths = level.getTagged("monolith");
+		offset = (offset+0.025)%0.5;
+		for(var x=0;x<monoliths.length;x++){
+			var poly = monoliths[x].sightPolygon;
+			var path = _getCCTVLines(poly);
+			_drawCCTVLines(ctx,path);
+		}
 
 		// Approach 1: Monomask, Linemasked, LinesOnWorld, Monomask, MaskedCCTV
 		// Approach 2: Monomask, Lines, Linemasked, LinesOnWorld, MaskedCCTV
@@ -96,10 +102,13 @@ function LevelRenderer(level){
 		}
 
 		// - Save as grayscale
-		
 		/*self.cctvContext.drawImage(self.seenCanvas,0,0);
 		self.cctvContext.fillStyle = "rgba(0,0,0,0.4)";
 		self.cctvContext.fillRect(0,0,self.cctvCanvas.width,self.cctvCanvas.height);*/
+		/*self.smallContext.drawImage(self.seenCanvas,0,0,self.smallCanvas.width,self.smallCanvas.height);
+		var texture = self.cctvCanvas.texture(self.smallCanvas);
+    	self.cctvCanvas.draw(texture).hueSaturation(0,-1).brightnessContrast(-0.2,0).update();
+    	texture.destroy();*/
 
 		// - Mask in the same canvas
 
@@ -138,10 +147,10 @@ function LevelRenderer(level){
 		}
 
 		// Mask it.
-		var ctx = self.cctvContext;
+		/*var ctx = self.cctvContext;
 		ctx.globalCompositeOperation = "destination-in";
 		ctx.drawImage(self.maskCanvas,0,0);
-		ctx.globalCompositeOperation = "source-over";
+		ctx.globalCompositeOperation = "source-over";*/
 
 		///////////////////////////
 		// 3. DRAW THEM TOGETHER //
@@ -164,7 +173,7 @@ function LevelRenderer(level){
 		// Draw all the layers
 		ctx.drawImage(level.map.lineCanvas,0,0);
 		level.player.draw(ctx);
-		//ctx.drawImage(self.cctvCanvas,0,0);
+		//ctx.drawImage(self.cctvCanvas,0,0,self.seenCanvas.width,self.seenCanvas.height);
 		ctx.drawImage(self.seenCanvas,0,0);
 
 		ctx.restore();
@@ -175,58 +184,48 @@ function LevelRenderer(level){
 	// HELPER METHODS //
 
 	var offset = 0;
-	function _getCCTVLines(){
-
-		offset = (offset+0.025)%0.5;
-
-		// Get monoliths
-		var monoliths = level.getTagged("monolith");
+	function _getCCTVLines(poly){
 
 		// Begin drawing...
 		var path = [];
 
-		// For each monolith's sight polygon...
-		for(var x=0;x<monoliths.length;x++){
-			var poly = monoliths[x].sightPolygon;
+		// For each horizontal CCTV ray...
+		for(var y=0.5;y<level.map.height;y+=0.5){
 
-			// For each horizontal CCTV ray...
-			for(var y=0.5;y<level.map.height;y+=0.5){
-
-				// HACK - 0.01 offset to prevent odd-number polygon intersections. Hopefully.
-				var ray = {
-					a:{
-						x: -1,
-						y: y+offset+0.01
-					},
-					b:{
-						x: 0,
-						y: y+offset+0.01
-					}
-				};
-
-				// Get array of all intersections, sorted by x
-				var intersections = [];
-				for(var z=0;z<poly.length;z++){
-					var curr = poly[z];
-					var next = poly[(z+1)%poly.length];
-					var segment = {
-						ax: curr.x,
-						ay: curr.y,
-						bx: next.x,
-						by: next.y
-					};
-					var intersect = SightAndLight.getIntersection(ray,segment);
-					var prev = intersections[intersections.length-1];
-					if(intersect && !(prev && prev.x==intersect.x && prev.y==intersect.y)){
-						intersections.push(intersect);
-					}
+			// HACK - 0.01 offset to prevent odd-number polygon intersections. Hopefully.
+			var ray = {
+				a:{
+					x: -1,
+					y: y+offset+0.01
+				},
+				b:{
+					x: 0,
+					y: y+offset+0.01
 				}
-				intersections.sort(function(a,b){ return a.x-b.x; });
+			};
 
-				// Add to total path
-				path = path.concat(intersections);
-
+			// Get array of all intersections, sorted by x
+			var intersections = [];
+			for(var z=0;z<poly.length;z++){
+				var curr = poly[z];
+				var next = poly[(z+1)%poly.length];
+				var segment = {
+					ax: curr.x,
+					ay: curr.y,
+					bx: next.x,
+					by: next.y
+				};
+				var intersect = SightAndLight.getIntersection(ray,segment);
+				var prev = intersections[intersections.length-1];
+				if(intersect && !(prev && prev.x==intersect.x && prev.y==intersect.y)){
+					intersections.push(intersect);
+				}
 			}
+			intersections.sort(function(a,b){ return a.x-b.x; });
+
+			// Add to total path
+			path = path.concat(intersections);
+
 		}
 
 		// Return total path!
