@@ -1,11 +1,8 @@
 {
 	"image":{
-		"intro/smile": "assets/smile.png",
-		"intro/comic": "assets/comic.png"
+		"intro/walking": "assets/walking.png"
 	},
 	"sprite":{},
 	"sound":{},
-	"script":[
-		"assets/FreakMonolith.js"
-	]
+	"script":[]
 }

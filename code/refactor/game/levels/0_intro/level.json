@@ -13,6 +13,11 @@
 	],
 
 	"wallobjects": [
+		{
+			"type": "WallImage",
+			"image": "intro/walking",
+			"x":0, "y":0
+		}
 	],
 
 	"gamelogic":[

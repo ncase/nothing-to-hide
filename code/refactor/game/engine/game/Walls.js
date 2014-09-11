@@ -35,9 +35,6 @@ function Walls(level){
 		self.screenCanvas.width = self.map.width * W;
 		self.screenCanvas.height = self.map.height * H;
 		self.screenContext = self.screenCanvas.getContext('2d');
-		var ctx = self.screenContext;
-		ctx.fillStyle = self.FILL_BACKGROUND;
-		ctx.fillRect(0,0,self.screenCanvas.width,self.screenCanvas.height);
 
 	};
 	
