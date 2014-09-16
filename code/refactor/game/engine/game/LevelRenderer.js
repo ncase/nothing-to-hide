@@ -179,7 +179,7 @@ function LevelRenderer(level){
 	var offset = 0;
 	function _getCCTVLines(){
 
-		offset = (offset+0.025)%0.5;
+		offset = (offset+0.0125)%0.5;
 
 		// Get monoliths
 		var monoliths = level.getTagged("monolith");
@@ -253,7 +253,10 @@ function LevelRenderer(level){
 		ctx.stroke();
 
 	}
+	var offset2 = 0;
 	function _drawCCTVDots(ctx){
+
+		offset2 = (offset2+0.025)%1.0;
 
 		// Get monoliths, cloned
 		var monoliths = level.getTagged("monolith").concat();
@@ -264,16 +267,28 @@ function LevelRenderer(level){
 		});
 
 		// For now, straight up draw lines
-		ctx.beginPath();
+		ctx.fillStyle = "#fff";
 		var p = level.player;
 		for(var i=0;i<monoliths.length;i++){
 			var m = monoliths[i];
-			ctx.moveTo(m.x*W,m.y*H);
-			ctx.lineTo(p.x*W,p.y*H);
+
+			var vector = {
+				x: p.x-m.x,
+				y: (p.y-0.1)-m.y
+			};
+			vector.mag = Math.sqrt(vector.x*vector.x + vector.y*vector.y);
+			vector.x /= vector.mag;
+			vector.y /= vector.mag;
+
+			for(var t=offset2;t<vector.mag;t+=1){
+				ctx.beginPath();
+				var x = m.x + vector.x*t;
+				var y = m.y + vector.y*t;
+				ctx.arc(x*W, y*H, 3, 0, 2*Math.PI, false);
+				ctx.fill();
+			}
+
 		}
-		ctx.strokeStyle = "#fff";
-		ctx.lineWidth = 2;
-		ctx.stroke();
 
 	}
 
