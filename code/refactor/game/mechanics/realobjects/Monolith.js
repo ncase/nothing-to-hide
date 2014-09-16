@@ -113,6 +113,10 @@ function Monolith(level){
 		self.sightPolygon = SightAndLight.compute(self, level.shadow.cctvShadows);
 	};
 
+	self.speak = function(message){
+		publish("dialogue/show",[self.x,self.y-1.5,message]);
+	};
+
 	// HELPER METHODS //
 	function _getUnitVector(from,to){
 		var dx = to.x - from.x;

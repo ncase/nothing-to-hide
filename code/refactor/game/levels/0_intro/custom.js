@@ -2,26 +2,47 @@
 
 	var lvl = Game.level;
 
+	//lvl.player.NORMAL_SPEED = 0.3;
+
+	subscribeOnce("level/goal",function(){
+		alert("WHOO");
+	});
+
+	subscribeOnce("custom/conversation",function(){
+		Sequence([
+			function(){
+				lvl.player.deactivated = true;
+				lvl.player.speak("Woah...");
+			},
+			function(){
+				lvl.player.speak("...What happened here?");
+			},
+			function(){
+				lvl.fatty.speak("Your MOM is what happened here.");
+			},
+			function(){
+				lvl.fatty.speak("fatty.");
+			},
+			function(){
+				lvl.player.deactivated = false;
+				lvl.dialogue.hide();
+			}
+		]);
+    });
+
+	subscribeOnce("custom/vote_one",function(){
+		takePicture();
+		addComment("intro/comment_one");
+    });
+    subscribeOnce("custom/vote_zero",function(){
+		takePicture();
+		addComment("intro/comment_zero");
+    });
 	var handle = subscribe("game/update", function(){
-
-		subscribe("custom/vote_one",function(){
-			if(!pictureTaken){
-				takePicture();
-				addComment("intro/comment_one");
-			}
-	    });
-	    subscribe("custom/vote_zero",function(){
-	    	if(!pictureTaken){
-				takePicture();
-				addComment("intro/comment_zero");
-			}
-	    });
-
 	    if(!pictureTaken && lvl.player.x>32){
 	    	takePicture();
 			addComment("intro/comment_none");
 	    }
-
 	});
 
 	var pictureTaken = false;

@@ -2,6 +2,7 @@ function Dialogue(level){
 
 	var self = this;
 	self.level = level;
+	level.dialogue = self;
 
 	var showHandler, hideHandler;
 	self.init = function(){
@@ -14,20 +15,32 @@ function Dialogue(level){
 		
 		// Handler: Scroll up/down based on messages
 		showHandler = subscribe("dialogue/show",function(x,y,message){
-			self.origin.x = x;
-			self.origin.y = y;
-			self.message = message;
-			self.isVisible = true;
+			if(self.isVisible){
+				self.isVisible = false;
+				setTimeout(function(){
+					self.show(x,y,message);
+				},200);
+			}else{
+				self.show(x,y,message);
+			}
 		});
-		hideHandler = subscribe("dialogue/hide",function(){
-			self.isVisible = false;
-		});
+		hideHandler = subscribe("dialogue/hide",self.hide);
 
 		/****
 		var p = Game.level.player;
 		publish("dialogue/show",[p.x,p.y,"hello world"]);
 		****/
 
+	};
+
+	self.show = function(x,y,message){
+		self.origin.x = x;
+		self.origin.y = y;
+		self.message = message;
+		self.isVisible = true;
+	};
+	self.hide = function(){
+		self.isVisible = false;
 	};
 
 	self.update = function(){

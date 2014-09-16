@@ -111,9 +111,13 @@ function Level(config){
 	};
 
 	self.kill = function(){
-		_callArray(self.realobjects,"kill");
-		_callArray(self.wallobjects,"kill");
-		_callArray(self.gamelogic,"kill");
+
+		// Just nuke all pubsubs that DOESN'T start with fps/
+		for(var topic in MinPubSub.cache){
+			if(topic=="fps/begin" || topic=="fps/end") continue;
+			delete MinPubSub.cache[topic];
+		}
+
 	};
 
 	var _callArray = function(array,funcName,args){

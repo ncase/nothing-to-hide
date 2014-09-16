@@ -36,16 +36,21 @@ function Player(level){
 		self.WALK_ANIM = new Sprite(self.WALK_ANIM);
 		self.currentSprite = self.IDLE_ANIM;
 
+		// For reasons
+		self.deactivated = false;
+
 	};
 
 	self.update = function(){
 
 		// MOVE based on KEY INPUT
 		var speed = (Key.slow || level.sightLogic.alert) ? self.SLOW_SPEED : self.NORMAL_SPEED;
-		if(Key.left) self.vx-=speed;
-		if(Key.right) self.vx+=speed;
-		if(Key.up) self.vy-=speed;
-		if(Key.down) self.vy+=speed;
+		if(!self.deactivated){
+			if(Key.left) self.vx-=speed;
+			if(Key.right) self.vx+=speed;
+			if(Key.up) self.vy-=speed;
+			if(Key.down) self.vy+=speed;
+		}
 
 		// MOVEMENT and Velocity
 		self.x += self.vx;
@@ -117,6 +122,10 @@ function Player(level){
 
 	self.updateSight = function(){
 		self.sightPolygon = SightAndLight.compute(self, level.shadow.shadows);
+	};
+
+	self.speak = function(message){
+		publish("dialogue/show",[self.x,self.y-1.5,message]);
 	};
 	
 }

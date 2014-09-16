@@ -75,10 +75,5 @@ function WallScroll(level){
 		ctx.drawImage(self.image, sx,sy,sw,sh, dx,dy,dw,dh);
 
 	};
-	
-	self.kill = function(){
-		unsubscribe(upHandler);
-		unsubscribe(downHandler);
-	};
 
 }

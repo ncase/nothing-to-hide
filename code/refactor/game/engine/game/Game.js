@@ -4,24 +4,32 @@
 	var Game = {};
 	exports.Game = Game;
 
-	// 
+	// GO TO LEVEL
 	Game.gotoLevel = function(levelID){
 
 		// Clone config, and create a new level from it
 		var config = JSON.parse(JSON.stringify(Asset.levelConfig[levelID]));
 		var level = new Level(config);
+		level.id = levelID;
 
 		// Kill & replace any previous levels
 		if(Game.level) Game.level.kill();
 		Game.level = level;
 
+		// INIT IT
+		Game.level.init();
+		Game.level.update();
+		publish("game/update");
+
 		// Run custom script
 		eval(config.custom);
 
-		// INIT IT
-		Game.level.init();
-
 	};
+
+	// RESET LEVEL
+	Game.resetLevel = function(){
+		Game.gotoLevel(Game.level.id);
+	}
 
 	// Start game
 	var canvas = document.getElementById("canvas");
@@ -32,11 +40,12 @@
 	Game.canvas = canvas;
 	Game.context = context;
 
+	var drawnSinceLastUpdate;
 	var RAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame;
 	Game.FPS = 30;
 	Game.start = function(){
 
-		var drawnSinceLastUpdate = true;
+		drawnSinceLastUpdate = true;
 
 		// UPDATE LOOP: 30 FPS
 		gameLoop = setInterval(function(){
@@ -45,6 +54,7 @@
 			if(Game.level){
 				publish("game/update");
 				Game.level.update();
+				publish("game/update/end");
 				drawnSinceLastUpdate = false;
 			}
 		},1000/Game.FPS);

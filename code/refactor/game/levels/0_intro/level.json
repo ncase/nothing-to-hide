@@ -7,7 +7,7 @@
 		{ "type": "Monolith", "x":0.5,"y":5.5},
 		{ "type": "Monolith", "x":11,"y":10},
 		{
-			"id": "talkingMonolith",
+			"id": "fatty",
 			"type": "Monolith",
 			"x":34.5,"y":10.66, "exact":true
 		},
@@ -32,16 +32,24 @@
 	
 	"gamelogic":[
 		
-		// Goal
-		//{ "type": "Goal", "left":51, "right":52, "top":3, "bottom":4 },
+		// GOAL
+		{
+			"type": "Goal",
+			"zone": {"left":51, "right":52, "top":3, "bottom":4 }
+		},
 
 		// Stay In Sight
-		{ "type": "StayInSight" },
+		{ "type": "StayInSight" }, // should this be a given?
 		
 		// Checkpoints
 		//{ "type":"Checkpoint", "left":32, "right":35, "top":10, "bottom":11 }
 
-		// Dialogue
+		// Scripted Zones
+		{
+			"type": "ZoneMessage",
+			"zone": {"left":32,"right":33,"top":10,"bottom":11},
+			"message": "conversation"
+		},
 
 		// Camera logic
 		{

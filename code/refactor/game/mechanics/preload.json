@@ -6,6 +6,8 @@
 		"gamelogic/FixedCamera.js",
 		"gamelogic/RailsCamera.js",
 		"gamelogic/StayInSight.js",
+		"gamelogic/ZoneMessage.js",
+		"gamelogic/Goal.js",
 
 		// Wall Object Pieces
 		"wallobjects/WallImage.js",

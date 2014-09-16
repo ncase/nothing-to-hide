@@ -24,17 +24,21 @@ function StayInSight(level){
 		// ALERT
 		self.alert = true;
 
-		// If not, check points in corners of radius 0.2 or something
-		if(self.isPointSeen(px-0.2,py-0.2) ||
-			self.isPointSeen(px-0.2,py+0.2) || 
-			self.isPointSeen(px+0.2,py-0.2) ||
-			self.isPointSeen(px+0.2,py+0.2)){
+		// If not, check points in corners of radius 0.3 or something
+		var r = 0.3;
+		if(self.isPointSeen(px-r,py-r) ||
+			self.isPointSeen(px-r,py+r) || 
+			self.isPointSeen(px+r,py-r) ||
+			self.isPointSeen(px+r,py+r)){
 			self.status = self.STATUS_ALERT;
 			return;
 		}
 
 		// DEAD
 		// If all points are out, you are dead
+		subscribeOnce("game/update/end",function(){
+			Game.resetLevel();
+		});
 
 	};
 
