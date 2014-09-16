@@ -86,13 +86,15 @@ function LevelRenderer(level){
 		// Approach 2: Monomask, Lines, Linemasked, LinesOnWorld, MaskedCCTV
 		// Approach 3: LinesOnWorld, Monomask, MaskedCCTV -- needs complex way to find lines inside polygon. (Not really?)
 
+		// Floor objects, 
+
 		// If Alert, draw REDNESS EVERYWHERE
 		if(level.sightLogic.alert){
 			ctx.fillStyle = "rgba(200,40,40,0.6)";
 			ctx.fillRect(0,0,ctx.canvas.width,ctx.canvas.height);
 			ctx.fillStyle = "#000";
 		}
-		
+
 		// - Realobjects, depth sorted. (Floor objects cheat with y set to whatever -1000)
 		var reals = level.realobjects.sort(function(a,b){
 			return a.y-b.y;
@@ -170,6 +172,14 @@ function LevelRenderer(level){
 		ctx.drawImage(self.seenCanvas,0,0);
 
 		ctx.restore();
+
+		/////////////////////////
+		// 4. DRAW UI ELEMENTS //
+		/////////////////////////
+
+		for(var i=0;i<level.uiobjects.length;i++){
+			level.uiobjects[i].draw(ctx);
+		}
 		
 
 	};

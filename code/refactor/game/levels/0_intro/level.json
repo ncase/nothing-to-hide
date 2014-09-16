@@ -6,7 +6,11 @@
 
 		{ "type": "Monolith", "x":0.5,"y":5.5},
 		{ "type": "Monolith", "x":11,"y":10},
-		{ "type": "Monolith", "x":34.5,"y":10.66, "exact":true },
+		{
+			"id": "talkingMonolith",
+			"type": "Monolith",
+			"x":34.5,"y":10.66, "exact":true
+		},
 		{ "type": "Monolith", "x":40,"y":3 },
 
 		{ "type": "FloorDecoration", "image": "intro/shatter", "x":31.4, "y":7.7 }
@@ -25,7 +29,7 @@
 		{ "type": "WallButton", "icon": "Icon_Up", "x":47, "y":2, "message": "vote2_one" }
 		
 	],
-
+	
 	"gamelogic":[
 		
 		// Goal

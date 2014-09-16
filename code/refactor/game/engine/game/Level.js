@@ -33,6 +33,9 @@ function Level(config){
 		_initLevelObjects("wallobjects");
 		_initLevelObjects("gamelogic");
 
+		// UI Objects
+		self.uiobjects = [];
+		self.uiobjects.push(new Dialogue(self));
 
 	};
 
@@ -48,6 +51,11 @@ function Level(config){
 				console.error("NO SUCH TYPE CLASS: "+conf.type);
 			}
 			var obj = new Type(self);
+
+			// ID
+			if(conf.id){
+				self[conf.id] = obj;
+			}
 
 			// Override variables
 			for(var key in conf){
@@ -92,6 +100,9 @@ function Level(config){
 
 		// Update misc things
 		self.walls.update();
+
+		// UI Objects
+		_callArray(self.uiobjects,"update");
 
 	};
 

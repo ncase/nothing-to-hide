@@ -17,6 +17,8 @@ function WallScroll(level){
 
 	self.scrollAcc = 0.05; // optional
 
+	var upHandler, downHandler;
+
 	self.init = function(){
 		
 		self.image = Asset.image[self.image];
@@ -27,10 +29,10 @@ function WallScroll(level){
 		self.vel = 0;
 
 		// Handler: Scroll up/down based on messages
-		subscribe("custom/"+self.listenUp,function(){
+		upHandler = subscribe("custom/"+self.listenUp,function(){
 			self.vel -= self.scrollAcc;
 		});
-		subscribe("custom/"+self.listenDown,function(){
+		downHandler = subscribe("custom/"+self.listenDown,function(){
 			self.vel += self.scrollAcc;
 		});
 
@@ -74,4 +76,9 @@ function WallScroll(level){
 
 	};
 	
+	self.kill = function(){
+		unsubscribe(upHandler);
+		unsubscribe(downHandler);
+	};
+
 }
