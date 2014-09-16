@@ -16,7 +16,7 @@ function Player(level){
 	self.vx = 0;
 	self.vy = 0;
 	self.NORMAL_SPEED = 2/Game.FPS; // 2.0 tiles/second
-	self.SLOW_SPEED = 0.5/Game.FPS; // 0.5 tiles/second
+	self.SLOW_SPEED = 0.7/Game.FPS; // 0.5 tiles/second
 
 	// ANIMATION //
 	self.currentSprite = null;
@@ -41,7 +41,7 @@ function Player(level){
 	self.update = function(){
 
 		// MOVE based on KEY INPUT
-		var speed = Key.slow ? self.SLOW_SPEED : self.NORMAL_SPEED;
+		var speed = (Key.slow || level.sightLogic.alert) ? self.SLOW_SPEED : self.NORMAL_SPEED;
 		if(Key.left) self.vx-=speed;
 		if(Key.right) self.vx+=speed;
 		if(Key.up) self.vy-=speed;

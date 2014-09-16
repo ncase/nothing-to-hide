@@ -1,6 +1,17 @@
 {
 	"image":{
-		"intro/walking": "assets/walking.png"
+		
+		"intro/walking": "assets/walking.png",
+		"intro/smile": "assets/smile.png",
+		"intro/slowdown": "assets/slowdown.png",
+		"intro/narrow": "assets/narrow.png",
+
+		"intro/comment_one": "assets/comment_one.png",
+		"intro/comment_zero": "assets/comment_zero.png",
+		"intro/comment_none": "assets/comment_none.png",
+
+		"intro/shatter": "assets/shatter.png"
+
 	},
 	"sprite":{},
 	"sound":{},

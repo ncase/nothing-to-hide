@@ -40,10 +40,10 @@
 
 		// UPDATE LOOP: 30 FPS
 		gameLoop = setInterval(function(){
-			publish("game/update");
 			// if(Game.PAUSED) return; // Paused - do not update
 			// If there's a level, update it.
 			if(Game.level){
+				publish("game/update");
 				Game.level.update();
 				drawnSinceLastUpdate = false;
 			}

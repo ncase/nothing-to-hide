@@ -26,7 +26,7 @@ function WallButton(level){
 		subscribe("wall/press",function(x,y){
 			var seg = self.segment;
 			if(x>seg.x && y>seg.y && x<seg.x+seg.width && y<seg.y+seg.height){
-				publish("level/"+self.message);
+				publish("custom/"+self.message);
 			}
 		});
 

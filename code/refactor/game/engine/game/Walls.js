@@ -36,6 +36,13 @@ function Walls(level){
 		self.screenCanvas.height = self.map.height * H;
 		self.screenContext = self.screenCanvas.getContext('2d');
 
+		var ctx = self.screenContext;
+		ctx.fillStyle = self.FILL_BACKGROUND;
+		for(var i=0;i<self.segments.length;i++){
+			var seg = self.segments[i];
+			ctx.fillRect(seg.x*W, seg.y*H, W, seg.height*H);
+		}
+
 	};
 	
 	self.update = function(){

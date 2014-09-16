@@ -80,13 +80,15 @@ function Level(config){
 		// Update game objects
 		_callArray(self.realobjects,"update");
 		_callArray(self.wallobjects,"update");
-		_callArray(self.gamelogic,"update");
 
 		// Update all sight polygons
 		var sighted = self.getTagged("sighted");
 		for(var i=0;i<sighted.length;i++){
 			sighted[i].updateSight();
 		}
+
+		// Update game logic
+		_callArray(self.gamelogic,"update");
 
 		// Update misc things
 		self.walls.update();

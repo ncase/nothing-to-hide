@@ -27,10 +27,10 @@ function WallScroll(level){
 		self.vel = 0;
 
 		// Handler: Scroll up/down based on messages
-		subscribe("level/"+self.listenUp,function(){
+		subscribe("custom/"+self.listenUp,function(){
 			self.vel -= self.scrollAcc;
 		});
-		subscribe("level/"+self.listenDown,function(){
+		subscribe("custom/"+self.listenDown,function(){
 			self.vel += self.scrollAcc;
 		});
 

@@ -5,6 +5,7 @@
 		"gamelogic/ZoneCamera.js",
 		"gamelogic/FixedCamera.js",
 		"gamelogic/RailsCamera.js",
+		"gamelogic/StayInSight.js",
 
 		// Wall Object Pieces
 		"wallobjects/WallImage.js",
@@ -15,7 +16,8 @@
 
 		// Real Object Pieces
 		"realobjects/Player.js",
-		"realobjects/Monolith.js"
+		"realobjects/Monolith.js",
+		"realobjects/FloorDecoration.js"
 		
 	]
 }

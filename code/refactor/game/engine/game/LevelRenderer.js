@@ -36,8 +36,7 @@ function LevelRenderer(level){
 		self.seenContext = self.seenCanvas.getContext('2d');
 
 		// CCTV Canvas
-		// Grayscale WebGL Filter
-		self.cctvCanvas = fx.canvas(); //_createCanvas(canvasWidth,canvasHeight);//
+		self.cctvCanvas = _createCanvas(canvasWidth,canvasHeight);
 		self.cctvContext = self.cctvCanvas.getContext('2d');
 		self.smallCanvas = _createCanvas(canvasWidth/*0.25*/,canvasHeight/*0.25*/);
 		self.smallContext = self.smallCanvas.getContext('2d');
@@ -78,32 +77,29 @@ function LevelRenderer(level){
 		// - The screen wallobjects
 		level.walls.draw(ctx);
 
-		// - The cam's CCTV lines
+		// - The cam's CCTV lines & dots
 		var path = _getCCTVLines();
 		_drawCCTVLines(ctx,path);
+		_drawCCTVDots(ctx);
 
 		// Approach 1: Monomask, Linemasked, LinesOnWorld, Monomask, MaskedCCTV
 		// Approach 2: Monomask, Lines, Linemasked, LinesOnWorld, MaskedCCTV
 		// Approach 3: LinesOnWorld, Monomask, MaskedCCTV -- needs complex way to find lines inside polygon. (Not really?)
 
-		// - The floor realobjects
+		// If Alert, draw REDNESS EVERYWHERE
+		if(level.sightLogic.alert){
+			ctx.fillStyle = "rgba(200,40,40,0.6)";
+			ctx.fillRect(0,0,ctx.canvas.width,ctx.canvas.height);
+			ctx.fillStyle = "#000";
+		}
 		
-		// - The solid realobjects, depth sorted
+		// - Realobjects, depth sorted. (Floor objects cheat with y set to whatever -1000)
 		var reals = level.realobjects.sort(function(a,b){
 			return a.y-b.y;
 		});
 		for(var i=0;i<reals.length;i++){
 			reals[i].draw(ctx);
 		}
-
-		// - Save as grayscale
-		/*self.cctvContext.drawImage(self.seenCanvas,0,0);
-		self.cctvContext.fillStyle = "rgba(0,0,0,0.4)";
-		self.cctvContext.fillRect(0,0,self.cctvCanvas.width,self.cctvCanvas.height);*/
-		/*self.smallContext.drawImage(self.seenCanvas,0,0,self.smallCanvas.width,self.smallCanvas.height);
-		var texture = self.cctvCanvas.texture(self.smallCanvas);
-    	self.cctvCanvas.draw(texture).hueSaturation(0,-1).brightnessContrast(-0.2,0).update();
-    	texture.destroy();*/
 
 		// - Mask in the same canvas
 
@@ -125,6 +121,7 @@ function LevelRenderer(level){
 
 		// - Create Monolith mask
 
+		/*
 		var ctx = self.maskContext;
 		ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
 
@@ -142,10 +139,11 @@ function LevelRenderer(level){
 		}
 
 		// Mask it.
-		/*var ctx = self.cctvContext;
+		var ctx = self.cctvContext;
 		ctx.globalCompositeOperation = "destination-in";
 		ctx.drawImage(self.maskCanvas,0,0);
-		ctx.globalCompositeOperation = "source-over";*/
+		ctx.globalCompositeOperation = "source-over";
+		*/
 
 		///////////////////////////
 		// 3. DRAW THEM TOGETHER //
@@ -168,7 +166,7 @@ function LevelRenderer(level){
 		// Draw all the layers
 		ctx.drawImage(level.map.lineCanvas,0,0);
 		level.player.draw(ctx);
-		//ctx.drawImage(self.cctvCanvas,0,0,self.seenCanvas.width,self.seenCanvas.height);
+		//ctx.drawImage(self.cctvCanvas,0,0);
 		ctx.drawImage(self.seenCanvas,0,0);
 
 		ctx.restore();
@@ -251,6 +249,29 @@ function LevelRenderer(level){
 			}
 		}
 		ctx.strokeStyle = "rgba(0,0,0,0.25)";
+		ctx.lineWidth = 2;
+		ctx.stroke();
+
+	}
+	function _drawCCTVDots(ctx){
+
+		// Get monoliths, cloned
+		var monoliths = level.getTagged("monolith").concat();
+
+		// Filter out the ones not seeing THE PLAYER
+		monoliths = monoliths.filter(function(monolith){
+			return SightAndLight.inPolygon(level.player, monolith.sightPolygon);
+		});
+
+		// For now, straight up draw lines
+		ctx.beginPath();
+		var p = level.player;
+		for(var i=0;i<monoliths.length;i++){
+			var m = monoliths[i];
+			ctx.moveTo(m.x*W,m.y*H);
+			ctx.lineTo(p.x*W,p.y*H);
+		}
+		ctx.strokeStyle = "#fff";
 		ctx.lineWidth = 2;
 		ctx.stroke();
 
