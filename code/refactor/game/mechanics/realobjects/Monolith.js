@@ -5,14 +5,6 @@ function Monolith(level){
 
 	//////////////////////
 
-	self.active = true;
-
-	level.setTag(self,"sighted");
-	level.setTag(self,"monolith");
-	level.setTag(self,"pickup");
-
-	//////////////////////
-
 	// ANIMATION //
 	self.BODY = "Monolith_Body";
 	self.EYE = "Monolith_Eye";
@@ -20,6 +12,14 @@ function Monolith(level){
 	/////////////////////
 
 	self.init = function(){
+
+		// Tagging & Activeness
+		self.active = true;
+		level.setTag(self,"sighted");
+		level.setTag(self,"monolith");
+		if(!self.stationary){
+			level.setTag(self,"pickup");
+		}
 
 		// Position should be in center of its tile
 		if(!self.exact){

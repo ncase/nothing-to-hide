@@ -1,0 +1,55 @@
+{
+
+	"realobjects": [
+		
+		{ "type": "Player", "x":4, "y":0 },
+
+		{ "type": "Monolith", "x":4, "y":7 },
+		{ "type": "Monolith", "x":4, "y":11, "stationary":true },
+		{ "type": "Monolith", "x":9, "y":7 },
+
+		{ "type": "StaticBlock", "x":0, "y":11, "width":5, "height":1 },
+		{ "type": "StaticBlock", "x":11, "y":11, "width":5, "height":1 }
+
+	],
+
+	"wallobjects": [
+		{ "type": "WallButton", "icon": "Icon_Down", "x":1, "y":6, "message": "blah" },
+		{ "type": "WallButton", "icon": "Icon_Up", "x":2, "y":6, "message": "blah" },
+		{ "type": "WallButton", "icon": "Icon_Down", "x":7, "y":6, "message": "blah" },
+		{ "type": "WallButton", "icon": "Icon_Up", "x":8, "y":6, "message": "blah" },
+		{ "type": "WallButton", "icon": "Icon_Down", "x":13, "y":6, "message": "blah" },
+		{ "type": "WallButton", "icon": "Icon_Up", "x":14, "y":6, "message": "blah" }
+	],
+	
+	"gamelogic":[
+		
+		// STAY IN SIGHT & GOAL
+		{ "type": "StayInSight" },
+		{ "type": "Pickup" },
+		{ "type": "Goal", "left":27, "right":28, "top":15, "bottom":16 },
+		
+		// Checkpoints
+
+		// Scripted Zones
+
+		// Camera logic
+		{
+			"type": "RailsCamera",
+			"zone": {"left":0,"right":16,"top":0,"bottom":10},
+			"data": {"ax":8,"bx":8,"ay":0,"by":1}
+		},
+		{
+			"type": "FixedCamera",
+			"zone": {"left":0,"right":16,"top":10,"bottom":16},
+			"data": {"x":8,"y":10}
+		},
+		{
+			"type": "RailsCamera",
+			"zone": {"left":12.5,"right":28,"top":12,"bottom":16},
+			"data": {"ax":0,"bx":1,"ay":10,"by":10}
+		}
+
+	]
+
+}

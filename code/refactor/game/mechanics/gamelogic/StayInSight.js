@@ -25,8 +25,13 @@ function StayInSight(level){
 		self.alert = true;
 
 		// If not, check points in corners of radius 0.3 or something
+		var rr = 0.2;
 		var r = 0.4;
-		if(self.isPointSeen(px-r,py) ||
+		if(self.isPointSeen(px-rr,py-rr) ||
+			self.isPointSeen(px-rr,py+rr) || 
+			self.isPointSeen(px+rr,py-rr) ||
+			self.isPointSeen(px+rr,py+rr) ||
+			self.isPointSeen(px-r,py) ||
 			self.isPointSeen(px+r,py) || 
 			self.isPointSeen(px,py-r) ||
 			self.isPointSeen(px,py+r)){
