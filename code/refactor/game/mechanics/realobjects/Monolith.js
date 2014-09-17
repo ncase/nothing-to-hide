@@ -5,8 +5,11 @@ function Monolith(level){
 
 	//////////////////////
 
+	self.active = true;
+
 	level.setTag(self,"sighted");
 	level.setTag(self,"monolith");
+	level.setTag(self,"pickup");
 
 	//////////////////////
 
@@ -30,8 +33,37 @@ function Monolith(level){
 		self.pupil = new Sprite(self.EYE);
 		self.pupil.frameIndex = 2;
 
+		// Figure out if it's active
+		self.updateActivity();
+
+		// Sight Polygon immediately
+		self.updateSight();
+
 	};
+
+	var bounceVel = 0;
+	var bounce = 1;
 	self.update = function(){
+		
+		bounceVel += (1-bounce)*0.8;
+		bounceVel *= 0.5;
+		bounce += bounceVel;
+
+		self.updateActivity();
+
+	};
+	self.updateActivity = function(){
+		var tile = level.map.tiles[Math.floor(self.y)][Math.floor(self.x)];
+		var shouldBeActive = (tile==level.map.SPACE);
+		if(!self.active && shouldBeActive){
+			self.active = true;
+			level.setTag(self,"sighted");
+			level.setTag(self,"monolith");
+		}else if(self.active && !shouldBeActive){
+			self.active = false;
+			level.unTag(self,"sighted");
+			level.unTag(self,"monolith");
+		}
 	};
 
 	var blinking = false;
@@ -41,6 +73,22 @@ function Monolith(level){
 		// Translate EVERYTHING. This is gonna get complex
 		ctx.save();
 		ctx.translate(self.x*W, self.y*H);
+
+		// Bounce
+		ctx.scale(1/bounce,bounce);
+
+		if(self.active){
+			self.drawActiveMonolith(ctx);
+		}else{
+			self.drawAsleepMonolith(ctx);
+		}
+
+		// Restore translation
+		ctx.restore();
+
+	};
+
+	self.drawActiveMonolith = function(ctx){
 
 		// Draw body
 		self.body.draw(ctx);
@@ -104,8 +152,16 @@ function Monolith(level){
 
 		}
 
-		// Restore translation
-		ctx.restore();
+	};
+	self.drawAsleepMonolith = function(ctx){
+
+		// Draw body
+		self.body.draw(ctx);
+
+		// Eye relative
+		ctx.translate(2,-15);
+		self.eye.frameIndex = 1;
+		self.eye.draw(ctx);
 
 	};
 
@@ -115,6 +171,30 @@ function Monolith(level){
 
 	self.speak = function(message){
 		publish("dialogue/show",[self.x,self.y-1.5,message]);
+	};
+
+	self.pickup = function(){
+
+		var index = level.realobjects.indexOf(self);
+		level.realobjects.splice(index,1);
+
+		level.unTag(self,"sighted");
+		level.unTag(self,"monolith");
+		level.unTag(self,"pickup");
+
+	};
+	self.drop = function(){
+		level.realobjects.push(self);
+
+		self.active = true;
+		level.setTag(self,"sighted");
+		level.setTag(self,"monolith");
+		level.setTag(self,"pickup");
+		
+		self.updateActivity();
+
+		bounceVel -= 0.25;
+		blinking = 5;
 	};
 
 	// HELPER METHODS //

@@ -32,17 +32,12 @@
 	
 	"gamelogic":[
 		
-		// GOAL
-		{
-			"type": "Goal",
-			"zone": {"left":51, "right":52, "top":3, "bottom":4 }
-		},
-
-		// Stay In Sight
-		{ "type": "StayInSight" }, // should this be a given?
+		// STAY IN SIGHT & GOAL
+		{ "type": "StayInSight" },
+		{ "type": "Goal", "left":51, "right":52, "top":3, "bottom":4 },
 		
 		// Checkpoints
-		//{ "type":"Checkpoint", "left":32, "right":35, "top":10, "bottom":11 }
+		{ "type": "Checkpoint", "left":33, "right":34, "top":10, "bottom":11 },
 
 		// Scripted Zones
 		{

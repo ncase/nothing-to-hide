@@ -1,0 +1,75 @@
+{
+
+	"realobjects": [
+		
+		{ "type": "Player", "x":0, "y":5 },
+
+		{
+			"type": "LoveMonolith",
+			"id":"lover0", "lover":"lover1",
+			"x":11.2, "y":5
+		},
+		{
+			"type": "LoveMonolith",
+			"id":"lover1", "lover":"lover0", 
+			"x":11.8, "y":5
+		},
+		{ "type": "Monolith", "x":0, "y":20 },
+		{ "type": "Monolith", "x":10, "y":19 },
+
+		{ "type": "StaticBlock", "x":0, "y":19, "width":2, "height":2 },
+		{ "type": "StaticBlock", "x":6, "y":17, "width":1, "height":4 },
+		{ "type": "StaticBlock", "x":11, "y":19, "width":2, "height":2 },
+
+		{ "type": "StaticBlock", "x":0.5, "y":22.5, "width":1, "height":1 },
+		{ "type": "StaticBlock", "x":0.5, "y":24.5, "width":1, "height":1 },
+		{ "type": "StaticBlock", "x":11.5, "y":22.5, "width":1, "height":1 },
+		{ "type": "StaticBlock", "x":11.5, "y":24.5, "width":1, "height":1 }
+
+	],
+
+	"wallobjects": [
+		//{ "type": "WallImage", "image": "intro/walking", "x":0, "y":0 },
+	],
+	
+	"gamelogic":[
+		
+		// STAY IN SIGHT & GOAL
+		{ "type": "StayInSight" },
+		{ "type": "Pickup" },
+		{ "type": "Goal", "left":9, "right":10, "top":37, "bottom":38 },
+		
+		// Checkpoints
+
+		// Scripted Zones
+
+		// Camera logic
+		{
+			"type": "FixedCamera",
+			"zone": {"left":0,"right":13,"top":0,"bottom":13},
+			"data": {"x":6.5,"y":6.5}
+		},
+		{
+			"type": "RailsCamera",
+			"zone": {"left":0,"right":13,"top":13,"bottom":18},
+			"data": {"ax":6.5,"bx":6.5,"ay":12,"by":17}
+		},
+		{
+			"type": "FixedCamera",
+			"zone": {"left":0,"right":13,"top":18,"bottom":26},
+			"data": {"x":6.5,"y":19.5}
+		},
+		{
+			"type": "RailsCamera",
+			"zone": {"left":0,"right":13,"top":26,"bottom":33},
+			"data": {"ax":6.5,"bx":6.5,"ay":25,"by":33}
+		},
+		{
+			"type": "FixedCamera",
+			"zone": {"left":0,"right":13,"top":33,"bottom":38},
+			"data": {"x":6.5,"y":33}
+		}
+
+	]
+
+}

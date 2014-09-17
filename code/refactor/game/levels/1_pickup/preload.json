@@ -1,0 +1,8 @@
+{
+	"image":{},
+	"sprite":{},
+	"sound":{},
+	"script":[
+		"assets/LoveMonolith.js"
+	]
+}

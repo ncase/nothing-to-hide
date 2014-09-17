@@ -1,4 +1,4 @@
-function Goal(level){
+function Checkpoint(level){
 	
 	var self = this;
 	ZoneMessage.call(self,level);
@@ -8,7 +8,7 @@ function Goal(level){
 	};
 
 	self.update = function(){
-		if(self.isPlayerInZone()) publish("level/goal");
+		if(self.isPlayerInZone()) publish("checkpoint/save");
 	};
 	
 }

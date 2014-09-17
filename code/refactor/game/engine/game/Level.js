@@ -82,6 +82,12 @@ function Level(config){
 		self.tagged[tag] = self.tagged[tag] || [];
 		self.tagged[tag].push(thing);
 	};
+	self.unTag = function(thing,tag){
+		self.tagged[tag] = self.tagged[tag] || [];
+		var index = self.tagged[tag].indexOf(thing);
+		if(index<0) return;
+		self.tagged[tag].splice(index,1);
+	};
 
 	self.update = function(){
 		

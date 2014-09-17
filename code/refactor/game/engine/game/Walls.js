@@ -164,10 +164,9 @@ function Walls(level){
 	function _isSeenByPlayer(segment){
 		var segmentCenter = {
 			x: segment.x+segment.width/2,
-			y: segment.y+segment.height/2
+			y: segment.y+segment.height/2+0.01 // to avoid skimming across a sight polygon =_=
 		};
-		var playerSightPolygon = SightAndLight.compute(level.player, level.shadow.shadows);
-		return SightAndLight.inPolygon(segmentCenter,playerSightPolygon);
+		return SightAndLight.inPolygon(segmentCenter,level.player.sightPolygon);
 	}
 	
 }

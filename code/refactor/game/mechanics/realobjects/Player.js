@@ -39,6 +39,9 @@ function Player(level){
 		// For reasons
 		self.deactivated = false;
 
+		// Sight Polygon immediately
+		self.updateSight();
+
 	};
 
 	self.update = function(){
@@ -67,11 +70,11 @@ function Player(level){
 		// Crappy Collision Detection
 	    var endLoop;
 	    endLoop = 100;
-	    while(map.hitTest(self.x,self.y+0.01) && (endLoop--)>0) self.y-=0.01;
-	    while(map.hitTest(self.x,self.y-0.2) && (endLoop--)>0) self.y+=0.01;
+	    while(_hitTest(self.x,self.y+0.01) && (endLoop--)>0) self.y-=0.01;
+	    while(_hitTest(self.x,self.y-0.2) && (endLoop--)>0) self.y+=0.01;
 	    endLoop = 100;
-	    while(map.hitTest(self.x-0.2,self.y) && (endLoop--)>0) self.x+=0.01;
-	    while(map.hitTest(self.x+0.2,self.y) && (endLoop--)>0) self.x-=0.01;
+	    while(_hitTest(self.x-0.2,self.y) && (endLoop--)>0) self.x+=0.01;
+	    while(_hitTest(self.x+0.2,self.y) && (endLoop--)>0) self.x-=0.01;
 	    if(endLoop<=0) console.log("WOOPS");
 
 	    // ANIMATION //
@@ -95,6 +98,25 @@ function Player(level){
 			bounceVel *= 0.5;
 			bounce += bounceVel;
 		}
+
+	};
+
+	var _hitTest = function(x,y){
+
+		// Test Map
+		if(self.level.map.hitTest(x,y)){
+			return true;
+		}
+
+		// Test All Blocks
+		var blocks = level.getTagged("block");
+		for(var i=0;i<blocks.length;i++){
+			var block = blocks[i];
+			if(block.hitTest(x,y)) return true;
+		}
+
+		// Naw
+		return false;
 
 	};
 
