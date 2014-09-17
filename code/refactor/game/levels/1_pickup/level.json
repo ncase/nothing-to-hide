@@ -2,7 +2,7 @@
 
 	"realobjects": [
 		
-		{ "type": "Player", "x":0, "y":5 },
+		{ "type": "Player", "x":9, "y":18/*5*/ },
 
 		{
 			"type": "LoveMonolith",
@@ -18,7 +18,7 @@
 		{ "type": "Monolith", "x":10, "y":19 },
 
 		{ "type": "StaticBlock", "x":0, "y":19, "width":2, "height":2 },
-		{ "type": "StaticBlock", "x":6, "y":17, "width":1, "height":4 },
+		{ "type": "StaticBlock", "x":6, "y":18, "width":1, "height":3 },
 		{ "type": "StaticBlock", "x":11, "y":19, "width":2, "height":2 },
 
 		{ "type": "StaticBlock", "x":0.5, "y":22.5, "width":1, "height":1 },
@@ -29,7 +29,24 @@
 	],
 
 	"wallobjects": [
-		//{ "type": "WallImage", "image": "intro/walking", "x":0, "y":0 },
+		{
+			"type": "WallScroll",
+			"image": "pickup/comic",
+			"listenUp": "up", "listenDown": "down",
+			"x":2, "y":13, "width":9, "height":5
+		},
+		{
+			"type": "WallButton",
+			"icon": "Icon_Down",
+			"message": "down",
+			"x":11, "y":17
+		},
+		{
+			"type": "WallButton",
+			"icon": "Icon_Up",
+			"message": "up",
+			"x":12, "y":17
+		}
 	],
 	
 	"gamelogic":[

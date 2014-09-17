@@ -1,5 +1,7 @@
 {
-	"image":{},
+	"image":{
+		"pickup/comic": "assets/comic.png"
+	},
 	"sprite":{},
 	"sound":{},
 	"script":[

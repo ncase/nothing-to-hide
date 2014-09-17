@@ -24,7 +24,7 @@ function WallScroll(level){
 		self.image = Asset.image[self.image];
 
 		// Force a redraw
-		self.lastPos = -10000;
+		self.lastPos = -10001;
 		self.pos = -10000;
 		self.vel = 0;
 
@@ -41,7 +41,6 @@ function WallScroll(level){
 	self.update = function(){
 
 		// Last position & new position
-		self.lastPos = self.pos;
 		self.pos += self.vel;
 
 		// Update velocity & acceleration
@@ -61,7 +60,11 @@ function WallScroll(level){
 	self.draw = function(ctx){
 
 		// Only redraw if it's moved far enough
-		if(Math.abs(self.lastPos-self.pos)<0.01) return;
+		if(Math.abs(self.lastPos-self.pos)<0.01){
+			self.lastPos = self.pos;
+			return;
+		}
+		self.lastPos = self.pos;
 		
 		// Draw it within the frame
 		var sx = 0;
