@@ -18,7 +18,7 @@ subscribe("fps/begin",function(){ stats.begin(); });
 subscribe("fps/end",function(){ stats.end(); });
 
 // LIST OF LEVELS
-var levels = ["3_musical","2_crossing","1_pickup","0_intro"];
+var levels = ["4_conveyor","3_musical","2_crossing","1_pickup","0_intro"];
 
 // COMMON ASSETS //
 function loadAssetPath(path){

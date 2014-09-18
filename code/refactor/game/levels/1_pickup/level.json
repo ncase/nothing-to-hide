@@ -37,13 +37,13 @@
 		},
 		{
 			"type": "WallButton",
-			"icon": "Icon_Down",
+			"icon": "icon/down",
 			"message": "down",
 			"x":11, "y":17
 		},
 		{
 			"type": "WallButton",
-			"icon": "Icon_Up",
+			"icon": "icon/up",
 			"message": "up",
 			"x":12, "y":17
 		}

@@ -77,18 +77,20 @@ function LevelRenderer(level){
 		// - The screen wallobjects
 		level.walls.draw(ctx);
 
+		// - Floor-tagged real objects
+		var floors = level.getTagged("floor");
+		for(var i=0;i<floors.length;i++){
+			if(floors[i].drawFloor){
+				floors[i].drawFloor(ctx);
+			}
+		}
+
 		// - The cam's CCTV lines & dots
 		if(!self.noCCTV){
 			var path = _getCCTVLines();
 			_drawCCTVLines(ctx,path);
 			_drawCCTVDots(ctx);
 		}
-
-		// Approach 1: Monomask, Linemasked, LinesOnWorld, Monomask, MaskedCCTV
-		// Approach 2: Monomask, Lines, Linemasked, LinesOnWorld, MaskedCCTV
-		// Approach 3: LinesOnWorld, Monomask, MaskedCCTV -- needs complex way to find lines inside polygon. (Not really?)
-
-		// Floor objects, 
 
 		// If Alert, draw REDNESS EVERYWHERE
 		if(level.sightLogic.alert){
@@ -97,12 +99,14 @@ function LevelRenderer(level){
 			ctx.fillStyle = "#000";
 		}
 
-		// - Realobjects, depth sorted. (Floor objects cheat with y set to whatever -1000)
+		// - Realobjects, depth sorted.
 		var reals = level.realobjects.sort(function(a,b){
 			return a.y-b.y;
 		});
 		for(var i=0;i<reals.length;i++){
-			reals[i].draw(ctx);
+			if(reals[i].draw){
+				reals[i].draw(ctx);
+			}
 		}
 
 		// - Mask in the same canvas

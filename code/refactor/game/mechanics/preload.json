@@ -22,7 +22,8 @@
 		"realobjects/Player.js",
 		"realobjects/Monolith.js",
 		"realobjects/FloorDecoration.js",
-		"realobjects/StaticBlock.js"
+		"realobjects/StaticBlock.js",
+		"realobjects/Conveyor.js"
 		
 	]
 }

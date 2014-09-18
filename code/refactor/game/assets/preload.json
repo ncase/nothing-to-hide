@@ -2,11 +2,12 @@
 	"image":{
 
 		// Map textures
-		"Texture_Carpet": "textures/carpet.png",
+		"texture/carpet": "textures/carpet.png",
+		"texture/conveyor": "textures/conveyor.png",
 
 		// Wall Button Icons
-		"Icon_Up": "icons/up.png",
-		"Icon_Down": "icons/down.png"
+		"icon/up": "icons/up.png",
+		"icon/down": "icons/down.png"
 
 	},
 	"sprite":{

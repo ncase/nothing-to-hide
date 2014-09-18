@@ -8,16 +8,15 @@ function FloorDecoration(level){
 	self.level = level;
 
 	self.init = function(){
+		level.setTag(self,"floor");
 		self.image = Asset.image[self.image];
-		self.realY = self.y; // Cheat at depth
-		self.y = self.y - 100;
 	};
 
 	self.update = function(){
 	};
 
-	self.draw = function(ctx){
-		ctx.drawImage(self.image, self.x*W, self.realY*H);
+	self.drawFloor = function(ctx){
+		ctx.drawImage(self.image, self.x*W, self.y*H);
 	};
 	
 }

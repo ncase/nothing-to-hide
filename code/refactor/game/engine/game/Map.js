@@ -9,7 +9,7 @@ function Map(level){
 	self.CARPET = ".";
 
 	// MY FILL CONSTANTS
-	self.FILL_CARPET = "Texture_Carpet";
+	self.FILL_CARPET = "texture/carpet";
 	self.FILL_WALL = "#000000";
 	self.FILL_SCREEN = "#202328";
 	self.FILL_SPACE = "#999999";

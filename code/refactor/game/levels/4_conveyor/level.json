@@ -2,24 +2,39 @@
 
 	"realobjects": [
 		
-		{ "type": "Player", "x":4, "y":0 },
+		{ "type": "Player", "x":0, "y":5 },
 
-		{ "type": "Monolith", "x":4, "y":7 },
-		{ "type": "Monolith", "x":4, "y":11, "stationary":true },
-		{ "type": "Monolith", "x":9, "y":7 },
+		{ "type": "Monolith", "x":14, "y":5 },
+		{ "type": "Monolith", "x":5, "y":11 },
+		{ "type": "Monolith", "x":5, "y":15 },
 
-		{ "type": "StaticBlock", "x":0, "y":11, "width":5, "height":1 },
-		{ "type": "StaticBlock", "x":11, "y":11, "width":5, "height":1 }
+		{ "type": "StaticBlock", "x":7, "y":4, "width":6, "height":2 },
+		{ "type": "StaticBlock", "x":8.5, "y":15, "width":3, "height":1 },
+		{ "type": "StaticBlock", "x":6, "y":12, "width":8, "height":2 },
+
+		{
+			"type": "Conveyor",
+			"x":5, "y":6, "width":1, "height":5,
+			"direction": {"x":0,"y":1}
+		},
+		{
+			"type": "Conveyor",
+			"x":14, "y":6, "width":1, "height":5,
+			"direction": {"x":0,"y":-1}
+		},
+		{
+			"type": "Conveyor",
+			"x":6, "y":16.5, "width":8, "height":1,
+			"direction": {"x":-0.5,"y":0},
+
+			// SO COOL
+			"FILL_CONVEYOR": "conveyor/bloody",
+			"LOOP_TEXTURE": 16
+		}
 
 	],
 
 	"wallobjects": [
-		{ "type": "WallButton", "icon": "Icon_Down", "x":1, "y":6, "message": "blah" },
-		{ "type": "WallButton", "icon": "Icon_Up", "x":2, "y":6, "message": "blah" },
-		{ "type": "WallButton", "icon": "Icon_Down", "x":7, "y":6, "message": "blah" },
-		{ "type": "WallButton", "icon": "Icon_Up", "x":8, "y":6, "message": "blah" },
-		{ "type": "WallButton", "icon": "Icon_Down", "x":13, "y":6, "message": "blah" },
-		{ "type": "WallButton", "icon": "Icon_Up", "x":14, "y":6, "message": "blah" }
 	],
 	
 	"gamelogic":[
@@ -35,19 +50,19 @@
 
 		// Camera logic
 		{
+			"type": "FixedCamera",
+			"zone": {"left":0,"right":20,"top":0,"bottom":6},
+			"data": {"x":10,"y":6}
+		},
+		{
 			"type": "RailsCamera",
-			"zone": {"left":0,"right":16,"top":0,"bottom":10},
-			"data": {"ax":8,"bx":8,"ay":0,"by":1}
+			"zone": {"left":0,"right":20,"top":6,"bottom":13},
+			"data": {"ax":10,"bx":10,"ay":0,"by":1}
 		},
 		{
 			"type": "FixedCamera",
-			"zone": {"left":0,"right":16,"top":10,"bottom":16},
-			"data": {"x":8,"y":10}
-		},
-		{
-			"type": "RailsCamera",
-			"zone": {"left":12.5,"right":28,"top":12,"bottom":16},
-			"data": {"ax":0,"bx":1,"ay":10,"by":10}
+			"zone": {"left":0,"right":20,"top":13,"bottom":19},
+			"data": {"x":10,"y":13}
 		}
 
 	]

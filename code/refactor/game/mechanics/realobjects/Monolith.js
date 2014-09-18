@@ -15,6 +15,7 @@ function Monolith(level){
 
 		// Tagging & Activeness
 		self.active = true;
+		level.setTag(self,"slideable");
 		level.setTag(self,"sighted");
 		level.setTag(self,"monolith");
 		if(!self.stationary){

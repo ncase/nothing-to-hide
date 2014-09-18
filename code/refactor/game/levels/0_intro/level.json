@@ -23,10 +23,10 @@
 		{ "type": "WallImage", "image": "intro/smile", "x":12, "y":1 },
 		{ "type": "WallImage", "image": "intro/slowdown", "x":29, "y":0 },
 		
-		{ "type": "WallButton", "icon": "Icon_Down", "x":25, "y":8, "message": "vote_zero" },
-		{ "type": "WallButton", "icon": "Icon_Up", "x":26, "y":8, "message": "vote_one" },
-		{ "type": "WallButton", "icon": "Icon_Down", "x":46, "y":2, "message": "vote2_zero" },
-		{ "type": "WallButton", "icon": "Icon_Up", "x":47, "y":2, "message": "vote2_one" }
+		{ "type": "WallButton", "icon": "icon/down", "x":25, "y":8, "message": "vote_zero" },
+		{ "type": "WallButton", "icon": "icon/up", "x":26, "y":8, "message": "vote_one" },
+		{ "type": "WallButton", "icon": "icon/down", "x":46, "y":2, "message": "vote2_zero" },
+		{ "type": "WallButton", "icon": "icon/up", "x":47, "y":2, "message": "vote2_one" }
 		
 	],
 	

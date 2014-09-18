@@ -2,13 +2,7 @@ function Player(level){
 
 	var self = this;
 	self.level = level;
-
-	///////////
-
 	self.level.player = self;
-	level.setTag(self,"sighted");
-
-	//////////////
 
 	// MOVEMENT //
 	self.x = 0;
@@ -26,6 +20,10 @@ function Player(level){
 	//////////////
 
 	self.init = function(){
+
+		// Tagging
+		level.setTag(self,"sighted");
+		level.setTag(self,"slideable");
 
 		// Position should be in center of its tile
 		self.x += 0.5;
