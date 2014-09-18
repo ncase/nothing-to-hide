@@ -2,24 +2,45 @@
 
 	"realobjects": [
 		
-		{ "type": "Player", "x":4, "y":0 },
+		{ "type": "Player", "x":0, "y":5 },
 
-		{ "type": "Monolith", "x":4, "y":7 },
-		{ "type": "Monolith", "x":4, "y":11, "stationary":true },
-		{ "type": "Monolith", "x":9, "y":7 },
+		{ "type": "Monolith", "x":5, "y":5 },
+		{ "type": "Monolith", "x":6, "y":5 },
 
-		{ "type": "StaticBlock", "x":0, "y":11, "width":5, "height":1 },
-		{ "type": "StaticBlock", "x":11, "y":11, "width":5, "height":1 }
+		// Clockwise Conveyor Belt
+		{
+			"type": "Conveyor",
+			"x":7, "y":6, "width":4, "height":1,
+			"direction": {"x":1,"y":0}
+		},
+		{
+			"type": "Conveyor",
+			"x":11, "y":6, "width":1, "height":4,
+			"direction": {"x":0,"y":1}
+		},
+		{
+			"type": "Conveyor",
+			"x":8, "y":10, "width":4, "height":1,
+			"direction": {"x":-1,"y":0}
+		},
+		{
+			"type": "Conveyor",
+			"x":7, "y":7, "width":1, "height":4,
+			"direction": {"x":0,"y":-1}
+		},
+
+		// Table Blocks
+		{ "type": "StaticBlock", "x":14, "y":5, "width":1, "height":2 },
+		{ "type": "StaticBlock", "x":14, "y":8, "width":1, "height":3 },
+		{ "type": "StaticBlock", "x":16, "y":5, "width":1, "height":1 },
+		{ "type": "StaticBlock", "x":16, "y":7, "width":1, "height":3 },
+		{ "type": "StaticBlock", "x":16, "y":11, "width":1, "height":1 },
+		{ "type": "StaticBlock", "x":18, "y":6, "width":1, "height":3 },
+		{ "type": "StaticBlock", "x":18, "y":10, "width":1, "height":2 }
 
 	],
 
 	"wallobjects": [
-		{ "type": "WallButton", "icon": "icon/down", "x":1, "y":6, "message": "blah" },
-		{ "type": "WallButton", "icon": "icon/up", "x":2, "y":6, "message": "blah" },
-		{ "type": "WallButton", "icon": "icon/down", "x":7, "y":6, "message": "blah" },
-		{ "type": "WallButton", "icon": "icon/up", "x":8, "y":6, "message": "blah" },
-		{ "type": "WallButton", "icon": "icon/down", "x":13, "y":6, "message": "blah" },
-		{ "type": "WallButton", "icon": "icon/up", "x":14, "y":6, "message": "blah" }
 	],
 	
 	"gamelogic":[
@@ -36,18 +57,18 @@
 		// Camera logic
 		{
 			"type": "RailsCamera",
-			"zone": {"left":0,"right":16,"top":0,"bottom":10},
-			"data": {"ax":8,"bx":8,"ay":0,"by":1}
+			"zone": {"left":0,"right":5,"top":0,"bottom":12},
+			"data": {"ax":0,"bx":1,"ay":6,"by":6}
 		},
 		{
 			"type": "FixedCamera",
-			"zone": {"left":0,"right":16,"top":10,"bottom":16},
-			"data": {"x":8,"y":10}
+			"zone": {"left":5,"right":23,"top":0,"bottom":12},
+			"data": {"x":15,"y":6}
 		},
 		{
 			"type": "RailsCamera",
-			"zone": {"left":12.5,"right":28,"top":12,"bottom":16},
-			"data": {"ax":0,"bx":1,"ay":10,"by":10}
+			"zone": {"left":23,"right":34,"top":0,"bottom":12},
+			"data": {"ax":0,"bx":1,"ay":6,"by":6}
 		}
 
 	]
