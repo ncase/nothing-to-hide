@@ -78,9 +78,11 @@ function LevelRenderer(level){
 		level.walls.draw(ctx);
 
 		// - The cam's CCTV lines & dots
-		var path = _getCCTVLines();
-		_drawCCTVLines(ctx,path);
-		_drawCCTVDots(ctx);
+		if(!self.noCCTV){
+			var path = _getCCTVLines();
+			_drawCCTVLines(ctx,path);
+			_drawCCTVDots(ctx);
+		}
 
 		// Approach 1: Monomask, Linemasked, LinesOnWorld, Monomask, MaskedCCTV
 		// Approach 2: Monomask, Lines, Linemasked, LinesOnWorld, MaskedCCTV

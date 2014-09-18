@@ -75,6 +75,7 @@ Also does batch loading.
 			_loadType("image", Loader.loadImage),
 			_loadType("sprite", Loader.loadSprite),
 			_loadType("script", Loader.loadScript),
+			_loadType("text", Loader.loadText),
 			//_loadType("sound", Loader.loadSound)
 		]);
 

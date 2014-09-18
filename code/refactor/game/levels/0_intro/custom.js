@@ -38,7 +38,8 @@
 		takePicture();
 		addComment("intro/comment_zero");
     });
-	var handle = subscribe("game/update", function(){
+	
+	subscribe("game/update", function(){
 	    if(!pictureTaken && lvl.player.x>32){
 	    	takePicture();
 			addComment("intro/comment_none");

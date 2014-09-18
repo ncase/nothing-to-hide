@@ -1,0 +1,11 @@
+{
+	"image":{},
+	"sprite":{},
+	"sound":{},
+	"script":[
+		"assets/MusicMonolith.js"
+	],
+	"text":{
+		"gopher/altmap": "altmap.txt"
+	}
+}

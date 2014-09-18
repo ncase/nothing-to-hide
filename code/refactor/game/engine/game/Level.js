@@ -40,12 +40,16 @@ function Level(config){
 	};
 
 	var _initLevelObjects = function(category){
-		self[category] = [];
+		self[category] = self[category] || [];
 		var levelObjects = config.level[category];
-		for(var i=0;i<levelObjects.length;i++){
+		self.addLevelObjects(category,levelObjects);
+	}
+
+	self.addLevelObjects = function(category,objects){
+		for(var i=0;i<objects.length;i++){
 			
 			// Create new object of Class type
-			var conf = levelObjects[i];
+			var conf = objects[i];
 			var Type = window[conf.type];
 			if(!Type){
 				console.error("NO SUCH TYPE CLASS: "+conf.type);
@@ -69,7 +73,7 @@ function Level(config){
 			self[category].push(obj);
 
 		}
-	}
+	};
 
 	///////////////////////////////
 

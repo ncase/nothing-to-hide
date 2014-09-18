@@ -1,0 +1,51 @@
+{
+
+	"realobjects": [
+		
+		{ "type": "Player", "x":0, "y":11 },
+		{
+			"id": "harbinger",
+			"type": "Monolith", "x":16, "y":11
+		}
+
+	],
+
+	"wallobjects": [
+	],
+	
+	"gamelogic":[
+		
+		// STAY IN SIGHT & GOAL
+		{ "type": "StayInSight" },
+		{ "type": "Pickup" },
+		{ "type": "Goal", "left":27, "right":28, "top":15, "bottom":16 },
+		
+		// Checkpoints
+
+		// Scripted Zones
+		{
+			"type": "ZoneMessage",
+			"zone": {"left":15,"right":16,"top":11,"bottom":12},
+			"message": "shatter"
+		},
+
+		// Camera logic
+		{
+			"type": "RailsCamera",
+			"zone": {"left":0,"right":8,"top":0,"bottom":12},
+			"data": {"ax":0,"bx":1,"ay":7,"by":7}
+		},
+		{
+			"type": "FixedCamera",
+			"zone": {"left":8,"right":24,"top":0,"bottom":12},
+			"data": {"x":16,"y":7}
+		},
+		{
+			"type": "RailsCamera",
+			"zone": {"left":24,"right":32,"top":0,"bottom":12},
+			"data": {"ax":0,"bx":1,"ay":7,"by":7}
+		}
+
+	]
+
+}

@@ -15,13 +15,13 @@ function StaticBlock(level){
 
 	self.update = function(){
 	};
-
+	
 	var color;
 	self.draw = function(ctx){
 		ctx.fillStyle = color;
 		ctx.fillRect(self.x*W, self.y*H, self.width*W, self.height*H);
 	};
-
+	
 	self.hitTest = function(x,y){
 		return (x>self.x && x<self.x+self.width && y>self.y && y<self.y+self.height);
 	};
