@@ -1,8 +1,15 @@
 {
 	"image":{
-		"pickup/comic": "assets/comic.png"
+		//"pickup/comic": "assets/comic.png"
 	},
-	"sprite":{},
+	"sprite":{
+
+		// Monolith
+		"Monolith_Love": "assets/monolith_love",
+		"Monolith_Dies": "assets/monolith_dies",
+		"Monolith_Cry": "assets/monolith_cry"
+
+	},
 	"sound":{},
 	"script":[
 		"assets/LoveMonolith.js"

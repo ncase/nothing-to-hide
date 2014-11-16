@@ -8,8 +8,27 @@ function LoveMonolith(level){
 	var blinking = false;
 	var pupilShimmer = Math.floor(Math.random()*10);
 
+	var I_AM_DEAD = false;
 	var prevWorrying = 0;
+
+	self.dies = new Sprite("Monolith_Dies");
+	self.loveBody = new Sprite("Monolith_Love");
+	self.cry = new Sprite("Monolith_Cry");
+
 	self.drawActiveMonolith = function(ctx){
+
+		if(I_AM_DEAD){
+
+			self.dies.draw(ctx);
+			if(self.dies.frameIndex<self.dies.data.frames-1){
+				self.dies.nextFrame();
+			}
+
+			return;
+		
+		}
+
+		//////
 
 		var lover = level[self.lover]; 
 		var target = {
@@ -41,7 +60,7 @@ function LoveMonolith(level){
 		prevWorrying = worrying;
 
 		if(worrying==2){
-			var bounce = Math.random()*0.2+0.9;
+			var bounce = Math.random()*0.1+0.95;
 			ctx.scale(bounce,1/bounce);
 		}
 
@@ -49,12 +68,23 @@ function LoveMonolith(level){
 		///////////////////////////////
 
 		// Draw body
-		self.body.draw(ctx);
+		if(worrying==0){
+			self.loveBody.draw(ctx);
+			self.loveBody.nextFrame();
+		}else{
+			self.body.draw(ctx);
+		}
 
 		///////////////////////////////
 
 		// Eye relative
 		ctx.translate(2,-15); // pupil position relative to monolith
+
+		if(worrying==2){
+			self.cry.draw(ctx);
+			self.cry.nextFrame();
+			return;
+		}
 
 		// Pupil shimmer - change frame every 15 frames
 		pupilShimmer++;
@@ -107,6 +137,17 @@ function LoveMonolith(level){
 			self.eye.draw(ctx);
 
 		}
+
+	};
+
+	self.die = function(){
+
+		I_AM_DEAD = true;
+
+		// Yeah basically remove its ability to see
+		level.unTag(self,"sighted");
+		level.unTag(self,"monolith");
+		level.unTag(self,"pickup");
 
 	};
 

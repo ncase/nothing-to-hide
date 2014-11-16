@@ -15,7 +15,11 @@
 			"x":11.8, "y":5
 		},
 		{ "type": "Monolith", "x":0, "y":20, "stationary":true },
-		{ "type": "Monolith", "x":10, "y":19 },
+		{
+			"id": "lastMonolith",
+			"type": "Monolith",
+			"x":10, "y":19
+		},
 
 		{ "type": "StaticBlock", "x":0, "y":19, "width":2, "height":2 },
 		{ "type": "StaticBlock", "x":6, "y":18, "width":1, "height":3 },
@@ -29,7 +33,7 @@
 	],
 
 	"wallobjects": [
-		{
+		/*{
 			"type": "WallScroll",
 			"image": "pickup/comic",
 			"listenUp": "up", "listenDown": "down",
@@ -46,7 +50,7 @@
 			"icon": "icon/up",
 			"message": "up",
 			"x":12, "y":17
-		}
+		}*/
 	],
 	
 	"gamelogic":[

@@ -17,7 +17,7 @@ function Pickup(level){
 	self.update = function(){
 
 		// Did you JUST press the Action button?
-		var justPressed = Key.action && !lastAction;
+		var justPressed = Key.action && !lastAction && !level.player.deactivated;
 		lastAction = Key.action;
 		if(!justPressed) return;
 

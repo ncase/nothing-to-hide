@@ -114,7 +114,7 @@ function Dialogue(level){
 		// Draw HEADER
 		ctx.fillStyle = "#bbb";
 		ctx.font = '20px sans-serif';
-		ctx.fillText("Poppy Gardner posted just now", 15, 17);
+		ctx.fillText("posted just now", 15, 17);
 
 		// Draw lines
 		ctx.fillStyle = "#000";

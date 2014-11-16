@@ -10,7 +10,8 @@ function StaticBlock(level){
 	level.setTag(self,"block");
 
 	self.init = function(){
-		color = "rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
+		//color = "rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
+		color = "hsl("+Math.floor(Math.random()*360)+",60%,60%)";
 	};
 
 	self.update = function(){
