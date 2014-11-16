@@ -9,7 +9,7 @@
 
 		// Clone config, and create a new wall from it
 		var config = JSON.parse(JSON.stringify(Asset.wallConfig[wallID]));
-		var wall = new Wall(config);
+		var wall = new Wall(config.posts);
 		wall.id = wallID;
 
 		// Kill & replace any previous walls

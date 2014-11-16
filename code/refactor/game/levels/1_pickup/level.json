@@ -2,7 +2,7 @@
 
 	"realobjects": [
 		
-		{ "type": "Player", "x":9, "y":18/*5*/ },
+		{ "type": "Player", "x":0, "y":5 },
 
 		{
 			"type": "LoveMonolith",

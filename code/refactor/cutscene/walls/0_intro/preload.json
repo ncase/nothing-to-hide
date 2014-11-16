@@ -1,2 +1,8 @@
 {
+	"image":{
+		"intro/bird": "assets/bird.png"
+	},
+	"sprite":{},
+	"sound":{},
+	"script":[]
 }
