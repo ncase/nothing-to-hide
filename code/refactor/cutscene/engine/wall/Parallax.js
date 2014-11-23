@@ -20,11 +20,14 @@ function Parallax(wall){
 	};
 
 	self.draw = function(ctx){
-		ctx.drawImage(
-			self.layers[0].image,
-			0, self.y*self.layers[0].depth, self.wall.WIDTH, self.height,
-			0, 0, self.wall.WIDTH, self.height
-		);
+		for(var i=0;i<self.layers.length;i++){
+			var layer = self.layers[i];
+			ctx.drawImage(
+				layer.image,
+				0, self.y*layer.depth+(layer.offset||0), self.wall.WIDTH, self.height,
+				0, 0, self.wall.WIDTH, self.height
+			);
+		}
 	};
 
 }

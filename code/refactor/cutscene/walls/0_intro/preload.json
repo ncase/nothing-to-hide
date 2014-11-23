@@ -1,6 +1,7 @@
 {
 	"image":{
-		"intro/bird": "assets/bird.png"
+		"intro/bird": "assets/bird.png",
+		"intro/glass": "assets/glass.png"
 	},
 	"sprite":{},
 	"sound":{},

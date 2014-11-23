@@ -10,35 +10,39 @@
 	],
 	"posts": [
 		{
-			"type": "Parallax",
-			"author": "poppy",
-			"date": "25 minutes ago",
-			"height": 300,
+			"type": "Parallax", "height": 300,
 			"layers":[
-				{ "depth":0.5, "image":"intro/bird" }
+				{ "depth":0.5, "image":"intro/bird" },
+				{ "depth":0, "image":"intro/glass", "offset":100 }
 			]
 		},
 		{
-			"type": "Parallax",
-			"author": "poppy",
-			"date": "25 minutes ago",
-			"height": 300,
+			"type": "Parallax", "height": 300,
 			"layers":[
-				{ "depth":0.5, "image":"intro/bird" }
+				{ "depth":0.5, "image":"intro/bird" },
+				{ "depth":0, "image":"intro/glass", "offset":100 }
+			]
+		},
+		{
+			"type": "Parallax", "height": 300,
+			"layers":[
+				{ "depth":0.5, "image":"intro/bird" },
+				{ "depth":0, "image":"intro/glass", "offset":100 }
+			]
+		},
+		{
+			"type": "Parallax", "height": 300,
+			"layers":[
+				{ "depth":0.5, "image":"intro/bird" },
+				{ "depth":0, "image":"intro/glass", "offset":100 }
+			]
+		},
+		{
+			"type": "Parallax", "height": 300,
+			"layers":[
+				{ "depth":0.5, "image":"intro/bird" },
+				{ "depth":0, "image":"intro/glass", "offset":100 }
 			]
 		}
-		/*,
-		{
-			"type": "Text",
-			"author": "poppy",
-			"message": "blah blah blah"
-		},
-		{
-			"type": "Divider",
-			"message": "FOUR MONTHS AGO"
-		},
-		{
-			"type": "Footer"
-		}*/
 	]
 }
