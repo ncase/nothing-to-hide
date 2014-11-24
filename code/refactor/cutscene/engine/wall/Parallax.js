@@ -9,7 +9,6 @@ function Parallax(wall){
 			var layer = self.layers[i];
 			layer.image = Asset.image[layer.image];
 		}
-		console.log(self.layers[0].image);
 
 		// Total Height
 		self.totalHeight = self.height+50;

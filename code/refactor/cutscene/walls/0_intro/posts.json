@@ -10,38 +10,57 @@
 	],
 	"posts": [
 		{
-			"type": "Parallax", "height": 300,
+			"type": "Parallax", "height": 450,
 			"layers":[
-				{ "depth":0.5, "image":"intro/bird" },
-				{ "depth":0, "image":"intro/glass", "offset":100 }
+				{ "depth":0.3, "image":"intro/sketch0001" },
+				{ "depth":0, "image":"intro/glass", "offset":0 }
 			]
 		},
 		{
-			"type": "Parallax", "height": 300,
+			"type": "Parallax", "height": 450,
 			"layers":[
-				{ "depth":0.5, "image":"intro/bird" },
-				{ "depth":0, "image":"intro/glass", "offset":100 }
+				{ "depth":0.3, "image":"intro/sketch0002" },
+				{ "depth":0, "image":"intro/glass", "offset":0 }
 			]
 		},
 		{
-			"type": "Parallax", "height": 300,
+			"type": "Parallax", "height": 450,
 			"layers":[
-				{ "depth":0.5, "image":"intro/bird" },
-				{ "depth":0, "image":"intro/glass", "offset":100 }
+				{ "depth":0.3, "image":"intro/sketch0003" },
+				{ "depth":0, "image":"intro/glass", "offset":0 }
 			]
 		},
 		{
-			"type": "Parallax", "height": 300,
+			"type": "GlitchParallax", "height": 450,
 			"layers":[
-				{ "depth":0.5, "image":"intro/bird" },
-				{ "depth":0, "image":"intro/glass", "offset":100 }
+				{ "depth":0.3, "image":"intro/sketch0004" },
+				{ "depth":0, "image":"intro/glass", "offset":0 }
 			]
 		},
 		{
-			"type": "Parallax", "height": 300,
+			"type": "Parallax", "height": 450,
 			"layers":[
-				{ "depth":0.5, "image":"intro/bird" },
-				{ "depth":0, "image":"intro/glass", "offset":100 }
+				{ "depth":0.3, "image":"intro/sketch0005" },
+				{ "depth":0, "image":"intro/glass", "offset":0 }
+			]
+		},
+		/*{
+			"type": "Parallax", "height": 200,
+			"layers":[
+				{ "depth":0.3, "image":"intro/mindful" }
+			]
+		},
+		{
+			"type": "Parallax", "height": 200,
+			"layers":[
+				{ "depth":0.3, "image":"intro/parable" }
+			]
+		},*/
+		{
+			"type": "Parallax", "height": 450,
+			"layers":[
+				{ "depth":0.3, "image":"intro/sketch0006" },
+				{ "depth":0, "image":"intro/glass", "offset":0 }
 			]
 		}
 	]

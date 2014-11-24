@@ -4,6 +4,7 @@ function Wall(config){
 	self.config = config;
 
 	self.WIDTH = 800;
+	self.MARGIN = 50;
 
 	self.init = function(){
 

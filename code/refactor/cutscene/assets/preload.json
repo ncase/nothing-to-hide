@@ -1,2 +1,8 @@
 {
+	"image":{
+		"icon/header": "icons/header.png"
+	},
+	"sprite":{},
+	"sound":{},
+	"script":[]
 }

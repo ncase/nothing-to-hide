@@ -1,9 +1,21 @@
 {
 	"image":{
+		"intro/sketch0001": "assets/sketch0001.png",
+		"intro/sketch0002": "assets/sketch0002.png",
+		"intro/sketch0003": "assets/sketch0003.png",
+		"intro/sketch0004": "assets/sketch0004.png",
+		"intro/sketch0005": "assets/sketch0005.png",
+		"intro/sketch0006": "assets/sketch0006.png",
+
+		"intro/mindful": "assets/mindful.png",
+		"intro/parable": "assets/parable.png",
+
 		"intro/bird": "assets/bird.png",
 		"intro/glass": "assets/glass.png"
 	},
 	"sprite":{},
 	"sound":{},
-	"script":[]
+	"script":[
+		"assets/GlitchParallax.js"
+	]
 }
