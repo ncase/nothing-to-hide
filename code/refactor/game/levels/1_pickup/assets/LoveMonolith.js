@@ -15,11 +15,11 @@ function LoveMonolith(level){
 	self.loveBody = new Sprite("Monolith_Love");
 	self.cry = new Sprite("Monolith_Cry");
 
-	self.drawActiveMonolith = function(ctx){
+	self.drawActiveMonolith = function(ctx,options){
 
 		if(I_AM_DEAD){
 
-			self.dies.draw(ctx);
+			self.dies.draw(ctx,options);
 			if(self.dies.frameIndex<self.dies.data.frames-1){
 				self.dies.nextFrame();
 			}
@@ -69,10 +69,10 @@ function LoveMonolith(level){
 
 		// Draw body
 		if(worrying==0){
-			self.loveBody.draw(ctx);
+			self.loveBody.draw(ctx,options);
 			self.loveBody.nextFrame();
 		}else{
-			self.body.draw(ctx);
+			self.body.draw(ctx,options);
 		}
 
 		///////////////////////////////
@@ -81,7 +81,7 @@ function LoveMonolith(level){
 		ctx.translate(2,-15); // pupil position relative to monolith
 
 		if(worrying==2){
-			self.cry.draw(ctx);
+			self.cry.draw(ctx,options);
 			self.cry.nextFrame();
 			return;
 		}
@@ -116,7 +116,7 @@ function LoveMonolith(level){
 
 			// Draw eye background
 			self.eye.frameIndex = 0;
-			self.eye.draw(ctx);
+			self.eye.draw(ctx,options);
 
 			// Draw pupil, following player/humanoid/interesting thing
 			var uv = _getUnitVector(
@@ -126,7 +126,7 @@ function LoveMonolith(level){
 			var pupilRadius = (worrying==2) ? 0 : 5;
 			self.pupil.x = uv.x*pupilRadius;
 			self.pupil.y = uv.y*pupilRadius + 4; // pupil is 4 px down relatie to eye
-			self.pupil.draw(ctx);
+			self.pupil.draw(ctx,options);
 
 		}else{
 
@@ -134,7 +134,7 @@ function LoveMonolith(level){
 
 			// Draw eye background
 			self.eye.frameIndex = 1;
-			self.eye.draw(ctx);
+			self.eye.draw(ctx,options);
 
 		}
 

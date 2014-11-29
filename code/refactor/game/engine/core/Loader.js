@@ -59,7 +59,12 @@ Each method returns a promise for the resource.
 		var dataSource = src+".json";
 		Q.all([Loader.loadImage(imageSource),Loader.loadJSON(dataSource)]).spread(function(img,data){
 			console.log("Loaded sprite: "+src);
-			deferred.resolve({image:img, data:data});
+			var gray = Grayscale.convertImage(img);
+			deferred.resolve({
+				image:img,
+				gray:gray,
+				data:data
+			});
 		});
 		return deferred.promise;
 	};
@@ -77,7 +82,7 @@ Each method returns a promise for the resource.
 	};
 
 	// Because IE still sucks.
-	function _createXMLHTTPObject() {
+	function _createXMLHTTPObject(){
 		var XMLHttpFactories = [
 		    function(){return new XMLHttpRequest()},
 		    function(){return new ActiveXObject("Msxml2.XMLHTTP")},

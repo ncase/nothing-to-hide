@@ -92,6 +92,9 @@ function Map(level){
 			}
 		}
 
+		// Grayscale
+		self.bgCanvasGray = Grayscale.convertImage(self.bgCanvas);
+
 	};
 
 	function _createCanvas(w,h){
@@ -102,8 +105,9 @@ function Map(level){
 	}
 
 	// DRAW EVERY FRAME
-	self.draw = function(ctx){
-		ctx.drawImage(self.bgCanvas,0,0);
+	self.draw = function(ctx,options){
+		options = options || {gray:false};
+		ctx.drawImage(options.gray ? self.bgCanvasGray : self.bgCanvas,0,0);
 	}
 
 	///////////////////////

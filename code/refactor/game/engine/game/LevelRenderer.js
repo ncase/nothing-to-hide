@@ -38,9 +38,7 @@ function LevelRenderer(level){
 		// CCTV Canvas
 		self.cctvCanvas = _createCanvas(canvasWidth,canvasHeight);
 		self.cctvContext = self.cctvCanvas.getContext('2d');
-		self.smallCanvas = _createCanvas(canvasWidth/*0.25*/,canvasHeight/*0.25*/);
-		self.smallContext = self.smallCanvas.getContext('2d');
-
+		
 		// Monolith Mask Canvas
 		self.maskCanvas = _createCanvas(canvasWidth,canvasHeight);
 		self.maskContext = self.maskCanvas.getContext('2d');
@@ -86,8 +84,9 @@ function LevelRenderer(level){
 		}
 
 		// - The cam's CCTV lines & dots
+		var path;
 		if(!self.noCCTV){
-			var path = _getCCTVLines();
+			path = _getCCTVLines();
 			_drawCCTVLines(ctx,path);
 			_drawCCTVDots(ctx);
 		}
@@ -127,16 +126,35 @@ function LevelRenderer(level){
 		// 2. DRAW THE CCTV LAYER //
 		////////////////////////////
 
+		var ctx = self.cctvContext;
+		var grayOption = {gray:true};
+		ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+
+		// - The map's static background
+		level.map.draw(ctx,grayOption);
+
+		// - The cam's CCTV lines & dots
+		if(!self.noCCTV){
+			_drawCCTVLines(ctx,path);
+			_drawCCTVDots(ctx);
+		}
+
+		// - Reals, grayscaled (unless you're player)
+		for(var i=0;i<reals.length;i++){
+			if(reals[i]!=level.player && reals[i].draw){
+				reals[i].draw(ctx,grayOption);
+			}
+		}
+
 		// - Create Monolith mask
 
-		/*
 		var ctx = self.maskContext;
 		ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
 
 		var monoliths = level.getTagged("monolith");
 		for(var x=0;x<monoliths.length;x++){
 			ctx.beginPath();
-			var poly = monoliths[x].sightPolygon;
+			var poly = monoliths[x].sightPolygonDrawn;
 			var p = poly[0];
 			ctx.moveTo(p.x*W, p.y*H);
 			for(var i=1;i<poly.length;i++){
@@ -151,7 +169,6 @@ function LevelRenderer(level){
 		ctx.globalCompositeOperation = "destination-in";
 		ctx.drawImage(self.maskCanvas,0,0);
 		ctx.globalCompositeOperation = "source-over";
-		*/
 
 		///////////////////////////
 		// 3. DRAW THEM TOGETHER //
@@ -162,20 +179,19 @@ function LevelRenderer(level){
 
 		ctx.save();
 
-		// - Translate to camera position
+		// Translate to camera position
 		var cam = self.camera;
 		cam.x = cam.x*0.8 + cam.gotoX*0.2;
 		cam.y = cam.y*0.8 + cam.gotoY*0.2;
 		ctx.translate(Game.canvas.width/2, Game.canvas.height/2);
 		ctx.translate(-cam.x*W, -cam.y*H);
-		
-		// - Draw Poppy, because she's gotta appear on top of everything.
 
 		// Draw all the layers
 		ctx.drawImage(level.map.lineCanvas,0,0);
 		level.player.draw(ctx);
-		//ctx.drawImage(self.cctvCanvas,0,0);
+		ctx.drawImage(self.cctvCanvas,0,0);
 		ctx.drawImage(self.seenCanvas,0,0);
+		// wait... draw poppy on top of everyone?...
 
 		ctx.restore();
 

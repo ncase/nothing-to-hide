@@ -6,6 +6,7 @@ function Sprite(spriteName){
 	var sprite = Asset.sprite[spriteName];
 	self.sprite = sprite;
 	self.image = sprite.image;
+	self.gray = sprite.gray;
 	self.data = sprite.data;
 
 	// Transform
@@ -23,8 +24,12 @@ function Sprite(spriteName){
 		self.frameIndex = (self.frameIndex+1)%self.data.frames;
 	};
 
-	self.draw = function(ctx){
-		
+	self.draw = function(ctx,options){
+
+		// Default options
+		options = options || {gray:false};
+
+		// Save
 		ctx.save();
 
 	    // Self's Transform, Scale, Rotation
@@ -38,10 +43,12 @@ function Sprite(spriteName){
 	    var frameH = self.data.height;
 	    var frameX = (self.frameIndex*frameW) % self.image.width;
 	    var frameY = Math.floor( (self.frameIndex*frameW) / self.image.width ) * frameH;
-    	ctx.drawImage(self.image,
+    	ctx.drawImage(
+    		options.gray ? self.gray : self.image,
     		frameX+1, frameY+1, frameW-1, frameH-1, // HACK.
     		0, 0, frameW-1, frameH-1);
 
+    	// Restore
 	    ctx.restore();
 
 	}

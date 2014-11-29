@@ -69,7 +69,7 @@ function Monolith(level){
 
 	var blinking = false;
 	var pupilShimmer = Math.floor(Math.random()*10);
-	self.draw = function(ctx){
+	self.draw = function(ctx,options){
 
 		// Translate EVERYTHING. This is gonna get complex
 		ctx.save();
@@ -79,9 +79,9 @@ function Monolith(level){
 		ctx.scale(1/bounce,bounce);
 
 		if(self.active){
-			self.drawActiveMonolith(ctx);
+			self.drawActiveMonolith(ctx,options);
 		}else{
-			self.drawAsleepMonolith(ctx);
+			self.drawAsleepMonolith(ctx,options);
 		}
 
 		// Restore translation
@@ -89,10 +89,10 @@ function Monolith(level){
 
 	};
 
-	self.drawActiveMonolith = function(ctx){
+	self.drawActiveMonolith = function(ctx,options){
 
 		// Draw body
-		self.body.draw(ctx);
+		self.body.draw(ctx,options);
 
 		// Eye relative
 		ctx.translate(2,-15); // pupil position relative to monolith
@@ -127,7 +127,7 @@ function Monolith(level){
 
 			// Draw eye background
 			self.eye.frameIndex = 0;
-			self.eye.draw(ctx);
+			self.eye.draw(ctx,options);
 
 			// Draw pupil, following player/humanoid/interesting thing
 			var target = {
@@ -141,7 +141,7 @@ function Monolith(level){
 			var pupilRadius = 5;
 			self.pupil.x = uv.x*pupilRadius;
 			self.pupil.y = uv.y*pupilRadius + 4; // pupil is 4 px down relatie to eye
-			self.pupil.draw(ctx);
+			self.pupil.draw(ctx,options);
 
 		}else{
 
@@ -149,25 +149,26 @@ function Monolith(level){
 
 			// Draw eye background
 			self.eye.frameIndex = 1;
-			self.eye.draw(ctx);
+			self.eye.draw(ctx,options);
 
 		}
 
 	};
-	self.drawAsleepMonolith = function(ctx){
+	self.drawAsleepMonolith = function(ctx,options){
 
 		// Draw body
-		self.body.draw(ctx);
+		self.body.draw(ctx,options);
 
 		// Eye relative
 		ctx.translate(2,-15);
 		self.eye.frameIndex = 1;
-		self.eye.draw(ctx);
+		self.eye.draw(ctx,options);
 
 	};
 
 	self.updateSight = function(){
 		self.sightPolygon = SightAndLight.compute(self, level.shadow.cctvShadows);
+		self.sightPolygonDrawn = SightAndLight.compute(self, level.shadow.shadows);
 	};
 
 	self.speak = function(message){
