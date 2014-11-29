@@ -62,6 +62,10 @@ function LevelRenderer(level){
 
 	self.draw = function(gameContext){
 
+		// CCTV & DOTS offset
+		offset = (offset+0.0125)%0.5;
+		offset2 = (offset2+0.025)%1.0;
+
 		///////////////////////////////
 		// 1. DRAW THE VISIBLE LAYER //
 		///////////////////////////////
@@ -141,7 +145,7 @@ function LevelRenderer(level){
 
 		// - Reals, grayscaled (unless you're player)
 		for(var i=0;i<reals.length;i++){
-			if(reals[i]!=level.player && reals[i].draw){
+			if(reals[i].draw){
 				reals[i].draw(ctx,grayOption);
 			}
 		}
@@ -188,10 +192,19 @@ function LevelRenderer(level){
 
 		// Draw all the layers
 		ctx.drawImage(level.map.lineCanvas,0,0);
+		
+		// On the blackness
 		level.player.draw(ctx);
+		// What about monoliths? 
+		/*for(var i=0;i<reals.length;i++){
+			if(reals[i].draw){
+				//debugger;
+				reals[i].draw(ctx);
+			}
+		}*/
+
 		ctx.drawImage(self.cctvCanvas,0,0);
 		ctx.drawImage(self.seenCanvas,0,0);
-		// wait... draw poppy on top of everyone?...
 
 		ctx.restore();
 
@@ -210,8 +223,6 @@ function LevelRenderer(level){
 
 	var offset = 0;
 	function _getCCTVLines(){
-
-		offset = (offset+0.0125)%0.5;
 
 		// Get monoliths
 		var monoliths = level.getTagged("monolith");
@@ -287,8 +298,6 @@ function LevelRenderer(level){
 	}
 	var offset2 = 0;
 	function _drawCCTVDots(ctx){
-
-		offset2 = (offset2+0.025)%1.0;
 
 		// Get monoliths, cloned
 		var monoliths = level.getTagged("monolith").concat();

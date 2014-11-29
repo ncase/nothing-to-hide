@@ -92,8 +92,20 @@ function Map(level){
 			}
 		}
 
-		// Grayscale
+		// GRAYSCALE MAP
 		self.bgCanvasGray = Grayscale.convertImage(self.bgCanvas);
+
+		// Draw black walls
+		var tiles = self.tiles;
+		var ctx = self.bgCanvasGray.getContext('2d');
+		for(var y=0;y<tiles.length;y++){
+			for(var x=0;x<tiles[y].length;x++){
+				if(tiles[y][x] == self.SCREEN){
+					ctx.fillStyle = "#000";
+					ctx.fillRect(x*W, y*H, W, H);
+				}
+			}
+		}
 
 	};
 

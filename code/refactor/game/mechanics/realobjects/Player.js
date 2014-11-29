@@ -121,7 +121,7 @@ function Player(level){
 	var direction = 1;
 	var bounceVel = 0;
 	var bounce = 1;
-	self.draw = function(ctx){
+	self.draw = function(ctx,options){
 
 		var sprite = self.currentSprite;
 
@@ -135,7 +135,7 @@ function Player(level){
 		sprite.scaleX = direction * (1/bounce);
 		sprite.scaleY = bounce;
 
-		// Draw it
+		// Draw Poppy ALWAYS the same
 	    sprite.draw(ctx);
 
 	};

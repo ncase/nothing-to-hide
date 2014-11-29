@@ -10,17 +10,17 @@ function StaticBlock(level){
 	level.setTag(self,"block");
 
 	self.init = function(){
-		//color = "rgb("+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+","+Math.floor(Math.random()*255)+")";
-		color = "hsl("+Math.floor(Math.random()*360)+",60%,60%)";
+		self.image = Asset.image[self.image || "placeholder"];
+		self.gray = Grayscale.convertImage(self.image);
 	};
 
 	self.update = function(){
 	};
 	
-	var color;
-	self.draw = function(ctx){
-		ctx.fillStyle = color;
-		ctx.fillRect(self.x*W, self.y*H, self.width*W, self.height*H);
+	self.draw = function(ctx,options){
+		options = options || {};
+		var img = options.gray ? self.gray : self.image;
+		ctx.drawImage(img, self.x*W, self.y*H, self.width*W, self.height*H);
 	};
 	
 	self.hitTest = function(x,y){

@@ -15,17 +15,34 @@ function LoveMonolith(level){
 	self.loveBody = new Sprite("Monolith_Love");
 	self.cry = new Sprite("Monolith_Cry");
 
-	self.drawActiveMonolith = function(ctx,options){
+	var lastUpdate = self.update;
+	self.update = function(){
+
+		lastUpdate();
 
 		if(I_AM_DEAD){
-
-			self.dies.draw(ctx,options);
 			if(self.dies.frameIndex<self.dies.data.frames-1){
 				self.dies.nextFrame();
 			}
-
 			return;
-		
+		}
+
+	};
+
+	var worrying = 0;
+	self.updateActiveMonolith = function(){
+		if(worrying==0){
+			self.loveBody.nextFrame();
+		}else if(worrying==2){
+			self.cry.nextFrame();
+		}
+	};
+
+	self.drawActiveMonolith = function(ctx,options){
+
+		if(I_AM_DEAD){
+			self.dies.draw(ctx,options);
+			return;
 		}
 
 		//////
@@ -36,11 +53,11 @@ function LoveMonolith(level){
 			y:lover.y*H - 13 // look right in the eye <3
 		};
 
-		var worrying = 0;
+		worrying = 0;
 		if(level.pickupLogic.holding==lover){
 			if(SightAndLight.inPolygon(level.player,self.sightPolygon)){
 				worrying = 1; // where you going...?
-				var target = {
+				target = {
 					x:level.player.x*W,
 					y:level.player.y*H - 50 // look at Poppy's arms
 				};
@@ -70,7 +87,6 @@ function LoveMonolith(level){
 		// Draw body
 		if(worrying==0){
 			self.loveBody.draw(ctx,options);
-			self.loveBody.nextFrame();
 		}else{
 			self.body.draw(ctx,options);
 		}
@@ -82,7 +98,6 @@ function LoveMonolith(level){
 
 		if(worrying==2){
 			self.cry.draw(ctx,options);
-			self.cry.nextFrame();
 			return;
 		}
 

@@ -50,6 +50,12 @@ function Monolith(level){
 		bounceVel *= 0.5;
 		bounce += bounceVel;
 
+		if(self.active){
+			self.updateActiveMonolith();
+		}else{
+			self.updateAsleepMonolith();
+		}
+
 		self.updateActivity();
 
 	};
@@ -89,13 +95,7 @@ function Monolith(level){
 
 	};
 
-	self.drawActiveMonolith = function(ctx,options){
-
-		// Draw body
-		self.body.draw(ctx,options);
-
-		// Eye relative
-		ctx.translate(2,-15); // pupil position relative to monolith
+	self.updateActiveMonolith = function(){
 
 		// Pupil shimmer - change frame every 15 frames
 		pupilShimmer++;
@@ -109,11 +109,25 @@ function Monolith(level){
 
 		// Eye & Blinking
 		if(blinking<=2){
-
-			// Next frame - Should I blink?
 			if(Math.random()<0.01){
 				blinking = 5;
 			}
+			if(blinking>0) blinking--;
+		}else{
+			blinking--;
+		}
+
+	};
+	self.drawActiveMonolith = function(ctx,options){
+
+		// Draw body
+		self.body.draw(ctx,options);
+
+		// Eye relative
+		ctx.translate(2,-15); // pupil position relative to monolith
+
+		// Eye & Blinking
+		if(blinking<=2){
 
 			// Blinking scale
 			if(blinking==5){
@@ -123,7 +137,6 @@ function Monolith(level){
 			}else if(blinking==1){
 				ctx.scale(0.95,1.05);
 			}
-			if(blinking>0) blinking--;
 
 			// Draw eye background
 			self.eye.frameIndex = 0;
@@ -140,12 +153,10 @@ function Monolith(level){
 			);
 			var pupilRadius = 5;
 			self.pupil.x = uv.x*pupilRadius;
-			self.pupil.y = uv.y*pupilRadius + 4; // pupil is 4 px down relatie to eye
+			self.pupil.y = uv.y*pupilRadius + 4; // pupil is 4 px down relative to eye
 			self.pupil.draw(ctx,options);
 
 		}else{
-
-			blinking--;
 
 			// Draw eye background
 			self.eye.frameIndex = 1;
@@ -153,6 +164,9 @@ function Monolith(level){
 
 		}
 
+	};
+
+	self.updateAsleepMonolith = function(){
 	};
 	self.drawAsleepMonolith = function(ctx,options){
 
@@ -194,6 +208,7 @@ function Monolith(level){
 		level.setTag(self,"pickup");
 		
 		self.updateActivity();
+		self.updateSight();
 
 		bounceVel -= 0.25;
 		blinking = 5;

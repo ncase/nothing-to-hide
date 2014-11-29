@@ -7,7 +7,10 @@
 
 		// Wall Button Icons
 		"icon/up": "icons/up.png",
-		"icon/down": "icons/down.png"
+		"icon/down": "icons/down.png",
+
+		// Placeholder
+		"placeholder": "misc/placeholder.png"
 
 	},
 	"sprite":{
