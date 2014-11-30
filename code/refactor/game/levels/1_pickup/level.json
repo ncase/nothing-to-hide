@@ -2,8 +2,10 @@
 
 	"realobjects": [
 		
+		// PLAYER
 		{ "type": "Player", "x":0, "y":5 },
 
+		// MONOLITHS
 		{
 			"type": "LoveMonolith",
 			"id":"lover0", "lover":"lover1",
@@ -21,14 +23,37 @@
 			"x":10, "y":19
 		},
 
-		{ "type": "StaticBlock", "x":0, "y":19, "width":2, "height":2 },
-		{ "type": "StaticBlock", "x":6, "y":18, "width":1, "height":3 },
-		{ "type": "StaticBlock", "x":11, "y":19, "width":2, "height":2 },
+		// DESKS
+		{
+			"type": "StaticBlock", "image":"pu/long_desk",
+			"x":6, "y":18, "width":1, "height":3
+		},
+		{
+			"type": "StaticBlock", "image":"pu/corner_desk_left",
+			"x":0, "y":19, "width":2, "height":2
+		},
+		{
+			"type": "StaticBlock", "image":"pu/corner_desk_right",
+			"x":11, "y":19, "width":2, "height":2
+		},
 
-		{ "type": "StaticBlock", "x":0.5, "y":22.5, "width":1, "height":1 },
-		{ "type": "StaticBlock", "x":0.5, "y":24.5, "width":1, "height":1 },
-		{ "type": "StaticBlock", "x":11.5, "y":22.5, "width":1, "height":1 },
-		{ "type": "StaticBlock", "x":11.5, "y":24.5, "width":1, "height":1 }
+		// PLANTS
+		{
+			"type": "StaticBlock", "image":"pu/plant",
+			"x":0.5, "y":22.5, "width":1, "height":1
+		},
+		{
+			"type": "StaticBlock", "image":"pu/plant",
+			"x":0.5, "y":24.5, "width":1, "height":1
+		},
+		{
+			"type": "StaticBlock", "image":"pu/plant",
+			"x":11.5, "y":22.5, "width":1, "height":1
+		},
+		{
+			"type": "StaticBlock", "image":"pu/plant",
+			"x":11.5, "y":24.5, "width":1, "height":1
+		}
 
 	],
 

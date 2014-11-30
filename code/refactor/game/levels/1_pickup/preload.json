@@ -1,6 +1,11 @@
 {
 	"image":{
-		//"pickup/comic": "assets/comic.png"
+
+		"pu/corner_desk_left": "assets/corner_desk_left.png",
+		"pu/corner_desk_right": "assets/corner_desk_right.png",
+		"pu/long_desk": "assets/long_desk.png",
+		"pu/plant": "assets/plant.png"
+
 	},
 	"sprite":{
 

@@ -10,6 +10,8 @@ function StaticBlock(level){
 	level.setTag(self,"block");
 
 	self.init = function(){
+		self.IS_PLACEHOLDER = (!self.image);
+
 		self.image = Asset.image[self.image || "placeholder"];
 		self.gray = Grayscale.convertImage(self.image);
 	};
@@ -20,7 +22,17 @@ function StaticBlock(level){
 	self.draw = function(ctx,options){
 		options = options || {};
 		var img = options.gray ? self.gray : self.image;
-		ctx.drawImage(img, self.x*W, self.y*H, self.width*W, self.height*H);
+
+		if(self.IS_PLACEHOLDER){
+			// placeholder block
+			ctx.drawImage(img, self.x*W, self.y*H, self.width*W, self.height*H);
+		}else{
+			// image, middle bottom.
+			var ox = (self.x+self.width/2)*W - self.image.width/2;
+			var oy = (self.y+self.height)*H - self.image.height;
+			ctx.drawImage(img, ox, oy);
+		}
+		
 	};
 	
 	self.hitTest = function(x,y){
