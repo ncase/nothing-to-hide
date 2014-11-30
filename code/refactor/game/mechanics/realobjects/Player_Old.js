@@ -13,11 +13,10 @@ function Player(level){
 	self.SLOW_SPEED = 0.7/Game.FPS; // 0.5 tiles/second
 
 	// ANIMATION //
-	var ANIM_STAND = 0;
-	var ANIM_WALK_LEFT = 1;
-	var ANIM_WALK_RIGHT = 2;
-	self.animState = ANIM_STAND;
-	
+	self.currentSprite = null;
+	self.IDLE_ANIM = "Poppy_Bored_Idle";
+	self.WALK_ANIM = "Poppy_Bored_Walk";
+
 	//////////////
 
 	self.init = function(){
@@ -30,14 +29,10 @@ function Player(level){
 		self.x += 0.5;
 		self.y += 0.5;
 
-		// Sprite
-		self.anim = {
-			leg_stand: new Sprite("poppy/leg_stand"),
-			leg_walk: new Sprite("poppy/leg_walk"),
-			body: new Sprite("poppy/body"),
-			face_meh: new Sprite("poppy/face_meh"),
-			face_derp: new Sprite("poppy/face_derp")
-		};		
+		// Animation
+		self.IDLE_ANIM = new Sprite(self.IDLE_ANIM);
+		self.WALK_ANIM = new Sprite(self.WALK_ANIM);
+		self.currentSprite = self.IDLE_ANIM;
 
 		// For reasons
 		self.deactivated = false;
@@ -83,26 +78,24 @@ function Player(level){
 	    // ANIMATION //
 
 	    // What sprite to use
-		var animState;
+		var sprite;
 		if(Key.left||Key.right||Key.down||Key.up||Key.slow){
-			animState = (direction>0) ? ANIM_WALK_RIGHT : ANIM_WALK_LEFT;
+			sprite = self.WALK_ANIM;
 		}else{
-			animState = ANIM_STAND;
+			sprite = self.IDLE_ANIM;
 		}
 
 	    // If new sprite, start anim from 0, else animate
-		if(animState!=self.animState){
-			self.animState = animState;
-			//sprite.frameIndex = 0;
+		if(sprite!=self.currentSprite){
+			sprite.frameIndex = 0;
+			self.currentSprite = sprite;
 			bounceVel -= 0.1;
 		}else{
-			//sprite.nextFrame(); // TODO: SLOW DOWN ANIM.
+			sprite.nextFrame(); // TODO: SLOW DOWN ANIM.
 			bounceVel += (1-bounce)*0.8;
 			bounceVel *= 0.5;
 			bounce += bounceVel;
 		}
-		if(bounce<0.7) bounce=0.6;
-		if(bounce>1.3) bounce=1.3;
 
 	};
 
@@ -136,32 +129,14 @@ function Player(level){
 		if(Key.left && !Key.right) direction=-1;
 		if(Key.right && !Key.left) direction=1;
 
-		// Position & scale
-		ctx.save();
-		ctx.translate(self.x*W, self.y*H);
-		ctx.scale(direction*(1/bounce), bounce);
+		// Position & scale the sprite
+		sprite.x = self.x*W;
+		sprite.y = self.y*H;
+		sprite.scaleX = direction * (1/bounce);
+		sprite.scaleY = bounce;
 
-		// Draw legs, then body, then face
-		var legs = (self.animState==0) ? self.anim.leg_stand : self.anim.leg_walk;
-		legs.nextFrame();
-	    legs.draw(ctx);
-
-	    var body = self.anim.body;
-	    body.y = -40;
-	    body.draw(ctx);
-
-	    var face = (direction>0) ? self.anim.face_meh : self.anim.face_derp;
-	    face.x = 8; face.y = -94;
-	    face.draw(ctx);
-
-	    // Pickup?
-	    var holding = level.pickupLogic.holding;
-	    if(holding){
-	    	holding.drawPickup(ctx,options);
-	    }
-
-	    // Restore
-	    ctx.restore();
+		// Draw Poppy ALWAYS the same
+	    sprite.draw(ctx);
 
 	};
 

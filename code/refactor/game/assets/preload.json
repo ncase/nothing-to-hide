@@ -19,6 +19,13 @@
 		"Poppy_Bored_Idle": "sprites/poppy/bored_idle",
 		"Poppy_Bored_Walk": "sprites/poppy/bored_walk",
 
+		// Pop's crappy anims
+		"poppy/leg_stand": "sprites/pops/leg_stand",
+		"poppy/leg_walk": "sprites/pops/leg_walk",
+		"poppy/body": "sprites/pops/body",
+		"poppy/face_derp": "sprites/pops/face_derp",
+		"poppy/face_meh": "sprites/pops/face_meh",
+
 		// Monolith
 		"Monolith_Eye": "sprites/monolith/monolith_eye",
 		"Monolith_Body": "sprites/monolith/monolith_body"

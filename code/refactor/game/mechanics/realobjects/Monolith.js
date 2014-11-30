@@ -180,6 +180,14 @@ function Monolith(level){
 
 	};
 
+	self.drawPickup = function(ctx,options){
+		ctx.save();
+		ctx.translate(0,-20);
+		ctx.rotate(0.2);
+		self.drawAsleepMonolith(ctx,options);
+		ctx.restore();
+	};
+
 	self.updateSight = function(){
 		self.sightPolygon = SightAndLight.compute(self, level.shadow.cctvShadows);
 		self.sightPolygonDrawn = SightAndLight.compute(self, level.shadow.shadows);
