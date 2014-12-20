@@ -151,7 +151,9 @@ function Player(level){
 	    body.draw(ctx);
 
 	    var face = (direction>0) ? self.anim.face_meh : self.anim.face_derp;
-	    face.x = 8; face.y = -94;
+	    face.x = 8;
+	    face.y = -94;
+	    //face.y = -96 - (self.x-0.5)*10;
 	    face.draw(ctx);
 
 	    // Pickup?

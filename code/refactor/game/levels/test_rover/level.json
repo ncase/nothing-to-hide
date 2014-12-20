@@ -1,0 +1,83 @@
+{
+
+	"realobjects": [
+		
+		{ "type": "Player", "x":2.2, "y":5.7 },
+
+		{ "type": "Monolith", "x":0.5,"y":5.5},
+		{ "type": "Monolith", "x":11,"y":10},
+		{ "type": "Monolith", "x":31,"y":8 },
+		{ "type": "Monolith", "x":37.9,"y":9.8 },
+		{ "type": "Monolith", "x":43,"y":3 }
+
+	],
+
+	"wallobjects": [
+		{
+			"type": "WallRecord",
+			"x":12.1, "y":2.1, "width":7.8, "height":6.8
+		},
+		{
+			"type": "WallRecord",
+			"x":20.1, "y":2.1, "width":7.8, "height":6.8
+		},
+		{
+			"type": "WallScroll",
+			"image": "intro/comic",
+			"listenUp": "up",
+			"listenDown": "down",
+			"x":8, "y":0, "width":4, "height":5
+		},
+		{
+			"type": "WallButton",
+			"icon": "icon/down",
+			"message": "down",
+			"x":6, "y":3
+		},
+		{
+			"type": "WallButton",
+			"icon": "icon/up",
+			"message": "up",
+			"x":7, "y":3
+		}
+	],
+
+	"gamelogic":[
+		
+		// Main use case - Mostly zone & message based
+		
+		// Just stuff with init(), update(), and kill()
+		
+		// Goal
+		//{ "type":"Goal", "left":51, "right":52, "top":3, "bottom":4 },
+		
+		// Checkpoints
+		//{ "type":"Checkpoint", "left":32, "right":35, "top":10, "bottom":11 }
+
+		// Dialogue
+
+		// Camera logic
+		{
+			"type": "FixedCamera",
+			"zone": {"left":0,"right":10,"top":0,"bottom":11},
+			"data": {"x":7,"y":5.5}
+		},
+		{
+			"type": "RailsCamera",
+			"zone": {"left":10,"right":28,"top":0,"bottom":11},
+			"data": {"ax":10,"ay":5.5,"bx":28,"by":5.5}
+		},
+		{
+			"type": "FixedCamera",
+			"zone": {"left":28,"right":41,"top":0,"bottom":11},
+			"data": {"x":36,"y":5.5}
+		},
+		{
+			"type": "RailsCamera",
+			"zone": {"left":41,"right":52,"top":0,"bottom":11},
+			"data": {"ax":41,"ay":5.5,"bx":52,"by":5.5}
+		}
+
+	]
+
+}

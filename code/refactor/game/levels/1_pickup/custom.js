@@ -16,10 +16,12 @@
 			Sequence([
 				function(){
 					lvl.player.deactivated = true;
-					visibleLover.speak("NOOOO! I... I... I CAN'T LIVE WITHOUT MY BOTFRIEND!");
+					//visibleLover.speak("NOOOO! I... I... I CAN'T LIVE WITHOUT MY BOTFRIEND!");
+					visibleLover.speak("NICKY IS SUCH A CRUEL BASTARD");
 				},
 				function(){
-					visibleLover.speak("[activate self-termination sequence]");
+					//visibleLover.speak("[activate self-termination sequence]");
+					visibleLover.speak("...and that's it for this week!");
 				},
 				function(){
 					lvl.dialogue.hide();

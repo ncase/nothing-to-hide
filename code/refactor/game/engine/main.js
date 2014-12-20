@@ -13,12 +13,12 @@ stats.setMode(0);
 stats.domElement.style.position = 'absolute';
 stats.domElement.style.right = '0px';
 stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
+//document.body.appendChild(stats.domElement);
 subscribe("fps/begin",function(){ stats.begin(); });
 subscribe("fps/end",function(){ stats.end(); });
 
 // LIST OF LEVELS
-var levels = [/*"5_conveyor_big","4_conveyor","3_musical","2_crossing",*/"1_pickup","0_intro"];
+var levels = ["9_act_one_ending"];//[/*"5_conveyor_big","4_conveyor","3_musical","2_crossing",*/"1_pickup","0_intro"];
 
 // COMMON ASSETS //
 function loadAssetPath(path){
