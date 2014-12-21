@@ -28,7 +28,10 @@
 
 		// Monolith
 		"Monolith_Eye": "sprites/monolith/monolith_eye",
-		"Monolith_Body": "sprites/monolith/monolith_body"
+		"Monolith_Body": "sprites/monolith/monolith_body",
+
+		// Rover
+		"Rover": "sprites/rover/rover"
 
 	},
 	"sound":{},

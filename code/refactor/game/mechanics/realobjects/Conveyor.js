@@ -46,7 +46,14 @@ function Conveyor(level){
 		// For everyone one of them, if they're colliding, slide 'em
 		for(var i=0;i<slideables.length;i++){
 			var slideable = slideables[i];
-			if(self.hitTest(slideable.x,slideable.y)){				
+			// HAAAAAACK.
+			var sx = slideable.x;
+			var sy = slideable.y;
+			if(slideable.type=="Rover"){
+				sx += 0.5;
+				sy += 0.5;
+			}
+			if(self.hitTest(sx,sy)){
 				slideable.x += t*self.direction.x;
 				slideable.y += t*self.direction.y;
 			}

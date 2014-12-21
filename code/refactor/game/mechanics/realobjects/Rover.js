@@ -27,6 +27,11 @@ function Rover(level){
 		self.vel = 1;
 		self.pos = 0;
 
+		// body
+		self.body = new Sprite("Rover");
+		self.body.x = 25;
+		self.body.y = 25;
+
 	};
 
 	self.update = function(){
@@ -48,10 +53,8 @@ function Rover(level){
 
 		// Crappy Collision Detection
 		if(self.collideBlock()){
-			self.vel *= -1;
-			//debugger;
-			//self.direction.x *= -1;
-	    	//self.direction.y *= -1;
+			self.direction.x *= -1;
+	    	self.direction.y *= -1;
 		}
 
 		// Get all slideable objects
@@ -78,15 +81,11 @@ function Rover(level){
 		// Translate
 		ctx.save();
 		ctx.translate(self.x*W, self.y*H);
-
-		// Draw a rectangle, why not.
-		ctx.beginPath();
-		ctx.rect(0, 0, self.width*W, self.height*H);
-		ctx.fillStyle = "#cc2727";
-		ctx.fill();
-
-		// Restore
+		self.body.scaleX = (self.direction.x<0) ? -1 : 1;
+		self.body.draw(ctx);
 		ctx.restore();
+
+		self.body.nextFrame();
 
 	};
 	

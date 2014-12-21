@@ -1,5 +1,8 @@
 {
-	"image":{},
+	"image":{
+		"rover/derp": "assets/derp.png",
+		"conveyor/bloody":"assets/bloody.png"
+	},
 	"sprite":{},
 	"sound":{},
 	"script":[]
