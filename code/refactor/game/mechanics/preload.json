@@ -23,7 +23,8 @@
 		"realobjects/Monolith.js",
 		"realobjects/FloorDecoration.js",
 		"realobjects/StaticBlock.js",
-		"realobjects/Conveyor.js"
+		"realobjects/Conveyor.js",
+		"realobjects/Rover.js"
 		
 	]
 }

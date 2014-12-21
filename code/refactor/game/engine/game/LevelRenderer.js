@@ -80,6 +80,7 @@ function LevelRenderer(level){
 		level.walls.draw(ctx);
 
 		// - Floor-tagged real objects
+		// SHOULD BE .draw, not .drawFloor
 		var floors = level.getTagged("floor");
 		for(var i=0;i<floors.length;i++){
 			if(floors[i].drawFloor){
@@ -103,6 +104,7 @@ function LevelRenderer(level){
 		}
 
 		// - Realobjects, depth sorted.
+		// SHOULD BE all reals - floors.
 		var reals = level.realobjects.sort(function(a,b){
 			return a.y-b.y;
 		});
@@ -136,6 +138,8 @@ function LevelRenderer(level){
 
 		// - The map's static background
 		level.map.draw(ctx,grayOption);
+
+		// Draw floor as grayscale.
 
 		// - The cam's CCTV lines & dots
 		if(!self.noCCTV){
