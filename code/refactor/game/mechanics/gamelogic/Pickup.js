@@ -67,12 +67,26 @@ function Pickup(level){
 	};
 
 	self.drop = function(){
+
+		// Drop where the player is
 		var p = level.player;
 		self.holding.x = p.x;
 		self.holding.y = p.y+0.01;
 
+		// Dropped on Rover?
+		self.holding.onRover = null;
+		var rovers = level.getTagged("rover");
+		for(var i=0;i<rovers.length;i++){
+			var rover = rovers[i];
+			if(rover.hitTest(self.holding.x,self.holding.y)){
+				self.holding.onRover = rover;
+			}
+		}
+
+		// That object's drop logic
 		self.holding.drop();
 		self.holding = null;
+
 	};
 
 	

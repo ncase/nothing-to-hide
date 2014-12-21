@@ -18,6 +18,7 @@ function Rover(level){
 		
 		level.setTag(self,"floor");
 		level.setTag(self,"slideable");
+		level.setTag(self,"rover");
 
 		// dimensions: by default 1x1
 		self.width = 1;
@@ -40,16 +41,6 @@ function Rover(level){
 		var t = self.vel/Game.FPS;
 		self.x += t*self.direction.x;
 		self.y += t*self.direction.y;
-
-		// Player is a special case
-		var player = level.player;
-		if(self.hitTest(player.x,player.y)){
-			if((Math.abs(player.vx)>0.0001||Math.abs(player.vy)>0.0001)){
-				player.standingOnRover = self;
-			}
-		}else{
-			player.standingOnRover = null;
-		}
 
 		// Crappy Collision Detection
 		if(self.collideBlock()){
@@ -116,21 +107,15 @@ function Rover(level){
 		if(_hitTestPoint(ox+self.x+self.width,oy+self.y+self.height)) return true;
 
 		// REALS
-		/*var slideables = level.tagged.slideable;
-		for(var i=0;i<slideables.length;i++){
-			var s = slideables[i];
+		var reals = level.realobjects;
+		for(var i=0;i<reals.length;i++){
+			var s = reals[i];
+			if(s==level.player) continue;
+			if(s.onRover==self) continue;
 			if(self.hitTest(s.x-ox,s.y-oy)){
-
-				// Is it a player that's already standing on it?
-				if(s==level.player && level.player.standingOnRover==self){
-					continue;
-				}
-
-				// Otherwise, yeah it's been hit.
 				return true;
-
 			}
-		}*/
+		}
 
 		return false;
 	}
