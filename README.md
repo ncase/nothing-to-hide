@@ -1,3 +1,13 @@
+![](https://pbs.twimg.com/media/CHzbQfKUcAA22C2.png:large)
+
+**UPDATE (June 18th, 2015)**
+
+Bittersweet news. After two long years, I've finally put down Nothing To Hide.
+NTH may be over, but parts of it *will* be re-used and re-born in my future projects!
+[Here's a long post-mortem](http://eepurl.com/bqvfdb) explaining why, and what's next.
+
+---
+
 Nothing To Hide has nothing to hide.
 ===
 
