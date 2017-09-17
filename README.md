@@ -8,8 +8,7 @@ NTH may be over, but parts of it *will* be re-used and re-born in my future proj
 
 ---
 
-Nothing To Hide has nothing to hide.
-===
+# Nothing To Hide has nothing to hide.
 
 All the newest art and code from Nothing To Hide gets pushed into this public repo.
 It's not clean, it's not organized, but it's *everything*.
@@ -19,20 +18,20 @@ Yup, *zero* rights reserved.
 
 ![](http://i.imgur.com/zRonTm3.png)
 
-###What's all this about, then?
+### What's all this about, then?
 
 Nothing To Hide is an "anti-stealth" game where you are forced to help in your own surveillance.
 The puzzles are challenging but fair, with depth in a deceptively simple mechanic, similar to games such as Braid and Portal.
 It's a story of a teenage girl riddled with insecurity in a world obsessed with security.
 She's never had a private thought. If you can't hide who you are... you have to hide who you *really* are. 
 
-###Links
+### Links
 
 * [The Browser Demo (HTML5)](http://demo.nothingtohide.cc/)
 * [Website / Crowdfunding Campaign](http://back.nothingtohide.cc/)
 * [Nothing To Say Newsletter](http://tinyletter.com/nothingtohide/letters)
 
-###Credits
+### Credits
 
 * [NCASE](http://www.ncase.me): Animation, Code, Design
 * [HalcyonicFalconX](https://www.facebook.com/HalcyonicFalconX): Music
